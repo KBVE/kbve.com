@@ -57,41 +57,28 @@
 
 // Base
 
-// Base -> HTML
-html {
-	scroll-behavior: smooth;
-}
-
-// Base -> Body
 body {
 	margin: 0;
 	color: var(--t-fg);
 	font-family: 'Inter', 'system-ui', sans-serif;
-	// background-color: #696969;
-	background: linear-gradient(170deg, rgba(255,140,107,1) 0%, rgba(105,105,105,1) 100%);
 }
 
 * {
 	box-sizing: content-box;
 }
 
-// Base -> Image [img]
 img {
 	max-width: 100%;
 	height: auto;
 }
 
-// Base -> A ([a href] / [links])
 a {
 	color: var(--t-active);
 }
 
-// Base - Header 1 
 h1 {
 	font-size: var(--f-u8);
 }
-
-// Base - Header 2 - Removed until needed. h2 { } 
 
 // Utils
 
