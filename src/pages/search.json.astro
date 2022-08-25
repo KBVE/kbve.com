@@ -1,0 +1,14 @@
+---
+const allProjects = (await Astro.glob('./**/**/*.md'))
+const json = JSON.stringify(
+  allProjects.map((p) => {
+    return {
+      title: p.frontmatter.title,
+      description: p.frontmatter.description,
+      slug: 'https://kbve.com' + p.url,
+      tag: p.frontmatter.tags
+    };
+  })
+);
+---
+{json}
