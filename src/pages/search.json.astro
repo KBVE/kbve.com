@@ -1,10 +1,13 @@
 ---
 const allProjects = (await Astro.glob('./**/**/*.md'))
+var counterId = 0;
 const json = JSON.stringify(
   allProjects.map((p) => {
+    counterId++;
     return {
+      id: counterId,
       title: p.frontmatter.title,
-      description: p.frontmatter.description,
+      body: p.frontmatter.description,
       slug: 'https://kbve.com' + p.url,
       tag: p.frontmatter.tags
     };

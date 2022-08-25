@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/project.astro
+layout: ../../layouts/asset.astro
 title: Asset
 client: Self
 publishDate: 2022-08-24 00:00:00

@@ -9,7 +9,7 @@ img: https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?fit=crop&w=1400&h
 description: |
   Asset Class | Database of all assets
 tags:
-  - design
-  - dev
+  - technology
+  - us
   - branding
 ---
