@@ -3,6 +3,7 @@ layout: ../../../layouts/asset.astro
 title: Apple
 ticker: aapl
 exchange: NASDAQ
+category: Stock
 client: Self
 publishDate: 2022-08-24 00:00:00
 img: https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?fit=crop&w=1400&h=700&q=75
@@ -13,3 +14,9 @@ tags:
   - us
   - branding
 ---
+
+## Apple
+
+***
+
+- Apple is a multinational company that engages in electronics and software.
