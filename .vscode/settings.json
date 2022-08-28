@@ -13,6 +13,7 @@
         "listsnapshot",
         "middlewares",
         "minio",
+        "netname",
         "Nosniff",
         "onboot",
         "opnsense",
