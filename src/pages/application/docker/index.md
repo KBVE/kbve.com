@@ -1,0 +1,56 @@
+---
+layout: ../../../layouts/application.astro
+title: Docker
+category: Application
+client: Self
+publishDate: 2022-08-27 00:00:00
+img: https://images.unsplash.com/photo-1605745341112-85968b19335b?fit=crop&w=1400&h=700&q=75
+repo: https://github.com/proxmox
+description: |
+  A hybrid-source application designed to deploy nested-virtual machines that are containerized applications.
+
+tags:
+  - technology
+  - vm
+  - host
+---
+
+
+## cheatsheet
+
+- Basic CLI (Command-line interface)
+  - Container Management Commands
+    - `docker create $image [-command]` - Create a Docker Container based upon the image String; -command for additional flags.
+    - `docker run $image [-command]` - Combines the command `create` and `start`.
+    - `docker start $cont` - Start the specific docker container (defined via cont String).
+    - `docker stop $cont` - Shutdown the specific docker container (defined via cont String).
+    - `docker kill $cont` - Kill the specific docker container (defined via cont String).
+    - `docker restart $cont` - Restart the specific docker container (defined via cont String).
+    - `docker pause $cont` - Pause the specific docker container (defined via cont String).
+    - `docker rm $cont` - Remove the specific docker container (defined via cont String).
+  - Inspecting Containers
+    - `docker ps` - List running docker containers.
+    - `docker ps -a` - List all docker containers, including docker containers that are paused / off.
+    - `docker logs $cont` - Display the specific docker container output (defined via cont String)
+    - `docker top $cont [-ps]` - Display the processes running inside the specific docker container (defined via cont String).
+    - `docker diff $cont` - Show the differences, within the modified files, between the specific container and the source image (defined via cont String).
+    - `docker inspect $cont` - Show information about the specific docker container (defined via cont String).
+      - Output of the data will default to `json`.
+  - Interacting with Containers
+    - `docker attach $cont` - Attach to the specific docker container and see the *stdin, stdout, stderr* (defined via cont String)
+    - `docker cp $cont:$path $hostpath` - Copy files from the docker container.
+    - `docker cp $hostpath $cont:$path` - Copy files into the docker container.  
+    - `docker export $cont` - Export the data of the specific docker container.
+      - Output of the data will default to a `tar` archive.
+    - `docker exec $cont $command` - Runs the $command inside of the specific docker container (defined via cont String).
+    - `docker wait $cont` - Waits until the specific docker container terminates and returns an exit code.
+    - `docker commit $cont $image` - Commits a new docker image via a snapshot of the specific docker container.
+
+***
+
+### note
+
+- Docker Output JSON (helpful for debugging)
+  - `result=$(curl --unix-socket /var/run/docker.sock http://localhost/containers/json --silent 2>&1) && echo $result`
+    - This will grab the current docker-instance information and return it in JSON format.
+- Docker notes will be added for later reference

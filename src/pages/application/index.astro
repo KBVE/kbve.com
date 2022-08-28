@@ -1,0 +1,38 @@
+---
+import MainHead from '../../components/MainHead.astro';
+import Footer from '../../components/Footer/index.jsx';
+import Nav from '../../components/Nav/index.jsx';
+import PortfolioPreview from '../../components/PortfolioPreview/index.jsx';
+
+const apps = (await Astro.glob('./**/**/*.md'))
+	.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+---
+
+<html lang="en">
+	<head>
+		<MainHead
+			title="All Applications | KBVE"
+			description="Learn about various applications that KBVE uses!"
+		/>
+		<style lang="scss">
+			.grid {
+				display: grid;
+				grid-gap: 3rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<h1 class="title mt4 mb4">All Applications</h1>
+			<div class="grid">
+				{apps.map((project) => <PortfolioPreview project={project} />)}
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
