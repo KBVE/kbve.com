@@ -4,7 +4,7 @@ import Footer from '../../components/Footer/index.jsx';
 import Nav from '../../components/Nav/index.jsx';
 import PortfolioPreview from '../../components/PortfolioPreview/index.jsx';
 
-const apps = (await Astro.glob('./**/**/*.md'))
+const apps = (await Astro.glob('./**/**/*.mdx'))
 	.filter(({ frontmatter }) => !!frontmatter.publishDate)
 	.sort(
 		(a, b) =>
