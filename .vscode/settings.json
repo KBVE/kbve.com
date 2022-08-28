@@ -1,10 +1,29 @@
 {
     "cSpell.words": [
+        "addprefix",
         "astro",
         "astrojs",
         "cheatsheet",
+        "endregion",
+        "homeassistant",
+        "homebridge",
+        "idrac",
         "kbve",
+        "listsnapshot",
+        "middlewares",
+        "minio",
+        "Nosniff",
+        "onboot",
+        "opnsense",
+        "pihole",
+        "plex",
         "preact",
-        "Traefik"
+        "Proto",
+        "redirections",
+        "redirectscheme",
+        "SAMEORIGIN",
+        "syncthing",
+        "Traefik",
+        "truenas"
     ]
 }

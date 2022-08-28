@@ -4,7 +4,7 @@ title: Proxmox
 category: Application
 client: Self
 publishDate: 2022-08-24 00:00:00
-img: https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?fit=crop&w=1400&h=700&q=75
+img: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&w=1400&h=700&q=75
 repo: https://github.com/proxmox
 description: |
   A complete open source software platform for virtualization management.
@@ -38,8 +38,13 @@ tags:
     - `pct reboot $v_id` - Reboot container by specific $v-ID.
     - `pct config $v_id` - Configure container by specific $v-ID.
     - `pct set -memory $v_ram $v_id` - Set the memory for container.
-      - Example:  ```pct set -memeroy 1024 420```
+      - Example:  ```pct set -memory 1024 420```
       - `$v_ram` is in megabytes by default.
     - `pct enter $v_id` - Enter the terminal of the container (LXC).
 
 ***
+
+### note
+
+- eXtremeSHOCK Optimization / Post Install Scripts located below
+  - [Repo](https://github.com/extremeshok/xshok-proxmox)
