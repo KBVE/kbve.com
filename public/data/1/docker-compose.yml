@@ -10,15 +10,16 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - SERVERURL=wireguard.domain.com #optional
-      - SERVERPORT=51820 #optional
-      - PEERS=1 #optional
+      - SERVERURL=wireguard.kbve.com #Set the server URL
+      - SERVERPORT=51820 # Default UDP Port
+      - PEERS=4 #optional
       - PEERDNS=auto #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional
       - LOG_CONFS=true #optional
     volumes:
-      - /path/to/appdata/config:/config
+      # CD to ~ and create a folder named wireguard. This is where you should store all your information.
+      - /home/username/wireguard/config:/config
       - /lib/modules:/lib/modules
     ports:
       - 51820:51820/udp
