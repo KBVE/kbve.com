@@ -26,6 +26,7 @@
         "SAMEORIGIN",
         "syncthing",
         "Traefik",
-        "truenas"
+        "truenas",
+        "withastro"
     ]
 }
