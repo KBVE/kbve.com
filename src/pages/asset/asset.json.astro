@@ -1,5 +1,5 @@
 ---
-const allAsset = (await Astro.glob('./**/**/*.md'))
+const allAsset = (await Astro.glob('./**/**/**/*.mdx'))
 const json = JSON.stringify(
 allAsset.map((p) => {
     return {
