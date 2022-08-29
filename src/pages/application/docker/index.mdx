@@ -27,6 +27,9 @@ tags:
       - `Ubuntu Bionic 18.04 (LTS)`
     - Hint: We like to make sure everything is updated and upgraded before we start. So run `sudo apt-get update` and then `sudo apt-get upgrade`.
     - Now there are libraries that you will need before installing docker.
+  - Post Installation
+    - Adding Docker Compose through `sudo apt-get install docker-compose-plugin`, you may need to update before installing.
+    - Verifying the installation through `docker compose version` and if there are any issues, visit our support. 
 
 ## cheatsheet
 
@@ -59,6 +62,14 @@ tags:
     - `docker commit $cont $image` - Commits a new docker image via a snapshot of the specific docker container.
   - Network
     - `docker network create $netname` - Create a network with the variable $netname.
+  - Docker Compose
+    - `docker compose start` - Start a YAML configuration for a docker container.
+    - `docker compose stop` - Stop the most recent composed docker container.
+    - `docker compose pause` - Pause the most recent composed docker container.
+    - `docker compose unpause` - Unpause the most rencent composed docker container.
+    - `docker compose ps` - List the current docker containers
+    - `docker compose up -f $compose.yml [$command]` - Start and run a YAML configuration for a docker container. 
+    - `docker compose down` - Down a composed docker container.
 
 ***
 
