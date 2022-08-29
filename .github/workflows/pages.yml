@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Astro CI
+name: KBVE Homepage
 
 on:
   # Runs on pushes targeting the default branch
@@ -29,6 +29,9 @@ jobs:
       - name: Install
         shell: "bash"
         run: yarn install
+      - name: Build
+        shell: "bash"
+        run: yarn build
 
 
 
