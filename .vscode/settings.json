@@ -24,6 +24,7 @@
         "redirections",
         "redirectscheme",
         "SAMEORIGIN",
+        "subdir",
         "syncthing",
         "Traefik",
         "truenas",
