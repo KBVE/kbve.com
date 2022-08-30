@@ -70,6 +70,11 @@ tags:
     - `docker compose ps` - List the current docker containers
     - `docker compose up -f $compose.yml [$command]` - Start and run a YAML configuration for a docker container. 
     - `docker compose down` - Down a composed docker container.
+  - Docker Swarm
+    - `docker swarm init` - The docker container will become a manager node within the initialized container.
+      - Upon the initialization instance, the container will provide a token for other worker/manager nodes to join.
+    - `docker swarm join --token $token $ip` - Docker container will join the swarm as a worker; token string should be obtained by init and the `$ip` should be IP Address and port.
+      - `$ip` will be given as `$$ipaddress:$$port` , where the substring `$$ipaddress` is the IPv4address or IPv6address and the substring `$$port` is the open port on that `$$ipaddress`.
 
 ***
 
