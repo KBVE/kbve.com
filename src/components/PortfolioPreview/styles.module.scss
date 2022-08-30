@@ -19,6 +19,12 @@
 	font-size: var(--f-u4);
 	font-weight: 900;
 	text-transform: uppercase;
+	text-shadow:
+		3px 3px 0 #000,
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 	letter-spacing: 0.0625em;
 }
 
