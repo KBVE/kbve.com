@@ -13,9 +13,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
 
 		
-	<link rel="stylesheet" href="/assets/e13fbd65.9fd6e9fa.css" />
-<link rel="stylesheet" href="/assets/c64238ac.c599671b.css" />
-<link rel="stylesheet" href="/assets/46f8dd29.87df5928.css" /></head>
+	<link rel="stylesheet" href="/assets/c64238ac.c599671b.css" />
+<link rel="stylesheet" href="/assets/bf10c31b.9fd6e9fa.css" />
+<link rel="stylesheet" href="/assets/72d65719.87df5928.css" /></head>
 	<body class="astro-3SRVZLJL">
 		<nav class="_nav_147se_1"><a class="_link_147se_33" href="/">KBVE</a><a class="_link_147se_33" href="/projects">Portfolio</a><a class="_link_147se_33" href="/about">About</a></nav>
 		<header style="background-image:url(https://images.unsplash.com/photo-1605745341112-85968b19335b?fit=crop&#38;w=1400&#38;h=700&#38;q=75)" class="hero astro-3SRVZLJL">
@@ -116,6 +116,20 @@
 <li><code>docker compose ps</code> - List the current docker containers</li>
 <li><code>docker compose up -f $compose.yml [$command]</code> - Start and run a YAML configuration for a docker container.</li>
 <li><code>docker compose down</code> - Down a composed docker container.</li>
+</ul>
+</li>
+<li>Docker Swarm
+<ul>
+<li><code>docker swarm init</code> - The docker container will become a manager node within the initialized container.
+<ul>
+<li>Upon the initialization instance, the container will provide a token for other worker/manager nodes to join.</li>
+</ul>
+</li>
+<li><code>docker swarm join --token $token $ip</code> - Docker container will join the swarm as a worker; token string should be obtained by init and the <code>$ip</code> should be IP Address and port.
+<ul>
+<li><code>$ip</code> will be given as <code>$$ipaddress:$$port</code> , where the substring <code>$$ipaddress</code> is the IPv4address or IPv6address and the substring <code>$$port</code> is the open port on that <code>$$ipaddress</code>.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
