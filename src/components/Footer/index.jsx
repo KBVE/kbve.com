@@ -1,9 +1,14 @@
 import { h } from 'preact';
 import Styles from './styles.module.scss';
 
+// Import A-Ads Banner
+import Aads from '../Aads';
+
 function Footer() {
 	return (
 		<footer className={Styles.footer}>
+			<Aads />
+			<br />
 			<svg
 						xmlns="http://www.w3.org/2000/svg"
 						xmlnsXlink="http://www.w3.org/1999/xlink"

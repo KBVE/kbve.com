@@ -1,10 +1,13 @@
 ---
 // Component Imports
 import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button/index.jsx';
-import Nav from '../components/Nav/index.jsx';
-import Footer from '../components/Footer/index.jsx';
-import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
+import Button from '../components/Button';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
+import PortfolioPreview from '../components/PortfolioPreview';
+
+// Import Discord Component
+import Discord from '../components/Discord';
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob('./project/**/*.mdx');
@@ -225,10 +228,10 @@ const featuredProject = projects[0];
 					<h3 class="sectionTitle">Discord</h3>
 					<p class="bio">
 						<span>Join Us!</span> 
-						<iframe src="https://discord.com/widget?id=342732838598082562&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+						<Discord width="350" height="500" />
 					</p>
 					<p>
-						<a href="/about">Read more about us</a> | <a href="https://discord.sh/s/kbve/">Discord Server Information</a>
+						<a href="/about">Read more about us</a> | <a href="https://kbve.com/discord/">Discord Server Information</a>
 					</p>
 				</div>
 			</div>
