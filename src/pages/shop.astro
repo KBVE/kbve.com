@@ -2,6 +2,7 @@
 import MainHead from '../components/MainHead.astro';
 import Footer from '../components/Footer/index.jsx';
 import Nav from '../components/Nav/index.jsx';
+import Sellix from '@c/Sellix';
 ---
 
 <html lang="en">
@@ -58,32 +59,17 @@ import Nav from '../components/Nav/index.jsx';
 				<p>
 					Purchase various products and services from KBVE Shop!
 				</p>
-				<p>
-					<button
-                    data-sellix-product="6297eb487634c"
-                    data-sellix-custom-site="kbve.com"
-                    type="submit">
-                    Purchase VIP
-                  </button>
-				</p>
+
                 <p>
-					<button
-                    data-sellix-product="6297eb487634c"
-                    data-sellix-custom-site="kbve.com"
-                    type="submit">
-                    Purchase HedgeFun 
-                  </button>
-				</p>
+                    <Sellix product="6297eb487634c" name="Purchase VIP Membership" />
+                </p>
+				
+                <Sellix lib={true} />
 			</div>
 		</div>
 		<Footer />
-        <!-- Start of HubSpot Embed Code -->
-        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20854121.js"></script>
-        <!-- End of HubSpot Embed Code -->
 
         <!-- Start of Sellix Embed Code  -->
-        <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/>
-        <script type="text/javascript" src="https://cdn.sellix.io/static/js/embed.js"></script>
 
         <!-- End of Sellix Embed Code -->
 	</body>

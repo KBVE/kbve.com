@@ -29,10 +29,12 @@
         "redirections",
         "redirectscheme",
         "SAMEORIGIN",
+        "Sellix",
         "subdir",
         "syncthing",
         "Traefik",
         "truenas",
+        "tsla",
         "withastro"
     ],
     "editor.codeActionsOnSave": {
