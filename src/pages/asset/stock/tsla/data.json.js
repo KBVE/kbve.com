@@ -1,5 +1,5 @@
 
-const postImportResult = import.meta.glob('./**/**/*.mdx', { eager: true });
+const postImportResult = import.meta.glob('./income/*.mdx', { eager: true });
 const posts = Object.values(postImportResult);
 
 export const get = async () => {

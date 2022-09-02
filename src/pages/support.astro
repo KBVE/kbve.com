@@ -1,12 +1,13 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer';
-import Nav from '../components/Nav';
-import HubspotTicket from '../components/HubspotTicket';
+import MainHead from '@c/MainHead.astro';
+import Footer from '@c/Footer';
+import Nav from '@c/Nav';
+import HubspotLiveChat from '@c/HubspotLiveChat';
 ---
 
 <html lang="en">
 	<head>
+
 		<MainHead title="Support | KBVE.com" description="KBVE Support Page!" />
 		<style lang="scss">
 			.heroImg {
@@ -41,12 +42,10 @@ import HubspotTicket from '../components/HubspotTicket';
 					Support for KBVE software, services and equipment.
 				</p>
 				<p>
-					<HubspotTicket />
+					Ticket System is coming soon :D
 				</p>
 				<p>
-					<!-- Start of HubSpot Embed Code -->
-                    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20854121.js"></script>
-                    <!-- End of HubSpot Embed Code -->
+					<HubspotLiveChat />
 				</p>
 			</div>
 		</div>

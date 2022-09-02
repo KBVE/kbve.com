@@ -11,6 +11,7 @@
         "homeassistant",
         "homebridge",
         "hostpath",
+        "hsforms",
         "Hubspot",
         "idrac",
         "kbve",
@@ -28,10 +29,20 @@
         "redirections",
         "redirectscheme",
         "SAMEORIGIN",
+        "Sellix",
         "subdir",
         "syncthing",
         "Traefik",
         "truenas",
+        "tsla",
         "withastro"
-    ]
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": false,
+        "source.organizeImports": false        
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true
+    
 }

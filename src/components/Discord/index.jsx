@@ -1,4 +1,4 @@
-
+import { h } from 'preact';
 const Discord = ({width = null, height = null}) => {
 	return (
         

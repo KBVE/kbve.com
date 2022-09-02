@@ -1,0 +1,21 @@
+
+.button {
+	display: inline-block;
+    border: 2px;
+    border-color: rgba(255, 255, 255, 0.625);
+	padding: 0.5em 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+    opacity: 0.75;
+    &:focus,
+	&:hover {
+		    opacity: 1;
+			transform: translateY(0);
+            border: 2px solid currentColor;
+
+	
+	}
+}
+
+
+.sellix-iframe-loader{animation-name:spin;animation-duration:2s;animation-iteration-count:5;animation-timing-function:ease-in-out;animation-delay:0s;width:35px!important;height:35px!important}@keyframes spin{0%{transform:rotate(0deg)}50%{transform:rotate(360deg)}100%{transform:rotate(360deg)}}
