@@ -1,0 +1,16 @@
+# Deprecated docker compose for our Galaxia stack.
+version: "3"
+services:
+  proxysql:
+    image: proxysql/proxysql:latest
+    volumes: 
+    - "./proxysql.cnf:/etc/proxysql.cnf"
+    - "./proxysql:/var/lib/proxysql"
+    ports:
+    - "6033:6033"
+    - "6032:6032"
+    - "6080:6080"
+
+networks:
+  galera_network:
+    driver: overlay
