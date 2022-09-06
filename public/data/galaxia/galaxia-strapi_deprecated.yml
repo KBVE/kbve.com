@@ -1,0 +1,14 @@
+# Deprecated Strapi front-end for the Galaxia.
+
+version: '3'
+services:
+  strapi:
+    image: naskio/strapi
+    environment:
+      NODE_ENV: production #development # or production or development
+    ports:
+      - '1337:1337'
+      
+networks:
+  galera_network:
+    driver: overlay
