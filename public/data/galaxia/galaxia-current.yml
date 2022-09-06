@@ -1,0 +1,82 @@
+# Docker Stack for our current galaxia.
+
+version: '3.4'
+
+services:
+  seed:
+    image: colinmollenhour/mariadb-galera-swarm
+    environment:
+      - XTRABACKUP_PASSWORD_FILE=/run/secrets/xtrabackup_password
+      - MYSQL_USER=proxysql
+      - MYSQL_PASSWORD=proxysql
+      - MYSQL_DATABASE=database
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql_root_password
+      - NODE_ADDRESS=^10.0.*.*
+    networks:
+      - galera_network
+    command: seed
+    volumes:
+      - mysql-data:/var/lib/mysql
+    secrets:
+      - xtrabackup_password
+      - mysql_password
+      - mysql_root_password
+  node:
+    image: colinmollenhour/mariadb-galera-swarm
+    environment:
+      - XTRABACKUP_PASSWORD_FILE=/run/secrets/xtrabackup_password
+      - NODE_ADDRESS=^10.0.*.*
+      - HEALTHY_WHILE_BOOTING=1
+    networks:
+      - galera_network
+    command: node tasks.seed,tasks.node
+    volumes:
+      - mysql-data:/var/lib/mysql
+    deploy:
+      replicas: 6
+    secrets:
+      - xtrabackup_password
+  proxysql:
+    depends_on:
+      seed:
+        condition: service_healthy
+      node:
+        condition: service_healthy
+    image: proxysql/proxysql:latest
+    networks:
+      - galera_network
+    configs:
+      - source: proxysql-galera-v4
+        target: /etc/proxysql.cnf
+    volumes:
+      - proxysql-data:/var/lib/proxysql
+    expose:
+    - "6080"
+    ports:
+    - "6033:6033"
+    - "6032:6032"
+    - "6080:6080"
+
+configs:
+  proxysql-galera-v4:
+    external: true
+
+volumes:
+  mysql-data:
+    name: '{{.Service.Name}}-{{.Task.Slot}}-data'
+    driver: local
+  proxysql-data:
+    name: '{{.Service.Name}}-{{.Task.Slot}}-data'
+    driver: local
+
+networks:
+  galera_network:
+    driver: overlay
+
+secrets:
+  xtrabackup_password:
+    external: true
+  mysql_password:
+    external: true
+  mysql_root_password:
+    external: true
