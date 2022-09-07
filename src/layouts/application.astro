@@ -1,8 +1,16 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button/index.jsx';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
+
+// Refactoring the imports from the Compontents.
+//import MainHead from '../components/MainHead.astro';
+//import Button from '../components/Button/index.jsx';
+//import Footer from '../components/Footer/index.jsx';
+
+import MainHead from '@c/MainHead.astro';
+import Button from '@c/Button';
+import Footer from '@c/Footer';
+import Nav from '@c/Nav';
+
+
 
 const { content } = Astro.props;
 ---
@@ -85,6 +93,7 @@ const { content } = Astro.props;
 			</div>
 		</div>
 		<div class="wrapper wrapper__readable">
+			
 			<div class="content"><slot /></div>
 		</div>
 		<footer class="tac mt6">

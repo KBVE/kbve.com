@@ -1,0 +1,27 @@
+---
+layout: ../../../layouts/application.astro
+title: Watchtower
+category: Application
+client: Self
+publishDate: 2022-09-07 00:00:00
+img: https://images.unsplash.com/photo-1602616213661-d1f469cd5a95?fit=crop&w=1400&h=700&q=75
+repo:
+description: |
+ A monitioring tool for automating Docker containers based upon image updates.
+tags:
+  - technology
+  - vm
+  - security
+  - docker
+docker_compose: data/watchtower/docker-compose.yml
+---
+import Github from '@c/Github/Github.astro';
+export const componets = { github: Github};
+
+# Watchtower
+
+* * *
+
+## Install
+
+<Github src='datac' />
