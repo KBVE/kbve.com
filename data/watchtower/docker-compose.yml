@@ -1,0 +1,18 @@
+#Docker Compose for Watchtower
+version: "3"
+services:
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+    # Clean up older container.
+      - WATCHTOWER_CLEANUP=true
+    # Labels which the tower looks over.
+      - WATCHTOWER_LABEL_ENABLE=true
+    # Restarting
+      - WATCHTOWER_INCLUDE_RESTARTING=true
+    labels:
+    # Update itself
+      - "com.centurylinklabs.watchtower.enable=true"
