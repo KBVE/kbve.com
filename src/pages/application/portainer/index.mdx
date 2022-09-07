@@ -13,3 +13,42 @@ tags:
   - vm
   - host
 ---
+
+## Install
+  - Docker CLI
+    -
+    - Step by Step Docker Command Line
+      1. Portainer will need a volume, `portainer_data`, to operate from.
+        - `docker volume create portainer_data`
+      2. Option A - Community Edition
+        - We will have docker pull and run the CE portainer.
+        - `docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
+      2. Option B - Business Edition
+        - If you wish to run the BE/EE version of portainer. 
+        - `docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest`
+        - Note: Portainer Business Edition requires a license key. They may have a freemium option for up to 5 nodes.
+
+  - Docker Compose
+    -
+    - TO:DO
+
+  - k8s
+    -
+    - Step-by-Step Kubernetes Breakdown
+      1. Create the namespace `portainer` using `kubectl`. Below is the example command.
+        - `kubectl create namespace portainer`
+      2. Inside of the namespace,`$portainer`, use `kubectl` apply with the official manifest.
+        - `kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml`
+      3. The default location will be returned from the manifest, located at port 30777.
+
+    - BASH Shell Script will be added. 
+      - TO:DO
+
+  - Docker Extension - For Local developers.
+    - TO:DO
+
+* * *
+
+### Journal
+
+  - 09/07/22 - Portainer 2.15 was released and they now support GPU.

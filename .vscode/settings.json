@@ -6,9 +6,12 @@
         "astro",
         "astrojs",
         "cheatsheet",
+        "colinmollenhour",
         "endregion",
+        "finalsrc",
         "frontmatter",
         "Galaxia",
+        "galera",
         "homeassistant",
         "homebridge",
         "hostpath",
@@ -27,6 +30,7 @@
         "plex",
         "preact",
         "Proto",
+        "proxysql",
         "redirections",
         "redirectscheme",
         "SAMEORIGIN",
@@ -37,7 +41,8 @@
         "Traefik",
         "truenas",
         "tsla",
-        "withastro"
+        "withastro",
+        "xtrabackup"
     ],
     "editor.codeActionsOnSave": {
         "source.fixAll": false,

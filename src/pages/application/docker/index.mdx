@@ -15,9 +15,9 @@ tags:
   - host
 ---
 
-## install
-
+## Install
 - Ubuntu Installation Guide
+  -
   - Core Pre-Installation
     - `lsb_release -a` - Unix command to see the version of Ubuntu that we are running.
     - According to Docker (2022), these are the 64-bit versions of Ubuntu that they support.
@@ -31,54 +31,63 @@ tags:
     - Adding Docker Compose through `sudo apt-get install docker-compose-plugin`, you may need to update before installing.
     - Verifying the installation through `docker compose version` and if there are any issues, visit our support. 
 
-## cheatsheet
-
+## Cheatsheet
 - Basic CLI (Command-line interface)
-  - Container Management Commands
-    - `docker create $image [-command]` - Create a Docker Container based upon the image String; -command for additional flags.
-    - `docker run $image [-command]` - Combines the command `create` and `start`.
-    - `docker start $cont` - Start the specific docker container (defined via cont String).
-    - `docker stop $cont` - Shutdown the specific docker container (defined via cont String).
-    - `docker kill $cont` - Kill the specific docker container (defined via cont String).
-    - `docker restart $cont` - Restart the specific docker container (defined via cont String).
-    - `docker pause $cont` - Pause the specific docker container (defined via cont String).
-    - `docker rm $cont` - Remove the specific docker container (defined via cont String).
-  - Inspecting Containers
-    - `docker ps` - List running docker containers.
-    - `docker ps -a` - List all docker containers, including docker containers that are paused / off.
-    - `docker logs $cont` - Display the specific docker container output (defined via cont String)
-    - `docker top $cont [-ps]` - Display the processes running inside the specific docker container (defined via cont String).
-    - `docker diff $cont` - Show the differences, within the modified files, between the specific container and the source image (defined via cont String).
-    - `docker inspect $cont` - Show information about the specific docker container (defined via cont String).
-      - Output of the data will default to `json`.
-  - Interacting with Containers
-    - `docker attach $cont` - Attach to the specific docker container and see the *stdin, stdout, stderr* (defined via cont String)
-    - `docker cp $cont:$path $hostpath` - Copy files from the docker container.
-    - `docker cp $hostpath $cont:$path` - Copy files into the docker container.  
-    - `docker export $cont` - Export the data of the specific docker container.
-      - Output of the data will default to a `tar` archive.
-    - `docker exec $cont $command` - Runs the $command inside of the specific docker container (defined via cont String).
-    - `docker wait $cont` - Waits until the specific docker container terminates and returns an exit code.
-    - `docker commit $cont $image` - Commits a new docker image via a snapshot of the specific docker container.
-  - Network
-    - `docker network create $netname` - Create a network with the variable $netname.
-  - Docker Compose
-    - `docker compose start` - Start a YAML configuration for a docker container.
-    - `docker compose stop` - Stop the most recent composed docker container.
-    - `docker compose pause` - Pause the most recent composed docker container.
-    - `docker compose unpause` - Unpause the most rencent composed docker container.
-    - `docker compose ps` - List the current docker containers
-    - `docker compose up -f $compose.yml [$command]` - Start and run a YAML configuration for a docker container. 
-    - `docker compose down` - Down a composed docker container.
-  - Docker Swarm
-    - `docker swarm init` - The docker container will become a manager node within the initialized container.
-      - Upon the initialization instance, the container will provide a token for other worker/manager nodes to join.
-    - `docker swarm join --token $token $ip` - Docker container will join the swarm as a worker; token string should be obtained by init and the `$ip` should be IP Address and port.
-      - `$ip` will be given as `$$ipaddress:$$port` , where the substring `$$ipaddress` is the IPv4address or IPv6address and the substring `$$port` is the open port on that `$$ipaddress`.
+    - Container Management Commands
+      - `docker create $image [-command]` - Create a Docker Container based upon the image String; -command for additional flags.
+      - `docker run $image [-command]` - Combines the command `create` and `start`.
+      - `docker start $cont` - Start the specific docker container (defined via cont String).
+      - `docker stop $cont` - Shutdown the specific docker container (defined via cont String).
+      - `docker kill $cont` - Kill the specific docker container (defined via cont String).
+      - `docker restart $cont` - Restart the specific docker container (defined via cont String).
+      - `docker pause $cont` - Pause the specific docker container (defined via cont String).
+      - `docker rm $cont` - Remove the specific docker container (defined via cont String).
+    - Inspecting Containers
+      - `docker ps` - List running docker containers.
+      - `docker ps -a` - List all docker containers, including docker containers that are paused / off.
+      - `docker logs $cont` - Display the specific docker container output (defined via cont String)
+      - `docker top $cont [-ps]` - Display the processes running inside the specific docker container (defined via cont String).
+      - `docker diff $cont` - Show the differences, within the modified files, between the specific container and the source image (defined via cont String).
+      - `docker inspect $cont` - Show information about the specific docker container (defined via cont String).
+        - Output of the data will default to `json`.
+    - Interacting with Containers
+      - `docker attach $cont` - Attach to the specific docker container and see the *stdin, stdout, stderr* (defined via cont String)
+      - `docker cp $cont:$path $hostpath` - Copy files from the docker container.
+      - `docker cp $hostpath $cont:$path` - Copy files into the docker container.  
+      - `docker export $cont` - Export the data of the specific docker container.
+        - Output of the data will default to a `tar` archive.
+      - `docker exec $cont $command` - Runs the $command inside of the specific docker container (defined via cont String).
+      - `docker wait $cont` - Waits until the specific docker container terminates and returns an exit code.
+      - `docker commit $cont $image` - Commits a new docker image via a snapshot of the specific docker container.
+    - Network
+      - `docker network create $netname` - Create a network with the variable $netname.
+    - Docker Compose
+      - `docker compose start` - Start a YAML configuration for a docker container.
+      - `docker compose stop` - Stop the most recent composed docker container.
+      - `docker compose pause` - Pause the most recent composed docker container.
+      - `docker compose unpause` - Unpause the most rencent composed docker container.
+      - `docker compose ps` - List the current docker containers
+      - `docker compose up -f $compose.yml [$command]` - Start and run a YAML configuration for a docker container. 
+      - `docker compose down` - Down a composed docker container.
+    - Docker Swarm
+      - `docker swarm init` - The docker container will become a manager node within the initialized container.
+        - Upon the initialization instance, the container will provide a token for other worker/manager nodes to join.
+      - `docker swarm join --token $token $ip` - Docker container will join the swarm as a worker; token string should be obtained by init and the `$ip` should be IP Address and port.
+        - `$ip` will be given as `$$ipaddress:$$port` , where the substring `$$ipaddress` is the IPv4address or IPv6address and the substring `$$port` is the open port on that `$$ipaddress`.
 
-***
+* * *
 
-### note
+## GPU
+  - Windows
+    - GPU pass-through is still in the experimental stage but here are some quick ways to get the basics going.
+    - We are assumbling that you have WSL on the windows instance. [For WSL Help](https://kbve.com/application/wsl/)
+      - Nvdia
+        - Install the latest CUDA driver libraries from their official website. [Nvidia CUDA](https://developer.nvidia.com/cuda-downloads)
+        - If the latest core that you installed was 
+
+* * *
+
+### Note
 
 - Docker Output JSON (helpful for debugging)
   - `result=$(curl --unix-socket /var/run/docker.sock http://localhost/containers/json --silent 2>&1) && echo $result`
