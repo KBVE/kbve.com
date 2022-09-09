@@ -21,21 +21,6 @@ function PortfolioPreview({ project }) {
                 {t}
               </div>
             ))}
-            {frontmatter.tags.map((t) => (
-              <div className={Styles.tag} data-tag={t}>
-                {t}
-              </div>
-            ))}
-            {frontmatter.tags.map((t) => (
-              <div className={Styles.tag} data-tag={t}>
-                {t}
-              </div>
-            ))}
-            {frontmatter.tags.map((t) => (
-              <div className={Styles.tag} data-tag={t}>
-                {t}
-              </div>
-            ))}
           </div>
         </div>
         <a className={Styles.link} href={project.url}>
