@@ -19,14 +19,21 @@ data: 1
 docker-compose:
   - /data/1/docker-compose.yml
 ---
+import Github from "@c/Github/Github.astro";
+export const components = { github: Github };
 
 ## Wireguard
 
-***
+* * *
 
 - 
 
-## install
+* * *
+
+## Install
+
+- Docker Compose
+  - <Github src="data/wireguard/docker-compose.yml" description="This is a docker compose for wireguard." />
 
 - Ubuntu Installation Guide
   - Core Pre-Installation
