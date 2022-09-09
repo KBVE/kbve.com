@@ -85,13 +85,40 @@
 .tags {
 	font-size: var(--f-d2);
 	text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 0.25rem 1rem 1rem 1rem;
+}
+
+.tagtitle {
+  background-color: var(--c-bg-primary);
+  opacity: 0.7;
+  color: var(--c-primary);
+  padding: 0.25em 0.55em 0.25em 0.55em;
+  border-radius: 4px;
+  width: min-content;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tagline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .tag {
 	display: inline-block;
 	color: var(--c-yellow);
 	text-transform: uppercase;
-	margin-left: 0.5em;
+  background-color: var(--c-bg-primary);
+  padding: 0.35rem;
+  border-radius: 4px;
+	margin-left: 0.25em;
+  margin-top: 0.25em;
 
 	&:nth-of-type(1n) {
 		color: var(--c-green);

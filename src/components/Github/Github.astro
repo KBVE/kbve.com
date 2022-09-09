@@ -1,11 +1,11 @@
 ---
-import Github from './index';
-const {src} = Astro.props;
+import GithubIFrameComponent from "./index";
+const { src, description } = Astro.props;
 ---
 
-<div>
-    <blockquote class="bg-blue-50 p-4">
-        <span class="text-4xl text-blue-600 mb-2">Github : {src}</span>
-    </blockquote>
-    <Github src={src} />
+<div class={!description ? "pb2" : "pb1"}>
+  <GithubIFrameComponent src={src} />
+  <div class="tar">
+    <span class="f-d3 text-blue">{description}</span>
+  </div>
 </div>
