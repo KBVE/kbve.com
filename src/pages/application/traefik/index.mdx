@@ -7,19 +7,28 @@ publishDate: 2022-08-24 00:00:00
 img: https://images.unsplash.com/photo-1524419986249-348e8fa6ad4a?fit=crop&w=1400&h=700&q=75
 repo: https://github.com/traefik/traefik
 description: |
-  A cloud native application proxy. 
+  A cloud native application proxy that utilizes a modern HTTP reverse-proxy and load balancer.
 tags:
   - technology
   - us
   - branding
 ---
 
+import Github from "@c/Github/Github.astro";
+export const components = { github: Github };
+
 ## Traefik
 
-***
+* * *
 
 - Traefik is a cloud-hybrid reverse proxy and load balancer that makes deploying, configuring and integrating infrastructure components easy and automatic.
 
-### note
+* * *
+
+## Install
+- Docker Compose
+  - <Github src="data/traefik/docker-compose.yml" description="This is a docker compose for traefik." />
+
+## Note
 
 - 
