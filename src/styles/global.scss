@@ -9,6 +9,8 @@
 	--c-orange: #ffb7a3;
 	--c-yellow: #ffdace;
 	--c-white: #fff;
+  --c-primary: rgb(231, 175, 134);
+  --c-bg-primary: rgb(22, 22, 20);
 
 	// (f)ont
 	--f-u18: 11.390625em;
@@ -49,8 +51,8 @@
 	--f-d18: 0.0877914951989026em;
 
 	// (t)heme
-	--t-fg: var(--c-black);
-	--t-bg: var(--c-white);
+	--t-fg: var(--c-primary);
+	--t-bg: var(--c-bg-primary);
 	--t-subdue: var(--c-gray);
 	--t-active: var(--c-blue);
 }
@@ -60,6 +62,7 @@
 body {
 	margin: 0;
 	color: var(--t-fg);
+  background-color: var(--t-bg);
 	font-family: 'Inter', 'system-ui', sans-serif;
 }
 
@@ -157,6 +160,7 @@ $colors: 'black', 'blue', 'white';
 	margin-right: auto;
 	padding-left: 2rem;
 	padding-right: 2rem;
+  background-color: var(--c-bg-primary);
 }
 .wrapper__readable {
 	max-width: 50em;
