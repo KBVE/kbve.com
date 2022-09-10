@@ -57,6 +57,18 @@ tags:
 
 ## Network Config (OVH)
 
+- Initial IPv4 Configuration during Install
+```
+Subnet: XXX.XXX.XXX.XXX/32
+Address: XXX.XXX.XXX.XXX
+Gateway: DDD.DDD.DDD.DDD
+Name Servers: 208.67.222.222, 208.67.220.220
+Search Servers: fqdn.com
+XXX.XXX.XXX.XXX is the IP of the container.
+DDD.DDD.DDD.DDD is the IP of the dedicated server.
+```
+**NOTE:** As it turns out, this doesn't work, and we're not sure if it will ever work.
+
 - Ubuntu 22.04 LTS netplan config for container
 ```
 network:
@@ -73,6 +85,9 @@ network:
                 addresses: [1.1.1.1, 1.0.0.1] # Default Nameservers (Shouldn't matter)
                 #addresses: [208.67.222.222, 208.67.220.220] # OVH Nameservers
 ```
+**NOTE:** If you've set up the ubuntu box using the minimized version (which lacks vim, nano, etc),
+move or delete the existing `00-installer-config.yaml` and run `cat <<EOF >>00-installer-config.yaml` followed
+by the configuration above.
 
 ***
 
