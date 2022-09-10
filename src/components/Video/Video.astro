@@ -1,0 +1,12 @@
+---
+import VideoComponent from './index';
+const { src, id, description } = Astro.props;
+---
+
+<div class={!description ? "pb2" : "pb1"}>
+    <VideoComponent src={src} id={id} />
+    <div class="tar">
+      <span class="f-d3 text-blue">{description}</span>
+    </div>
+  </div>
+  

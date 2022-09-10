@@ -11,7 +11,8 @@ const GithubIFrameComponent = ({ src = null, height = null, display = true }) =>
             src +
             `&style=dark&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on`
           }
-        ></script>
+        >  const player = new Plyr('#player');
+        </script>
       </div>
     );
   else return <div>ඞ</div>;
