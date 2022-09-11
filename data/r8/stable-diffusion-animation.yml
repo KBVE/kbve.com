@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+    andreasjansson:
+        ports:
+            - '5000:5000'
+        image: 'r8.im/andreasjansson/stable-diffusion-animation@sha256:b8cb0e3516a1383a46ed5d773b11d495fe39cf921b3d79ce5407ab980494f75b'
+        deploy:
+          resources:
+            reservations:
+              devices:
+              - driver: "nvidia"
+                device_ids: ["0"]
+                capabilities: [gpu]
