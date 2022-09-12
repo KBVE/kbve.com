@@ -118,9 +118,9 @@ services:
         - traefik.http.middlewares.api-ipwhitelist.ipwhitelist.sourcerange=$$(cat /var/run/secrets/WHITELIST_IP)
         - traefik.http.services.api.loadbalancer.server.port=8000
       
-      # Extra middleware (ratelimit, ip whitelisting)
-      - traefik.http.middlewares.traefik-ratelimit.ratelimit.average=100
-      - traefik.http.middlewares.traefik-ratelimit.ratelimit.burst=50
+        # Extra middleware (ratelimit, ip whitelisting)
+        - traefik.http.middlewares.traefik-ratelimit.ratelimit.average=100
+        - traefik.http.middlewares.traefik-ratelimit.ratelimit.burst=50
     # Use host mode for network ports for IP whitelisting
     # see https://community.containo.us/t/whitelist-swarm-cant-get-real-source-ip/3897
     ports:
@@ -144,21 +144,21 @@ services:
       - cloud-public
       - cloud-socket-proxy
 
-socket-proxy:
-  image: tecnativa/docker-socket-proxy:latest
-  deploy:
-    restart_policy:
-      condition: on-failure
-    placement:
-      constraints: [node.role == manager]
-  environment:
-    # permissions needed
-    NETWORKS: 1
-    SERVICES: 1
-    TASKS: 1
-  volumes:
-    - /var/run/docker.dock:/var/run/docker.sock:ro
-  networks:
-    cloud-socket-proxy:
-      aliases:
-        - socket-proxy
+  socket-proxy:
+    image: tecnativa/docker-socket-proxy:latest
+    deploy:
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints: [node.role == manager]
+    environment:
+      # permissions needed
+      NETWORKS: 1
+      SERVICES: 1
+      TASKS: 1
+    volumes:
+      - /var/run/docker.dock:/var/run/docker.sock:ro
+    networks:
+      cloud-socket-proxy:
+        aliases:
+          - socket-proxy
