@@ -15,64 +15,40 @@ configs:
   traefik-ve_dynamic_conf.toml:
     external: true
 
-secrets:
-  DOMAIN:
-    external: true
-  EMAIL:
-    external: true
-  TRAEFIK_ADMINS:
-    external: true
-  WHITELIST_IP:
-    external: true
-  USERNAME:
-    external: true
-
 services:
   reverse-proxy:
     image: traefik:v2.2
     configs:
       - source: traefik-ve_dynamic_conf.toml
         target: ~/traefik_conf/dynamic_conf.toml
-    secrets:
-      - DOMAIN
-      - EMAIL
-      - TRAEFIK_ADMINS
-      - WHITELIST_IP
-      - USERNAME
-    environment:
-      - DOMAIN=/run/secrets/DOMAIN
-      - EMAIL=/run/secrets/EMAIL
-      - TRAEFIK_ADMINS=/run/secrets/TRAEFIK_ADMINS
-      - WHITELIST_IP=/run/secrets/WHITELIST_IP
-      - USERNAME=/run/secrets/USERNAME
     command:
-      - --providers.docker
-      # Use the secure docker socket proxy
-      - --providers.docker.endpoint=tcp://socket-proxy:2375
-      # Add a constraint to only use services with the label "traefik.constraint-label=cloud-public"
-      - --providers.docker.constraints=Label(`traefik.constraint-label`, `cloud-public`)
-      # Don't expose containers per default
-      - --providers.docker.exposedByDefault=false
-      - --providers.docker.swarmMode=true
-      # fileprovider needed for TLS config
-      # see https://github.com/containous/traefik/issues/5507
-      - --providers.file.filename=traefik_conf/dynamic_conf.toml
-      # Entrypoints (ports) for the routers
-      - --entrypoints.web.address=:80
-      - --entrypoints.websecure.address=:443
-      # Entrypoint for the dashboard on port 8000
-      - --entrypoints.api.address=:8000
-      # Create the certificate resolver "letsencrypt" for Let's Encrypt, uses ENV variable EMAIL
-      - --certificatesresolvers.letsencrypt.acme.email=$$(cat /var/run/secrets/EMAIL)
-      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
-      - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
-      # Only for development to avoid hitting the rate limit on certificates
-      - --certificatesresolvers.letsencrypt.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
-      # Logging
-      - --accesslog
-      - --log.level=debug
-      # Enable the dashboard
-      - --api
+    - --providers.docker
+    # Use the secure docker socket proxy
+    - --providers.docker.endpoint=tcp://socket-proxy:2375
+    # Add a constraint to only use services with the label "traefik.constraint-label=cloud-public"
+    - --providers.docker.constraints=Label(`traefik.constraint-label`, `cloud-public`)
+    # Don't expose containers per default
+    - --providers.docker.exposedByDefault=false
+    - --providers.docker.swarmMode=true
+    # fileprovider needed for TLS config
+    # see https://github.com/containous/traefik/issues/5507
+    - --providers.file.filename=traefik_conf/dynamic_conf.toml
+    # Entrypoints (ports) for the routers
+    - --entrypoints.web.address=:80
+    - --entrypoints.websecure.address=:443
+    # Entrypoint for the dashboard on port 8000
+    - --entrypoints.api.address=:8000
+    # Create the certificate resolver "letsencrypt" for Let's Encrypt, replace <<EMAIL>> with the one for letsencrypt
+    - --certificatesresolvers.letsencrypt.acme.email=<<EMAIL>>
+    - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+    - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+    # Only for development to avoid hitting the rate limit on certificates
+    - --certificatesresolvers.letsencrypt.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
+    # Logging
+    - --accesslog
+    - --log.level=debug
+    # Enable the dashboard
+    - --api
     deploy:
       restart_policy:
         condition: on-failure
@@ -102,22 +78,27 @@ services:
         - traefik.http.middlewares.redirect-to-non-www-https.redirectregex.regex=^https?://(?:www\.)?(.+)
         - traefik.http.middlewares.redirect-to-non-www-https.redirectregex.replacement=https://$${1}
         - traefik.http.middlewares.redirect-to-non-www-https.redirectregex.permanent=true
-      
+
         # Dashboard on port 8000
         - traefik.http.routers.api.entrypoints=api
-        - traefik.http.routers.api.rule=Host(`$$(cat /var/run/secrets/DOMAIN)`)
+        # Replace <<DOMAIN>> with the root domain (e.g. thisdedi.wentalltheway.home)
+        - traefik.http.routers.api.rule=Host(`<<DOMAIN>>`)
         - traefik.http.routers.api.service=api@internal
         - traefik.http.routers.api.tls=true
         - traefik.http.routers.api.tls.options=default
         - traefik.http.routers.api.tls.certresolver=letsencrypt
         # middlewares: use IP whitelisting, ratelimit and basic authentication
         - traefik.http.routers.api.middlewares=api-ipwhitelist,traefik-ratelimit,api-auth
-        - traefik.http.middlewares.api-auth.basicauth.users=$$(cat /var/run/secrets/TRAEFIK_ADMINS)
+        # Replace <<TRAEFIK_ADMINS>> with the output from `htpasswd -nBC 10 USERNAME` where USERNAME is the name of the user
+        # NOTE: BIG FAT FUCKING NOTE: YOU MUST ESCAPE DOLLAR SIGNS WITH DOLLAR SIGNS
+        # E.G. A HASH THAT INCLUDES $ MUST THEN HAVE $$ INSTEAD OF A SINGLE $ OR ELSE NO WORKY
+        - traefik.http.middlewares.api-auth.basicauth.users=<<TRAEFIK_ADMINS>>
         # whitelist your public ip
-        # replace with _your IP_
-        - traefik.http.middlewares.api-ipwhitelist.ipwhitelist.sourcerange=$$(cat /var/run/secrets/WHITELIST_IP)
+        # replace with the IP you wish to whitelist connections from
+        # That's up to you, bro
+        - traefik.http.middlewares.api-ipwhitelist.ipwhitelist.sourcerange=<<WHITELIST_IP>>
         - traefik.http.services.api.loadbalancer.server.port=8000
-      
+
         # Extra middleware (ratelimit, ip whitelisting)
         - traefik.http.middlewares.traefik-ratelimit.ratelimit.average=100
         - traefik.http.middlewares.traefik-ratelimit.ratelimit.burst=50
@@ -157,7 +138,7 @@ services:
       SERVICES: 1
       TASKS: 1
     volumes:
-      - /var/run/docker.dock:/var/run/docker.sock:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
       cloud-socket-proxy:
         aliases:
