@@ -1,0 +1,5 @@
+DOMAIN=kbve.com
+EMAIL=meme@gmail.com
+TRAEFIK_ADMINS=username:password$
+USERNAME=kbve
+WHITELIST_IP=200.0.0.0/32
