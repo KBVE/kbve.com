@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 
 services:
   server:
@@ -12,28 +12,56 @@ services:
     tmpfs:
     - /run
     - /var/run
-    privileged: true
+    - /output
     environment:
     - K3S_TOKEN=secret
     - K3S_KUBECONFIG_OUTPUT=/output/kubeconfig.yaml
     - K3S_KUBECONFIG_MODE=666
     volumes:
-    #- k3s-server:/var/lib/rancher/k3s
-    - .:/output
+    - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    deploy:
+      placement:
+        constraints:
+        # - node.role != manager
+          - node.role == worker
     ports:
     - 6443:6443
 
-  #agent-1:
-  #  image: "rancher/k3s:${K3S_VERSION:-latest}"
-  #  restart: "no"
-  #  command:
-  #  - agent
-  #  - --node-taint
-  #  - k3s/agent-1=true:NoExecute
-  #  tmpfs:
-  #  - /run
-  #  - /var/run
-  #  privileged: true
-  #  environment:
-  #  - K3S_URL=https://server:6443
-  #  - K3S_TOKEN=secret
+
+  agent-1:
+    image: "rancher/k3s:${K3S_VERSION:-latest}"
+    restart: "no"
+    command:
+    - agent
+    - --node-taint
+    - k3s/agent-1=true:NoExecute
+    tmpfs:
+    - /run
+    - /var/run
+    - /output
+    volumes:
+    - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    environment:
+    - K3S_URL=https://server:6443
+    - K3S_TOKEN=secret
+
+  agent-2:
+    image: "rancher/k3s:${K3S_VERSION:-latest}"
+    restart: "no"
+    command:
+    - agent
+    - --node-taint
+    - k3s/agent-1=true:NoExecute
+    tmpfs:
+    - /run
+    - /var/run
+    - /output
+    volumes:
+    - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    environment:
+    - K3S_URL=https://server:6443
+    - K3S_TOKEN=secret
+
+    
+volumes:
+   k3s-server:

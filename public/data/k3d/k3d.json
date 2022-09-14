@@ -1,0 +1,106 @@
+{
+    "version": "3.9",
+    "services": {
+      "k3d-k3s-default-server-0": {
+        "image": "rancher/k3s:v1.20.2-k3s1",
+        "hostname": "k3d-k3s-default-server-0",
+        "environment": [
+          "K3S_TOKEN=owukBXykRqXOzeCXaPnV"
+        ],
+        "command": [
+          "server",
+          "--tls-san",
+          "0.0.0.0"
+        ],
+        "labels": [
+          "app=k3d",
+          "k3d.cluster=k3s-default",
+          "k3d.cluster.imageVolume=k3d-k3s-default-images",
+          "k3d.cluster.network=k3d-k3s-default",
+          "k3d.cluster.network.external=true",
+          "k3d.cluster.token=owukBXykRqXOzeCXaPnV",
+          "k3d.cluster.url=https://k3d-k3s-default-server-0:6443",
+          "k3d.role=server",
+          "k3d.server.api.host=0.0.0.0",
+          "k3d.server.api.hostIP=0.0.0.0",
+          "k3d.server.api.port=39329",
+          "k3d.version=v4.2.0"
+        ],
+        "tmpfs": [
+          "/run",
+          "/var/run",
+          "/var/lib"
+        ],
+        "volumes": [
+          "k3s-volume:/var/lib/rancher:rw",
+          "/sys/fs/cgroup:/sys/fs/cgroup:rw"
+        ],
+        "deploy": {
+          "placement": {
+            "constraints": [
+              "node.role == worker"
+            ]
+          }
+        },
+        "networks": [
+          "k3d"
+        ]
+      },
+      "proxy": {
+        "image": "rancher/k3d-proxy:v4.2.0",
+        "hostname": "k3d-k3s-default-serverlb",
+        "environment": [
+          "SERVERS=k3d-k3s-default-server-0",
+          "PORTS=6443"
+        ],
+        "labels": [
+          "app=k3d",
+          "k3d.cluster=k3s-default",
+          "k3d.cluster.imageVolume=k3d-k3s-default-images",
+          "k3d.cluster.network=k3d-k3s-default",
+          "k3d.cluster.network.external=true",
+          "k3d.cluster.token=owukBXykRqXOzeCXaPnV",
+          "k3d.cluster.url=https://k3d-k3s-default-server-0:6443",
+          "k3d.role=loadbalancer"
+        ],
+        "volumes": [
+          "proxy-volume:/var/lib/rancher:rw",
+          "/sys/fs/cgroup:/sys/fs/cgroup:rw"
+        ],
+        "deploy": {
+          "placement": {
+            "constraints": [
+              "node.role == worker"
+            ]
+          }
+        },
+        "networks": [
+          "k3d"
+        ]
+      }
+    },
+    "networks": {
+      "k3d": {
+        "name": "k3d-k3s-default",
+        "labels": [
+          "app=k3d"
+        ]
+      }
+    },
+    "volumes": {
+      "k3s-volume": {
+        "name": "k3s-volume",
+        "driver_opts": {
+          "type": "tmpfs",
+          "device": "tmpfs"
+        }
+      },
+      "proxy-volume": {
+        "name": "proxy-volume",
+        "driver_opts": {
+          "type": "tmpfs",
+          "device": "tmpfs"
+        }
+      }
+    }
+  }
