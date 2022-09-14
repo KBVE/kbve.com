@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  server:
+    image: "rancher/k3s:${K3S_VERSION:-latest}"
+    restart: "no"
+    command: 
+    - server
+    - --node-taint
+    - k3s/server=true:NoExecute
+    #- k3s/server=true:NoSchedule
+    tmpfs:
+    - /run
+    - /var/run
+    privileged: true
+    environment:
+    - K3S_TOKEN=secret
+    - K3S_KUBECONFIG_OUTPUT=/output/kubeconfig.yaml
+    - K3S_KUBECONFIG_MODE=666
+    volumes:
+    #- k3s-server:/var/lib/rancher/k3s
+    - .:/output
+    ports:
+    - 6443:6443
+
+  #agent-1:
+  #  image: "rancher/k3s:${K3S_VERSION:-latest}"
+  #  restart: "no"
+  #  command:
+  #  - agent
+  #  - --node-taint
+  #  - k3s/agent-1=true:NoExecute
+  #  tmpfs:
+  #  - /run
+  #  - /var/run
+  #  privileged: true
+  #  environment:
+  #  - K3S_URL=https://server:6443
+  #  - K3S_TOKEN=secret
