@@ -2,11 +2,15 @@ version: "3.9"
 
 services:
   k3d-k3s-default-server-0:
-    image: rancher/k3s:v1.20.2-k3s1
+    image: "rancher/k3s:${K3S_VERSION:-latest}"
+    #image: rancher/k3s:v1.20.2-k3s1
     hostname: k3d-k3s-default-server-0
     environment:
       - K3S_TOKEN=owukBXykRqXOzeCXaPnV
     command:
+      #- --providers.docker
+      # Use the secure docker socket proxy
+      #- --providers.docker.endpoint=tcp://cloud-socket-proxy:2375
       - server
       - --tls-san
       - 0.0.0.0
@@ -27,9 +31,14 @@ services:
     tmpfs:
       - /run
       - /var/run
-      - /var/lib
+      #- /var/lib
     volumes:
-      - k3s-volume:/var/lib/rancher:rw
+      #- /var/run/docker.sock:/var/run/docker.sock
+      - k3s-rancher:/var/lib/rancher/k3s:rw
+      - k3s-cni:/var/lib/cni:rw
+      #- k3s-containerd:/var/lib/rancher/k3s/agent/containerd:rw
+      - k3s-log:/var/log:rw
+      #- k3s-volume:/var:rw
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
     deploy:
       placement:
@@ -38,16 +47,24 @@ services:
           - node.role == worker
     networks:
       - k3d
+      - cloud-public
+      #- cloud-socket-proxy
     
 
 
   proxy:
+    #image: rancher/k3d-proxy
     image: rancher/k3d-proxy:v4.2.0
     hostname: k3d-k3s-default-serverlb
     environment:
       - SERVERS=k3d-k3s-default-server-0
       - PORTS=6443
+    #command:
+      #- --providers.docker
+      # Use the secure docker socket proxy
+      #- --providers.docker.endpoint=tcp://cloud-socket-proxy:2375
     labels:
+    # k3d Variables
       - app=k3d
       - k3d.cluster=k3s-default
       - k3d.cluster.imageVolume=k3d-k3s-default-images
@@ -56,6 +73,17 @@ services:
       - k3d.cluster.token=owukBXykRqXOzeCXaPnV
       - k3d.cluster.url=https://k3d-k3s-default-server-0:6443
       - k3d.role=loadbalancer
+    # Traefik Variables
+      - traefik.enable=true
+      - traefik.constraint-label=cloud-public
+      - traefik.http.routers.whoami.entrypoints=websecure
+      - traefik.http.routers.whoami.rule=Host(`whoami.pvp.cm`)
+      - traefik.http.routers.whoami.tls=true
+    # min TLS version
+      - traefik.http.routers.whoami.tls.options=tls12@file
+      - traefik.http.routers.whoami.tls.certresolver=letsencrypt
+      - traefik.http.routers.whoami.middlewares=traefik-ratelimit
+      - traefik.http.services.whoami.loadbalancer.server.port=6443
     #privileged: true
     volumes:
       - proxy-volume:/var/lib/rancher:rw
@@ -67,21 +95,47 @@ services:
           - node.role == worker
     networks:
       - k3d
+      - cloud-public
 
 networks:
   k3d:
     name: k3d-k3s-default
     labels:
       - app=k3d
+#  cloud-socket-proxy:
+#    name: cloud-socket-proxy
+#    external: true
+  cloud-public:
+    name: cloud-public
+    external: true
 
-    
 volumes:
-  k3s-volume:
-    name: k3s-volume
+#  k3s-containerd:
+#    name: k3s-containerd
+#    driver_opts:
+#      type: bind
+#      device: tmpfs
+  k3s-log:
+    name: k3s-log
+    driver_opts:
+      type: "tmpfs"
+      #o: bind
+      #type: "native"
+      device: tmpfs
+  k3s-cni:
+    name: k3s-cni
     driver_opts:
       type: "tmpfs"
       #type: "native"
       device: tmpfs
+  k3s-rancher:
+    name: k3s-rancher
+    driver_opts:
+      type: "tmpfs"
+      #type: "tmpfs"
+      #type: "native"
+      device: tmpfs
+      #o: bind
   proxy-volume:
     name: proxy-volume
     driver_opts:
