@@ -118,7 +118,7 @@ volumes:
   k3s-log:
     name: k3s-log
     driver_opts:
-      type: "tmpfs"
+      type: volume
       #o: bind
       #type: "native"
       device: tmpfs
