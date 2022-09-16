@@ -1,14 +1,11 @@
 version: "3.9"
-
 services:
   api:
-    container_name: api
-    build: .
+    #container_name: strapi
+    #build: .
     image: "ghcr.io/kbve/api.kbve.com:main"
     restart: "no"
-    env_file:
-      - source: evo_api_ve2
-        target: /api/.env
+    #env_file:
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
       DATABASE_HOST: strapiDB
@@ -19,7 +16,6 @@ services:
       ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       NODE_ENV: ${NODE_ENV}
-      
     volumes:
       - ./config:/api/config
       - ./src:/api/src
@@ -34,14 +30,11 @@ services:
     networks:
       - cloud-socket-proxy
       
-# Network
-
 networks:
   cloud-socket-proxy:
     external: true
 
-# Configs
-
 configs:
   evo_api_ve2:
     external: true
+    name: "evo_api_ve2"

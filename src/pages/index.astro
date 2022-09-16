@@ -1,16 +1,16 @@
 ---
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
-import PortfolioPreview from '../components/PortfolioPreview';
+import MainHead from "../components/MainHead.astro";
+import Button from "../components/Button";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import PortfolioPreview from "../components/PortfolioPreview";
 
 // Import Discord Component
-import Discord from '../components/Discord';
+import Discord from "../components/Discord";
 
 // Data Fetching: List all Markdown posts in the repo.
-const projects = await Astro.glob('./project/**/*.mdx');
+const projects = await Astro.glob("./project/**/*.mdx");
 const featuredProject = projects[0];
 
 // Full Astro Component Syntax:
@@ -18,239 +18,259 @@ const featuredProject = projects[0];
 ---
 
 <html lang="en">
-	<head>
-		<MainHead
-			title="KBVE.com - KiloByte VE"
-			description="KBVE.com - Launch the App!"
-		/>
-		<style lang="scss">
-			$w-s: 750px;
+  <head>
+    <MainHead
+      title="KBVE.com - KiloByte VE"
+      description="KBVE.com - Launch the App!"
+    />
+    <style lang="scss">
+      $w-s: 750px;
 
-			.hero {
-				position: relative;
-				overflow: hidden;
+      .app-root {
+        position: relative;
+      }
 
-				@media (min-width: $w-s) {
-					height: 45vw;
-				}
-			}
+      .hero {
+        position: relative;
+        overflow: hidden;
 
-			.img {
-				display: block;
-				width: 100%;
-				height: auto;
-			}
+        @media (min-width: $w-s) {
+          height: 45vw;
+        }
+      }
 
-			.gradient,
-			.gradient2 {
-				background-image: url('/assets/img/mesh-gradient-2.jpg');
-				background-size: cover;
-				pointer-events: none;
-				mix-blend-mode: screen;
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 2;
-			}
+      .img {
+        display: block;
+        width: 100%;
+        height: auto;
+        // filter: blur(1px);
+      }
 
-			.gradient2 {
-				mix-blend-mode: multiply;
-				background-size: cover;
-			}
+      .gradient,
+      .gradient2 {
+        background-image: url("/assets/img/mesh-gradient-2.jpg");
+        background-size: cover;
+        pointer-events: none;
+        mix-blend-mode: color-burn;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
 
-			.overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				z-index: 10;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				padding-left: 2rem;
+      // .gradient2 {
+      // 	mix-blend-mode: multiply;
+      // 	background-size: cover;
+      // }
 
-				@media (min-width: $w-s) {
-					padding-left: 4rem;
-				}
-			}
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2rem;
 
-			.title {
-				
-				font-weight: 900;
-				font-size: var(--f-u8);
-				margin-bottom: 0.5rem;
-				margin-top: 0;
+        @media (min-width: $w-s) {
+          padding-left: 4rem;
+        }
+      }
+      .overlay-inner {
+        background-color: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(80px);
+        -webkit-backdrop-filter: blur(80px);
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+        p {
+          color: rgba(255, 255, 255, 1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+      }
 
-				@media (min-width: $w-s) {
-					font-size: var(--f-u12);
-				}
+      .title {
+        font-weight: 900;
+        font-size: var(--f-u8);
+        margin-bottom: 0.5rem;
+        margin-top: 0;
 
-				text-shadow:
-					3px 3px 0 #000,
-					-1px -1px 0 #000,  
-					1px -1px 0 #000,
-					-1px 1px 0 #000,
-					1px 1px 0 #000;
-			}
+        @media (min-width: $w-s) {
+          font-size: var(--f-u12);
+        }
 
-			.grid {
-				display: grid;
-				grid-gap: 2rem;
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000, 1px 1px 0 #000;
+      }
 
-				@media (min-width: 1200px) {
-					grid-template-columns: 2fr 1fr;
-				}
-			}
+      .grid {
+        display: grid;
+        grid-gap: 2rem;
 
-			.sectionTitle {
-				font-weight: 700;
-				font-size: var(--f-u8);
-				margin-top: 1rem;
-				margin-bottom: 2rem;
-				
-			}
+        @media (min-width: 1200px) {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
 
-			.role {
-				position: relative;
-				display: inline-block;
-				font-weight: 900;
-				color: var(--t-bg);
-				background-color: var(--t-fg);
-				padding: 0.25em 0.5em;
-				z-index: 2;
+      .sectionTitle {
+        font-weight: 700;
+        font-size: var(--f-u8);
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
 
-				@media (min-width: $w-s) {
-					font-size: var(--f-u3);
-				}
+      .role {
+        position: relative;
+        display: inline-block;
+        font-weight: 900;
+        color: var(--t-bg);
+        background-color: var(--t-fg);
+        padding: 0.25em 0.5em;
+        z-index: 2;
 
-				+ .role {
-					margin-left: 1em;
-				}
+        @media (min-width: $w-s) {
+          font-size: var(--f-u3);
+        }
 
-				&:nth-of-type(1) {
-					.invert {
-						background-color: var(--c-pink);
-					}
-				}
+        + .role {
+          margin-left: 1em;
+        }
 
-				&:nth-of-type(2) {
-					.invert {
-						background-color: var(--c-blue);
-					}
-				}
+        &:nth-of-type(1) {
+          .invert {
+            background-color: var(--c-pink);
+          }
+        }
 
-				&:nth-of-type(3) {
-					.invert {
-						background-color: var(--c-green);
-					}
-				}
+        &:nth-of-type(2) {
+          .invert {
+            background-color: var(--c-blue);
+          }
+        }
 
-				&:hover {
-					.invert {
-						clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-					}
-				}
-			}
+        &:nth-of-type(3) {
+          .invert {
+            background-color: var(--c-green);
+          }
+        }
 
-			.invert {
-				position: absolute;
-				color: var(--t-fg);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				pointer-events: none;
-				clip-path: polygon(0% 100%, 100% 100%, 100% 200%, 0% 200%);
-				transition: clip-path cubic-bezier(0.4, 0, 0.5, 1) 150ms;
-			}
+        &:hover {
+          .invert {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          }
+        }
+      }
 
-			.desc {
-				font-size: var(--f-u2);
-				margin-top: 1.5rem;
-				margin-bottom: 0;
-				text-shadow:
-					3px 3px 0 #000,
-					-1px -1px 0 #000,  
-					1px -1px 0 #000,
-					-1px 1px 0 #000,
-					1px 1px 0 #000;
-			}
+      .invert {
+        position: absolute;
+        color: var(--t-fg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 200%, 0% 200%);
+        transition: clip-path cubic-bezier(0.4, 0, 0.5, 1) 150ms;
+      }
 
-			.subtitle {
-				display: block;
-				font-weight: 400;
-				font-size: var(--f-d6);
-				letter-spacing: -0.0625em;
-			}
+      .desc {
+        font-size: var(--f-u2);
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000, 1px 1px 0 #000;
+      }
 
-			.bio {
-				line-height: 2;
-				margin-bottom: 2rem;
+      .subtitle {
+        display: block;
+        font-weight: 400;
+        font-size: var(--f-d6);
+        letter-spacing: -0.0625em;
+      }
 
-				> span:first-of-type {
-					line-height: 1;
-					margin-bottom: 0.5em;
-					display: block;
-					font-weight: 700;
-					font-size: var(--f-u4);
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<Nav />
-		<header class="hero">
-			<img
-				width="1600"
-				height="1131"
-				class="img"
-				src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75"
-				srcset="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75 800w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75 1200w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=75 1600w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=2400&q=75 2400w"
-				sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
-			/>
-			<div class="gradient"></div>
-			<div class="gradient2"></div>
-			<div class="overlay">
-				<h1 class="title">
-					<small class="subtitle">Click to launch app!</small>KBVE App
-				</h1>
-				<div>
-					<a href="https://app.kbve.com/" target="_blank"><span class="role">👩‍💻 Launch <span class="invert">👩‍💻 App</span></span>&nbsp;</a>
-					<span class="role">✏️ Beta <span class="invert">✏️ Test</span></span>
-				</div>
-				<p class="desc">KBVE IoT Application combines everything within your own realm.</p>
-			</div>
-		</header>
-		<main class="wrapper mt4 mb4">
-			<div class="grid">
-				<div class="section">
-					<h3 class="sectionTitle">Selected Work</h3>
-					<PortfolioPreview project={featuredProject} />
-					<div class="tac mt4">
-						<a href="/projects">
-							<Button>View All</Button>
-						</a>
-					</div>
-				</div>
-				<div class="section">
-					<h3 class="sectionTitle">Discord</h3>
-					<p class="bio">
-						<span>Join Us!</span> 
-						<Discord width="350" height="500" />
-					</p>
-					<p>
-						<a href="/about">Read more about us</a> | <a href="https://kbve.com/discord/">Discord Server Information</a>
-					</p>
-				</div>
-			</div>
-		</main>
-		<Footer />
-	</body>
+      .bio {
+        line-height: 2;
+        margin-bottom: 2rem;
+
+        > span:first-of-type {
+          line-height: 1;
+          margin-bottom: 0.5em;
+          display: block;
+          font-weight: 700;
+          font-size: var(--f-u4);
+        }
+      }
+    </style>
+  </head>
+  <body class="app-root">
+    <Nav />
+    <header class="hero">
+      <img
+        width="1600"
+        height="1131"
+        class="img"
+        src="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1200&q=75"
+        srcset="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1200&q=75 800w,https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1200&q=75 1200w,https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1600&q=75 1600w,https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=2400&q=75 2400w"
+        sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
+      />
+      <div class="gradient"></div>
+      <div class="gradient2"></div>
+      <div class="overlay">
+        <div class="overlay-inner">
+          <h1 class="title">
+            <small class="subtitle">Click to launch app!</small>KBVE App
+          </h1>
+          <div>
+            <a href="https://app.kbve.com/" target="_blank"
+              ><span class="role"
+                >👩‍💻 Launch <span class="invert">👩‍💻 App</span>
+              </span>&nbsp;</a
+            >
+            <span class="role"
+              >✏️ Beta <span class="invert">✏️ Test</span>
+            </span>
+          </div>
+          <p class="desc">
+            KBVE IoT Application combines everything within your own realm.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper mt4 mb4">
+      <div class="grid">
+        <div class="section">
+          <h3 class="sectionTitle">Selected Work</h3>
+          <PortfolioPreview project={featuredProject} />
+          <div class="tac mt4">
+            <a href="/projects">
+              <Button>View All</Button>
+            </a>
+          </div>
+        </div>
+        <div class="section">
+          <h3 class="sectionTitle">Discord</h3>
+          <p class="bio">
+            <span>Join Us!</span>
+            <Discord width="350" height="500" />
+          </p>
+          <p>
+            <a href="/about">Read more about us</a> | <a
+              href="https://kbve.com/discord/">Discord Server Information</a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>

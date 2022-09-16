@@ -28,7 +28,8 @@
         ],
         "tmpfs": [
           "/run",
-          "/var/run"
+          "/var/run",
+          "/var/lib"
         ],
         "volumes": [
           "k3s-volume:/var/lib/rancher:rw",
@@ -90,7 +91,8 @@
       "k3s-volume": {
         "name": "k3s-volume",
         "driver_opts": {
-          "type": "overlay2"
+          "type": "tmpfs",
+          "device": "tmpfs"
         }
       },
       "proxy-volume": {
