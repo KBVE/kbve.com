@@ -45,8 +45,10 @@
         "Traefik",
         "truenas",
         "tsla",
+        "vidstack",
         "withastro",
-        "xtrabackup"
+        "xtrabackup",
+        "ytplayer"
     ],
     "editor.codeActionsOnSave": {
         "source.fixAll": false,

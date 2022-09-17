@@ -1,23 +1,16 @@
 ---
 import MainHead from '@c/MainHead.astro';
-import Nav from '@c/Nav';
 import Footer from '@c/Footer';
-import AssetPreview from '@c/AssetPreview';
-
-const asset = (await Astro.glob('./**/**/*.mdx'))
-.filter(({ frontmatter }) => !!frontmatter.publishDate)
-	.sort(
-		(a, b) =>
-			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
-	);
+import Nav from '@c/Nav';
 ---
 
 <html lang="en">
 	<head>
 		<MainHead
-			title="All Asset | KBVE"
-			description="Every asset that KBVE tracks"
+			title="Github | KBVE"
+			description="Official Github Page for KBVE Organization."
 		/>
+
 		<style lang="scss">
 			.grid {
 				display: flex;
@@ -28,7 +21,7 @@ const asset = (await Astro.glob('./**/**/*.mdx'))
 				max-height: 24rem;
                 position: relative;
 				overflow: hidden;
-                background-image: url('https://images.unsplash.com/photo-1621360841013-c7683c659ec6?auto=format&fit=crop&w=1400&h=700&q=75');
+                background-image: url('https://images.unsplash.com/photo-1606337321936-02d1b1a4d5ef?auto=format&fit=crop&w=1400&h=700&q=75');
                 background-size: cover;
 
 			}
@@ -41,7 +34,7 @@ const asset = (await Astro.glob('./**/**/*.mdx'))
                 align-items: center;
                 justify-content: center;
                 margin: 0;
-                color: rgb(231, 175, 134);
+                color: #b37e7e;
                 flex-direction: column;
                 font-size: var(--f-u7);
                 font-weight: 900;
@@ -67,12 +60,12 @@ const asset = (await Astro.glob('./**/**/*.mdx'))
 		<Nav />
 		<div class="wrapper">
 			<div class="heroImg">
-				<h1 class="title mt2 mb2">Assets</h1>
+				<h1 class="title mt2 mb2">Repos</h1>
 			</div>
 			<div class="bio wrapper wrapper__readable mt8">
 			</div>
 			<div class="grid">
-				{asset.map((project) => <AssetPreview project={project} />)}
+                Repo Embed 
 			</div>
 		</div>
 		<Footer />
