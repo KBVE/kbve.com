@@ -16,9 +16,9 @@ const VideoComponent = ({ width="640px", height="360px", src = null, id = null, 
     if (display && iframe && src == "yt")
     return (
         <>
-          <div className={Styles.github}>
+          <div className={Styles.overlay}>
           
-          {description}
+          <p>{description}</p>
 
             <iframe id="ytplayer" type="text/html" width={width} height={height}
               src={`https://www.youtube.com/embed/` + id + `?autoplay=1&origin=https://kbve.com"`}
