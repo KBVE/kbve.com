@@ -21,7 +21,7 @@ const VideoComponent = ({ width="640px", height="360px", src = null, id = null, 
           <p>{description}</p>
 
             <iframe id="ytplayer" type="text/html" width={width} height={height}
-              src={`https://www.youtube.com/embed/` + id + `?autoplay=1&origin=https://kbve.com"`}
+              src={`https://www.youtube.com/embed/` + id + `?&origin=https://kbve.com"`}
               frameborder="0"></iframe>
             </div>
         </>
