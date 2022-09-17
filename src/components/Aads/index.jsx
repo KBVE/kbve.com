@@ -11,7 +11,7 @@ const Aads = ({width = null, height = null, display = true, adaptive = true, squ
     if(display && adaptive)
 	return (
         <div>
-        <iframe data-aa='2082299' loading='lazy' src='//acceptable.a-ads.com/2082299?size=Adaptive&background_color=b39797&text_color=7b3d3d&title_color=642727&title_hover_color=733030&link_color=400c0c&link_hover_color=eebdbd' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
+        <iframe data-aa='2082299' loading='lazy' src='//acceptable.a-ads.com/2082299?size=Adaptive&background_color=161614&text_color=E7AF86&title_color=642727&title_hover_color=733030&link_color=E7AF86&link_hover_color=eebdbd' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
         </div>
         );
     else
