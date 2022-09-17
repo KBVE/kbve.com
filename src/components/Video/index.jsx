@@ -2,7 +2,7 @@ import { h } from 'preact';
 import Styles from "./styles.module.scss";
 // Place-holder for now.
 
-const VideoComponent = ({ src = null, id = null, description=null, display = true, header = false}) => {
+const VideoComponent = ({ width="640px", height="360px", src = null, id = null, description=null, display = true, header = false, iframe = false}) => {
     if (header)
     return (
           <>
@@ -11,8 +11,23 @@ const VideoComponent = ({ src = null, id = null, description=null, display = tru
           
           </>
     )
-  
-    if (display)
+    // Temporary fix until vidstack has youtube options within their video embed.
+    // https://github.com/KBVE/kbve.com/issues/25
+    if (display && iframe && src == "yt")
+    return (
+        <>
+          <div className={Styles.github}>
+          
+          {description}
+
+            <iframe id="ytplayer" type="text/html" width={width} height={height}
+              src={`https://www.youtube.com/embed/` + id + `?autoplay=1&origin=https://kbve.com"`}
+              frameborder="0"></iframe>
+            </div>
+        </>
+    );
+      
+    if (display && !iframe)
       return (
         <div className={Styles.github}>
           {description}
