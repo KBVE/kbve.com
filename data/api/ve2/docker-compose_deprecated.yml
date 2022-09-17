@@ -1,0 +1,51 @@
+version: "3.9"
+services:
+  api:
+    #container_name: strapi
+    #build: .
+    image: "ghcr.io/kbve/api.kbve.com:main"
+    restart: "no"
+    #env_file:
+    environment:
+      - DATABASE_CLIENT: /run/secrets/DATABASE_CLIENT
+      - DATABASE_HOST: strapiDB
+      - DATABASE_NAME: ${DATABASE_NAME}
+      - DATABASE_USERNAME: ${DATABASE_USERNAME}
+      - DATABASE_PORT: ${DATABASE_PORT}
+      - JWT_SECRET: ${JWT_SECRET}
+      - ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      - DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      - NODE_ENV: ${NODE_ENV}
+    #volumes:
+      #- ./config:/api/config
+      #- ./src:/api/src
+      #- ./package.json:/api/package.json
+      #- ./yarn.lock:/api/yarn.lock # Replace with package-lock.json if using npm
+      #- ./.env:/opt/app/.env
+    secrets:
+      - DATABASE_CLIENT
+    configs:
+      - source: evo_api_ve2
+        target: /api/.env
+    ports:
+      - "1337:1337"
+    networks:
+      - cloud-socket-proxy
+      
+networks:
+  cloud-socket-proxy:
+    external: true
+
+configs:
+  evo_api_ve2:
+    external: true
+    name: "evo_api_ve2"
+
+secrets:
+  DATABASE_CLIENT:
+    external: true
+    name: DATABASE_CLIENT
+  mysql_password:
+    external: true
+  mysql_root_password:
+    external: true
