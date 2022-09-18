@@ -52,8 +52,8 @@ mysql_galera_hostgroups =
 
 mysql_servers =
 (
-    { address="db1.cluster.local" , port=3306 , hostgroup=10, max_connections=100 },
-    { address="db2.cluster.local" , port=3306 , hostgroup=10, max_connections=100 },
+    { address="seed" , port=3306 , hostgroup=10, max_connections=100 },
+    { address="node" , port=3306 , hostgroup=10, max_connections=100 },
     { address="db3.cluster.local" , port=3306 , hostgroup=10, max_connections=100 }
 )
 

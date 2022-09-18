@@ -19,7 +19,11 @@ services:
       - xtrabackup_password
       - mysql_password
       - mysql_root_password
+      
   node:
+    depends_on:
+      seed:
+        condition: service_healthy
     image: colinmollenhour/mariadb-galera-swarm
     environment:
       - XTRABACKUP_PASSWORD_FILE=/run/secrets/xtrabackup_password
@@ -31,9 +35,10 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     deploy:
-      replicas: 6
+      replicas: 1
     secrets:
       - xtrabackup_password
+
   proxysql:
     depends_on:
       seed:
@@ -73,6 +78,7 @@ networks:
 secrets:
   xtrabackup_password:
     external: true
+    #name: xtrabackup_password
   mysql_password:
     external: true
   mysql_root_password:
