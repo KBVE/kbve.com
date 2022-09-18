@@ -9,6 +9,7 @@ function Footer() {
 		<footer className={Styles.footer}>
 			<Aads />
 			<br />
+			
 			<svg
 						xmlns="http://www.w3.org/2000/svg"
 						xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -54,6 +55,7 @@ function Footer() {
 			</g>
 			</svg>
 			<small className={Styles.byline}>🚀 Built by KBVE.com with Astro</small>
+			<small className={Styles.byline}>ඞ</small>
 		</footer>
 	);
 }

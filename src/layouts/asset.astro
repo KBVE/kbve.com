@@ -11,6 +11,21 @@ const { content } = Astro.props;
 	<head>
 		<MainHead title={content.title} description={content.description} />
 		<style lang="scss">
+
+			.overlay {
+				background-color: rgba(255, 255, 255, 0.12);
+				backdrop-filter: blur(80px);
+				-webkit-backdrop-filter: blur(80px);
+				padding: 16px;
+				border-radius: 16px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+				p {
+				text-align: center;
+				color:  rgb(231, 175, 134);
+				//box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+				}
+			}
 			.hero {
 				padding: 8rem;
 				display: flex;
