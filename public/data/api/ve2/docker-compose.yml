@@ -1,24 +1,25 @@
-version: "3.9"
+version: "3.8"
 services:
   api:
     image: "ghcr.io/kbve/api.kbve.com:main"
     restart: "no"
-    command:
-      - "yarn"
-    configs:
-      - source: evo_api_ve2_v2
-        target: /api/.env
+#   command: sh -c "echo $DATABASE_HOST;"
+    environment:
+      - NODE_ENV=/run/secrets/strapi_env
+    secrets:
+      - strapi_env
+      
     ports:
       - "1337:1337"
     networks:
-      - cloud-socket-proxy
+      - cloud-public
       
 networks:
-  cloud-socket-proxy:
+  cloud-public:
     external: true
 
-configs:
-  evo_api_ve2_v2:
-    external: true
-    name: "evo_api_ve2_v2"
 
+secrets:
+  strapi_env:
+    external: true
+    name: strapi_env

@@ -1,0 +1,54 @@
+version: "3.8"
+services:
+  api:
+    image: "ghcr.io/kbve/api.kbve.com:main"
+    restart: "no"
+#   command: sh -c "echo $DATABASE_HOST;"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_CLIENT=mysql
+      - DATABASE_NAME=apistrapi
+      - DATABASE_PORT=3306
+      # Variables
+      - DATABASE_HOST={{`(< /run/secrets/DATABASE_HOST)`}}
+      #- DATABASE_HOST=${{< /run/secrets/DATABASE_HOST}}
+      - DATABASE_USERNAME=/run/secrets/DATABASE_USERNAME
+      - DATABASE_PASSWORD=/run/secrets/DATABASE_PASSWORD
+      - JWT_SECRET=/run/secrets/JWT_SECRET
+      - ADMIN_JWT_SECRET=/run/secrets/ADMIN_JWT_SECRET
+    secrets:
+      - DATABASE_HOST
+      - DATABASE_USERNAME
+      - DATABASE_PASSWORD
+      - JWT_SECRET
+      - ADMIN_JWT_SECRET
+
+
+    ports:
+      - "1337:1337"
+    networks:
+      - cloud-public
+      
+networks:
+  cloud-public:
+    external: true
+
+
+secrets:
+  #Database Username / Password
+  DATABASE_HOST:
+    external: true
+    name: 'DATABASE_HOST'
+  DATABASE_USERNAME:
+    external: true
+    name: DATABASE_USERNAME 
+  DATABASE_PASSWORD:
+    external: true
+    name: DATABASE_PASSWORD    
+  # JWT Secrets
+  JWT_SECRET:
+    external: true
+    name: JWT_SECRET
+  ADMIN_JWT_SECRET:
+    external: true
+    name: ADMIN_JWT_SECRET
