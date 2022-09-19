@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  api:
+    image: ghcr.io/kbve/api.kbve.com:main
+    #restart: "no"
+    command: 
+      - "ls"
+      #- "ENV_PATH=/env.conf yarn start"
+      #- "/usr/bin/yarn start"
+    configs:
+      - source: evo_api_ve2_v2
+        target: /env.conf
+    ports:
+      - "1337:1337"
+    networks:
+      - cloud-socket-proxy
+      - cloud-public
+      
+networks:
+  cloud-socket-proxy:
+    external: true
+    name: cloud-socket-proxy
+  cloud-public:
+    external: true
+    name: cloud-public
+
+
+configs:
+  evo_api_ve2_v2:
+    external: true
+    name: "evo_api_ve2_v2"
