@@ -1,5 +1,11 @@
 version: '3.4'
 
+#
+#
+#   MariaDB Galera Swarm
+#
+#
+
 services:
   seed:
     image: colinmollenhour/mariadb-galera-swarm
@@ -15,15 +21,18 @@ services:
     command: seed
     volumes:
       - mysql-data:/var/lib/mysql
+    deploy:
+      placement:
+        constraints:
+#          - node.labels.cloud-public.traefik-certificates == true
+          - node.role == manager
     secrets:
       - xtrabackup_password
       - mysql_password
       - mysql_root_password
-      
   node:
     depends_on:
-      seed:
-        condition: service_healthy
+      - seed
     image: colinmollenhour/mariadb-galera-swarm
     environment:
       - XTRABACKUP_PASSWORD_FILE=/run/secrets/xtrabackup_password
@@ -39,20 +48,30 @@ services:
     secrets:
       - xtrabackup_password
 
+#
+#
+#   Proxy SQL
+#
+#
+
   proxysql:
     depends_on:
-      seed:
-        condition: service_healthy
-      node:
-        condition: service_healthy
+      - seed
+      - node
     image: proxysql/proxysql:latest
     networks:
       - galera_network
+      - cloud-public
     configs:
-      - source: proxysql-galera-v4
+      - source: proxysql_ve2.cnf
         target: /etc/proxysql.cnf
     volumes:
       - proxysql-data:/var/lib/proxysql
+    
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.constraint-label=cloud-public
 
     ports:
     - "6033:6033"
@@ -60,7 +79,7 @@ services:
     - "6080:6080"
 
 configs:
-  proxysql-galera-v4:
+  proxysql_ve2.cnf:
     external: true
 
 volumes:
@@ -74,11 +93,14 @@ volumes:
 networks:
   galera_network:
     driver: overlay
+  cloud-socket-proxy:
+    external: true
+  cloud-public:
+    external: true
 
 secrets:
   xtrabackup_password:
     external: true
-    #name: xtrabackup_password
   mysql_password:
     external: true
   mysql_root_password:

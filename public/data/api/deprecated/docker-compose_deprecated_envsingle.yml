@@ -1,0 +1,55 @@
+version: "3.8"
+services:
+  api:
+    image: "ghcr.io/kbve/api.kbve.com:main"
+    restart: "no"
+    environment:
+      - DATABASE_CLIENT=mysql
+      - DATABASE_HOST_FILE=/run/secrets/DATABASE_HOST
+      - DATABASE_NAME=apistrapi
+      - DATABASE_PORT=6032
+      - DATABASE_USERNAME=/run/secrets/DATABASE_USERNAME
+      - DATABASE_PASSWORD=/run/secrets/DATABASE_PASSWORD
+      - JWT_SECRET=/run/secrets/JWT_SECRET
+      - ADMIN_JWT_SECRET=/run/secrets/ADMIN_JWT_SECRET
+      - NODE_ENV="production"
+    secrets:
+      - DATABASE_USERNAME
+      - DATABASE_PASSWORD
+      - JWT_SECRET
+      - ADMIN_JWT_SECRET
+    configs:
+      - source: evo_api_ve2_v2
+        target: /.env
+    ports:
+      - "1337:1337"
+    networks:
+      - cloud-socket-proxy
+      
+networks:
+  cloud-socket-proxy:
+    external: true
+
+configs:
+  evo_api_ve2_v2:
+    external: true
+    name: "evo_api_ve2_v2"
+
+secrets:
+  #Database Username / Password
+  DATABASE_HOST:
+    external: true
+    name: DATABASE_HOST
+  DATABASE_USERNAME:
+    external: true
+    name: DATABASE_USERNAME 
+  DATABASE_PASSWORD:
+    external: true
+    name: DATABASE_PASSWORD    
+  # JWT Secrets
+  JWT_SECRET:
+    external: true
+    name: JWT_SECRET
+  ADMIN_JWT_SECRET:
+    external: true
+    name: ADMIN_JWT_SECRET

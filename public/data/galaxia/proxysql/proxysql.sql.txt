@@ -1,0 +1,4 @@
+CREATE USER IF NOT EXISTS 'proxysql'@'10.%.%.%' IDENTIFIED BY 'password';
+CREATE DATABASE strapi;
+CREATE USER IF NOT EXISTS 'strapi'@'10.%.%.%' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
