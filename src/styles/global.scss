@@ -177,8 +177,8 @@ $colors: 'black', 'blue', 'white';
 }
 .wrapper_overlay {
 	background-color: rgba(255, 255, 255, 0.12);
-	backdrop-filter: blur(80px);
-	-webkit-backdrop-filter: blur(80px);
+	// backdrop-filter: blur(80px);
+	// -webkit-backdrop-filter: blur(80px);
 	padding: 16px;
 	border-radius: 16px;
 	border: 1px solid rgba(255, 255, 255, 0.12);
