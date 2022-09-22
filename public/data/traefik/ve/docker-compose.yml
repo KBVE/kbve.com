@@ -1,8 +1,36 @@
-version: '3.8'
+version: '3.9'
+######### IMPORTANT -> [START] #############
+#                                          #
+#          Traefik Docker Compose          #
+#             Written by: KBVE             #
+#           h0lybyte & Ziggy9263           #
+#                                          #
+########## IMPORTANT -> [END] ##############
+
+
+########### SECRETS -> [START] ################
+#ඞ                                          ඞ#
+secrets:
+#ඞ        CloudFlare API Email              ඞ#
+  CF_API_EMAIL:
+    external: true
+#ඞ        CloudFlare API Token              ඞ#
+  CF_DNS_API_TOKEN:
+    external: true
+#ඞ                                          ඞ#
+#ඞ                                          ඞ#
+############ SECRETS -> [END] #################
+
+
+########### VOLUMES -> [START] #############
 
 volumes:
   traefik-certificates:
 
+########### VOLUMES -> [END] #############
+
+
+########### NETWORKS -> [START] #############
 networks:
   cloud-edge:
     external: true
@@ -11,17 +39,26 @@ networks:
   cloud-socket-proxy:
     external: true
 
+########### NETWORKS -> [END] #############
+
+
+
 configs:
   traefik-ve_dynamic_conf.toml:
     external: true
 
 services:
   reverse-proxy:
-    image: traefik:v2.2
+    image: traefik:v2.7
     configs:
       - source: traefik-ve_dynamic_conf.toml
         target: traefik_conf/dynamic_conf.toml
     command:
+    
+    # 
+    #- --global.checkNewVersion=true
+    #- --global.sendAnonymousUsage=true
+    
     - --providers.docker
     # Use the secure docker socket proxy
     - --providers.docker.endpoint=tcp://socket-proxy:2375
@@ -34,21 +71,67 @@ services:
     # see https://github.com/containous/traefik/issues/5507
     - --providers.file.filename=traefik_conf/dynamic_conf.toml
     # Entrypoints (ports) for the routers
-    - --entrypoints.web.address=:80
-    - --entrypoints.websecure.address=:443
+    # 
+    - --entrypoints.http.address=:80
+    - --entrypoints.https.address=:443
     # Entrypoint for the dashboard on port 8000
     - --entrypoints.api.address=:8000
+    #- --entrypoints.https.address=:80,443,8080,8000
+    # Cloudflare Entrypoints Trusted IPs
+    #- --entrypoints.https.forwardedHeaders.trustedIPs=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/12,172.64.0.0/13,131.0.72.0/22
+    - --entrypoints.https.forwardedHeaders.trustedIPs=173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/12,172.64.0.0/13,131.0.72.0/22
+   
+
+    # Techno Tim Insecure Skip
+    - --serversTransport.insecureSkipVerify=true
+#EXPERIMENTAL -> [START] 
+
+    - --entrypoints.https.http.tls.certresolver=dns-cloudflare
+    - --entrypoints.https.http.tls.domains[0].main=sub.domain.com<<SUB_DOMAIN>>
+    - --entrypoints.https.http.tls.domains[0].sans=*.sub.domain.com<<SUB_SUB_DOMAIN>>
+    # Add dns-cloudflare as default certresolver for all services. Also enables TLS and no need to specify on individual services
+    #- --entrypoints.https.http.tls.certresolver=dns-cloudflare
+    #- --entrypoints.https.http.tls.domains[0].main=ve2.ඞ.com
+    #- --entrypoints.https.http.tls.domains[0].sans=*.ve2.ඞ.com
+    # - --entrypoints.https.http.tls.domains[1].main=$DOMAINNAME_KHUB # Pulls main cert for second domain
+    # - --entrypoints.https.http.tls.domains[1].sans=*.$DOMAINNAME_KHUB # Pulls wildcard cert for second domain
+    #
+    #
+    - --providers.docker.network=cloud-public
+   
+    #
+    #
+    #- --providers.docker.swarmMode=false
+    - --providers.docker.swarmMode=true
+    - --providers.file.directory=/rules
+    # Load dynamic configuration from one or more .toml or .yml files in a directory
+    # - --providers.file.filename=/path/to/file # Load dynamic configuration from a file
+    - --providers.file.watch=true
+    # Only works on top level files in the rules folder
+    # - --certificatesResolvers.dns-cloudflare.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory # LetsEncrypt Staging Server - uncomment when testing
+    - --certificatesResolvers.dns-cloudflare.acme.email=<<EMAIL>>
+    - --certificatesResolvers.dns-cloudflare.acme.storage=/cloudflare/acme.json
+    - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.provider=cloudflare
+    - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.resolvers=1.1.1.1:53,1.0.0.1:53
+    - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.delayBeforeCheck=90
+    # To delay DNS check and reduce LE hitrate
+    # - --metrics.prometheus=true
+    # - --metrics.prometheus.buckets=0.1,0.3,1.2,5.0
+
+# EXPERIMENTAL -> [END] 
+
     # Create the certificate resolver "letsencrypt" for Let's Encrypt, replace <<EMAIL>> with the one for letsencrypt
-    - --certificatesresolvers.letsencrypt.acme.email=<<EMAIL>>
-    - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
-    - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+    #- --certificatesresolvers.letsencrypt.acme.email=<<EMAIL>>
+    #- --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+    #- --certificatesresolvers.letsencrypt.acme.tlschallenge=true
     # Only for development to avoid hitting the rate limit on certificates
-    - --certificatesresolvers.letsencrypt.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
+    #- --certificatesresolvers.letsencrypt.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
     # Logging
     - --accesslog
     - --log.level=debug
     # Enable the dashboard
     - --api
+
     deploy:
       restart_policy:
         condition: on-failure
@@ -63,12 +146,12 @@ services:
         - traefik.constraint-label=cloud-public
 
         # Global redirection: HTTP to HTTPS
-        - traefik.http.routers.http-redirects.entrypoints=web
+        - traefik.http.routers.http-redirects.entrypoints=http
         - traefik.http.routers.http-redirects.rule=hostregexp(`{host:(www\.)?.+}`)
         - traefik.http.routers.http-redirects.middlewares=traefik-ratelimit,redirect-to-non-www-https
 
         # Global redirection: HTTPS www to HTTPS non-www
-        - traefik.http.routers.www-redirects.entrypoints=websecure
+        - traefik.http.routers.www-redirects.entrypoints=https
         - traefik.http.routers.www-redirects.rule=hostregexp(`{host:(www\.).+}`)
         - traefik.http.routers.www-redirects.tls=true
         - traefik.http.routers.www-redirects.tls.options=default
@@ -80,23 +163,26 @@ services:
         - traefik.http.middlewares.redirect-to-non-www-https.redirectregex.permanent=true
 
         # Dashboard on port 8000
-        - traefik.http.routers.api.entrypoints=api
+        #- traefik.http.routers.api.entrypoints=https
+        - traefik.http.routers.api.entrypoints=https
         # Replace <<DOMAIN>> with the root domain (e.g. thisdedi.wentalltheway.home)
         - traefik.http.routers.api.rule=Host(`<<DOMAIN>>`)
         - traefik.http.routers.api.service=api@internal
-        - traefik.http.routers.api.tls=true
-        - traefik.http.routers.api.tls.options=default
-        - traefik.http.routers.api.tls.certresolver=letsencrypt
+
+        
+        #- traefik.http.routers.api.tls=true
+        #- traefik.http.routers.api.tls.options=default
+        #- traefik.http.routers.api.tls.certresolver=dns-cloudflare
         # middlewares: use IP whitelisting, ratelimit and basic authentication
         - traefik.http.routers.api.middlewares=api-ipwhitelist,traefik-ratelimit,api-auth
         # Replace <<TRAEFIK_ADMINS>> with the output from `htpasswd -nBC 10 USERNAME` where USERNAME is the name of the user
         # NOTE: BIG FAT FUCKING NOTE: YOU MUST ESCAPE DOLLAR SIGNS WITH DOLLAR SIGNS
         # E.G. A HASH THAT INCLUDES $ MUST THEN HAVE $$ INSTEAD OF A SINGLE $ OR ELSE NO WORKY
-        - traefik.http.middlewares.api-auth.basicauth.users=<<TRAEFIK_ADMINS>>
+        - traefik.http.middlewares.api-auth.basicauth.users=<<TRAEFIK_ADMIN>>
         # whitelist your public ip
         # replace with the IP you wish to whitelist connections from
         # That's up to you, bro
-        - traefik.http.middlewares.api-ipwhitelist.ipwhitelist.sourcerange=<<WHITELIST_IP>>
+        - traefik.http.middlewares.api-ipwhitelist.ipwhitelist.sourcerange=<<IP_ADDRESS>>
         - traefik.http.services.api.loadbalancer.server.port=8000
 
         # Extra middleware (ratelimit, ip whitelisting)
@@ -104,6 +190,8 @@ services:
         - traefik.http.middlewares.traefik-ratelimit.ratelimit.burst=50
     # Use host mode for network ports for IP whitelisting
     # see https://community.containo.us/t/whitelist-swarm-cant-get-real-source-ip/3897
+
+
     ports:
       - target: 80
         published: 80
@@ -119,12 +207,17 @@ services:
         mode: host
     volumes:
       # storage for the SSL certificates
-      - traefik-certificates:/letsencrypt
+      - traefik-certificates:/cloudflare
     networks:
       - cloud-edge
       - cloud-public
       - cloud-socket-proxy
-
+    environment:
+      - CF_API_EMAIL_FILE=/run/secrets/CF_API_EMAIL
+      - CF_DNS_API_TOKEN_FILE=/run/secrets/CF_DNS_API_TOKEN
+    secrets:
+      - CF_API_EMAIL
+      - CF_DNS_API_TOKEN
   socket-proxy:
     image: tecnativa/docker-socket-proxy:latest
     deploy:

@@ -74,6 +74,9 @@ tags:
         - Upon the initialization instance, the container will provide a token for other worker/manager nodes to join.
       - `docker swarm join --token $token $ip` - Docker container will join the swarm as a worker; token string should be obtained by init and the `$ip` should be IP Address and port.
         - `$ip` will be given as `$$ipaddress:$$port` , where the substring `$$ipaddress` is the IPv4address or IPv6address and the substring `$$port` is the open port on that `$$ipaddress`.
+    - Docker Prune / Clean up
+      - `docker system prune` - The docker system will clean up any dead objects, such as containers, networks, ect..
+        - `docker system prune -a` - Incase you need to do a deep clean within the docker node.
 
 * * *
 
