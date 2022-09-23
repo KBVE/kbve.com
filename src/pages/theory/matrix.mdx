@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/project.astro
+layout: ../../layouts/matrix.astro
 title: Matrix
 client: Self
 publishDate: 2020-03-02 00:00:00
@@ -13,4 +13,35 @@ tags:
 ---
 
 # Matrix
-- The theory places all objectives through a simple quadrant based upon the priority.
+#### AKA Eisenhower Matrix
+The theory places all objectives through a simple quadrant based upon the priority.
+
+We have added onto the existing Eisenhower Matrix system, such that we also have a simple priority
+numbering system on top of it. The system is as follows:
+- Urgent & Important: This is set in Github Projects as "1 U-I"
+- Urgent & Not Important: This is set as "2 U-NI"
+- Not Urgent & Important: This is set as "3 NU-I"
+- Not Urgent & Not Important: This is set as "4 NU-NI"
+
+Then in the labels for the issues, we've added a numbering system that starts at zero (lowest
+priority) and can scale infinitely, with higher numbers being higher priority. For now, we have
+just 0 through 3, designated as Low, Medium, High, and Very High Priority.
+
+With this, in Github Projects, we can group by the Eisenhower Matrix, and then sort by labels.
+If the priority labels start with the number, then they'll be sorted by those priorities. Order by
+Z-A (Descending) and you'll have the highest priority tasks at the top of each grouped list for
+every quadrant of the Eisenhower matrix.
+
+Thank you for reading KBVE.
+
+## Notes
+
+```
+9/22/2022
+> Ziggy had some ideas
+  - Rather than using a simple quadrant system, we could extend the matrix to include a positive and negative array between -100 and 100 in order to 'map out' each task in a much more thorough way.
+  - This could then be used as part of a ai assistant with a simple question to the user
+
+  3rd dimension: Z
+  - Priority range of -10 to 10
+```
