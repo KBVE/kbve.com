@@ -2,7 +2,7 @@
 name: Podcast Topic
 about: Create a podcast topic request or suggestion.
 title: ''
-labels: podcast, video
+labels: 0, podcast, video
 assignees: ''
 
 ---

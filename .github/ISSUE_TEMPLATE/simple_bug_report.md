@@ -2,7 +2,7 @@
 name: Simple Bug report
 about: Create a bug report on any of our KBVE services.
 title: ''
-labels: bug
+labels: 0, bug
 assignees: ''
 
 ---
