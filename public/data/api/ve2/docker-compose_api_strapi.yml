@@ -1,0 +1,81 @@
+version: "3.8"
+services:
+  strapi:
+    image: "ghcr.io/kbve/api.kbve.com:main"
+    restart: "no"
+    environment:
+    # DATABASE
+      - DATABASE_CLIENT=mysql
+      - DATABASE_NAME=apistrapi
+      # ProxySQL Port
+      - DATABASE_PORT=6033
+      - DATABASE_HOST_FILE=/run/secrets/DATABASE_HOST_FILE
+      - DATABASE_USERNAME_FILE=/run/secrets/DATABASE_USERNAME_FILE
+      - DATABASE_PASSWORD_FILE=/run/secrets/DATABASE_PASSWORD_FILE
+    # JWT / TOKENS
+      - JWT_SECRET_FILE=/run/secrets/JWT_SECRET_FILE
+      - ADMIN_JWT_SECRET_FILE=/run/secrets/ADMIN_JWT_SECRET_FILE
+      - APP_KEYS_FILE=/run/secrets/APP_KEYS_FILE
+      - API_TOKEN_FILE=/run/secrets/API_TOKEN_FILE
+
+      #- APP_KEYS=APP_KEYS_FILE << If /run/secrts is hard coded within the nodejs application
+      #- APP_KEYS=/run/secrets/APP_KEYS_FILE << else
+      
+      # Production
+      - NODE_ENV=production
+
+    secrets:
+      - DATABASE_HOST_FILE
+      - DATABASE_USERNAME_FILE
+      - DATABASE_PASSWORD_FILE
+      - JWT_SECRET_FILE
+      - ADMIN_JWT_SECRET_FILE
+      - APP_KEYS_FILE
+      - API_TOKEN_FILE
+    ports:
+      - "1337:1337"
+
+    networks:
+      - cloud-public
+      
+    # Traefik Labels  
+    labels:
+      - traefik.enable=true
+      - traefik.constraint-label=cloud-public
+      - traefik.http.routers.strapi.entrypoints=websecure
+      - traefik.http.routers.strapi.rule=Host(`api.kbve.com`)
+      - traefik.http.routers.strapi.tls=true
+        # min TLS version
+      - traefik.http.routers.strapi.tls.options=tls12@file
+      - traefik.http.routers.strapi.tls.certresolver=letsencrypt
+      - traefik.http.routers.strapi.middlewares=traefik-ratelimit
+      - traefik.http.services.strapi.loadbalancer.server.port=1337
+
+networks:
+  cloud-public:
+    external: true
+
+secrets:
+  #Database Username / Password
+  DATABASE_HOST_FILE:
+    external: true
+    name: DATABASE_HOST_FILE
+  DATABASE_USERNAME_FILE:
+    external: true
+    name: DATABASE_USERNAME_FILE
+  DATABASE_PASSWORD_FILE:
+    external: true
+    name: DATABASE_PASSWORD_FILE    
+  # JWT Secrets
+  JWT_SECRET_FILE:
+    external: true
+    name: JWT_SECRET_FILE
+  ADMIN_JWT_SECRET_FILE:
+    external: true
+    name: ADMIN_JWT_SECRET_FILE
+  APP_KEYS_FILE:
+    external: true
+    name: APP_KEYS_FILE
+  API_TOKEN_FILE:
+    external: true
+    name: API_TOKEN_FILE
