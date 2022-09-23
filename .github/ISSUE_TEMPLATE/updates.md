@@ -1,7 +1,7 @@
 ---
 name: Update Issues, Reports and Plans
 about: Create an update report for any KBVE services.
-title: ''
+title: 'Update: '
 labels: update, enhancement, security
 assignees: ''
 ---
@@ -17,6 +17,6 @@ Include any links / data for the update that must be done.
 * * *
 
 **Security risk**
-Are there any major security risks.
+Are there any major security risks?!
 
 * * *

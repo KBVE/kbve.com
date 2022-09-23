@@ -1,13 +1,13 @@
 ---
 name: Music Topic
 about: Create a music topic request or suggestion.
-title: ''
+title: 'Music Theory: '
 labels: music, media
 assignees: ''
 
 ---
 
-**Describe the podcast topic**
+**Describe the music topic**
 A clear and concise description of what the thesis for your music topic is. Keep it simple!
 
 * * *
