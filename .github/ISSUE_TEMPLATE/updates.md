@@ -2,7 +2,7 @@
 name: Update Issues, Reports and Plans
 about: Create an update report for any KBVE services.
 title: 'Update: '
-labels: update, enhancement, security
+labels: 0, update, enhancement, security
 assignees: ''
 ---
 

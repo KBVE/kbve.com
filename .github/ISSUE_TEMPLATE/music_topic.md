@@ -2,7 +2,7 @@
 name: Music Topic
 about: Create a music topic request or suggestion.
 title: 'Music Theory: '
-labels: music, media
+labels: 0, music, media
 assignees: ''
 
 ---
