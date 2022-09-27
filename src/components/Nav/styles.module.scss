@@ -1,13 +1,9 @@
 .nav {
 	display: flex;
 	align-items: center;
-	padding-top: 1rem;
-	padding-right: 2rem;
-	padding-bottom: 1rem;
-	padding-left: 2rem;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 999;
 	background-color: rgba(0, 0, 0, 0.72);
   // backdrop-filter: blur(4.9px);
@@ -52,6 +48,14 @@
 	&:hover {
 		color: var(--t-active);
 	}
+}
+
+.endLinks {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
 }
 
 .monogram {
