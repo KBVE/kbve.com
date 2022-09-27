@@ -1,5 +1,5 @@
 import { h } from "preact";
-import Register from "@c/Authentication";
+import Authentication from "@c/Authentication";
 import Styles from "./styles.module.scss";
 
 function Nav() {
@@ -20,7 +20,7 @@ function Nav() {
       </a>
 
       <div className={Styles.endLinks}>
-        <Register />
+        <Authentication />
       </div>
     </nav>
   );

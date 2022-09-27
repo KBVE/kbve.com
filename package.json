@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^1.1.1",
+    "@hcaptcha/react-hcaptcha": "^1.4.4",
     "jquery": "^3.6.1",
     "preact": "^10.7.3",
     "react": "^18.2.0",

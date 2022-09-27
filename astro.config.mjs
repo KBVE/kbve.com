@@ -14,5 +14,5 @@ export default defineConfig({
   },
   integrations: [preact(), sitemap({
     customPages: ['https://app.kbve.com/#/', 'https://app.kbve.com/#/asset/']
-  }), mdx(), react(), compress()]
+  }), mdx(), react(), compress()],
 });
