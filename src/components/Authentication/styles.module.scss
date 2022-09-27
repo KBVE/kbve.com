@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.textRoot {
+  font-weight: bolder;
+  font-size: large;
+  cursor: default;
+}
+
+.buttonRoot {
+  background: unset;
+  color: var(--t-fg);
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  transition: text-decoration-color 300ms;
+  &:hover {
+    text-decoration-color: var(--t-fg);
+  }
+}
