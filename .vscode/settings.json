@@ -50,6 +50,9 @@
         "xtrabackup",
         "ytplayer"
     ],
+    "files.exclude": {
+      "public/archive": false,
+    },
     "editor.codeActionsOnSave": {
         "source.fixAll": false,
         "source.organizeImports": false        
