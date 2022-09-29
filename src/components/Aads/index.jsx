@@ -1,4 +1,4 @@
-// import { h } from 'preact';
+import { h } from 'preact';
 const Aads = ({width = null, height = null, display = true, adaptive = true, square = false}) => {
 
     if(display && square)

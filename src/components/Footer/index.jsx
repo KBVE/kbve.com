@@ -1,9 +1,30 @@
-// import { h } from "preact";
+//import { h } from "preact";
+import React, { Component } from "react";
 import Styles from "./styles.module.scss";
 import { Typography } from "@mui/material";
 
 // Import A-Ads Banner
 import Aads from "../Aads";
+
+
+
+const TypoG = () => (
+  <></>
+);
+
+class App extends Component {
+  render() {
+    const name = 'Red Header';
+  
+    return (
+      <div style={{backgroundColor : 'red'}}>
+        {name}
+        <TypoG />
+      </div>
+    );
+   }
+}
+
 
 function Footer() {
   return (
@@ -57,7 +78,7 @@ function Footer() {
       </svg>
       <small className={Styles.byline}>🚀 Built by KBVE.com with Astro</small>
       <small className={Styles.byline}>ඞ</small>
-      <Typography variant="h2">Test</Typography>
+      <App />
     </footer>
   );
 }

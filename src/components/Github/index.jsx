@@ -1,7 +1,7 @@
 import { h } from "preact";
 import Styles from "./styles.module.scss";
 
-const GithubIFrameComponent = ({ src = null, height = null, display = true }) => {
+const GithubIFrameComponent = ({ src = null, height = null, display = true, lang = '' }) => {
   if (display)
     return (
       <div className={Styles.github}>
