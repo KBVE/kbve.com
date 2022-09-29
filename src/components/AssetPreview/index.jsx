@@ -21,7 +21,7 @@ function AssetPreview({ project }) {
 						</div>
 					))}
 				</div>
-				<a className={Styles.link} href={project.url}>
+				<a className={Styles.link} href={project.url} rel={`prefetch`}>
 					<span className={Styles.linkInner}>Details</span>
 				</a>
 			</div>
