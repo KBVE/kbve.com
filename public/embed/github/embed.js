@@ -23,7 +23,12 @@ function embed() {
   const repository = pathSplit[2];
   const branch = pathSplit[4];
   const file = pathSplit.slice(5, pathSplit.length).join("/");
-  const fileExtension = file.split('.').length > 1 ? file.split('.')[file.split('.').length - 1] : 'txt';
+
+  // Adding file Extensions from the URL 
+  //const fileExtension = file.split('.').length > 1 ? file.split('.')[file.split('.').length - 1] : 'txt';
+  const fileExtension = params.get("lang") || (file.split('.').length > 1 ? file.split('.')[file.split('.').length - 1] : 'txt');
+  
+  
   const rawFileURL = fetchFromJsDelivr
     ? `https://cdn.jsdelivr.net/gh/${user}/${repository}@${branch}/${file}`
     : `https://raw.githubusercontent.com/${user}/${repository}/${branch}/${file}`;
