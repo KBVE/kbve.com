@@ -1,0 +1,302 @@
+import 'dart:html';
+
+import 'package:admin/constants.dart';
+import 'package:admin/controllers/MenuController.dart';
+import 'package:admin/screens/main/main_screen.dart';
+import 'package:admin/screens/main/login.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+void main() {
+  runApp(KBVE());
+}
+
+class Asset {
+  final String asset;
+  final String information;
+
+  Asset(this.asset, this.information);
+}
+
+class KBVE extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _KBVEAppState();
+}
+
+class _KBVEAppState extends State<KBVE> {
+  AppRouterDelegate _routerDelegate = AppRouterDelegate();
+  AppRouteInformationParser _routerInformationParser =
+      AppRouteInformationParser();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      title: 'KBVE.com',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: bgColor,
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.white),
+        canvasColor: secondaryColor,
+      ),
+      routerDelegate: _routerDelegate,
+      routeInformationParser: _routerInformationParser,
+    );
+  }
+}
+
+class AppRouteInformationParser extends RouteInformationParser<AppRoutePath> {
+  @override
+  Future<AppRoutePath> parseRouteInformation(
+      RouteInformation routeInformation) async {
+    final uri = Uri.tryParse(routeInformation.location!);
+    // Handle '/'
+    if (uri?.pathSegments.length == 0) {
+      return AppRoutePath.home();
+    }
+
+    // Handle '/asset/:id'
+    if (uri?.pathSegments.length == 2) {
+      if (uri?.pathSegments[0] != 'asset') return AppRoutePath.unknown();
+      var remaining = uri?.pathSegments[1];
+      var id = int.tryParse(remaining!);
+      if (id == null) return AppRoutePath.unknown();
+      return AppRoutePath.details(id);
+    }
+
+    // Handle unknown routes
+    return AppRoutePath.unknown();
+  }
+
+  @override
+  RouteInformation? restoreRouteInformation(AppRoutePath path) {
+    if (path.isUnknown) {
+      return RouteInformation(location: '/404');
+    }
+    if (path.isHomePage) {
+      return RouteInformation(location: '/');
+    }
+    if (path.isDetailsPage) {
+      return RouteInformation(location: '/asset/${path.id}');
+    }
+    return null;
+  }
+}
+
+class AppRouterDelegate extends RouterDelegate<AppRoutePath>
+    with ChangeNotifier, PopNavigatorRouterDelegateMixin<AppRoutePath> {
+  final GlobalKey<NavigatorState> navigatorKey;
+
+  Asset? _selectedAsset;
+  bool show404 = false;
+
+  List<Asset> assets = [
+    Asset('TSLA', 'TSLA Stock'),
+    Asset('SPY', 'S&P500 ETF'),
+    Asset('STAG', 'STAG Industrial'),
+  ];
+
+  AppRouterDelegate() : navigatorKey = GlobalKey<NavigatorState>();
+
+  AppRoutePath get currentConfiguration {
+    if (show404) {
+      return AppRoutePath.unknown();
+    }
+    return _selectedAsset == null
+        ? AppRoutePath.home()
+        : AppRoutePath.details(assets.indexOf(_selectedAsset!));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Navigator(
+      key: navigatorKey,
+      pages: [
+        MaterialPage(
+          key: ValueKey('AssetsListPage'),
+          child: AssetsListScreen(
+            assets: assets,
+            onTapped: _handleAssetTapped,
+          ),
+        ),
+        if (show404)
+          MaterialPage(key: ValueKey('UnknownPage'), child: UnknownScreen())
+        else if (_selectedAsset != null)
+          AssetDetailsPage(asset: _selectedAsset!)
+      ],
+      onPopPage: (route, result) {
+        if (!route.didPop(result)) {
+          return false;
+        }
+
+        // Update the list of pages by setting _selectedBook to null
+        _selectedAsset = null;
+        show404 = false;
+        notifyListeners();
+
+        return true;
+      },
+    );
+  }
+
+  @override
+  Future<void> setNewRoutePath(AppRoutePath path) async {
+    if (path.isUnknown) {
+      _selectedAsset = null;
+      show404 = true;
+      return;
+    }
+
+    if (path.isDetailsPage) {
+      if (path.id! < 0 || path.id! > assets.length - 1) {
+        show404 = true;
+        return;
+      }
+
+      _selectedAsset = assets[path.id!];
+    } else {
+      _selectedAsset = null;
+    }
+
+    show404 = false;
+  }
+
+  void _handleAssetTapped(Asset asset) {
+    _selectedAsset = asset;
+    notifyListeners();
+  }
+}
+
+class AssetsListScreen extends StatelessWidget {
+  final List<Asset> assets;
+  final ValueChanged<Asset> onTapped;
+
+  AssetsListScreen({
+    required this.assets,
+    required this.onTapped,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: ListView(
+        children: [
+          for (var asset in assets)
+            ListTile(
+              title: Text(asset.asset),
+              subtitle: Text(asset.information),
+              onTap: () => onTapped(asset),
+            )
+        ],
+      ),
+    );
+  }
+}
+
+class AppRoutePath {
+  final int? id;
+  final bool isUnknown;
+
+  AppRoutePath.home()
+      : id = null,
+        isUnknown = false;
+
+  AppRoutePath.details(this.id) : isUnknown = false;
+
+  AppRoutePath.unknown()
+      : id = null,
+        isUnknown = true;
+
+  bool get isHomePage => id == null;
+
+  bool get isDetailsPage => id != null;
+
+  AppRoutePath.appscreen()
+      : id = null,
+        isUnknown = false;
+}
+
+class AssetDetailsScreen extends StatelessWidget {
+  final Asset? asset;
+
+  AssetDetailsScreen({
+    @required this.asset,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (asset != null) ...[
+              Text(asset!.asset, style: Theme.of(context).textTheme.headline6),
+              Text(asset!.information,
+                  style: Theme.of(context).textTheme.subtitle1),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class AssetDetailsPage extends Page {
+  final Asset asset;
+
+  AssetDetailsPage({
+    required this.asset,
+  }) : super(key: ValueKey(asset));
+
+  Route createRoute(BuildContext context) {
+    return MaterialPageRoute(
+      settings: this,
+      builder: (BuildContext context) {
+        return AssetDetailsScreen(asset: asset);
+      },
+    );
+  }
+}
+
+class UnknownScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Text('404!'),
+      ),
+    );
+  }
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+
+  @override
+  Widget build(BuildContext context) {
+    // MaterialApp
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'KBVE.com',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: bgColor,
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.white),
+        canvasColor: secondaryColor,
+      ),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => MenuController(),
+          ),
+        ],
+        child: MainScreen(),
+      ),
+    );
+  }
+}
