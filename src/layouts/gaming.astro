@@ -99,7 +99,7 @@ const { content } = Astro.props;
 	</head>
 	<body>
 		<Nav client:only="preact" />
-		<header style={`background-image:url(${content.img})`} class="hero">
+		<header style={{ backgroundImage: `url(${content.img})` }} class="hero">
 			<h1 class="title">{content.title}</h1>
 		</header>
 		<div class="leadIn">

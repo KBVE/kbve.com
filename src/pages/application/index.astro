@@ -25,7 +25,7 @@ const apps = (await Astro.glob('./**/**/*.mdx'))
 			}
 		</style>
 	</head>
-	<body style="padding-top: 2rem;">
+	<body style={{ paddingTop: '2rem' }}>
 		<Nav client:only="preact" />
 		<div class="wrapper">
 			<h1 class="title mt4 mb4">All Applications</h1>

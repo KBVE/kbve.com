@@ -1,30 +1,25 @@
 //import { h } from "preact";
 import React, { Component } from "react";
 import Styles from "./styles.module.scss";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 // Import A-Ads Banner
 import Aads from "../Aads";
 
-
-
-const TypoG = () => (
-  <></>
-);
+const TypoG = () => <Typography>Test</Typography>;
 
 class App extends Component {
   render() {
-    const name = 'Red Header';
-  
+    const name = "Red Header";
+
     return (
-      <div style={{backgroundColor : 'red'}}>
+      <div style={{ backgroundColor: "red" }}>
         {name}
         <TypoG />
       </div>
     );
-   }
+  }
 }
-
 
 function Footer() {
   return (

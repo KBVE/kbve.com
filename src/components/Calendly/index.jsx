@@ -9,9 +9,10 @@ const Calendly = ({user = 'kbve', width = 320, height = 630, display = true, hid
                     + user +
                     `?hide_landing_page_details=`+hide+`&hide_gdpr_banner=`+hide+`&text_color=`+text_color+`&primary_color=`+primary_color
                 } 
-                    style={
-                        `min-width:`+width+`px;height:`+height+`px;`
-                    }
+                    style={{
+                        minWidth: `${width}px`,
+                        height: `${height}px`
+                    }}
                     ></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>

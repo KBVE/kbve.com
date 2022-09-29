@@ -7,7 +7,9 @@ function PortfolioPreview({ project }) {
     <div className={Styles.card}>
       <div
         className={Styles.titleCard}
-        style={`background-image:url(${frontmatter.img})`}
+        style={{
+          backgroundImage: `url(${frontmatter.img})`
+        }}
       >
         <h1 className={Styles.title}>{frontmatter.title}</h1>
       </div>
