@@ -1,4 +1,5 @@
 // import { h } from "preact";
+import React from "react";
 import Authentication from "@c/Authentication";
 import Styles from "./styles.module.scss";
 // @mui
@@ -9,6 +10,7 @@ function Nav() {
     <AppBar
     //className={Styles.nav}
     position="fixed"
+    className={Styles.nav}
     sx={{
       zIndex: 9999
     }}

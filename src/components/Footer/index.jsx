@@ -6,20 +6,20 @@ import Typography from "@mui/material/Typography";
 // Import A-Ads Banner
 import Aads from "../Aads";
 
-const TypoG = () => <Typography>Test</Typography>;
+// const TypoG = () => <Typography>Test</Typography>;
 
-class App extends Component {
-  render() {
-    const name = "Red Header";
+// class App extends Component {
+//   render() {
+//     const name = "Red Header";
 
-    return (
-      <div style={{ backgroundColor: "red" }}>
-        {name}
-        <TypoG />
-      </div>
-    );
-  }
-}
+//     return (
+//       <div style={{ backgroundColor: "red" }}>
+//         {name}
+//         <TypoG />
+//       </div>
+//     );
+//   }
+// }
 
 function Footer() {
   return (
@@ -73,7 +73,8 @@ function Footer() {
       </svg>
       <small className={Styles.byline}>🚀 Built by KBVE.com with Astro</small>
       <small className={Styles.byline}>ඞ</small>
-      <App />
+      {/* <App /> */}
+      {/* <Typography>Test</Typography> */}
     </footer>
   );
 }
