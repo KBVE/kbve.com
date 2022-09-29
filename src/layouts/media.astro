@@ -154,7 +154,7 @@ const { content } = Astro.props;
           <Button>View More Media</Button>
         </a>
       </footer>
-      <Footer />
+      <Footer client:only="react" />
     </div>
 	</body>
 </html>

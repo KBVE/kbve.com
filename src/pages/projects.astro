@@ -33,6 +33,6 @@ const projects = (await Astro.glob('./project/**/*.mdx'))
 				{projects.map((project) => <PortfolioPreview project={project} />)}
 			</div>
 		</div>
-		<Footer />
+		<Footer client:only="react" />
 	</body>
 </html>

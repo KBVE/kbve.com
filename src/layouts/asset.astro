@@ -107,6 +107,6 @@ const { content } = Astro.props;
 				<Button>View More</Button>
 			</a>
 		</footer>
-		<Footer />
+		<Footer client:only="react" />
 	</body>
 </html>

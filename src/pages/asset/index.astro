@@ -92,6 +92,6 @@ const asset = (await Astro.glob('./**/**/*.mdx'))
 			 	{asset.map((project) => <AssetPreview project={project} />)}
 			</div>
 		</div>
-		<Footer />
+		<Footer client:only="react" />
 	</body>
 </html>

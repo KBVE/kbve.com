@@ -4,7 +4,7 @@ import Modal from "@c/Modal";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Styles from "./styles.module.scss";
 const Authentication = ({
-  url = "https://api.kbve.com/api/auth/local/register",
+  url = "https://dev.api.kbve.com/api/auth/local/register",
   display = true,
 }) => {
   const registerFunc = async (e) => {
