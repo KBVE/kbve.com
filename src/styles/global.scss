@@ -10,7 +10,29 @@
 	--c-yellow: #ffdace;
 	--c-white: #fff;
   --c-primary: rgb(231, 175, 134);
+  --c-primary-t1: rgba(231, 175, 134, 0.1);
+  --c-primary-t2: rgba(231, 175, 134, 0.2);
+  --c-primary-t3: rgba(231, 175, 134, 0.3);
+  --c-primary-t4: rgba(231, 175, 134, 0.4);
+  --c-primary-t5: rgba(231, 175, 134, 0.5);
+  --c-primary-t6: rgba(231, 175, 134, 0.6);
+  --c-primary-t7: rgba(231, 175, 134, 0.7);
+  --c-primary-t8: rgba(231, 175, 134, 0.8);
+  --c-primary-t9: rgba(231, 175, 134, 0.9);
+  --c-primary-t95: rgba(231, 175, 134, 0.96);
+  --c-primary-t99: rgba(231, 175, 134, 0.99);
   --c-bg-primary: rgb(22, 22, 20);
+  --c-bg-t1: rgba(22, 22, 20, 0.1);
+  --c-bg-t2: rgba(22, 22, 20, 0.2);
+  --c-bg-t3: rgba(22, 22, 20, 0.3);
+  --c-bg-t4: rgba(22, 22, 20, 0.4);
+  --c-bg-t5: rgba(22, 22, 20, 0.5);
+  --c-bg-t6: rgba(22, 22, 20, 0.6);
+  --c-bg-t7: rgba(22, 22, 20, 0.7);
+  --c-bg-t8: rgba(22, 22, 20, 0.8);
+  --c-bg-t9: rgba(22, 22, 20, 0.9);
+  --c-bg-t95: rgba(22, 22, 20, 0.95);
+  --c-bg-t99: rgba(22, 22, 20, 0.99);
 
 	// (f)ont
 	--f-u18: 11.390625em;
@@ -61,7 +83,6 @@
 
 body {
 	margin: 0;
-  padding-top: 4.25rem;
 	color: var(--t-fg);
   background-color: var(--t-bg);
 	font-family: 'Inter', 'system-ui', sans-serif;

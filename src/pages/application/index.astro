@@ -25,8 +25,8 @@ const apps = (await Astro.glob('./**/**/*.mdx'))
 			}
 		</style>
 	</head>
-	<body>
-		<Nav />
+	<body style={{ paddingTop: '2rem' }}>
+		<Nav client:only="react" />
 		<div class="wrapper">
 			<h1 class="title mt4 mb4">All Applications</h1>
 			<div class="grid">

@@ -6,7 +6,7 @@ function AssetPreview({ project }) {
 	return (
 
 		<div className={Styles.card}>
-			<div className={Styles.titleCard} style={`background-image:url(${frontmatter.img})`}>
+			<div className={Styles.titleCard} style={{ backgroundImage: `url(${frontmatter.img})` }}>
 				<h1 className={Styles.title}>{frontmatter.title}</h1>
 			</div>
 			<div className="pa3">
@@ -21,7 +21,7 @@ function AssetPreview({ project }) {
 						</div>
 					))}
 				</div>
-				<a className={Styles.link} href={project.url}>
+				<a className={Styles.link} href={project.url} rel={`prefetch`}>
 					<span className={Styles.linkInner}>Details</span>
 				</a>
 			</div>

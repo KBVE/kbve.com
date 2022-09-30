@@ -2,7 +2,7 @@
 // Component Imports
 import MainHead from "../components/MainHead.astro";
 import Button from "../components/Button";
-import Nav from "../components/Nav";
+import Nav from "@c/Nav";
 import Footer from "../components/Footer";
 import PortfolioPreview from "../components/PortfolioPreview";
 
@@ -213,7 +213,7 @@ const featuredProject = projects[0];
     </style>
   </head>
   <body class="app-root">
-    <Nav />
+    <Nav client:only="react" />
     <header class="hero">
       <img
         width="1600"
@@ -271,6 +271,6 @@ const featuredProject = projects[0];
         </div>
       </div>
     </main>
-    <Footer />
+    <Footer client:load />
   </body>
 </html>

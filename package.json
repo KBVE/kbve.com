@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.10.2",
+    "@astrojs/mdx": "^0.11.3",
     "@astrojs/preact": "^1.0.2",
+    "@astrojs/prefetch": "^0.0.7",
     "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.0.6",
     "astro-compress": "^1.0.6",
@@ -19,6 +20,12 @@
   },
   "dependencies": {
     "@astrojs/react": "^1.1.1",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@hcaptcha/react-hcaptcha": "^1.4.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.7",
+    "@preact/compat": "^17.1.1",
     "jquery": "^3.6.1",
     "preact": "^10.7.3",
     "react": "^18.2.0",
