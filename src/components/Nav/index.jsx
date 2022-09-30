@@ -171,16 +171,13 @@ function Nav() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton
-              onClick={handleOpenUserMenu}
-              sx={{ p: 0 }}
-              >
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
-                alt="Remy Sharp"
-                sx={{
-                  height: '34px',
-                  width: '34px',
-                }}
+                  alt="Remy Sharp"
+                  sx={{
+                    height: "34px",
+                    width: "34px",
+                  }}
                 />
               </IconButton>
             </Tooltip>
@@ -188,22 +185,36 @@ function Nav() {
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'right',
+                vertical: "bottom",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {(['Sign In', 'Sign Up', 'Profile', 'Settings', 'Log Out']).map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem
+                key={"Sign Up"}
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  handleCloseUserMenu();
+
+                  window.location.href = '/register';
+                }}
+              >
+                <Typography textAlign="center">Sign Up</Typography>
+              </MenuItem>
+              {/* {["Sign In", , "Profile", "Settings", "Log Out"].map(
+                (setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                )
+              )} */}
             </Menu>
           </Box>
         </Toolbar>
