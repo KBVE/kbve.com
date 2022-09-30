@@ -1,0 +1,110 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pepe-nginx
+  namespace: longhorn-system
+  labels:
+    app: pepe-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pepe-nginx
+  template:
+    metadata:
+      labels:
+        app: pepe-nginx
+    spec:
+      containers:
+        - name: pepe-nginx
+          image: nginx:alpine
+          ports:
+            - name: nginx
+              containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whoami
+  namespace: longhorn-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whoami
+  template:
+    metadata:
+      labels:
+        app: whoami
+    spec:
+      containers:
+      - name: whoami
+        image: traefik/whoami
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pepe-horn
+  namespace: longhorn-system
+spec:
+  type: ClusterIP
+  selector:
+    app: whoami
+  ports:
+  - name: http
+    port: 80
+    # For Traefik Dashboard
+    protocol: TCP
+    targetPort: 80
+
+---
+
+# ---
+# apiVersion: traefik.containo.us/v1alpha1
+# kind: Middleware
+# metadata:
+#  name: pepe-ipwhitelist
+#  namespace: kube-system
+# spec:
+#  ipWhiteList:
+#    sourceRange:
+#       - 149.56.0.63/32
+#    ipStrategy:
+#      depth: 2
+# ---
+
+---
+# Long Horn Ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pepe-horn-v1
+  namespace: longhorn-system
+  annotations:
+    # kubernetes.io/ingress.class: traefik
+    # ingress.kubernetes.io/router.middlewares: auth@file,default-prefix@kubernetescrd
+    # ingress.kubernetes.io/whitelist-source-range: 149.56.0.63/32
+    # ingress.kubernetes.io/whitelist-x-forwarded-for: "true"
+    # ingress.kubernetes.io/whitelist-source-range: "149.56.0.63/32"
+    # kubernetes.io/whitelist-source-range: 149.56.0.63/32
+    # traefik.ingress.kubernetes.io/router.middlewares: pepe-ipwhitelist@kubernetescrd
+    nginx.ingress.kubernetes.io/whitelist-source-range: 149.56.0.63/32
+spec:
+  rules:
+    - host: "k8s1057.kbve.com"
+      http:
+        paths:
+          - path: /
+            # pathType: Prefix
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: pepe-horn
+                port:
+                  number: 8000
+  #ipWhiteList:
+  #  sourceRange:
+  #    - 149.56.0.63/32
+---
