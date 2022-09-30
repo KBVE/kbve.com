@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import preact from "@astrojs/preact";
+//import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
@@ -13,11 +13,24 @@ export default defineConfig({
   markdown: {
     extendDefaultPlugins: true
   },
-  integrations: [preact({
-    compat: true
-  }), sitemap({
+  
+  integrations: [
+    
+  // preact({
+  //   compat: true
+  // }), 
+  
+  sitemap({
     customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"]
   }), mdx(), react(), compress(), prefetch({
     throttle: 20
-  })]
+  })],
+
+  // vite: {
+  //   ssr: {
+  //     noExternal: ['the-react-library'],
+  //   },}
+
+
 });
+

@@ -81,7 +81,7 @@ const asset = (await Astro.glob('./**/**/*.mdx'))
 		</style>
 	</head>
 	<body>
-		<Nav client:only="preact" />
+		<Nav client:only="react" />
 		<div class="wrapper">
 			<div class="heroImg">
 				<h1 class="title mt2 mb2">Assets</h1>
@@ -92,6 +92,6 @@ const asset = (await Astro.glob('./**/**/*.mdx'))
 			 	{asset.map((project) => <AssetPreview project={project} />)}
 			</div>
 		</div>
-		<Footer client:only="react" />
+		<Footer />
 	</body>
 </html>

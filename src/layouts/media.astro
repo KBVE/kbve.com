@@ -108,7 +108,7 @@ const { content } = Astro.props;
 		</style>
 	</head>
 	<body>
-		<Nav client:only="preact" />
+		<Nav client:only="react" />
     {
       content.img.split('.')[content.img.split('.').length - 1]
         === 'mp4'
@@ -154,7 +154,7 @@ const { content } = Astro.props;
           <Button>View More Media</Button>
         </a>
       </footer>
-      <Footer client:only="react" />
+      <Footer />
     </div>
 	</body>
 </html>

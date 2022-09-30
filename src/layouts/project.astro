@@ -2,7 +2,7 @@
 import MainHead from '../components/MainHead.astro';
 import Button from '../components/Button/index.jsx';
 import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
+import Nav from '@c/Nav';
 
 const { content } = Astro.props;
 ---
@@ -88,7 +88,7 @@ const { content } = Astro.props;
 		</style>
 	</head>
 	<body>
-		<Nav client:only="preact" />
+		<Nav client:only="react" />
 		<header style={{ backgroundImage: `url(${content.img})` }} class="hero">
 			<h1 class="title">{content.title}</h1>
 		</header>
@@ -106,6 +106,6 @@ const { content } = Astro.props;
 				<Button>View More</Button>
 			</a>
 		</footer>
-		<Footer client:only="react" />
+		<Footer />
 	</body>
 </html>

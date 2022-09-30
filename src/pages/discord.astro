@@ -4,7 +4,7 @@ import MainHead from '../components/MainHead.astro';
 // Import Footer
 import Footer from '../components/Footer';
 // Import Navigation Bar
-import Nav from '../components/Nav';
+import Nav from '@c/Nav';
 // Import Discord
 import Discord from '../components/Discord';
 ---
@@ -52,7 +52,7 @@ import Discord from '../components/Discord';
 		</style>
 	</head>
 	<body>
-		<Nav client:only="preact" />
+		<Nav client:only="react" />
 		<div class="wrapper">
             <div class="heroImg">
                 <h1 class="title">Discord</h1>
@@ -66,6 +66,6 @@ import Discord from '../components/Discord';
 				
 			</div>
 		</div>
-		<Footer client:only="react" />
+		<Footer />
 	</body>
 </html>

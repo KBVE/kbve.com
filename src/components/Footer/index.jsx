@@ -1,10 +1,10 @@
 //import { h } from "preact";
-import React, { Component } from "react";
+import React from "react";
 import Styles from "./styles.module.scss";
-import Typography from "@mui/material/Typography";
+//import Typography from "@mui/material/Typography";
 
 // Import A-Ads Banner
-import Aads from "../Aads";
+//import Aads from "../Aads";
 
 // const TypoG = () => <Typography>Test</Typography>;
 
@@ -20,11 +20,12 @@ import Aads from "../Aads";
 //     );
 //   }
 // }
+//      <Aads />
+
 
 function Footer() {
   return (
     <footer className={Styles.footer}>
-      <Aads />
       <br />
 
       <svg
@@ -73,8 +74,7 @@ function Footer() {
       </svg>
       <small className={Styles.byline}>🚀 Built by KBVE.com with Astro</small>
       <small className={Styles.byline}>ඞ</small>
-      {/* <App /> */}
-      {/* <Typography>Test</Typography> */}
+
     </footer>
   );
 }

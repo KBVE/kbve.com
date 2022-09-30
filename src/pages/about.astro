@@ -1,7 +1,7 @@
 ---
 import MainHead from '../components/MainHead.astro';
 import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
+import Nav from '@c/Nav';
 ---
 
 <html lang="en">
@@ -25,7 +25,7 @@ import Nav from '../components/Nav/index.jsx';
 		</style>
 	</head>
 	<body style={{ paddingTop: '2rem' }}>
-		<Nav client:only="preact" />
+		<Nav client:only="react" />
 		<div class="wrapper">
 			<h1>About KBVE.com</h1>
 			<div class="heroImg">
@@ -50,6 +50,6 @@ import Nav from '../components/Nav/index.jsx';
 				</p>
 			</div>
 		</div>
-		<Footer client:only="react" />
+		<Footer />
 	</body>
 </html>

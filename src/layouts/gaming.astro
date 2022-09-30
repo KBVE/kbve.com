@@ -98,7 +98,7 @@ const { content } = Astro.props;
 		</style>
 	</head>
 	<body>
-		<Nav client:only="preact" />
+		<Nav client:only="react" />
 		<header style={{ backgroundImage: `url(${content.img})` }} class="hero">
 			<h1 class="title">{content.title}</h1>
 		</header>
@@ -117,6 +117,6 @@ const { content } = Astro.props;
 				<Button>View More Gaming</Button>
 			</a>
 		</footer>
-		<Footer client:only="react" />
+		<Footer />
 	</body>
 </html>
