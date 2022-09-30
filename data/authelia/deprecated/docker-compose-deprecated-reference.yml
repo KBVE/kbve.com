@@ -1,0 +1,63 @@
+# This is reference of a docker compose that was deprecated.
+version: '3.8'
+
+# ඞ - Use this variable to quickly find replacements for your docker compose.
+# This is specifically written for a swarm
+
+
+# 09/28/2022
+  # Current issue with the configuration
+
+# Services
+services:
+  authelia:
+    # Authelia Image
+    image: authelia/authelia
+
+    # Configuration
+    volumes:
+      - authelia-config:/config
+
+    # Network
+    networks:
+      - cloud-public
+      - cloud-socket-proxy
+
+    # Deployment
+
+    deploy:
+      placement:
+        constraints:
+          - node.labels.cloud-public.traefik-certificates == true
+          - node.role == manager
+
+      # Labels
+      labels:
+        - traefik.enable=true
+        - traefik.http.routers.authelia.rule=Host(`auth.ඞ.kbve.com`)
+        - traefik.constraint-label=cloud-public
+        - traefik.http.routers.authelia.entrypoints=https
+        #- traefik.http.routers.authelia.tls=true
+        - traefik.http.middlewares.authelia.forwardauth.address=http://authelia:9091/api/verify?rd=https://auth.ඞ.kbve.com
+        - traefik.http.middlewares.authelia.forwardauth.trustForwardHeader=true
+        - traefik.http.middlewares.authelia.forwardauth.authResponseHeaders=Remote-User,Remote-Groups,Remote-Name,Remote-Email
+      
+      # Expose
+    expose:
+      - 9091
+    
+    restart: unless-stopped
+    
+    environment:
+      # - TZ=America/Chicago
+      - TZ=UTC
+    
+    healthcheck:
+      disable: true
+
+
+networks:
+  cloud-public:
+    external: true
+  cloud-socket-proxy:
+    external: true

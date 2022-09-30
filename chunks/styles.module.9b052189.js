@@ -1,0 +1,1 @@
+const o="_footer_knfx6_1",n="_byline_knfx6_9",t={footer:o,byline:n};export{t as S};

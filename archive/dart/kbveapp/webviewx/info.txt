@@ -1,0 +1,7 @@
+9/28/2022
+- We decided to remove the webviewx from the App because the library has not been updated within the past year+.
+- This can be a security issue in the future.
+
+Packages that will be removed: 
+import 'package:webviewx/webviewx.dart';
+import 'package:admin/util/webview_page.dart';
