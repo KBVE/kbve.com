@@ -1,0 +1,41 @@
+  # Reference [1] -> https://rpi4cluster.com/k3s/k3s-traefik/
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: longhorn-service-provider
+  namespace: longhorn-system
+spec:
+  type: ClusterIP
+  selector:
+    app: longhorn-ui
+  ports:
+  - name: http
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: longhorn-ing-traefik
+  namespace: longhorn-system
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    # Reference [2] -> https://community.traefik.io/t/is-ingress-kubernetes-io-whitelist-source-range-supposed-to-work-using-traefik-2/13379
+    #traefik.ingress.kubernetes.io/router.middlewares: auth@file,kube-system@kubernetescrd
+
+
+spec:
+  rules:
+  - host: "longhorn.kbve.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: longhorn-service-provider
+            port:
+              number: 8000
