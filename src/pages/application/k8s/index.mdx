@@ -4,7 +4,7 @@ title: k8s
 category: Application
 client: Self
 publishDate: 2022-09-01 00:00:00
-img: https://images.unsplash.com/photo-1549605659-32d82da3a059?fit=crop&w=1400&h=700&q=75
+img: https://images.unsplash.com/photo-1610429559733-a222e865f34a?fit=crop&w=1400&h=700&q=75
 repo:
 description: |
  Kubernetes
@@ -19,12 +19,29 @@ tags:
 - 09/30/2022 - Started 3 Clusters
 
 
+## k3s
+- Install k3s
+  - We recommend using their official script:
+    `curl -sfL https://get.ks3.io | sh -`
+  - Optional: Setting up `kubectl` to work with k3s by default. 
+  - Create directory: `mkdir -p $HOME/.kube` 
+  - Copy over Rancher `sudo cp /etc/rancher/k3s/k3s.* $HOME/.kube/config`
+  - Permissions: `sudo chown $(id -u):$(id -g) $HOME/.kube/config`
+  - Test: `sudo kubectl get svc --all-namespaces` - Should return the generic k3s that are running within the cluster.
+
+
+
 ## Cheatsheet
 
-- Kubectl
+
+
+
+- Kubectl Patch
   - Patching (an exisiting service)
     - `sudo kubectl patch`
     - Example of patching a nodeport to pass along client IPs to micro servers.
       `sudo kubectl patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Local"}}'`
     - Example of patching a nodeport to load balance.
       `sudo kubectl patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Cluster"}}'`
+
+## 
