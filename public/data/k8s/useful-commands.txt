@@ -1,0 +1,1 @@
+sudo kubectl get svc --all-namespaces
