@@ -26,6 +26,7 @@ tags:
     - Run these two following commands for k.
       - `alias 'k=sudo kubectl'`
       - `echo "alias k='sudo kubectl'" >>~/.bashrc`
+  - **Note:** If you end up using [Oh My ZSH](/application/zsh), replace `.bashrc` with `.zshrc`
 
 ## k3s
 - Install k3s
@@ -56,6 +57,28 @@ tags:
 
 ## Cheatsheet
 
+- View full config (minified)
+  - `sudo kubectl config view --minify`
+- List namespaces
+  - `sudo kubectl get namespace`
+- Set namespace preference/default for session
+  - `sudo kubectl config set-context --current --namespace=<namespace-name>`
+- Validate current namespace
+  - `sudo kubectl config view --minify | grep namespace:`
+- Get everything running in kubernetes
+  - In all namespaces
+    - `sudo kubectl get all --all-namespaces`
+  - In current namespace (`default` by default)
+    - `sudo kubectl get all`
+- Get services running in kubernetes
+  - In all namespaces
+    - `sudo kubectl get svc --all-namespaces`
+  - In current namespace (`default` by default)
+    - `sudo kubectl get svc`
+- Delete services
+  - `sudo kubectl delete svc <name>`
+- Delete deployments
+  - `sudo kubectl delete deployment.apps/<name>`
 
 
 
