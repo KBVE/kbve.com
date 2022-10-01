@@ -44,7 +44,11 @@ export const components = { github: Github };
 ## Kubernetes
 - Patching Traefik on k3s cluster
   - We want to find the instance of where traefik is running. Running `sudo kubectl get all -o wide --all-namespaces` should display all your containers, look for traefik. 
-  - `sudo kubectl patch svc traefik -n kube-system -p '{"spec":{"externalTrafficPolicy":"Cluster"}}'`
+  - Patch
+    - ```shell
+      sudo kubectl patch svc traefik -n kube-system -p '{"spec":{"externalTrafficPolicy":"Cluster"}}'`
+      ```
+
   - std output should be `service/traefik patched`
 
 
