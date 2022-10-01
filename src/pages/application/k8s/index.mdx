@@ -30,16 +30,29 @@ tags:
 
 ## k3s
 - Install k3s
-  - Note: We are using Ubuntu as the host operating system for the k3s. Be sure to `sudo apt-get update` and `sudo apt-get upgrade` before and after. 
+  - Note: We are using Ubuntu as the host operating system for the k3s.
+    - Update & Upgrade (`Ubuntu`)
+      - ```shell
+        apt-get update
+        apt-get upgrade -y
+        ```
   - We recommend using their official script:
-    `curl -sfL https://get.ks3.io | sh -`
-  - Optional: Setting up `kubectl` to work with k3s by default. 
-  - Create directory: `mkdir -p $HOME/.kube` 
-  - Copy over Rancher `sudo cp /etc/rancher/k3s/k3s.* $HOME/.kube/config`
-  - Permissions: `sudo chown $(id -u):$(id -g) $HOME/.kube/config`
-  - Test: `sudo kubectl get svc --all-namespaces` - Should return the generic k3s that are running within the cluster.
-  - Verify: `sudo nmap -sU -sT -p0-65535 127.0.0.1`
-    - To install nmap, run `sudo apt-get install nmap` and then confirm. 
+    - ```shell
+      curl -sfL https://get.ks3.io | sh -
+      ```
+  - Optional: Setting up `kubectl` alias to work with k3s by default. 
+    - ```shell
+      cd ~
+      mkdir -p $HOME/.kube
+      sudo cp /etc/rancher/k3s/k3s.* $HOME/.kube/config
+      sudo chown $(id -u):$(id -g) $HOME/.kube/config
+      ```
+      - Create directory: `mkdir -p $HOME/.kube`  
+      - Copy over Rancher `sudo cp /etc/rancher/k3s/k3s.* $HOME/.kube/config`
+      - Permissions: `sudo chown $(id -u):$(id -g) $HOME/.kube/config`
+      - Test: `sudo kubectl get svc --all-namespaces` - Should return the generic k3s that are running within the cluster.
+      - Verify: `sudo nmap -sU -sT -p0-65535 127.0.0.1`
+        - To install nmap, run `sudo apt-get install nmap` and then confirm. 
 
 ## Portainer Agent
 - Setup Portainer Agent
@@ -55,39 +68,89 @@ tags:
     - Group: `$groupString` - The name of the group for the cluster
     - Tags: `$tagsMap` - Drop down to select the tags for the cluster. 
 
-## Cheatsheet
+## Terms
+- Cluster:
+  - Group of virtual micro servers that orchestrate as the (`k`) / `k8s` / `kubernetes`.
+    - APIService : `apiservices`
+    - 
+- Node: 
+  - Master:
+    - (`k`) - Kubernete that controls the cluster.
+  - Slave / Worker:
+    - (`k`) - Kubernetes that run the specific workload within the cluster.
+- Pods (`pod`):
+  - Group of (k) - containers and volumes that operate under the isolated namespace network.
+  - Deployed by Operator (Portainer/Rancher/User) via manifest YAML-schema. 
+    - Example:
+      ```
+      sudo kubectl apply -f ./kbve-manifest.yml
+      ```
+      - Replace `./kbve-manifest.yml` with the `fileName.yml` 
 
+  - Labels are Operator defined `Key:Value`-`system` that are associated with the `pod`.
+
+## Cheatsheet
+- Cluster:
+  - ```shell 
+    sudo kubectl cluster-info   
+    ```
 - View full config (minified)
-  - `sudo kubectl config view --minify`
+  - ```shell
+    sudo kubectl config view --minify
+    ```
 - List namespaces
-  - `sudo kubectl get namespace`
+  - ```shell
+    sudo kubectl get namespace
+    ```
 - Set namespace preference/default for session
-  - `sudo kubectl config set-context --current --namespace=<namespace-name>`
+  - ```shell
+    sudo kubectl config set-context --current --namespace=<namespace-name>
+    ```
 - Validate current namespace
-  - `sudo kubectl config view --minify | grep namespace:`
+  - ```shell
+    sudo kubectl config view --minify | grep namespace:
+    ```
 - Get everything running in kubernetes
   - In all namespaces
-    - `sudo kubectl get all --all-namespaces`
+    - ```shell
+      sudo kubectl get all --all-namespaces
+      ```
   - In current namespace (`default` by default)
-    - `sudo kubectl get all`
+    - ```shell
+      sudo kubectl get all
+      ```
 - Get services running in kubernetes
   - In all namespaces
-    - `sudo kubectl get svc --all-namespaces`
+    - ```shell
+      sudo kubectl get svc --all-namespaces
+      ```
   - In current namespace (`default` by default)
-    - `sudo kubectl get svc`
+    - ```shell
+      sudo kubectl get svc
+      ```
 - Delete services
-  - `sudo kubectl delete svc <name>`
+  - ```shell
+    sudo kubectl delete svc <name>
+    ```
 - Delete deployments
-  - `sudo kubectl delete deployment.apps/<name>`
+  - ```shell
+    sudo kubectl delete deployment.apps/<name>` 
+    `` 
 
 
 
+## Patch
 - Kubectl Patch
   - Patching (an exisiting service) && remember if you have your alias set, you can type `k` instead of `sudo kubectl`.
     - `sudo kubectl patch` || `k patch`
     - Example of patching a nodeport to pass along client IPs to micro servers.
-      `sudo kubectl patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Local"}}'` || `k patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Local"}}'`
+      - `sudo kubectl`
+        - ```shell
+          sudo kubectl patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Local"}}'`
+          ```
     - Example of patching a nodeport to load balance.
       `sudo kubectl patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Cluster"}}'` || `k patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Cluster"}}'`
 
-## 
+## Help
+- Kubectl Help
+  - `sudo kubectl -h` || `k -h`
