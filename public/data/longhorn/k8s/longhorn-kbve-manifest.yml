@@ -1,0 +1,82 @@
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: authsecret
+  namespace: longhorn-system
+data:
+  users: |2
+    dGVzdDokYXByMSRINnVza2trVyRJZ1hMUDZld1RyU3VCa1RycUU4d2ovCnRlc3QyOiRhcHIxJGQ5
+    aHI5SEJCJDRIeHdnVWlyM0hQNEVzZ2dQL1FObzAK
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: longhorn-service-provider
+  namespace: longhorn-system
+spec:
+  type: ClusterIP
+  selector:
+    app: longhorn-ui
+  ports:
+  - name: http
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  internalTrafficPolicy: Local
+
+---
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: longhorn-ipwhitelist
+  namespace: longhorn-system
+spec:
+  ipWhiteList:
+    sourceRange:
+       - x.x.x.x/32
+
+
+---
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: longhorn-auth
+  namespace: longhorn-system
+spec:
+  basicAuth:
+    secret: authsecret
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: longhorn-ing-traefik
+  namespace: longhorn-system
+  annotations:
+    externalTrafficPolicy: Local 
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.middlewares: longhorn-system-longhorn-auth@kubernetescrd,longhorn-system-longhorn-ipwhitelist@kubernetescrd
+    ingress.kubernetes.io/whitelist-x-forwarded-for: "true"
+    
+spec:
+  rules:
+  - host: "x.kbve.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: longhorn-service-provider
+            port:
+              number: 8000
+
+---
+

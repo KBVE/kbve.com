@@ -13,6 +13,6 @@ export const get = async () => {
     })
   );
   return {
-    body: json,
-  };
-};
+    body: json
+  }
+}
