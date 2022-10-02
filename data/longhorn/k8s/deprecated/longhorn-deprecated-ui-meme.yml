@@ -49,7 +49,7 @@ metadata:
   name: pepe-horn
   namespace: longhorn-system
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: whoami
   ports:
@@ -58,7 +58,7 @@ spec:
     # For Traefik Dashboard
     protocol: TCP
     targetPort: 80
-  externalTrafficPolicy: Local   
+  
 
 ---
 
@@ -71,7 +71,7 @@ spec:
 # spec:
 #  ipWhiteList:
 #    sourceRange:
-#       - 149.56.0.63/32
+#       - 
 #    ipStrategy:
 #      depth: 2
 # ---
@@ -84,17 +84,18 @@ metadata:
   name: pepe-horn-v1
   namespace: longhorn-system
   annotations:
+    #externalTrafficPolicy: Local 
     kubernetes.io/ingress.class: traefik
     # ingress.kubernetes.io/router.middlewares: auth@file,default-prefix@kubernetescrd
-    # ingress.kubernetes.io/whitelist-source-range: 149.56.0.63/32
+    # ingress.kubernetes.io/whitelist-source-range: x/32
     ingress.kubernetes.io/whitelist-x-forwarded-for: "true"
-    # ingress.kubernetes.io/whitelist-source-range: "149.56.0.63/32"
-    # kubernetes.io/whitelist-source-range: 149.56.0.63/32
+    # ingress.kubernetes.io/whitelist-source-range: "x/32"
+    # kubernetes.io/whitelist-source-range: x/32
     # traefik.ingress.kubernetes.io/router.middlewares: pepe-ipwhitelist@kubernetescrd
-    # nginx.ingress.kubernetes.io/whitelist-source-range: 149.56.0.63/32
+    # nginx.ingress.kubernetes.io/whitelist-source-range: x3/32
 spec:
   rules:
-    - host: "k8s1057.kbve.com"
+    - host: "x.kbve.com"
       http:
         paths:
           - path: /
@@ -107,5 +108,5 @@ spec:
                   number: 80
   #ipWhiteList:
   #  sourceRange:
-  #    - 149.56.0.63/32
+  #    - 
 ---
