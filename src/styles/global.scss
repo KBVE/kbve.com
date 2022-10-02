@@ -109,6 +109,13 @@ h3 {
 	color:rgb(231, 175, 134);
 }
 
+code {
+  color: var(--t-fg);
+  background-color: var(--t-bg);
+  border-radius: 4px;
+  padding: 2px;
+}
+
 // Utils
 
 // color
