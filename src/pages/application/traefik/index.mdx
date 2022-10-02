@@ -51,6 +51,69 @@ export const components = { github: Github };
 
   - std output should be `service/traefik patched`
 
+- Helm Charts
+  - ```shell
+    helm repo add traefik https://helm.traefik.io/traefik
+    ```
+    - **Sucess**: std output should be
+      - ```shell
+        "traefik" has been added to your repositories
+        ```
+  - ```shell
+    helm repo update
+    ```
+- Traefik Middleware for Kubernetes
+  - Middleware kind should be isolated for performance and security reasons.
+    - Auth - Kind: Middleware
+      - Example:
+        - ```yaml
+          apiVersion: traefik.containo.us/v1alpha1
+          kind: Middleware
+          metadata:
+            name: longhorn-auth
+            namespace: longhorn-system
+          spec:
+            basicAuth:
+              secret: authsecret
+          ```
+          - The middleware should be saved as a yaml / yml file and applied using kubectl.
+    - Auth - Kind: Ingress
+      - Calling the `longhorn-auth` in the `Ingress` via `annotations`:
+        - Example: 
+          - ```yaml
+                      
+              apiVersion: networking.k8s.io/v1
+              kind: Ingress
+              metadata:
+                name: longhorn-ing-traefik
+                namespace: longhorn-system
+                annotations:
+                  externalTrafficPolicy: Local 
+                  kubernetes.io/ingress.class: traefik
+                  traefik.ingress.kubernetes.io/router.middlewares: longhorn-system-longhorn-auth@kubernetescrd
+                  ingress.kubernetes.io/whitelist-x-forwarded-for: "true"
+                  
+              spec:
+                rules:
+                - host: "x.kbve.com"
+                  http:
+                    paths:
+                    - path: /
+                      pathType: Prefix
+                      backend:
+                        service:
+                          name: longhorn-service-provider
+                          port:
+                            number: 8000
+
+
+            ```
+          - In our PoC above, we see that the middleware is referenced as:
+            ```yaml
+                traefik.ingress.kubernetes.io/router.middlewares: longhorn-system-longhorn-auth@kubernetescrd
+            ```
+            Its important to note the namespace of the middleware, `longhorn-system` , before calling the middleware's name. This is to let the crd know where the middleware is located.
+
 * * *
 
 #### WIP Notes 2022-10-01 01:15:20
