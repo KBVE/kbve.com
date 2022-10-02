@@ -14,9 +14,9 @@
 
 		
 	<link href=/assets/styles.548a3191.css rel=stylesheet />
-<link href=/assets/a4e40ad4.fed89368.css rel=stylesheet />
-<link href=/assets/ffca3685.87df5928.css rel=stylesheet />
-<link href=/assets/9bb2a293.5f7923b1.css rel=stylesheet /><script src=/page.49a6d988.js type=module></script></head>
+<link href=/assets/17ef0eb8.380b0895.css rel=stylesheet />
+<link href=/assets/303c0cca.87df5928.css rel=stylesheet />
+<link href=/assets/e5588033.5f7923b1.css rel=stylesheet /><script src=/page.49a6d988.js type=module></script></head>
 	<body class=astro-D7OQU2FC>
 		<style>astro-island,astro-slot{display:contents}</style><script>var l;(self.Astro=self.Astro||{}).only=t=>{(async()=>{await(await t())()})()},window.dispatchEvent(new Event("astro:only"));{const t={0:t=>t,1:t=>JSON.parse(t,e),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,e)),5:t=>new Set(JSON.parse(t,e)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},e=(e,s)=>{if(""===e||!Array.isArray(s))return s;const[r,i]=s;return r in t?t[r](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",((l=class extends HTMLElement{constructor(){super(...arguments),this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const t=this.querySelectorAll("astro-slot"),s={},r=this.querySelectorAll("template[data-astro-template]");for(const t of r){const e=t.closest(this.tagName);!e||!e.isSameNode(this)||(s[t.getAttribute("data-astro-template")||"default"]=t.innerHTML,t.remove())}for(const e of t){const t=e.closest(this.tagName);!t||!t.isSameNode(this)||(s[e.getAttribute("name")||"default"]=e.innerHTML)}const i=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),e):{};this.hydrator(this)(this.Component,i,s,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver(((t,e)=>{e.disconnect(),this.childrenConnectedCallback()})).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let t=this.getAttribute("before-hydration-url");t&&await import(t),this.start()}start(){const t=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");void 0!==Astro[e]?Astro[e]((async()=>{const t=this.getAttribute("renderer-url"),[e,{default:s}]=await Promise.all([import(this.getAttribute("component-url")),t?import(t):()=>()=>{}]),r=this.getAttribute("component-export")||"default";if(r.includes(".")){this.Component=e;for(const t of r.split("."))this.Component=this.Component[t]}else this.Component=e[r];return this.hydrator=s,this.hydrate}),t,this):window.addEventListener(`astro:${e}`,(()=>this.start()),{once:!0})}attributeChangedCallback(){this.hydrator&&this.hydrate()}}).observedAttributes=["props"],l))}</script><astro-island client=only component-export=default component-url=/index.cc36cb9a.js opts={&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:&quot;react&quot;} props={&quot;class&quot;:[0,&quot;astro-D7OQU2FC&quot;]} renderer-url=/client.91465428.js ssr="" uid=2dKeMx></astro-island>
     <header class="astro-D7OQU2FC hero" style="background-image:url(https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&w=1400&h=700&q=75)">
@@ -93,24 +93,32 @@
 <span class=line><span style=color:#c9d1d9>DDD.DDD.DDD.DDD is the IP of the dedicated server.</span></span></code></pre>
 <p><strong>NOTE:</strong> As it turns out, this doesn’t work, and we’re not sure if it will ever work.</p>
 <ul>
-<li>Ubuntu 22.04 LTS netplan config for container</li>
+<li>Ubuntu 22.04 LTS netplan config for container
+-```yaml
+network:
+version: 2
+ethernets:
+ens18:
+dhcp4: false
+addresses: [XXX.XXX.XXX.XXX/32] # The IP of the container
+routes:
+<ul>
+<li>to: 0.0.0.0/0
+via: XXX.XXX.XXX.254 # The first three octets of the host
+on-link: true
+nameservers:
+addresses: [1.1.1.1, 1.0.0.1] # Default Nameservers (Shouldn’t matter)
+#addresses: [208.67.222.222, 208.67.220.220] # OVH Nameservers</li>
 </ul>
-<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>network:</span></span>
-<span class=line><span style=color:#c9d1d9>    version: 2</span></span>
-<span class=line><span style=color:#c9d1d9>    ethernets:</span></span>
-<span class=line><span style=color:#c9d1d9>        ens18:</span></span>
-<span class=line><span style=color:#c9d1d9>            dhcp4: false</span></span>
-<span class=line><span style=color:#c9d1d9>            addresses: [XXX.XXX.XXX.XXX/32] # The IP of the container</span></span>
-<span class=line><span style=color:#c9d1d9>            routes:</span></span>
-<span class=line><span style=color:#c9d1d9>                - to: 0.0.0.0/0</span></span>
-<span class=line><span style=color:#c9d1d9>                  via: XXX.XXX.XXX.254 # The first three octets of the host</span></span>
-<span class=line><span style=color:#c9d1d9>                  on-link: true</span></span>
-<span class=line><span style=color:#c9d1d9>            nameservers:</span></span>
-<span class=line><span style=color:#c9d1d9>                addresses: [1.1.1.1, 1.0.0.1] # Default Nameservers (Shouldn&#39;t matter)</span></span>
-<span class=line><span style=color:#c9d1d9>                #addresses: [208.67.222.222, 208.67.220.220] # OVH Nameservers</span></span></code></pre>
-<p><strong>NOTE:</strong> If you’ve set up the ubuntu box using the minimized version (which lacks vim, nano, etc),
-move or delete the existing <code>00-installer-config.yaml</code> and run <code>cat &lt;&lt;EOF &gt;&gt;00-installer-config.yaml</code> followed
-by the configuration above.</p>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>- **NOTE:** If you&#39;ve set up the ubuntu box using the minimized version (which lacks vim, nano, etc), move or delete the existing `00-installer-config.yaml` and run `cat &lt;&lt;EOF &gt;&gt;00-installer-config.yaml` followed by the configuration above.</span></span>
+<span class=line><span style=color:#c9d1d9>- After updating the yaml, go ahead and run:</span></span>
+<span class=line><span style=color:#c9d1d9>- ```shell</span></span>
+<span class=line><span style=color:#c9d1d9>  sudo netplan apply</span></span></code></pre>
+<ul>
+<li>Test the command by pinging a domain (google.com) and an IPv4 (8.8.8.8), making sure that it works!</li>
+</ul>
+</li>
+</ul>
 <hr/>
 <h3 id=misc-notes>Misc. Notes</h3>
 <ul>
