@@ -53,6 +53,21 @@ tags:
       - Test: `sudo kubectl get svc --all-namespaces` - Should return the generic k3s that are running within the cluster.
       - Verify: `sudo nmap -sU -sT -p0-65535 127.0.0.1`
         - To install nmap, run `sudo apt-get install nmap` and then confirm. 
+  - Verification
+    - Location for k3s (after install)
+      - organic location -> : `/var/lib/rancher/k3s`
+    - Ingress
+      - The default ingress will be Traefik and the yaml will be located at:
+        - `/var/lib/rancher/k3s/server/manifests/traefik.yaml`
+        - Access might require `root`.
+
+## k3s Agent
+- k3s agent will be important when setting up a k3s cluster, as it will be use for workers to communicate with the master.
+  - Master Token
+    - Before the agents can connect, they will need a token from the master, which can be obtained from below:
+      - ```shell
+         
+        ```
 
 ## Portainer Agent
 - Setup Portainer Agent
@@ -67,6 +82,15 @@ tags:
   - Advance Optional Settings
     - Group: `$groupString` - The name of the group for the cluster
     - Tags: `$tagsMap` - Drop down to select the tags for the cluster. 
+
+
+## NFS
+- External Provider
+  - https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner
+
+- CSI-Driver-NFS
+  - https://github.com/kubernetes-csi/csi-driver-nfs
+
 
 ## Terms
 - Cluster:
@@ -102,9 +126,13 @@ tags:
   - ```shell
     sudo kubectl get namespace
     ```
+- Create namespace by replacing `$name` with the string that defines the namespace.
+  - ```shell
+    sudo kubectl create namespace $name
+    ```
 - Set namespace preference/default for session
   - ```shell
-    sudo kubectl config set-context --current --namespace=<namespace-name>
+    sudo kubectl config set-context --current --namespace=$namespace-name
     ```
 - Validate current namespace
   - ```shell
@@ -128,15 +156,24 @@ tags:
     - ```shell
       sudo kubectl get svc
       ```
-- Delete services
+- Delete services via $name
   - ```shell
-    sudo kubectl delete svc <name>
+    sudo kubectl delete svc $name
     ```
-- Delete deployments
+- Delete deployment via $name
   - ```shell
-    sudo kubectl delete deployment.apps/<name>` 
-    `` 
-
+    sudo kubectl delete deployment.apps/$name` 
+    ```
+- Delete namespace , defined by $name
+  - ```shell
+    sudo kubectl delete namespace $name
+    ```
+    - std out: namespace "$name" deleted - Sucessful.
+- Get classes for storage
+  - ```shell
+    sudo kubectl get storageclasses
+    ```
+    - std out: storage provisioners. 
 
 
 ## Patch
@@ -154,3 +191,8 @@ tags:
 ## Help
 - Kubectl Help
   - `sudo kubectl -h` || `k -h`
+
+
+## Harden
+- Collection of harden manifests by the DoD
+  - https://repo1.dso.mil/dsop
