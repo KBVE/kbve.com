@@ -14,9 +14,9 @@
 
 		
 	<link href=/assets/styles.548a3191.css rel=stylesheet />
-<link href=/assets/17ef0eb8.380b0895.css rel=stylesheet />
-<link href=/assets/303c0cca.87df5928.css rel=stylesheet />
-<link href=/assets/e5588033.5f7923b1.css rel=stylesheet /><script src=/page.49a6d988.js type=module></script></head>
+<link href=/assets/62c6a193.87df5928.css rel=stylesheet />
+<link href=/assets/fe621b15.380b0895.css rel=stylesheet />
+<link href=/assets/5dc9921b.5f7923b1.css rel=stylesheet /><script src=/page.49a6d988.js type=module></script></head>
 	<body class=astro-D7OQU2FC>
 		<style>astro-island,astro-slot{display:contents}</style><script>var l;(self.Astro=self.Astro||{}).only=t=>{(async()=>{await(await t())()})()},window.dispatchEvent(new Event("astro:only"));{const t={0:t=>t,1:t=>JSON.parse(t,e),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,e)),5:t=>new Set(JSON.parse(t,e)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},e=(e,s)=>{if(""===e||!Array.isArray(s))return s;const[r,i]=s;return r in t?t[r](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",((l=class extends HTMLElement{constructor(){super(...arguments),this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const t=this.querySelectorAll("astro-slot"),s={},r=this.querySelectorAll("template[data-astro-template]");for(const t of r){const e=t.closest(this.tagName);!e||!e.isSameNode(this)||(s[t.getAttribute("data-astro-template")||"default"]=t.innerHTML,t.remove())}for(const e of t){const t=e.closest(this.tagName);!t||!t.isSameNode(this)||(s[e.getAttribute("name")||"default"]=e.innerHTML)}const i=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),e):{};this.hydrator(this)(this.Component,i,s,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver(((t,e)=>{e.disconnect(),this.childrenConnectedCallback()})).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let t=this.getAttribute("before-hydration-url");t&&await import(t),this.start()}start(){const t=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");void 0!==Astro[e]?Astro[e]((async()=>{const t=this.getAttribute("renderer-url"),[e,{default:s}]=await Promise.all([import(this.getAttribute("component-url")),t?import(t):()=>()=>{}]),r=this.getAttribute("component-export")||"default";if(r.includes(".")){this.Component=e;for(const t of r.split("."))this.Component=this.Component[t]}else this.Component=e[r];return this.hydrator=s,this.hydrate}),t,this):window.addEventListener(`astro:${e}`,(()=>this.start()),{once:!0})}attributeChangedCallback(){this.hydrator&&this.hydrate()}}).observedAttributes=["props"],l))}</script><astro-island client=only component-export=default component-url=/index.cc36cb9a.js opts={&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:&quot;react&quot;} props={&quot;class&quot;:[0,&quot;astro-D7OQU2FC&quot;]} renderer-url=/client.91465428.js ssr="" uid=2dKeMx></astro-island>
     <header class="astro-D7OQU2FC hero" style="background-image:url(https://images.unsplash.com/photo-1610429559733-a222e865f34a?fit=crop&w=1400&h=700&q=75)">
@@ -103,6 +103,43 @@
 </li>
 </ul>
 </li>
+<li>Verification
+<ul>
+<li>Location for k3s (after install)
+<ul>
+<li>organic location -&gt; : <code>/var/lib/rancher/k3s</code></li>
+</ul>
+</li>
+<li>Ingress
+<ul>
+<li>The default ingress will be Traefik and the yaml will be located at:
+<ul>
+<li><code>/var/lib/rancher/k3s/server/manifests/traefik.yaml</code></li>
+<li>Access might require <code>root</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=k3s-agent>k3s Agent</h2>
+<ul>
+<li>k3s agent will be important when setting up a k3s cluster, as it will be use for workers to communicate with the master.
+<ul>
+<li>Master Token
+<ul>
+<li>Before the agents can connect, they will need a token from the master, which can be obtained from below:
+<ul>
+<li>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9> </span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -136,6 +173,21 @@
 <li>Tags: <code>$tagsMap</code> - Drop down to select the tags for the cluster.</li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<h2 id=nfs>NFS</h2>
+<ul>
+<li>
+<p>External Provider</p>
+<ul>
+<li><a href=https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner>https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner</a></li>
+</ul>
+</li>
+<li>
+<p>CSI-Driver-NFS</p>
+<ul>
+<li><a href=https://github.com/kubernetes-csi/csi-driver-nfs>https://github.com/kubernetes-csi/csi-driver-nfs</a></li>
 </ul>
 </li>
 </ul>
@@ -210,10 +262,17 @@
 </li>
 </ul>
 </li>
+<li>Create namespace by replacing <code>$name</code> with the string that defines the namespace.
+<ul>
+<li>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl create namespace $name</span></span></code></pre>
+</li>
+</ul>
+</li>
 <li>Set namespace preference/default for session
 <ul>
 <li>
-<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl config set-context --current --namespace=</span><span style=color:#ff7b72>&lt;</span><span style=color:#c9d1d9>namespace-name</span><span style=color:#ff7b72>&gt;</span></span></code></pre>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl config set-context --current --namespace=$namespace-name</span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -260,20 +319,37 @@
 </li>
 </ul>
 </li>
-<li>Delete services
+<li>Delete services via $name
 <ul>
 <li>
-<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl delete svc </span><span style=color:#ff7b72>&lt;</span><span style=color:#c9d1d9>name</span><span style=color:#ff7b72>&gt;</span></span></code></pre>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl delete svc $name</span></span></code></pre>
 </li>
 </ul>
 </li>
-<li>Delete deployments
+<li>Delete deployment via $name
 <ul>
 <li>
-<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl delete deployment.apps/</span><span style=color:#ff7b72>&lt;</span><span style=color:#c9d1d9>name</span><span style=color:#ff7b72>&gt;</span><span style=color:#a5d6ff>` </span></span>
-<span class=line><span style=color:#a5d6ff>`` </span></span>
-<span class=line></span>
-<span class=line></span></code></pre>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl delete deployment.apps/$name</span><span style=color:#a5d6ff>` </span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>Delete namespace , defined by $name
+<ul>
+<li>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl delete namespace $name</span></span></code></pre>
+<ul>
+<li>std out: namespace “$name” deleted - Sucessful.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Get classes for storage
+<ul>
+<li>
+<pre class=astro-code style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>sudo kubectl get storageclasses</span></span></code></pre>
+<ul>
+<li>std out: storage provisioners.</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -308,6 +384,14 @@
 <li>Kubectl Help
 <ul>
 <li><code>sudo kubectl -h</code> || <code>k -h</code></li>
+</ul>
+</li>
+</ul>
+<h2 id=harden>Harden</h2>
+<ul>
+<li>Collection of harden manifests by the DoD
+<ul>
+<li><a href=https://repo1.dso.mil/dsop>https://repo1.dso.mil/dsop</a></li>
 </ul>
 </li>
 </ul></div>
