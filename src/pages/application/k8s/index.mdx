@@ -126,13 +126,13 @@ tags:
   - ```shell
     sudo kubectl get namespace
     ```
-- Create namespace by replacing `<name>` with the string that defines the namespace.
+- Create namespace by replacing `$name` with the string that defines the namespace.
   - ```shell
-    sudo kubectl create namespace <name>
+    sudo kubectl create namespace $name
     ```
 - Set namespace preference/default for session
   - ```shell
-    sudo kubectl config set-context --current --namespace=<namespace-name>
+    sudo kubectl config set-context --current --namespace=$namespace-name
     ```
 - Validate current namespace
   - ```shell
@@ -156,17 +156,17 @@ tags:
     - ```shell
       sudo kubectl get svc
       ```
-- Delete services
+- Delete services via $name
   - ```shell
-    sudo kubectl delete svc <name>
+    sudo kubectl delete svc $name
     ```
-- Delete deployments
+- Delete deployment via $name
   - ```shell
-    sudo kubectl delete deployment.apps/<name>` 
+    sudo kubectl delete deployment.apps/$name` 
     ```
-- Delete namespace , defined by <name>
+- Delete namespace , defined by $name
   - ```shell
-    sudo kubectl delete namespace <name>
+    sudo kubectl delete namespace $name
     ```
     - std out: namespace "<name>" deleted - Sucessful.
 - Get classes for storage
