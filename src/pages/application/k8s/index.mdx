@@ -53,6 +53,13 @@ tags:
       - Test: `sudo kubectl get svc --all-namespaces` - Should return the generic k3s that are running within the cluster.
       - Verify: `sudo nmap -sU -sT -p0-65535 127.0.0.1`
         - To install nmap, run `sudo apt-get install nmap` and then confirm. 
+  - Verification
+    - Location for k3s (after install)
+      - organic location -> : `/var/lib/rancher/k3s`
+    - Ingress
+      - The default ingress will be Traefik and the yaml will be located at:
+        - `/var/lib/rancher/k3s/server/manifests/traefik.yaml`
+        - Access might require `root`.
 
 ## Portainer Agent
 - Setup Portainer Agent
@@ -102,6 +109,10 @@ tags:
   - ```shell
     sudo kubectl get namespace
     ```
+- Create namespace by replacing `<name>` with the string that defines the namespace.
+  - ```shell
+    sudo kubectl create namespace <name>
+    ```
 - Set namespace preference/default for session
   - ```shell
     sudo kubectl config set-context --current --namespace=<namespace-name>
@@ -135,8 +146,11 @@ tags:
 - Delete deployments
   - ```shell
     sudo kubectl delete deployment.apps/<name>` 
-    `` 
-
+    ```
+- Delete namespace , defined by <name>
+  - ```shell
+    sudo kubectl delete namespace <name>
+    ```
 
 
 ## Patch
