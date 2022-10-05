@@ -33,3 +33,16 @@ export const components = { github: Github };
 - ![API Uptime Badge](https://api.checklyhq.com/v1/badges/checks/206925a6-0f7b-4669-a4fd-b61b3f5b70fc?style=for-the-badge&theme=default&responseTime=true)
 
 * * *
+
+
+## Auth
+- Auth Journal 
+  - For the core of the API, we will use JWT as the `key` in between the $User and $API.
+- React JSX
+  - The first mod will be the core auth system between the client $User and server $API, which includes the register and login. While we build it out, we will include generic defensive components into the foundation, then re-visit and apply external security, such as limits and firewalls (some may operate outside of the API).
+    - Cookie Storage (of the JWT)
+      - Cookie - `token` - will store the client $User JWT.
+      - Cookie - `user` - will store the client $User data.
+      - Library: `react-cookie` will be used to help maintain the cookies.
+
+* * *

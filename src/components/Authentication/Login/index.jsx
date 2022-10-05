@@ -1,6 +1,6 @@
 import React from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import Styles from "./styles.module.scss";
+import Styles from "../styles.module.scss";
 // @mui
 import { Box } from "@mui/material";
 import Stack from "@mui/material/Stack";
@@ -9,11 +9,10 @@ import TextField from "@mui/material/TextField";
 import Collapse from "@mui/material/Collapse";
 import Button from "@mui/material/Button";
 
-
 // Cookies - 10/5/2022
-import { useCookies  } from 'react-cookie';
+import {  useCookies  } from 'react-cookie';
 
-/// Regex Validate Email
+// Regex Validate Email
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -22,45 +21,42 @@ const validateEmail = (email) => {
     );
 };
 
-
-const Register = ({
-  url = "https://api.kbve.com/api/auth/local/register",
+const Login = ({
+  url = "https://api.kbve.com/api/auth/local/",
   display = true,
 }) => {
-
 
 /// hCaptcha -> [START]
   const captchaRef = React.useRef(null);
   const hCaptchaKey = "e77af3f6-a0e3-44b7-82f8-b7c098d38022";
   const [verification, setVerification] = React.useState(false);
+
   const handleVerificationSuccess = (token, eKey) => {
     console.log({ token, eKey });
     setVerification(token);
   };
+
 /// hCaptcha -> [END]
 
-
-/// Register (var) -> [START]
-  const [username, setUsername] = React.useState("")
+/// Login (var) -> [START]
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [confirmPassword, setConfirmPassword] = React.useState("");
-/// Register (var) -> [END]
+/// Login (var) -> [END]
 
 /// Cookie -> [START]
   const [cookies, setCookie] = useCookies(['member']);
   const handleCookie = (jwt, data) => {
     setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
     setCookie('user', data, { path: '/', domain: '.kbve.com' });
+
   }
-/// Cookie -> [END]
+/// Cookie -> [STOP]
 
 /// UX/UI -> [START]
 const [isLoading, setIsLoading] = React.useState(false);
-//? TODO: Spinner
-
+//? TODO: STATUS DIV -> Spinner
+//? TODO: STATUS DIV -> Error Message
 /// UX/UI -> [STOP]
-
 
 //! Core -> [START] -> EOF
   const handleConfirm = async (e) => {
@@ -70,27 +66,25 @@ const [isLoading, setIsLoading] = React.useState(false);
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username,
-        email,
+        identifier: email,
         password,
         token: verification,
       }),
     }).then(async (r) => {
-      // Register Confirmation Error
+      // Login Confirmation Error
       if (!r.ok) {
         setIsLoading(false);
+        captchaRef.current?.resetCaptcha();
         console.error(
-          `\tRegisterConfirmation::An Error Occurred (${r.statusText})`
+          `\tLoginConfirmation::An Error Occurred (${r.statusText})`
         );
         console.log(`Error: ${r}`);
-        captchaRef.current?.resetCaptcha();
         return new Error(r.statusText);
       }
       const res = await r.json().then(data => {
         console.log('Data:', data);
         console.log('JWT', data.jwt);
         console.log('User', data.user);
-        //handleCookie(data.jwt, data.user);
         const _cookie = new Promise((resolve, reject) => {
           resolve(handleCookie(data.jwt, data.user));
         }).then(  window.location = 'https://kbve.com/profile' )
@@ -102,6 +96,8 @@ const [isLoading, setIsLoading] = React.useState(false);
       );
     });
   };
+  /// Core -> [END]
+
 
   return (
     <Stack direction="column" alignItems="center">
@@ -114,15 +110,6 @@ const [isLoading, setIsLoading] = React.useState(false);
             p={2}
             sx={{ flex: 1 }}
           >
-            <TextField
-              id={`username-input`}
-              type="username"
-              label="Username"
-              value={username}
-              error={username !== ""}
-              onChange={(e) => setUsername(e.target.value)}
-              disabled={isLoading}
-            />
             <TextField
               id={`email-input`}
               type="email"
@@ -137,17 +124,8 @@ const [isLoading, setIsLoading] = React.useState(false);
               type="password"
               label="Password"
               value={password}
-              error={password !== "" && password !== confirmPassword}
+              error={password !== ""}
               onChange={(e) => setPassword(e.target.value)}
-              disabled={isLoading}
-            />
-            <TextField
-              id={`confirm-password-input`}
-              type="password"
-              label="Confirm Password"
-              value={confirmPassword}
-              error={confirmPassword !== "" && password !== confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
               disabled={isLoading}
             />
             <HCaptcha
@@ -169,4 +147,4 @@ const [isLoading, setIsLoading] = React.useState(false);
   );
 };
 
-export default Register;
+export default Login;
