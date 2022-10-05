@@ -43,7 +43,7 @@ const Register = ({
       body: JSON.stringify({
         email,
         password,
-        token,
+        token: verification,
       }),
     }).then(async r => {
       if (!r.ok) {

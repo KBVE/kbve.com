@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.8'
 
 #
 #
@@ -20,7 +20,7 @@ services:
       - galera_network
     command: seed
     volumes:
-      - nfs-data:/var/lib/mysql
+      - seed-data:/var/lib/mysql
     deploy:
       placement:
         constraints:
@@ -52,7 +52,9 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     deploy:
-      replicas: 0
+      replicas: 4
+      placement:
+        max_replicas_per_node: 1
     secrets:
       - xtrabackup_password
 
@@ -71,13 +73,12 @@ services:
       - galera_network
       - cloud-public
     configs:
-      - source: proxysql_ve2.cnf
+      - source: proxysql_ve3.cnf
         target: /etc/proxysql.cnf
     volumes:
       - proxysql-data:/var/lib/proxysql
     
     deploy:
-      #replicas: 0
       labels:
         - traefik.enable=true
         - traefik.constraint-label=cloud-public
@@ -88,20 +89,23 @@ services:
     - "6080:6080"
 
 configs:
-  proxysql_ve2.cnf:
+  proxysql_ve3.cnf:
     external: true
 
 volumes:
-  nfs-data:
-    driver_opts:
-      type: "nfs"
-      o: "addr=192.168.1.4,rw,nolock,rsize=131100,wsize=131100,tcp,hard,intr"
-      device: ":/zpool-/mysql/"
+  seed-data:
+    external: true
+  #nfs-data:
+    #driver_opts:
+      #type: "nfs"
+      #o: "addr=0.0.0.0,rw,nolock,rsize=131100,wsize=131100,tcp,hard,intr"
+      #device: ":/zpool/mysql/"
 
   mysql-data:
     name: '{{.Service.Name}}-{{.Task.Slot}}-data'
     driver: local
   proxysql-data:
+    name: 'proxysql-data'
     #name: '{{.Service.Name}}-{{.Task.Slot}}-data'
     #driver: local
     external: true
