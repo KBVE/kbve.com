@@ -9,6 +9,10 @@ import TextField from "@mui/material/TextField";
 import Collapse from "@mui/material/Collapse";
 import Button from "@mui/material/Button";
 
+// Cookies - 10/5/2022
+import { useCookies } from 'react-cookie';
+
+
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -18,7 +22,7 @@ const validateEmail = (email) => {
 };
 
 const Register = ({
-  url = "https://dev.api.kbve.com/api/auth/local/register",
+  url = "https://api.kbve.com/api/auth/local/register",
   display = true,
 }) => {
   const hCaptchaKey = "e77af3f6-a0e3-44b7-82f8-b7c098d38022";
@@ -27,6 +31,7 @@ const Register = ({
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
+
 
   const [verification, setVerification] = React.useState(false);
 
@@ -48,13 +53,16 @@ const Register = ({
         token: verification,
       }),
     }).then(async (r) => {
+      // Register Confirmation Error
       if (!r.ok) {
         console.error(
           `\tRegisterConfirmation::An Error Occurred (${r.statusText})`
         );
+        console.log(`Error: ${r}`);
         return new Error(r.statusText);
       }
       const res = await r.json();
+      // Success upon Registering
       console.log(
         `\tRegisterConfirmation::Success:\n${JSON.stringify(res, null, 2)}`
       );
