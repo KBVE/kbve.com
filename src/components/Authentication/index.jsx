@@ -23,6 +23,7 @@ const Register = ({
 }) => {
   const hCaptchaKey = "e77af3f6-a0e3-44b7-82f8-b7c098d38022";
 
+  const [username, setUsername] = React.useState("")
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
@@ -41,17 +42,22 @@ const Register = ({
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        username,
         email,
         password,
         token: verification,
       }),
-    }).then(async r => {
+    }).then(async (r) => {
       if (!r.ok) {
-        console.error(`\tRegisterConfirmation::An Error Occurred (${r.statusText})`)
-        return new Error(r.statusText)
+        console.error(
+          `\tRegisterConfirmation::An Error Occurred (${r.statusText})`
+        );
+        return new Error(r.statusText);
       }
-      const res = await r.json()
-      console.log(`\tRegisterConfirmation::Success:\n${JSON.stringify(res, null, 2)}`)
+      const res = await r.json();
+      console.log(
+        `\tRegisterConfirmation::Success:\n${JSON.stringify(res, null, 2)}`
+      );
     });
   };
 
@@ -67,11 +73,19 @@ const Register = ({
             sx={{ flex: 1 }}
           >
             <TextField
+              id={`username-input`}
+              type="username"
+              label="Username"
+              value={username}
+              error={username !== ""}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <TextField
               id={`email-input`}
               type="email"
               label="Email"
               value={email}
-              error={email !== '' && !validateEmail(email)}
+              error={email !== "" && !validateEmail(email)}
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
