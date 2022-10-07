@@ -1,0 +1,29 @@
+---
+layout: ../../../layouts/application.astro
+title: Strapi
+category: Application
+client: Self
+publishDate: 2022-10-07 03:35:00
+img: https://images.unsplash.com/photo-1622279488885-d831e8e76cef?fit=crop&w=1400&h=700&q=75
+repo: https://github.com/strapi/strapi
+description: |
+ 🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript, fully customizable and developer-first.
+tags:
+  - technology
+  - api
+  - cms
+  - mysql
+---
+
+## Strapi Reference
+
+### MySQL Instructions
+- `CREATE DATABASE strapi;`
+- `CREATE USER 'strapi'@'localhost';`
+- `GRANT ALL PRIVILEGES ON strapi.* TO 'strapi'@'localhost';`
+- `ALTER USER 'strapi'@'localhost' IDENTIFIED WITH mysql_native_password BY 'strapi';`
+- `FLUSH PRIVILEGES;`
+- `EXIT;`
+
+#### What to do if you run into the `Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client` error?
+> In this scenario, you probably did what I did and altered the password with `ALTER USER 'strapi'@'localhost' IDENTIFIED BY 'strapi';` which is incorrect, insert `WITH mysql_native_password` in there and you should be good afterwards.
