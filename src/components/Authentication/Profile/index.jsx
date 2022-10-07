@@ -26,8 +26,8 @@ import {  useCookies  } from 'react-cookie';
 
 
 // Logic
-// {1}    =>    IF! Cookie(JWT)   -> redirect       ->    /login/
-// {2}    =>    IF Cookie(JWT)    -> fetch($_GET)   ->    data()    ->  render ProfileCard(data) ?
+// {1}    =>    IF! Cookie(User)   -> redirect       ->    /login/
+// {2}    =>    IF Cookie(User)    -> fetch($_GET)   ->    data()    ->  render ProfileCard(data) ?
 // {3}    =>        ^             -> !fetch         ->    redirect  ->  /login/
 
 
@@ -47,6 +47,7 @@ const Profile = ({
 
 /// UX/UI -> [START]
 const [expanded, setExpanded] = React.useState(false);
+const [isLoading, setIsLoading] = React.useState(false);
 
 const handleExpandClick = () => {
   setExpanded(!expanded);
@@ -106,7 +107,7 @@ const ExpandMore = styled((props) => {
   /// Core -> [END]
 
 
-  return (
+  const profile = () => (
     <Stack direction="column" alignItems="center">
       <Paper variant="outlined">
           <Card sx={{ maxWidth: 345 }}>
@@ -182,6 +183,13 @@ const ExpandMore = styled((props) => {
       </Paper>
     </Stack>
   );
+
+  if(!cookies.user)
+  {
+    window.location = 'https://kbve.com/login/';
+  } else {
+  return profile();
+  }
 };
 
 export default Profile;
