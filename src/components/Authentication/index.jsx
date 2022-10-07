@@ -49,15 +49,18 @@ const Register = ({
 
 /// Cookie -> [START]
   const [cookies, setCookie] = useCookies(['member']);
-  const handleCookie = (jwt, data) => {
-    setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
-    setCookie('user', data, { path: '/', domain: '.kbve.com' });
+  const handleCookie = (data) => {
+    // setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
+    setCookie('user', data, { path: '/', domain: '.kbve.com',  secure: true, sameSite: 'strict'  });
+    //setCookie('jwt', jwt, { path: '/' });
+    //setCookie('user', data, { path: '/'});
   }
 /// Cookie -> [END]
 
 /// UX/UI -> [START]
 const [isLoading, setIsLoading] = React.useState(false);
 //? TODO: Spinner
+
 
 /// UX/UI -> [STOP]
 
@@ -79,11 +82,11 @@ const [isLoading, setIsLoading] = React.useState(false);
       // Register Confirmation Error
       if (!r.ok) {
         setIsLoading(false);
+        captchaRef.current?.resetCaptcha();
         console.error(
           `\tRegisterConfirmation::An Error Occurred (${r.statusText})`
         );
         console.log(`Error: ${r}`);
-        captchaRef.current?.resetCaptcha();
         return new Error(r.statusText);
       }
       const res = await r.json().then(data => {
@@ -92,7 +95,7 @@ const [isLoading, setIsLoading] = React.useState(false);
         console.log('User', data.user);
         //handleCookie(data.jwt, data.user);
         const _cookie = new Promise((resolve, reject) => {
-          resolve(handleCookie(data.jwt, data.user));
+          resolve(handleCookie(data.user));
         }).then(  window.location = 'https://kbve.com/profile' )
       })
 

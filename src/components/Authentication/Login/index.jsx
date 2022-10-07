@@ -45,9 +45,11 @@ const Login = ({
 
 /// Cookie -> [START]
   const [cookies, setCookie] = useCookies(['member']);
-  const handleCookie = (jwt, data) => {
-    setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
-    setCookie('user', data, { path: '/', domain: '.kbve.com' });
+  const handleCookie = (data) => {
+    //setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
+    setCookie('user', data, { path: '/', domain: '.kbve.com', secure: true, sameSite: 'strict' });
+    // setCookie('jwt', jwt, { path: '/'});
+    // setCookie('user', data, { path: '/'});
 
   }
 /// Cookie -> [STOP]
@@ -86,13 +88,13 @@ const [isLoading, setIsLoading] = React.useState(false);
         console.log('JWT', data.jwt);
         console.log('User', data.user);
         const _cookie = new Promise((resolve, reject) => {
-          resolve(handleCookie(data.jwt, data.user));
+          resolve(handleCookie(data.user));
         }).then(  window.location = 'https://kbve.com/profile' )
       })
 
-      // Success upon Registering
+      // Success upon Login
       console.log(
-        `\tRegisterConfirmation::Success:\n${JSON.stringify(res, null, 2)}`
+        `\tLoginConfirmation::Success:\n${JSON.stringify(res, null, 2)}`
       );
     });
   };
@@ -136,7 +138,7 @@ const [isLoading, setIsLoading] = React.useState(false);
             <Collapse in={!!verification}>
               <Stack direction="column" alignItems="flex-end">
                 <Button variant="contained" fullWidth onClick={handleConfirm} disabled={isLoading}>
-                  Sign Up
+                  Login
                 </Button>
               </Stack>
             </Collapse>
