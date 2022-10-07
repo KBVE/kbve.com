@@ -50,8 +50,10 @@ const Register = ({
 /// Cookie -> [START]
   const [cookies, setCookie] = useCookies(['member']);
   const handleCookie = (jwt, data) => {
-    setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
-    setCookie('user', data, { path: '/', domain: '.kbve.com' });
+    // setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
+    // setCookie('user', data, { path: '/', domain: '.kbve.com' });
+    setCookie('jwt', jwt, { path: '/' });
+    setCookie('user', data, { path: '/'});
   }
 /// Cookie -> [END]
 
@@ -59,9 +61,6 @@ const Register = ({
 const [isLoading, setIsLoading] = React.useState(false);
 //? TODO: Spinner
 
-const spinner = (
-  <div className={Styles.lds-ring}><div></div><div></div><div></div><div></div></div>
-);
 
 /// UX/UI -> [STOP]
 

@@ -27,3 +27,7 @@ tags:
 
 #### What to do if you run into the `Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client` error?
 > In this scenario, you probably did what I did and altered the password with `ALTER USER 'strapi'@'localhost' IDENTIFIED BY 'strapi';` which is incorrect, insert `WITH mysql_native_password` in there and you should be good afterwards.
+
+### hCaptcha
+- In the .env include the secret_key , which you can obtain from hCaptcha via their settings for the account. 
+- Note: HCAPTCHA=secret_key
