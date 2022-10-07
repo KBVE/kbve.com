@@ -59,6 +59,10 @@ const Register = ({
 const [isLoading, setIsLoading] = React.useState(false);
 //? TODO: Spinner
 
+const spinner = (
+  <div className={Styles.lds-ring}><div></div><div></div><div></div><div></div></div>
+);
+
 /// UX/UI -> [STOP]
 
 
@@ -79,11 +83,11 @@ const [isLoading, setIsLoading] = React.useState(false);
       // Register Confirmation Error
       if (!r.ok) {
         setIsLoading(false);
+        captchaRef.current?.resetCaptcha();
         console.error(
           `\tRegisterConfirmation::An Error Occurred (${r.statusText})`
         );
         console.log(`Error: ${r}`);
-        captchaRef.current?.resetCaptcha();
         return new Error(r.statusText);
       }
       const res = await r.json().then(data => {

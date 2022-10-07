@@ -71,7 +71,7 @@ const [isLoading, setIsLoading] = useState(false);
     e.preventDefault();
     setIsLoading(true);
     await fetch(url, {
-      method: "POST",
+      method: "GET",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         identifier: email,
