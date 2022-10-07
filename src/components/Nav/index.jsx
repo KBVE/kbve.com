@@ -18,6 +18,9 @@ import MenuItem from "@mui/material/MenuItem";
 // local components
 import KBVELogo from "../Branding/KBVELogo";
 
+// Cookies
+import { useCookies  } from 'react-cookie';
+
 const pages = [
   { label: "Portfolio", link: "/projects" },
   { label: "Applications", link: "/application" },
@@ -33,6 +36,63 @@ function Nav() {
 
   const handleCloseNavMenu = () => setAnchorElNav(null);
   const handleCloseUserMenu = () => setAnchorElUser(null);
+
+
+
+  // Menu ?:(Guest) -> [START]
+  const GuestMenu = () => (
+    <div key={Math.random() * 100}>
+                {["Register", "Login", "Support", "About"].map(
+                (setting) => (
+                  <MenuItem key={setting} onClick={(e) => {
+                    e.preventDefault();
+  
+                    handleCloseUserMenu();
+  
+                    window.location.href = `/${(setting).toLowerCase()}`;
+                  }}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                )
+              )}
+    </div>
+  )
+  // Menu ?:(Guest) -> [END]
+
+  // Menu ?:(User) -> [START]
+  const UserMenu = () => (
+    <div key={Math.random() * 100}>
+                {["Profile", "Support", "App", "About"].map(
+                (setting) => (
+                  <MenuItem key={setting} onClick={(e) => {
+                    e.preventDefault();
+  
+                    handleCloseUserMenu();
+  
+                    window.location.href = `/${(setting).toLowerCase()}`;
+                  }}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                )
+              )}
+    </div>
+  )
+  // Menu ?:(User) -> [END]
+
+
+
+  // Cookies -> [START]
+    const [cookies, setCookie] = useCookies(['member']);
+    const _gM = () => {
+      if(cookies.user)
+      { return UserMenu(); }
+      else
+      { return GuestMenu(); }
+    }
+    const [_gMenu, setMenu] = React.useState(_gM());
+  // Cookies -> [END]
+  
+  
 
   return (
     <AppBar
@@ -196,7 +256,10 @@ function Nav() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem
+            
+              {_gMenu}
+
+              {/* <MenuItem
                 key={"Sign Up"}
                 onClick={(e) => {
                   e.preventDefault();
@@ -207,7 +270,7 @@ function Nav() {
                 }}
               >
                 <Typography textAlign="center">Sign Up</Typography>
-              </MenuItem>
+              </MenuItem> */}
               {/* {["Sign In", , "Profile", "Settings", "Log Out"].map(
                 (setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
