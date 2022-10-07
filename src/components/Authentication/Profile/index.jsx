@@ -67,43 +67,43 @@ const ExpandMore = styled((props) => {
 
 /// UX/UI -> [STOP]
 
-//! Core -> [START] -> EOF
-  const handleJWT = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    await fetch(url, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        identifier: email,
-        password,
-        token: verification,
-      }),
-    }).then(async (r) => {
-      // Login Confirmation Error
-      if (!r.ok) {
-        setIsLoading(false);
-        console.error(
-          `\tGrabProfile::An Error Occurred (${r.statusText})`
-        );
-        console.log(`Error: ${r}`);
-        return new Error(r.statusText);
-      }
-      const res = await r.json().then(data => {
-        console.log('Data:', data);
-        console.log('JWT', data.jwt);
-        console.log('User', data.user);
-        const _cookie = new Promise((resolve, reject) => {
-          resolve(handleCookie(data.jwt, data.user));
-        }).then(  window.location = 'https://kbve.com/profile' )
-      })
+// //! Core -> [START] -> EOF
+//   const handleJWT = async (e) => {
+//     e.preventDefault();
+//     setIsLoading(true);
+//     await fetch(url, {
+//       method: "GET",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({
+//         identifier: email,
+//         password,
+//         token: verification,
+//       }),
+//     }).then(async (r) => {
+//       // Login Confirmation Error
+//       if (!r.ok) {
+//         setIsLoading(false);
+//         console.error(
+//           `\tGrabProfile::An Error Occurred (${r.statusText})`
+//         );
+//         console.log(`Error: ${r}`);
+//         return new Error(r.statusText);
+//       }
+//       const res = await r.json().then(data => {
+//         console.log('Data:', data);
+//         console.log('JWT', data.jwt);
+//         console.log('User', data.user);
+//         const _cookie = new Promise((resolve, reject) => {
+//           resolve(handleCookie(data.jwt, data.user));
+//         }).then(  window.location = 'https://kbve.com/profile' )
+//       })
 
-      // Success upon Registering
-      console.log(
-        `\tGrabProfile::Success:\n${JSON.stringify(res, null, 2)}`
-      );
-    });
-  };
+//       // Success upon Registering
+//       console.log(
+//         `\tGrabProfile::Success:\n${JSON.stringify(res, null, 2)}`
+//       );
+//     });
+//   };
   /// Core -> [END]
 
 

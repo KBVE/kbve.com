@@ -45,11 +45,11 @@ const Login = ({
 
 /// Cookie -> [START]
   const [cookies, setCookie] = useCookies(['member']);
-  const handleCookie = (jwt, data) => {
-    // setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
-    // setCookie('user', data, { path: '/', domain: '.kbve.com' });
-    setCookie('jwt', jwt, { path: '/'});
-    setCookie('user', data, { path: '/'});
+  const handleCookie = (data) => {
+    //setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
+    setCookie('user', data, { path: '/', domain: '.kbve.com', secure: true, sameSite: 'strict' });
+    // setCookie('jwt', jwt, { path: '/'});
+    // setCookie('user', data, { path: '/'});
 
   }
 /// Cookie -> [STOP]
@@ -88,7 +88,7 @@ const [isLoading, setIsLoading] = React.useState(false);
         console.log('JWT', data.jwt);
         console.log('User', data.user);
         const _cookie = new Promise((resolve, reject) => {
-          resolve(handleCookie(data.jwt, data.user));
+          resolve(handleCookie(data.user));
         }).then(  window.location = 'https://kbve.com/profile' )
       })
 
