@@ -49,7 +49,7 @@ function Nav() {
   
                     handleCloseUserMenu();
   
-                    window.location.href = `/${(setting).toLowerCase()}`;
+                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '+')}`;
                   }}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
@@ -62,14 +62,14 @@ function Nav() {
   // Menu ?:(User) -> [START]
   const UserMenu = () => (
     <div key={Math.random() * 100}>
-                {["Profile", "Support", "App", "About"].map(
+                {["Profile", "Support", "App", "About", "Log Out"].map(
                 (setting) => (
                   <MenuItem key={setting} onClick={(e) => {
                     e.preventDefault();
   
                     handleCloseUserMenu();
   
-                    window.location.href = `/${(setting).toLowerCase()}`;
+                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '+')}`;
                   }}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
