@@ -67,6 +67,7 @@ const ExpandMore = styled((props) => {
 
 /// UX/UI -> [STOP]
 
+
 // //! Core -> [START] -> EOF
 //   const handleJWT = async (e) => {
 //     e.preventDefault();
@@ -106,7 +107,7 @@ const ExpandMore = styled((props) => {
 //   };
   /// Core -> [END]
 
-
+//* Profile
   const profile = () => (
     <Stack direction="column" alignItems="center">
       <Paper variant="outlined">
@@ -133,8 +134,7 @@ const ExpandMore = styled((props) => {
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-            
-              
+          
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -183,7 +183,7 @@ const ExpandMore = styled((props) => {
       </Paper>
     </Stack>
   );
-
+//* Logic <Gate>
   if(!cookies.user)
   {
     window.location = 'https://kbve.com/login/';

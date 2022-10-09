@@ -1,19 +1,23 @@
+//! IMPORT -> [START]
+///
+//* Import React
 import React from "react";
+//* Import hCaptcha
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+//? Import Styles - Might be defunct.
 import Styles from "./styles.module.scss";
-// @mui
+//* Import @mui
 import { Box } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Collapse from "@mui/material/Collapse";
 import Button from "@mui/material/Button";
-
-
-// Cookies - 10/5/2022
+///
+//* Import React Cookies
 import { useCookies  } from 'react-cookie';
-
-/// Regex Validate Email
+///
+//* Regex Validate Email
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -21,14 +25,13 @@ const validateEmail = (email) => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
-
-
+///
+//* Register
 const Register = ({
   url = "https://api.kbve.com/api/auth/local/register",
   display = true,
 }) => {
-
-
+//* hCaptcha
 /// hCaptcha -> [START]
   const captchaRef = React.useRef(null);
   const hCaptchaKey = "e77af3f6-a0e3-44b7-82f8-b7c098d38022";
@@ -38,15 +41,16 @@ const Register = ({
     setVerification(token);
   };
 /// hCaptcha -> [END]
-
-
+///
+//* Register
 /// Register (var) -> [START]
   const [username, setUsername] = React.useState("")
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
 /// Register (var) -> [END]
-
+///
+//* Cookie
 /// Cookie -> [START]
   const [cookies, setCookie] = useCookies(['member']);
   const handleCookie = (data) => {
@@ -56,15 +60,16 @@ const Register = ({
     //setCookie('user', data, { path: '/'});
   }
 /// Cookie -> [END]
-
+///
+//* UX/UI
 /// UX/UI -> [START]
 const [isLoading, setIsLoading] = React.useState(false);
 //? TODO: Spinner
-
-
+///
 /// UX/UI -> [STOP]
-
-
+///
+///
+///
 //! Core -> [START] -> EOF
   const handleConfirm = async (e) => {
     e.preventDefault();
@@ -90,9 +95,9 @@ const [isLoading, setIsLoading] = React.useState(false);
         return new Error(r.statusText);
       }
       const res = await r.json().then(data => {
-        console.log('Data:', data);
-        console.log('JWT', data.jwt);
-        console.log('User', data.user);
+        // console.log('Data:', data);
+        // console.log('JWT', data.jwt);
+        // console.log('User', data.user);
         //handleCookie(data.jwt, data.user);
         const _cookie = new Promise((resolve, reject) => {
           resolve(handleCookie(data.user));
