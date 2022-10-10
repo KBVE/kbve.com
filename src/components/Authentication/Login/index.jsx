@@ -56,8 +56,9 @@ const Login = ({
 
 /// UX/UI -> [START]
 const [isLoading, setIsLoading] = React.useState(false);
-//? TODO: STATUS DIV -> Spinner
 //? TODO: STATUS DIV -> Error Message
+const [isError, setIsError] = React.useState(false);
+//? TODO: STATUS DIV -> Spinner
 /// UX/UI -> [STOP]
 
 //! Core -> [START] -> EOF

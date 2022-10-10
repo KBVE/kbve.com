@@ -49,7 +49,7 @@ function Nav() {
   
                     handleCloseUserMenu();
   
-                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '+')}`;
+                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '')}`;
                   }}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
@@ -69,7 +69,7 @@ function Nav() {
   
                     handleCloseUserMenu();
   
-                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '+')}`;
+                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '')}`;
                   }}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
