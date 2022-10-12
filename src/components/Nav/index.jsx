@@ -42,14 +42,14 @@ function Nav() {
   // Menu ?:(Guest) -> [START]
   const GuestMenu = () => (
     <div key={Math.random() * 100}>
-                {["Register", "Login", "Support", "About"].map(
+                {["Register", "Login", "Support", "About", "Recovery"].map(
                 (setting) => (
                   <MenuItem key={setting} onClick={(e) => {
                     e.preventDefault();
   
                     handleCloseUserMenu();
   
-                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '')}`;
+                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '-')}`;
                   }}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
@@ -69,7 +69,7 @@ function Nav() {
   
                     handleCloseUserMenu();
   
-                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '')}`;
+                    window.location.href = `/${(setting).toLowerCase().replace(/ /g, '-')}`;
                   }}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
