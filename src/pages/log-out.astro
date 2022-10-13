@@ -1,0 +1,29 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Nav from '@c/Nav';
+import Logout from '@c/Authentication/Logout';
+---
+
+<html lang="en">
+	<head>
+		<MainHead
+			title="Log Out | KBVE"
+			description="Log out of your KBVE account"
+		/>
+		<style lang="scss">
+			.grid {
+				display: grid;
+				grid-gap: 3rem;
+			}
+		</style>
+	</head>
+	<body style={{ paddingTop: '2rem' }}>
+		<Nav client:only="react" />
+		<div class="wrapper">
+			<h1 class="title mt4 mb4">Logging Out... Page will reload once complete.</h1>
+			<div class="grid">
+        <Logout client:only="react" />
+			</div>
+		</div>
+	</body>
+</html>
