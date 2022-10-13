@@ -5,13 +5,44 @@ import Button from "../components/Button";
 import Nav from "@c/Nav";
 import Footer from "../components/Footer";
 import PortfolioPreview from "../components/PortfolioPreview";
+import AppPreview from "@c/AppPreview";
 
 // Import Discord Component
 import Discord from "../components/Discord";
 
-// Data Fetching: List all Markdown posts in the repo.
-const projects = await Astro.glob("./project/**/*.mdx");
-const featuredProject = projects[0];
+//  Data Fetching: List all Markdown posts in the repo.
+//  Migrating the older index.astro->{START}
+//  const projects = await Astro.glob("./project/**/**/*.mdx");
+//  const featuredProject = projects[0];
+//  Line 266 -> <PortfolioPreview project={featuredProject} />
+//  End Migration. index.astro->{END}
+
+
+const projects = (await Astro.glob('./project/**/*.mdx'))
+.filter(({ frontmatter }) => !!frontmatter.frontpage)
+.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+
+  
+const assets = (await Astro.glob('./asset/**/*.mdx'))
+.filter(({ frontmatter }) => !!frontmatter.frontpage)
+.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+
+const apps = (await Astro.glob('./application/**/*.mdx'))
+.filter(({ frontmatter }) => !!frontmatter.frontpage)
+.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -82,6 +113,36 @@ const featuredProject = projects[0];
           padding-left: 4rem;
         }
       }
+      .lay {
+				background-color: rgba(255, 255, 255, 0.12);
+				// backdrop-filter: blur(80px);
+				// -webkit-backdrop-filter: blur(80px);
+        padding: 10px;
+				border-radius: 8px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+				p {
+				text-align: center;
+				color:  rgb(231, 175, 134);
+				//box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+				}
+			}
+
+      .flexlay {
+				background-color: rgba(255, 255, 255, 0.12);
+				// backdrop-filter: blur(80px);
+				// -webkit-backdrop-filter: blur(80px);
+        
+				padding: 16px;
+				border-radius: 16px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+				p {
+				text-align: center;
+				color:  rgb(231, 175, 134);
+				//box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+				}
+			}
       .overlay-inner {
         background-color: rgba(255, 255, 255, 0.12);
         // backdrop-filter: blur(80px);
@@ -120,6 +181,7 @@ const featuredProject = projects[0];
       }
 
       .sectionTitle {
+        text-align: center;
         font-weight: 700;
         font-size: var(--f-u8);
         margin-top: 1rem;
@@ -231,14 +293,16 @@ const featuredProject = projects[0];
             <small class="subtitle">Click to launch app!</small>KBVE App
           </h1>
           <div>
-            <a href="https://app.kbve.com/" target="_blank"
-              ><span class="role"
+            <a href="https://app.kbve.com/" target="_blank">
+              <span class="role"
                 >👩‍💻 Launch <span class="invert">👩‍💻 App</span>
-              </span>&nbsp;</a
-            >
-            <span class="role"
-              >✏️ Beta <span class="invert">✏️ Test</span>
-            </span>
+              </span>&nbsp;
+            </a>
+            <a href="https://app.kbve.com/" target="_blank">
+              <span class="role"
+                >✏️ Beta <span class="invert">✏️ Test</span>
+              </span>
+            </a>
           </div>
           <p class="desc">
             KBVE IoT Application combines everything within your own realm.
@@ -246,30 +310,40 @@ const featuredProject = projects[0];
         </div>
       </div>
     </header>
-    <main class="wrapper mt4 mb4">
+    <main class="wrapper mt4 mb4 lay">
       <div class="grid">
         <div class="section">
-          <h3 class="sectionTitle">Selected Work</h3>
-          <PortfolioPreview project={featuredProject} />
-          <div class="tac mt4">
-            <a href="/projects">
-              <Button>View All</Button>
-            </a>
-          </div>
+          <div class="flexlay">
+          <h3 class="sectionTitle">Projects</h3>
+          <div class="grid">
+            {projects.map((project) => <PortfolioPreview project={project} />)}
+         </div>
+         </div>
         </div>
         <div class="section">
-          <h3 class="sectionTitle">Discord</h3>
-          <p class="bio">
-            <span>Join Us!</span>
-            <Discord width="350" height="500" />
-          </p>
-          <p>
-            <a href="/about">Read more about us</a> | <a
-              href="https://kbve.com/discord/">Discord Server Information</a
-            >
-          </p>
+            <div class="flexlay">
+              <h3 class="sectionTitle">Discord</h3>
+                <center><Discord width="350" height="500" /></center>
+            </div>
+            &nbsp;
+            <div class="flexlay">
+              {/* Currently rendering the `Assets` through the `PortfolioPreview` until we create a better `AssetsPreview` */}
+              <h3 class="sectionTitle">Assets</h3>
+              <div class="grid">
+                {assets.map((project) => <PortfolioPreview project={project} />)}
+             </div>    
+            </div>
+            &nbsp;
+            <div class="flexlay">
+              <h3 class="sectionTitle">Applications</h3>
+              <div class="grid">
+                {apps.map((apps) => <AppPreview app={apps} />)}
+             </div>    
+            </div>
         </div>
-      </div>
+        
+      </div>  
+
     </main>
     <Footer client:load />
   </body>
