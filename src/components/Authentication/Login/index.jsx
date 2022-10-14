@@ -44,7 +44,7 @@ const Login = ({
 /// Login (var) -> [END]
 
 /// Cookie -> [START]
-  const [cookies, setCookie] = useCookies(['member']);
+  const [cookies, setCookie] = useCookies(['user']);
   const handleCookie = (data) => {
     //setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
     setCookie('user', data, { path: '/', domain: '.kbve.com', secure: true, sameSite: 'strict' });
