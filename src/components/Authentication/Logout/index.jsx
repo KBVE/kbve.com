@@ -11,12 +11,12 @@ import { useCookies } from "react-cookie";
 /// 
 function Logout() {
 //* React Cookie
-  const [cookies, setCookie, removeCookie] = useCookies(["member"]);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 //* Logic <Gate> remove cookie -> then().redirect -> path(login)
   const deleteCookie = (data) => {    
-      const _cookie = new Promise((resolve, reject) => {
-          removeCookie(data);
-      }).then((window.location = "https://kbve.com/login"));
+    removeCookie(data);
+    if(!cookies.user)
+    { window.location = "https://kbve.com/login"}
     };
 
   deleteCookie("user");
