@@ -1,0 +1,20 @@
+---
+import MainHead from '@c/MainHead.astro';
+import Nav from '@c/Nav';
+import Footer from '@c/Footer';
+
+---
+<html lang="en">
+  <head>
+    <MainHead
+      title="KBVE.com - KiloByte VE"
+      description="KBVE.com - Launch the App!"
+    />
+    </head>
+    <body class="app-root">
+        <Nav client:only="react" />
+        
+    </body>
+    
+    <Footer client:only="react" />
+</html>
