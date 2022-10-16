@@ -3,10 +3,16 @@ import MainHead from "@c/MainHead.astro";
 import Footer from "@c/Footer";
 import Nav from "@c/Nav";
 import AppIndex from "@c/AppIndex";
+import PortfolioPreview from '@c/PortfolioPreview';
+
 
 const apps = (await Astro.glob("./**/**/*.mdx")).filter(
   ({ frontmatter }) => !!frontmatter.publishDate
 );
+
+// 10/15/2022 - Obsidian Expansion Test Case
+const appList = (await Astro.glob("./**/index.astro"));
+
 // .sort(
 // 	(a, b) =>
 // 		new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
@@ -28,9 +34,14 @@ const apps = (await Astro.glob("./**/**/*.mdx")).filter(
   </head>
   <body style={{ paddingTop: "2rem" }}>
     <Nav client:only="react" />
-    <div class="wrapper">
-      <AppIndex apps={apps} client:only="react" />
-    </div>
-    <Footer />
+      <div class="wrapper">
+        <AppIndex apps={apps} client:only="react" />
+      </div>
+      <div class="wrapper">
+        {appList.map(
+          (appL) =>  <a href={appL.url}> Link </a>
+        )}
+          </div>
+    <Footer client:only="react" />
   </body>
 </html>

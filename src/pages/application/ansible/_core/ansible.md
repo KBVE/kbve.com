@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: ../../../layouts/application.astro
 title: Ansible
 category: Application

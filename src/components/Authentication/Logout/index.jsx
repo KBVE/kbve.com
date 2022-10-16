@@ -13,13 +13,13 @@ function Logout() {
 //* React Cookie
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 //* Logic <Gate> remove cookie -> then().redirect -> path(login)
-  const deleteCookie = (data) => {    
-    removeCookie(data);
+  const deleteCookie = () => {    
+    removeCookie('user', { domain: '.kbve.com', path: '/' });
     if(!cookies.user)
     { window.location = "https://kbve.com/login"}
     };
 
-  deleteCookie("user");
+  deleteCookie();
 
 }
 ///

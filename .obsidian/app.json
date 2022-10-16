@@ -1,0 +1,9 @@
+{
+  "showUnsupportedFiles": false,
+  "spellcheck": true,
+  "spellcheckLanguages": null,
+  "userIgnoreFilters": [
+    "dist/",
+    "node_modules/"
+  ]
+}

@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "0f05b74bdac6446d",
+        "id": "447368b7b6c31be1",
         "type": "tabs",
         "children": [
           {
-            "id": "f10a8038675ae301",
+            "id": "7467990cc21fe918",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "asset/stock/tsla/index.mdx",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e94fcbddab41fe82",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "application/obsidian/index.mdx",
+                "file": "src/pages/application/ansible/_core/ansible.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "application/obsidian/index.mdx",
+                "file": "src/pages/application/ansible/_core/ansible.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "application/obsidian/index.mdx",
+                "file": "src/pages/application/ansible/_core/ansible.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "application/obsidian/index.mdx"
+                "file": "src/pages/application/ansible/_core/ansible.md"
               }
             }
           }
@@ -152,8 +139,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "e94fcbddab41fe82",
+  "active": "d5ec064fba271943",
   "lastOpenFiles": [
+    "src/pages/asset/stock/tsla/income/income_statement_Q2_2022.md",
+    "src/pages/application/ansible/index.mdx",
+    "README.md",
     "application/nomad/index.mdx",
     "Untitled.md",
     "application/obsidian/index.mdx.md",
