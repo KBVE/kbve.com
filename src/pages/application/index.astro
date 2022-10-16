@@ -42,6 +42,6 @@ const appList = (await Astro.glob("./**/index.astro"));
           (appL) =>  <a href={appL.url}> Link </a>
         )}
           </div>
-    <Footer />
+    <Footer client:only="react" />
   </body>
 </html>
