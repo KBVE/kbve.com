@@ -41,7 +41,8 @@ function Nav() {
 
   // Menu ?:(Guest) -> [START]
   const GuestMenu = () => (
-    <div key={Math.random() * 100}>
+    //<div key={Math.random() * 100}>
+    <div>
                 {["Register", "Login", "Support", "About", "Recovery"].map(
                 (setting) => (
                   <MenuItem key={setting} onClick={(e) => {
@@ -61,7 +62,8 @@ function Nav() {
 
   // Menu ?:(User) -> [START]
   const UserMenu = () => (
-    <div key={Math.random() * 100}>
+    //<div key={Math.random() * 100}>
+    <div>
                 {["Profile", "Support", "App", "About", "Log Out"].map(
                 (setting) => (
                   <MenuItem key={setting} onClick={(e) => {
