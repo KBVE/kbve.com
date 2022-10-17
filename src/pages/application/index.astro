@@ -10,9 +10,6 @@ const apps = (await Astro.glob("./**/**/*.mdx")).filter(
   ({ frontmatter }) => !!frontmatter.publishDate
 );
 
-// 10/15/2022 - Obsidian Expansion Test Case
-const appList = (await Astro.glob("./**/index.astro"));
-
 // .sort(
 // 	(a, b) =>
 // 		new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
@@ -37,11 +34,6 @@ const appList = (await Astro.glob("./**/index.astro"));
       <div class="wrapper">
         <AppIndex apps={apps} client:only="react" />
       </div>
-      <div class="wrapper">
-        {appList.map(
-          (appL) =>  <a href={appL.url}> Link </a>
-        )}
-          </div>
     <Footer client:only="react" />
   </body>
 </html>
