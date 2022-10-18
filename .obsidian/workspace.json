@@ -4,18 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "086f656628eeef33",
+        "id": "447368b7b6c31be1",
         "type": "tabs",
         "children": [
           {
-            "id": "ac258c63706df892",
+            "id": "7467990cc21fe918",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/pages/application/ansible/_core/ansible_cheatsheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c07cc4c3b8978c49",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/pages/application/traefik/index.mdx",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c16ecdc8c84dc836",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/pages/application/unity/index.mdx",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -44,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "matrix",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -82,6 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/pages/application/unity/index.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "src/pages/application/unity/index.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +150,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/pages/application/unity/index.mdx"
+              }
             }
           }
         ]
@@ -132,17 +165,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "ac258c63706df892",
+  "active": "c16ecdc8c84dc836",
   "lastOpenFiles": [
-    "src/pages/theory/matrix/_core/matrix_state.md",
-    "src/pages/application/ansible/_core/ansible_cheatsheet.md",
-    "src/pages/application/traefik/index.mdx",
-    "src/pages/application/unity/index.mdx",
     "src/pages/application/ansible/index.mdx",
+    "src/pages/application/unity/index.mdx",
     "src/pages/application/unity/Untitled.md",
+    "src/pages/application/traefik/index.mdx",
+    "src/pages/application/ansible/_core/ansible_cheatsheet.md",
     "src/pages/application/ansible/_core/ansible.md",
     "src/pages/application/authelia/_core/authelia.md",
     "src/pages/asset/stock/tsla/income/income_statement_Q2_2022.md",
-    "README.md"
+    "README.md",
+    "application/nomad/index.mdx"
   ]
 }
