@@ -1,4 +1,5 @@
 ---
+aliases: [ansible]
 ---
 
 # Ansible
