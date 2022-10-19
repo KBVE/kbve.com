@@ -1,9 +1,12 @@
 ---
+tags:
+  - matrix
+  - theory
 ---
 
 # Matrix
 
-## AKA Eisenhower Matrix
+## Eisenhower Matrix
 
 - The theory places all objectives through a simple quadrant based upon the priority.
 
