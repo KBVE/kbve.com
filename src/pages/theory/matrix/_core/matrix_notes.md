@@ -1,11 +1,14 @@
 ---
+title: Matrix Notes
+tags:
+  - matrix
 ---
 
-# Notes
+## Notes
 
 ## Journal
 
-```
+``` { #journal }
 9/22/2022
 > Ziggy had some ideas
   - Rather than using a simple quadrant system, we could extend the matrix to include a positive and negative array between -100 and 100 in order to 'map out' each task in a much more thorough way.
