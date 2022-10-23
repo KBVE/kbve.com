@@ -32,6 +32,7 @@ const VideoComponent = ({
           <iframe
             id="ytplayer"
             type="text/html"
+            height={'320px'}
             width={'100%'}
             src={
               `https://www.youtube.com/embed/` +
