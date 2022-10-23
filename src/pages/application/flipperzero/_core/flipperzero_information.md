@@ -1,6 +1,6 @@
 ---
 title: Flipper Zero Information
 tags:
-    - flipper
+    - flipperzero
 ---
 ## Flipper
