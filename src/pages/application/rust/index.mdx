@@ -19,59 +19,23 @@ tags:
   - compilation
 ---
 
+import Rust_Install from './_core/rust_install.md'
+import Rust_Guide from './_core/rust_guides.md'
+import Rust_Cargo from './_core/rust_cargo.md'
+import Rust_Web from './_core/rust_web.md'
+
 ## Official Page
 
 - https://www.rust-lang.org/
 
-## Helpful Guides
-
-- [The Rust Programming Language Book](https://doc.rust-lang.org/stable/book/title-page.html)
-
-> (From the Official Rust Lang Website)
-
-> This book assumes that you’ve written code in another programming language but doesn’t
-> make any assumptions about which one. We’ve tried to make the material broadly accessible
-> to those from a wide variety of programming backgrounds. We don’t spend a lot of time talking
-> about what programming is or how to think about it. If you’re entirely new to programming, you
-> would be better served by reading a book that specifically provides an introduction to programming.
-
-- [A Gentle Introduction to Rust](https://stevedonovan.github.io/rust-gentle-intro/)
-
-> The aim of this tutorial is to take you to a place where you can read and write enough Rust to
-> fully appreciate the excellent learning resources available online, in particular
-> [The Book.](https://doc.rust-lang.org/stable/book/title-page.html)
-> It's an opportunity to try before you buy, and get enough feeling for the power of the language to want to go deeper.
-
-- [Rust 🦀 and WebAssembly 🕸](https://rustwasm.github.io/book/)
-
-> This small book describes how to use Rust and WebAssembly together.
-
-- [Cookin' with Rust](https://rust-lang-nursery.github.io/rust-cookbook/intro.html)
-
-> This Rust Cookbook is a collection of simple examples that demonstrate good practices to accomplish common
-> programming tasks, using the crates of the Rust ecosystem.
+* * *
+<Rust_Guide />
 
 * * *
+<Rust_Install />
 
-## Installation
+* * *
+<Rust_Cargo />
 
-**On Linux or MacOS (including WSL on Windows)**:
-
-[According to Chapter 1.1 from the Official Book](https://doc.rust-lang.org/stable/book/ch01-01-installation.html)
-to install rust you can use the following script:
-
-```
-$ curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
-```
-
-> The command downloads a script and starts the installation of the `rustup` tool, which installs the latest stable
-> version of Rust. You might be prompted for your password. If the installation is successful, the following line
-> will appear:
-
-> ```Rust is installed now. Great!```
-
-> You will also need a *linker*, which is a program that Rust uses to join its compiled outputs into one file. It
-> is likely you already have one. If you get linker errors, you should install a C compiler...
-
-**On Windows**:
-[Reference the Book's Chapter 1.1 'Installing `rustup` on Windows' section](https://doc.rust-lang.org/stable/book/ch01-01-installation.html#installing-rustup-on-windows)
+* * *
+<Rust_Web />
