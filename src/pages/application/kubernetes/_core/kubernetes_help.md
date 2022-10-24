@@ -1,5 +1,8 @@
 ---
 title: Kubernetes Help
+tags:
+	- help
+	- kubernetes
 ---
 ## Help
 

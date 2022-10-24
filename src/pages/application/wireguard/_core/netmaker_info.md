@@ -2,7 +2,7 @@
 title: Netmaker
 tags:
     - netmaker
-    - networking
+    - network
     - wireguard
 ---
 

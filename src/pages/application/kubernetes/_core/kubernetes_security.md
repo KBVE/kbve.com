@@ -1,5 +1,8 @@
 ---
 title: Kubernetes Security
+tags:
+  - kubernetes
+  - security
 ---
 
 

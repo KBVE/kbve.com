@@ -4,47 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "447368b7b6c31be1",
+        "id": "5f8deb46e83b91b6",
         "type": "tabs",
         "children": [
           {
-            "id": "7467990cc21fe918",
+            "id": "ef3e553733fe2eda",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/pages/application/ansible/_core/ansible_cheatsheet.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c07cc4c3b8978c49",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/pages/application/traefik/index.mdx",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c16ecdc8c84dc836",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/pages/application/docker/_core/docker_cheatsheet.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:docker",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/pages/application/docker/_core/docker_cheatsheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/pages/application/docker/_core/docker_cheatsheet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/pages/application/docker/_core/docker_cheatsheet.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -165,17 +132,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "3af79f47899e885b",
+  "active": "ef3e553733fe2eda",
   "lastOpenFiles": [
-    "src/pages/theory/matrix/_core/matrix.md",
-    "src/pages/theory/matrix/_core/matrix_notes.md",
-    "src/pages/theory/matrix/_core/matrix_state.md",
-    "src/pages/theory/matrix/index.mdx",
-    "src/pages/application/unity/index.mdx",
-    "src/pages/application/ansible/index.mdx",
-    "src/pages/application/unity/Untitled.md",
-    "src/pages/application/traefik/index.mdx",
-    "src/pages/application/ansible/_core/ansible_cheatsheet.md",
-    "src/pages/application/ansible/_core/ansible.md"
+    "src/pages/application/kubernetes/_core/k3s.md",
+    "src/pages/application/kubernetes/_core/kubernetes_cheatsheet.md",
+    "src/pages/application/kubernetes/_core/kubernetes_storage.md",
+    "src/pages/application/wireguard/_core/netmaker_info.md",
+    "src/pages/application/kubernetes/_core/kubernetes_portainer_agent.md",
+    "src/pages/application/flutter/_core/flutter.md",
+    "src/pages/application/kubernetes/_core/kubernetes_patch.md",
+    "src/pages/application/flipperzero/_core/flipperzero_ghz.md",
+    "README.md",
+    "application/zsh.md"
   ]
 }

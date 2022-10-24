@@ -5,7 +5,7 @@ tags:
     - cargo
 ---
 
-## Rust Cargo
+## Cargo
 
 - TLDR; Cargo is a package manager for Rust that handles the dependencies, compiling and distribution.
   - Cargo can publish your package to `crates.io` so that it can be used with other applications within Rust.

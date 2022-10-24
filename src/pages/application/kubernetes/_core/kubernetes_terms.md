@@ -1,5 +1,9 @@
 ---
 title: Kubernetes Terms
+tags:
+	- terms
+	- kubernetes
+	- glossary
 ---
 
 

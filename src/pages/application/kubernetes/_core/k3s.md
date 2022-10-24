@@ -1,5 +1,9 @@
 ---
 title: k3s
+tags:
+	- kubernetes
+	- cloud
+	- agent
 ---
 ## k3s
 
