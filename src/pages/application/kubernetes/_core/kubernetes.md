@@ -1,8 +1,12 @@
 ---
 title: Kubernetes 
 tags:
-  - kubernetes
+- kubernetes
 ---
+
+## Kubernetes
+
+- Kubernetes is a CNCF-certified open-source container orchestration system for automating the deployment, scaling and management of virtual micro machines within a hybrid cloud.
 
 ## k
 

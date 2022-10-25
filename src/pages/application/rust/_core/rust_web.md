@@ -1,5 +1,7 @@
 ---
 title: Rust Web
+tags:
+- rust
 ---
 
 ## Rust Web

@@ -1,9 +1,9 @@
 ---
 title: Google Associate Cloud Engineer
 tags:
-  - cloud
-  - google
-  - gcloud
+- cloud
+- google
+- gcloud
 ---
 
 ## Google Associate Cloud Engineer

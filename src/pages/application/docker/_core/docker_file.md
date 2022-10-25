@@ -1,8 +1,8 @@
 ---
 title: DockerFile
 tags:
-    - docker
-    - dockerfile
+- docker
+- dockerfile
 ---
 
 ## DockerFile

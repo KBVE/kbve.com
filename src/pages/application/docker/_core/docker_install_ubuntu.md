@@ -1,7 +1,7 @@
 ---
 title: Docker (Ubuntu) Install
 tags:
-    - docker
+- docker
 ---
 
 ## Docker Install

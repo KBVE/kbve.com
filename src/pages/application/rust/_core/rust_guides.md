@@ -1,7 +1,7 @@
 ---
 title: Rust Guides
 tags:
-    - rust
+- rust
 ---
 
 

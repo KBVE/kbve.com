@@ -1,9 +1,9 @@
 ---
 title: GCloud Init
 tags:
-  - google
-  - gcloud
-  - cloud
+- google
+- gcloud
+- cloud
 ---
 
 ## GCloud init

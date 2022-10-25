@@ -1,9 +1,9 @@
 ---
 title: GCloud Forward Rule
 tags:
-  - gcloud
-  - google
-  - cloud
+- gcloud
+- google
+- cloud
 ---
 
 ## Google Forwarding Rules

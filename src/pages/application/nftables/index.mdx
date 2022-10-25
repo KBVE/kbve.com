@@ -15,20 +15,14 @@ tags:
   - nft
 ---
 
-## nftables
+import NFTablesInfo from './_core/nftables_information.md';
+import NFTNotes from './_core/nftables_notes.md';
+import NFTReference from './_core/nftables_reference.md';
 
-### Reference Material
-  - [Quick Reference nftables in 10 minutes](https://wiki.nftables.org/wiki-nftables/index.php/Quick_reference-nftables_in_10_minutes)
-
-
-### Notes
-- Export Ruleset as JSON
-```
-$ nft -j list ruleset > ~/nft-before-flush-$(date +%s).json
-```
-
-- Allow SSH Port (WIP)
-```
-$ iptables-translate -A INPUT -i ens18 -p tcp --dport $SSH_PORT -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-nft add rule ip filter INPUT iifname "ens18" tcp dport $SSH_PORT ct state new,established counter accept
-```
+* * *
+<NFTablesInfo />
+* * *
+<NFTNotes />
+* * *
+<NFTReference />
+* * *

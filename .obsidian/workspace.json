@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "5f8deb46e83b91b6",
+        "id": "8cddee3abb8d104d",
         "type": "tabs",
         "children": [
           {
-            "id": "ef3e553733fe2eda",
+            "id": "74ea385cc6688267",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -132,8 +132,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "ef3e553733fe2eda",
+  "active": "74ea385cc6688267",
   "lastOpenFiles": [
+    "src/pages/application/docker/_core/docker_cheatsheet.md",
     "src/pages/application/kubernetes/_core/k3s.md",
     "src/pages/application/kubernetes/_core/kubernetes_cheatsheet.md",
     "src/pages/application/kubernetes/_core/kubernetes_storage.md",
@@ -142,7 +143,6 @@
     "src/pages/application/flutter/_core/flutter.md",
     "src/pages/application/kubernetes/_core/kubernetes_patch.md",
     "src/pages/application/flipperzero/_core/flipperzero_ghz.md",
-    "README.md",
-    "application/zsh.md"
+    "README.md"
   ]
 }

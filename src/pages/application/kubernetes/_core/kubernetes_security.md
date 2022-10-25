@@ -1,8 +1,8 @@
 ---
 title: Kubernetes Security
 tags:
-  - kubernetes
-  - security
+- kubernetes
+- security
 ---
 
 

@@ -1,9 +1,9 @@
 ---
 title: Flutter
 tags:
-	- flutter
-	- mobile
-	- sdk
+- flutter
+- mobile
+- sdk
 ---
 
 ## Flutter

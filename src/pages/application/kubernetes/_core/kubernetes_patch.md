@@ -1,10 +1,10 @@
 ---
 title: Kubernetes Patch
 tags:
-  - kubernetes
-  - k8s
-  - containers
-  - cloud
+- kubernetes
+- k8s
+- containers
+- cloud
 ---
 
 ## Patch

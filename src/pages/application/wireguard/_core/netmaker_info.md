@@ -1,9 +1,9 @@
 ---
 title: Netmaker
 tags:
-    - netmaker
-    - network
-    - wireguard
+- netmaker
+- network
+- wireguard
 ---
 
 ## Netmaker

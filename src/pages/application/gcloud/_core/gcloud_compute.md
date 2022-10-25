@@ -1,9 +1,9 @@
 ---
 title: Google Cloud Compute Instance
 tags:
-  - cloud
-  - google
-  - gcloud
+- cloud
+- google
+- gcloud
 ---
 
 ## GCloud Compute

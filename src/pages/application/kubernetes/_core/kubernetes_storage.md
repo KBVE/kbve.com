@@ -1,12 +1,12 @@
 ---
 title: Kubernetes Storage
 tags:
-	- kubernetes
-	- storage
-	- k8s
-	- nfs
-	- cloud
-	- rancher
+- kubernetes
+- storage
+- k8s
+- nfs
+- cloud
+- rancher
 ---
 
 ## Kubernetes Storage

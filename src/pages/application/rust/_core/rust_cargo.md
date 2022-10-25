@@ -1,8 +1,8 @@
 ---
 title: Rust Cargo
 tags:
-    - rust
-    - cargo
+- rust
+- cargo
 ---
 
 ## Cargo

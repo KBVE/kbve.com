@@ -1,5 +1,9 @@
 ---
 title: OKD
+tags:
+- okd
+- proxmox
+- kubernetes
 ---
 ## okd
 
