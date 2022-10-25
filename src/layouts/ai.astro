@@ -99,36 +99,11 @@ const { content } = Astro.props;
 	</head>
 	<body>
 		<Nav client:only="react" />
-    {
-      content.img.split('.')[content.img.split('.').length - 1]
-        === 'mp4'
-        ? (
-          <>
-          <header class="hero">
-            <video
-            autoplay
-            muted
-            loop
-            id="titlevideo"
-            style={{
-              position: 'fixed',
-              right: 0,
-              bottom: 0,
-              minWidth: '100%',
-              minHeight: '100%',
-            }}
-            >
-              <source src={content.img} type="video/mp4">
-            </video>
+  
+        <header style={{ backgroundImage: `url(${content.img})` }} class="hero">
             <h1 class="title">{content.title}</h1>
-          </header>
-          </>
-        ) : (
-          <header style={{ backgroundImage: `url(${content.img})` }} class="hero">
-            <h1 class="title">{content.title}</h1>
-          </header>
-        )
-    }
+        </header>
+        
 		<div class="leadIn">
 			<div class="wrapper pt8 pb8 mb8 tac">
 				{content.tags.map((t) => <span class="tag">{t}</span>)}
@@ -140,7 +115,7 @@ const { content } = Astro.props;
 			<div class="content"><slot /></div>
 		</div>
 		<footer class="tac mt6">
-			<a href="/application">
+			<a href="/ai">
 				<Button>View More</Button>
 			</a>
 		</footer>
