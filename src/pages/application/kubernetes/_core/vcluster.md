@@ -1,8 +1,8 @@
 ---
 title: vCluster
 tags:
-    - kubernetes
-    - cluster
+- kubernetes
+- cluster
 ---
 
 ## vCluster

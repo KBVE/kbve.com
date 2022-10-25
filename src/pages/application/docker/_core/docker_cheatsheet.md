@@ -1,7 +1,8 @@
 ---
 title: Docker Cheatsheet
 tags:
-    - docker
+- docker
+- cheatsheet
 ---
 
 ## Cheatsheet

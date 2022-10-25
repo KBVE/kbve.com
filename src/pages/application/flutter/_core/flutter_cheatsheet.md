@@ -1,8 +1,8 @@
 ---
 title: Flutter Cheatsheet
 tags:
-    - flutter
-    - mobile
+- flutter
+- mobile
 ---
 
 ## Flutter Cheatsheet

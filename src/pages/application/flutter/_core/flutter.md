@@ -1,5 +1,9 @@
 ---
 title: Flutter
+tags:
+- flutter
+- mobile
+- sdk
 ---
 
 ## Flutter

@@ -1,9 +1,10 @@
 ---
-title: Docker
+title: Docker Information
 tags:
-    - docker
+- docker
+- information
 ---
 
-## Docker
+## Information
 
 - A hybrid-source application designed to deploy nested-virtual machines that are containerized applications.

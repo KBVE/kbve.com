@@ -1,7 +1,8 @@
 ---
 title: Docker Notes
 tags:
-    - docker
+- docker
+- notes
 ---
 
 ## Notes

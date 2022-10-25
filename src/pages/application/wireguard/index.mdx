@@ -10,10 +10,10 @@ description: |
   A open source communication protocol that implements encrypted virtual private networks.
 
 tags:
-  - technology
-  - vpn
-  - host
-  - security
+- technology
+- vpn
+- host
+- security
   
 data: 1
 
@@ -22,6 +22,8 @@ docker-compose:
 ---
 import Github from "@c/Github/Github.astro";
 export const components = { github: Github };
+
+import NetmakerInfo from './_core/netmaker_info.md';
 
 * * *
 ## Wireguard
@@ -45,3 +47,6 @@ export const components = { github: Github };
     - Wireguard will be operating on the `UDP` port of `51820`.
     - For: `ufw`
       - To enable the port through `ufw` run `sudo allow 51821/udp`
+
+* * *
+<NetmakerInfo />

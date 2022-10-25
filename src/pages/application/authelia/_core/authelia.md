@@ -1,6 +1,11 @@
 ---
+title: Authelia Information
+tags:
+    - sso
+    - auth
+    - iam
 ---
 
-# Authelia
+## Authelia
 
-- Automation software that enables `IaC` - also known as, infrastructure as code, thus allowing user to provision, configure, deploy and secure a whole array of software, applications and machines.
+- Authelia is an authentication and authorization application that provides a backend server and frontend portal through various core features and plugins.

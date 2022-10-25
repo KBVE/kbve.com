@@ -9,41 +9,24 @@ repo:
 description: |
  My Structured Query Language
 tags:
-  - technology
-  - database
-  - sql
+- technology
+- database
+- sql
 ---
 
-## MySQL Reference
+import MySQLInformation from './_core/mysql_information.md';
+import MySQLReference from './_core/mysql_references.md';
+import MySQLCheatsheet from './_core/mysql_cheatsheet.md';
+import MariaDBInfo from './_core/mariadb_information.md';
+import SQLLicense from './_core/sql_license.md';
 
-#### What to do if you just installed `mysql-server` on Ubuntu on WSL and it never even prompted you for a password?
-- [Well here's a cool link](https://stackoverflow.com/questions/42421585/default-password-of-mysql-in-ubuntu-server-16-04) that tells you exactly what to do.
-- Long story short it's like `ALTER USER 'root'@'localhost' IDENTIFIED BY 'password'` once you actually get in
-
-#### What to do if you've never used this foreign and vaguely antiquated technology before and you wish you had a time machine that would let you go back in time so you could sit with the pioneers of this dying technology and learn from them what drugs they were smoking when they decided on the syntax?
-- [Well here's a cool link](https://devhints.io/mysql) that will help in your journey to understand the aforementioned topics.
-
-## Cheatsheet
-- Admin Commands
-  - Drop Database (Be extremely careful when running this)
-    - `DROP DATABASE {$db_name}` : replace `{$db_Name}` with the database that you wish to DROP.
-    - Remember that all the data will be removed and can not be recovered. 
-  - List All Users
-    - `SELECT user, host FROM mysql.user;`
-      - This will display all the users within the database instance.
-  - Create User
-    - `CREATE USER {$user[@'host']} IDENTIFIED BY 'plain-text-password';`
-      - `{$user[@'host']}` can be replaced by an example like this `'root'@'localhost'` or `'root'@'10.%.%.%'`
-        - `10.%.%.%` - The `%` is a wildcard for the IP Address subnet.
-  - Drop User
-    - `DROP USER {$user[@'host']}`
-      - This will only remove the user from the mysql instance. 
-  - Create Database
-    - `CREATE DATABASE {$database_name}`
-      - `{$database_name}` can be replaced as `database_name_example` , thus creating a statement like `CREATE DATABASE database_name_example`.
-  - Grant permissions / privilegages. 
-    - `GRANT ALL ON ${database_name}.* TO {$user[@'host']}`
-      - There are a couple situations that this statement creates, first it gives `ALL` permissions to the database, `${database_name}` with the `.*` being a wildcard for all the tables inside of the database. Finally the `{$user[@'host']}` represents the user connecting via the IP Address.
-
-## MariaDB
-- MariaDB is a drop-in replacement for MySQL and should be able to execute the same SQL statements as MySQL.
+* * *
+<MySQLInformation />
+* * *
+<MySQLCheatsheet />
+* * *
+<MariaDBInfo />
+* * *
+<MySQLReference />
+* * *
+<SQLLicense />

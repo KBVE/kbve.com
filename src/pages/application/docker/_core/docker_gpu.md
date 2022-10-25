@@ -1,7 +1,8 @@
 ---
 title: Docker GPU
 tags:
-    - docker
+- docker
+- gpu
 ---
 
 ## GPU

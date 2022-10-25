@@ -1,5 +1,14 @@
 ---
 title: Kubernetes Portainer Agent
+tags:
+- kubernetes
+- k8s
+- portainer
+- agent
+- docker
+- cloud
+- edge
+- lb
 ---
 ## Portainer Agent
 

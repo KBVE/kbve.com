@@ -1,5 +1,9 @@
 ---
 title: Kubernetes Cheatsheet
+tags:
+- cluster
+- kubernetes
+- cloud
 ---
 
 ## Cheatsheet

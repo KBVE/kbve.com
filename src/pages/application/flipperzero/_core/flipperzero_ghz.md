@@ -1,8 +1,7 @@
 ---
 title: FlipperZero GHz
 tags:
-    - flipper
-    - flipperzero
+- flipperzero
 ---
 ## GHz
 
