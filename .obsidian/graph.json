@@ -1,22 +1,37 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "",
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "tag:#docker",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#kubernetes",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "textFadeMultiplier": -0.2,
+  "nodeSizeMultiplier": 1.0953125,
+  "lineSizeMultiplier": 1.73333333333333,
   "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "centerStrength": 0.385416666666667,
+  "repelStrength": 7.91666666666667,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.36288736930121307,
+  "linkDistance": 135,
+  "scale": 0.18462326225858228,
   "close": true
 }

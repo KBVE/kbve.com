@@ -4,7 +4,8 @@
   "spellcheckLanguages": null,
   "userIgnoreFilters": [
     "dist/",
-    "node_modules/"
+    "node_modules/",
+    "src/pages/media/ai/"
   ],
   "promptDelete": false
 }

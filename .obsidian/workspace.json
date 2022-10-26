@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8cddee3abb8d104d",
+        "id": "7f5e7e5fd2d4e27a",
         "type": "tabs",
         "children": [
           {
-            "id": "74ea385cc6688267",
+            "id": "05d25086098c354d",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "graph",
+              "state": {},
+              "pinned": true
             }
           }
         ]
@@ -61,8 +63,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -132,8 +133,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "74ea385cc6688267",
+  "active": "d5ec064fba271943",
   "lastOpenFiles": [
+    "src/pages/media/ai/3/_core/3.md",
     "src/pages/application/docker/_core/docker_cheatsheet.md",
     "src/pages/application/kubernetes/_core/k3s.md",
     "src/pages/application/kubernetes/_core/kubernetes_cheatsheet.md",
@@ -141,8 +143,6 @@
     "src/pages/application/wireguard/_core/netmaker_info.md",
     "src/pages/application/kubernetes/_core/kubernetes_portainer_agent.md",
     "src/pages/application/flutter/_core/flutter.md",
-    "src/pages/application/kubernetes/_core/kubernetes_patch.md",
-    "src/pages/application/flipperzero/_core/flipperzero_ghz.md",
-    "README.md"
+    "src/pages/application/kubernetes/_core/kubernetes_patch.md"
   ]
 }
