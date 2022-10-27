@@ -4,5 +4,3 @@ description: SPY dividend
 ---
 
 ## SPY Dividend
-
-- 
