@@ -1,50 +1,284 @@
-<!DOCTYPE html><html class=astro-D7OQU2FC lang=en><head><meta charset=UTF-8><meta content="GCloud is a Command Line Interface that designs, builds and scales Google Cloud resources.  
-" name=description property=og:description><meta content="width=device-width" name=viewport><meta content="Astro v1.5.3" name=generator><title>GCloud</title><script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" async crossorigin=anonymous></script><link href=/favicon.ico rel=icon type=image/x-icon><link href=https://fonts.googleapis.com rel=preconnect><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel=stylesheet><link href=/assets/index.f9f42571.css rel=stylesheet /><link href=/assets/index.87df5928.css rel=stylesheet /><link href=/assets/index.137d863e.css rel=stylesheet /><link href=/assets/index.87a79a30.css rel=stylesheet /><link href=/assets/index.5f7923b1.css rel=stylesheet /><script src=/page.49a6d988.js type=module></script></head><body class=astro-D7OQU2FC><style>astro-island,astro-slot{display:contents}</style><script>var l;(self.Astro=self.Astro||{}).only=t=>{(async()=>{await(await t())()})()},window.dispatchEvent(new Event("astro:only"));{const t={0:t=>t,1:t=>JSON.parse(t,e),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,e)),5:t=>new Set(JSON.parse(t,e)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},e=(e,s)=>{if(""===e||!Array.isArray(s))return s;const[r,i]=s;return r in t?t[r](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",((l=class extends HTMLElement{constructor(){super(...arguments),this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const t=this.querySelectorAll("astro-slot"),s={},r=this.querySelectorAll("template[data-astro-template]");for(const t of r){const e=t.closest(this.tagName);!e||!e.isSameNode(this)||(s[t.getAttribute("data-astro-template")||"default"]=t.innerHTML,t.remove())}for(const e of t){const t=e.closest(this.tagName);!t||!t.isSameNode(this)||(s[e.getAttribute("name")||"default"]=e.innerHTML)}const i=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),e):{};this.hydrator(this)(this.Component,i,s,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver(((t,e)=>{e.disconnect(),this.childrenConnectedCallback()})).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let t=this.getAttribute("before-hydration-url");t&&await import(t),this.start()}start(){const t=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");void 0!==Astro[e]?Astro[e]((async()=>{const t=this.getAttribute("renderer-url"),[e,{default:s}]=await Promise.all([import(this.getAttribute("component-url")),t?import(t):()=>()=>{}]),r=this.getAttribute("component-export")||"default";if(r.includes(".")){this.Component=e;for(const t of r.split("."))this.Component=this.Component[t]}else this.Component=e[r];return this.hydrator=s,this.hydrate}),t,this):window.addEventListener(`astro:${e}`,(()=>this.start()),{once:!0})}attributeChangedCallback(){this.hydrator&&this.hydrate()}}).observedAttributes=["props"],l))}</script><astro-island client=only component-export=default component-url=/index.c6244217.js opts={&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:&quot;react&quot;} props={&quot;class&quot;:[0,&quot;astro-D7OQU2FC&quot;]} renderer-url=/client.91465428.js ssr="" uid=2dKeMx></astro-island><header class="astro-D7OQU2FC hero" style="background-image:url(https://images.unsplash.com/photo-1498354136128-58f790194fa7?fit=crop&#38;w=1400&#38;h=700&#38;q=75)"><h1 class="astro-D7OQU2FC title">GCloud</h1></header><div class="astro-D7OQU2FC leadIn"><div class="astro-D7OQU2FC tac mb8 pb8 pt8 wrapper"><span class="astro-D7OQU2FC tag">technology</span><span class="astro-D7OQU2FC tag">hacks</span><span class="astro-D7OQU2FC tag">redteam</span><span class="astro-D7OQU2FC tag">nfc</span><span class="astro-D7OQU2FC tag">google</span><span class="astro-D7OQU2FC tag">gcloud</span><span class="astro-D7OQU2FC tag">cloud</span><h3 class="astro-D7OQU2FC overlay tagline">GCloud is a Command Line Interface that designs, builds and scales Google Cloud resources.</h3></div></div><div class="astro-D7OQU2FC overlay wrapper wrapper__readable"><div class="astro-D7OQU2FC content"><h1 id=gcloud>GCloud</h1><ul><li>Google Cloud CLI is an amazing resource to help automate the management and scaling of virtual machine instances within the Google eco-system.</li></ul><hr/><h2 id=gcloud-init>GCloud init</h2><ul><li>Initial Command: <code>gcloud auth list</code><ul><li><p>Then click the button <code>Authorize</code> and the output should be:</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>      ACTIVE: </span><span style=color:#ff7b72>*</span></span>
-<span class=line><span style=color:#c9d1d9>      ACCOUNT: student-01-xxxxxxxxxxxx@qwiklabs.net</span></span>
-<span class=line><span style=color:#c9d1d9>      To </span><span style=color:#79c0ff>set</span><span style=color:#c9d1d9> the active account, run:</span></span>
-<span class=line><span style=color:#c9d1d9>      $ gcloud config </span><span style=color:#79c0ff>set</span><span style=color:#c9d1d9> account ACCOUNT</span></span></code></pre></li></ul></li><li><p>To grab current project ID, run <code>gcloud config list project</code></p><ul><li><p>OUTPUT:</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>    [core]</span></span>
-<span class=line><span style=color:#c9d1d9>    project = {$project}</span></span></code></pre></li></ul></li></ul></li></ul></li></ul><hr/><h2 id=gcloud-compute>GCloud Compute</h2><ul><li><p>GCloud Compute Guide is still a work in progress; these are active notes from my current R&#x26;D.</p><ul><li><code>shell gcloud compute --help</code><ul><li>This will display all of the commands that will help you utilize the <code>compute engine</code>.</li></ul></li></ul></li><li><p>The are split into two major concepts, with <code>GROUP</code> and <code>COMMAND</code>.</p><ul><li>According to Google, the compute command helps create, configure and manipulate the virtual machines within your pre-set project.</li><li>The <code>SYNOPSIS</code> is <code>gcloud compute GROUP | COMMAND [GCLOUD_WIDE_FLAG ...]</code></li></ul></li></ul><h2 id=gcloud-compute-load-balancer>GCloud Compute Load Balancer</h2><ul><li>Command to run 3 instances of <code>nginx</code> with an ingress load balancer.<ul><li><p>Shell command for VM that is running nginx inside of a <code>debian</code> operating system.</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>       gcloud compute instances create www-server-1 \</span></span>
-<span class=line><span style=color:#c9d1d9>          --zone=us-west1-b \</span></span>
-<span class=line><span style=color:#c9d1d9>          --tags=network-lb-tag \</span></span>
-<span class=line><span style=color:#c9d1d9>          --machine-type=e2-medium \</span></span>
-<span class=line><span style=color:#c9d1d9>          --image-family=debian-11 \</span></span>
-<span class=line><span style=color:#c9d1d9>          --image-project=debian-cloud \</span></span>
-<span class=line><span style=color:#c9d1d9>          --metadata=startup-script=start_nginx.sh</span></span></code></pre><ul><li><p>start_nginx.sh -></p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>                  </span><span style=color:#8b949e>#!/bin/bash</span></span>
-<span class=line><span style=color:#c9d1d9>                  apt-get update</span></span>
-<span class=line><span style=color:#c9d1d9>                  apt-get install nginx -y</span></span></code></pre></li></ul></li><li><p>For switching from Nginx to Apache2, replace the <code>nginx</code> with <code>apache2</code>.</p></li><li><p>To check the status on <code>ubuntu</code>, run the <code>sudo systemctl status nginx</code> OR <code>sudo systemctl status apache2</code>.</p></li></ul></li><li><p>Example of a Load Balance Template:</p><ul><li><p>The shell below is an example of an instance template that creates the load balance backend template.</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>    gcloud compute instance-templates create lb-backend-template \</span></span>
-<span class=line><span style=color:#c9d1d9>    --region=us-west1 \</span></span>
-<span class=line><span style=color:#c9d1d9>    --network=default \</span></span>
-<span class=line><span style=color:#c9d1d9>    --subnet=default \</span></span>
-<span class=line><span style=color:#c9d1d9>    --tags=allow-health-check \</span></span>
-<span class=line><span style=color:#c9d1d9>    --machine-type=e2-medium \</span></span>
-<span class=line><span style=color:#c9d1d9>    --image-family=debian-11 \</span></span>
-<span class=line><span style=color:#c9d1d9>    --image-project=debian-cloud \</span></span>
-<span class=line><span style=color:#c9d1d9>    --metadata=startup-script=start_nginx_script.sh</span></span>
-<span class=line><span style=color:#c9d1d9>    </span><span style=color:#a5d6ff>```</span></span>
-<span class=line></span></code></pre></li></ul></li><li><p>Key concept is : Managed instance groups (MIGs)</p><ul><li>Mage instance groups or MIGs enable you to operate applications on multiple identical / clone virtual machines, thus allowing your orchestration to become scalable and highly available. This is done by utilizing the components within the automated MIG services, which includes: autoscaling, autohealing, regional (multiple zone) deployment, and automatic updating.</li></ul></li></ul></li><li><p>Manage Instance Group for the load balancer:</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>    gcloud compute instance-groups managed create lb-backend-group \</span></span>
-<span class=line><span style=color:#c9d1d9>    --template=lb-backend-template --size=2 --zone=us-west1-b </span></span></code></pre></li><li><p>Health Check:</p></li><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>    gcloud compute firewall-rules create fw-allow-health-check \</span></span>
-<span class=line><span style=color:#c9d1d9>    --network=default \</span></span>
-<span class=line><span style=color:#c9d1d9>    --action=allow \</span></span>
-<span class=line><span style=color:#c9d1d9>    --direction=ingress \</span></span>
-<span class=line><span style=color:#c9d1d9>    --source-ranges=130.211.0.0/22,35.191.0.0/16 \</span></span>
-<span class=line><span style=color:#c9d1d9>    --target-tags=allow-health-check \</span></span>
-<span class=line><span style=color:#c9d1d9>    --rules=tcp:80</span></span>
-<span class=line><span style=color:#c9d1d9>    </span><span style=color:#a5d6ff>```</span></span>
-<span class=line></span></code></pre></li><li><p>Backend-Services fro gcloud compute</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line></span>
-<span class=line><span style=color:#c9d1d9>  gcloud compute backend-services create web-backend-service \</span></span>
-<span class=line><span style=color:#c9d1d9>      --protocol=HTTP \</span></span>
-<span class=line><span style=color:#c9d1d9>      --port-name=http \</span></span>
-<span class=line><span style=color:#c9d1d9>      --health-checks=http-basic-check \</span></span>
-<span class=line><span style=color:#c9d1d9>      --global</span></span>
-<span class=line></span></code></pre><ul><li><p>Add Instance Group as the Backend to the Backend Service:</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>      gcloud compute backend-services add-backend web-backend-service \</span></span>
-<span class=line><span style=color:#c9d1d9>  --instance-group=lb-backend-group \</span></span>
-<span class=line><span style=color:#c9d1d9>  --instance-group-zone=us-west1-b \</span></span>
-<span class=line><span style=color:#c9d1d9>  --global</span></span></code></pre></li></ul></li><li><p>Create a URL Map for routing the requests to the default backend services.</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>      gcloud compute url-maps create web-map-http \</span></span>
-<span class=line><span style=color:#c9d1d9>      --default-service web-backend-service</span></span>
-<span class=line><span style=color:#c9d1d9>      </span><span style=color:#a5d6ff>```</span></span>
-<span class=line></span></code></pre></li><li><p>Extra information regarding the URL Map: *** Note: URL map is a Google Cloud configuration resource used to route requests to backend services or backend buckets. For example, with an external HTTP(S) load balancer, you can use a single URL map to route requests to different destinations based on the rules configured in the URL map: Requests for <a href=https://example.com/video>https://example.com/video</a> go to one backend service. Requests for <a href=https://example.com/audio>https://example.com/audio</a> go to a different backend service. Requests for <a href=https://example.com/images>https://example.com/images</a> go to a Cloud Storage backend bucket. Requests for any other host and path combination go to a default backend service.</p></li><li><p>Create a target HTTP proxy to route requests:</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>        gcloud compute target-http-proxies create http-lb-proxy \</span></span>
-<span class=line><span style=color:#c9d1d9>        --url-map web-map-http</span></span></code></pre></li></ul></li><li><p>Global forwarding rule to route incoming requests to the proxy:</p><ul><li><pre class=astro-code is:raw="" style=background-color:#0d1117;overflow-x:auto><code><span class=line><span style=color:#c9d1d9>        gcloud compute forwarding-rules create http-content-rule \</span></span>
-<span class=line><span style=color:#c9d1d9>        --address=lb-ipv4-1\</span></span>
-<span class=line><span style=color:#c9d1d9>        --global \</span></span>
-<span class=line><span style=color:#c9d1d9>        --target-http-proxy=http-lb-proxy \</span></span>
-<span class=line><span style=color:#c9d1d9>        --ports=80</span></span></code></pre></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><hr/><h2 id=google-forwarding-rules>Google Forwarding Rules</h2><ul><li>Note: A forwarding rule and its corresponding IP address represent the frontend configuration of a Google Cloud load balancer. Learn more about the general understanding of forwarding rules from the Forwarding rule overview Guide.<ul><li><a href=https://cloud.google.com/load-balancing/docs/using-forwarding-rules>https://cloud.google.com/load-balancing/docs/using-forwarding-rules</a></li><li><a href=https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts>https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts</a></li></ul></li></ul><hr/><h2 id=google-associate-cloud-engineer>Google Associate Cloud Engineer</h2><ul><li>The program requires the completion of 6 unique badges<ol><li>Badge 1 - Create and Manage Cloud Resources - <a href="https://www.cloudskillsboost.google/quests/120?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&#x26;search_id=17007619">1</a></li><li>Badge 2 - Perform Foundation Infrastructure Tasks in Google Cloud - <a href=https://www.cloudskillsboost.google/quests/118>2</a></li><li>Badge 3 - Set Up and Configure a Cloud Environment in Google Cloud - <a href=https://www.cloudskillsboost.google/quests/119>3</a></li><li>Badge 4 - Automating Infrastructure on Google Cloud with Terraform - <a href=https://www.cloudskillsboost.google/quests/159>4</a></li><li>Lab - GSP866 - <a href="https://www.cloudskillsboost.google/focuses/17817?parent=catalog">5</a></li><li>Badge 5 - Deploy to Kubernetes in Google Cloud - <a href=https://www.cloudskillsboost.google/quests/116>6</a></li></ol></li></ul></div></div><footer class="astro-D7OQU2FC tac mt6"><a href=/application class=astro-D7OQU2FC><span class=_button_1fbb5_1>View More</span></a></footer><footer class=_footer_knfx6_1><br/><svg height=50 viewBox="0 0 112.5 37.5" width=150 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs><filter height=100% id=d width=100% x=0% y=0%><feColorMatrix color-interpolation-filters=sRGB values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"></feColorMatrix></filter><filter height=100% id=c width=100% x=0% y=0%><feColorMatrix color-interpolation-filters=sRGB values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0"></feColorMatrix></filter><clipPath id=b><path d="M.492 1h111.02v35H.492z"></path></clipPath><mask id=a><g filter=url(#d)><g filter=url(#c) transform="translate(.493 .743) scale(.7434)"><image height=48 width=150 xlink:href=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAwCAAAAADWL9zNAAAAAmJLR0QA/4ePzL8AAAPcSURBVFiF7ZdfaFtVHMc/XsIlhBBKCDOUUkIpWkopRcIIpVS6yZ5mXyaCDyr6MnyxioLIQB/G2MNAqUMU1NUH91JhDxP0yb/r6uxK3ZyE0UkN2RZjN0IaQm6ShXt9uLm35957TtIVH0Tu9yX39zu/8zvf8zu/3++cQIgQIUKE+P/iEftHyw4DNFeqtnwgGwOoXqkLtslcLOiguVloC6I+nQKorTQczYGcDrC14ZmmD2UGNL+v2lrVq9DPPzAMo3U7a4vRd3YMwzBal0dFo/m/WkYAO9ffTAg2mV9ahmG0bmRczcs7LcMwjPcjgpU2cebXvwOuWn/OOAaOsR6JANGueOR4AqCytCXSisZ0//4gOnmi8bHpihHbJupGInY4AVC/2hEmPXVqSmTp2rrKQCABHnt9EKCzvGzKhn0YeH6ox+jQJABF8QwH38jKWAmQ0Yoft4O5tljbAysYGesxeHAEgI2ioMvl+rmUsX7mhQhAafGmdIoYQQ0gllL7j87FAJqXGoJyOBpwBKB1XI2E1tQrKYD25xflrH5Yc/3M5gDMjtQQgMEnACitB4c6X+d9tO5tqmmlFuxy/O6TpnyljXe7NMz4RzmAxraa1pR9hr/9ERwyv//AKwvfXlr6woukD2kADe2t9q2ffpfk/MxZR6nbOVjaCho57ucSAJ1LkizVnn7cI979tOQ30b+0JGhdnxdL4tkdmZH14KSwt9EblmVZ1i07SAxftSzLsm5Pe1Z7rSXzc3dW4KjcKKBPnp7uNQ6AeeW8OrcmbHp5efGo0ZMWjD/Xp8GAWW0rx7S5JIB5uao02Rctxgf6eYgceUnS/G2k7WDfX91LW/Y49UjNgnsekUwUQA9G64679VQaQJ9fUuX8mH2nbuZlg2ax7pG3Kypa9bevdRXm2Gdp+VLmxUVn79nTGYD0iIKW9qTdaFelHaSz9IXnrNpCIfqCUS44XwkU0BpbTkjLxzLQo8unZjSA6s/ymqipG0u/3Oo5pVPr7WRsHAg8tR5ujb3C3Hv62k9C1ssPvUjf+g/i4EnnS5tQ2cQX6hraoQhA/Ud5B9EOP+rT3Fu+s29a2uysT9MO3izpV3e/i4ozjBw96tNsbzi09pFbAZQl97CA1YJfU+3x5LDxL9BqXFBXFFD5KvASWS/086n1kFQqD8zie2fVtw+0L6wEdDc/VDyF3MWc7lnIm0Blt+828vcBLS+8KkvXkgFS2+vfrInRqOc1T6VWvj1XwY/OucqxUUlWl13T7v9EBmIAncru5ZOMADSES7ar8tBq13x5kox6xLYij+JxyTGojEOECBEiRIgQ/zH8A1zaivGoIKeuAAAAAElFTkSuQmCC></image></g></g></mask></defs><g clip-path=url(#b) mask=url(#a)><image height=48 width=150 xlink:href="data:image/png;base64,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" transform="translate(.493 .743) scale(.7434)"></image></g></svg><small class=_byline_knfx6_9>🚀 Built by KBVE.com with Astro</small><small class=_byline_knfx6_9>ඞ</small></footer></body></html>
+<!DOCTYPE html>
+<html lang="en" class="astro-D7OQU2FC">
+	<head>
+		<meta charset="UTF-8">
+<meta name="description" property="og:description" content="GCloud is a Command Line Interface that designs, builds and scales Google Cloud resources.  
+">
+<meta name="viewport" content="width=device-width">
+<meta name="generator" content="Astro v1.6.0">
+<title>GCloud</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" crossorigin="anonymous"></script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
+
+		
+	<link rel="stylesheet" href="/assets/404.f8eeaba2.css" />
+<link rel="stylesheet" href="/assets/index.75f55549.css" />
+<link rel="stylesheet" href="/assets/index.137d863e.css" />
+<link rel="stylesheet" href="/assets/index.87a79a30.css" />
+<link rel="stylesheet" href="/assets/index.87df5928.css" />
+<link rel="stylesheet" href="/assets/index.5f7923b1.css" /><script type="module" src="/page.49a6d988.js"></script></head>
+	<body class="astro-D7OQU2FC">
+		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).only=t=>{(async()=>await(await t())())()},window.dispatchEvent(new Event("astro:only"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="2dKeMx" component-url="/index.c6244217.js" component-export="default" renderer-url="/client.91465428.js" props="{&quot;class&quot;:[0,&quot;astro-D7OQU2FC&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island>
+    <header style="background-image:url(https://images.unsplash.com/photo-1498354136128-58f790194fa7?fit=crop&#38;w=1400&#38;h=700&#38;q=75)" class="hero astro-D7OQU2FC">
+            <h1 class="title astro-D7OQU2FC">GCloud</h1>
+          </header>
+		<div class="leadIn astro-D7OQU2FC">
+			<div class="wrapper pt8 pb8 mb8 tac astro-D7OQU2FC">
+				<span class="tag astro-D7OQU2FC">technology</span><span class="tag astro-D7OQU2FC">hacks</span><span class="tag astro-D7OQU2FC">redteam</span><span class="tag astro-D7OQU2FC">nfc</span><span class="tag astro-D7OQU2FC">google</span><span class="tag astro-D7OQU2FC">gcloud</span><span class="tag astro-D7OQU2FC">cloud</span>
+				<h3 class="tagline overlay astro-D7OQU2FC">GCloud is a Command Line Interface that designs, builds and scales Google Cloud resources.  
+</h3>
+			</div>
+		</div>
+		<div class="wrapper wrapper__readable overlay astro-D7OQU2FC">
+			
+			<div class="content astro-D7OQU2FC"><h1 id="gcloud">GCloud</h1>
+<ul>
+<li>Google Cloud CLI is an amazing resource to help automate the management and scaling of virtual machine instances within the Google eco-system.</li>
+</ul>
+<hr/>
+<h2 id="gcloud-init">GCloud init</h2>
+<ul>
+<li>Initial Command: <code>gcloud auth list</code>
+<ul>
+<li>
+<p>Then click the button <code>Authorize</code> and the output should be:</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">      ACTIVE: </span><span style="color: #FF7B72">*</span></span>
+<span class="line"><span style="color: #C9D1D9">      ACCOUNT: student-01-xxxxxxxxxxxx@qwiklabs.net</span></span>
+<span class="line"><span style="color: #C9D1D9">      To </span><span style="color: #79C0FF">set</span><span style="color: #C9D1D9"> the active account, run:</span></span>
+<span class="line"><span style="color: #C9D1D9">      $ gcloud config </span><span style="color: #79C0FF">set</span><span style="color: #C9D1D9"> account ACCOUNT</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>To grab current project ID, run <code>gcloud config list project</code></p>
+<ul>
+<li>
+<p>OUTPUT:</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">    [core]</span></span>
+<span class="line"><span style="color: #C9D1D9">    project = {$project}</span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="gcloud-compute">GCloud Compute</h2>
+<ul>
+<li>
+<p>GCloud Compute Guide is still a work in progress; these are active notes from my current R&#x26;D.</p>
+<ul>
+<li><code>shell gcloud compute --help</code>
+<ul>
+<li>This will display all of the commands that will help you utilize the <code>compute engine</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The are split into two major concepts, with <code>GROUP</code> and <code>COMMAND</code>.</p>
+<ul>
+<li>According to Google, the compute command helps create, configure and manipulate the virtual machines within your pre-set project.</li>
+<li>The <code>SYNOPSIS</code> is <code>gcloud compute GROUP | COMMAND [GCLOUD_WIDE_FLAG ...]</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="gcloud-compute-load-balancer">GCloud Compute Load Balancer</h2>
+<ul>
+<li>Command to run 3 instances of <code>nginx</code> with an ingress load balancer.
+<ul>
+<li>
+<p>Shell command for VM that is running nginx inside of a <code>debian</code> operating system.</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">       gcloud compute instances create www-server-1 \</span></span>
+<span class="line"><span style="color: #C9D1D9">          --zone=us-west1-b \</span></span>
+<span class="line"><span style="color: #C9D1D9">          --tags=network-lb-tag \</span></span>
+<span class="line"><span style="color: #C9D1D9">          --machine-type=e2-medium \</span></span>
+<span class="line"><span style="color: #C9D1D9">          --image-family=debian-11 \</span></span>
+<span class="line"><span style="color: #C9D1D9">          --image-project=debian-cloud \</span></span>
+<span class="line"><span style="color: #C9D1D9">          --metadata=startup-script=start_nginx.sh</span></span></code></pre>
+<ul>
+<li>
+<p>start_nginx.sh -></p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">                  </span><span style="color: #8B949E">#!/bin/bash</span></span>
+<span class="line"><span style="color: #C9D1D9">                  apt-get update</span></span>
+<span class="line"><span style="color: #C9D1D9">                  apt-get install nginx -y</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>For switching from Nginx to Apache2, replace the <code>nginx</code> with <code>apache2</code>.</p>
+</li>
+<li>
+<p>To check the status on <code>ubuntu</code>, run the <code>sudo systemctl status nginx</code> OR <code>sudo systemctl status apache2</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example of a Load Balance Template:</p>
+<ul>
+<li>
+<p>The shell below is an example of an instance template that creates the load balance backend template.</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">    gcloud compute instance-templates create lb-backend-template \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --region=us-west1 \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --network=default \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --subnet=default \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --tags=allow-health-check \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --machine-type=e2-medium \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --image-family=debian-11 \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --image-project=debian-cloud \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --metadata=startup-script=start_nginx_script.sh</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #A5D6FF">```</span></span>
+<span class="line"></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Key concept is : Managed instance groups (MIGs)</p>
+<ul>
+<li>Mage instance groups or MIGs enable you to operate applications on multiple identical / clone virtual machines, thus allowing your orchestration to become scalable and highly available. This is done by utilizing the components within the automated MIG services, which includes: autoscaling, autohealing, regional (multiple zone) deployment, and automatic updating.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Manage Instance Group for the load balancer:</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">    gcloud compute instance-groups managed create lb-backend-group \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --template=lb-backend-template --size=2 --zone=us-west1-b </span></span></code></pre>
+</li>
+<li>
+<p>Health Check:</p>
+</li>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">    gcloud compute firewall-rules create fw-allow-health-check \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --network=default \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --action=allow \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --direction=ingress \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --source-ranges=130.211.0.0/22,35.191.0.0/16 \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --target-tags=allow-health-check \</span></span>
+<span class="line"><span style="color: #C9D1D9">    --rules=tcp:80</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #A5D6FF">```</span></span>
+<span class="line"></span></code></pre>
+</li>
+<li>
+<p>Backend-Services fro gcloud compute</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">  gcloud compute backend-services create web-backend-service \</span></span>
+<span class="line"><span style="color: #C9D1D9">      --protocol=HTTP \</span></span>
+<span class="line"><span style="color: #C9D1D9">      --port-name=http \</span></span>
+<span class="line"><span style="color: #C9D1D9">      --health-checks=http-basic-check \</span></span>
+<span class="line"><span style="color: #C9D1D9">      --global</span></span>
+<span class="line"></span></code></pre>
+<ul>
+<li>
+<p>Add Instance Group as the Backend to the Backend Service:</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">      gcloud compute backend-services add-backend web-backend-service \</span></span>
+<span class="line"><span style="color: #C9D1D9">  --instance-group=lb-backend-group \</span></span>
+<span class="line"><span style="color: #C9D1D9">  --instance-group-zone=us-west1-b \</span></span>
+<span class="line"><span style="color: #C9D1D9">  --global</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Create a URL Map for routing the requests to the default backend services.</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">      gcloud compute url-maps create web-map-http \</span></span>
+<span class="line"><span style="color: #C9D1D9">      --default-service web-backend-service</span></span>
+<span class="line"><span style="color: #C9D1D9">      </span><span style="color: #A5D6FF">```</span></span>
+<span class="line"></span></code></pre>
+</li>
+<li>
+<p>Extra information regarding the URL Map:
+*** Note: URL map is a Google Cloud configuration resource used to route requests to backend services or backend buckets. For example, with an external HTTP(S) load balancer, you can use a single URL map to route requests to different destinations based on the rules configured in the URL map:
+Requests for <a href="https://example.com/video">https://example.com/video</a> go to one backend service.
+Requests for <a href="https://example.com/audio">https://example.com/audio</a> go to a different backend service.
+Requests for <a href="https://example.com/images">https://example.com/images</a> go to a Cloud Storage backend bucket.
+Requests for any other host and path combination go to a default backend service.</p>
+</li>
+<li>
+<p>Create a target HTTP proxy to route requests:</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">        gcloud compute target-http-proxies create http-lb-proxy \</span></span>
+<span class="line"><span style="color: #C9D1D9">        --url-map web-map-http</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Global forwarding rule to route incoming requests to the proxy:</p>
+<ul>
+<li>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">        gcloud compute forwarding-rules create http-content-rule \</span></span>
+<span class="line"><span style="color: #C9D1D9">        --address=lb-ipv4-1\</span></span>
+<span class="line"><span style="color: #C9D1D9">        --global \</span></span>
+<span class="line"><span style="color: #C9D1D9">        --target-http-proxy=http-lb-proxy \</span></span>
+<span class="line"><span style="color: #C9D1D9">        --ports=80</span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="google-forwarding-rules">Google Forwarding Rules</h2>
+<ul>
+<li>Note: A forwarding rule and its corresponding IP address represent the frontend configuration of a Google Cloud load balancer. Learn more about the general understanding of forwarding rules from the Forwarding rule overview Guide.
+<ul>
+<li><a href="https://cloud.google.com/load-balancing/docs/using-forwarding-rules">https://cloud.google.com/load-balancing/docs/using-forwarding-rules</a></li>
+<li><a href="https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts">https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="google-associate-cloud-engineer">Google Associate Cloud Engineer</h2>
+<ul>
+<li>The program requires the completion of 6 unique badges
+<ol>
+<li>Badge 1 - Create and Manage Cloud Resources - <a href="https://www.cloudskillsboost.google/quests/120?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&#x26;search_id=17007619">1</a></li>
+<li>Badge 2 - Perform Foundation Infrastructure Tasks in Google Cloud - <a href="https://www.cloudskillsboost.google/quests/118">2</a></li>
+<li>Badge 3 - Set Up and Configure a Cloud Environment in Google Cloud - <a href="https://www.cloudskillsboost.google/quests/119">3</a></li>
+<li>Badge 4 - Automating Infrastructure on Google Cloud with Terraform - <a href="https://www.cloudskillsboost.google/quests/159">4</a></li>
+<li>Lab - GSP866 - <a href="https://www.cloudskillsboost.google/focuses/17817?parent=catalog">5</a></li>
+<li>Badge 5 - Deploy to Kubernetes in Google Cloud - <a href="https://www.cloudskillsboost.google/quests/116">6</a></li>
+</ol>
+</li>
+</ul></div>
+		</div>
+		<footer class="tac mt6 astro-D7OQU2FC">
+			<a href="/application" class="astro-D7OQU2FC">
+				<span class="_button_1fbb5_1">View More</span>
+			</a>
+		</footer>
+		<footer class="_footer_knfx6_1"><br/><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="50" viewBox="0 0 112.5 37.5"><defs><filter id="d" width="100%" height="100%" x="0%" y="0%"><feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"></feColorMatrix></filter><filter id="c" width="100%" height="100%" x="0%" y="0%"><feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0"></feColorMatrix></filter><clipPath id="b"><path d="M.492 1h111.02v35H.492z"></path></clipPath><mask id="a"><g filter="url(#d)"><g filter="url(#c)" transform="translate(.493 .743) scale(.7434)"><image width="150" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAwCAAAAADWL9zNAAAAAmJLR0QA/4ePzL8AAAPcSURBVFiF7ZdfaFtVHMc/XsIlhBBKCDOUUkIpWkopRcIIpVS6yZ5mXyaCDyr6MnyxioLIQB/G2MNAqUMU1NUH91JhDxP0yb/r6uxK3ZyE0UkN2RZjN0IaQm6ShXt9uLm35957TtIVH0Tu9yX39zu/8zvf8zu/3++cQIgQIUKE+P/iEftHyw4DNFeqtnwgGwOoXqkLtslcLOiguVloC6I+nQKorTQczYGcDrC14ZmmD2UGNL+v2lrVq9DPPzAMo3U7a4vRd3YMwzBal0dFo/m/WkYAO9ffTAg2mV9ahmG0bmRczcs7LcMwjPcjgpU2cebXvwOuWn/OOAaOsR6JANGueOR4AqCytCXSisZ0//4gOnmi8bHpihHbJupGInY4AVC/2hEmPXVqSmTp2rrKQCABHnt9EKCzvGzKhn0YeH6ox+jQJABF8QwH38jKWAmQ0Yoft4O5tljbAysYGesxeHAEgI2ioMvl+rmUsX7mhQhAafGmdIoYQQ0gllL7j87FAJqXGoJyOBpwBKB1XI2E1tQrKYD25xflrH5Yc/3M5gDMjtQQgMEnACitB4c6X+d9tO5tqmmlFuxy/O6TpnyljXe7NMz4RzmAxraa1pR9hr/9ERwyv//AKwvfXlr6woukD2kADe2t9q2ffpfk/MxZR6nbOVjaCho57ucSAJ1LkizVnn7cI979tOQ30b+0JGhdnxdL4tkdmZH14KSwt9EblmVZ1i07SAxftSzLsm5Pe1Z7rSXzc3dW4KjcKKBPnp7uNQ6AeeW8OrcmbHp5efGo0ZMWjD/Xp8GAWW0rx7S5JIB5uao02Rctxgf6eYgceUnS/G2k7WDfX91LW/Y49UjNgnsekUwUQA9G64679VQaQJ9fUuX8mH2nbuZlg2ax7pG3Kypa9bevdRXm2Gdp+VLmxUVn79nTGYD0iIKW9qTdaFelHaSz9IXnrNpCIfqCUS44XwkU0BpbTkjLxzLQo8unZjSA6s/ymqipG0u/3Oo5pVPr7WRsHAg8tR5ujb3C3Hv62k9C1ssPvUjf+g/i4EnnS5tQ2cQX6hraoQhA/Ud5B9EOP+rT3Fu+s29a2uysT9MO3izpV3e/i4ozjBw96tNsbzi09pFbAZQl97CA1YJfU+3x5LDxL9BqXFBXFFD5KvASWS/086n1kFQqD8zie2fVtw+0L6wEdDc/VDyF3MWc7lnIm0Blt+828vcBLS+8KkvXkgFS2+vfrInRqOc1T6VWvj1XwY/OucqxUUlWl13T7v9EBmIAncru5ZOMADSES7ar8tBq13x5kox6xLYij+JxyTGojEOECBEiRIgQ/zH8A1zaivGoIKeuAAAAAElFTkSuQmCC"></image></g></g></mask></defs><g clip-path="url(#b)" mask="url(#a)"><image width="150" height="48" transform="translate(.493 .743) scale(.7434)" xlink:href="data:image/png;base64,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"></image></g></svg><small class="_byline_knfx6_9">🚀 Built by KBVE.com with Astro</small><small class="_byline_knfx6_9">ඞ</small></footer>
+	</body></html>
