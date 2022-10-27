@@ -1,23 +1,23 @@
 ---
 layout: ../../../../layouts/asset.astro
 title: Apple
+category: Stock
+client: Self
+frontpage: true
+publishDate: 2022-10-24 00:00:00
+img: https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?fit=crop&w=1400&h=700&q=75
+description: Apple is a multinational company that engages in electronics and software.
 ticker: aapl
 dividend: true
 exchange: NASDAQ
-category: Stock
-client: Self
-publishDate: 2022-08-24 00:00:00
-img: https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?fit=crop&w=1400&h=700&q=75
-description: |
-  Asset Class | Database of all assets
 tags:
   - technology
   - us
   - branding
 ---
+import Aapl_info from './_core/aapl_information.md';
+import Aapl_dividend from './_core/aapl_dividend.md';
 
-## Apple
-
-***
-
-- Apple is a multinational company that engages in electronics and software.
+<Aapl_info />
+* * *
+<Aapl_dividend />

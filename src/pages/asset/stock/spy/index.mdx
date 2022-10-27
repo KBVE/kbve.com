@@ -1,0 +1,25 @@
+---
+layout: ../../../../layouts/asset.astro
+title: SPY
+category: Stock
+client: Self
+frontpage: true
+publishDate: 2022-10-24 00:00:00
+img: https://images.unsplash.com/photo-1648275913341-7973ae7bc9b3?fit=crop&w=1400&h=700&q=75
+description: SPDR S&P 500 ETF Trust
+isin: US78462F1030
+cusip: 78462F103
+ticker: spy
+dividend: true
+exchange: NYSE
+tags:
+  - trust
+  - us
+  - etf
+---
+import Spy_information from './_core/spy_information.md';
+import Spy_dividend from './_core/spy_dividend.md';
+
+<Spy_information />
+* * *
+<Spy_dividend />

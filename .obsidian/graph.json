@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "tag:#docker",
@@ -32,6 +32,6 @@
   "repelStrength": 7.91666666666667,
   "linkStrength": 1,
   "linkDistance": 135,
-  "scale": 0.18462326225858228,
+  "scale": 0.30647883944649557,
   "close": true
 }

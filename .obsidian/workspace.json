@@ -46,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:docker",
+                "query": "tag:#kubernetes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -63,7 +63,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -133,10 +134,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d5ec064fba271943",
+  "active": "3af79f47899e885b",
   "lastOpenFiles": [
-    "src/pages/media/ai/3/_core/3.md",
     "src/pages/application/docker/_core/docker_cheatsheet.md",
+    "application/zsh.md",
+    "src/pages/media/ai/3/_core/3.md",
     "src/pages/application/kubernetes/_core/k3s.md",
     "src/pages/application/kubernetes/_core/kubernetes_cheatsheet.md",
     "src/pages/application/kubernetes/_core/kubernetes_storage.md",
