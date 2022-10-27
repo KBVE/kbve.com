@@ -24,6 +24,7 @@ import { useCookies  } from 'react-cookie';
 const pages = [
   { label: "Portfolio", link: "/projects" },
   { label: "Applications", link: "/application" },
+  { label: "Assets", link: "/asset"},
   { label: "About", link: "/about" },
 ];
 
@@ -182,7 +183,7 @@ function Nav() {
                     window.location.href = page.link;
                   }}
                 >
-                  <Typography textAlign="center">{page.label}</Typography>
+                  <Typography key={page.label} textAlign="center">{page.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -226,7 +227,7 @@ function Nav() {
                   window.location.href = page.link;
                 }}
               >
-                <Typography textAlign="center">{page.label}</Typography>
+                <Typography key={page.label} textAlign="center">{page.label}</Typography>
               </MenuItem>
             ))}
           </Box>

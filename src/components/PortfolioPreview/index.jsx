@@ -19,7 +19,7 @@ function PortfolioPreview({ project }) {
           <p className={Styles.tagtitle}>Tagged:</p>
           <div className={Styles.tagLine}>
             {frontmatter.tags.map((t) => (
-              <div className={Styles.tag} data-tag={t}>
+              <div key={t} className={Styles.tag} data-tag={t}>
                 {t}
               </div>
             ))}
