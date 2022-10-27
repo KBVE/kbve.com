@@ -24,7 +24,7 @@
     "@emotion/styled": "^11.10.4",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
     "@mui/icons-material": "^5.10.6",
-    "@mui/material": "^5.10.7",
+    "@mui/material": "^5.10.11",
     "@preact/compat": "^17.1.1",
     "@types/lodash": "^4.14.186",
     "fuse.js": "^6.6.2",
