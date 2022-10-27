@@ -99,6 +99,7 @@
     },
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "editor.foldingMaximumRegions": 65000
     
 }

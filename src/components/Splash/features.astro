@@ -1,0 +1,64 @@
+---
+import ContentSection from "@c/Splash/content-section.astro";
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Bring Your Own Mind",
+    description:
+      "Always willing to accept help.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Clean up and Optimization",
+    description:
+      "Needs some bloat to be cut / reduced",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Components Missing",
+    description:
+      "More need to be added.",
+    icon: "mdi:directions-fork",
+  },
+  {
+    title: "Integrations",
+    description:
+      "Public / Private Integrations are TO:DO",
+    icon: "mdi:graph",
+  },
+  {
+    title: "Test Case",
+    description:
+      "Search is TO:DO",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Community",
+    description:
+      "KBVE Community! Join us now!",
+    icon: "mdi:account-group",
+  },
+];
+---
+
+<ContentSection title="Features @ KBVE" id="features">
+  <Fragment slot="lead">
+    We provide a vast <span class="text-primary">library</span> of documentation and information. Here are 6 of our
+    <span class="text-primary">state-of-the-art</span>
+    tools and with there own <span class="text-primary">innovations</span>.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
+          <div class="w-16 h-16 p-3 border-2 border-current rounded-full">
+            <Icon name={icon} />
+          </div>
+          <p class="text-xl font-extrabold text-center">{title}</p>
+          <p class="text-sm text-center text-offset">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

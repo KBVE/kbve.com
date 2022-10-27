@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "@c/Splash/content-section.astro";
+import MainCard from "@c/Card/MainCard.astro";
+---
+
+<ContentSection title="KiloByte Virtual Enterprise" id="intro">
+  <Icon slot="eyebrow" name="mdi:linux" class="h-32 text-primary" />
+  <MainCard />
+  <Fragment slot="lead">
+    
+    KBVE is a collection of users that research
+    <span class="text-primary">modern</span> applications.
+    <span class="text-primary">Lightning-fast</span>
+    performance meets <span class="text-primary">powerful</span> developer experience. ◈
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    
+    <a
+      href="/application"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="telescope" class="h-8" />
+      <span>Applications</span>
+    </a>
+    <a
+      href="https://app.kbve.com/#/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="rocket" class="h-8" />
+      <span>Launch App!</span>
+    </a>
+
+  </div>
+</ContentSection>
