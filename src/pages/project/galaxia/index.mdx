@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/project.astro
+layout: ../../../layouts/project.astro
 title: Galaxia
 client: Self
 frontpage: true
@@ -15,12 +15,16 @@ tags:
 import Github from "@c/Github/Github.astro";
 export const components = { github: Github };
 
+import GalaxiaInfo from './_core/galaxia_information.md';
+import GalaxiaGeneral from './_core/galaxia_general.md';
+import GalaxiaMap from './_core/galaxia_micro.md';
 
-# Galaxia
-
-- Our current project is Galaxia, which will be an open source cluster-ready API that extends out to various projects. When working on Discord.sh, we decided that it would make sense to build an all-in-one / hyper scalable API. 
-
+* * * 
+<GalaxiaGeneral />
 * * *
+<GalaxiaInfo />
+* * *
+<GalaxiaMap />
 
 ## Install
 - Install using the docker compose.
