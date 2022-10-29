@@ -7,25 +7,21 @@ import Footer from "@c/Footer/Foot.astro";                  //  Import Footer ->
 import SocialMetaTag from "@c/SocialMedia/MetaTag.astro";   //  Import SocialMedia -> MetaTag
 
 // TO:DO -> Migration
+import MainCard from "@c/Element/Card/MainCard.astro";
 import Header from "@c/Splash/header.astro";
 import Features from "@c/Element/Features/Generic/features.astro";
 
 
 // [SCENE] -> [START]
+import Splash from "@c/Splash/splash.astro";
 import Intro from "@c/Scene/Intro/intro.astro";
 
-
-import Splash from "@c/Splash/splash.astro";
-import MainCard from "@c/Element/Card/MainCard.astro";
 
 /// WIP
 import ShacoBox from "@c/Element/Button/Floater/Contact/Contact.astro";
 import GearBox from "@c/Element/Button/Floater/Settings/Settings.astro";
-
 import Projects from "@c/Scene/Projects/Projects.astro";
-/// Grabbing Projects
-//const projects = [];
-/// Render Projects into Template ->
+
 
 ---
 <!DOCTYPE html>
@@ -39,11 +35,11 @@ import Projects from "@c/Scene/Projects/Projects.astro";
   <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
       <!-- Header -->                 <Header />
       <!-- Splash -->                 <Splash />
-    <div class="px-8 py-32 space-y-24">
+    <div class="px-8 py-24 space-y-8">
       <!-- Intro -->                  <Intro />
       <!-- Projects -->               <Projects />
       <!-- Features -->               <Features />
-      <!-- Free The Memes -->         <MainCard />
+      <!-- Free The Memes  <MainCard /> -->        
     </div>
       <!-- ShacoBox -->               <ShacoBox />
       <!-- Settings -->               <GearBox />
