@@ -1,6 +1,6 @@
 // import { h } from "preact";
 import * as React from "react";
-import Authentication from "@c/Authentication";
+import Authentication from "@c/Scene/Authentication";
 import Styles from "./styles.module.scss";
 // @mui
 import AppBar from "@mui/material/AppBar";

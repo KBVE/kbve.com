@@ -1,8 +1,9 @@
 ---
 import { generateImage } from "astro-eleventy-img";
 import { Icon } from "astro-icon";
-import Starfield from "@c/Splash/starfield.astro";
-import HeroImage from "@c/Splash/hero-image.astro";
+import Starfield from "@c/Element/Background/Starfield/starfield.astro";
+import Galaxia from "@c/Element/Background/Starfield/galaxia.astro";
+import HeroImage from "@c/Element/Picture/HeroImage/hero-image.astro";
 
 import KBVELogo from "@c/Branding/KBVELogo";
 
@@ -23,7 +24,8 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
 ---
 
 <section class="relative h-full bg-black">
-  <Starfield />
+  <!-- <Starfield /> -->
+  <Galaxia />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
