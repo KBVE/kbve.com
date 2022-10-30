@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 
 //import data from './data.json';
-//const data = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
-const data = await fetch('https://kbve.com/asset/asset.json').then((response) =>  response.json());
+const data = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
 
 const Carousel = () => {
   const maxScrollWidth = useRef(0);
@@ -51,9 +50,9 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel my-12 mx-auto" id="asset">
+    <div className="carousel my-1 mx-auto" id="applications">
       <h2 className="text-4xl leading-8 font-semibold mb-12 light:text-slate-700">
-        Assets
+        Applications - Our ToolBelt.
       </h2>
       <div className="relative overflow-hidden">
         <div className="flex justify-between absolute top left w-full h-full">
