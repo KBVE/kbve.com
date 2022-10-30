@@ -1,0 +1,30 @@
+---
+
+// const projects = (await Astro.glob('../../../pages/project/**/*.mdx'))
+// .filter(({ frontmatter }) => !!frontmatter.frontpage)
+// .filter(({ frontmatter }) => !!frontmatter.publishDate)
+// 	.sort(
+// 		(a, b) =>
+// 			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+// 	);
+
+const { title, img, description, url} = Astro.props;
+
+---
+
+<div class="overflow-hidden transition-shadow duration-300 bg-offset rounded shadow-sm">
+    <img src={img} class="object-cover w-full h-64" alt="" />
+     <div class="p-5 border-t-0">
+      <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+          <a href="#" class="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700" aria-label="Category" title="Asset">Asset</a>
+          <span class="text-gray-600">-</span>
+      </p>
+      <a href="https://kbve.com/asset/" aria-label="Category" title="Visit the East" class="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700 darK:">{title}</a>
+      <p class="mb-2">
+          {description}
+      </p>
+      </div>
+      <div class="p-5 bottom-auto">
+        <a href={url} aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+      </div>
+  </div>

@@ -10,6 +10,9 @@ import prefetch from "@astrojs/prefetch";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
+import alpinejs from "@astrojs/alpinejs";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://kbve.com",
   markdown: {
@@ -22,19 +25,17 @@ export default defineConfig({
 
   sitemap({
     customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"]
-  }), mdx(), react(), 
+  }), mdx(), react(),
   //compress(), 
   prefetch({
     throttle: 20
-  }), tailwind()],
-  
+  }), tailwind(), alpinejs()],
   // Vite
-  
+
   vite: {
     ssr: {
       //external: ["@11ty/eleventy-img", "svgo"],
-      external: ["@11ty/eleventy-img"],
-
-    },
+      external: ["@11ty/eleventy-img"]
     }
+  }
 });
