@@ -2,6 +2,7 @@ const postImportResult = import.meta.glob("./**/**/**/*.mdx", { eager: true });
 const posts = Object.values(postImportResult);
 var counterId = 0;
 
+
 export const get = async () => {
   const json = JSON.stringify(
     posts.map((p) => {

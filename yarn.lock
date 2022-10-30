@@ -83,6 +83,11 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@astrojs/alpinejs@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/alpinejs/-/alpinejs-0.1.2.tgz#6c3d20de8f8afe6a1e133b85694625d958371da8"
+  integrity sha512-pcy+r7TTeFMbdZpRUuOYbf5L3ccFp107gH9j0Hdl5z8hmrSw9918pxkK1tiAcbwrQKxifv7nM5V5FJKu7SoJrw==
+
 "@astrojs/compiler@^0.22.0":
   version "0.22.1"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.22.1.tgz#8d0d4df6e02f72d6ad9b2c99b403c455d4a301c2"
@@ -992,6 +997,13 @@
   dependencies:
     "@types/estree" "*"
 
+"@types/alpinejs@^3.0.0":
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/@types/alpinejs/-/alpinejs-3.7.1.tgz#4726758a0579ef0afd3a9e80ff64840d5943a08b"
+  integrity sha512-gzwyuHXH/meGQQhurMGWlZgMQxe18lMOoSPd7X6CvGoDelHte9EsU7SpTIoRu8yYir0tbHDeaSMdX9LeQz/QtA==
+  dependencies:
+    "@vue/reactivity" "^3.2.26"
+
 "@types/babel__core@^7.1.19":
   version "7.1.19"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.19.tgz#7b497495b7d1b4812bdb9d02804d0576f43ee460"
@@ -1212,6 +1224,30 @@
     vscode-nls "^5.0.0"
     vscode-uri "^2.1.2"
 
+"@vue/reactivity@^3.2.26":
+  version "3.2.41"
+  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.2.41.tgz#0ad3bdf76d76822da1502dc9f394dafd02642963"
+  integrity sha512-9JvCnlj8uc5xRiQGZ28MKGjuCoPhhTwcoAdv3o31+cfGgonwdPNuvqAXLhlzu4zwqavFEG5tvaoINQEfxz+l6g==
+  dependencies:
+    "@vue/shared" "3.2.41"
+
+"@vue/reactivity@~3.1.1":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.1.5.tgz#dbec4d9557f7c8f25c2635db1e23a78a729eb991"
+  integrity sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==
+  dependencies:
+    "@vue/shared" "3.1.5"
+
+"@vue/shared@3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.1.5.tgz#74ee3aad995d0a3996a6bb9533d4d280514ede03"
+  integrity sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==
+
+"@vue/shared@3.2.41":
+  version "3.2.41"
+  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.41.tgz#fbc95422df654ea64e8428eced96ba6ad555d2bb"
+  integrity sha512-W9mfWLHmJhkfAmV+7gDjcHeAWALQtgGT3JErxULl0oz6R6+3ug91I7IErs93eCFhPCZPHBs4QJS7YWEV7A3sxw==
+
 a-sync-waterfall@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/a-sync-waterfall/-/a-sync-waterfall-1.0.1.tgz#75b6b6aa72598b497a125e7a2770f14f4c8a1fa7"
@@ -1258,6 +1294,13 @@ acorn@^8.0.0, acorn@^8.5.0, acorn@^8.7.1, acorn@^8.8.0:
   version "8.8.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
+
+alpinejs@^3.0.0:
+  version "3.10.5"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.10.5.tgz#59ca09ad42293cc8e0bbbdf4c7696fc22c6df700"
+  integrity sha512-qlvnal44Gof2XVfm/lef8fYpXKxR9fjdSki7aFB/9THyFvbsRKZ6lM5SjxXpIs7B0faJt7bgpK2K25gzrraXJw==
+  dependencies:
+    "@vue/reactivity" "~3.1.1"
 
 ansi-align@^3.0.1:
   version "3.0.1"
