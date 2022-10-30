@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: sitemap.xml
+Sitemap: https://kbve.com/sitemap.xml
