@@ -1,6 +1,6 @@
 ---
 title: Speed Tests
-description: Check the performance of websites, webservers and general list of information within that area.
+description: Check the performance of websites, web servers and general list of information within that area.
 tags:
 - api
 - webmaster
@@ -9,7 +9,7 @@ tags:
 ## Speed List
 
 - Google's PageSpeed Insight
-  - [https://pagespeed.web.dev/](Official WebTool Location)
+  - [Official WebTool Location](https://pagespeed.web.dev/)
     - The tool tests for both mobile and desktop, with couple options on the side.
 
 - TechEmpower Web Framework List

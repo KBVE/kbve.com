@@ -1,13 +1,9 @@
 ---
-import AssetCard from "./AssetCard.astro";
 import AssetCarousel from "./AssetCarousel";
 
-const assets = await fetch('https://kbve.com/asset/asset.json').then((response) =>
-  response.json()
-);
 ---
 
-<div class="2xl:container 2xl:mx-auto 2xl:px-0 py-3 px-10">
+<div class="2xl:container 2xl:mx-auto 2xl:px-0 py-3 px-10" id="assets">
   <AssetCarousel client:only="react"  />
 </div>
 

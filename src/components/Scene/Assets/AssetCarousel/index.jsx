@@ -51,7 +51,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel my-12 mx-auto" id="asset">
+    <div className="carousel my-12 mx-auto">
       <h2 className="text-4xl leading-8 font-semibold mb-12 light:text-slate-700">
         Assets
       </h2>
