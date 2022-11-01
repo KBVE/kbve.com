@@ -6,27 +6,10 @@ import Register from '@c/Scene/Authentication/index.jsx'
 
 ---
 
-<html lang="en">
-	<head>
-		<MainHead
-			title="Sign Up | KBVE"
-			description="Register an Account with KBVE"
-		/>
-		<style lang="scss">
-			.grid {
-				display: grid;
-				grid-gap: 3rem;
-			}
-		</style>
-	</head>
-	<body style={{ paddingTop: '2rem' }}>
-		<Nav client:only="react" />
-		<div class="wrapper">
-			<h1 class="title mt4 mb4">Register</h1>
-			<div class="grid">
+<div class="wrapper"  id="swup">
+	<Nav client:only="react" />
+	<h1 class="title mt4 mb4">Register</h1>
+	<div class="grid">
         <Register client:only="react" />
-			</div>
-		</div>
-		<Footer />
-	</body>
-</html>
+	</div>
+</div>
