@@ -1,0 +1,26 @@
+---
+/// {BlogCard ?: Representing a single blog card.}
+/// {AstroJS ?: Data}
+const { img, title, slug, description, category } = Astro.props;
+/// {Entity} -> {Card} -> {BlogCard} -> [START]
+
+/// {Entity} -> {Card} -> {BlogCard} -> [END]
+---
+
+<div class="overflow-hidden transition-shadow duration-300 bg-offset rounded shadow-sm">
+    <img src={img} class="object-cover w-full h-64" alt="">
+    
+    <div class="p-5 border-t-0">
+        <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+        <a href="#" class="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700" aria-label="Category" title={category}>{category}</a>
+        <span class="text-gray-600">-</span>
+        </p>
+        <a href="https://kbve.com/asset/" aria-label="Category" title={title} class="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700 darK:">{title}</a>
+        <p class="mb-2">
+        {description}
+        </p>
+    </div>
+    <div class="p-5 bottom-auto">
+        <a href={slug} aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+    </div>
+</div>
