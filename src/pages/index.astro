@@ -13,7 +13,7 @@ import Features from "@c/Element/Features/Generic/features.astro";
 
 
 // [SCENE] -> [START]
-import Splash from "@c/Splash/splash.astro";
+// import Splash from "@c/Splash/splash.astro";
 import Intro from "@c/Scene/Intro/intro.astro";
 
 
@@ -34,22 +34,21 @@ import SWUP from "@c/Scene/Swup/swup.astro";
     <!-- initialize theme -->         <Theme />
 
   </head>
+  
   <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
     <!-- Header -->                 <Header />
+    <!-- Splash  <Splash />  --> 
+        <div class="px-8 py-24 space-y-8">
+        <SWUP>
+          <!-- Intro -->                  <Intro />
+          <!-- Assets -->                 <Assets  />
+          <!-- Features -->               <Features />
+          <!-- Applications -->           <Applications />
+          <!-- Free The Memes  <MainCard /> -->
+        </SWUP>
+        </div>
     <!-- ShacoBox -->               <ShacoBox />
     <!-- Settings -->               <GearBox  />
-      <!-- SWUP START -->             <SWUP>
-          <!-- Splash -->                 <Splash />
-          <div class="px-8 py-24 space-y-8">
-              
-                  <!-- Intro -->                  <Intro />
-                  <!-- Assets -->                 <Assets  />
-                  <!-- Features -->               <Features />
-                  <!-- Applications -->           <Applications />
-                  <!-- Free The Memes  <MainCard /> -->
-              </div>
-            <!-- SWUP END -->   </SWUP>
-        
     <footer class="px-4 divide-y dark:bg-gray-800 dark:text-gray-100">
             <!-- <Footer /> -->             <Footer />
     </footer>

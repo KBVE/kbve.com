@@ -1,15 +1,36 @@
 ---
+import "../styles/index.css";                               //  Import CSS Tailwind
+import Head from "@c/Header/Head.astro";                    //  Import {Header -> Head}
+import Theme from "@c/Header/Theme.astro";                  //  Import Header -> Theme
+import SocialMetaTag from "@c/SocialMedia/MetaTag.astro";   //  Import SocialMedia -> MetaTag
+import Footer from "@c/Footer/Foot.astro";                  //  Import Footer -> Foot
+import Header from "@c/Splash/header.astro";
+
 import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
+// import Footer from '../components/Footer/index.jsx';
 import Nav from '@c/Nav';
 import Register from '@c/Scene/Authentication/index.jsx'
 
 ---
 
-<div class="wrapper"  id="swup">
-	<Nav client:only="react" />
-	<h1 class="title mt4 mb4">Register</h1>
-	<div class="grid">
-        <Register client:only="react" />
-	</div>
-</div>
+
+
+<!DOCTYPE html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <!-- Head -->                     <Head title="KBVE Register" />
+    <!-- Social Media -->             <SocialMetaTag title="KBVE.com - Gaming, Media, FinTech, Coders" description="KiloByte Virtual Enterprise is a collection of users that are straight memers" />
+	<!-- initialize theme -->         <Theme />
+  </head>
+  <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
+	<Header />
+	<div class="px-8 py-24 space-y-8"></div>
+	<div class="wrapper bg-offset"  id="swup">
+			<h1 class="gradient-text text-xl justify-center">Register</h1>
+			<div class="grid">
+				<Register client:only="react" />
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
