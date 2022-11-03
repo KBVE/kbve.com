@@ -1,7 +1,12 @@
 ---
+///     [IMPORT]
+import ShacoBox from "@c/Element/Button/Floater/Contact/Contact.astro";
+import GearBox from "@c/Element/Button/Floater/Settings/Settings.astro";
+import Header from "@c/Splash/header.astro";
+import Footer from "@c/Footer/Foot.astro";                  //  Import Footer -> Foot
+
 ///  [SWUP] -> {Init}
 ---
-<!-- [CORE] -> {SWUP} -->
 <script>
 	import Swup from 'swup'
 	import SwupScriptsPlugin from '@swup/scripts-plugin';
@@ -18,9 +23,14 @@
 }),],
 	});
 </script>
-
-<!-- [MAIN] -->
+<body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
+    <Header />
 <main class="content" id="swup">
-<!-- %SLOT% -->
 <slot />
 </main>
+<ShacoBox />
+<GearBox  />
+<footer class="px-4 divide-y dark:bg-gray-800 dark:text-gray-100">
+  <Footer />
+</footer>
+</body>

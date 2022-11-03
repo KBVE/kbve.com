@@ -1,7 +1,11 @@
-//! IMPORT -> [START]
+//* React Register
+//? SWUP has some issues with how we are creating the register element.
+///
+//! [IMPORT] -> [START]
 ///
 //* Import React
 import React from "react";
+import * as ReactDOM from 'react-dom';
 //* Import hCaptcha
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 //* Import @mui
@@ -11,9 +15,14 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Collapse from "@mui/material/Collapse";
 import Button from "@mui/material/Button";
+import Container from '@mui/material/Container';
+
 ///
 //* Import React Cookies
 import { useCookies  } from 'react-cookie';
+///
+//! [IMPORT] -> [END]
+///
 ///
 //* Regex Validate Email
 const validateEmail = (email) => {
@@ -23,9 +32,56 @@ const validateEmail = (email) => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
+
+
+//! [CORE] -> [START]
+
 ///
-//* Register
-const ReactRegister = ({
+//* ReactRegister
+//? [Function] -> [ReactRegister]
+///
+
+///   url = "https://api.kbve.com/api/auth/local/register",
+//  display = true,
+// const appRoot = document.getElementById('register');
+
+class ReactRegister extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      load: false,  
+      hasError: false, 
+      captchaRef: null };
+    this.listRef = React.createRef();
+  }
+  
+
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
+  }
+
+
+  componentDidMount() {
+    //return <FunReactRegister />
+    this.state.load = true;
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // You can render any custom fallback UI
+      return <h1>Something went wrong.</h1>;
+    }
+   
+    return (<React.Suspense fallback={<h1>Loading Register...</h1>}><FunReactRegister /></React.Suspense>)
+
+  }
+}
+
+///
+//* Function ReactRegister
+///
+const FunReactRegister = ({
   url = "https://api.kbve.com/api/auth/local/register",
   display = true,
 }) => {
@@ -40,7 +96,7 @@ const ReactRegister = ({
   };
 /// hCaptcha -> [END]
 ///
-//* Register
+//* Register Variables
 /// Register (var) -> [START]
   const [username, setUsername] = React.useState("")
   const [email, setEmail] = React.useState("");
@@ -48,14 +104,11 @@ const ReactRegister = ({
   const [confirmPassword, setConfirmPassword] = React.useState("");
 /// Register (var) -> [END]
 ///
-//* Cookie
+//* Cookie Integration
 /// Cookie -> [START]
   const [cookies, setCookie] = useCookies(['user']);
   const handleCookie = (data) => {
-    // setCookie('jwt', jwt, { path: '/', domain: '.kbve.com' });
     setCookie('user', data, { path: '/', domain: '.kbve.com',  secure: true, sameSite: 'strict'  });
-    //setCookie('jwt', jwt, { path: '/' });
-    //setCookie('user', data, { path: '/'});
   }
 /// Cookie -> [END]
 ///
@@ -68,6 +121,7 @@ const [isLoading, setIsLoading] = React.useState(false);
 ///
 ///
 ///
+
 //! Core -> [START] -> EOF
   const handleConfirm = async (e) => {
     e.preventDefault();
@@ -108,7 +162,12 @@ const [isLoading, setIsLoading] = React.useState(false);
       );
     });
   };
-
+///
+//! [CORE] -> {Function} -> [ReactRegister] -> [END]
+///
+///
+//* Render Component
+///
   return (
     <Stack direction="column" alignItems="center">
       <Paper variant="outlined">
@@ -172,7 +231,10 @@ const [isLoading, setIsLoading] = React.useState(false);
         </Box>
       </Paper>
     </Stack>
-  );
+  )
 };
+
+
+
 
 export default ReactRegister;
