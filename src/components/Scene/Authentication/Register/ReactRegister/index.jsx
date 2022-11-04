@@ -15,7 +15,7 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Collapse from "@mui/material/Collapse";
 import Button from "@mui/material/Button";
-import Container from '@mui/material/Container';
+//import Container from '@mui/material/Container';
 
 ///
 //* Import React Cookies
@@ -35,7 +35,6 @@ const validateEmail = (email) => {
 
 
 //! [CORE] -> [START]
-
 ///
 //* ReactRegister
 //? [Function] -> [ReactRegister]
@@ -44,6 +43,38 @@ const validateEmail = (email) => {
 ///   url = "https://api.kbve.com/api/auth/local/register",
 //  display = true,
 // const appRoot = document.getElementById('register');
+
+
+function useAsync(asyncFn, onSuccess) {
+  React.useEffect(() => {
+    let isActive = true;
+    asyncFn().then(data => {
+      if (isActive) onSuccess(data)
+      else console.log("aborted setState on unmounted component")
+    });
+    return () => {
+      isActive = false;
+    };
+  }, [asyncFn, onSuccess]);
+}
+
+const Child = () => {
+  const [state, setState] = React.useState("loading (4 sec)...");
+  useAsync(simulateFetchData, setState);
+  return <ConstReactRegister />;
+};
+
+const Parent = () => {
+  const [mounted, setMounted] = React.useState(true);
+  return (
+    <div>
+      {<Child />}
+    </div>
+  );
+};
+
+const simulateFetchData = () => new Promise(
+  resolve => setTimeout(() => resolve("data fetched"), 4000));
 
 class ReactRegister extends React.Component {
   constructor(props) {
@@ -61,9 +92,12 @@ class ReactRegister extends React.Component {
     return { hasError: true };
   }
 
+  componentWillUnmount() {
+    this.state.load = false;
+  }
+
 
   componentDidMount() {
-    //return <FunReactRegister />
     this.state.load = true;
   }
 
@@ -73,15 +107,17 @@ class ReactRegister extends React.Component {
       return <h1>Something went wrong.</h1>;
     }
    
-    return (<React.Suspense fallback={<h1>Loading Register...</h1>}><FunReactRegister /></React.Suspense>)
+    return (<Parent />)
 
   }
 }
 
+
+
 ///
 //* Function ReactRegister
 ///
-const FunReactRegister = ({
+const ConstReactRegister = ({
   url = "https://api.kbve.com/api/auth/local/register",
   display = true,
 }) => {

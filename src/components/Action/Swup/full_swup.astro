@@ -5,6 +5,7 @@ import GearBox from "@c/Element/Button/Floater/Settings/Settings.astro";
 import Header from "@c/Splash/header.astro";
 import Footer from "@c/Footer/Foot.astro";                  //  Import Footer -> Foot
 
+const { swupoption = "<script>console.log('hi');</script>" } = Astro.props;
 ///  [SWUP] -> {Init}
 ---
 <script>
@@ -23,6 +24,8 @@ import Footer from "@c/Footer/Foot.astro";                  //  Import Footer ->
 }),],
 	});
 </script>
+
+
 <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
     <Header />
 <main class="content" id="swup">
