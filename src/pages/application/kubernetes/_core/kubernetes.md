@@ -19,4 +19,4 @@ tags:
     - Run these two following commands for k.
       - `alias 'k=sudo kubectl'`
       - `echo "alias k='sudo kubectl'" >>~/.bashrc`
-  - **Note:** If you end up using [Oh My ZSH](/application/zsh), replace `.bashrc` with `.zshrc`
+  - If you end up using [Oh My ZSH](https://kbve.com/application/zsh), replace `.bashrc` with `.zshrc`

@@ -1,0 +1,16 @@
+---
+import "../../styles/index.css";                                //  Import Style.css
+import Head from "@c/Header/Head.astro";                        //  Import {Header -> Head}
+import Theme from "@c/Header/Theme.astro";                      //  Import Header -> Theme
+import SocialMetaTag from "@c/SocialMedia/MetaTag.astro";       //  Import SocialMedia -> MetaTag
+const { content } = Astro.props;                     //  Import Astro.props
+---
+<!DOCTYPE html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <Head title={content.title} description={content.description} />
+    <SocialMetaTag title={content.title} description={content.description} />
+    <Theme />
+  </head>
+        <slot />
+</html>

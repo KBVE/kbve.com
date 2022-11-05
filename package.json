@@ -15,6 +15,7 @@
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/sitemap": "^1.0.0",
     "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.7",
     "astro": "^1.4.0",
     "astro-compress": "1.0.6",
     "sass": "^1.52.2"

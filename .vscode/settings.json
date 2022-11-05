@@ -48,6 +48,7 @@
       "netplan",
       "nftables",
       "nmap",
+      "nodeport",
       "Nosniff",
       "onboot",
       "opnsense",

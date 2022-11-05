@@ -15,11 +15,11 @@
     "baseUrl": ".",
     "paths": {
         "@c/*": ["src/components/*"],
-        "@l/*": ["src/layouts/"],
-        "@s/*": ["src/styles"],
+        "@l/*": ["src/layouts/*"],
+        "@s/*": ["src/styles/*"],
         "@components/*": ["src/components/*"],
-        "@layout/*": ["src/layouts/"],
-        "@styles/*": ["src/styles"]
+        "@layout/*": ["src/layouts/*"],
+        "@styles/*": ["src/styles/*"]
     }
   }
 }
