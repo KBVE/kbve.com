@@ -1,4 +1,4 @@
-const postImportResult = import.meta.glob('./_menu/*.md', { eager: true });
+const postImportResult = import.meta.glob('./_menu/_footer_menu/*.md', { eager: true });
 const posts = Object.values(postImportResult);
 var counterId = 0;
 
