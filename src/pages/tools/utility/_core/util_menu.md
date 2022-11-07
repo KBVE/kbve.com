@@ -28,3 +28,7 @@ description: Menu generation for cross platform services.
 
   - The id will be a generic count, status would be a boolean, title / description of the link, href being the location, icon representing how it looks, target being new tab and tags.
   - Status would default to false? Allowing anyone to enable via a git edit.
+
+- 11/7/2022 - Menu JSON Configuration
+
+  - Okay we could create a collection of menu items, placed under _menu, and then assign the locations for the menu via tags? Thus the final jsons would parse through the menus and enable them for the certain areas based upon the tags? Hmmm. This might be still be a work in progress but I think it makes sense for now.

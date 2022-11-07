@@ -1,23 +1,30 @@
-const postImportResult = import.meta.glob('./_menu/_footer_menu/*.md', { eager: true });
+let menu = "sub";
+
+const postImportResult = import.meta.glob('./_menu/*.md', { eager: true });
 const posts = Object.values(postImportResult);
-var counterId = 0;
 
 export const get = async () => {
-  const json = JSON.stringify(
-  posts.map((p) => {
-    counterId++;
-      return {
-        id: counterId,
-        status: p.frontmatter.status,
-        title: p.frontmatter.title,
-        description: p.frontmatter.description,
-        href: p.frontmatter.href,
-        icon: p.frontmatter.icon,
-        target: p.frontmatter.target,
-        tags: p.frontmatter.tags
-      };
+  const json = JSON.stringify((
+  posts.map((p) =>  {
+      
+      if((p.frontmatter.tags.indexOf(menu) !== -1) ? true : false)
+            return {
+              status: p.frontmatter.status,
+              title: p.frontmatter.title,
+              description: p.frontmatter.description,
+              href: p.frontmatter.href,
+              icon: p.frontmatter.icon,
+              target: p.frontmatter.target,
+              tags: p.frontmatter.tags
+            }
+            else  {
+              return {
+                status: false
+              };
+            }
+        
     })
-  );
+  ));
   return {
     body: json
   }
