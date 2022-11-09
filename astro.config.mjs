@@ -29,7 +29,7 @@ export default defineConfig({
   sitemap({
     customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"]
   }), mdx(), react(),
-  //compress(), 
+  compress(), 
   prefetch({
     throttle: 20
   }), tailwind(), alpinejs(), partytown({
