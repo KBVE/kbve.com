@@ -7,4 +7,5 @@ icon: rocket
 target: false
 tags:
 - project
+- main
 ---

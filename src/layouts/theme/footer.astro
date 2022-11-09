@@ -1,5 +1,10 @@
 ---
 /// Footer
+import { Icon } from "astro-icon";
+
+const footer_data = await fetch("https://kbve.com/tools/utility/footer_menu.json").then((response) =>  response.json());
+const footer_main_menu_data = await fetch("https://kbve.com/tools/utility/main_menu.json").then((response) =>  response.json());
+const footer_sub_menu_data = await fetch("https://kbve.com/tools/utility/sub_menu.json").then((response) =>  response.json());
 ---
 <div class="relative mt-16 bg-deep-purple-accent-400">
     <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400" preserveAspectRatio="none" viewBox="0 0 1440 54">
@@ -28,62 +33,41 @@
         </div>
         <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
           <div>
-            <p class="font-semibold tracking-wide text-teal-accent-400">
-              Category
+            <p class="font-semibold tracking-wide gradient-text">
+              Footer
             </p>
             <ul class="mt-2 space-y-2">
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">News</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">World</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Games</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">References</a>
-              </li>
+              {footer_data.map((link) => {
+                if(link.status){
+                       return (<><li><a class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400" href={link.href}>
+                                  {link.title}
+                                  </a></li></>)
+                  
+                  }})}
             </ul>
           </div>
           <div>
-            <p class="font-semibold tracking-wide gradient-text">Cherry</p>
+            <p class="font-semibold tracking-wide gradient-text">MainMenu</p>
             <ul class="mt-2 space-y-2">
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Web</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">eCommerce</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Business</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Entertainment</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Portfolio</a>
-              </li>
+              {footer_main_menu_data.map((link) => {
+                if(link.status){
+                       return (<><li><a class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400" href={link.href}>
+                                  {link.title}
+                                  </a></li></>)
+                  
+                  }})}
             </ul>
           </div>
           <div>
-            <p class="font-semibold tracking-wide gradient-text">Apples</p>
+            <p class="font-semibold tracking-wide gradient-text">SubMenu</p>
             <ul class="mt-2 space-y-2">
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Media</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Brochure</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Nonprofit</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Educational</a>
-              </li>
-              <li>
-                <a href="/" class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Projects</a>
-              </li>
+              {footer_sub_menu_data.map((link) => {
+                if(link.status){
+                       return (<><li><a class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400" href={link.href}>
+                                  {link.title}
+                                  </a></li></>)
+                  
+                  }})}
             </ul>
           </div>
           <div>

@@ -7,4 +7,5 @@ icon: bank
 target: false
 tags:
 - legal
+- footer
 ---

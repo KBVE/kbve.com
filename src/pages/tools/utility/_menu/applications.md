@@ -7,4 +7,5 @@ icon: android
 target: false
 tags:
 - application
+- main
 ---
