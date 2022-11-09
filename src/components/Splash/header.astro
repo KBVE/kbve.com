@@ -5,17 +5,20 @@ import KBVEL from "@c/Branding/KBVEL";
 import KBVELogo from "@c/Branding/KBVELogo";
 
 const navItems = [
-  { title: "Applications", url: "#features" },
-  { title: "Assets", url: "#compatibility" },
-  { title: "Projects", url: "#showcase" },
+  { title: "Applications", url: "#applications" },
+  { title: "Assets", url: "#assets" },
+  { title: "Projects", url: "#projects" },
 ];
 ---
-
+<!-- <header
+  id="page-header"
+  class="absolute bottom-0 z-50 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
+> -->
 <header
   id="page-header"
-  class="absolute bottom-0 z-10 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
->
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
+  class="fixed-header absolute top-0 z-50 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
+> 
+  <a class="flex items-center gap-3 hover:!text-default" href="/">
     <h1 class="sr-only">KBVE</h1>
     <KBVEL />
   </a>
@@ -102,10 +105,10 @@ const navItems = [
   openNavButton.addEventListener("click", openMenu);
   closeNavButton.addEventListener("click", closeMenu);
 
-  document.addEventListener("scroll", () => {
-    const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-    header.classList.toggle("fixed-header", d < 0);
-  });
+  // document.addEventListener("scroll", () => {
+  //   const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+  //   header.classList.toggle("fixed-header", d < 0);
+  // });
 
   menu.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {

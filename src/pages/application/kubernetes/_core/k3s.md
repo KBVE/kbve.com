@@ -40,9 +40,11 @@ tags:
   - Verification
     - Location for k3s (after install)
       - organic location -> : `/var/lib/rancher/k3s`
-    - Ingress
-      - The default ingress will be Traefik and the yaml will be located at:
-        - `/var/lib/rancher/k3s/server/manifests/traefik.yaml`
+    - Ingress 
+      The default ingress will be Traefik and the yaml will be located at:
+      ```shell
+      cd /var/lib/rancher/k3s/server/manifests/traefik.yaml
+      ```
         - Access might require `root`.
 
 ## k3s Agent
@@ -51,6 +53,4 @@ tags:
   - Master Token
     - Before the agents can connect, they will need a token from the master, which can be obtained from below:
 
-      - ```shell
-         
-        ```
+

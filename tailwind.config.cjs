@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: {
-          files: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue,md,mdx}'],
+          files: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue,mdx,md}'],
           // transform: {
           //   mdx: (content) => {
           //     return remark().process(content)
@@ -35,5 +35,9 @@ module.exports = {
   corePlugins: {
     fontSize: false,
   },
-  plugins: [require("tailwindcss-fluid-type")],
+  plugins: [
+    require("tailwindcss-fluid-type"),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
 };

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7f5e7e5fd2d4e27a",
+        "id": "951ef86fcbc6d387",
         "type": "tabs",
         "children": [
           {
-            "id": "05d25086098c354d",
+            "id": "a416440795fe749e",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -16,8 +16,21 @@
               "state": {},
               "pinned": true
             }
+          },
+          {
+            "id": "90e589d2eb223761",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/pages/application/webserver/_core/crt.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -46,7 +59,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#kubernetes",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -63,8 +76,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -84,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/pages/application/webserver/_core/crt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "src/pages/application/webserver/_core/crt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +135,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/pages/application/webserver/_core/crt.md"
+              }
             }
           }
         ],
@@ -131,10 +147,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "3af79f47899e885b",
+  "active": "90e589d2eb223761",
   "lastOpenFiles": [
     "src/pages/application/docker/_core/docker_cheatsheet.md",
     "application/zsh.md",

@@ -16,7 +16,7 @@ tags:
 ### Kubernetes NFS
 
 - External Provider
-  - <https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner>
+  - [NFS SubDir](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner)
 
 - CSI-Driver-NFS
-  - <https://github.com/kubernetes-csi/csi-driver-nfs>
+  - [CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs)

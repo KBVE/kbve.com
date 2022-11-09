@@ -1,0 +1,39 @@
+---
+//* Older Astro
+import MainHead from "@c/MainHead.astro";
+import Footer from "@c/Footer";
+import Nav from "@c/Nav";
+import AppIndex from "@c/AppIndex";
+
+
+const apps = (await Astro.glob("./**/**/*.mdx")).filter(
+  ({ frontmatter }) => !!frontmatter.publishDate
+);
+
+// .sort(
+// 	(a, b) =>
+// 		new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+// );
+---
+
+<html lang="en">
+  <head>
+    <MainHead
+      title="Application Database | KBVE"
+      description="Learn about various applications through guides, cheat sheets and tutorials! The database is always updating and changing, feel free to help out."
+    />
+    <style lang="scss">
+      .grid {
+        display: grid;
+        grid-gap: 3rem;
+      }
+    </style>
+  </head>
+  <body style={{ paddingTop: "2rem" }}>
+    <Nav client:only="react" />
+      <div class="wrapper">
+        <AppIndex apps={apps} client:only="react" />
+      </div>
+    <Footer client:only="react" />
+  </body>
+</html>

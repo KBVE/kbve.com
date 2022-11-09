@@ -13,6 +13,9 @@ import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
+import partytown from "@astrojs/partytown";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://kbve.com",
   markdown: {
@@ -29,7 +32,12 @@ export default defineConfig({
   //compress(), 
   prefetch({
     throttle: 20
-  }), tailwind(), alpinejs()],
+  }), tailwind(), alpinejs(), partytown({
+    // dataLayer.push as a forwarding-event.
+    config: { 
+      forward: ["dataLayer.push"] 
+    },
+  })],
   // Vite
 
   vite: {
