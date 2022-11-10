@@ -13,7 +13,6 @@ description: Resources and reference guides for Terraform
 
 - [Terraform Scalable Self Hosted Github Action](https://github.com/philips-labs/terraform-aws-github-runner)
 
-
 ### Wrapper
 
 - [PreTF](https://github.com/raymondbutcher/pretf)
