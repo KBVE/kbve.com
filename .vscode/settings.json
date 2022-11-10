@@ -39,6 +39,7 @@
       "Hubspot",
       "idrac",
       "kbve",
+      "kbveapp",
       "kubernetescrd",
       "listsnapshot",
       "middlewares",
@@ -85,6 +86,7 @@
       "tsla",
       "vidstack",
       "vmbr",
+      "webgl",
       "withastro",
       "xtrabackup",
       "ytplayer"

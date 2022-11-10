@@ -5868,6 +5868,11 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-unity-webgl@^9.2.1:
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/react-unity-webgl/-/react-unity-webgl-9.2.1.tgz#148dd54081a1fa17e4908f1637bb6d78f1f33852"
+  integrity sha512-FfnzjWT3hwlRe6aKzYAvjo5OFVw7eJJWfsnB884a+5AsBF9VhLaJdQADNlQL3wPfmfpQ4zgq07G56tGfZSSNNg==
+
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
