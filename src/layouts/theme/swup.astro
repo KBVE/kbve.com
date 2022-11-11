@@ -4,6 +4,7 @@ import ShacoBox from "@c/Element/Button/Floater/Contact/Contact.astro";
 import GearBox from "@c/Element/Button/Floater/Settings/Settings.astro";
 import Nav from "@l/theme/nav.astro";
 import Footer from "@l/theme/footer.astro";                  //  Import Footer -> Foot
+import { Spa } from "astro-spa";
 
 ---
 <script>
@@ -17,7 +18,7 @@ import Footer from "@l/theme/footer.astro";                  //  Import Footer -
 // 	import SwupBodyClassPlugin from '@swup/body-class-plugin';
 // 	import SwupDebugPlugin from '@swup/debug-plugin';
 // 	const swup = new Swup({
-// 		plugins: [new SwupScriptsPlugin({}), new SwupA11yPlugin(), new SwupHeadPlugin(), new SwupSlideTheme(), new SwupScrollPlugin(), new SwupPreloadPlugin(), new SwupBodyClassPlugin(), new SwupDebugPlugin({
+// 		plugins: [new Swup52ScriptsPlugin({}), new SwupA11yPlugin(), new SwupHeadPlugin(), new SwupSlideTheme(), new SwupScrollPlugin(), new SwupPreloadPlugin(), new SwupBodyClassPlugin(), new SwupDebugPlugin({
 //   globalInstance: true
 // }),],
 // 	});
@@ -28,8 +29,10 @@ import Footer from "@l/theme/footer.astro";                  //  Import Footer -
 <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
 <Nav />
 <main class="content" id="swup">
-<slot />
+  <slot />
 </main>
+<Spa containerSelector="#swup" />
+
 <ShacoBox />
 <GearBox  />
 <footer class="px-4 divide-y divide-gray-400 dark:bg-gray-800 dark:text-gray-100">

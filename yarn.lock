@@ -1576,6 +1576,11 @@ astro-icon@^0.8.0:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
+astro-spa@^1.3.9:
+  version "1.3.9"
+  resolved "https://registry.yarnpkg.com/astro-spa/-/astro-spa-1.3.9.tgz#507e1e57781e1f974edc4e02cc6806b6dfb20f8d"
+  integrity sha512-VmXMUsKNHA1gjJYq/SO5EqRAmqifOhBOpOAaXnlH5skgTy0tq9fwANJhh1LJpaahPBGqXAaoIw6Gdq/SBRz9Ww==
+
 astro@1.0.0-rc.1:
   version "1.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0-rc.1.tgz#cb0a19e8592b58e604ae8c738b77b5d325131c26"
