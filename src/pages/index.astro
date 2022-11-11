@@ -1,6 +1,6 @@
 ---
-import Core from "@l/theme/core.astro";					      ///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";		///	[SWUP]
+import Core from "@l/theme/core.astro";					                            ///	[IMPORT]  ->  [CORE]
+import SWUP from "@l/theme/swup.astro";		                                  ///	[SWUP]    ->  Currently facing {hydration} issues #102
 
 const title = "KBVE.com - Gaming, Media, FinTech, Coders";
 const description = "KiloByte Virtual Enterprise is a collection of users that are straight memers";	         
@@ -11,16 +11,16 @@ import Features from "@c/Element/Features/Generic/features.astro";
 
 /// [SCENE] -> [START]
 /// WIP
-/// import Splash from "@c/Splash/splash.astro";
-import Intro from "@c/Scene/Intro/intro.astro";
-import Assets from "@c/Scene/Assets/Assets.astro";
-import Applications from "@c/Scene/Applications/Applications.astro";
+/// import Splash from "@c/Splash/splash.astro";                            /// [SPLASH]  ->  Removed for the time being, as I fix through [SWUP] -> {hydration} issue.
+import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]   ->  <Intro> should be in vanillaJS to avoid hydration issues.
+import Assets from "@c/Scene/Assets/Assets.astro";                          /// [ASSET]   ->  <Asset> uses hydration, which will break as of right now
+import Applications from "@c/Scene/Applications/Applications.astro";        /// [APP]     ->  <APP>   Needs a rewrite soon as well.
 ---
 <Core content={content}>
         <SWUP>
           <div class="px-8 py-24 space-y-8">
           <Intro />
-          <Assets  />
+          <Assets />
           <Features />
           <Applications />
           </div>
