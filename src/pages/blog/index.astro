@@ -1,11 +1,11 @@
 ---
 /// [WIP]
-/// Main Asset Module
+/// Main Blog Page
 import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
 import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
 /// {data}
 const data = {
-	title: "KBVE.com - Asset Module", description: "Asset Class - Collection of Assets"}	
+	title: "KBVE.com - Blog", description: "Latest Blog Posts from KBVE"}	
 const { content = data } = Astro.props;		
 const apps = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
 
