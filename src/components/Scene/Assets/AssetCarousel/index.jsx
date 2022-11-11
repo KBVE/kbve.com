@@ -136,7 +136,7 @@ const Carousel = () => {
                               <div className="flex items-center space-x-2">
                                 <img src={resource.img} alt="" className="object-cover object-center w-8 h-8 rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-700" />
                                 <div className="-space-y-1">
-                                <a href={resource.slug}>
+                                <a rel="prefetch" href={resource.slug}>
                                   <h2 className="text-sm font-semibold leading-none">{resource.title}</h2>                                  </a>
 
                                   <span className="inline-block text-xs leading-none dark:text-gray-400">{resource.category}</span>
