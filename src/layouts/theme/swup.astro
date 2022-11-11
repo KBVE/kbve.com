@@ -5,8 +5,6 @@ import GearBox from "@c/Element/Button/Floater/Settings/Settings.astro";
 import Nav from "@l/theme/nav.astro";
 import Footer from "@l/theme/footer.astro";                  //  Import Footer -> Foot
 
-const { swupoption = "" } = Astro.props;
-///  [SWUP] -> {Init}
 ---
 <script>
 	import Swup from 'swup'
@@ -23,28 +21,13 @@ const { swupoption = "" } = Astro.props;
   globalInstance: true
 }),],
 	});
-	// Removal of contentReplaced for now. ~ 11/10/2022
-	// swup.on('contentReplaced', function () {
-	// 		// document.querySelectorAll('[data-swup]').forEach(function (container) {
-			
-	// 		// });
-	// 	});
+
 </script>
 
-<style>
-	.transition-fade {
-	transition: 0.4s;
-	opacity: 1;
-	}
-
-	html.is-animating .transition-fade {
-	opacity: 0;
-	}
-</style>
 
 
 <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
-    <Nav />
+<Nav />
 <main class="content" id="swup">
 <slot />
 </main>

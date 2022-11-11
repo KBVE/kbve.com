@@ -1,11 +1,11 @@
 ---
-title: SWUP
+title: SWUP Framework
 description: Swup is a website transition library that makes it easy, quick and fast to render pages
 tags:
 - javascript
 ---
 
-## SWUP
+## SWUP Framework
 
 ## SWUP Install
 
