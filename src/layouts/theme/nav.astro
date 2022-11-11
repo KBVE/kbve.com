@@ -26,7 +26,7 @@ const navItems = [
           {
             navItems.map(({ title, url }) => (
               <li>
-                <a class="text-sm" href={url}>
+                <a class="text-sm" rel="prefetch" href={url}>
                   {title}
                 </a>
               </li>
@@ -66,7 +66,7 @@ const navItems = [
               {
                 navItems.map(({ title, url }) => (
                   <li>
-                    <a class="block py-4 text-xl text-center" href={url}>
+                    <a class="block py-4 text-xl text-center" rel="prefetch" href={url}>
                       {title}
                     </a>
                   </li>
