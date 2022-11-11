@@ -30,9 +30,10 @@ export default defineConfig({
     customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"]
   }), mdx(), react(),
   compress(), 
-  prefetch({
-    throttle: 20
-  }), tailwind(), alpinejs(), partytown({
+  // prefetch({
+  //   throttle: 20
+  // }), 
+  tailwind(), alpinejs(), partytown({
     // dataLayer.push as a forwarding-event.
     config: { 
       forward: ["dataLayer.push"] 
