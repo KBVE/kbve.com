@@ -1,35 +1,19 @@
 ---
-import "../../styles/index.css";                               //  Import CSS Tailwind
-import Head from "@c/Header/Head.astro";                   //  Import {Header -> Head}
-import Theme from "@c/Header/Theme.astro";                  //  Import Header -> Theme
-import SocialMetaTag from "@c/SocialMedia/MetaTag.astro";   //  Import SocialMedia -> MetaTag
+import Core from "@l/theme/core.astro";					                            ///	[IMPORT]  ->  [CORE]
+import SWUP from "@l/theme/swup.astro";		                                  ///	[SWUP]    ->  Currently facing {hydration} issues #102
 
-/// WIP
-import AppIndex from "@c/AppIndex";
+const title = "KBVE.com - Applications";
+const description = "Collection of Applications from KBVE";	         
+const content = [title, description];
 
-import Assets from "@c/Scene/Assets/Assets.astro";
-import Applications from "@c/Scene/Applications/Applications.astro";
-import SWUP from "@c/Action/Swup/full_swup.astro";
 
 const apps = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
 
 
-// .sort(
-// 	(a, b) =>
-// 		new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
-// );
 ---
-<!DOCTYPE html>
-<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
-    <head>
-      <Head />
-      <SocialMetaTag title="KBVE.com - Gaming, Media, FinTech, Coders" description="KiloByte Virtual Enterprise is a collection of users that are straight memers" />
-      <Theme />
-    </head>
-
-    <SWUP>
+<Core content={content}>
+  <SWUP>
       <div class="px-8 py-24 space-y-8">
-        <AppIndex apps={apps} client:only="react" />
       </div>
-    </SWUP>
-</html>
+  </SWUP>
+</Core>
