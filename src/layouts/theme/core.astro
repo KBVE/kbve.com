@@ -12,5 +12,7 @@ const { content, title, description } = Astro.props;                     //  Imp
     <SocialMetaTag title={title || content.title} description={title || content.description} />
     <Theme />
   </head>
+  <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
         <slot />
+        </body>
 </html>
