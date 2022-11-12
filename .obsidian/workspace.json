@@ -23,7 +23,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_multiplayer.md",
+                "file": "src/pages/project/roguejester/index.mdx",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a2b7ba951454b994",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md",
                 "mode": "source",
                 "source": false
               }
@@ -36,18 +48,6 @@
               "type": "markdown",
               "state": {
                 "file": "src/pages/application/unity/_core/unity_shader.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2d59ba837ada0e88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_shader.md",
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_shader.md",
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_shader.md"
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md"
               }
             }
           }
@@ -171,17 +171,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "5645977ba74c135a",
+  "active": "a2b7ba951454b994",
   "lastOpenFiles": [
-    "src/pages/application/unity/_core/unity_multiplayer.md",
     "src/pages/application/unity/_core/unity_shader.md",
+    "src/pages/project/roguejester/_core/roguejester_journal.md",
+    "src/pages/project/ar/index.mdx",
+    "src/pages/project/roguejester/index.mdx",
+    "src/pages/application/unity/_core/unity_multiplayer.md",
+    "README.md",
     "src/pages/application/unity/_core/unity_assets.md",
     "src/pages/application/unity/_core/unity.md",
     "src/pages/application/unity/_core/unity_notes.md",
-    "src/pages/application/unity/index.mdx",
-    "README.md",
-    "src/pages/application/javascript/_core/react_unity.md",
-    "src/pages/application/unity/_core/unity_error.md",
-    "src/pages/application/webserver/_core/crt.md"
+    "src/pages/application/unity/index.mdx"
   ]
 }
