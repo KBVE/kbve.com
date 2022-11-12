@@ -20,3 +20,30 @@
 • New Weapons Added
 • New Classes Added(Each class got unique ability)
 • SFX GunShots(NO BGX)
+
+
+## Boundary
+
+- h0lybyte: Level3
+- ZaneRage: Everything Else
+
+## Skybox
+
+- Asset: https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-volume-2-nebula-3392
+  ZaneRage: Adding the Asset
+
+## Hierarchy 2
+
+- Hierarchy 2 - https://assetstore.unity.com/packages/tools/utilities/hierarchy-2-166483
+
+## Header
+
+-  Right click and create empty
+-  Name it below : (Replace HeaderName with the name you would want)
+   
+```shell
+---> HeaderName
+```
+
+- Should create a header!
+
