@@ -35,7 +35,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_assets.md",
+                "file": "src/pages/application/unity/_core/unity_shader.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_assets.md",
+                "file": "src/pages/application/unity/_core/unity_shader.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_assets.md",
+                "file": "src/pages/application/unity/_core/unity_shader.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/pages/application/unity/_core/unity_assets.md"
+                "file": "src/pages/application/unity/_core/unity_shader.md"
               }
             }
           }
@@ -171,16 +171,13 @@
     "direction": "horizontal",
     "width": 300
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
   "active": "5645977ba74c135a",
   "lastOpenFiles": [
     "src/pages/application/unity/_core/unity_multiplayer.md",
+    "src/pages/application/unity/_core/unity_shader.md",
     "src/pages/application/unity/_core/unity_assets.md",
     "src/pages/application/unity/_core/unity.md",
     "src/pages/application/unity/_core/unity_notes.md",
-    "src/pages/application/unity/_core/unity_shader.md",
     "src/pages/application/unity/index.mdx",
     "README.md",
     "src/pages/application/javascript/_core/react_unity.md",
