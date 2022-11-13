@@ -7,7 +7,7 @@ export const get = async () => {
   const json = JSON.stringify((
   posts.map((p) =>  {
       
-      if((p.frontmatter.tags.indexOf(menu) !== -1) ? true : false)
+      if((p.frontmatter.tags.indexOf(menu) !== -1) ? true : false) {
             return {
               status: p.frontmatter.status,
               title: p.frontmatter.title,
@@ -17,6 +17,7 @@ export const get = async () => {
               target: p.frontmatter.target,
               tags: p.frontmatter.tags
             }
+      }
             else  {
               return {
                 status: false

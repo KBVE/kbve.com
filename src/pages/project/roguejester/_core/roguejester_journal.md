@@ -26,6 +26,16 @@ description: Journal for the Project
 - [x] ~Map out the ideas~
 - [ ] Update SkyBox
 - [ ] h0lybyte: Integrate the React with Unity
+- [ ] Player Level Up System(max level TBD)
+- [ ] HP Getting Upgraded on Level
+- [ ] Added Currency inside game(killed enemies drop currency)
+- [ ] Currency is saved trought out scene
+- [ ] Added + 2 more levels(total levels 4)
+- [ ] User Interface all the values are displayed on the screen or in the menu
+- [ ] Main Menu (Modern Menu Designed)much more fun to interact with!
+- [ ] Enemy Ai Improved
+- [ ] Upgrade System
+- [ ] Boss Fight
 
 ## Boundary
 
