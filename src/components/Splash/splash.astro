@@ -22,17 +22,18 @@ const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
 const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
 const pngSrcset = png.map(({ srcset }) => srcset).join(",");
 ---
-
-<section class="relative h-full bg-black">
+<section class="relative h-full  bg-black">
   <Starfield />
   <!-- <Galaxia /> -->
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
+    <!-- <HeroImage /> -->
   </div>
   <div class="relative grid h-full sm:grid-cols-2 place-items-center">
+
     <h2
       class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
+    >    <div class="py-6 space-y-8"></div>
+
       <center><KBVELogo /></center>
       <div
         class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
