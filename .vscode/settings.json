@@ -68,6 +68,7 @@
       "redirections",
       "redirectscheme",
       "replicants",
+      "roguejester",
       "rulesets",
       "rustup",
       "SAMEORIGIN",
@@ -91,7 +92,8 @@
       "webgl",
       "withastro",
       "xtrabackup",
-      "ytplayer"
+      "ytplayer",
+      "zanerage"
     ],
     "files.exclude": {
       "public/archive": false,
