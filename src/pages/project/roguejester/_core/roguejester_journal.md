@@ -60,3 +60,4 @@ description: Journal for the Project
 
 - 11/12/2022
   - ZaneRage and h0lybyte did the basics the idea / concept.
+  - New asset models for the 3D robot soldiers.
