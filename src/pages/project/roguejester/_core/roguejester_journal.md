@@ -42,19 +42,6 @@ description: Journal for the Project
 - h0lybyte: Level3
 - ZaneRage: Everything Else
 
-## Hierarchy 2
-
-- Hierarchy 2 - <https://assetstore.unity.com/packages/tools/utilities/hierarchy-2-166483>
-
-## Header
-
-- Right click and create empty
-- Name it below : (Replace HeaderName with the name you would want)
-
-```shell
----> HeaderName
-```
-
 - Should create a header!
 
 ## Journal
@@ -62,6 +49,14 @@ description: Journal for the Project
 - Collective thoughts, concepts and ideas for the RogueJester FPS.
 
 ### Patch 1.2.x
+
+- 11/15/2022
+  - Had an issue with the basing earlier in the day. We will split the branches further, to avoid conflicts and issues when rebasing / merging branches.
+  - When migrating from the public to private repo, there were some issues with `secrets` and CI/CD, these issues are still open and should be resolved this week.
+
+- 11/14/2022
+  - Improving the UI/UX
+  - Expanding Character Stats
 
 - 11/13/2022
   - Start expanding the assets inside the game and work with some core logic.
