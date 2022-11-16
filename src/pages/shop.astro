@@ -1,60 +1,14 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '@c/Nav';
+///	[IMPORT]
+import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";					///	[SWUP]
+
 import Sellix from '@c/Action/Sellix';
+
 ---
-
-<html lang="en">
-	<head>
-		<MainHead title="Shop | KBVE.com" description="KBVE Shop" />
-		<style lang="scss">
-			.heroImg {
-				max-height: 24rem;
-                position: relative;
-				overflow: hidden;
-                background-image: url('https://images.unsplash.com/photo-1661638577145-c0b5fac9dba5?auto=format&fit=crop&w=1400&h=350&q=75');
-                background-size: cover;
-
-			}
-
-            h1.title {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0;
-                color: white;
-                flex-direction: column;
-                font-size: var(--f-u7);
-                font-weight: 900;
-                text-transform: uppercase;
-                text-shadow:
-                    3px 3px 0 #000,
-                    -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
-                letter-spacing: 0.0625em;
-                line-height: 10;
-            }
-
-            
-			.bio {
-				font-size: var(--f-u1);
-				line-height: 2;
-			}
-		</style>
-	</head>
-	<body>
-		<Nav client:only="react" />
-		<div class="wrapper">
-            <div class="heroImg">
-                <h1 class="title">SHOP</h1>
-
-			</div>
+<Core title="KBVE Login" description="Log into onto our platform!">
+<SWUP>
+	<div class="px-8 py-24 space-y-8" id="root">
 			<div class="bio wrapper wrapper__readable mt8">
 				<p>
 					Purchase various products and services from KBVE Shop!
@@ -66,11 +20,6 @@ import Sellix from '@c/Action/Sellix';
 				
                 <Sellix lib={true} />
 			</div>
-		</div>
-		<Footer />
-
-        <!-- Start of Sellix Embed Code  -->
-
-        <!-- End of Sellix Embed Code -->
-	</body>
-</html>
+	</div>	
+</SWUP>
+</Core>

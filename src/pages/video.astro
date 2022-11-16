@@ -1,83 +1,23 @@
 ---
-// Main Templates
-import MainHead from '@c/MainHead.astro';
-import Footer from '@c/Footer';
-import Nav from '@c/Nav';
+///	[IMPORT]
+import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";					///	[SWUP]
 
 // Components
 import VideoComponent from '@c/Element/Video';
 
 ---
-
-<html lang="en">
-	<head>
-        <MainHead title="Video | KBVE.com" description="KBVE Video Page!" />
-        
-        <VideoComponent header={true} />
-
-        <style lang="scss">
-			.heroImg {
-                max-height: 24rem;
-                position: relative;
-				overflow: hidden;
-                background-image: url('https://images.unsplash.com/photo-1534961165765-5c9795af911b?auto=format&fit=crop&w=1400&h=350&q=75');
-                background-size: cover;
-			}
-
-            
-            h1.title {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0;
-                color: white;
-                flex-direction: column;
-                font-size: var(--f-u7);
-                font-weight: 900;
-                text-transform: uppercase;
-                text-shadow:
-                    3px 3px 0 #000,
-                    -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
-                letter-spacing: 0.0625em;
-                line-height: 10;
-            }
-
-
-			.bio {
-				font-size: var(--f-u1);
-				line-height: 2;
-			}
-		</style>
-    </head>
-	<body>
-        <Nav client:only="react" />
-        <div class="wrapper">
-			<div class="heroImg">
-                <h1 class="title">Video</h1>  
-			</div>
+<Core title="Video | KBVE.com" description="Work in Progress">
+<SWUP>
+	<div class="px-8 py-24 space-y-8" id="root">
 			<div class="bio wrapper wrapper__readable mt8">
 				<p>
-                    Video Component
+					  Video Component
 				</p>
-				<p>
-					Embed would go in here.
-				</p>
-				<p>
-                    <!-- <VideoComponent display={true} src="youtube" id="DYlRLGVcblM" description="Videos" /> -->
-                    <VideoComponent display={true} iframe={true} src="yt" id="DYlRLGVcblM" height="400px" width="100%"  description="Tibi" />
-				</p>
-				<p>
-				</p>
+
+                                    <VideoComponent display={true} iframe={true} src="yt" id="DYlRLGVcblM" height="400px" width="100%"  description="Tibi" />
+
 			</div>
-
-        </div>
-
-        <Footer />
-    </body>
-</html>
+	</div>	
+</SWUP>
+</Core>

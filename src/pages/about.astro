@@ -1,40 +1,13 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '@c/Nav';
+///	[IMPORT]
+import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";					///	[SWUP]
+
+import Logout from "@c/Scene/Authentication/Logout";		/// [Login]
 ---
-
-<html lang="en">
-	<head>
-		<MainHead title="About | KBVE.com" description="About KBVE.com" />
-		<style lang="scss">
-			.heroImg {
-				max-height: 24rem;
-				object-fit: cover;
-				overflow: hidden;
-
-				img {
-					width: 100%;
-				}
-			}
-
-			.bio {
-				font-size: var(--f-u1);
-				line-height: 2;
-			}
-		</style>
-	</head>
-	<body style={{ paddingTop: '2rem' }}>
-		<Nav client:only="react" />
-		<div class="wrapper">
-			<h1>About KBVE.com</h1>
-			<div class="heroImg">
-				<img
-					width="1400"
-					height="350"
-					src="https://images.unsplash.com/photo-1554290712-e640351074bd?auto=format&fit=crop&w=1400&h=350&q=75"
-				/>
-			</div>
+<Core title="KBVE Login" description="Log into onto our platform!">
+<SWUP>
+	<div class="px-8 py-24 space-y-8" id="root">
 			<div class="bio wrapper wrapper__readable mt8">
 				<p>
 					KiloByte Virtual Enterprise is a consultancy firm that designs applications and modifications within the realm of machine learning, blockchain, autonomous operations and fintech.
@@ -91,7 +64,6 @@ Contact us for a custom quote! We accept all currency, [(]Fai like USD, EU) AGC,
 				Get Incoming and outgoing messages in the form of conversation.
 				</p>				
 			</div>
-		</div>
-		<Footer />
-	</body>
-</html>
+	</div>	
+</SWUP>
+</Core>

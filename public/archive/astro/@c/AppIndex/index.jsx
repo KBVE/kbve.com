@@ -13,8 +13,8 @@ const AppIndex = ({ apps }) => {
   const [searchString, setSearchString] = React.useState("");
 
   const filteredApps = React.useMemo(() => {
-    if (!apps) return []
-    if (!searchString) return _.sortBy(apps, ['frontmatter.title'])
+    if (!apps) { return [] }
+    if (!searchString) { return _.sortBy(apps, ['frontmatter.title']) }
 
     return new Fuse(_.sortBy(apps, ['frontmatter.title']), {
       includeScore: false,
@@ -40,7 +40,7 @@ const AppIndex = ({ apps }) => {
         </Typography>
         <Paper>
           <TextField
-            key={`application-search-field`}
+            key={"application-search-field"}
             placeholder="Search Applications..."
             value={searchString}
             onChange={(e) => setSearchString(e.target.value)}
