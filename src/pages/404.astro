@@ -5,13 +5,16 @@ const data = {
 	title: "Not Found", description: "Not Found"}		///	[404]		-> Data
 const { content = data } = Astro.props;					///	[Astro Props]
 
+import Lottie from "@c/Action/Lottie/404/404.astro";	///	[Lottie]	-> 404 Animation
+
 ---
 <Core content={content}>
 	<SWUP>
 		<div class="px-4 py-12 space-y-8">
+			<br />
 			<h1>Page Not Found</h1>
 			<p>Not found</p>
-		<br />
+			<Lottie />
 		</div>
 	</SWUP>
 </Core>
