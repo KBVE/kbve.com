@@ -1,9 +1,9 @@
 ---
-name: Update Issues, Reports and Plans
+name: Update/Upgrade Issues, Reports and Plans
 about: Create an update report for any KBVE services.
-title: 'Update: '
+title: '[Update] : [OBJECT] : '
 labels: 0, update, enhancement, security
-assignees: ''
+assignees: 'h0lybyte'
 ---
 
 **Describe the update**
@@ -16,7 +16,7 @@ Include any links / data for the update that must be done.
 
 * * *
 
-**Security risk**
-Are there any major security risks?!
+**Security/Performance risks**
+Are there any major security and/or performance risks?!
 
 * * *
