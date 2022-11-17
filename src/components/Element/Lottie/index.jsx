@@ -1,14 +1,14 @@
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
-
-const Lottie = ({json = null, width = null, height = null, ctl = false}) => {
+const Lottie = ({id = null, json = null, autoplay = true, _kbve_style = false, width = null, height = null, styler = null, ctl = false}) => {
 
     return (<>
         <Player
-    autoplay={true}
+    id={id}
+    autoplay={autoplay}
     loop={true}
     src={json}
-    style={{}}
+    style={{ width: width, height: height}}
     >
     <Controls visible={ctl} buttons={['play', 'repeat', 'frame', 'debug']} />
     </Player>
