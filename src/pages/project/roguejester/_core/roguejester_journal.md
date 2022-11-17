@@ -57,23 +57,3 @@ description: Journal for the Project
 ## Journal
 
 - Collective thoughts, concepts and ideas for the RogueJester FPS.
-
-### Patch 1.2.x
-
-- 11/15/2022
-  - Had an issue with the basing earlier in the day. We will split the branches further, to avoid conflicts and issues when rebasing / merging branches.
-  - When migrating from the public to private repo, there were some issues with `secrets` and CI/CD, these issues are still open and should be resolved this week.
-
-- 11/14/2022
-  - Improving the UI/UX
-  - Expanding Character Stats
-
-- 11/13/2022
-  - Start expanding the assets inside the game and work with some core logic.
-
-### Patch 1.1
-
-- 11/12/2022
-  - ZaneRage and h0lybyte did the basics the idea / concept.
-  - New asset models for the 3D robot soldiers.
-  - Added several more assets to the game!
