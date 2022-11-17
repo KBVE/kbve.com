@@ -32,7 +32,11 @@ description: Journal for the Project
 - [x] Currency is saved trought out scene
 - [ ] Added + 2 more levels(total levels 4)
 - [x] User Interface all the values are displayed on the screen or in the menu
-- [ ] Main Menu (Modern Menu Designed)much more fun to interact with!
+- [x] Main Menu (Modern Menu Designed)much more fun to interact with!
+- [x] LoginSceneDesign
+- [x] MainSceneDesign
+- [x] InGameMenu design and functionality
+- [x] Scaling UI in game for all devices
 - [ ] Enemy Ai Improved
 - [ ] Upgrade System
 - [ ] Boss Fight
@@ -46,6 +50,7 @@ description: Journal for the Project
 - [ ] Main Menu Inventory(player select what items to bring for the next level)
 - [ ] Inventory data values stored in JSON
 - [ ] New vfx for weapons
+- [ ] InventoryDisplaying in Menu
 
 ## Boundary
 

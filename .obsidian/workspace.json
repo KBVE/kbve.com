@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/pages/journal/roguejester/_journal/6.md",
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md",
                 "mode": "source",
                 "source": false
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/pages/journal/roguejester/_journal/6.md",
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/pages/journal/roguejester/_journal/6.md",
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/pages/journal/roguejester/_journal/6.md"
+                "file": "src/pages/project/roguejester/_core/roguejester_journal.md"
               }
             }
           }
@@ -185,15 +185,15 @@
   },
   "active": "4ac8e2fafb286b66",
   "lastOpenFiles": [
-    "src/pages/journal/roguejester/_journal/5.md",
+    "src/pages/application/unity/_core/unity.md",
+    "src/pages/application/unity/_core/unity_assets.md",
+    "src/pages/application/unity/_core/unity_error.md",
     "src/pages/journal/roguejester/_journal/6.md",
+    "src/pages/journal/roguejester/_journal/5.md",
     "src/pages/project/roguejester/_core/roguejester_journal.md",
     "src/pages/project/roguejester/_core/roguejester_assets.md",
-    "src/pages/application/unity/_core/unity.md",
     "src/pages/application/unity/_core/unity_shader.md",
     "src/pages/application/unity/_core/unity_plugins.md",
-    "src/pages/application/unity/_core/unity_notes.md",
-    "src/pages/application/unity/_core/unity_multiplayer.md",
-    "src/pages/application/unity/_core/unity_error.md"
+    "src/pages/application/unity/_core/unity_notes.md"
   ]
 }
