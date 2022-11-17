@@ -1,0 +1,15 @@
+---
+const { id } = Astro.props;
+import _ from "lodash";
+
+let data = await fetch('https://kbve.com/project/unity-webgl.json').then((response) =>  response.json());
+let UnityGame = _.find(data, ['id', id]);
+
+import ReactUnity from ".";
+
+---
+<div class="space-y-4 justify-center">
+    <div class="flex items-center justify-center shadow-2xl bg-offset rounded-2xl">
+        <ReactUnity client:only="react" apps={UnityGame} />
+    </div>
+</div>
