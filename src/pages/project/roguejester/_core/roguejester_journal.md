@@ -24,7 +24,7 @@ description: Journal for the Project
 - [x] ~Create `Concept` Issue Ticket~
 - [x] ~RogueJester - (init) - Start the initialization of RogueJester~
 - [x] ~Map out the ideas~
-- [ ] Update SkyBox
+- [x] Update SkyBox
 - [ ] h0lybyte: Integrate the React with Unity
 - [x] Player Level Up System(max level TBD)
 - [x] HP Getting Upgraded on Level
