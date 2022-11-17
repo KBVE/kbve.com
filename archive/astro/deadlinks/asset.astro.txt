@@ -1,0 +1,112 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Button from '@c/Element/Button/index.jsx';
+import Footer from '../components/Footer/index.jsx';
+import Nav from '@c/Nav';
+
+const { content } = Astro.props;
+---
+
+<html lang={content.lang || 'en'}>
+	<head>
+		<MainHead title={content.title} description={content.description} />
+		<style lang="scss">
+
+			.overlay {
+				background-color: rgba(255, 255, 255, 0.12);
+				// backdrop-filter: blur(80px);
+				// -webkit-backdrop-filter: blur(80px);
+				padding: 16px;
+				border-radius: 16px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+				p {
+				text-align: center;
+				color:  rgb(231, 175, 134);
+				//box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+				}
+			}
+			.hero {
+				padding: 8rem;
+				display: flex;
+				background-color: var(--t-fg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				min-height: 25vw;
+				color: white;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.tag {
+				margin-left: 0.5em;
+				margin-right: 0.5em;
+				text-transform: uppercase;
+
+				&:nth-of-type(1n) {
+					color: var(--c-green);
+				}
+				&:nth-of-type(2n) {
+					color: var(--c-orange);
+				}
+				&:nth-of-type(3n) {
+					color: var(--c-blue);
+				}
+				&:nth-of-type(4n) {
+					color: var(--c-pink);
+				}
+			}
+
+			.title {
+				font-size: var(--f-u10);
+				font-weight: 900;
+				text-transform: uppercase;
+				letter-spacing: 0.0625em;
+				text-shadow:
+					3px 3px 0 #000,
+					-1px -1px 0 #000,  
+					1px -1px 0 #000,
+					-1px 1px 0 #000,
+					1px 1px 0 #000;
+			}
+
+			.leadIn {
+				color: var(--t-bg);
+				background-color: var(--t-fg);
+			}
+
+			.tagline {
+				font-weight: 300;
+				font-size: var(--f-u3);
+				line-height: 1.5;
+			}
+
+			.content {
+				font-size: var(--f-u1);
+				line-height: 2.2;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav client:only="react" />
+		<header style={{ backgroundImage: `url(${content.img})` }} class="hero">
+			<h1 class="title">{content.title}</h1>
+		</header>
+		<div class="leadIn">
+			<div class="wrapper pt8 pb8 mb8 tac">
+				{content.tags.map((t) => <span class="tag">{t}</span>)}
+				<h3 class="tagline">{content.description}</h3>
+			</div>
+		</div>
+		<div class="wrapper wrapper__readable">
+			<div class="content"><slot /></div>
+		</div>
+		<footer class="tac mt6">
+			<a href="/projects">
+				<Button>View More</Button>
+			</a>
+		</footer>
+		<Footer />
+	</body>
+</html>

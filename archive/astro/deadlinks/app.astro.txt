@@ -1,0 +1,356 @@
+---
+// Component Imports
+import Button from "@c/Element/Button";
+import Footer from "@c/Footer";
+import PortfolioPreview from "@c/PortfolioPreview";
+import AppPreview from "@c/AppPreview";
+
+// Import Discord Component
+import Discord from "@c/SocialMedia/Discord";
+
+//  Data Fetching: List all Markdown posts in the repo.
+//  Migrating the older index.astro->{START}
+//  const projects = await Astro.glob("./project/**/**/*.mdx");
+//  const featuredProject = projects[0];
+//  Line 266 -> <PortfolioPreview project={featuredProject} />
+//  End Migration. index.astro->{END}
+
+
+const projects = (await Astro.glob('./project/**/*.mdx'))
+.filter(({ frontmatter }) => !!frontmatter.frontpage)
+.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+
+  
+const assets = (await Astro.glob('./asset/**/*.mdx'))
+.filter(({ frontmatter }) => !!frontmatter.frontpage)
+.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+
+const apps = (await Astro.glob('./application/**/*.mdx'))
+.filter(({ frontmatter }) => !!frontmatter.frontpage)
+.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <MainHead
+      title="KBVE.com - KiloByte VE"
+      description="KBVE.com - Launch the App!"
+    />
+    <style lang="scss">
+      $w-s: 750px;
+
+      .app-root {
+        position: relative;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+
+        @media (min-width: $w-s) {
+          height: 45vw;
+        }
+      }
+
+      .img {
+        display: block;
+        width: 100%;
+        height: auto;
+        // filter: blur(1px);
+      }
+
+      .gradient,
+      .gradient2 {
+        background-image: url("/assets/img/mesh-gradient-2.jpg");
+        background-size: cover;
+        pointer-events: none;
+        mix-blend-mode: color-burn;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      // .gradient2 {
+      // 	mix-blend-mode: multiply;
+      // 	background-size: cover;
+      // }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2rem;
+
+        @media (min-width: $w-s) {
+          padding-left: 4rem;
+        }
+      }
+      .lay {
+				background-color: rgba(255, 255, 255, 0.12);
+				// backdrop-filter: blur(80px);
+				// -webkit-backdrop-filter: blur(80px);
+        padding: 10px;
+				border-radius: 8px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+				p {
+				text-align: center;
+				color:  rgb(231, 175, 134);
+				//box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+				}
+			}
+
+      .flexlay {
+				background-color: rgba(255, 255, 255, 0.12);
+				// backdrop-filter: blur(80px);
+				// -webkit-backdrop-filter: blur(80px);
+        
+				padding: 16px;
+				border-radius: 16px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+				p {
+				text-align: center;
+				color:  rgb(231, 175, 134);
+				//box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+				}
+			}
+      .overlay-inner {
+        background-color: rgba(255, 255, 255, 0.12);
+        // backdrop-filter: blur(80px);
+        // -webkit-backdrop-filter: blur(80px);
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+        p {
+          color: rgba(255, 255, 255, 1);
+          // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .title {
+        font-weight: 900;
+        font-size: var(--f-u8);
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+
+        @media (min-width: $w-s) {
+          font-size: var(--f-u12);
+        }
+
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+
+      .grid {
+        display: grid;
+        grid-gap: 2rem;
+
+        @media (min-width: 1200px) {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
+
+      .sectionTitle {
+        text-align: center;
+        font-weight: 700;
+        font-size: var(--f-u8);
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .role {
+        position: relative;
+        display: inline-block;
+        font-weight: 900;
+        color: var(--t-bg);
+        background-color: var(--t-fg);
+        padding: 0.25em 0.5em;
+        z-index: 2;
+
+        @media (min-width: $w-s) {
+          font-size: var(--f-u3);
+        }
+
+        + .role {
+          margin-left: 1em;
+        }
+
+        &:nth-of-type(1) {
+          .invert {
+            background-color: var(--c-pink);
+          }
+        }
+
+        &:nth-of-type(2) {
+          .invert {
+            background-color: var(--c-blue);
+          }
+        }
+
+        &:nth-of-type(3) {
+          .invert {
+            background-color: var(--c-green);
+          }
+        }
+
+        &:hover {
+          .invert {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          }
+        }
+      }
+
+      .invert {
+        position: absolute;
+        color: var(--t-fg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 200%, 0% 200%);
+        transition: clip-path cubic-bezier(0.4, 0, 0.5, 1) 150ms;
+      }
+
+      .desc {
+        font-size: var(--f-u2);
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+
+      .subtitle {
+        display: block;
+        font-weight: 400;
+        font-size: var(--f-d6);
+        letter-spacing: -0.0625em;
+      }
+
+      .bio {
+        line-height: 2;
+        margin-bottom: 2rem;
+
+        > span:first-of-type {
+          line-height: 1;
+          margin-bottom: 0.5em;
+          display: block;
+          font-weight: 700;
+          font-size: var(--f-u4);
+        }
+      }
+    </style>
+  </head>
+  <body class="app-root">
+    <Nav client:only="react" />
+    <header class="hero">
+      <img
+        width="1600"
+        height="1131"
+        class="img"
+        src="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1200&q=75"
+        srcset="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1200&q=75 800w,https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1200&q=75 1200w,https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=1600&q=75 1600w,https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?w=2400&q=75 2400w"
+        sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
+      />
+      <div class="gradient"></div>
+      <div class="gradient2"></div>
+      <div class="overlay">
+        <div class="overlay-inner">
+          <h1 class="title">
+            <small class="subtitle">Click to launch app!</small>KBVE App
+          </h1>
+          <div>
+            <a href="https://app.kbve.com/" target="_blank">
+              <span class="role"
+                >👩‍💻 Launch <span class="invert">👩‍💻 App</span>
+              </span>&nbsp;
+            </a>
+            <a href="https://app.kbve.com/" target="_blank">
+              <span class="role"
+                >✏️ Beta <span class="invert">✏️ Test</span>
+              </span>
+            </a>
+          </div>
+          <p class="desc">
+            KBVE IoT Application combines everything within your own realm.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper mt4 mb4 lay">
+      <div class="grid">
+        <div class="section">
+          
+            <div class="flexlay">
+                  <h3 class="sectionTitle">Projects</h3>
+                  <div class="grid">
+                    {projects.map((project) => <PortfolioPreview project={project} />)}
+                  </div>
+            </div>
+            &nbsp;
+            <div class="flexlay">
+              <h3 class="sectionTitle">Applications</h3>
+              <div class="grid">
+                {apps.map((apps) => <AppPreview app={apps} />)}
+             </div>    
+            </div>
+        </div>
+        <div class="section">
+            <div class="flexlay">
+              <h3 class="sectionTitle">Discord</h3>
+                <center><Discord width="350" height="500" /></center>
+            </div>
+            &nbsp;
+            <div class="flexlay">
+              {/* Currently rendering the `Assets` through the `PortfolioPreview` until we create a better `AssetsPreview` */}
+              <h3 class="sectionTitle">Assets</h3>
+              <div class="grid">
+                {assets.map((project) => <PortfolioPreview project={project} />)}
+             </div>    
+            </div>
+            &nbsp;
+            <!-- <div class="flexlay">
+              <h3 class="sectionTitle">Applications</h3>
+              <div class="grid">
+                {apps.map((apps) => <AppPreview app={apps} />)}
+             </div>    
+            </div> -->
+        </div>
+        
+      </div>  
+
+    </main>
+    <Footer client:load />
+  </body>
+</html>

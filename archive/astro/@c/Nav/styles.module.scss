@@ -1,0 +1,94 @@
+.nav {
+	display: flex;
+	align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+	background-color: rgba(0, 0, 0, 0.72);
+  // backdrop-filter: blur(4.9px);
+  // -webkit-backdrop-filter: blur(4.9px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+	
+}
+
+.logolink {
+	display: block;
+	color: var(--t-fg);
+	text-decoration: none;
+}
+
+.logobox {
+    font-size: 24px;
+    border:10px solid black;
+    min-height: 3em;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    resize: both;
+    border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 10s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23dfadbe' /%3E%3Cstop offset='100%25' stop-color='%23bebebe' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
+    .site-title {
+        align-content: center;
+        justify-content: center;
+    }
+ }
+
+.link {
+	color: var(--t-subdue);
+	display: block;
+	margin-left: 1rem;
+	text-decoration: none;
+	font-size: var(--f-d1);
+	text-transform: uppercase;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+
+	&:focus,
+	&:hover {
+		color: var(--t-active);
+	}
+}
+
+.endLinks {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.monogram {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2em;
+	height: 2em;
+	margin-right: 0.5rem;
+	color: var(--c-black);
+	font-weight: 900;
+	letter-spacing: -0.125rem;
+	border: 3px solid currentColor;
+	border-radius: 50%;
+}
+
+.social {
+	display: block;
+	margin-left: auto;
+
+	+ .social {
+		margin-left: 0.75rem;
+	}
+}
+
+.socialicon {
+	display: block;
+	width: 1.25rem;
+	height: 1.25rem;
+	fill: var(--t-subdue);
+	transition: fill linear 150ms;
+
+	&:hover {
+		fill: var(--t-active);
+	}
+}

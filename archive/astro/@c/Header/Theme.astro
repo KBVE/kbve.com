@@ -1,0 +1,23 @@
+---
+---
+<script>
+    const themeSaved = localStorage.getItem("theme");
+
+    if (themeSaved) {
+      document.documentElement.dataset.theme = themeSaved;
+    } else {
+      //    Over Riding
+      //    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;  document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      document.documentElement.dataset.theme = "dark";
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.dataset.theme = event.matches
+            ? "dark"
+            : "light";
+        }
+      });
+</script>
