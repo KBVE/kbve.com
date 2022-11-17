@@ -1,12 +1,33 @@
-import React from "react";
+import React, { Fragment, useState, useEffect, useCallback  } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 function App({ apps }) {
-  const { unityProvider, isLoaded, loadingProgression } = useUnityContext({
+
+  const [isGameOver, setIsGameOver] = useState(false);
+  const [userName, setUserName] = useState();
+  const [score, setScore] = useState();
+
+  const { unityProvider, sendMessage, addEventListener, removeEventListener , isLoaded, loadingProgression } = useUnityContext({
     loaderUrl: apps.loaderUrl,
     dataUrl: apps.dataUrl,
     frameworkUrl: apps.frameworkUrl,
     codeUrl: apps.codeUrl,
   });
+
+  const handleGameOver = useCallback((userName, score) => {
+    setIsGameOver(true);
+    setUserName(userName);
+    setScore(score);
+  }, []);
+  useEffect(() => {
+    addEventListener("GameOver", handleGameOver);
+    return () => {
+      removeEventListener("GameOver", handleGameOver);
+    };
+  }, [addEventListener, removeEventListener, handleGameOver]);
+  function handleClickSpawnEnemies() {
+    sendMessage("GameController", "SpawnEnemies", 100);
+  }
+
   // We'll round the loading progression to a whole number to represent the
   // percentage of the Unity Application that has loaded.
   const loadingPercentage = Math.round(loadingProgression * 100);
