@@ -1,31 +1,14 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '@c/Nav';
-import Login from '@c/Scene/Authentication/Login';
----
+///	[IMPORT]
+import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";					///	[SWUP]
 
-<html lang="en">
-	<head>
-		<MainHead
-			title="Login | KBVE"
-			description="Log into your account at KBVE"
-		/>
-		<style lang="scss">
-			.grid {
-				display: grid;
-				grid-gap: 3rem;
-			}
-		</style>
-	</head>
-	<body style={{ paddingTop: '2rem' }}>
-		<Nav client:only="react" />
-		<div class="wrapper">
-			<h1 class="title mt4 mb4">Login</h1>
-			<div class="grid">
-        <Login client:only="react" />
-			</div>
-		</div>
-		<Footer />
-	</body>
-</html>
+import Login from "@c/Scene/Authentication/Login";		/// [Login]
+---
+<Core title="KBVE Login" description="Log into onto our platform!">
+<SWUP>
+	<div class="px-8 py-24 space-y-8" id="root">
+		<Login client:only="react" />
+	</div>	
+</SWUP>
+</Core>

@@ -1,8 +1,6 @@
 ---
 // Component Imports
-import MainHead from "@c/MainHead.astro";
 import Button from "@c/Element/Button";
-import Nav from "@c/Nav";
 import Footer from "@c/Footer";
 import PortfolioPreview from "@c/PortfolioPreview";
 import AppPreview from "@c/AppPreview";

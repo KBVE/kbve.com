@@ -1,29 +1,14 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Nav from '@c/Nav';
-import Logout from '@c/Scene/Authentication/Logout';
----
+///	[IMPORT]
+import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";					///	[SWUP]
 
-<html lang="en">
-	<head>
-		<MainHead
-			title="Log Out | KBVE"
-			description="Log out of your KBVE account"
-		/>
-		<style lang="scss">
-			.grid {
-				display: grid;
-				grid-gap: 3rem;
-			}
-		</style>
-	</head>
-	<body style={{ paddingTop: '2rem' }}>
-		<Nav client:only="react" />
-		<div class="wrapper">
-			<h1 class="title mt4 mb4">Logging Out... Page will reload once complete.</h1>
-			<div class="grid">
-        <Logout client:only="react" />
-			</div>
-		</div>
-	</body>
-</html>
+import Logout from "@c/Scene/Authentication/Logout";		/// [Login]
+---
+<Core title="KBVE Login" description="Log into onto our platform!">
+<SWUP>
+	<div class="px-8 py-24 space-y-8" id="root">
+		<Logout client:only="react" />
+	</div>	
+</SWUP>
+</Core>

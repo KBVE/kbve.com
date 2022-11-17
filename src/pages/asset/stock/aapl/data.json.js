@@ -12,7 +12,7 @@ export const get = async () => {
         img: p.frontmatter.img,
         dividend: p.frontmatter.dividend,
         ticker: p.frontmatter.ticker,
-        slug: 'https://kbve.com' + p.url,
+        slug: `https://kbve.com${p.url}`,
         tag: p.frontmatter.tags
       };
     })

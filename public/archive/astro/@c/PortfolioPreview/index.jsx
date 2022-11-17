@@ -25,7 +25,7 @@ function PortfolioPreview({ project }) {
             ))}
           </div>
         </div>
-        <a className={Styles.link} href={project.url} rel={`prefetch`}>
+        <a className={Styles.link} href={project.url} rel={"prefetch"}>
           <span className={Styles.linkInner}>View</span>
         </a>
       </div>

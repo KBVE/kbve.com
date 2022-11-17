@@ -16,7 +16,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // local components
-import KBVELogo from "../Branding/KBVELogo";
+import KBVELogo from "../../../../../src/components/Branding/KBVELogo";
 
 // Cookies
 import { useCookies  } from 'react-cookie';
@@ -108,7 +108,7 @@ function Nav() {
     >
       <Container maxWidth="xl">
         <Toolbar
-          disableGutters
+          disableGutters={true}
           variant="dense"
           sx={{
             maxHeight: "48px",
@@ -158,7 +158,7 @@ function Nav() {
                 vertical: "bottom",
                 horizontal: "left",
               }}
-              keepMounted
+              keepMounted={true}
               transformOrigin={{
                 vertical: "top",
                 horizontal: "left",
@@ -251,7 +251,7 @@ function Nav() {
                 vertical: "bottom",
                 horizontal: "right",
               }}
-              keepMounted
+              keepMounted={true}
               transformOrigin={{
                 vertical: "top",
                 horizontal: "right",

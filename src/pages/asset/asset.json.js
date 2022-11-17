@@ -12,7 +12,7 @@ export const get = async () => {
               id: counterId,
               title: p.frontmatter.title,
               description: p.frontmatter.description,
-              slug: "https://kbve.com" + p.url,
+              slug: `https://kbve.com${p.url}`,
               tag: p.frontmatter.tags,
               img: p.frontmatter.img,
               category: p.frontmatter.category,

@@ -173,15 +173,15 @@
   },
   "active": "a2b7ba951454b994",
   "lastOpenFiles": [
-    "src/pages/application/unity/_core/unity_shader.md",
-    "src/pages/project/roguejester/_core/roguejester_journal.md",
-    "src/pages/project/ar/index.mdx",
-    "src/pages/project/roguejester/index.mdx",
-    "src/pages/application/unity/_core/unity_multiplayer.md",
-    "README.md",
-    "src/pages/application/unity/_core/unity_assets.md",
+    "src/pages/project/roguejester/_core/roguejester_assets.md",
     "src/pages/application/unity/_core/unity.md",
+    "src/pages/application/unity/_core/unity_shader.md",
+    "src/pages/application/unity/_core/unity_plugins.md",
     "src/pages/application/unity/_core/unity_notes.md",
-    "src/pages/application/unity/index.mdx"
+    "src/pages/application/unity/_core/unity_multiplayer.md",
+    "src/pages/application/unity/_core/unity_error.md",
+    "src/pages/application/unity/_core/unity_assets.md",
+    "src/pages/project/roguejester/_core/roguejester_journal.md",
+    "src/pages/project/ar/index.mdx"
   ]
 }

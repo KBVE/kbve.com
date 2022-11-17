@@ -1,61 +1,24 @@
 ---
-// Main Templates
-import MainHead from '@c/MainHead.astro';
-import Footer from '@c/Footer';
-import Nav from '@c/Nav';
+///	[IMPORT]
+import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";					///	[SWUP]
 
 // Components
 import HubspotLiveChat from '@c/Action/HubspotLiveChat';
 import Calendly from '@c/Action/Calendly';
 ---
-
-<html lang="en">
-	<head>
-
-		<MainHead title="Support | KBVE.com" description="KBVE Support Page!" />
-		<style lang="scss">
-			.heroImg {
-				max-height: 24rem;
-				object-fit: cover;
-				overflow: hidden;
-
-				img {
-					width: 100%;
-				}
-			}
-
-			.bio {
-				font-size: var(--f-u1);
-				line-height: 2;
-			}
-		</style>
-	</head>
-	<body>
-		<Nav client:only="react" />
-		<div class="wrapper">
-			<h1>Support @ KBVE.com</h1>
-			<div class="heroImg">
-				<img
-					width="1400"
-					height="350"
-					src="https://images.unsplash.com/photo-1653212883731-4d5bc66e0181?auto=format&fit=crop&w=1400&h=350&q=75"
-				/>
-			</div>
+<Core title="Video | KBVE.com" description="Work in Progress">
+<SWUP>
+	<div class="px-8 py-24 space-y-8" id="root">
 			<div class="bio wrapper wrapper__readable mt8">
-				<p>
-					Support for KBVE software, services and equipment.
-				</p>
-				<p>
-					Ticket System is coming soon :D
-				</p>
-				<p>
+					<p>
 					<HubspotLiveChat />
 				</p>
 				<p>
 					<Calendly text_color="e7af86" primary_color="e7af86" />
 				</p>
+
 			</div>
-		</div>
-		<Footer />
-	</body>
-</html>
+	</div>	
+</SWUP>
+</Core>
