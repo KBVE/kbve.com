@@ -16,3 +16,4 @@ tags:
   - Finally, after establishing the automation, we use `Ansible` to execute commands to `Terraform`,`Consul` and `Portainer`.
 - Scale
   - 15000 `{$EDGE_DEVICE}` with a polling frequency of 5 seconds will generate about 7 mbps of network traffic and require 4 CPUs to handle the encryption / tunnel load, according to Portainer.
+ 
