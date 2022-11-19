@@ -33,3 +33,16 @@ docker service update --image portainer/agent:latest --force portainer_agent
 
 Now that the control center has the updated portainer and portainer agent, go ahead and use portainer to update the agent across the swarms.
 To do this, you can manually update it via the shell
+
+### Kubernetes Agent Upgrade
+
+The current method for upgrade Portainer Agent through AWX would be to execute these following commands:
+
+```shell
+sudo kubectl delete namespace portainer
+sudo kubectl apply -n portainer -f https://downloads.portainer.io/ce2-16/portainer-agent-k8s-lb.yaml
+```
+
+This will delete the existing portainer agent (which would be under the namespace of `portainer`) and then re-deploy the newer `ce2-16`.
+
+However these notes are for Portainer Agent 2.16.1 / 11/18/2022. We will update these once there is another major release.
