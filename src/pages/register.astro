@@ -3,13 +3,15 @@
 import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
 import SWUP from "@l/theme/swup.astro";					///	[SWUP]
 
-import Register from "@c/Scene/Authentication/Register/Register.astro";
+//import Register from "@c/Scene/Authentication/Register/Register.astro";
+import Onboard from "@c/Scene/Authentication/Onboard/Onboard.astro";
 ---
 <Core title="KBVE Register" description="Register onto our platform!">
 <SWUP>
 	<script></script>
-	<div class="px-8 py-24 space-y-8" id="root">
-		<Register />
+ <div class="px-8 py-24 space-y-8" id="root">			
+	<Onboard  mrmeme="Hi" />
+	<!-- <Register /> -->
 	</div>	
 </SWUP>
 </Core>
