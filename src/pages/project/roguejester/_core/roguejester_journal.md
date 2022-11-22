@@ -69,4 +69,13 @@ description: Journal for the Project
 https://www.tutorialsteacher.com/articles/convert-object-to-json-in-csharp#:~:text=The.NET%205%20framework%20provides%20the%20built-in%20JsonSerializer%20class,built-in%20JsonSerializer%20class%20that%20converts%20objects%20to%20JSON
 Thus, convert the JSON string to class object in C# using the JsonSerializer.Deserialize () method.
 
+## Scene
 
+0. LoginMenu
+1. IntroMenu
+2. WInScene
+3. LoseScene
+4. MainScene
+5. SecondaryScene
+6. LevelSelection
+7. -- null

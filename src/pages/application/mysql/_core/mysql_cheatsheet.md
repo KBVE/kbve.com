@@ -28,3 +28,15 @@ tags:
   - Grant permissions / privilegages.
     - `GRANT ALL ON ${database_name}.* TO {$user[@'host']}`
       - There are a couple situations that this statement creates, first it gives `ALL` permissions to the database, `${database_name}` with the `.*` being a wildcard for all the tables inside of the database. Finally the `{$user[@'host']}` represents the user connecting via the IP Address.
+
+## Backup
+
+If you need a quick way to backup the `mysql` database, then use this command below:
+
+```shell
+sudo docker exec [$mysql_container_name] /usr/bin/mysqldump -u [$mysql_username] --password=[$mysql_password] [$database_name] > [$destination_path]
+```
+
+You could save the execution command as a shell file and/or reference it inside of your AWX stack.
+
+More information on [AWX](https://kbve.com/application/ansible/#awx) and [Docker](https://kbve.com/application/docker)

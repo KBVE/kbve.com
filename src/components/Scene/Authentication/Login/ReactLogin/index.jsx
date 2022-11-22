@@ -1,6 +1,6 @@
 import React from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import Styles from "../styles.module.scss";
+
 // @mui
 import { Box } from "@mui/material";
 import Stack from "@mui/material/Stack";
