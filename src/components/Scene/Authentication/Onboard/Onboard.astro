@@ -3,7 +3,7 @@
 const { content } = Astro.props;
 
 import Register from "@c/Scene/Authentication/Register/Register.astro";     // Register Form
-import Lottie from "@c/Element/Lottie/";
+import Lottie from "@c/Element/Lottie/Lottie.astro";
 
 ---
 <section class="bg-offset dark:bg-gray-900 rounded-3xl">
@@ -16,7 +16,7 @@ import Lottie from "@c/Element/Lottie/";
                 class="absolute inset-0 h-full w-full object-cover opacity-80"
             />
             <div class="hidden lg:relative lg:block lg:p-12">
-                <Lottie json="https://assets8.lottiefiles.com/packages/lf20_jcikwtux.json" client:only="react" />
+                <Lottie json="https://assets8.lottiefiles.com/packages/lf20_jcikwtux.json" />
                 <h2 class="mt-6 gradient-text text-2xl font-bold sm:text-3xl md:text-4xl">
                     Welcome to KBVE xD
                 </h2>
@@ -42,7 +42,7 @@ import Lottie from "@c/Element/Lottie/";
                     </p>
                 </div>
                 <div class="mt-8 grid gap-6 overflow-hidden">
-                    <Lottie width="150px" height="150px" json="https://assets2.lottiefiles.com/packages/lf20_wd1udlcz.json" client:only="react" />
+                    <Lottie width="150px" height="150px" json="https://assets2.lottiefiles.com/packages/lf20_wd1udlcz.json"  />
                     <Register />
                 </div>
             </div>

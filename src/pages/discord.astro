@@ -3,7 +3,7 @@ import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
 import SWUP from "@l/theme/swup.astro";					///	[SWUP]
 
 import Discord from '@c/SocialMedia/Discord';           /// Import Discord
-import Lottie from '@c/Element/Lottie';
+import Lottie from '@c/Element/Lottie/Lottie.astro';
 ---
 <Core title="KBVE Discord" description="Check out our amazing community of gamers and programmers! Join our Discord!">
 	<SWUP>
@@ -37,7 +37,7 @@ import Lottie from '@c/Element/Lottie';
 
 	<div class="px-4 py-8 space-y-4">
 		<div class="shadow-2xl p-4 bg-offset text-center rounded-3xl ">
-			<Lottie json="https://assets1.lottiefiles.com/private_files/lf30_mAfXxk.json" width="320px" client:only="react" />
+			<Lottie json="https://assets1.lottiefiles.com/private_files/lf30_mAfXxk.json" width="320px" />
 		</div>
 	</div>
 
@@ -66,7 +66,7 @@ import Lottie from '@c/Element/Lottie';
 		
 	<div class="px-4 space-x-4 space-y-4">
 			<div class="shadow-2xl bg-offset rounded-2xl hover:scale-75  transform-gpu duration-500 ease-in-out">
-				<Lottie json="https://assets9.lottiefiles.com/packages/lf20_nivsnvgo.json"  width="300px" client:only="react" />
+				<Lottie json="https://assets9.lottiefiles.com/packages/lf20_nivsnvgo.json"  width="300px" />
 			</div>
 	</div>
 	</SWUP>
