@@ -114,7 +114,7 @@ const [isError, setIsError] = React.useState(false);
             sx={{ flex: 1 }}
           >
             <TextField
-              id={`email-input`}
+              id={"email-input"}
               type="email"
               label="Email"
               value={email}
@@ -123,7 +123,7 @@ const [isError, setIsError] = React.useState(false);
               disabled={isLoading}
             />
             <TextField
-              id={`password-input`}
+              id={"password-input"}
               type="password"
               label="Password"
               value={password}
@@ -138,7 +138,7 @@ const [isError, setIsError] = React.useState(false);
             />
             <Collapse in={!!verification}>
               <Stack direction="column" alignItems="flex-end">
-                <Button variant="contained" fullWidth onClick={handleConfirm} disabled={isLoading}>
+                <Button variant="contained" fullWidth={true} onClick={handleConfirm} disabled={isLoading}>
                   Login
                 </Button>
               </Stack>
