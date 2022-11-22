@@ -31,3 +31,11 @@ tags:
 
 > This Rust Cookbook is a collection of simple examples that demonstrate good practices to accomplish common
 > programming tasks, using the crates of the Rust ecosystem.
+
+
+## MicroService
+
+This is a quick repo / guide on a Rust MySQL Microservice! 
+- Official [Repo](https://github.com/second-state/microservice-rust-mysql)
+
+We plan to extend Strapi via the Rust MySQL Microservices ^ example above but isolating layers, such as login, register, ect..

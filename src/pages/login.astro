@@ -1,14 +1,78 @@
 ---
 ///	[IMPORT]
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
+import Core from "@l/theme/core.astro";								///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";								///	[SWUP]
 
-import Login from "@c/Scene/Authentication/Login";		/// [Login]
+import Login from "@c/Scene/Authentication/Login/Login.astro";		/// [Login]
+import Lottie from "@c/Element/Lottie/Lottie.astro";				/// [Lottie]
 ---
 <Core title="KBVE Login" description="Log into onto our platform!">
-<SWUP>
-	<div class="px-8 py-24 space-y-8" id="root">
-		<Login client:only="react" />
-	</div>	
+<SWUP>		
+<section class=" dark:bg-gray-900 ">
+<div class="grid py-24 space-y-8" id="root">
+		
+			<section class="bg-offset relative justify-self-center lg:col-span-5 lg:h-full xl:col-span-6 rounded-3xl">
+			
+			<Lottie json="https://assets4.lottiefiles.com/packages/lf20_gjmecwii.json" width="350px" />
+			
+			<div class="py-12 px-12">
+				<Login /> 
+			</div>
+			
+			</section>
+			
+			<section class="bg-offset relative justify-self-center lg:col-span-5 lg:h-full xl:col-span-6  py-4 p-4 rounded-3xl">
+			Log in via: Google, Github, Steam
+			</section>
+
+		
+</div>
+</section>
 </SWUP>
 </Core>
+<!-- 
+
+
+<section class="bg-offset dark:bg-gray-900 rounded-3xl">
+    <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+      
+        <section class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+            <img
+                alt="Night"
+                src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="absolute inset-0 h-full w-full object-cover opacity-80"
+            />
+            <div class="hidden lg:relative lg:block lg:p-12">
+                <Lottie json="https://assets8.lottiefiles.com/packages/lf20_jcikwtux.json" />
+                <h2 class="mt-6 gradient-text text-2xl font-bold sm:text-3xl md:text-4xl">
+                    Welcome to KBVE xD
+                </h2>
+    
+                <p class="mt-4 leading-relaxed text-white/90">
+                    Register using our simple form! Your account will let you log into all our services!
+                </p>
+            </div>
+        </section>
+    
+        <main
+            aria-label="Main"
+            class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
+        >
+            <div class="max-w-xl lg:max-w-3xl">
+                <div class="relative block lg:hidden">
+
+                    <h1 class="px-4 mt-2 text-2xl font-bold gradient-text  dark:text-white sm:text-3xl md:text-4xl">
+                        KBVE Mobile Register
+                    </h1>
+                    <p class="px-10 mt-4 leading-relaxed text-secondary dark:text-gray-400">
+                        Welcome to KBVE! Register using our form below! By Registering you agree to our terms and services.
+                    </p>
+                </div>
+                <div class="mt-8 grid gap-6 overflow-hidden">
+                    <Lottie width="150px" height="150px" json="https://assets2.lottiefiles.com/packages/lf20_wd1udlcz.json"  />
+                    <Register />
+                </div>
+            </div>
+        </main>
+    </div>
+</section> -->
