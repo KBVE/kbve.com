@@ -1,33 +1,51 @@
 ---
-
 // [Astro] : [Onboard]
-const { content, mrmeme} = Astro.props;
+const { content } = Astro.props;
+
+import Register from "@c/Scene/Authentication/Register/Register.astro";     // Register Form
+import Lottie from "@c/Element/Lottie/";
 
 ---
-<div class=" flex justify-center">
-    <div class="flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-900 dark:text-gray-100 ">
-        <div class="mb-8 text-center">
-            <h1 class="my-3 text-4xl font-bold">Sign in</h1>
-            <p class="text-sm dark:text-gray-400">Sign in to access your account</p>
-        </div>
-        <form novalidate="" action="" class="space-y-12 ng-untouched ng-pristine ng-valid">
-            <div class="space-y-4">
-                <div>
-                    <label for="email" class="block mb-2 text-sm">Email address</label>
-                    <input type="email" name="email" id="email" placeholder="leroy@jenkins.com" class="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
+<section class="bg-offset dark:bg-gray-900 rounded-3xl">
+    <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+      
+        <section class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+            <img
+                alt="Night"
+                src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="absolute inset-0 h-full w-full object-cover opacity-80"
+            />
+            <div class="hidden lg:relative lg:block lg:p-12">
+                <Lottie json="https://assets8.lottiefiles.com/packages/lf20_jcikwtux.json" client:only="react" />
+                <h2 class="mt-6 gradient-text text-2xl font-bold sm:text-3xl md:text-4xl">
+                    Welcome to KBVE xD
+                </h2>
+    
+                <p class="mt-4 leading-relaxed text-white/90">
+                    Register using our simple form! Your account will let you log into all our services!
+                </p>
+            </div>
+        </section>
+    
+        <main
+            aria-label="Main"
+            class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
+        >
+            <div class="max-w-xl lg:max-w-3xl">
+                <div class="relative block lg:hidden">
+
+                    <h1 class="px-4 mt-2 text-2xl font-bold gradient-text  dark:text-white sm:text-3xl md:text-4xl">
+                        KBVE Mobile Register
+                    </h1>
+                    <p class="px-10 mt-4 leading-relaxed text-secondary dark:text-gray-400">
+                        Welcome to KBVE! Register using our form below! By Registering you agree to our terms and services.
+                    </p>
                 </div>
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <label for="password" class="text-sm">Password</label>
-                        <a rel="noopener noreferrer" href="#" class="text-xs hover:underline dark:text-gray-400">Forgot password?</a>
-                    </div>
-                    <input type="password" name="password" id="password" placeholder="*****" class="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
+                <div class="mt-8 grid gap-6 overflow-hidden">
+                    <Lottie width="150px" height="150px" json="https://assets2.lottiefiles.com/packages/lf20_wd1udlcz.json" client:only="react" />
+                    <Register />
                 </div>
             </div>
-            <div class="space-y-2">
-                <div>
-                    <button type="button" class="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">Sign in</button>
-                </div>
-                <p class="px-6 text-sm text-center dark:text-gray-400">Don't have an account yet?
-            
-</div>
+        </main>
+    </div>
+</section>
