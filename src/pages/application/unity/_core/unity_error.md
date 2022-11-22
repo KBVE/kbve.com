@@ -17,3 +17,8 @@ tags:
     ```
 
   - Solution: Turn on post processing on the Main Camera.
+
+
+### Error libil2cpp ERROR: Could not open Il2CppData/
+
+Currently: There might be an issue when directly loading the Git LFS, so we will reference it via Github's media server.
