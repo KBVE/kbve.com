@@ -20,3 +20,5 @@ Import everything into your project
 [Release](https://github.com/rlabrecque/Steamworks.NET/releases)
 
 So I will grab the unitypackage and then proceed to import it.
+
+I wonder if I will need to apply to the Steam store to get an API key? Hmm.

@@ -6,9 +6,18 @@ tags:
 - plugins
 ---
 
+
 ## Plugins
 
 - Collection of plugins for Unity game engine.
+
+### React
+
+- For React and Unity integration, we recommend going to our [React](https://kbve.com/application/javascript/#react) application page.
+
+### Steam Plugin
+
+We moved the Steam into their own [notes](https://kbve.com/application/unity/#steam)
 
 ### SimpleJSON
 
