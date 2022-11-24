@@ -14,6 +14,11 @@ Official Documentation [Link](https://opsive.com/support/documentation/ultimate-
 
 According to Opsive, their UCC is a professional and kinematic character controller that is designed for flexibility, modularity and performance; we consider it an "AIO" or "All-In-One" library.
 
+### UCC URP
+
+Grab the invoice number from the plugin purchase and head over to [OPSive Downloads](https://opsive.com/downloads/) with it.
+After placing the invoice number into the system, it will give you download integrations for external plugins.
+
 ### UCC Asset Store
 
 Official [Asset Store](https://assetstore.unity.com/packages/tools/game-toolkits/ultimate-character-controller-233710).
