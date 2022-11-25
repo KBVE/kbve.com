@@ -1,0 +1,31 @@
+---
+/// [Journal] -> [2D Unity]
+const data = {  title: "KBVE.com - 2D Unity", description: "Journal Entries for /2dunity/ by the John & h0ly"}	
+const { content = data } = Astro.props;
+
+///                                         /// [CORE]
+import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
+import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
+
+
+
+/// Import _core
+interface Frontmatter {
+  title: string;
+  description?: string;
+  date?: string;
+}
+const posts = await Astro.glob<Frontmatter>('./_journal/*.md');
+posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+
+//const assets = await fetch('https://kbve.com/asset/asset.json').then((response) =>  response.json());
+
+---
+<Core content={content}>
+  <SWUP>
+      <div class="px-8 py-24 space-y-8">
+        2D Unity
+      </div>
+
+  </SWUP>
+</Core>
