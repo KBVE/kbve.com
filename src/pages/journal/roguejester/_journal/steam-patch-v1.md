@@ -22,3 +22,9 @@ Import everything into your project
 So I will grab the unitypackage and then proceed to import it.
 
 I wonder if I will need to apply to the Steam store to get an API key? Hmm.
+
+As we wait, I will update the pipeline for the Windows build.
+
+Steam Store [Docs](https://partner.steamgames.com/doc/store)
+
+After reviewing the scopes that they provide, we are building the `demo` , just need to confirm that with external people.
