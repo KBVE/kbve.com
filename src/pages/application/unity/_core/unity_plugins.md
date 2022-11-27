@@ -47,3 +47,8 @@ We moved the Steam into their own [notes](https://kbve.com/application/unity/#st
 
 - Interpol between Javascript and Unity through JINT
 - This plugin is not open source but rather a private engine.
+
+### UniWebView
+
+- Adding Webview for iOS/Android can be easier through UniWebView, which is an open source web view component for mobile platforms.
+- Official [Repo](https://docs.uniwebview.com/api/)
