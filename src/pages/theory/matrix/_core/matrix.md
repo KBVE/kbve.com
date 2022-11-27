@@ -1,10 +1,15 @@
 ---
+title: Matrix
+description: Matrix Theory from KBVE, also referenced as the AEMatrix.
 tags:
   - matrix
   - theory
 ---
 
-# Matrix
+## Theory
+
+The `Matrix` theory, maybe referenced as AEM or AEMatrix, is an Array Eisenhower Matrix, where the problems reside within a quadrant and scale within their respective zone based upon priority.
+The theory's core foundation comes from President Eisenhower and extends through Ziggy's reference work. It has been expanded upon through various periods of time and still continues to be improved.
 
 ## Eisenhower Matrix
 

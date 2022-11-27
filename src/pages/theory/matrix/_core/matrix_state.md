@@ -1,7 +1,12 @@
 ---
+title: Matrix State
+description: States within the Matrix
+tags:
+- matrix
+- theory
 ---
 
-# State
+## State
 
 - The Change Control Flow proceeds:
   - -> Preserve the [Present State]
