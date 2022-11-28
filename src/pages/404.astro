@@ -1,12 +1,14 @@
 ---
-import Core from "@l/theme/core.astro";					///	[IMPORT]	-> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]		-> 	
-const data = {
-	title: "Not Found", description: "Not Found"}		///	[404]		-> Data
-const { content = data } = Astro.props;					///	[Astro Props]
+import Core from "@l/theme/core.astro";					///	[IMPORT]	->	[CORE]
+import SWUP from "@l/theme/swup.astro";					///	[SWUP]		->	Disabled;
 
-import Robo404 from "@c/Element/Lottie/404/404.astro";	///	[Lottie]	-> 404 Animation
+const data = {											///	[Data]		->	();
+	title: "Not Found", description: "Not Found"}		///	[404]		->	Data
+const { content = data } = Astro.props;					///	[Astro]		->	[Props]
+Astro.response.status = 404;							/// [Astro]		->	[Response]	-> 404
+Astro.response.statusText = 'Not found';				///	[Astro]		->	[Response]	-> 'Not found'
 
+import Robo404 from "@c/Element/Lottie/404/404.astro";	///	[Lottie]	->	404 Animation
 ---
 <Core content={content}>
 	<SWUP>
