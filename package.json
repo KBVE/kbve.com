@@ -30,6 +30,7 @@
     "@emotion/styled": "^11.10.4",
     "@hcaptcha/react-hcaptcha": "^1.4.4",
     "@lottiefiles/lottie-interactivity": "^1.6.1",
+    "@lottiefiles/lottie-player": "^1.6.0",
     "@lottiefiles/react-lottie-player": "^3.4.9",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.11",
