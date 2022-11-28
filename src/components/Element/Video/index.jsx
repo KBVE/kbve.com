@@ -11,41 +11,47 @@ const VideoComponent = ({
   display = true,
   header = false,
   iframe = false,
+  divboxClass = Styles.overlay,
+  descriptionClass = "",
+  iframeClass = "",
 }) => {
-  if (header)
+  if (header) {
     return (
       <>
         <script
           type="module"
           src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/bundle.js"
-        ></script>
+        />
       </>
     );
+  }
   // Temporary fix until vidstack has youtube options within their video embed.
   // https://github.com/KBVE/kbve.com/issues/25
-  if (display && iframe && src == "yt")
+  if (display && iframe && src === "yt") {
     return (
       <>
-        <div className={Styles.overlay}>
-          <p>{description}</p>
-
+        <div className={divboxClass}>
+          
+          <div className={descriptionClass} >
+            <p>{description}</p>
+          </div> 
           <iframe
             id="ytplayer"
             type="text/html"
-            height={'320px'}
-            width={'100%'}
+            height={height}
+            width={width}
             src={
-              `https://www.youtube.com/embed/` +
-              id +
-              `?&origin=https://kbve.com"`
+              `https://www.youtube.com/embed/${id}?&origin=https://kbve.com"`
             }
-            frameborder="0"
-          ></iframe>
+            frameBorder="0"
+            className={iframeClass}
+          />
         </div>
       </>
     );
+  }
 
-  if (display && !iframe)
+  if (display && !iframe) {
     return (
       <div className={Styles.github}>
         {description}
@@ -55,7 +61,7 @@ const VideoComponent = ({
             <video
               src="https://media-files.vidstack.io/hls/index.m3u8"
               preload="none"
-            ></video>
+            />
           </vds-hls>
           <vds-play-button>
             <div class="media-play">Play</div>
@@ -64,7 +70,11 @@ const VideoComponent = ({
         </vds-media>
       </div>
     );
-  else return <div>ඞ</div>;
+  }
+  else { return (
+    <div>
+    ඞ
+    </div>  ); }
 };
 
 export default VideoComponent;
