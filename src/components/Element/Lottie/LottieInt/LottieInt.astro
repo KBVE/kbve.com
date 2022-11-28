@@ -1,0 +1,5 @@
+---
+import LottieInt from "@c/Element/Lottie/LottieInt";
+const { content, json, width, height, id, name, action, mode, className} = Astro.props;
+---
+<LottieInt json={json} id={id} name={name} width={width} height={height} action={action} mode={mode} className={className} client:only="react" />

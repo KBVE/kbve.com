@@ -1,5 +1,5 @@
 ---
 import Lottie from "@c/Element/Lottie";
-const { content, json, width, height} = Astro.props;
+const { content, json, width, height, id="lottie", ref = null} = Astro.props;
 ---
-<Lottie json={json} width={width} height={height} client:only="react" />
+<Lottie ref={ref} id={id} json={json} width={width} height={height} client:only="react" />

@@ -1,22 +1,35 @@
 ---
 ///	[IMPORT]
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
+import Core from "@l/theme/core.astro";					///	[IMPORT]	-> [CORE]
+import SWUP from "@l/theme/swup.astro";					///	[OPTIONAL]	-> [SWUP]
 
 // Components
-import VideoComponent from '@c/Element/Video';
-
+import VideoComponent from '@c/Element/Video';							///	[VideoComp]
+import LottieInt from "@c/Element/Lottie/LottieInt/LottieInt.astro";	///	[LottieInt]
 ---
 <Core title="Video | KBVE.com" description="Work in Progress">
 <SWUP>
 	<div class="px-8 py-24 space-y-8" id="root">
-			<div class="bio wrapper wrapper__readable mt8">
-				<p>
+			<div class="p-8 bg-offset rounded-3xl">
+				<p class="gradient-text">
 					  Video Component
 				</p>
+				<div class="p-4 ">
+					<VideoComponent display={true} iframe={true} src="yt" id="DYlRLGVcblM" height="400px" divboxClass="grid rounded-3xl justify-center place-items-center" iframeClass="rounded-3xl" description="Tibi" />
+				</div>
 
-                                    <VideoComponent display={true} iframe={true} src="yt" id="DYlRLGVcblM" height="400px" width="100%"  description="Tibi" />
+			</div>
 
+			
+			<div class="p-8 bg-offset rounded-3xl">
+				LottieInteractives
+				<LottieInt id="passing_id" mode="scroll" action={[
+				{
+				  visibility: [0, 1],
+				  type: 'seek',
+				  frames: [0, 300], 
+				},
+			  ]} name="test" json="https://assets9.lottiefiles.com/packages/lf20_nivsnvgo.json"  width="500px" />
 			</div>
 	</div>	
 </SWUP>
