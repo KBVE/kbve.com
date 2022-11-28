@@ -15,18 +15,20 @@ import Splash from "@c/Splash/splash.astro";                                /// 
 import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]   ->  <Intro> should be in vanillaJS to avoid hydration issues.
 import Assets from "@c/Scene/Assets/Assets.astro";                          /// [ASSET]   ->  <Asset> uses hydration, which will break as of right now
 import Applications from "@c/Scene/Applications/Applications.astro";        /// [APP]     ->  <APP>   Needs a rewrite soon as well.
+import AnimalSquad from "@c/Scene/Anime/AnimalSquad/AnimalSquad.astro";
 ---
 <Core content={content}>
         <SWUP>
           <div class="pt-8">
-          <Splash />
+            <Splash />
             <div class="h-12 bg-gradient-to-b from-black "></div>
           </div>
-          <div class="px-4 py-4" >
-          <Intro />
-          <Assets />
-          <Features />
-          <Applications />
+          <div class="px-4 py-4 " >
+            <Intro />
+            <!-- <Assets /> -->
+            <AnimalSquad />
+            <Features />
+            <Applications />
           </div>
         </SWUP>
 </Core>
