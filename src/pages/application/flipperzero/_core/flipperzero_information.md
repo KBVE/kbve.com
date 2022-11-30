@@ -8,4 +8,4 @@ tags:
 
 ## Log
 
-I am expected to get my flipper zero by the end of this year or early 2023! I am super excited xD.
+KBVE FlipperZeros will be sold for $300 each, custom firmware, extra components, shipping and 5 support tickets? $180 for the Flipper Zero and $120 for services/software/extras/labor.
