@@ -31,3 +31,19 @@ We recommend that, if you are a US Citizen, have all our personal information (T
 ### After
 
 Well we applied as of 11/23/2022 , so we will wait until everything is confirmed and then move forward with this.
+
+Okay so we been approved, now you should have 1 application credit in your Steamworks profile! This is where you then create your application, using that application credit that you paid $100 for!
+
+Place your application name and then go through the form, it will then spit out some interesting variables:
+
+>Requesting AppID For: KBVE.com RogueJester
+>Created package "KBVE.com RogueJester Developer Comp" with ID 802XXX
+>Created package "KBVE.com RogueJester for Beta Testing" with ID 802XXX
+>Created package "KBVE.com RogueJester" with ID 802XXX
+>Added auto-grant to publisher *XXX
+>Created store item '518XXX'
+>Created store package for store item '518XXX'
+
+You should keep this information safe and as a reference step.
+
+After 
