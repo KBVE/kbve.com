@@ -12,6 +12,15 @@ The bundles of joy when installing various firmware for your flipperzero!
 
 The main chipset on the FlipperZero stores both a "New" and "Old" firmware, thus making it a bit easier to custom load your firmware without the higher risk of bricking your device. Granted there is always a risk of bricking your device, so be very careful! Make sure wires are tight and your machine is charged.
 
+## Update
+
+Once you get your hands on the flipperzero, we recommend that you update it to the latest firmware via qFlipper application, links below:
+
+[Official Main](https://flipperzero.one/update) Updates
+Github Repo Updates - [Release Page](https://github.com/flipperdevices/qFlipper/releases)
+
+There are other methods of updating, including Mobile and Web but from experience, I recommend sticking with a direct cable upgrade, to avoid possible firmware corruption.
+
 ## Unleashed Firmware
 
 Official [Repo](https://github.com/DarkFlippers/unleashed-firmware)
