@@ -1,5 +1,5 @@
 ---
-const { id } = Astro.props;
+const { id, buttonClass = "relative px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" } = Astro.props;
 import _ from "lodash";
 
 let data = await fetch('https://kbve.com/project/unity-webgl.json').then((response) =>  response.json());
@@ -8,5 +8,5 @@ let UnityGame = _.find(data, ['id', id]);
 import ReactUnity from ".";
 
 ---
-<ReactUnity client:only="react" apps={UnityGame} />
+<ReactUnity client:only="react" apps={UnityGame} buttonClass={buttonClass} />
    
