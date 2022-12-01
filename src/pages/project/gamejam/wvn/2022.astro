@@ -2,6 +2,8 @@
 import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
 import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
 
+
+/// {ReactUnity} Component for WVN2022
 import ReactUnity from "@c/Element/React/ReactUnity/ReactUnity.astro";
 
 const data = {                                  /// {data}
@@ -308,7 +310,7 @@ var UnityGame = { loaderUrl: loaderUrl, dataUrl: dataUrl, frameworkUrl: framewor
         <!--    [JAM TEAM]  ->  [END]   -->
         <div class="space-y-4 justify-center">
             <div class="flex items-center justify-center shadow-2xl bg-offset rounded-2xl">
-                <ReactUnity client:only="react" apps={{UnityGame}} />
+                <ReactUnity id="wvn2022" />
             </div>
         </div>
     </SWUP>
