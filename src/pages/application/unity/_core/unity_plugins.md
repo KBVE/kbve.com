@@ -48,7 +48,15 @@ We moved the Steam into their own [notes](https://kbve.com/application/unity/#st
 - Interpol between Javascript and Unity through JINT
 - This plugin is not open source but rather a private engine.
 
+## Webview
+
+Unity plugins that focus on webview by providing abstract layers that extend to controllers.
 ### UniWebView
 
 - Adding Webview for iOS/Android can be easier through UniWebView, which is an open source web view component for mobile platforms.
 - Official [Repo](https://docs.uniwebview.com/api/)
+
+### Vuplex Plugin
+
+A commercial plugin that extends WebView components across all platforms, with major focus on AR/VR development kits for Oculus, Hololens and more.
+Notes on the [Vuplex](https://kbve.com/application/unity/#vuplex) plugin.
