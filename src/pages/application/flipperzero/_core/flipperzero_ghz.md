@@ -17,3 +17,7 @@ tags:
   - `Saved` -
   - `Add Manually` -
   - `Frequency Analyzer` -
+
+#### GHZ InfoSec
+
+- 315Ghz - Common frequency that car fobs operate in.
