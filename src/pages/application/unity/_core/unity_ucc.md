@@ -28,3 +28,7 @@ Last Release Date: 3.0.3 - Nov 24, 2022
 
 [Opsive Video Collection](https://opsive.com/videos/?pid=923)
 [First Person Character Creation](https://www.youtube.com/watch?v=EAuS_0OxyrA)
+
+### UCC Character
+
+The core of the UCC, Ultimate Character Controller, would be the Character model and its interactivity within the `Scene`, thus these notes are for referencing through the plugin and movement, collision, motion, gravity, abilities and more for the `Humanoid` / `Character`.

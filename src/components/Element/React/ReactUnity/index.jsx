@@ -6,6 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 function App({ apps }) {
+  const [isPlay, setPlay] = useState(false);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [userName, setUserName] = useState();
@@ -36,6 +37,13 @@ function App({ apps }) {
   // We'll round the loading progression to a whole number to represent the
   // percentage of the Unity Application that has loaded.
   const loadingPercentage = Math.round(loadingProgression * 100);
+
+  if(isPlay === false)
+  {
+    return (<>Press Play!</>);
+  }
+  else {
+
   return (
     <div className="container place-content-center justify-center items-center py-12">
       {isLoaded === false && (
@@ -50,6 +58,7 @@ function App({ apps }) {
       <Unity className="unity rounded-3xl self-auto" unityProvider={unityProvider} style={{ width: 1280, height: 720, }}  />
     </div>
   );
+      }
 }
 
 export default App;
