@@ -1,16 +1,36 @@
 //*     [JSX] -> [ReactUnity]
 //?     Reference - https://kbve.com/application/javascript#react-unity
 
-import React, { Fragment, useState, useEffect, useCallback  } from "react";
+import React, { Fragment, useState, useEffect, useCallback, useRef  } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-function App({ apps }) {
+function App({ apps, buttonClass }) {
   const [isPlay, setPlay] = useState(false);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [userName, setUserName] = useState();
   const [score, setScore] = useState();
+  const [buttonClassName, setButtonClass] = useState(buttonClass);
+  const isMounted = useRef(true);
+
+  // {isMounted} is set to false when we unmount the component.
+  useEffect(() => {
+      return () => {
+        isMounted.current = false
+      }
+    }, [])
+
+  // Call
+
+  
+  const sendRequest = useCallback(async () => {
+    if (isPlay) { return }
+    setPlay(true)
+    await API.sendRequest()
+    if (isMounted.current){   setPlay(false)  }
+  }, [isPlay]) 
+
 
   const { unityProvider, sendMessage, addEventListener, removeEventListener , isLoaded, loadingProgression } = useUnityContext({
     loaderUrl: apps.loaderUrl,
@@ -40,7 +60,11 @@ function App({ apps }) {
 
   if(isPlay === false)
   {
-    return (<>Press Play!</>);
+    return  (<> 
+      <button type="button" className={buttonClassName} disabled={isPlay} onClick={sendRequest}>Play Now
+        <span className="absolute top-0 right-0 px-5 py-1 text-xs gradient-text tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-orange-400">New</span>
+      </button> 
+    </>);
   }
   else {
 
