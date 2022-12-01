@@ -21,8 +21,19 @@ var UnityGame = { loaderUrl: loaderUrl, dataUrl: dataUrl, frameworkUrl: framewor
 ---
 <Core content={content}>
     <SWUP>
+
         <div class="px-8 py-6 space-y-8">
         </div>
+        <!--    [GAME]  ->  [START] -->
+
+        <div class="space-y-4 py-12 justify-center">
+            <div class="flex items-center justify-center shadow-2xl bg-offset rounded-2xl">
+                <ReactUnity id="wvn2022" buttonClass="relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
+            </div>
+        </div>
+
+        <!--    [GAME   ->  [END]   -->
+
         <!--    [INTRO] ->  [START] -->
         <div>
             <div class="dark:bg-gray-800 dark:text-gray-50 py-12">
@@ -308,11 +319,7 @@ var UnityGame = { loaderUrl: loaderUrl, dataUrl: dataUrl, frameworkUrl: framewor
             </div>
         </section>
         <!--    [JAM TEAM]  ->  [END]   -->
-        <div class="space-y-4 justify-center">
-            <div class="flex items-center justify-center shadow-2xl bg-offset rounded-2xl">
-                <ReactUnity id="wvn2022" />
-            </div>
-        </div>
+       
     </SWUP>
 </Core>
   
