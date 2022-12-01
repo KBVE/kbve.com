@@ -28,7 +28,7 @@ We decided to write out the `A, B, C, D, s` of the fintech universe into cute an
 ## D
 
 > The *D* in FinTechAZ stands for *Data*.
-> A great analogy would be the idea that data mining / collection is equivalent to crude oil, while data organization is equivalent to chemical refinement. 
+> A great analogy would be the idea that data mining / collection is equivalent to crude oil, while data organization is equivalent to chemical refinement.
 > Data comes as a cluster of random hydrocarbons and the (data organization) is the separation of the data types, variables and data meta-info.
 
 ## E

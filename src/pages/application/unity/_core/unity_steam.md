@@ -45,5 +45,3 @@ Place your application name and then go through the form, it will then spit out 
 >Created store package for store item '518XXX'
 
 You should keep this information safe and as a reference step.
-
-After 
