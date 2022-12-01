@@ -7,7 +7,7 @@ export const get = async () => {
   const json = JSON.stringify((
   posts.map((p) =>  {
       
-      if((p.frontmatter.tags.indexOf(menu) !== -1) ? true : false)
+      if((p.frontmatter.tags.indexOf(menu) !== -1) ? true : false) {
             return {
               status: p.frontmatter.status,
               id: p.frontmatter.id,
@@ -23,6 +23,7 @@ export const get = async () => {
               frameworkUrl: p.frontmatter.frameworkUrl,
               codeUrl: p.frontmatter.codeUrl,
             }
+      }
             else  {
               return {
                 status: false
