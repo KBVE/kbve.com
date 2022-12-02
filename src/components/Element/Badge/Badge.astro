@@ -1,0 +1,11 @@
+---
+const { content, badgeRank = ""} = Astro.props;
+
+import Admin from "./Rank/Admin.astro";
+import Mod from "./Rank/Mod.astro";
+import Dev from "./Rank/Dev.astro";
+
+---
+{(badgeRank == "admin") && <Admin />}
+{(badgeRank == "mod") && <Mod />}
+{(badgeRank == "dev") && <Dev />}
