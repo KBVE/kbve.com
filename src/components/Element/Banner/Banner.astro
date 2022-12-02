@@ -1,0 +1,10 @@
+---
+const { content, bannerConcept = ""} = Astro.props;
+
+import Sale from "./Concept/Sale.astro";
+import Staff from "./Concept/Staff.astro";
+
+---
+
+{(bannerConcept == "sale") && <Sale />}
+{(bannerConcept == "staff") && <Staff />}
