@@ -9,21 +9,36 @@ export const get = async () => {
       
       if((p.frontmatter.tags.indexOf(menu) !== -1) ? true : false) {
             return {
+              
+              //?   Core
               status: p.frontmatter.status,
-              id: p.frontmatter.id,
+              //?   Profile
               username: p.frontmatter.username,
               title: p.frontmatter.title,
               description: p.frontmatter.description,
-              href: p.frontmatter.href,
-              icon: p.frontmatter.icon,
-              target: p.frontmatter.target,
-              tags: p.frontmatter.tags,
+              jobby: p.frontmatter.jobby,
+              //?   PFP/Bio
               img: p.frontmatter.img,
+              bloodtype: p.frontmatter.bloodtype,
+              project: p.frontmatter.project,
+              primary: p.frontmatter.primary,
+              secondary: p.frontmatter.secondary,
+              lottie: p.frontmatter.lottie,
+              lottiefooter: p.frontmatter.lottiefooter,
+              //?   Social
+              github: p.frontmatter.github,
+              twitter: p.frontmatter.twitter,
+              website: p.frontmatter.website,
+              //?   Rank
+              position: p.frontmatter.position,
               admin: p.frontmatter.admin,
               moderator: p.frontmatter.moderator,
               vip: p.frontmatter.vip,
+              gfx: p.frontmatter.gfx,
               dev: p.frontmatter.dev,
-              lottie: p.frontmatter.lottie,
+              langs: p.frontmatter.langs,
+              //?   Tags
+              tags: p.frontmatter.tags,
             }
       }
             else  {
