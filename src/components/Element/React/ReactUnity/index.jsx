@@ -13,6 +13,7 @@ function App({ apps, buttonClass }) {
   const [score, setScore] = useState();
   const [buttonClassName, setButtonClass] = useState(buttonClass);
   const isMounted = useRef(true);
+  const canvas = useRef(null);
 
   // {isMounted} is set to false when we unmount the component.
   useEffect(() => {
@@ -44,15 +45,56 @@ function App({ apps, buttonClass }) {
     setUserName(userName);
     setScore(score);
   }, []);
+
+
+  function focusCanvas() {
+    if (canvas.current) {
+      canvas.current.focus();
+    }
+  }
+  
   useEffect(() => {
     addEventListener("GameOver", handleGameOver);
     return () => {
       removeEventListener("GameOver", handleGameOver);
     };
   }, [addEventListener, removeEventListener, handleGameOver]);
+  
   function handleClickSpawnEnemies() {
     sendMessage("GameController", "SpawnEnemies", 100);
   }
+
+  //? Pixel Issues
+
+    // We'll use a state to store the device pixel ratio.
+    const [devicePixelRatio, setDevicePixelRatio] = useState(
+      window.devicePixelRatio
+    );
+    const handleChangePixelRatio = useCallback(
+      function () {
+        // A function which will update the device pixel ratio of the Unity
+        // Application to match the device pixel ratio of the browser.
+        const updateDevicePixelRatio = function () {
+          setDevicePixelRatio(window.devicePixelRatio);
+        };
+        // A media matcher which watches for changes in the device pixel ratio.
+        const mediaMatcher = window.matchMedia(
+          `screen and (resolution: ${devicePixelRatio}dppx)`
+        );
+        // Adding an event listener to the media matcher which will update the
+        // device pixel ratio of the Unity Application when the device pixel
+        // ratio changes.
+        mediaMatcher.addEventListener("change", updateDevicePixelRatio);
+        return function () {
+          // Removing the event listener when the component unmounts.
+          mediaMatcher.removeEventListener("change", updateDevicePixelRatio);
+        };
+      },
+      [devicePixelRatio]
+    );
+  
+
+
 
   // We'll round the loading progression to a whole number to represent the
   // percentage of the Unity Application that has loaded.
@@ -69,7 +111,9 @@ function App({ apps, buttonClass }) {
   else {
 
   return (
-    <div className="container place-content-center justify-center items-center py-12">
+    //<div className="container place-content-center justify-center items-center py-12">
+    <div>
+
       {isLoaded === false && (
         // We'll conditionally render the loading overlay if the Unity
         // Application is not loaded.
@@ -79,7 +123,13 @@ function App({ apps, buttonClass }) {
 
         </div>
       )}
-      <Unity className="unity rounded-3xl self-auto" unityProvider={unityProvider} style={{ width: 1280, height: 720, }}  />
+       <Fragment>
+
+      <div id="unity-container" className="">
+      <Unity ref={canvas} className="" matchWebGLToCanvasSize={true} unityProvider={unityProvider} style={{ width: 1280, height: 720, }}   devicePixelRatio={devicePixelRatio}   />
+
+      </div>
+      </Fragment>
     </div>
   );
       }
