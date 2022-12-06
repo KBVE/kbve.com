@@ -24,3 +24,10 @@ GPT , currently known as GPT-3, stands for `Generative Pre-trained Transformer` 
 - #### GPT-NeoX
 
   - For GPU, we suggest GPT-NeoX, [Repo Here](https://github.com/EleutherAI/gpt-neox/)
+
+
+## ChatGPT
+
+### PyChatGPT
+
+[Official Repo](https://github.com/rawandahmad698/PyChatGPT)

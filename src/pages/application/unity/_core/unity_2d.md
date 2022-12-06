@@ -10,9 +10,13 @@ tags:
 
 These are the notes for Unity's 2D engine and/or projects related to the 2D development cycle.
 
-## Corki Engine
+## Corgi Engine
 
-We are currently test casing the corki engine as the base for our 2D engine and then going to integrate it with our 2DUnity. As of early December 2022, we are test casing the pipeline with the engine as an underlay and restructuring our `2DUnity` as a gateway layer, a similar setup to our `3DUnity` and `UCC`.
+We are currently test casing the corgi engine as the base for our 2D engine and then going to integrate it with our 2DUnity. As of early December 2022, we are test casing the pipeline with the engine as an underlay and restructuring our `2DUnity` as a gateway layer, a similar setup to our `3DUnity` and `UCC`.
+
+### Corki Namespace
+
+The `Corki` namespace is a KBVE extension of the `Corgi` namespace, adding custom gateway layers that make it easier to infer and interpolate among different APIs.
 
 ## 2D Examples
 

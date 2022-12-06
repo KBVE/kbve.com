@@ -14,24 +14,34 @@ Official Documentation [Link](https://opsive.com/support/documentation/ultimate-
 
 According to Opsive, their UCC is a professional and kinematic character controller that is designed for flexibility, modularity and performance; we consider it an "AIO" or "All-In-One" library.
 
+* * *
+
 ### UCC URP
 
 Grab the invoice number from the plugin purchase and head over to [OPSive Downloads](https://opsive.com/downloads/) with it.
 After placing the invoice number into the system, it will give you download integrations for external plugins.
+
+* * *
 
 ### UCC Asset Store
 
 Official [Asset Store](https://assetstore.unity.com/packages/tools/game-toolkits/ultimate-character-controller-233710).
 Last Release Date: 3.0.3 - Nov 24, 2022
 
+* * *
+
 ### UCC Reference
 
 [Opsive Video Collection](https://opsive.com/videos/?pid=923)
 [First Person Character Creation](https://www.youtube.com/watch?v=EAuS_0OxyrA)
 
+* * *
+
 ### UCC Character
 
 The core of the UCC, Ultimate Character Controller, would be the Character model and its interactivity within the `Scene`, thus these notes are for referencing through the plugin and movement, collision, motion, gravity, abilities and more for the `Humanoid` / `Character`.
+
+* * *
 
 ## UCCIS
 
@@ -73,3 +83,5 @@ Video Tutorials
 [Video Part 2](https://www.youtube.com/watch?v=m0Z-wPFkM9w)
 
 The two part video tutorial goes through a UCC / Inventory integration.
+
+* * *
