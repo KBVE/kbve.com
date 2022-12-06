@@ -14,7 +14,13 @@ const { content = data } = Astro.props;
 import ProfileCard from "@c/Element/Profile/ProfileCard/ProfileCard.astro";                     /// [Profile]
 ---
 <Core content={content}>
-    <ReactUnity id="wvn2022" buttonClass="space-y-4 relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
+    <div class="flex gap-2 flex-nowrap">
+        <div class="w-4/5">
+            <ReactUnity id="wvn2022" buttonClass="space-y-4 relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
+        </div>
+        <div class="w-1/5">
+        </div>
+    </div>
 </Core>
   
   
