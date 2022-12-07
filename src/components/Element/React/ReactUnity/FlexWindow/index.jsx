@@ -6,7 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 function App({ apps, buttonClass }) {
-  const [isPlay, setPlay] = useState(false);
+  const [isPlay, setPlay] = useState(true);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [userName, setUserName] = useState();
