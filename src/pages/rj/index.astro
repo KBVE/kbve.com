@@ -13,16 +13,17 @@ const { content = data } = Astro.props;
     <SWUP>
         <div class="px-8 py-6 space-y-8">
         </div>
+        <div class="px-8 py-6 space-y-8">
+        </div>
 
             <!--    [Template]  ->  [START] -->
 
 
             <div class="min-h-screen light:bg-purple-800 light:text-gray-100">
                 <div class="p-6 space-y-8">
-                    <header class="container flex items-center justify-between h-16 px-4 mx-auto rounded dark:bg-gray-900">
+                    <!-- <header class="container flex items-center justify-between h-16 px-4 mx-auto rounded dark:bg-gray-900">
                         <a rel="noopener noreferrer" href="#" aria-label="Homepage">
 
-                            <!-- [REPLACE] SVG with RogueJester SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-6 h-6 dark:text-orange-400">
                                 <path d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z"></path>
                                 <path d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z"></path>
@@ -41,15 +42,15 @@ const { content = data } = Astro.props;
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
                         </button>
-                    </header>
+                    </header> -->
                     <main>
                         <div class="container mx-auto space-y-16">
                             <section class="grid gap-6 text-center lg:grid-cols-2 xl:grid-cols-5">
-                                <div class="w-full p-6 rounded-md sm:p-16 xl:col-span-2 bg-offset">
-                                    <span class="block mb-2 dark:text-orange-400">RogueJester</span>
-                                    <h1 class="text-5xl font-extrabold dark:text-gray-50">Built with Unity</h1>
+                                <div class="w-full p-6 rounded-3xl sm:p-16 xl:col-span-2 bg-offset">
+                                    <span class="block mb-2 dark:text-orange-400">Built with Unity</span>
+                                    <h1 class="gradient-text text-5xl font-extrabold dark:text-gray-50">RogueJester</h1>
                                     <p class="my-8">
-                                        <span class="font-medium dark:text-gray-50">Modular and versatile.</span>The ultimate design toolkit for savvy technology startups.
+                                        RogueJester is a sci-fi, Action-RPG Shooter set in the Shaco Nebulae, the Outer Rim of the Galaxy in the Great-Cyber Year of 2101. You are an indentured Student-worker, shackled by inherited generational debt. As your Social Credit Score dwindles to the dangerous "Purge-on-Sight" values, you must navigate the information superhighway for Paydata and Digital Dolans to manage your debt, credit, and sanity. Beware; as these tickers tick tick down, the long reach of the Demoncorps approach.
                                     </p>
                                     <form novalidate="" action="" class="self-stretch space-y-3 ng-untouched ng-pristine ng-valid">
                                         <div>
@@ -63,40 +64,41 @@ const { content = data } = Astro.props;
                                         <button class="w-full py-2 font-semibold rounded bg-orange-400 dark:text-gray-900">Join the waitlist</button>
                                     </form>
                                 </div>
-                                <img src="https://source.unsplash.com/random/480x360" alt="" class="object-cover w-full h-full rounded-md xl:col-span-3 dark:bg-gray-500">
+                                <iframe src="https://player.twitch.tv/?video=1674656016&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no" class="object-cover w-full h-full rounded-3xl xl:col-span-3 dark:bg-gray-500" ></iframe>
+                                <!-- <img src="https://source.unsplash.com/random/480x360" alt="" class="object-cover w-full h-full rounded-md xl:col-span-3 dark:bg-gray-500"> -->
                             </section>
                             <section>
-                                <span class="block mb-2 text-xs font-medium tracking-widest uppercase lg:text-center text-primary">How it works</span>
-                                <h2 class="text-5xl font-bold lg:text-center dark:text-gray-50">Building with Mamba is simple</h2>
+                                <span class="block mb-2 text-xs font-medium tracking-widest uppercase lg:text-center text-primary">How it plays</span>
+                                <h2 class="text-5xl gradient-text font-bold lg:text-center dark:text-gray-50">The Core Missions within The Game</h2>
                                 <div class="grid gap-6 my-16 lg:grid-cols-3 bg-offset rounded-3xl">
                                     <div class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900">
-                                        <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold rounded-full dark:bg-orange-400 dark:text-gray-900">1</div>
-                                        <p class="text-2xl font-semibold">
-                                            <b>Nulla.</b>Nostrum, corrupti blanditiis. Illum, architecto?
+                                        <div class="flex items-center justify-center text-xl font-bold rounded-full flex-shrink-0  dark:bg-orange-400 dark:text-gray-900 tracking-widest">[1] <span class="gradient-text uppercase indent-2"> War Guilds.</span></div>
+                                        <p class="text-2xl font-semibold indent-12">
+                                            From a Poor Peasant to a <span class="text-primary">Ruthless</span> Space Pirate <span class="text-secondary">Overlord</span> with a Massive Socio-Economic Empire. 
                                         </p>
                                     </div>
                                     <div class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900">
-                                        <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold rounded-full dark:bg-orange-400 dark:text-gray-900">2</div>
-                                        <p class="text-2xl font-semibold">
-                                            <b>Accusantium.</b>Vitae saepe atque neque sunt eius dolor veniam alias debitis?
+                                        <div class="flex items-center justify-center flex-shrink-0 text-xl font-bold rounded-full dark:bg-orange-400 dark:text-gray-900 tracking-widest">[2] <span class="gradient-text uppercase indent-2"> Cyber Estate.</span></div>
+                                        <p class="text-2xl font-semibold indent-12">
+                                            Manage your citizens and armies, just be careful and not turn into a slum lord.
                                         </p>
                                     </div>
                                     <div class="flex flex-col p-8 space-y-4 rounded-md dark:bg-gray-900">
-                                        <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold rounded-full dark:bg-orange-400 dark:text-gray-900">3</div>
-                                        <p class="text-2xl font-semibold">
-                                            <b>Maxime.</b>Expedita temporibus culpa reprehenderit doloribus consectetur odio!
+                                        <div class="flex items-center justify-center flex-shrink-0 text-xl font-bold rounded-full dark:bg-orange-400 dark:text-gray-900 tracking-widest">[3] <span class="gradient-text uppercase indent-2"> Market Simulator.</span></div>
+                                        <p class="text-2xl font-semibold indent-12">
+                                            Swap fake stocks and start wars to increase prices of food futures! You are a mad man!
                                         </p>
                                     </div>
                                 </div>
                             </section>
                             <section class="grid gap-6 lg:grid-cols-2">
-                                <img src="https://source.unsplash.com/random/360x480" alt="" class="object-cover w-full rounded-md max-h-96 dark:bg-gray-500">
-                                <div class="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 dark:bg-gray-900">
+                                <img src="https://i.imgur.com/frIx5hq.png" alt="" class="object-cover w-full rounded-md max-h-96 dark:bg-gray-500">
+                                <div class="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8">
                                     <img src="https://source.unsplash.com/random/100x100" alt="" class="object-cover w-20 h-20 rounded-full dark:bg-gray-500">
-                                    <blockquote class="max-w-lg text-lg italic font-medium text-center">"Et, dignissimos obcaecati. Recusandae praesentium doloribus vitae? Rem unde atque mollitia!"</blockquote>
+                                    <blockquote class="max-w-lg text-lg italic font-medium text-center">"I still have no clue what I am doing in this game. I am as clueless as the developers, but its fun!"</blockquote>
                                     <div class="text-center dark:text-gray-400">
                                         <p>Leroy Jenkins</p>
-                                        <p>CEO of Company Co.</p>
+                                        <p>CEO of Company Placement Co.</p>
                                     </div>
                                     <div class="flex space-x-2">
                                         <button type="button" aria-label="Page 1" class="w-2 h-2 rounded-full dark:bg-gray-50"></button>
@@ -105,16 +107,16 @@ const { content = data } = Astro.props;
                                         <button type="button" aria-label="Page 4" class="w-2 h-2 rounded-full dark:bg-gray-600"></button>
                                     </div>
                                 </div>
-                                <div class="p-8 space-y-8 rounded-md lg:col-span-full lg:py-12 dark:bg-gray-900">
-                                    <h2 class="text-5xl font-bold dark:text-gray-50">Create with us</h2>
-                                    <p class="dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt facilis quod accusantium beatae cum nam adipisci reiciendis omnis possimus error quo animi voluptas magni, at incidunt. Nulla ex at ullam corporis quidem adipisci vitae, perferendis dolorem libero minus atque tenetur enim pariatur cupiditate commodi in beatae, ipsa eligendi? Quis, saepe.</p>
+                                <div class="p-8 space-y-8 rounded-md lg:col-span-full lg:py-12 bg-offset">
+                                    <h2 class="text-5xl font-bold gradient-text">Lore</h2>
+                                    <p class="dark:text-gray-400 indent-12">Glittering, popping, snapping - the gnashing of Demoncode thrums through your rented cerebracket, loan-drilled to your cranium. It's just fast enough for you to get the job done. Your social credit, and galactic debt twinkle down in flashing numbers in your displays and guages and soon enough they will come for you. Your consciousness has been commoditized, and if you cannot produce, then you will simply be reduced. As bio-organic computing resource you will help shift the bottomline of the Daemoncorps, ever slightly enough. Your mission? It does not matter. It's only a matter of time before you are downloaded entirely, but until then your neurons scream through cyberspace - shattering the molds holding valuable Paydata, any bit of information worth even a fraction of cash to the Cyberdaemoncorps. Failing that, your mere presence introduces digi-entropy, as garbage meme code is left in your wake - courtesy of the RogueJester protocol. You live to destroy the hateful digital construct you've been left to. You are the program. You are RogueJester, and one way or the other, you will have the last laugh!</p>
                                 </div>
                             </section>
                             <section>
                                 <div class="grid gap-6 lg:grid-cols-3">
                                     <div class="overflow-hidden rounded lg:flex lg:col-span-3">
                                         <img src="https://source.unsplash.com/random/485x365" alt="" class="object-cover w-full h-auto max-h-96 dark:bg-gray-500">
-                                        <div class="p-6 space-y-6 lg:p-8 md:flex md:flex-col dark:bg-gray-900">
+                                        <div class="p-6 space-y-6 lg:p-8 md:flex md:flex-col bg-offset">
                                             <span class="self-start px-3 py-1 text-sm rounded-full dark:bg-orange-400 dark:text-gray-900">Business</span>
                                             <h2 class="text-3xl font-bold md:flex-1">Curating a workplace that inspires team movement</h2>
                                             <div>
@@ -123,15 +125,15 @@ const { content = data } = Astro.props;
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="p-6 rounded lg:p-8 lg:py-12 dark:bg-gray-900">
+                                    <div class="p-6 rounded lg:p-8 lg:py-12 bg-offset">
                                         <h3 class="inline font-medium dark:text-gray-50">Panel-based blocks.</h3>
                                         <p class="inline">Flexible panels that are perfect for building functional layouts.</p>
                                     </div>
-                                    <div class="p-6 rounded lg:p-8 lg:py-12 dark:bg-gray-900">
+                                    <div class="p-6 rounded lg:p-8 lg:py-12 bg-offset">
                                         <h3 class="inline font-medium dark:text-gray-50">Responsive design.</h3>
                                         <p class="inline">Panels look great no matter the device.</p>
                                     </div>
-                                    <div class="p-6 rounded lg:p-8 lg:py-12 dark:bg-gray-900">
+                                    <div class="p-6 rounded lg:p-8 lg:py-12 bg-offset">
                                         <h3 class="inline font-medium dark:text-gray-50">Premium support.</h3>
                                         <p class="inline">Join over 50 000 satisfied customers who use our templates.</p>
                                     </div>
