@@ -10,8 +10,12 @@ export const get = async () => {
       if((p.frontmatter.tags.indexOf(menu) !== -1) ? true : false) {
             return {
               
+
               //?   Core
               status: p.frontmatter.status,
+              //*   URL
+              url: p.url,
+              slug: `https://kbve.com${p.url}`,
               //?   Profile
               username: p.frontmatter.username,
               title: p.frontmatter.title,
