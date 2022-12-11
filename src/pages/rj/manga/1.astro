@@ -1,0 +1,41 @@
+---
+//?         [Issue 1 of RJ Manga]
+
+//!         [Manga]
+import Manga from "@l/abstract/manga/manga.astro";
+
+//          {Temp}:{Vars}
+//          [CORE]
+const title = "RogueJester The Manga";
+const subtitle = "Chapter 1 : The Intro";
+const description = "The start of a never ending novel";
+//          [Article]
+const old_cover = "https://i.imgur.com/bcERIwU.png";
+const cover = "https://i.imgur.com/LT8APgl.jpg";
+const character = "https://i.imgur.com/n384gZM.png";
+const character_chat = "Oh... Hello there dear traveller, Welcome to RogueJester! My name is Luci and do we have a story for you ;D";
+const screenplay = "";
+const img = "";
+
+//          [Action]
+const inventory = false;
+let potion = 5;
+let action = 0;
+//          [Options]
+const gamelink = "https://kbve.com/rj/";
+
+//?         [React]:[Unity]:[Integration]
+---
+<Manga 
+    title={title} 
+    description={description} 
+    cover={cover} 
+    gamelink={gamelink} 
+    subtitle={subtitle} 
+    character={character} 
+    character_chat={character_chat} 
+    inventory={inventory}
+    potion={potion}
+    action={action}
+    >
+</Manga>

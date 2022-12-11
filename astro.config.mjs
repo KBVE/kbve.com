@@ -33,7 +33,6 @@ export default defineConfig({
   }), 
   mdx({
     ...markdownConfig,
-      extendPlugins: true  
     //extendPlugins: "astroDefaults"
   }), 
   react(),

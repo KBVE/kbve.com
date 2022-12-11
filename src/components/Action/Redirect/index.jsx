@@ -3,7 +3,7 @@ const Redirect = ({url = "https://kbve.com", display = true}) => {
     if(display)
 	return (
         <div>
-            <meta http-equiv="refresh" content={`0;URL='`+ url +`'`} /> 
+            <meta http-equiv="refresh" content={`0;URL='${url}'`} /> 
             <script> window.location={url} </script>
         </div>
 
