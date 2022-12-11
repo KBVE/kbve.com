@@ -6,7 +6,7 @@ import SocialMetaTag from "@c/SocialMedia/MetaTag.astro";       //  Import Socia
 const { content, title, description } = Astro.props;                     //  Import Astro.props
 ---
 <!DOCTYPE html>
-<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+<html lang="en" class="h-full motion-safe:scroll-smooth"  data-theme="dark">
   <head>
     <Head title={title || content.title} description={title || content.description} />
     <SocialMetaTag title={title || content.title} description={title || content.description} />
