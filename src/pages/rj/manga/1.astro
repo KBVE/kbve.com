@@ -7,8 +7,9 @@ import Manga from "@l/abstract/manga/manga.astro";
 //          {Temp}:{Vars}
 //          [CORE]
 const title = "RogueJester The Manga";
+const title_bg = "p-6 rounded-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-orange-500";
 const subtitle = "Chapter 1 : The Intro";
-const description = "The start of a never ending novel";
+const description = `RogueJester is a story set in the Shaco Nebulae, the Outer Rim of the Galaxy in the Great-Cyber Year of 2101. You are an indentured Student-worker, shackled by inherited generational debt. As your Social Credit Score dwindles to the dangerous "Purge-on-Sight" values, you must navigate the information superhighway for Paydata and Digital Dolans to manage your debt, credit, and sanity. Beware; as these tickers tick tick down, the long reach of the Demoncorps approach.`;
 //          [Article]
 const old_cover = "https://i.imgur.com/bcERIwU.png";
 const cover = "https://i.imgur.com/LT8APgl.jpg";
@@ -27,7 +28,8 @@ const gamelink = "https://kbve.com/rj/";
 //?         [React]:[Unity]:[Integration]
 ---
 <Manga 
-    title={title} 
+    title={title}
+    title_bg={title_bg}
     description={description} 
     cover={cover} 
     gamelink={gamelink} 

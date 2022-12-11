@@ -5,6 +5,7 @@ import Core from "@l/theme/core.astro";
 const { 
     content, 
     title = "Manga", 
+    title_bg = "bg-offset p-6 rounded-3xl",
     description = "Manga", 
     screenplay = "", 
     cover = "https://images.unsplash.com/photo-1519638399535-1b036603ac77", 
@@ -13,6 +14,7 @@ const {
     character_chat,
     potion = 0,
     inventory = false,
+
    } = Astro.props;
 
 import Nav from "@l/theme/nav.astro";
@@ -341,7 +343,7 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
                 </div>
             </div>
             
-            <div class="absolute bottom-0 right-0 bg-black/[.25] p-8 rounded-full shadow-md w-full">
+            <div class="absolute bottom-0 right-0 bg-black/[.25] p-8 rounded-full shadow-md w-full indent-8">
                     <p class="text-2xl text-primary kbvetext">{character_chat}</p>
             </div>
             
@@ -350,10 +352,10 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         </div>
         
         <div class="justify-center items-center text-base p-8 flex flex-col h-full order-2 space-y-4">
-            <p class="bg-offset p-6 rounded-3xl">
+            <p class={title_bg}>
                 {subtitle}
             </p>
-            <p class="bg-black/[.15] p-6 rounded-3xl">
+            <p class="bg-black/[.15] p-6 rounded-3xl w-full indent-16 text-justify">
                 {description}
             </p>
         </div>
