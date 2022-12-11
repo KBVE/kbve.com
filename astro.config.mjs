@@ -6,6 +6,10 @@ import react from "@astrojs/react";
 import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
 
+//*   MDX / MD Integration
+import markdownConfig from './markdown.config'
+
+
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 
@@ -18,9 +22,7 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   site: "https://kbve.com",
-  markdown: {
-    extendDefaultPlugins: true
-  },
+  markdown: markdownConfig,
   integrations: [
   // preact({
   //   compat: true
@@ -28,17 +30,25 @@ export default defineConfig({
 
   sitemap({
     customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"]
-  }), mdx(), react(),
-  compress(), 
- prefetch({
-  throttle: 20
   }), 
-  tailwind(), alpinejs(), partytown({
+  mdx({
+    ...markdownConfig,
+    //extendPlugins: "astroDefaults"
+  }), 
+  react(),
+  compress(), 
+  prefetch({
+    throttle: 20
+  }), 
+  tailwind(), 
+  alpinejs(), 
+  partytown({
     // dataLayer.push as a forwarding-event.
     config: { 
       forward: ["dataLayer.push"] 
     },
-  })],
+  }),
+  ],
   // Vite
 
   vite: {

@@ -3,8 +3,12 @@ const { content, bannerConcept = ""} = Astro.props;
 
 import Sale from "./Concept/Sale.astro";
 import Staff from "./Concept/Staff.astro";
+import Manga from "./Concept/MangaBanner.astro";
+import Newsletter from './Concept/Newsletter.astro';
 
 ---
 
 {(bannerConcept == "sale") && <Sale />}
 {(bannerConcept == "staff") && <Staff />}
+{(bannerConcept == "manga") && <Manga />}
+{(bannerConcept == "newsletter") && <Newsletter />}
