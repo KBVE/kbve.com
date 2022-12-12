@@ -1,10 +1,73 @@
 ---
-const _page_index = 2;
-let __page_index = 1;
----
+const { 
+    content, 
+    title = "Manga", 
+    title_bg = "bg-offset p-6 rounded-3xl",
+    description = "Manga", 
+    screenplay = "", 
+    cover = "https://images.unsplash.com/photo-1519638399535-1b036603ac77", 
+    subtitle = "SubTitle", 
+    character, 
+    character_chat,
+    potion = 0,
+    inventory = false,
+    page_index = 2,
+    status = 'inactive',
+   } = Astro.props;
 
-<style>
-    main > article:nth-child() > .article-image-section {
-        background-image: url("https://images.unsplash.com/photo-1535905557558-afc4877a26fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
-        }
-</style>
+
+
+const style = `main > article:nth-child(${page_index}) > .article-image-section {
+        background-image: url("${cover}");
+        }`;
+
+
+import Lottie from "@c/Element/Lottie/Lottie.astro";
+---
+<!-- 
+    <style is:inline set:html={style}></style> -->
+
+    <!-- INTRO TO CHAPTER -->
+    <article data-index={page_index} data-status="inactive" class="">
+        
+        <!-- [SCENE]    ->  [BG] -->
+        <div class="relative bg-cover overflow-hidden order-1 h-full  " style={{ backgroundImage: `url(${cover})` }}>
+            <div class="absolute bottom-0 left-0 px-5">
+                
+                <div class="w-full px-10">
+                  <img src={character} class="flex hover:scale-110 object-scale-down" />
+                </div>
+            </div>
+            
+
+                        
+        </div>
+        
+
+
+        <div class="justify-center items-center flex-initial shrink p-8 order-2 ">
+          <div class="bg-offset p-8 rounded-3xl shadow-md w-full indent-8">
+            <p class="">{character_chat}</p>
+          </div>
+        </div>
+        
+        <div class="flex border border-indigo-500/[.5] justify-center items-center p-1 order-3">
+                    
+            <i class="text-primary flex-1 fa-light fa-save"></i>
+            <i class="text-primary flex-1 fa-light fa-save"></i>
+            <i class="gradient-text flex-1 fa-light fa-flask-potion"></i>
+            <i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+        </div>
+        
+        <div class="article-nav-section flex order-4 border border-indigo-500/[.5]">
+            <button class="article-nav-button " type="button" onclick="handleLeftClick()">
+              <Lottie json="https://lottie.host/28216e55-5151-48de-9bf9-7169dd5089bd/ji6AE9dLdb.json" styler="flex-none h-16 lg:h-64"  />
+            </button>
+            <button class="article-nav-button " type="button" onclick="handleRightClick()">
+              <Lottie json="https://lottie.host/bbc719e4-027c-4348-a052-f8f777e47b05/K5AgPnzgcd.json" styler="flex-none h-16 lg:h-64"  />
+            </button>
+        </div>
+
+    </article>
+
+    

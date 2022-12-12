@@ -63,6 +63,7 @@
     "rehype-autolink-headings": "^6.1.1",
     "swup": "^2.0.19",
     "tailwindcss": "^3.0.24",
-    "tailwindcss-fluid-type": "^2.0.3"
+    "tailwindcss-fluid-type": "^2.0.3",
+    "typewriter-effect": "^2.19.0"
   }
 }
