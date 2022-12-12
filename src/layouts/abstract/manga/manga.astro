@@ -23,7 +23,7 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
 <Core title={title} description={description}>
     <!--    [NAV]         -->   <Nav /><div class="px-8 py-6 space-y-8"></div>  <!--    [DEAD SPACE]  -->
     <!--    Style Sheets  -->   <link rel="preconnect" href="https://fonts.googleapis.com">   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap" rel="stylesheet">
-    <!--    Snow Effect   -->   <style> .snowflake {  color: #fff;  font-size: 1em; font-family: Arial, sans-serif; text-shadow: 0 0 5px #000;  } @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}</style> 
+    <!-- Snow Effect     <style> .snowflake {  color: #fff;  font-size: 1em; font-family: Arial, sans-serif; text-shadow: 0 0 5px #000;  } @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}</style>  -->
 
     <style> .kbvetext { text-shadow:  3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,  -1px 1px 0 #000,  1px 1px 0 #000; } </style>
     <!--    PartyTown Font Awesome     -->  <script type="text/partytown" src="https://kit.fontawesome.com/944eb371a4.js"></script>
@@ -67,16 +67,16 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         /* -- Mobile Nav Toggle -- */
 
         //const nav = document.querySelector("nav");
-        const nav = document.querySelector(`[data-x="x"]`);
-        const handleNavToggle = () => {
-            nav.dataset.transitionable = "true";
-            nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
-        }
+        // const nav = document.querySelector(`[data-x="x"]`);
+        // const handleNavToggle = () => {
+        //     nav.dataset.transitionable = "true";
+        //     nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
+        // }
 
-        window.matchMedia("(max-width: 800px)").onchange = e => {
-            nav.dataset.transitionable = "false";
-            nav.dataset.toggled = "false";
-        };
+        // window.matchMedia("(max-width: 800px)").onchange = e => {
+        //     nav.dataset.transitionable = "false";
+        //     nav.dataset.toggled = "false";
+        // };
     </script>
 
 
@@ -123,8 +123,8 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         height: 100%;
         width: 100%;
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 2fr;
+        grid-template-rows: 2fr;
         position: absolute;
         left: 0px;
         top: 0px;
@@ -174,7 +174,7 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         }
 
  
-        main > article:nth-child(2) > .article-image-section {
+        /* main > article:nth-child(2) > .article-image-section {
         background-image: url("https://images.unsplash.com/photo-1535905557558-afc4877a26fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
         }
 
@@ -184,7 +184,7 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
 
         main > article:nth-child(4) > .article-image-section {
         background-image: url("https://images.unsplash.com/photo-1660766877755-4cac24f6cf21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80");
-        }
+        } */
 
         main > article > .article-image-section {
         background-position: center;
@@ -245,7 +245,6 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         }
 
         main > article > .article-nav-section > .article-nav-button:nth-child(2) {
-        border-left: 1px solid var(--border-color);
         }
 
         @media(max-width: 1200px) {    
@@ -272,7 +271,6 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         
         main > article > .article-description-section,
         main > article > .article-nav-section {
-            border-left: none;
         }
 
         main > article > .article-image-section {
@@ -280,7 +278,6 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         }
         
         main > article > .article-title-section {
-            border-bottom: 1px solid var(--border-color);
             order: 2;
         }
         
@@ -290,7 +287,6 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         }
         
         main > article > .article-nav-section {
-            border-bottom: 1px solid var(--border-color);
             order: 4;
         }
         }
@@ -299,7 +295,7 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         
         main > article {
             grid-template-rows: 1fr repeat(4, 0.5fr);
-            height: max(700px, 100%);
+            /* height: max(900px, 100%); */
         }
         
         main > article > .article-title-section {
@@ -327,60 +323,58 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
 
     </style>
 
-<main class="grow relative overflow-hidden "> <!-- Removed overflow-y-auto -->
+<main class="grow relative overflow-hidden"> <!-- Removed overflow-y-auto -->
     
 
     <!-- INTRO TO CHAPTER -->
     <article data-index="0" data-status="active" class="">
         
         <!-- [SCENE]    ->  [BG] -->
-        <div class="relative bg-cover flex h-full snowflakes overflow-hidden order-1 " style={{ backgroundImage: `url(${cover})` }}>
-            <div class="absolute bottom-0 left-0 px-5">
-                
-                <div class="w-full px-10">
+        <div class="relative bg-cover overflow-hidden order-1 h-full  " style={{ backgroundImage: `url(${cover})` }}>
+            <div class="absolute bottom-0 right-0 px-5">
+              <img src={character} class="px-5 flex scale-125" /> 
+            </div>
+            
+            <div class="absolute bg-black/30 bottom-0 rounded-3xl shadow-md w-full indent-8 invisible md:visible p-4">
+              <p class="text-2xl text-primary kbvetext ">{character_chat}</p>
+            </div>               
+        </div>
+        
+        <div class="order-2 md:hidden visible md:invisible ">
+          <p class="justify-center items-center flex-initial shrink p-8 bg-offset">{character_chat}</p>
+        </div>
 
-                <img src={character} class="flex hover:scale-110 object-scale-down" />
-                </div>
-            </div>
-            
-            <div class="absolute bottom-0 right-0 bg-black/[.25] p-8 rounded-full shadow-md w-full indent-8">
-                    <p class="text-2xl text-primary kbvetext">{character_chat}</p>
-            </div>
-            
-           <div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❅</div>
-            
+
+        
+        <div class="flex border border-indigo-500/[.5] justify-center items-center p-4 order-3">
+                    
+            <i class="text-primary flex-1 fa-light fa-save"></i>
+            <i class="text-primary flex-1 fa-light fa-save"></i>
+            <i class="gradient-text flex-1 fa-light fa-flask-potion"> {potion}</i>
+            <i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+            <i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+            <i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+
         </div>
         
-        <div class="justify-center items-center text-base p-8 flex flex-col h-full order-2 space-y-4">
-            <p class={title_bg}>
-                {subtitle}
-            </p>
-            <p class="bg-black/[.15] p-6 rounded-3xl w-full indent-16 text-justify">
-                {description}
-            </p>
-        </div>
-        
-        <div class="flex border-t border-t-indigo-500/[.5] border-r border-r-indigo-500/[.5] justify-center items-center h-full p-8 order-3">
-            <p class="text-4xl font-bold basis-3/4 gradient-text">{title}</p>
-            
-            <i class="text-2x1 text-primary flex-1 fa-light fa-save"> </i>
-            <i class="text-2x1 gradient-text flex-1 fa-light fa-flask-potion"> {potion}</i>
-            <i class="text-2xl text-secondary flex-1 fa-light fa-suitcase"> {inventory}</i>
-        </div>
-        
-        <div class="article-nav-section flex h-full order-4">
-            <button class="article-nav-button border border-indigo-500/[.5]" type="button" onclick="handleLeftClick()">
-              <Lottie json="https://lottie.host/28216e55-5151-48de-9bf9-7169dd5089bd/ji6AE9dLdb.json" styler="flex-1"  />
+        <div class="article-nav-section flex order-4 border border-indigo-500/[.5]">
+            <button class="article-nav-button " type="button" onclick="handleLeftClick()">
+              <Lottie json="https://lottie.host/28216e55-5151-48de-9bf9-7169dd5089bd/ji6AE9dLdb.json" styler="flex-none h-16 lg:h-32"  />
             </button>
-            <button class="article-nav-button" type="button" onclick="handleRightClick()">
-              <Lottie json="https://lottie.host/bbc719e4-027c-4348-a052-f8f777e47b05/K5AgPnzgcd.json" styler="flex-1"  />
+            <button class="article-nav-button " type="button" onclick="handleRightClick()">
+              <Lottie json="https://lottie.host/bbc719e4-027c-4348-a052-f8f777e47b05/K5AgPnzgcd.json" styler="flex-none h-16 lg:h-32"  />
             </button>
         </div>
 
     </article>
 
-    <!-- EXIT INTRO -->
+    
 
+       
+
+
+    <!-- EXIT INTRO -->
+<!-- 
 
     <article data-index="1" data-status="inactive">    
       <div class="article-image-section article-section"></div>
@@ -437,7 +431,9 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
           <i class="fa-light fa-arrow-right-long"></i>
         </button>
       </div>
-    </article>
+    </article> -->
+
+    <slot />
 
   </main>
 </Core>
