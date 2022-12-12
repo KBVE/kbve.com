@@ -21,6 +21,7 @@ const {
 //! Temp
 
 let cover2 = "https://images.unsplash.com/photo-1519638399535-1b036603ac77";
+let character2 = "https://i.imgur.com/WapEcDx.png";
 
 import  Nav from "@l/theme/nav.astro";                                                  //    [NAV]
 import  Lottie from "@c/Element/Lottie/Lottie.astro";                                   //    [Lottie]
@@ -341,10 +342,10 @@ import  ReactUnity from "@c/Element/React/ReactUnity/FlexWindow/FlexWindow.astro
         <div class="relative bg-cover overflow-hidden order-1 h-full  " style={{ backgroundImage: `url(${cover})` }}>
 
             <div class="w-4/5">
-              <ReactUnity id="wvn2022" buttonClass="space-y-4 relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
+              <ReactUnity id="2dunity" buttonClass="space-y-4 relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
             </div>
-            <div class="absolute bottom-0 right-0 px-5">
-              <img src={character} class="px-5 flex " /> 
+            <div class="absolute bottom-0 right-0">
+              <img src={character2} class="flex" /> 
             </div>
             
             <div class="absolute bg-black/60 bottom-0 rounded-3xl shadow-md w-full indent-8 invisible md:visible p-4">
@@ -422,7 +423,7 @@ import  ReactUnity from "@c/Element/React/ReactUnity/FlexWindow/FlexWindow.astro
       <div class="relative bg-cover overflow-hidden order-1 h-full  " style={{ backgroundImage: `url(${cover2})` }}>
 
           <div class="w-4/5">
-            <ReactUnity id="2dunity" buttonClass="space-y-4 relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
+            <ReactUnity id="wvn2022" buttonClass="space-y-4 relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
           </div>
           <div class="absolute bottom-0 right-0 px-5">
             <img src={character} class="px-5 flex " /> 
