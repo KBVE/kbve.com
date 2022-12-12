@@ -14,11 +14,15 @@ const {
     character_chat,
     potion = 0,
     inventory = false,
+    unity = false,
 
    } = Astro.props;
 
-import Nav from "@l/theme/nav.astro";
-import Lottie from "@c/Element/Lottie/Lottie.astro";
+import  Nav from "@l/theme/nav.astro";                                                  //    [NAV]
+import  Lottie from "@c/Element/Lottie/Lottie.astro";                                   //    [Lottie]
+import  TypeWriter from "./typewriter";                                                 //!   [TypeWriter]    ->  [Needs -> Migration()]
+import  ReactUnity from "@c/Element/React/ReactUnity/FlexWindow/FlexWindow.astro";      ///   {ReactUnity}    ->  [FlexWindow]
+
 ---
 <Core title={title} description={description}>
     <!--    [NAV]         -->   <Nav /><div class="px-8 py-6 space-y-8"></div>  <!--    [DEAD SPACE]  -->
@@ -331,27 +335,44 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
         
         <!-- [SCENE]    ->  [BG] -->
         <div class="relative bg-cover overflow-hidden order-1 h-full  " style={{ backgroundImage: `url(${cover})` }}>
+
+            <div class="w-4/5">
+              <ReactUnity id="wvn2022" buttonClass="space-y-4 relative gradient-text border border-indigo-500 hover:scale-125 px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" />
+            </div>
             <div class="absolute bottom-0 right-0 px-5">
               <img src={character} class="px-5 flex scale-125" /> 
             </div>
             
-            <div class="absolute bg-black/30 bottom-0 rounded-3xl shadow-md w-full indent-8 invisible md:visible p-4">
-              <p class="text-2xl text-primary kbvetext ">{character_chat}</p>
+            <div class="absolute bg-black/60 bottom-0 rounded-3xl shadow-md w-full indent-8 invisible md:visible p-4">
+              <!-- <p class="text-2xl text-primary kbvetext">{character_chat}</p> -->
+              <p>
+                <TypeWriter 
+                    text={character_chat} 
+                    buttonClassName={"bg-[#8b5cf6] hover:bg-[#8b5cf6]/90 focus:ring-4 focus:outline-none focus:ring-[#8b5cf6]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#8b5cf6]/55 mr-2 mb-2"}
+                    typewriterClassName={"text-2xl gradient-text"} 
+                    client:only="react" 
+                  />
+                
+              </p>
             </div>               
         </div>
         
         <div class="order-2 md:hidden visible md:invisible ">
           <p class="justify-center items-center flex-initial shrink p-8 bg-offset">{character_chat}</p>
+          
         </div>
 
 
         
         <div class="flex border border-indigo-500/[.5] justify-center items-center p-4 order-3">
-                    
+            
+            <!--  [?Save]   ->  [Nanostore]  -->
             <i class="text-primary flex-1 fa-light fa-save"></i>
             <i class="text-primary flex-1 fa-light fa-save"></i>
             <i class="gradient-text flex-1 fa-light fa-flask-potion"> {potion}</i>
+            <!--  [Inventory] -->
             <i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+            <!--  [Placeholder] -->
             <i class="text-secondary flex-1 fa-light fa-suitcase"></i>
             <i class="text-secondary flex-1 fa-light fa-suitcase"></i>
 
@@ -368,7 +389,27 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";
 
     </article>
 
-    
+    <!--
+      Throw Away
+     -->
+     <article data-index="1" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>Ganja</p>
+      </div>
+      <div class="article-title-section article-section">
+          <h2>SmokE</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
 
        
 
