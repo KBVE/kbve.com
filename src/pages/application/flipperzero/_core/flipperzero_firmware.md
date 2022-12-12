@@ -35,3 +35,9 @@ We will add KBVE's custom firmware in 2023.
 ## KBVE
 
 Our firmware is currently a private fork of Unleashed and will contain more custom HTTP/Networking additions, making it easier to operate the device in isolation and/or remote instances.
+
+
+## GUI
+
+To help with designing the GUI, we recommend checking out `Flipper UI` , which is an amazing tool for quick edits.
+Source for it can be found here : https://github.com/sbrin/ilin.pt/tree/main/_stuff/fui-editor

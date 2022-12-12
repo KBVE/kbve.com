@@ -3,6 +3,8 @@
 
 //!         [Manga]
 import Manga from "@l/abstract/manga/manga.astro";
+//!         [Pages]
+import Page from "@l/abstract/manga/page.astro";
 
 //          {Temp}:{Vars}
 //          [CORE]
@@ -18,14 +20,32 @@ const character_chat = "Oh... Hello there dear traveller, Welcome to RogueJester
 const screenplay = "";
 const img = "";
 
+
+
+//          {Temp}:{Vars}
+//          [CORE]
+const title2 = "Lucifurr Da Kat";
+const title_bg2 = "p-6 rounded-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-orange-500";
+const subtitle2 = "Chapter 2 : The Start";
+const description2 = "Okay";
+//          [Article]
+const old_cover2 = "https://i.imgur.com/bcERIwU.png";
+const cover2 = "https://images.unsplash.com/photo-1519638399535-1b036603ac77";
+const character2 = "https://i.imgur.com/n384gZM.png";
+const character_chat2 = "Oh... Hello there dear traveller, Welcome to RogueJester! My name is Luci and do we have a story for you ;D";
+const screenplay2 = "";
+const img2 = "";
+const page_index = 1;
+//          [Options]
+
+
 //          [Action]
-const inventory = false;
+let inventory = false;
 let potion = 5;
 let action = 0;
 //          [Options]
-const gamelink = "https://kbve.com/rj/";
+let gamelink = "https://kbve.com/rj/";
 
-//?         [React]:[Unity]:[Integration]
 ---
 <Manga 
     title={title}
@@ -40,4 +60,20 @@ const gamelink = "https://kbve.com/rj/";
     potion={potion}
     action={action}
     >
+    
+      
+            <!-- <Page 
+            title={title2}
+            title_bg={title_bg2}
+            description={description2} 
+            cover={cover2} 
+            gamelink={gamelink} 
+            subtitle={subtitle2} 
+            character={character2} 
+            character_chat={character_chat2} 
+            inventory={inventory}
+            potion={potion}
+            action={action}
+            page_index={page_index}
+                /> -->
 </Manga>
