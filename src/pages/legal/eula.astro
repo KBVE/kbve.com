@@ -11,13 +11,15 @@ const data = {
     description: "KBVE EULA, End-User License Agreement, is the legal contract between our software and the end-user; this agreement extends to clients, businesses and digital entities."}	
 const { content = data } = Astro.props;		
 
-///     [EULA]:{json}
-//const _json_eula = await fetch('https://kbve.com/legal/eula.json').then((response) =>  response.json());
-
+///     [EULA]:{json}   // Migrating the Fetch to the core component level
+///const _json_eula = await fetch('https://kbve.com/legal/eula.json').then((response) =>  response.json());
+import MambaArticle from "@c/Element/React/ReactArticle/MambaArticle/MambaArticle.astro";
 ---
 <Core content={content}>
   <SWUP>
       <div class="px-8 py-24 space-y-8">
       </div>
+      
+      <MambaArticle />
   </SWUP>
 </Core>
