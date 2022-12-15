@@ -1,0 +1,7 @@
+---
+const { _data = ""} = Astro.props;
+import MambaArticle from "../";
+---
+
+
+<MambaArticle client:only="react" article={_data}  />
