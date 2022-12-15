@@ -1,0 +1,13 @@
+---
+const { data = "Loader"} = Astro.props;
+
+---
+<div class="flex flex-col m-8 rounded shadow-md w-60 sm:w-80 animate-pulse h-96">
+    <div class="w-8 h-8 border-4 border-dashed rounded-full animate-spin border-orange-400"></div>
+	<div class="h-48 rounded-t bg-gray-700"></div>
+	<div class="flex-1 px-4 py-8 space-y-4 sm:p-8 bg-gray-900">
+		<div class="w-full h-6 rounded bg-gray-700"></div>
+		<div class="w-full h-6 rounded bg-gray-700"></div>
+		<div class="w-3/4 h-6 rounded bg-gray-700"></div>
+	</div>
+</div>

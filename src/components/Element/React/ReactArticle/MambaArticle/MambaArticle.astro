@@ -1,0 +1,27 @@
+---
+///         [WIP] The premise would be to modularize all library components, then extend it back within a synthetic namespace. {Astro.Resolve}
+///         [MambaArticle]          -   {Astro}
+
+const { id = "", 
+        articleClass = "", 
+        articleJSON = "https://kbve.com/project/unity-webgl.json",  ///  Place Holder - To avoid build failure because JSON was not found or had parse errors.
+        articleTemplate = "",
+    } = Astro.props;
+
+import _ from "lodash";
+
+let data = await fetch(articleJSON).then((response) =>  response.json());
+let articleData = _.find(data, ['tags', id]);
+
+import Loader from "./Template/Loader.astro";                       ///         Skeleton Loader
+///         Current
+import Legal from "./Template/Legal.astro";
+///         TO:DO
+import Blog from "./Template/Blog.astro";
+import BlogPost from "./Template/BlogPost.astro";
+---
+
+{(id == "") && <Loader />}
+{(articleTemplate == "legal") && <Legal data={articleData} />}
+{(articleTemplate == "blog") && <Blog data={articleData} />}
+{(articleTemplate == "blogpost") && <BlogPost data={articleData} />}

@@ -12,6 +12,7 @@ export const get = async () => {
 
                 //?     Core
                 status: p.frontmatter.status,
+                id: p.frontmatter.id,
                 //*     URL
                 url: p.url,
                 slug: `https://kbve.com${p.url}`,
