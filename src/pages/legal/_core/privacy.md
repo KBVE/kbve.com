@@ -23,9 +23,9 @@ Questions or concerns? Reading this privacy notice will help you understand your
 
 This summary provides key points from our privacy notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our table of contents below to find the section you are looking for. You can also [click here](/#toc) to go directly to our table of contents.
 
-**`What personal information do we process?`** When you visit, use, or navigate our Services, we may process personal information depending on how you interact with KBVE and the Services, the choices you make, and the products and features you use. Click [here](#personalinfo) to learn more.
+**`What personal information do we process?`** When you visit, use, or navigate our Services, we may process personal information depending on how you interact with KBVE and the Services, the choices you make, and the products and features you use. Click [here](#infocollect) to learn more.
 
-**`Do we process any sensitive personal information?`** We may process sensitive personal information when necessary with your consent or as otherwise permitted by applicable law. Click [here](#sensitiveinfo) to learn more.
+**`Do we process any sensitive personal information?`** We may process sensitive personal information when necessary with your consent or as otherwise permitted by applicable law. Click [here](#infocollect) to learn more.
 
 **`Do we receive any information from third parties?`** We do not receive any information from third parties.
 
