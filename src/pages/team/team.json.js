@@ -29,6 +29,7 @@ export const get = async () => {
               secondary: p.frontmatter.secondary,
               lottie: p.frontmatter.lottie,
               lottiefooter: p.frontmatter.lottiefooter,
+              video: p.frontmatter.video,
               //?   Social
               github: p.frontmatter.github,
               twitter: p.frontmatter.twitter,
