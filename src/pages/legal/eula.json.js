@@ -19,6 +19,8 @@ export const get = async () => {
                 //?     Title
                 title: p.frontmatter.title,
                 description: p.frontmatter.description,
+                date: p.frontmatter.date,
+                img: p.frontmatter.img,
                 //?     Content
                 content: p.compiledContent(),
                 tags: p.frontmatter.tags,

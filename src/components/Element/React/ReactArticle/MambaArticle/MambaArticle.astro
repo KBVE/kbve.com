@@ -4,14 +4,24 @@
 
 const { id = "", 
         articleClass = "", 
-        articleJSON = "https://kbve.com/project/unity-webgl.json",  ///  Place Holder - To avoid build failure because JSON was not found or had parse errors.
+        articleJSON = "",  
         articleTemplate = "",
+        articleMD = "",
     } = Astro.props;
 
 import _ from "lodash";
+let data, articleData;
 
-let data = await fetch(articleJSON).then((response) =>  response.json());
-let articleData = _.find(data, ['tags', id]);
+if(articleJSON != "")
+{
+data = await fetch(articleJSON).then((response) =>  response.json());
+articleData = _.find(data, ['id', id]);
+}
+
+if(articleMD != "")
+{
+
+}
 
 import Loader from "./Template/Loader.astro";                       ///         Skeleton Loader
 ///         Current
