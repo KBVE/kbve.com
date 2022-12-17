@@ -101,12 +101,12 @@ export default function MambaArticle({ article }) {
                             />
                         </div>
                         <div className="flex items-center justify-between mt-4">
-                            <a rel="noopener noreferrer" href="" className="hover:underline dark:text-orange-400">Read more</a>
+                            <a rel="noopener noreferrer" href="https://kbve.com/support/" className="hover:underline ">Contact Support</a>
                             <div>
-                                <a rel="noopener noreferrer" href="" className="flex items-center">
+                                {/* <a rel="noopener noreferrer" href="" className="flex items-center">
                                     <img src="https://source.unsplash.com/50x50/?portrait" alt="avatar" className="object-cover w-10 h-10 mx-4 rounded-full dark:bg-gray-500" />
                                     <span className="hover:underline dark:text-gray-400">Leroy Jenkins</span>
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>

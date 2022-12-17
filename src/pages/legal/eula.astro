@@ -1,25 +1,10 @@
 ---
-///     [EULA]
-
-///     [Astro]:{layout}                        /// [Astro]     ->  {Theme}
-import Core from "@l/theme/core.astro";			///	[IMPORT]    ->  [CORE]
-import SWUP from "@l/theme/swup.astro";			///	[SWUP]      ->  Currently facing {hydration} issues #102
-
+///     [IMPORTS]
+import N from "@n/N.astro";                               ///     [Astro]:{namespace}
 ///     [EULA]:{data}
-const data = {
-	title: "KBVE.com - EULA - Legal", 
-    description: "KBVE EULA, End-User License Agreement, is the legal contract between our software and the end-user; this agreement extends to clients, businesses and digital entities."}	
-const { content = data } = Astro.props;		
-
-///     [EULA]:{json}   // Migrating the Fetch to the core component level
-///const _json_eula = await fetch('https://kbve.com/legal/eula.json').then((response) =>  response.json());
-import MambaArticle from "@c/Element/React/ReactArticle/MambaArticle/MambaArticle.astro";
+let	title = "KBVE.com - EULA - Legal";
+let description = "KBVE EULA, End-User License Agreement, is the legal contract between our software and the end-user; this agreement extends to clients, businesses and digital entities.";
 ---
-<Core content={content}>
-  <SWUP>
-      <div class="px-8 py-8 space-y-8">
-      </div>
-      
-      <MambaArticle id="eula" articleTemplate="legal" articleJSON="https://kbve.com/legal/eula.json" />
-  </SWUP>
-</Core>
+<N ns="theme" title={title} description={description}>
+    <N ns="article" element="react" id="eula" template="legal" theme="default" data="https://kbve.com/legal/eula.json" />
+</N>

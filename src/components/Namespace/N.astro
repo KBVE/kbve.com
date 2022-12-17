@@ -1,0 +1,25 @@
+---
+//? {Astro}->[Namespace]=[N]
+
+//? [IMPORTS]
+    import Article from "@n/Article/Article.astro";
+    import Theme from "@n/Theme/Theme.astro";
+    import Banner from "@c/Element/Banner/Banner.astro";
+//? [DATA]
+    const {
+        ns = "null",
+        namespace = "null",
+        element = "astro",
+        title = "",
+        description = "",
+        id = "",
+        template = "",
+        data = "",
+    } = Astro.props;
+    let _ns = ns;
+//? [SAFETY]
+    if(ns === "null"){ _ns = namespace}
+---
+{(_ns == "theme") && <Theme title={title} description={description}><slot /></Theme>}
+{(_ns == "article") && <Article element={element} id={id} articleTemplate={template} articleJSON={data} />}
+{(_ns == "banner") && <Banner bannerConcept={template} />}
