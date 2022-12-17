@@ -1,35 +1,9 @@
 ---
-import Core from "@l/theme/core.astro";					                            ///	[IMPORT]  ->  [CORE]
-import SWUP from "@l/theme/swup.astro";		                                  ///	[SWUP]    ->  Currently facing {hydration} issues #102
-
-const title = "KBVE.com - Gaming, Media, FinTech, Coders";
-const description = "KiloByte Virtual Enterprise is a collection of users that are straight memers";	         
-const content = [title, description];
-
-// TO:DO -> Migration
-import Features from "@c/Element/Features/Generic/features.astro";
-
-/// [SCENE] -> [START]
-/// WIP
-import Splash from "@c/Splash/splash.astro";                                /// [SPLASH]  ->  Removed for the time being, as I fix through [SWUP] -> {hydration} issue.
-import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]   ->  <Intro> should be in vanillaJS to avoid hydration issues.
-import Assets from "@c/Scene/Assets/Assets.astro";                          /// [ASSET]   ->  <Asset> uses hydration, which will break as of right now
-import Applications from "@c/Scene/Applications/Applications.astro";        /// [APP]     ->  <APP>   Needs a rewrite soon as well.
-import AnimalSquad from "@c/Scene/Anime/AnimalSquad/AnimalSquad.astro";     /// [Lottie]  ->  <AnimalSquad> is a Meme test case for Interactivity.
+import N from "@n/N.astro";           //? Inclusion of NameSpace
 ---
-<Core content={content}>
-        <SWUP>
-          <div class="pt-8">
-            <Splash />
-            <div class="h-12 bg-gradient-to-b from-black "></div>
-          </div>
-          <div class="px-4 py-4 " >
-            <Intro />
-            <!-- <Assets /> -->
-            <AnimalSquad />
-            <Features />
-            <!-- Memes -->
-            <!-- <Applications /> -->
-          </div>
-        </SWUP>
-</Core>
+<N ns="theme" title={"KBVE.com - Gaming, Media, FinTech, Coders"} description={"KiloByte Virtual Enterprise is a collection of users that are straight memers"} template={"data"}>
+  <N ns="controller" template="splash" />
+  <N ns="banner" template="animalsquad" data="This is data test" />
+  <N ns="controller" template="intro" />
+  <N ns="controller" template="features" />
+</N>

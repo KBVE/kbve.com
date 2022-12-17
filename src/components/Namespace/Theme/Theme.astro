@@ -5,6 +5,8 @@
 const { 
     title, 
     description,
+    template = false,
+    data = false,
 } = Astro.props;		
 
 //?     [IMPORTS]
@@ -13,8 +15,8 @@ const {
 ---
 <Core title={title} description={description}>
     <SWUP>
-        <div class="px-8 py-8 space-y-8">
-        </div>
+        {(template == false) && <div class="px-8 py-8 space-y-8">
+        </div>}
         <slot />
     </SWUP>
 </Core>

@@ -5,6 +5,7 @@
     import Article from "@n/Article/Article.astro";
     import Theme from "@n/Theme/Theme.astro";
     import Banner from "@c/Element/Banner/Banner.astro";
+    import Controller from "./Controller/Controller.astro";
 //? [DATA]
     const {
         ns = "null",
@@ -20,6 +21,7 @@
 //? [SAFETY]
     if(ns === "null"){ _ns = namespace}
 ---
-{(_ns == "theme") && <Theme title={title} description={description}><slot /></Theme>}
+{(_ns == "theme") && <Theme title={title} description={description} template={template}><slot /></Theme>}
 {(_ns == "article") && <Article element={element} id={id} articleTemplate={template} articleJSON={data} />}
-{(_ns == "banner") && <Banner bannerConcept={template} />}
+{(_ns == "banner") && <Banner bannerConcept={template} data={data} />}
+{(_ns == "controller") && <Controller template={template} data={data} />}

@@ -12,6 +12,7 @@ import Staff from "./Concept/Staff.astro";
 import Manga from "./Concept/MangaBanner.astro";
 import Newsletter from './Concept/Newsletter.astro';
 import ArticleBanner from './Concept/ArticleBanner.astro';
+import AnimalSquadBanner from "./Concept/AnimalSquadBanner.astro";
 ---
 
 {(bannerConcept == "sale") && <Sale />}
@@ -19,3 +20,4 @@ import ArticleBanner from './Concept/ArticleBanner.astro';
 {(bannerConcept == "manga") && <Manga />}
 {(bannerConcept == "newsletter") && <Newsletter />}
 {(bannerConcept == "article") && <ArticleBanner data={data} />}
+{(bannerConcept == "animalsquad") && <AnimalSquadBanner />}

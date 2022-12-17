@@ -1,17 +1,20 @@
 ---
 //?     [BANNER]    ->  [ArticleBanner]
-//!     Promoting certain articles through a banner. We will treat this as a concept/idea for now.
+//!     Promoting certain articles through a banner. We will treat this as a concept/idea for now.\
+const {
+    data = "",
+} = Astro.props;
 ---
 
-<div class="dark:bg-gray-800 dark:text-gray-50">
+<div class="dark:bg-gray-800 dark:text-gray-50 p-8">
 	<div class="container grid grid-cols-12 mx-auto dark:bg-gray-900">
-		<div class="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://source.unsplash.com/random/640x480'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
-		<div class="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
+		<div class="rounded-r-3xl bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('https://source.unsplash.com/random/640x480'); background-position: center center; background-blend-mode: multiply; background-size: cover;"></div>
+		<div class="rounded-l-3xl flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10 bg-offset">
 			<div class="flex justify-start">
-				<span class="px-2 py-1 text-xs rounded-full dark:bg-orange-400 dark:text-gray-900">Label</span>
+				<span class="px-2 py-1 text-xs rounded-full bg-orange-400">Blog</span>
 			</div>
-			<h1 class="text-3xl font-semibold">Lorem ipsum dolor sit.</h1>
-			<p class="flex-1 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, reprehenderit adipisci tempore voluptas laborum quod.</p>
+			<h1 class="text-3xl font-semibold">Blog Post Title</h1>
+			<p class="flex-1 pt-2">Blog Post Description.</p>
 			<a rel="noopener noreferrer" href="#" class="inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-orange-400">
 				<span>Read more</span>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
@@ -25,7 +28,7 @@
 					</svg>
 					<span class="self-center text-sm">by Leroy Jenkins</span>
 				</div>
-				<span class="text-xs">3 min read</span>
+				<span class="text-xs"> Articles by KBVE</span>
 			</div>
 		</div>
 	</div>
