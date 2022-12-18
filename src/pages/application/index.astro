@@ -1,19 +1,7 @@
 ---
-import Core from "@l/theme/core.astro";					                            ///	[IMPORT]  ->  [CORE]
-import SWUP from "@l/theme/swup.astro";		                                  ///	[SWUP]    ->  Currently facing {hydration} issues #102
-
-const title = "KBVE.com - Applications";
-const description = "Collection of Applications from KBVE";	         
-const content = [title, description];
-
-
-const apps = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
-
-
+import N from "@n/N.astro";           //      [NameSpace]
 ---
-<Core content={content}>
-  <SWUP>
-      <div class="px-8 py-24 space-y-8">
-      </div>
-  </SWUP>
-</Core>
+<N ns="theme" title={"KBVE.com - Applications Toolbelt"} description={"Collection of Applications that KBVE utilizes within our toolbelt."}>
+  <N ns="banner" template="sale" />
+  <N ns="controller" template="application" />
+</N>

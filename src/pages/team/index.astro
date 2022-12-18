@@ -4,19 +4,13 @@
 //?     Then on projects that the team member is on, we can quickly call them into the project using their {}.mdx
 //?     We can also integrate the members through the cards, then have their permissions sync across all projects, through an easy and secure way.
 
-//?     [CORE]      ->      [START]
-import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
-import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
-const data = {                                  /// {data}
-	title: "KBVE.com - Team Members", description: "All the team members, staff and homies from the block."}	
-const { content = data } = Astro.props;		
+///     [IMPORTS]
+import N from "@n/N.astro";                               ///     [Astro]:{namespace}
+let title = "KBVE.com - Team Members";
+let description: "All the team members, staff and homies from the block.";	
 
 ---
-<Core content={content}>
-    <SWUP>
-
-        <div class="px-8 py-6 space-y-8">
-        </div>
-
-    </SWUP>
-</Core>
+<N ns="theme" title={title} description={description}>
+    <N ns="banner" template="article" data="This is data test" />
+    <N ns="article" element="react" id="eula" template="legal" theme="default" data="https://kbve.com/legal/eula.json" />
+</N>

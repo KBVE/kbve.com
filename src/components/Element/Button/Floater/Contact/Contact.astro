@@ -1,14 +1,64 @@
 ---
 
 ---
+<div id="shaco-modal" class="hidden modal" aria-hidden="true">
+    <div class="fixed inset-0 px-8 py-4 bg-default text-default">
+      <div class="space-y-4" role="dialog" aria-modal="true">
+        <header class="text-right">
+          <button
+            id="close-shaco-box"
+            type="button"
+            class="btn"
+            aria-label="Close navigation"
+          >Close
+          </button>
+        </header>
+        <div class="flex justify-center">
+          <!-- <Icon name="logomark" class="h-16" /> -->
+          TEST
+        </div>
+        <nav>
+          <ul class="flex flex-col">
+            Test
+          </ul>
+        </nav>
+      </div>
+    </div>
+</div>
 
- <!-- Javascript code -->
- <script is:inline>
-    // Do something when the button is clicked
-    function buttonHandler() {
-        alert('Hi there!');
-    }   
-</script>
-<button onclick="buttonHandler()" title="Contact Sale"
-class="fixed z-20 bottom-20 left-8 bg-orange-400 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-orange-700 hover:drop-shadow-2xl hover:animate-pulse ease-in-out duration-400">
-&#9993;</button>
+
+
+<script>
+    import MicroModal from "micromodal";
+  
+    const menuShacoModalId = "shaco-modal";
+  
+    //const header: HTMLElement = document.querySelector("#page-header");
+    //const page = document.documentElement;
+    const menuShaco = document.querySelector(`#${menuShacoModalId} ul`);
+    const openShacoBox = document.querySelector("#open-shaco-box");
+    const closeShacoBox = document.querySelector("#close-shaco-box");
+  
+    const openShaco = () => {
+        console.log('Menu Clicked');
+      MicroModal.show(menuShacoModalId, { disableScroll: true });
+    };
+  
+    const closeShaco = () => {
+      MicroModal.close(menuShacoModalId);
+    };
+  
+    openShacoBox.addEventListener("click", openShaco);
+    closeShacoBox.addEventListener("click", closeShaco);
+  
+    // document.addEventListener("scroll", () => {
+    //   const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+    //   header.classList.toggle("fixed-header", d < 0);
+    // });
+  
+    menuShaco.addEventListener("click", (event) => {
+      if ((event.target as HTMLElement).tagName === "A") {
+        closeShaco();
+      }
+    });
+  </script>
