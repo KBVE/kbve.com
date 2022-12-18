@@ -16,6 +16,7 @@
         id = "",
         template = "",
         data = "",
+        className = "",
     } = Astro.props;
     let _ns = ns;
 //? [SAFETY]
@@ -24,4 +25,4 @@
 {(_ns == "theme") && <Theme title={title} description={description} template={template}><slot /></Theme>}
 {(_ns == "article") && <Article element={element} id={id} articleTemplate={template} articleJSON={data} />}
 {(_ns == "banner") && <Banner bannerConcept={template} id={id} data={data} />}
-{(_ns == "controller") && <Controller template={template} data={data} />}
+{(_ns == "controller") && <Controller template={template} data={data} className={className} />}
