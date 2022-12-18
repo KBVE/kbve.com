@@ -5,7 +5,6 @@ const { content } = Astro.props;
 <html lang={content.lang || 'en'}>
     <head>
         <meta http-equiv="refresh" content={`0;URL='${content.urlx}'`} /> 
-
     </head>
     <body> 
         <p>This page has moved to a <a href={content.urlx}>301 location.</a>.</p> 

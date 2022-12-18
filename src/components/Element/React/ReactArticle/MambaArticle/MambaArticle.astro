@@ -18,17 +18,12 @@ data = await fetch(articleJSON).then((response) =>  response.json());
 articleData = _.find(data, ['id', id]);
 }
 
-if(articleMD != "")
-{
 
-}
 
 import Loader from "./Template/Loader.astro";                       ///         Skeleton Loader
-///         Current
-import Legal from "./Template/Legal.astro";
-///         TO:DO
-import Blog from "./Template/Blog.astro";
-import BlogPost from "./Template/BlogPost.astro";
+import Legal from "./Template/Legal.astro";                         
+import Blog from "./Template/Blog.astro";                           
+import BlogPost from "./Template/BlogPost.astro";                   
 ---
 
 {(id == "") && <Loader />}

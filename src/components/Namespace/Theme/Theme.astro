@@ -1,0 +1,22 @@
+---
+//?     [Namespace]     ->      [Theme]
+
+//?     [DATA]
+const { 
+    title, 
+    description,
+    template = false,
+    data = false,
+} = Astro.props;		
+
+//?     [IMPORTS]
+    import Core from "@l/theme/core.astro";
+    import SWUP from "@l/theme/swup.astro";
+---
+<Core title={title} description={description}>
+    <SWUP>
+        {(template == false) && <div class="px-8 py-8 space-y-8">
+        </div>}
+        <slot />
+    </SWUP>
+</Core>

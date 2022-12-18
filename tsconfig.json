@@ -17,9 +17,10 @@
         "@c/*": ["src/components/*"],
         "@l/*": ["src/layouts/*"],
         "@s/*": ["src/styles/*"],
+        "@n/*": ["src/components/Namespace/*"],
         "@components/*": ["src/components/*"],
         "@layout/*": ["src/layouts/*"],
-        "@styles/*": ["src/styles/*"]
+        "@styles/*": ["src/styles/*"],
     }
   }
 }

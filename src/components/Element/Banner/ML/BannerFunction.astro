@@ -1,0 +1,7 @@
+---
+const { id } = Astro.props;
+const banners = await Astro.glob('./ML/*.md');
+const filter_banner = banners.filter((post) => (post.frontmatter.id == id));
+const { Content } = filter_banner[0];
+---
+<Content />
