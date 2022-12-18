@@ -5,13 +5,22 @@ const {
     data = false,
 } = Astro.props;
 
-//?     Controller Imports
+//?     Controller Imports - Extensions
 
-import Features from "@c/Element/Features/Generic/features.astro";
-import Splash from "@c/Splash/splash.astro";                                /// [SPLASH]  ->  Removed for the time being, as I fix through [SWUP] -> {hydration} issue.
-import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]   ->  <Intro> should be in vanillaJS to avoid hydration issues.
+//?     [OPTIONAL]
+import Features from "@c/Element/Features/Generic/features.astro";          /// [FEATUREs]  ->  Plan to be removed.
+import Splash from "@c/Splash/splash.astro";                                /// [SPLASH]    ->  Removed for the time being, as I fix through [SWUP] -> {hydration} issue.
+import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]     ->  <Intro> should be in vanillaJS to avoid hydration issues.
+
+//?     [WIP]
+import ApplicationsScene from "@c/Scene/Applications/ApplicationsController/ApplicationsScene.astro";
+
+//?     [Library]   ->  [Permanent]
+import Redirect from '@c/Action/Redirect';                                  /// [REDIRECT]
 
 ---
 {(template == "splash" && data == false) && <Splash />}
 {(template == "intro" && data == false) && <Intro />}
 {(template == "features" && data == false) && <Features />}
+{(template == "redirect") && <Redirect url={data} />}
+{(template == "application" && data == false) && <ApplicationsScene />}

@@ -11,7 +11,7 @@ export const get = async () => {
         id: counterId,
         title: p.frontmatter.title,
         body: p.frontmatter.description,
-        slug: 'https://kbve.com' + p.url,
+        slug: `https://kbve.com${p.url}`,
         tag: p.frontmatter.tags
       };
     })
