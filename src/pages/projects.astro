@@ -1,14 +1,7 @@
 ---
-///	[IMPORT]
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
-
+import N from '@n/N.astro';
 ---
-<Core title="KBVE Login" description="Log into onto our platform!">
-<SWUP>
-	<div class="px-8 py-24 space-y-8" id="root">
-		Projects TO:DO
-	</div>	
-</SWUP>
-</Core>
 
+<html lang={'en'}>
+<N ns="controller" template="redirect" data="https://kbve.com/project/" />
+</html>
