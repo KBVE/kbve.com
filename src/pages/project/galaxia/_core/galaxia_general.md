@@ -1,5 +1,8 @@
 ---
 title: Galaxia General
+tags:
+- journal
+- galaxia
 ---
 
 ## Galaxia
