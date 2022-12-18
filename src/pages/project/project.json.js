@@ -12,6 +12,7 @@ export const get = async () => {
         description: p.frontmatter.description,
         slug: `https://kbve.com${p.url}`,
         tag: p.frontmatter.tags,
+        tags: p.frontmatter.tags,
         img: p.frontmatter.img,
         category: p.frontmatter.category,
       };
