@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/theme/project.astro
 status: true
 title: 2DUnity Engine Resference
 client: Self

@@ -1,6 +1,6 @@
 let menu = "unity-webgl";
 
-const postImportResult = import.meta.glob('./**/**/*.mdx', { eager: true });
+const postImportResult = import.meta.glob('./**/**/*.md', { eager: true });
 const posts = Object.values(postImportResult);
 
 export const get = async () => {
