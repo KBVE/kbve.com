@@ -1,6 +1,8 @@
 ---
 title: RogueJester Journal
 description: Journal for the Project
+tags:
+- journal
 ---
 ## Ideas
 
