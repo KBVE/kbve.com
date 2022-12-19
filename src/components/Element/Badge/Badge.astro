@@ -10,6 +10,7 @@ import Github from "./Social/Github.astro";
 import Twitter from "./Social/Twitter.astro";
 import Discord from "./Social/Discord.astro";
 import YouTube from "./Social/YouTube.astro";
+import Twitch from "./Social/Twitch.astro";
 //?             [DATA]
 const { 
     content,
@@ -25,3 +26,4 @@ const {
 {(badgeRank == "twitter") && <Twitter />}
 {(badgeRank == "discord") && <Discord />}
 {(badgeRank == "youtube") && <YouTube />}
+{(badgeRank == "twitch") && <Twitch />}
