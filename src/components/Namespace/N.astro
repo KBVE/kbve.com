@@ -6,6 +6,7 @@
     import Theme from "@n/Theme/Theme.astro";
     import Banner from "@c/Element/Banner/Banner.astro";
     import Controller from "./Controller/Controller.astro";
+    import Badge from "@c/Element/Badge/Badge.astro";
 //? [DATA]
     const {
         ns = "null",
@@ -26,3 +27,4 @@
 {(_ns == "article") && <Article element={element} id={id} articleTemplate={template} articleJSON={data} />}
 {(_ns == "banner") && <Banner bannerConcept={template} id={id} data={data} />}
 {(_ns == "controller") && <Controller template={template} data={data} className={className} />}
+{(_ns == "badge") && <Badge badgeRank={template} data={data} />}
