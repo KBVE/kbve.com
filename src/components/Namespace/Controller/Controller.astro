@@ -24,6 +24,7 @@ import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// 
 
 //?     [Library]   ->  [Permanent]
 import Redirect from '@c/Action/Redirect';                                  /// [REDIRECT]
+import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 
 ---
 {(template == "splash" && data == false) && <Splash />}
@@ -35,3 +36,4 @@ import Redirect from '@c/Action/Redirect';                                  /// 
 {(template == "livechat" && data == false) && <HubspotLiveChat />}
 {(template == "calendar" && data == false) && <Calendly text_color="e7af86" primary_color="e7af86" className={className} />}
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }
+{(template == "socials") && <KBVESocial />}
