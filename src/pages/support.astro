@@ -12,16 +12,18 @@ import N from "@n/N.astro";
 			<p class="mt-4 mb-8 ">Our Contact Options Below</p>
 			<div class="space-y-4">
 				<details class="w-full border rounded-lg bg-offset">
-					<summary class="px-4 py-6 focus:outline-none focus-visible:ring-orange-400">Schedule Appointment</summary>
+					<summary class="px-4 py-6 focus:outline-none focus-visible:ring-orange-400">Schedule Appointment Via Calendar</summary>
 					<p class="px-4 py-6 pt-0 ml-4 -mt-4 ">Pick a time slot within our calendar below! </p>
 					<N ns="controller" template="calendar" className="calendly-inline-widget justify-center overflow-hidden aspect-w-16 aspect-h-9"/>
 				</details>
 				<details class="w-full border rounded-lg bg-offset">
-					<summary class="px-4 py-6 focus:outline-none focus-visible:ring-orange-400">Discord & Socials</summary>
-					<p class="px-4 py-6 pt-0 ml-4 -mt-4 ">Join Our <a href="https://kbve.com/discord/">Discord!</a> </p>
+					<summary class="px-4 py-6 focus:outline-none focus-visible:ring-orange-400">Discover Our Socials</summary>
+					<p class="px-4 py-6 pt-0 ml-4 -mt-4 ">
+					<N ns="controller" template="socials" />
+					</p>
 				</details>
 				<details class="w-full border rounded-lg bg-offset">
-					<summary class="px-4 py-6 focus:outline-none focus-visible:ring-orange-400">Ticket Form</summary>
+					<summary class="px-4 py-6 focus:outline-none focus-visible:ring-orange-400">Submit Ticket Via Form</summary>
 
 					<div class="aspect-w-16 aspect-h-9 ">
 						<iframe src="https://share.hsforms.com/1C5_zNMjxT_OEPJ0LajOxtAcez55" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="h-screen z-50" ></iframe>
@@ -35,7 +37,7 @@ import N from "@n/N.astro";
 		<div class="flex flex-col justify-between">
 			<div class="space-y-2">
 				<h2 class="text-4xl font-bold leading-tight lg:text-5xl text-secondary p-4">Let's talk!</h2>
-				<div class="bg-offset p-4">Schedule a Meeting with us via the Calendar or Open a support ticket</div>
+				<div class="bg-offset p-4">Schedule a Meeting with us via the calendar or open a support ticket</div>
 					
 			</div>
 			<N ns="controller" template="lottie" data="https://assets4.lottiefiles.com/private_files/lf30_3lflolyo.json" className="relative w-256 p-4" />
@@ -43,15 +45,15 @@ import N from "@n/N.astro";
 		</div>
 		<form novalidate="" class="space-y-6 ng-untouched ng-pristine ng-valid">
 			<div>
-				<label for="name" class="text-sm">Full name</label>
-				<input id="name" type="text" placeholder="" class="w-full p-3 rounded bg-offset">
+				<label for="name" class="text-sm uppercase">Full Name or Username</label>
+				<input id="name" type="text" class="w-full p-3 rounded bg-offset focus-visible:ring-orange-400">
 			</div>
 			<div>
-				<label for="email" class="text-sm">Email</label>
-				<input id="email" type="email" class="w-full p-3 rounded bg-offset">
+				<label for="email" class="text-sm uppercase">Email</label>
+				<input id="email" type="email" class="w-full p-3 rounded bg-offset focus-visible:ring-orange-400">
 			</div>
 			<div>
-				<label for="message" class="text-sm">Message</label>
+				<label for="message" class="text-sm uppercase">Message</label>
 				<textarea id="message" rows="3" class="w-full p-3 rounded bg-offset "></textarea>
 			</div>
 			<button type="submit" class="bg-primary w-full p-3 text-sm font-bold tracking-wide uppercase rounded">Send Message</button>
