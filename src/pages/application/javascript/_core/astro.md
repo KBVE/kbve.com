@@ -35,3 +35,38 @@ Without a slot:
 <Object client:only="svelte" />
 
 ```
+
+#### Astro Icons
+
+This library makes referencing sprites/SVGs very easy and simple within Astro.
+Example:
+
+```html
+<Icon name="mdi:account" />
+```
+
+`mdi` is a reference to Material Design Icons, can be swapped with any major pack, like `fa` for font awesome.
+`account` is a reference to the actual file within the pack.
+
+Official [Repo](https://github.com/natemoo-re/astro-icon#readme)
+
+##### Astro Icons Install
+
+To Install Astro Icons library, reference below:
+
+Yarn:
+
+```shell
+yarn add astro-icon
+```
+
+NPM:
+
+```shell
+npm i astro-icon
+```
+
+Find Icons through :
+
+[RareIcon.com](https://rareicon.com)
+[Iconify](https://iconify.design/)
