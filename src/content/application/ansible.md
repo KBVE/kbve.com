@@ -1,0 +1,66 @@
+---
+url: https://kbve.com/application/ansible/
+layout: ../../layouts/theme/article.astro
+title: Ansible
+category: Application
+client: Self
+publishDate: 2022-10-25 00:00:00
+img: https://images.unsplash.com/photo-1549605659-32d82da3a059?fit=crop&w=1400&h=700&q=75
+repo:
+description: DevOps software that handles the infrastructure of the backend through automation.
+tags:
+  - technology
+  - automation
+  - host
+---
+
+## Ansible
+
+- Automation software that enables `IaC` - also known as, infrastructure as code, thus allowing user to provision, configure, deploy and secure a whole array of software, applications and machines.
+
+## Ansible Cheatsheet
+
+- Commands that will make it easier operate ansible scripts / playbooks. This cheatsheet is still a work-in-progress.
+
+## Cheatsheet
+
+- Ansible cheatsheet
+
+## Playbook
+
+- Ansible Playbook
+
+## AWX
+
+AWX is a web-base RESTFul API and task engine that operates on top of Ansible, thus enabling you to automate certain aspects of the IT/DevOps.
+
+### AWX Repo
+
+The official [Repo](https://github.com/ansible/awx) for AWX - Ansible.
+
+### AWX Terraform
+
+Terraform AWX Provider from Denouche
+
+- Official [Registry](https://registry.terraform.io/providers/denouche/awx/latest/docs) Link:
+
+Example Usage - With Username/Password:
+
+```txt
+provider "awx" {
+    hostname = "http://localhost:8078"
+    username = "kbvetest"
+    password = "changemepassword"
+}
+```
+
+Example Usage - With Token:
+
+```txt
+provider "awx" {
+  hostname = "http://localhost:8078"
+  token    = "awxtoken"
+}
+```
+
+> Remember that if you set both (username/password) and (token), then the (token) will have precedence.

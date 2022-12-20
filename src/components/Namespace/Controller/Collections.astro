@@ -1,0 +1,11 @@
+---
+//?     [Collections] - Introduced in Astro 1.7.x
+//?     This Controller will extend out the Collections library across the local namespace.
+import { getEntry } from 'astro:content';                   ///     [Astro]:{content}
+//?     {DATA}:{ENTRY}
+const { id, data } = Astro.props;
+//?     {DATA}:{Collections}
+const _collections = await getEntry(id, data);
+const { Content } = await _collections.render();
+---
+<Content />

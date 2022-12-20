@@ -1,0 +1,13 @@
+---
+//?             [LEGAL]:[SCENE]
+//?             {DATA}
+const { 
+		content,
+		data = "",
+		id = "",
+	 }    = Astro.props;
+//?				[IMPORT]:[LegalFunction]
+import LegalFunction from "../LegalController/LegalFunction.astro";
+---
+
+<LegalFunction data={data} />

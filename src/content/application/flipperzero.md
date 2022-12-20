@@ -1,0 +1,91 @@
+---
+url: https://kbve.com/application/flipperzero/
+layout: ../../layouts/theme/article.astro
+title: FlipperZero
+category: Application
+client: Self
+publishDate: 2022-10-21 00:00:00
+img: https://images.unsplash.com/photo-1525826212383-92e29530133e?fit=crop&w=1400&h=700&q=75
+repo:
+description: Flipper Zero is a pen test multi-tool 
+tags:
+- hacks
+- redteam
+- nfc
+---
+
+## Flipper
+
+## Log
+
+KBVE FlipperZeros will be sold for $300 each, custom firmware, extra components, shipping and 5 support tickets? $180 for the Flipper Zero and $120 for services/software/extras/labor.
+
+## Firmware
+
+The bundles of joy when installing various firmware for your flipperzero!
+
+The main chipset on the FlipperZero stores both a "New" and "Old" firmware, thus making it a bit easier to custom load your firmware without the higher risk of bricking your device. Granted there is always a risk of bricking your device, so be very careful! Make sure wires are tight and your machine is charged.
+
+## Update
+
+Once you get your hands on the flipperzero, we recommend that you update it to the latest firmware via qFlipper application, links below:
+
+[Official Main](https://flipperzero.one/update) Updates
+Github Repo Updates - [Release Page](https://github.com/flipperdevices/qFlipper/releases)
+
+There are other methods of updating, including Mobile and Web but from experience, I recommend sticking with a direct cable upgrade, to avoid possible firmware corruption.
+
+## Unleashed Firmware
+
+Official [Repo](https://github.com/DarkFlippers/unleashed-firmware)
+
+Forked Unleashed Firmware include:
+
+[RogueMaster](https://github.com/RogueMaster/flipperzero-firmware-wPlugins)
+[v1nc](https://github.com/v1nc/flipperzero-firmware)
+
+We will add KBVE's custom firmware in 2023.
+
+## KBVE
+
+Our firmware is currently a private fork of Unleashed and will contain more custom HTTP/Networking additions, making it easier to operate the device in isolation and/or remote instances.
+
+## GHz
+
+- The frequencies that FlipperZero operates in are 300-348 MMHz, 387-464 MHz and 770-928 MHz bands through the CC1101 chipset.
+
+- ### GHz Sub Menu
+
+  - `Read` - Reads & decodes the signal of the protocol within the frequency range.
+    - Lower left side will display the current frequency.
+    - Lower right side will display the remaining slots of scanned signals.
+  - `Read RAW` - Records the radio signal in RAW format.
+    - Requires a microSD for the storage of the RAW.
+  - `Saved` -
+  - `Add Manually` -
+  - `Frequency Analyzer` -
+
+#### GHZ InfoSec
+
+- 315Ghz - Common frequency that car fobs operate in.
+
+## GUI
+
+To help with designing the GUI, we recommend checking out `Flipper UI` , which is an amazing tool for quick edits.
+Source for it can be found here : https://github.com/sbrin/ilin.pt/tree/main/_stuff/fui-editor
+
+## FlipperZero NFC
+
+- NFC (13.56 MHz) module can read, save and emulate NFC cards / frequencies.
+- NFC is known as near-field communication and operates at the 13.56 MHz (which is  an unlicensed radio frequency ISM band under the ISO/IEC 18000-3).
+- Menu
+  - -> `Read` - Read && Save NFC data, including, UID, ATQA, SAK and storage data.
+  - -> `Detect Reader` - Emulation of an NFC card to grab information related to authentication keys from logs sent by a reader.
+  - -> `Saved` - Saved NFC cards on the device, which can be emulated.
+  - -> `Extra Actions` - Commands for extra functionality through custom scripts, plugins, applications on the device.
+  - -> `Add Manually` - Create an NFC card by adding the data manually.
+- NFC Terms
+  - -> `UID` is a read-only unique identifier for the specific NFC chip.
+- NFC-V
+  - Currently does not fully support ISO 15693.
+  

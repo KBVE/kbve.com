@@ -1,6 +1,7 @@
 ---
 //?     Controller
-const { 
+const {
+    id = "",
     template = false,
     data = false,
     className = "",
@@ -20,6 +21,7 @@ import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astr
 import HubspotLiveChat from '@c/Action/HubspotLiveChat';
 import Calendly from '@c/Action/Calendly';
 import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// [Lottie]    ->  [Int()]
+import Collections from "./Collections.astro";
 
 //?     [Library]   ->  [Permanent]
 import Redirect from '@c/Action/Redirect';                                  /// [REDIRECT]
@@ -35,3 +37,4 @@ import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 {(template == "calendar" && data == false) && <Calendly text_color="e7af86" primary_color="e7af86" className={className} />}
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }
 {(template == "socials") && <KBVESocial />}
+{(template == "collections") && <Collections id={id} data={data} />}

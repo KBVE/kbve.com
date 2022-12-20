@@ -1,11 +1,17 @@
 ---
 ///     [IMPORTS]
-import N from "@n/N.astro";                               ///     [Astro]:{namespace}
+import N from "@n/N.astro";                                 ///     [Astro]:{namespace}
+import { getEntry } from 'astro:content';                   ///     [Astro]:{content}
 ///     [EULA]:{data}
 let	title = "KBVE.com - EULA - Legal";
 let description = "KBVE EULA, End-User License Agreement, is the legal contract between our software and the end-user; this agreement extends to clients, businesses and digital entities.";
+const eula = await getEntry('legal', 'eula.md');
+const { Content } = await eula.render();
 ---
 <N ns="theme" title={title} description={description}>
-    <!-- <N ns="banner" template="article" data="This is data test" /> -->
-    <!-- <N ns="article" element="react" id="eula" template="legal" theme="default" data="https://kbve.com/legal/eula.json" /> -->
+    <article class="px-6 py-24 mx-auto space-y-12 dark:bg-gray-800 dark:text-gray-50">
+        <div class="p-5 bg-offset">
+            <Content />
+        </div>
+    </article>        
 </N>

@@ -1,0 +1,93 @@
+---
+url: https://kbve.com/application/ml/
+layout: ../../layouts/theme/article.astro
+title: Machine Learning
+category: Application
+client: Self
+frontpage: true
+publishDate: 2023-11-01 00:00:00
+img: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?fit=crop&w=1400&h=700&q=75
+repo:
+description: |
+ mL/AI - The movement to emulate natural intelligence.
+tags:
+- software
+- ml
+- ai
+- intelligence
+---
+
+## ML
+
+- mL (machine learning) is a subset of artificial intelligence and follows the theory of computational training, to understand core principles through computer science and statistics. These training methods can be broken down to supervised, unsupervised and reinforcement learning.
+
+### Info
+
+This documentation is a reference guide to the vast realm of machine learning and artificial general intelligence with examples, concepts and libraries to help you get started!
+
+## AI
+
+- Artificial intelligence is an umbrella phrase that encapsulates various fields within computer science, mathematics, philosophy and information with the goal to emulate natural intelligence display by humans and animals.
+
+## References
+
+- This is an ever growing and evolving list of all `mL` / `ai` services, concepts and ideas that can be referenced for your experiences within the field.
+
+## Text Models
+
+## QQ
+
+QQ has several interesting contributions within the AI/ML open source community, we will keep notes/references on these services for educational purposes only!
+
+### Different Dimension Me
+
+Official QQ Link :
+
+```text
+https://h5.tu.qq.com/web/ai-2d/cartoon/index
+
+```
+
+Just remember that you are visiting a Chinese site that comes across very `sus` , please take extra precautions when utilizing any `qq` services.
+
+### Journal
+
+- *This is a collective journal with tasks, opinions and notes.*
+- *They should not be taken as valid information and should be seen as mere unaudited thoughts of a wandering collection of souls.*
+
+- #### 10/24/2022
+  
+  - -> October 24th, 2022 -> "Computational Learning" as well as "mL/AI" -> two important concepts.
+  - We should say that `ai` is an umbrella phrase that includes various tools, concepts and data. If we could imagine data as crude oil then we can say `models` are refined oils, thus the functional aspect of refinement should be a pillar of machine training.
+  - It be like taking data from our `natural` world, filled with its random and chaos, is collected or drilled, then processed into abstract collections of meaningful and layered information, finally forming our computational models.
+  - There definitely is more to this but that should be a solid building path for where we can go.
+  - The speed at which this field is growing is also remarkable, its still insane to see how my laptop can generate art from just processing my vocals as I talk.
+
+## Scope
+
+- The dream for many programmers, scientists, engineers and humans would be to create an entity that could scale past our natural intelligence. This is a task that would define the 21st century and push the upper limits on humanity, naturism and metaphysics into the next industrial intelligence revolution.
+
+## GPT
+
+GPT , currently known as GPT-3, stands for `Generative Pre-trained Transformer` with the number representing the generation via version control and is a neural network machine learning model
+
+### GPT Algos
+
+- #### GPT-Neo
+  
+  - Official Github [Repo](https://github.com/EleutherAI/gpt-neo)
+    - We should note that the team, EleutherAI, are no longer maintaining the `gpt-neo` and their repo is currently in archive mode. However below is the `gpt-neox`, which is still being actively maintained as for Oct 2022.
+  - The `GPT-Neo` may have been an extension of `GPT2` but changes to the layering.
+
+- #### GPT-NeoX
+
+  - For GPU, we suggest GPT-NeoX, [Repo Here](https://github.com/EleutherAI/gpt-neox/)
+
+- ### ChatGPT
+
+  - ChatGPT is an extension of GPT3 / GPT3.5 and focuses on holding a `natural` conversation with the `client` / `User` by keeping track of the previous question(s) / responses.
+
+- #### PyChatGPT
+  
+  - [Official Repo](https://github.com/rawandahmad698/PyChatGPT)
+  - PyChatGPT is an on-going API written in `Python` to help scale and integrate `ChatGPT` to various applications / eco-systems via TLS.

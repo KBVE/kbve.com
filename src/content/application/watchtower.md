@@ -1,0 +1,50 @@
+---
+url: https://kbve.com/application/watchtower/
+layout: ../../layouts/theme/article.astro
+title: Watchtower
+category: Application
+client: Self
+publishDate: 2022-09-07 00:00:00
+img: https://images.unsplash.com/photo-1602616213661-d1f469cd5a95?fit=crop&w=1400&h=700&q=75
+repo:
+description:    A monitioring tool for automating Docker containers based upon image updates.
+tags:
+  - technology
+  - vm
+  - security
+  - docker
+docker_compose: data/watchtower/docker-compose.yml
+---
+<!-- 
+import Github from "@c/Action/Github/Github.astro";
+export const components = { github: Github }; -->
+
+## Watchtower
+
+* * *
+
+## Install
+
+<!-- <Github
+  src="data/watchtower/docker-compose.yml"
+  description="This is a docker compose we made."
+/> -->
+
+## Notifications
+
+Incase you need WatchTower to send Notifications, here is an example command that sets the environmental variables:
+
+```shell
+docker run -d \
+  --name watchtower \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -e WATCHTOWER_NOTIFICATIONS=email \
+  -e WATCHTOWER_NOTIFICATION_EMAIL_FROM=fromaddress@gmail.com \
+  -e WATCHTOWER_NOTIFICATION_EMAIL_TO=toaddress@gmail.com \
+  -e WATCHTOWER_NOTIFICATION_EMAIL_SERVER=smtp.gmail.com \
+  -e WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT=587 \
+  -e WATCHTOWER_NOTIFICATION_EMAIL_SERVER_USER=fromaddress@gmail.com \
+  -e WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PASSWORD=app_password \
+  -e WATCHTOWER_NOTIFICATION_EMAIL_DELAY=2 \
+  containrrr/watchtower
+```
