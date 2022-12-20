@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/ansible/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Ansible
 category: Application
 client: Self

@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/nmap/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Nmap
 category: Application
 client: Self

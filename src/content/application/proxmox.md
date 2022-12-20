@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/proxmox/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Proxmox
 category: Application
 client: Self

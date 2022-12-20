@@ -3,9 +3,6 @@
 import N from "@n/N.astro";                                 ///     [Astro]:{namespace}
 import { getCollection } from 'astro:content';
 
-// const android = await getEntry('application', 'android.md');
-// const { Content, headings, injectedFrontmatter } = await android.render();
-
 export async function getStaticPaths() {
 
   const blog = await getCollection('application');

@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/authelia/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Authelia
 category: Application
 client: Self

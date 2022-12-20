@@ -1,27 +1,6 @@
 ---
-///	[IMPORT]
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
-
-const asset = (await Astro.glob('./**/**/*.mdx'))
-.filter(({ frontmatter }) => !!frontmatter.publishDate)
-	.sort(
-		(a, b) =>
-			new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
-	);
+import N from "@n/N.astro";             //      [NameSpace]
 ---
-<Core title="Crypto Assets | KBVE" description="All crypto assets that KBVE is currently tracking">
-	
-	<SWUP>
-		<div class="wrapper">
-			<div class="heroImg">
-				<h1 class="title mt2 mb2">Crypto Assets</h1>
-			</div>
-			<div class="bio wrapper wrapper__readable mt8">
-			</div>
-			<div class="grid overlay">
-			 	{asset.map((project) => {project} )}
-			</div>
-		</div>
-	</SWUP>
-	</Core>
+<N ns="theme" title={"KBVE.com - Crypto"} description={"Collection of documentation, references and information related to Crypto. Amazing charts and abstract details will be coming soon."}>
+ 
+</N>

@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/watchtower/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Watchtower
 category: Application
 client: Self

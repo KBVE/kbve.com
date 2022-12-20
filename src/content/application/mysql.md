@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/mysql/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: MySQL
 category: Application
 client: Self

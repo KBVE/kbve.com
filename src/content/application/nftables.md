@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/nftables/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: NFTables
 category: Application
 client: Self

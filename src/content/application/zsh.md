@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/zsh/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Oh My Zsh
 category: Application
 client: Self

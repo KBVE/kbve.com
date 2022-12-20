@@ -1,6 +1,6 @@
 ---
 url: https://kbve.com/legal/eula/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/legal.astro
 title: KBVE EULA
 version: 1
 status: true

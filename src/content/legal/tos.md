@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/legal.astro
 url: https://kbve.com/legal/tos/
 title: KBVE TOS
 version: 1

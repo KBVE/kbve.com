@@ -268,6 +268,61 @@ declare module 'astro:content' {
   data: InferEntrySchema<"application">
 },
 },
+"crypto": {
+"btc.md": {
+  id: "btc.md",
+  slug: "btc",
+  body: string,
+  collection: "crypto",
+  data: InferEntrySchema<"crypto">
+},
+"doge.md": {
+  id: "doge.md",
+  slug: "doge",
+  body: string,
+  collection: "crypto",
+  data: InferEntrySchema<"crypto">
+},
+"eth.md": {
+  id: "eth.md",
+  slug: "eth",
+  body: string,
+  collection: "crypto",
+  data: InferEntrySchema<"crypto">
+},
+},
+"gaming": {
+"lol.md": {
+  id: "lol.md",
+  slug: "lol",
+  body: string,
+  collection: "gaming",
+  data: InferEntrySchema<"gaming">
+},
+},
+"journal": {
+"asset.md": {
+  id: "asset.md",
+  slug: "asset",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+},
+"roguejester.md": {
+  id: "roguejester.md",
+  slug: "roguejester",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+},
+"visualnovel.md": {
+  id: "visualnovel.md",
+  slug: "visualnovel",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+},
+},
 "legal": {
 "eula.md": {
   id: "eula.md",
@@ -298,6 +353,36 @@ declare module 'astro:content' {
   body: string,
   collection: "releases",
   data: InferEntrySchema<"releases">
+},
+},
+"stock": {
+"aapl.md": {
+  id: "aapl.md",
+  slug: "aapl",
+  body: string,
+  collection: "stock",
+  data: InferEntrySchema<"stock">
+},
+"spy.md": {
+  id: "spy.md",
+  slug: "spy",
+  body: string,
+  collection: "stock",
+  data: InferEntrySchema<"stock">
+},
+"tsla.md": {
+  id: "tsla.md",
+  slug: "tsla",
+  body: string,
+  collection: "stock",
+  data: InferEntrySchema<"stock">
+},
+"vt.md": {
+  id: "vt.md",
+  slug: "vt",
+  body: string,
+  collection: "stock",
+  data: InferEntrySchema<"stock">
 },
 },
 

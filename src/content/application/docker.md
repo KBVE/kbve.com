@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/docker/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Docker
 category: Application
 client: Self

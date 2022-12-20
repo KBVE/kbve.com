@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/android/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Android
 category: Application
 client: Self

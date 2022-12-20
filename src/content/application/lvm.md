@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/lvm/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: LVM
 category: Application
 client: Self

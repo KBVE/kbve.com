@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/ml/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Machine Learning
 category: Application
 client: Self

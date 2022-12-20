@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/pterodactyl/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Pterodactyl
 category: Application
 client: Self

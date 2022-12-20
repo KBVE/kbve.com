@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/gcloud/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: GCloud
 category: Application
 client: Self

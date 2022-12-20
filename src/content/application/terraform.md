@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/terraform/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Terraform
 category: Application
 client: Self

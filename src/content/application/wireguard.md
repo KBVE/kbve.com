@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/wireguard/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Wireguard
 category: Application
 client: Self

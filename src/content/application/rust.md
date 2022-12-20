@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/rust/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Rust
 category: Application
 client: Self

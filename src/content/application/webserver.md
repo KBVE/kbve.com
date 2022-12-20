@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/webserver/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: WebServer
 category: Application
 client: Self
@@ -12,7 +11,6 @@ tags:
 - software
 - protocol
 ---
-
 ## WebServer
 
 ### Nginx

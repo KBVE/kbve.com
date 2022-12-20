@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/obsidian/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Obsidian
 category: Application
 client: Self

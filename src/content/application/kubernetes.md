@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/kubernetes/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Kubernetes
 category: Application
 client: Self

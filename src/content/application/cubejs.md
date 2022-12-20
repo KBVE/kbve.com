@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/cubejs/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: CubeJS
 category: Application
 client: Self

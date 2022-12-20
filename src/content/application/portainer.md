@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/portainer/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Portainer
 category: Application
 client: Self

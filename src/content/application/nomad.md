@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/nomad/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Nomad
 category: Application
 client: Self

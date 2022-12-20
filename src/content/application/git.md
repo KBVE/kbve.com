@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/git/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Git
 category: Application
 client: Self

@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/godot/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: GoDot
 client: Self
 publishDate: 2022-10-31 00:00:00

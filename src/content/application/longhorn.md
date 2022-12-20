@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/longhorn/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Longhorn
 category: Application
 client: Self

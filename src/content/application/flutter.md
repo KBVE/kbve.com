@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/flutter/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Flutter
 category: Application
 client: Self

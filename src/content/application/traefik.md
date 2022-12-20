@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/traefik/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Traefik
 category: Application
 client: Self

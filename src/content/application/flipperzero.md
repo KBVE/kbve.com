@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/flipperzero/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: FlipperZero
 category: Application
 client: Self
@@ -72,7 +71,7 @@ Our firmware is currently a private fork of Unleashed and will contain more cust
 ## GUI
 
 To help with designing the GUI, we recommend checking out `Flipper UI` , which is an amazing tool for quick edits.
-Source for it can be found here : https://github.com/sbrin/ilin.pt/tree/main/_stuff/fui-editor
+Source for it can be found here : [FUI-EDITOR](https://github.com/sbrin/ilin.pt/tree/main/_stuff/fui-editor)
 
 ## FlipperZero NFC
 

@@ -1,6 +1,5 @@
 ---
-url: https://kbve.com/application/strapi/
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/application.astro
 title: Strapi
 category: Application
 client: Self
