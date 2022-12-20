@@ -1,0 +1,64 @@
+---
+layout: ../../layouts/theme/application.astro
+title: Pterodactyl
+category: Application
+client: Self
+publishDate: 2022-11-01 00:00:00
+img: https://images.unsplash.com/photo-1653730106221-290f07b3b2db?fit=crop&w=1400&h=700&q=75
+repo: https://github.com/pterodactyl
+description: |
+ Game server management panel that runs servers in isolated docker containers.
+
+tags:
+- technology
+- docker
+- vm
+
+---
+
+```javascript
+import Github from "@c/Action/Github/Github.astro";
+import VideoComponent from "@c/Element/Video/Video.astro"
+export const components = { github: Github , video: VideoComponent };
+```
+
+## Panel
+
+- The core of the panel is built with PHP, React and Go.
+
+* * *
+
+## Install
+
+- Docker Compose
+  - `<Github src="data/pterodactyl/panel/panel-compose.yml" description="The docker compose for the panel." />`
+
+* * *
+
+## Wings
+
+- Wings installed via `docker`
+  - `<Github src="data/pterodactyl/wings/wings-compose.yml" description="The docker compose for the wings." />`
+
+* * *
+
+## Eggs
+
+-
+
+* * *
+
+## Media
+
+- Techno Tim's Game Server with Pterodactyl + Docker
+    `<VideoComponent iframe src="yt" id="_ypAmCcIlBE" description="Techo Tims Guide" />`
+- Pterodactyl Install Guide by Synthetic Everything
+    `<VideoComponent iframe src="yt" id="2mibJeaEq3Q" description="Synthetic Guide" />`
+
+* * *
+
+## Notes
+
+-
+
+* * *

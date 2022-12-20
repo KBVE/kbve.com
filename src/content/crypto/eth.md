@@ -1,0 +1,21 @@
+---
+layout: ../../layouts/theme/crypto.astro
+title: Ethereum
+ticker: eth
+exchange: COINBASE
+category: Crypto
+client: Self
+frontpage: true
+publishDate: 2022-08-24 00:00:00
+img: https://images.unsplash.com/photo-1622790698141-94e30457ef12?fit=crop&w=1400&h=700&q=75
+description: Ethereum is a decentralized smart contract blockchain system.
+isin: None
+tags:
+- technology
+- global
+- blockchain
+- eth
+---
+## Ethereum Information
+
+- Ethereum is a PoS blockchain eco-system that provides smart contract functionality.
