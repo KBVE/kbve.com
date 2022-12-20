@@ -2,7 +2,9 @@
 //?     [NS]    ->      [Article]
 const {
     id,
+    template = "null",
     element = "astro",
+    data = "",
     articleTemplate,
     articleClass,
     articleData,
@@ -12,7 +14,9 @@ const {
 
 import MambaArticle from "@c/Element/React/ReactArticle/MambaArticle/MambaArticle.astro";
 import AstroArticle from "@c/Element/Article/Article.astro";
+import LegalScene from "@c/Scene/Legal/LegalScene/LegalScene.astro";
 ---
 
-{(element == "astro") && <AstroArticle id={id} articleTemplate={articleTemplate} articleJSON={articleJSON} articleClass={articleClass} articleMD={articleMD} />}
-{(element == "react") && <MambaArticle id={id} articleTemplate={articleTemplate} articleJSON={articleJSON} articleClass={articleClass} articleMD={articleMD} />}
+{((element == "astro") && template == "null") && <AstroArticle id={id} articleTemplate={articleTemplate} articleJSON={articleJSON} articleClass={articleClass} articleMD={articleMD} />}
+{((element == "react") && template == "null") && <MambaArticle id={id} articleTemplate={articleTemplate} articleJSON={articleJSON} articleClass={articleClass} articleMD={articleMD} />}
+{((element == "astro") && template == "legal") && <LegalScene id={id} data={data} />}

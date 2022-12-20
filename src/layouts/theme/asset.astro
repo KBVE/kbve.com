@@ -1,12 +1,7 @@
 ---
-/// New Theme Migration
-/// Asset Page
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
 const { content } = Astro.props;						///	[Astro Props]
 ---
-<Core content={content}>
-	<SWUP>
+
 	<div class="px-4 py-12 space-y-8">
 		<style>	
 			.kbvehero {
@@ -45,5 +40,3 @@ const { content } = Astro.props;						///	[Astro Props]
 			</div>
 		</div>
 	</div>
-	</SWUP>
-</Core>

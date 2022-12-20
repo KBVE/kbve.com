@@ -9,7 +9,6 @@ import prefetch from "@astrojs/prefetch";
 //*   MDX / MD Integration
 import markdownConfig from './markdown.config'
 
-
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 
@@ -21,6 +20,11 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
+
+  // Experimental
+  experimental: {
+    contentCollections: true,
+  },
   site: "https://kbve.com",
   markdown: markdownConfig,
   integrations: [

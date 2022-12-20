@@ -1,5 +1,0 @@
----
-title: Apple Dividend
----
-
-## Dividend
