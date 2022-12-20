@@ -3,7 +3,7 @@
 ## Stack
 
 Core: AstroJS
-Library: React
+Library:
 
 ## Current version: v0.99.1
 

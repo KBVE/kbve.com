@@ -1,18 +1,10 @@
 ---
-/// [WIP]
-/// Main Legal Module
-import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
-import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
+/// [WIP] - This is a major issue that I am looking to resolve as sooon as possible. We need this page up and running before we apply to the Steamworks.
+//? [NAMESPACE]
+import N from "@c/Namespace/N.astro";
 /// {data}
-const data = {
-	title: "KBVE.com - Legal Information", description: "KBVE Legal Infromation, ToS, Privacy and more"}	
-const { content = data } = Astro.props;		
-const apps = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
-
+let title = "KBVE.com - Legal Information";
+let description = "KBVE Legal Infromation, ToS, Privacy and more";	
 ---
-<Core content={content}>
-  <SWUP>
-      <div class="px-8 py-24 space-y-8">
-      </div>
-  </SWUP>
-</Core>
+<N ns="theme" title={title} description={description}>
+</N>
