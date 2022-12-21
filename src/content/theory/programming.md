@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/theme/project.astro
+layout: ../../layouts/theme/article.astro
 title: Programming
 client: Self
 publishDate: 2022-10-02 00:00:00
@@ -10,6 +10,7 @@ tags:
 - theory
 - resources
 ---
-import Ebooks from "./_core/programming_ebooks.md";
 
-<Ebooks />
+## Free Programming Books
+
+- Collection of [Free Programming Books](https://ebookfoundation.github.io/free-programming-books/)

@@ -1,10 +1,20 @@
 ---
-title: FinTech A-Z
-description: FinTech from A to Z.
+layout: ../../layouts/theme/article.astro
+title: FinTech
+client: Self
+publishDate: 2020-03-02 00:00:00
+img: https://images.unsplash.com/photo-1614680376739-414d95ff43df?fit=crop&w=1400&h=700&q=75
+description: We are breaking down and noting the different theories within fintech.
 tags:
-- fintech
-- theory
+- financial
+- tech
+- data
 ---
+
+
+## Information
+
+FinTech, Financial Technology, is an economical construct that stems from classical capitalism and the expansion of informatics through the information age.
 
 ## FinTech A-Z
 

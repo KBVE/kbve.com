@@ -234,11 +234,10 @@ export const collections = {
     journal: journal,
     security: security,
     news: news,
-//! MIGRATION
-//  team: team,
-//  theory: theory,
-//  media: media,
-//  tools: tools,
-//  play: play,
+    team: team,
+    theory: theory,
+    media: media,
+    tools: tools,
+    play: play,
 
 }

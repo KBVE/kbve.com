@@ -346,6 +346,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"legal">
 },
 },
+"news": {
+"release-rigor.md": {
+  id: "release-rigor.md",
+  slug: "release-rigor",
+  body: string,
+  collection: "news",
+  data: InferEntrySchema<"news">
+},
+},
 "releases": {
 "1.md": {
   id: "1.md",
@@ -392,6 +401,36 @@ declare module 'astro:content' {
   body: string,
   collection: "stock",
   data: InferEntrySchema<"stock">
+},
+},
+"theory": {
+"deadcode.md": {
+  id: "deadcode.md",
+  slug: "deadcode",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"fintech.md": {
+  id: "fintech.md",
+  slug: "fintech",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"matrix.md": {
+  id: "matrix.md",
+  slug: "matrix",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"programming.md": {
+  id: "programming.md",
+  slug: "programming",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
 },
 },
 
