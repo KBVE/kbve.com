@@ -346,6 +346,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"legal">
 },
 },
+"news": {
+"release-rigor.md": {
+  id: "release-rigor.md",
+  slug: "release-rigor",
+  body: string,
+  collection: "news",
+  data: InferEntrySchema<"news">
+},
+},
 "releases": {
 "1.md": {
   id: "1.md",
@@ -353,6 +362,15 @@ declare module 'astro:content' {
   body: string,
   collection: "releases",
   data: InferEntrySchema<"releases">
+},
+},
+"security": {
+"xss.md": {
+  id: "xss.md",
+  slug: "xss",
+  body: string,
+  collection: "security",
+  data: InferEntrySchema<"security">
 },
 },
 "stock": {
@@ -383,6 +401,66 @@ declare module 'astro:content' {
   body: string,
   collection: "stock",
   data: InferEntrySchema<"stock">
+},
+},
+"team": {
+"example.md": {
+  id: "example.md",
+  slug: "example",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"h0lybyte.md": {
+  id: "h0lybyte.md",
+  slug: "h0lybyte",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"lvl21bellsprout.md": {
+  id: "lvl21bellsprout.md",
+  slug: "lvl21bellsprout",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"silver91.md": {
+  id: "silver91.md",
+  slug: "silver91",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+},
+"theory": {
+"deadcode.md": {
+  id: "deadcode.md",
+  slug: "deadcode",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"fintech.md": {
+  id: "fintech.md",
+  slug: "fintech",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"matrix.md": {
+  id: "matrix.md",
+  slug: "matrix",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"programming.md": {
+  id: "programming.md",
+  slug: "programming",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
 },
 },
 

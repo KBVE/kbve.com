@@ -1,0 +1,23 @@
+---
+////////        [UTILITY] Migration of this component will be important because it can break the footer, which can then break the Namespace.
+///             [TOOLS]:Template - <render> *WARNING*
+    ///         [WARNING]: The Tools template will need a couple different render engines, this is where we will test case multi-javascript frameworks
+    ///         [WARNING]: Sub Module Integration? : We could migrate certain tools out into their own repo and then using submodules to manage them.
+///             [IMPORTS]
+import N from "@n/N.astro";                                 ///     [Astro]:{namespace}
+///             [DATA]
+const { content }   = Astro.props;
+let title = "KBVE Tools";
+let description = "KBVE Tools - All software and services being built / maintained at KBVE!";
+---
+<N ns="theme" title={title} description={description}>
+    <!-- [Tools] -->
+    <p> Tools Archive
+        - Tools Archive is a sub-collection of defunct / replaced / obsolete tools that we have created in the past. We will do our best to maintain a reference to them but we advise that you do not use them anymore, but rather see them as a reference for educational purposes.
+        - There might be conflicting licenses and right issues, which can be addressed via our support.
+        - Be careful when using older tools, as there are huge security issues.
+    </p>
+    <!-- 
+        - KBVE Tools are all the apps, web tools and software that is currently maintained and offered by KBVE.
+     -->
+</N>

@@ -6,6 +6,7 @@
 //!     import rehypeSlug from "rehype-slug";   There is a bug with displaying the Table of Contents , when importing the .MD files inside of the .MDX
 
 export default {
+  extendMarkdownConfig: true,
   remarkPlugins: [
      
 
