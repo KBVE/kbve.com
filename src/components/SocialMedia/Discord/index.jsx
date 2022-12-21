@@ -1,5 +1,5 @@
 import { h } from 'preact';
-const Discord = ({width = null, height = null}) => {
+const Discord = ({width = string, height = string}) => {
 	return (
         
         <div>

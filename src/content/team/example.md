@@ -4,17 +4,17 @@ layout: ../../layouts/theme/profile.astro
 status: false
 
 #Main Profile Start
-username: 
-title: 
-description: h0lybytes home within a home.
-jobby: 
+username: ExampleUsername
+title: ReplaceTitle
+description: Example Description Here
+jobby: NPC
 
 #PFP
-img: 
+img: https://i.imgur.com/4vkoAdX.png
 
 #BIO
-bloodtype: vampire
-project: My main project for KBVE is the front/backend for the website! I hate everything about it but at the same time, I also really-really hate everything about it.
+bloodtype: meme
+project: I eat glue and shit memes.
 primary: The primary objective for me is to integrate and interpolate everything that goes on, all while maintaining the last braincell that I have not yet fried.
 secondary: The secondary things I am currently doing are some cool Unity games for da JAM!
 lottie: https://assets3.lottiefiles.com/animated_stickers/lf_tgs_ydeydp5o.json

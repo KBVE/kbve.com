@@ -1,25 +1,23 @@
 ---
 ///				[404]:Template - The default 404 template to be rendered for 404 errors.
-///				[PLAN]: Integrate the {N} : Namespace.
 //?				[PLAN]: Display search for missing files, thus helping the user navigate to the right page.
-import Core from "@l/theme/core.astro";					///	[IMPORT]	->	[CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]		->	Disabled;
-
-const data = {											///	[Data]		->	();
-	title: "Not Found", description: "Not Found"}		///	[404]		->	Data
-const { content = data } = Astro.props;					///	[Astro]		->	[Props]
+//?				[PLAN]: Render Robo404 as a {N} Lottie and from a local JSON.
+///				[IMPORT]
+import N from "@n/N.astro";                               	///     [Astro]:{namespace}
+///				[DATA]
+let title = "Not Found";
+let description = "Not Found";
+const { content } = Astro.props;						///	[Astro]		->	[Props]
 Astro.response.status = 404;							/// [Astro]		->	[Response]	-> 404
-Astro.response.statusText = 'Not found';				///	[Astro]		->	[Response]	-> 'Not found'
-
+Astro.response.statusText = title;						///	[Astro]		->	[Response]	-> 'Not found'
+///				[MIGRATE]
 import Robo404 from "@c/Element/Lottie/404/404.astro";	///	[Lottie]	->	404 Animation
 ---
-<Core content={content}>
-	<SWUP>
-		<div class="px-4 py-12 space-y-8">
+<N title={title} description={description}>
+	<div class="px-4 py-12 space-y-8">
 			<br />
 			<h1>Page Not Found</h1>
 			<p>Not found</p>
 			<Robo404 />
-		</div>
-	</SWUP>
-</Core>
+	</div>
+</N>

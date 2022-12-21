@@ -403,6 +403,36 @@ declare module 'astro:content' {
   data: InferEntrySchema<"stock">
 },
 },
+"team": {
+"example.md": {
+  id: "example.md",
+  slug: "example",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"h0lybyte.md": {
+  id: "h0lybyte.md",
+  slug: "h0lybyte",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"lvl21bellsprout.md": {
+  id: "lvl21bellsprout.md",
+  slug: "lvl21bellsprout",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"silver91.md": {
+  id: "silver91.md",
+  slug: "silver91",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+},
 "theory": {
 "deadcode.md": {
   id: "deadcode.md",
