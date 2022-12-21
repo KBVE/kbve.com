@@ -1,4 +1,8 @@
 ---
+//?				{legal}:Template - This template is used to render the content inside of the {legal} Collection.
+///				[NOTE]: Test Case Astro Cookies was removed for the main pipeline, we should move it out of the legal documentation.
+///				[NOTE]: We want to limit the amount of javascript that the legal documents use, so that there would not be major points of failure when communicating.
+//?				[DATA]
 const { content } = Astro.props;						///	[Astro Props]
 ---
 	<div class="px-4 py-12 space-y-8">
