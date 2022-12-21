@@ -1,8 +1,11 @@
 ---
-///	[IMPORT]
+//?				[GITHUB]:Template - This is the astro page for our github organization.
+//?				[MIGRATION]: Removing the /p/ Folder and migrating the concept / entites into this github file.
+///				[IMPORT]
 import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
 import SWUP from "@l/theme/swup.astro";					///	[SWUP]
-
+///				[DATA]
+const {	content	} 	= Astro.props; 						/// Astro Props
 ---
 <Core title="KBVE Login" description="Log into onto our platform!">
 <SWUP>

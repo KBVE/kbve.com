@@ -1,21 +1,21 @@
 ---
-layout: ../../../layouts/theme/project.astro
+layout: ../../layouts/theme/article.astro
 title: DeadCode
 client: Self
 publishDate: 2022-10-02 00:00:00
 img: https://images.unsplash.com/photo-1476370648495-3533f64427a2?fit=crop&w=1400&h=700&q=75
-description: |
-  DeadCode is a theory that focuses on learning from archived code.
+description:  DeadCode is a theory that focuses on learning from archived code.
 tags:
-  - deadcode
-  - theory
-  - scripts
+- deadcode
+- theory
 ---
 // import VideoComponent from "@c/Element/Video/Video.astro";
 // export const components = { video: VideoComponent };
 
 * * *
+
 ## Videos
+
     - ## Stop Writing Dead Programs by Jack Rusher 
         - A brilliant presentation from Jack Rusher at the Strange Loop 2022 on an area of `deadcode`.
         - <VideoComponent iframe src="yt" id="8Ab3ArE8W3s" description="Jack Rusher breaks down different fundamental flaws that newer programming languages are carrying over from older languages." />

@@ -355,6 +355,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"releases">
 },
 },
+"security": {
+"xss.md": {
+  id: "xss.md",
+  slug: "xss",
+  body: string,
+  collection: "security",
+  data: InferEntrySchema<"security">
+},
+},
 "stock": {
 "aapl.md": {
   id: "aapl.md",

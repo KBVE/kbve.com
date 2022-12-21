@@ -1,13 +1,12 @@
 ---
-//?				{gaming}:Template
-///				This template is used to render the content inside of the {gaming} Collection.
-//?				[DATA]
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
+////////CURRENT ERROR : MDX Integration.
+//?				{security}:Template - default render template for the {security}:Collection files.
+///				[IMPORTS]
+////////////////{N} - ERROR with the Namespace and MDX upon Astro 1.7.x , reverting back to 1.6.x fixes this error.
+/////////////////// SUB MODULE EXTENSION is a possible scope.
+///				[DATA]
 const { content } = Astro.props;						///	[Astro Props]
 ---
-<Core content={content}>
-	<SWUP>
 	<div class="px-4 py-12 space-y-8">
 		<style>	
 			.kbvehero {
@@ -41,10 +40,8 @@ const { content } = Astro.props;						///	[Astro Props]
 			{content.description}
 		</div>
 		<div class="shadow-2xl p-4 bg-offset rounded-3xl">
-			<div class="prose max-w-none prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			<div class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
 				<slot />
 			</div>
 		</div>
 	</div>
-	</SWUP>
-</Core>
