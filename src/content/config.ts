@@ -236,8 +236,8 @@ export const collections = {
     news: news,
     team: team,
     theory: theory,
-    media: media,
-    tools: tools,
-    play: play,
+//    media: media,
+//    tools: tools,
+//    play: play,
 
 }
