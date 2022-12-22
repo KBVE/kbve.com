@@ -1,10 +1,10 @@
-import { h } from 'preact';
+//import { h } from 'preact';
 
 import Styles from './styles.module.scss';
 const Sellix = ({product = null, name = null, site = null, lib = false}) => {
 
     if(lib)
-        return(<><link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/> <script type="text/javascript" src="https://cdn.sellix.io/static/js/embed.js"></script></>)
+        return(<><link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/> <script type="text/javascript" src="https://cdn.sellix.io/static/js/embed.js" /></>)
 	return (
         <>
         <div>

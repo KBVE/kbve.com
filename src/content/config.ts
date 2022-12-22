@@ -14,7 +14,7 @@ const releases = defineCollection({
 });
 
 //?       {legal} - Collection of all <LEGAL> documents within the KBVE organization.
-//!       [TO:DO] - tos.md - Terms of Services - https://github.com/KBVE/kbve.com/issues/249
+//TODO    tos.md - Terms of Services - https://github.com/KBVE/kbve.com/issues/249
 const legal = defineCollection({
   schema: {
     id: z.string(),
@@ -143,6 +143,11 @@ const news = defineCollection({
   },
 });
 
+//!       [PROFILE]
+//*       {team} => Staff, Artists, DEVs, VIPs, GFX
+//TODO    Organize the typescript - strict for {team}
+//TODO    Construct the typescript for {npc}
+
 //?       {team}
 const team = defineCollection({
   schema: {
@@ -225,19 +230,27 @@ const play = defineCollection({
 //*       Exporting out all of the {$} collections.
 
 export const collections = {
+
+    //?       [KBVE]:[COLLECTION]
     releases: releases,
     legal: legal,
+    //?       [DOC]:[COLLECTION]
     application: application,
-    stock: stock,
-    crypto: crypto,
     gaming: gaming,
     journal: journal,
     security: security,
-    news: news,
-    team: team,
     theory: theory,
-//    media: media,
-//    tools: tools,
-//    play: play,
+    //?       [ASSET]:[COLLECTION]
+    stock: stock,
+    crypto: crypto,
+    //?       [PROFILE]:[COLLECTION]
+    team: team,
+    //    npc: npc,
+    //?       [CONTENT]:[COLLECTIONS]
+    news: news,
+    //    media: media,
+    //?       [TOOLS]
+    //    tools: tools,
+    //    play: play,
 
 }
