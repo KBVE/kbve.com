@@ -59,6 +59,15 @@ export default defineConfig({
     ssr: {
       //external: ["@11ty/eleventy-img", "svgo"],
       external: ["@11ty/eleventy-img"]
-    }
+    },
+    // build: {
+    //   rollupOptions: {
+    //     output: {
+    //       entryFileNames: 'entry.[hash].js',
+    //       chunkFileNames: 'chunks/chunk.[hash].js',
+    //       assetFileNames: 'assets/asset.[hash][extname]',
+    //     },
+    //   },
+    // },
   }
 });
