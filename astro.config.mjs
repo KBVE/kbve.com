@@ -4,21 +4,25 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import compress from "astro-compress";
+
+//*   Prefetch for AstroJS
 import prefetch from "@astrojs/prefetch";
 
 //*   MDX / MD Integration
 import markdownConfig from './markdown.config'
 
-// https://astro.build/config
+//*   [TailWindCSS] for AstroJS
+//?   Reference https://kbve.com/application/javascript/#tailwindcss
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
+//*   [AplineJS]:[AstroJS]
+//?   Reference https://kbve.com/application/javascript/#alphinejs
 import alpinejs from "@astrojs/alpinejs";
 
-// https://astro.build/config
+//* Party Town for AstroJS
 import partytown from "@astrojs/partytown";
 
-// https://astro.build/config
+//* Define Config of AstroJS
 export default defineConfig({
 
   // Experimental
