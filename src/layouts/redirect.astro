@@ -1,7 +1,9 @@
 ---
+//?             <Redirect> : Handles the redirecting for the astro static builds.
+///             [ASTRO]: There has been a astro release of redirect but we have no plans to replace the current, functional component with Astros version.
+///             [DATA]
 const { content } = Astro.props;
 ---
-
 <html lang={content.lang || 'en'}>
     <head>
         <meta http-equiv="refresh" content={`0;URL='${content.urlx}'`} /> 

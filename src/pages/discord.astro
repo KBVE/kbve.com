@@ -1,12 +1,22 @@
 ---
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
-
-import Discord from '@c/SocialMedia/Discord';           /// Import Discord
-import Lottie from '@c/Element/Lottie/Lottie.astro';
+//?				[DISCORD]:Template
+///
+//?				[POSTPONE]@12/2022: Add an invite link for new members to use? I guess the server widget serves that purpose.
+//?				[PLAN]@1/2023: {$N}	-> Lottie && Host Lottie JSONs in /public/
+//?				[PLAN]@3/2023: {$N}	-> Discord
+///
+//~				[IMPORT]
+import N from "@n/N.astro";                               	///     [Astro]:{namespace}
+import Discord from '@c/SocialMedia/Discord';           	///		Import Discord
+//~				[MIGRATION]									///		Rotate out the Lottie to a {$N} Controller
+import Lottie from '@c/Element/Lottie/Lottie.astro';		//		[Lottie]
+//~				[DATA]
+const {	content	}	= Astro.props;
+let title = "KBVE Discord";
+let description = "Check out our amazing community of gamers and programmers! Join our Discord!";
+//~				[END]
 ---
-<Core title="KBVE Discord" description="Check out our amazing community of gamers and programmers! Join our Discord!">
-	<SWUP>
+<N title={title} description={description} >
 	<div class="px-4 py-12 space-y-8">
 		<style>	
 			.kbvehero {
@@ -69,5 +79,4 @@ import Lottie from '@c/Element/Lottie/Lottie.astro';
 				<Lottie json="https://assets9.lottiefiles.com/packages/lf20_nivsnvgo.json"  width="300px" />
 			</div>
 	</div>
-	</SWUP>
-</Core>
+</N>
