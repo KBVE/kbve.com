@@ -31,6 +31,9 @@ module.exports = {
       borderColor: {
         default: "var(--color-border)",
       },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      },
     },
   },
   corePlugins: {

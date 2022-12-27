@@ -183,6 +183,13 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 },
+"php.md": {
+  id: "php.md",
+  slug: "php",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+},
 "portainer.md": {
   id: "portainer.md",
   slug: "portainer",
@@ -235,6 +242,13 @@ declare module 'astro:content' {
 "unity.md": {
   id: "unity.md",
   slug: "unity",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+},
+"void.md": {
+  id: "void.md",
+  slug: "void",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
@@ -344,6 +358,15 @@ declare module 'astro:content' {
   body: string,
   collection: "legal",
   data: InferEntrySchema<"legal">
+},
+},
+"manga": {
+"rj/main.md": {
+  id: "rj/main.md",
+  slug: "rj/main",
+  body: string,
+  collection: "manga",
+  data: any
 },
 },
 "news": {
@@ -461,6 +484,15 @@ declare module 'astro:content' {
   body: string,
   collection: "theory",
   data: InferEntrySchema<"theory">
+},
+},
+"tools": {
+"webmaster.md": {
+  id: "webmaster.md",
+  slug: "webmaster",
+  body: string,
+  collection: "tools",
+  data: any
 },
 },
 
