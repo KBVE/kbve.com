@@ -306,8 +306,8 @@ declare module 'astro:content' {
 },
 },
 "gaming": {
-"lol.md": {
-  id: "lol.md",
+"lol.mdx": {
+  id: "lol.mdx",
   slug: "lol",
   body: string,
   collection: "gaming",

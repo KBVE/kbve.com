@@ -7,10 +7,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sync": "astro sync"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.13.0",
+    "@astrojs/mdx": "^0.14.0",
     "@astrojs/preact": "^1.0.2",
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/sitemap": "^1.0.0",

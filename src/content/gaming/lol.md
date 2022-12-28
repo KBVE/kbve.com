@@ -20,5 +20,4 @@ tags:
 
 ### Epic Shaco Backdrop for Twitch
 
-Author: DefenselessBaby at <https://www.reddit.com/r/shacomains/comments/zhntii/shaco_live_wallpaper_by_defencelessbaby_enjoy/>
-Permission to use: <https://www.reddit.com/r/shacomains/comments/zhntii/comment/izqoo3l/?utm_source=reddit&utm_medium=web2x&context=3>
+Author: [DefenselessBaby](https://www.reddit.com/r/shacomains/comments/zhntii/shaco_live_wallpaper_by_defencelessbaby_enjoy/)

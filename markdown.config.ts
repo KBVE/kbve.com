@@ -1,9 +1,11 @@
 //?     [MarkDown]  ->  [Configuration]
 
+
 //*     [Plugins]   ->  [Table of Contents]     
 
 //!     Removal of the core plugins.
 //!     import rehypeSlug from "rehype-slug";   There is a bug with displaying the Table of Contents , when importing the .MD files inside of the .MDX
+import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 
 export default {
   extendMarkdownConfig: true,
@@ -13,7 +15,7 @@ export default {
     ],
   rehypePlugins: [
 
-        
+        rehypeHeadingIds,
         //! rehypeSlug errors
     ],
   

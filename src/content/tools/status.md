@@ -1,0 +1,14 @@
+---
+layout: ../../layouts/theme/tools.astro
+title: KBVE Status Page
+category: Tools
+client: Self
+publishDate: 2023-01-01 00:00:00
+img: https://images.unsplash.com/photo-1621905251189-08b45d6a269e?fit=crop&w=1400&h=700&q=75
+description: The Webmaster Tool is an AiO reference tool-belt for any website owner/designer.
+tags:
+- webmaster
+- tools
+- seo
+- website
+---
