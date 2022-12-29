@@ -1,0 +1,31 @@
+---
+//!             [@C][Card]
+//?             This element is an example of rendering a generic <Card> for a blog post.
+//!             [DATA]
+const { dataMap } = Astro.props;
+---
+<!-- dataMap() -->
+{dataMap.map((data) => 
+<div class="max-w-lg p-4 shadow-md dark:bg-gray-900 dark:text-gray-100">
+	<div class="flex justify-between pb-4 border-bottom">
+		<div class="flex items-center">
+			<a rel="noopener noreferrer" href="#" class="mb-0 capitalize">{data.category}</a>
+		</div>
+		<a rel="noopener noreferrer" href="#">See All</a>
+	</div>
+	<div class="space-y-4">
+		<div class="space-y-2">
+			<img src="https://source.unsplash.com/random/480x360/?4" alt="" class="block object-cover object-center w-full rounded-md h-72">
+			<div class="flex items-center text-xs">
+				<span>Date? {}</span>
+			</div>
+		</div>
+		<div class="space-y-2">
+			<a rel="noopener noreferrer" href="#" class="block">
+				<h3 class="text-xl font-semibold text-primary">{data.title}</h3>
+			</a>
+			<p class="leading-snug text-secondary">{data.description}</p>
+		</div>
+	</div>
+</div>
+)}
