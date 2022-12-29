@@ -306,8 +306,8 @@ declare module 'astro:content' {
 },
 },
 "gaming": {
-"lol.mdx": {
-  id: "lol.mdx",
+"lol.md": {
+  id: "lol.md",
   slug: "lol",
   body: string,
   collection: "gaming",
@@ -376,6 +376,15 @@ declare module 'astro:content' {
   body: string,
   collection: "news",
   data: InferEntrySchema<"news">
+},
+},
+"npc": {
+"lucifurr.md": {
+  id: "lucifurr.md",
+  slug: "lucifurr",
+  body: string,
+  collection: "npc",
+  data: any
 },
 },
 "releases": {
@@ -487,6 +496,13 @@ declare module 'astro:content' {
 },
 },
 "tools": {
+"status.md": {
+  id: "status.md",
+  slug: "status",
+  body: string,
+  collection: "tools",
+  data: any
+},
 "webmaster.md": {
   id: "webmaster.md",
   slug: "webmaster",

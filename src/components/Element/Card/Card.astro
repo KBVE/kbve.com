@@ -1,0 +1,14 @@
+---
+//?     [ELEMENT]       ->      [CARD]
+const { 
+        content, 
+        id,
+        card = "", 
+        data = "null"
+    } = Astro.props;
+//?     [IMPORT]        ->      [CARDS]:[Templates]
+import YGO from "./Cards/YGO.astro";
+import BlogCard from "./Cards/BlogCard.astro";
+---
+{(card == "blogcard") && <BlogCard dataMap={data} />}
+{(card == "YGO") && <YGO />}
