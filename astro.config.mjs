@@ -1,7 +1,10 @@
 import { defineConfig } from "astro/config";
 //import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
+
+//?     [JS]:[Library]
+//TODO  <import vue>
+
 import react from "@astrojs/react";
 import compress from "astro-compress";
 
@@ -9,6 +12,7 @@ import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
 
 //*   MDX / MD Integration
+import mdx from "@astrojs/mdx";
 import markdownConfig from './markdown.config'
 
 //*   [TailWindCSS] for AstroJS

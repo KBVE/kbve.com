@@ -87,4 +87,7 @@ Source for it can be found here : [FUI-EDITOR](https://github.com/sbrin/ilin.pt/
   - -> `UID` is a read-only unique identifier for the specific NFC chip.
 - NFC-V
   - Currently does not fully support ISO 15693.
-  
+
+## pyFlipper
+
+This is an unofficial cli wrapper for the Flipper Zero device and we will integrate it with our current eco-system, including the possible future expansion into our core IoT project.
