@@ -1,13 +1,11 @@
 ---
+//*             Appications -> [%FUN] 
+//?             Fetch and render each application from the application json as an article.
+//?             [DATA]
 const { id } = Astro.props;
 const data = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
-if(id != '*')
-{
-
-}
+if(id != '*'){}
 ---
-
-
 {data.map(app => (
 
     <article class="flex flex-col">

@@ -15,6 +15,7 @@ import Intro from "@c/Scene/Intro/intro.astro";                             /// 
 
 //?     [WIP]
 import ApplicationsScene from "@c/Scene/Applications/ApplicationsController/ApplicationsScene.astro";
+import AssetScene from "@c/Scene/Assets/AssetController/AssetScene.astro";
 import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astro";
 //import BlogScene
 
@@ -33,6 +34,7 @@ import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 {(template == "features" && data == false) && <Features />}
 {(template == "redirect") && <Redirect url={data} />}
 {(template == "application" && data == false) && <ApplicationsScene />}
+{(template == "asset" && data == false) && <AssetScene />}
 {(template == "project" && data == false) && <ProjectScene />}
 {(template == "livechat" && data == false) && <HubspotLiveChat />}
 {(template == "calendar" && data == false) && <Calendly text_color="e7af86" primary_color="e7af86" className={className} />}
