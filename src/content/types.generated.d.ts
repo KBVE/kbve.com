@@ -511,6 +511,92 @@ declare module 'astro:content' {
   data: any
 },
 },
+"website": {
+"footer/applications.md": {
+  id: "footer/applications.md",
+  slug: "footer/applications",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/assets.md": {
+  id: "footer/assets.md",
+  slug: "footer/assets",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/contact.md": {
+  id: "footer/contact.md",
+  slug: "footer/contact",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/legal.md": {
+  id: "footer/legal.md",
+  slug: "footer/legal",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/login.md": {
+  id: "footer/login.md",
+  slug: "footer/login",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/privacy.md": {
+  id: "footer/privacy.md",
+  slug: "footer/privacy",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/profile.md": {
+  id: "footer/profile.md",
+  slug: "footer/profile",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/projects.md": {
+  id: "footer/projects.md",
+  slug: "footer/projects",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/register.md": {
+  id: "footer/register.md",
+  slug: "footer/register",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/shop.md": {
+  id: "footer/shop.md",
+  slug: "footer/shop",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/support.md": {
+  id: "footer/support.md",
+  slug: "footer/support",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"footer/terms.md": {
+  id: "footer/terms.md",
+  slug: "footer/terms",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+},
 
 	};
 

@@ -223,6 +223,19 @@ const play = defineCollection({
   },
 });
 
+//?       {website}
+//!       [PLAN] MD Configurations for <Website>
+const website = defineCollection({
+  schema: {
+    status: z.boolean().optional(),
+    title: z.string(),
+    description: z.string(),
+    href: z.string(),
+    icon: z.string(),
+    target: z.boolean().optional(),
+    tags: z.array(z.string()),
+  },
+});
 
 
 
@@ -252,5 +265,6 @@ export const collections = {
     //?       [TOOLS]
     //    tools: tools,
     //    play: play,
+    website: website,
 
 }
