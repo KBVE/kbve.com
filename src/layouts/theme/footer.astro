@@ -9,13 +9,10 @@ import N from "@n/N.astro";
 //!       [DATA]          ->        [$const]
 const { content }   = Astro.props;
 ///       <Utility>: These components will have to be removed and replaced with collections engine.
-const footer_data = await fetch("https://kbve.com/tools/utility/footer_menu.json").then((response) =>  response.json());
-const footer_main_menu_data = await fetch("https://kbve.com/tools/utility/main_menu.json").then((response) =>  response.json());
-const footer_sub_menu_data = await fetch("https://kbve.com/tools/utility/sub_menu.json").then((response) =>  response.json());
 ---
 
 
-<section class="w-full py-8 relative mt-16">
+<section class="w-full py-8 relative mt-16 border-t">
   <div class="max-w-screen-xl px-4 mx-auto">
       <ul class="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light">   
           <li class="my-2">

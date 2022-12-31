@@ -13,7 +13,7 @@ const data = await fetch('https://kbve.com/asset/stock/stock.json').then((respon
                 <img src={app.img} alt="" class="object-cover object-center w-8 h-8 rounded-full shadow-sm ">
                 <div class="-space-y-1">
                     <h2 class="text-sm gradient-text font-semibold leading-none">{app.title}</h2>
-                    <span class="inline-block text-xs leading-none dark:text-gray-400">Somewhere</span>
+                    <span class="inline-block text-xs leading-none dark:text-gray-400">{app.exchange}</span>
                 </div>
             </div>
             <button title="Open options" type="button">
@@ -58,14 +58,14 @@ const data = await fetch('https://kbve.com/asset/stock/stock.json').then((respon
                         <img alt="" class="w-5 h-5 border rounded-full dark:bg-gray-500 dark:border-gray-800" src="https://source.unsplash.com/40x40/?portrait?3">
                     </div>
                     <span class="text-sm">Liked by
-                        <span class="font-semibold">Mamba UI</span>and
-                        <span class="font-semibold">86 others</span>
+                        <span class="font-semibold">KBVE </span> and
+                        <span class="font-semibold"> 69 others</span>
                     </span>
                 </div>
             </div>
             <div class="space-y-3">
                 <p class="text-sm">
-                    <span class="text-base font-semibold">${app.title}</span>
+                    <span class="text-base font-semibold">${app.ticker}</span>
                     <span class="indent-px text-sm line-clamp-2">{app.description}</span>
                 </p>
                 <input type="text" placeholder="Add a comment..." class="w-full py-0.5 bg-transparent border-none rounded text-sm pl-0">
