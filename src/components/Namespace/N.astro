@@ -7,6 +7,7 @@
     import Controller from "./Controller/Controller.astro";
     import Badge from "@c/Element/Badge/Badge.astro";
     import Card from "@c/Element/Card/Card.astro";
+    import Ads from "@c/Element/Ads/Ads.astro";
 //? [DATA]
     const {
         ns = "null",
@@ -29,3 +30,4 @@
 {(_ns == "controller") && <Controller template={template} data={data} className={className} />}
 {(_ns == "badge") && <Badge badgeRank={template} data={data} />}
 {(_ns == "card") && <Card card={template} data={data} id={id} />}
+{(_ns == "ads") && <Ads template={template} data={data} id={id} />}

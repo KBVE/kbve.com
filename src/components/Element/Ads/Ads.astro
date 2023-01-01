@@ -1,0 +1,18 @@
+---
+//?             [ADS]
+//!             Display advertisements from various companies.
+///             {Ezoic}
+import Ezoic from "./Ezoic/Ezoic.astro";
+import Ezoic101 from "./Ezoic/Ezoic101.astro";
+
+//?             [DATA]
+const {
+    content,
+    template,
+    data,
+    id,
+} = Astro.props;
+---
+<!-- ADS START -->
+{(id == "ezoic" && template == "101") && <Ezoic101 data={data} />}
+<!-- ADS END -->
