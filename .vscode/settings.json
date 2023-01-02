@@ -143,11 +143,13 @@
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
     "[astro]": {
-      "editor.defaultFormatter": "astro-build.astro-vscode"
+      "editor.defaultFormatter": "astro-build.astro-vscode",
+      
     },
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.foldingMaximumRegions": 65000
+    "editor.foldingMaximumRegions": 65000,
+    "better-comments.multilineComments": true
     
 }

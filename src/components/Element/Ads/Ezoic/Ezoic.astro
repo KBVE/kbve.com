@@ -1,4 +1,17 @@
 ---
-//?             [EZOIC]
-//!             Advertisement Platform.
+//*             [EZOIC]
+//?             Advertisement Platform.
+import EzoicBanner from "./EzoicBanner.astro";
+import EzoicBox from "./EzoicBox.astro";
+import EzoicFooter from "./EzoicFooter.astro";
+//?             [DATA]
+const {
+    content,
+    template,
+    data,
+    id,
+} = Astro.props;
 ---
+{(template == "banner") && <EzoicBanner data={data} />}
+{(template == "box") && <EzoicBox data={data} />}
+{(template == "footer") && <EzoicFooter data={data} />}
