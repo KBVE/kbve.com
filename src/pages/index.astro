@@ -1,10 +1,16 @@
 ---
 //?       [index]
 //*       [IMPORT]
-import N from "@n/N.astro";                       //  [Namespace]:[N]
-import Splash from "@c/Splash/splash.astro";      /// [SPLASH]    ->  Splash is still giving issues as of 1/2/2022.
+import N from "@n/N.astro"; //  [Namespace]:[N]
+import Splash from "@c/Splash/splash.astro"; //! [SPLASH]    ->  Splash is still giving issues as of 1/2/2022.
 ---
-<N ns="theme" title={"KBVE.com - Gaming, Media, FinTech, Coders"} description={"KiloByte Virtual Enterprise is a collection of users that are straight memers"} template={"data"}>
+
+<N
+  ns="theme"
+  title={"KBVE.com - Gaming, Media, FinTech, Coders"}
+  description={"KiloByte Virtual Enterprise is a collection of users that are straight memers"}
+  template={"data"}
+>
   <Splash />
   <N ns="ads" template="banner" id="ezoic" />
   <N ns="banner" template="bannerml" data="This is data test" id="1" />

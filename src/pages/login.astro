@@ -1,38 +1,43 @@
 ---
-///             [LOGIN]:Template - Login Template for the User
+///             [LOGIN]
+///             <Login:Template>: Currently allowing the basic login through Strapi, not including any OAuth integrations.
 ///             [MIGRATION]: Integrate the {N} : Namespace and remove the [CORE]/[SWUP]
 ///	            [IMPORT]
-import Core from "@l/theme/core.astro";								///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";								///	[SWUP]
-import Login from "@c/Scene/Authentication/Login/Login.astro";		/// [Login]
-import Lottie from "@c/Element/Lottie/Lottie.astro";				/// [Lottie]
+import Core from "@l/theme/core.astro"; ///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro"; ///	[SWUP]
+import Login from "@c/Scene/Authentication/Login/Login.astro"; /// [Login]
+import Lottie from "@c/Element/Lottie/Lottie.astro"; /// [Lottie]
+import N from "@n/N.astro"; /// {Namespace}:{N}
 ///             [DATA]
-const { content }   = Astro.props;                                  /// [Astro]
+const { content } = Astro.props; /// [Astro]
 ---
+
 <Core title="KBVE Login" description="Log into onto our platform!">
-<SWUP>
-<section class=" dark:bg-gray-900 ">
-<div class="grid py-24 space-y-8" id="root">
+  <SWUP>
+    <section class="dark:bg-gray-900">
+      <div class="grid py-24 space-y-8" id="root">
+        <section
+          class="bg-offset relative justify-self-center lg:col-span-5 lg:h-full xl:col-span-6 rounded-3xl"
+        >
+          <Lottie
+            json="https://assets4.lottiefiles.com/packages/lf20_gjmecwii.json"
+            width="350px"
+          />
 
-			<section class="bg-offset relative justify-self-center lg:col-span-5 lg:h-full xl:col-span-6 rounded-3xl">
-            
-			
-			<Lottie json="https://assets4.lottiefiles.com/packages/lf20_gjmecwii.json" width="350px" />
-			
-			<div class="py-12 px-12">
-				<Login /> 
-			</div>
-			
-			</section>
-			
-			<section class="space-y-8 bg-offset relative justify-self-center lg:col-span-5 lg:h-full xl:col-span-6  py-10 p-4 rounded-3xl">
-			Log in via: Google, Github, Steam - This looks Ugly, we need to redo this haha.
-			</section>
+          <div class="py-12 px-12">
+            <Login />
+          </div>
+        </section>
 
-		
-</div>
-</section>
-</SWUP>
+        <section
+          class="space-y-8 bg-offset relative justify-self-center lg:col-span-5 lg:h-full xl:col-span-6 py-10 p-4 rounded-3xl"
+        >
+          Log in via: Google, Github, Steam - This looks Ugly, we need to redo
+          this haha.
+        </section>
+      </div>
+    </section>
+  </SWUP>
 </Core>
 <!-- 
 

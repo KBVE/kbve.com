@@ -1,64 +1,100 @@
 ---
-//?				[GITHUB]:Template - This is the astro page for our github organization.
+//*				[GITHUB]:
+//?             Template - This is the astro page for our github organization.
 ///				[IMPORT]
-import N from "@n/N.astro";                               	///     [Astro]:{namespace}
+import N from "@n/N.astro"; /// [Astro]:{Namespace}:{N}
 ///				[DATA]
-const {	content	} 	= Astro.props; 							///		[Astro]:$Props
+const { content } = Astro.props; /// Expanding the {props} to pass through id, template, data variables from the namespace.
 let title = "KBVE Github";
-let description = "Official Organization Page for KBVE";	
-let	_project = 'https://github.com/orgs/KBVE/projects/3/views/1?filterQuery=-status%3AClosed+label%3A&groupedBy%5BcolumnId%5D=15138396&sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Labels';
-let _rj_matrix = 'https://github.com/orgs/KBVE/projects/3/views/1?filterQuery=-status%3AClosed+label%3Aroguejester&groupedBy%5BcolumnId%5D=15138396&sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Labels';
-let _issue = 'https://github.com/KBVE/kbve.com/issues/new/choose';
+let description = "Official Organization Page for KBVE";
+///             [TEMP]:[VARS]
+let _project =
+  "https://github.com/orgs/KBVE/projects/3/views/1?filterQuery=-status%3AClosed+label%3A&groupedBy%5BcolumnId%5D=15138396&sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Labels";
+let _rj_matrix =
+  "https://github.com/orgs/KBVE/projects/3/views/1?filterQuery=-status%3AClosed+label%3Aroguejester&groupedBy%5BcolumnId%5D=15138396&sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Labels";
+let _issue = "https://github.com/KBVE/kbve.com/issues/new/choose";
+/// {_issue} is currently not being used, I had a button that would link to it but we decided against having all the issues within the same repo, thus its removed.
 ---
-<N ns="theme" title={title} description={description}>
-	<div class="px-8 py-24 space-y-8" id="root">
-        <!-- Start Generic Template -->
-        <div class="min-h-screen dark:bg-gray-800 dark:text-gray-100">
-            <div class="p-6 space-y-8">
-                    <div class="container mx-auto space-y-16">
-                        <section class="grid gap-6 text-center lg:grid-cols-2 xl:grid-cols-5">
-                            <div class="w-full p-6 rounded-md sm:p-16 xl:col-span-2 dark:bg-gray-900">
-                                <span class="block mb-2 dark:text-orange-400">Quick Project Links</span>
-                                <h1 class="text-5xl font-extrabold dark:text-gray-50">Find The Links Quick!</h1>
-                                <p class="my-8">
-                                    <a href={_rj_matrix} target="_blank">
-									<button type="button" class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-offset">RogueJester
-                                        <span class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 gradient-text">New</span>
-                                    </button>
-									</a>
-									<a href={_project} target="_blank">
-                                    <button type="button" class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-offset">Main Backlog
-                                        <span class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 gradient-text">Help</span>
-                                    </button>
-									</a>
-                                </p>
-                                
-                                <p class="my-8">
-                                    <span class="font-medium dark:text-gray-50">Public and transparent logs.</span> Sometimes we need a quick reference and we are a bit lazy xD.
-                                </p>
-                                
-                            </div>
-                            <img src="https://source.unsplash.com/random/480x360" alt="" class="object-cover w-full h-full rounded-md xl:col-span-3 dark:bg-gray-500">
-                        </section>
 
-                        <section>
-                            <div class="w-full p-6 rounded-md sm:p-16 xl:col-span-2 dark:bg-gray-900">
-                                <button type="button" class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-offset hover:scale-125" onclick="window.open('https://github.com/orgs/KBVE/projects/3/views/2')">Kanban
-                                    <span class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 gradient-text">KANBAN</span>
-                                </button>
-                            </div>
-                            <!-- Kanban + Github Issues pull and render? 
+<N ns="theme" title={title} description={description}>
+  <div class="px-8 py-24 space-y-8" id="root">
+    <!-- Start Generic Template -->
+    <div class="min-h-screen dark:bg-gray-800 dark:text-gray-100">
+      <div class="p-6 space-y-8">
+        <div class="container mx-auto space-y-16">
+          <section class="grid gap-6 text-center lg:grid-cols-2 xl:grid-cols-5">
+            <div
+              class="w-full p-6 rounded-md sm:p-16 xl:col-span-2 dark:bg-gray-900"
+            >
+              <span class="block mb-2 dark:text-orange-400"
+                >Quick Project Links</span
+              >
+              <h1 class="text-5xl font-extrabold dark:text-gray-50">
+                Find The Links Quick!
+              </h1>
+              <p class="my-8">
+                <a href={_rj_matrix} target="_blank">
+                  <button
+                    type="button"
+                    class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-offset"
+                    >RogueJester
+                    <span
+                      class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 gradient-text"
+                      >New</span
+                    >
+                  </button>
+                </a>
+                <a href={_project} target="_blank">
+                  <button
+                    type="button"
+                    class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-offset"
+                    >Main Backlog
+                    <span
+                      class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 gradient-text"
+                      >Help</span
+                    >
+                  </button>
+                </a>
+              </p>
+
+              <p class="my-8">
+                <span class="font-medium dark:text-gray-50"
+                  >Public and transparent logs.</span
+                > Sometimes we need a quick reference and we are a bit lazy xD.
+              </p>
+            </div>
+            <img
+              src="https://source.unsplash.com/random/480x360"
+              alt=""
+              class="object-cover w-full h-full rounded-md xl:col-span-3 dark:bg-gray-500"
+            />
+          </section>
+
+          <section>
+            <div
+              class="w-full p-6 rounded-md sm:p-16 xl:col-span-2 dark:bg-gray-900"
+            >
+              <button
+                type="button"
+                class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-offset hover:scale-125"
+                onclick="window.open('https://github.com/orgs/KBVE/projects/3/views/2')"
+                >Kanban
+                <span
+                  class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 gradient-text"
+                  >KANBAN</span
+                >
+              </button>
+            </div>
+            <!-- Kanban + Github Issues pull and render? 
                                 [Client Side] -> [Javascript] -> [jQuery] -> {API-Github} => {JSON} ~~> isolate into map for each issue.
                                 Fiddle Link: http://jsfiddle.net/c21v4Lj6/
                                 
                                 [Server SIde] -> [Astro] -> [fetch()] -> {API-Github} => {JSON} ~~> Map<>();
                             -->
-                        </section>
-                    
-                    </div>
-            
-            </div>
+          </section>
         </div>
-        <!-- End Generic Template -->
-	</div>	
+      </div>
+    </div>
+    <!-- End Generic Template -->
+  </div>
 </N>
