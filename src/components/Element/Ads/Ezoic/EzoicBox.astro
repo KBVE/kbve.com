@@ -1,11 +1,23 @@
 ---
 //?             [EZOIC]:{103}
-
+const {
+	data,
+} = Astro.props;
 ---
-<div class="max-w-xs p-6 rounded-md shadow-md bg-offset">
-	<div class="mt-6 mb-2">
-        <!-- Ezoic - mid_content_box - mid_content -->
-<div id="ezoic-pub-ad-placeholder-114"> </div>
-<!-- End Ezoic - mid_content_box - mid_content -->
+<div class="p-1">
+	<div class="container grid grid-cols-12 mx-auto">
+		<div class="rounded-3xl bg-offset flex flex-col p-1 col-span-full row-span-full lg:col-span-12">
+			<div class="flex justify-center items-center p-1 space-x-2">
+				<!-- Ezoic - mid_content_box - mid_content -->
+				<div id="ezoic-pub-ad-placeholder-114"> </div>
+				<!-- End Ezoic - mid_content_box - mid_content -->
+			</div>
+
+			<div class="flex items-center justify-between pt-2">
+				<div class="flex space-x-2">
+				</div>
+				<span class="text-xs">Advertisement</span>
+			</div>
+		</div>
 	</div>
 </div>
