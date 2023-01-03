@@ -3,21 +3,22 @@
 //?				[PLAN]: Display search for missing files, thus helping the user navigate to the right page.
 //?				[PLAN]: Render Robo404 as a {N} Lottie and from a local JSON.
 ///				[IMPORT]
-import N from "@n/N.astro";                               	///     [Astro]:{namespace}
+import N from "@n/N.astro"; ///     [Astro]:{namespace}
 ///				[DATA]
 let title = "Not Found";
 let description = "Not Found";
-const { content } = Astro.props;						///	[Astro]		->	[Props]
-Astro.response.status = 404;							/// [Astro]		->	[Response]	-> 404
-Astro.response.statusText = title;						///	[Astro]		->	[Response]	-> 'Not found'
+const { content } = Astro.props; ///	[Astro]		->	[Props]
+Astro.response.status = 404; /// [Astro]		->	[Response]	-> 404
+Astro.response.statusText = title; ///	[Astro]		->	[Response]	-> 'Not found'
 ///				[MIGRATE]
-import Robo404 from "@c/Element/Lottie/404/404.astro";	///	[Lottie]	->	404 Animation
+import Robo404 from "@c/Element/Lottie/404/404.astro"; ///	[Lottie]	->	404 Animation
 ---
+
 <N title={title} description={description}>
-	<div class="px-4 py-12 space-y-8">
-			<br />
-			<h1>Page Not Found</h1>
-			<p>Not found</p>
-			<Robo404 />
-	</div>
+  <div class="px-4 py-12 space-y-8">
+    <br />
+    <h1>Page Not Found</h1>
+    <p>Not found</p>
+    <Robo404 />
+  </div>
 </N>

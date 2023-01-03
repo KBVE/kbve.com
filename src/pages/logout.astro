@@ -4,14 +4,16 @@
 ///				[PLAN]: Astro Cookies Integration might still be on the table, regardless we should make sure that it deletes all cookies.
 ///				[PLAN]: Clear LocalStorage , NanoStorage and all additional data entries. A solid wipe, plus remove JWT from Rust endpoints* Do Not Forget!
 ///				[IMPORT]
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
-import Logout from "@c/Scene/Authentication/Logout";		/// [Login]
+import Logout from "@c/Scene/Authentication/Logout"; /// [Logout]:<React>
+import N from "@n/N.astro"; /// {Namespace}:{N}
+///				[DATA]
+const { data, id, template } = Astro.props;
+let title = "KBVE Logout";
+let description = "Logout of the platform!";
 ---
-<Core title="KBVE Login" description="Log into onto our platform!">
-<SWUP>
-	<div class="px-8 py-24 space-y-8" id="root">
-		<Logout client:only="react" />
-	</div>	
-</SWUP>
-</Core>
+
+<N ns="theme" title={title} description={description}>
+  <div class="px-8 py-24 space-y-8" id="root">
+    <Logout client:only="react" />
+  </div>
+</N>

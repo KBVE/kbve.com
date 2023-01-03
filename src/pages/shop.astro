@@ -1,26 +1,25 @@
 ---
-
-	///				[SHOP]:Template - <render> Template for Shop : <SHOP> || <STORE>. 
-	///				[DELETE?] - We could just delete the shop page for now, but that is still up in the air.
-	///				[IMPORT]
-	import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-	import SWUP from "@l/theme/swup.astro";					///	[SWUP]
-	import Sellix from '@c/Action/Sellix';
-
+///				[SHOP]
+///				The <SHOP> will remain under construction until we get some of the general aspects resolved.
+///				[DELETE?] - We could just delete the shop page for now, but that is still up in the air.
+///				[IMPORT]
+import N from "@n/N.astro";
+import Sellix from "@c/Action/Sellix";
+///				[DATA]
+const { content, data, id } = Astro.props;
+let title = "KBVE Store aka the Shop";
+let description =
+  "The KBVE Shop is a portal to all our stores and services across the whole platform";
 ---
 
-<Core title="KBVE Login" description="Log into onto our platform!">
-	<SWUP>
-		<div class="px-8 py-24 space-y-8" id="root">
-			<div class="bio wrapper wrapper__readable mt8">
-				<p>
-					Purchase various products and services from KBVE Shop!
-				</p>
-                <p>
-                    <Sellix product="6297eb487634c" name="Purchase VIP Membership" />
-                </p>
-                <Sellix lib={true} />
-			</div>
-		</div>	
-	</SWUP>
-</Core>
+<N ns="theme" title={title} description={description}>
+  <div class="px-8 py-24 space-y-8" id="root">
+    <div class="bio wrapper wrapper__readable mt8">
+      <p>Purchase various products and services from KBVE Shop!</p>
+      <p>
+        <Sellix product="6297eb487634c" name="Purchase VIP Membership" />
+      </p>
+      <Sellix lib={true} />
+    </div>
+  </div>
+</N>

@@ -1,11 +1,11 @@
 ---
 //?             [ADS]
 //!             Display advertisements from various companies.
-///             {Ezoic}
+///             [IMPORT]
 import Ezoic from "./Ezoic/Ezoic.astro";
-import EzoicBanner from "./Ezoic/EzoicBanner.astro";
-import EzoicBox from "./Ezoic/EzoicBox.astro";
-import EzoicFooter from "./Ezoic/EzoicFooter.astro";
+// import Aads from "./Aads/Aads.astro";
+// import Adsense from "./Adsense/Adsense.astro";
+// import Discord.ac from "./DiscordAC.astro";
 //?             [DATA]
 const {
     content,
@@ -14,9 +14,4 @@ const {
     id,
 } = Astro.props;
 ---
-<!-- ADS START -->
-{(id == "ezoic" && template == "banner") && <EzoicBanner data={data} />}
-{(id == "ezoic" && template == "box") && <EzoicBox data={data} />}
-{(id == "ezoic" && template == "footer") && <EzoicFooter data={data} />}
-
-<!-- ADS END -->
+{(id == "ezoic") && <Ezoic data={data} template={template} />}
