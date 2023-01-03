@@ -1,20 +1,20 @@
 ---
 layout: ../../layouts/theme/profile.astro
 #Heartbeat
-status: false
+status: true
 
 #Main Profile Start
 username: sean
-title: 
+title: sean
 description: 420x dev
 jobby: NPC
 
 #PFP
-img: [https://i.imgur.com/4vkoAdX.png](https://avatars.githubusercontent.com/u/13725538?v=4)
+img: https://i.imgur.com/4vkoAdX.png
 
 #BIO
 bloodtype: thc
-project: 
+project: God
 primary: Work to survive until I can work for fun.
 lottie: https://assets3.lottiefiles.com/animated_stickers/lf_tgs_ydeydp5o.json
 lottiefooter: https://assets3.lottiefiles.com/animated_stickers/lf_tgs_zqktr6ot.json
