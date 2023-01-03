@@ -6,7 +6,7 @@ import EzoicFooter from "./EzoicFooter.astro"; //?              {Ezoic}:[113]
 import EzoicBox from "./EzoicBox.astro"; //?                    {Ezoic}:[114]
 import EzoicCard from "./EzoicCard.astro"; //?                  {Ezoic}:[115]
 import EzoicFlexBanner from "./EzoicFlexBanner.astro"; //?      {Ezoic}:[116]
-//117?
+import EzoicUnderTitle from "./EzoicUnderTitle.astro";  //      {Ezoic}:[117]
 //118?
 //119?
 //120?
@@ -17,8 +17,9 @@ import EzoicFlexBanner from "./EzoicFlexBanner.astro"; //?      {Ezoic}:[116]
 const { content, template, data, id } = Astro.props;
 ---
 
-{template == "banner" && <EzoicBanner data={data} />}
-{template == "box" && <EzoicBox data={data} />}
-{template == "footer" && <EzoicFooter data={data} />}
-{template == "card" && <EzoicCard data={data} />}
-{template == "flexbanner" && <EzoicFlexBanner data={data} />}
+{(template == "banner") && <EzoicBanner data={data} />}
+{(template == "box") && <EzoicBox data={data} />}
+{(template == "footer") && <EzoicFooter data={data} />}
+{(template == "card") && <EzoicCard data={data} />}
+{(template == "flexbanner") && <EzoicFlexBanner data={data} />}
+{(template == "undertitle") && <EzoicUnderTitle data={data} />}
