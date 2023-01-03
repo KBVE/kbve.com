@@ -1,17 +1,24 @@
 ---
 //*             [EZOIC]
 //?             Advertisement Platform.
-import EzoicBanner from "./EzoicBanner.astro";
-import EzoicBox from "./EzoicBox.astro";
-import EzoicFooter from "./EzoicFooter.astro";
+import EzoicBanner from "./EzoicBanner.astro"; //?              {Ezoic}:[112]
+import EzoicFooter from "./EzoicFooter.astro"; //?              {Ezoic}:[113]
+import EzoicBox from "./EzoicBox.astro"; //?                    {Ezoic}:[114]
+import EzoicCard from "./EzoicCard.astro"; //?                  {Ezoic}:[115]
+import EzoicFlexBanner from "./EzoicFlexBanner.astro"; //?      {Ezoic}:[116]
+//117?
+//118?
+//119?
+//120?
+//121?
+//122?
+//123?
 //?             [DATA]
-const {
-    content,
-    template,
-    data,
-    id,
-} = Astro.props;
+const { content, template, data, id } = Astro.props;
 ---
-{(template == "banner") && <EzoicBanner data={data} />}
-{(template == "box") && <EzoicBox data={data} />}
-{(template == "footer") && <EzoicFooter data={data} />}
+
+{template == "banner" && <EzoicBanner data={data} />}
+{template == "box" && <EzoicBox data={data} />}
+{template == "footer" && <EzoicFooter data={data} />}
+{template == "card" && <EzoicCard data={data} />}
+{template == "flexbanner" && <EzoicFlexBanner data={data} />}
