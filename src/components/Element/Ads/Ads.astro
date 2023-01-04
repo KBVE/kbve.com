@@ -11,7 +11,8 @@ const {
     content,
     template,
     data,
+    className,
     id,
 } = Astro.props;
 ---
-{(id == "ezoic") && <Ezoic data={data} template={template} />}
+{(id == "ezoic") && <Ezoic data={data} template={template} className={className} />}
