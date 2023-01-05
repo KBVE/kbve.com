@@ -3,21 +3,30 @@
 //!       [Namespace]:Null - We will not use namespace inside of the [CORE] to avoid errors with javascript <=> Astro.
 //!       [PLAN]: There will be a point where we have to update [CORE] for multi-language support but this is definitely not within any timeframe for now.
 //?       [IMPORTS]
-import "../../styles/index.css";                                  //  Import Style.css
-import Head from "@l/theme/header.astro";                         //  Import {Header -> Head}
-import Theme from "@l/theme/theme.astro";                         //  Import Header -> Theme
-import SocialMetaTag from "@c/SocialMedia/MetaTag.astro";         //  Import SocialMedia -> MetaTag
+import "../../styles/index.css"; //  Import Style.css
+import Head from "@l/theme/header.astro"; //  Import {Header -> Head}
+import Theme from "@l/theme/theme.astro"; //  Import Header -> Theme
+import SocialMetaTag from "@c/SocialMedia/MetaTag.astro"; //  Import SocialMedia -> MetaTag
 //?       [DATA]
-const { content, title, description } = Astro.props;              //  Import Astro.props
+const { content, title, description } = Astro.props; //  Import Astro.props
 ---
+
 <!DOCTYPE html>
-<html lang="en" class="h-full motion-safe:scroll-smooth"  data-theme="dark">
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
-    <Head title={title || content.title} description={title || content.description} />
-    <SocialMetaTag title={title || content.title} description={title || content.description} />
+    <Head
+      title={title || content.title}
+      description={title || content.description}
+    />
+    <SocialMetaTag
+      title={title || content.title}
+      description={title || content.description}
+    />
     <Theme />
   </head>
-  <body class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white">
-        <slot />
-        </body>
+  <body
+    class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
+  >
+    <slot />
+  </body>
 </html>

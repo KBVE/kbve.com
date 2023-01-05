@@ -3,10 +3,17 @@
 //?             468x60 || 500x100~ - Ad Banners - {%length > 2 lines}, ID:121
 //!             ^POST: We will try customized $className with this element and then extend it back around for the other ones.
 //?             [DATA]
-const { content, data, id, template, className = "flex-wrap flex-none p-1 justify-center items-center" } = Astro.props;
+const {
+  content,
+  data,
+  id,
+  template,
+  className = "flex-wrap flex-none p-1 justify-center items-center",
+} = Astro.props;
 ---
-<div class={className} >
-    <!-- Ezoic - incontent_6_mid_banner - incontent_6 -->
-    <div id="ezoic-pub-ad-placeholder-121"> </div>
-    <!-- End Ezoic - incontent_6_mid_banner - incontent_6 -->
+
+<div class={className}>
+  <!-- Ezoic - incontent_6_mid_banner - incontent_6 -->
+  <div id="ezoic-pub-ad-placeholder-121"></div>
+  <!-- End Ezoic - incontent_6_mid_banner - incontent_6 -->
 </div>

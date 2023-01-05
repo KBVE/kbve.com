@@ -18,34 +18,32 @@ let description =
 //~				[END]
 ---
 
-<N title={title} description={description}>
-  <div class="px-4 py-12 space-y-8">
-    <style>
-      .kbvehero {
-        padding: 8rem;
-        display: flex;
-        background-color: var(--t-fg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 25vw;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .kbvetext {
-        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-          -1px 1px 0 #000, 1px 1px 0 #000;
-      }
-    </style>
-    <div
-      style={{
-        backgroundImage: `url(https://images.unsplash.com/photo-1614680376739-414d95ff43df)`,
-      }}
-      class="kbvehero rounded-full shadow-2xl hover:skew-y-6 transform-gpu duration-300"
-    >
-      <h1 class="title text-9xl kbvetext">Discord Community</h1>
-    </div>
+<N ns="theme" title={title} description={description}>
+  <style>
+    .kbvehero {
+      padding: 8rem;
+      display: flex;
+      background-color: var(--t-fg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 25vw;
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .kbvetext {
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+        -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+  </style>
+  <div
+    style={{
+      backgroundImage: `url(https://images.unsplash.com/photo-1614680376739-414d95ff43df)`,
+    }}
+    class="kbvehero rounded-full shadow-2xl hover:skew-y-6 transform-gpu duration-300"
+  >
+    <h1 class="title text-9xl kbvetext">Discord Community</h1>
   </div>
 
   <div class="px-4 py-8 space-y-4">
@@ -56,7 +54,7 @@ let description =
       />
     </div>
   </div>
-
+  <N ns="ads" template="banner" id="ezoic" />
   <section class="dark:bg-gray-800 dark:text-gray-100">
     <div
       class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between"
@@ -109,4 +107,5 @@ let description =
       />
     </div>
   </div>
+  <N ns="ads" template="footer" id="ezoic" />
 </N>
