@@ -457,6 +457,13 @@ declare module 'astro:content' {
   collection: "team",
   data: InferEntrySchema<"team">
 },
+"sean.md": {
+  id: "sean.md",
+  slug: "sean",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
 "silver91.md": {
   id: "silver91.md",
   slug: "silver91",

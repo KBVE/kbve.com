@@ -1,21 +1,18 @@
 ---
-//?				[REGISTER]:Template - <render> -> <Register> from <Scene>:<Authentication> + Onboard.
-///				[MIGRATION]: Remove the Core/SWUP and integrate the {N} : {Namespace}
+//*				[REGISTER]
+//?				^POST: We will have to expand the onboarding to a newer system.
 ///				[IMPORT]
-import Core from "@l/theme/core.astro";					///	[IMPORT] -> [CORE]
-import SWUP from "@l/theme/swup.astro";					///	[SWUP]
-
+import N from "@n/N.astro"; //?	{Namespace}:{N}
 //import Register from "@c/Scene/Authentication/Register/Register.astro";
 import Onboard from "@c/Scene/Authentication/Onboard/Onboard.astro";
 ///				[DATA]
-const	{	content 	} = Astro.props;
+const { content } = Astro.props;
+let title = "KBVE Register & Onboarding";
+let description = "Register onto our platform!";
 ---
-<Core title="KBVE Register" description="Register onto our platform!">
-<SWUP>
-	<script></script>
- <div class="px-8 py-24 space-y-8" id="root">			
-	<Onboard  mrmeme="Hi" />
-	<!-- <Register /> -->
-	</div>	
-</SWUP>
-</Core>
+
+<N ns="theme" title={title} description={description}>
+  <div class="px-8 py-24 space-y-8" id="root">
+    <Onboard mrmeme="Hi" />
+  </div>
+</N>
