@@ -7,35 +7,48 @@
 ///       [NAMESPACE]     ->        [N]
 import N from "@n/N.astro";
 //!       [DATA]          ->        [$const]
-const { content }   = Astro.props;
+const { content } = Astro.props;
 ///       <Utility>: These components will have to be removed and replaced with collections engine.
 ---
 
-
 <section class="w-full py-8 relative mt-16 border-t">
   <div class="max-w-screen-xl px-4 mx-auto">
-      <ul class="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light">   
-          <li class="my-2">
-            <a class="text-secondary hover:text-primary transition-colors duration-200" href="https://kbve.com/support">
-            Support
-            </a>
-          </li>
-          <li class="my-2">
-            <a class="text-secondary hover:text-primary transition-colors duration-200" href="https://kbve.com/register">
-            Register
-            </a>
-          </li>
-          <li class="my-2">
-            <a class="text-secondary hover:text-primary transition-colors duration-200" href="https://kbve.com/legal">
-            Legal
-            </a>
-          </li>
-      </ul>
-      <div class="pt-8 flex max-w-xs mx-auto items-center justify-between">
-        <N ns="controller" template="socials" />
-      </div>
-          <div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
-            <!-- <form class="flex flex-col justify-center w-3/4 max-w-sm space-y-3 md:flex-row md:w-full md:space-x-3 md:space-y-0">
+    <ul
+      class="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light"
+    >
+      <li class="my-2">
+        <a
+          class="text-secondary hover:text-primary transition-colors duration-200"
+          href="https://kbve.com/support"
+        >
+          Support
+        </a>
+      </li>
+      <li class="my-2">
+        <a
+          class="text-secondary hover:text-primary transition-colors duration-200"
+          href="https://kbve.com/register"
+        >
+          Register
+        </a>
+      </li>
+      <li class="my-2">
+        <a
+          class="text-secondary hover:text-primary transition-colors duration-200"
+          href="https://kbve.com/legal"
+        >
+          Legal
+        </a>
+      </li>
+    </ul>
+    <div class="pt-8 flex max-w-xs mx-auto items-center justify-between">
+      <N ns="controller" template="socials" />
+    </div>
+    <N ns="ads" template="footer" id="ezoic" />
+    <div
+      class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center"
+    >
+      <!-- <form class="flex flex-col justify-center w-3/4 max-w-sm space-y-3 md:flex-row md:w-full md:space-x-3 md:space-y-0">
               <div class=" relative ">
                   <input type="text" id="&quot;form-subscribe-Subscribe" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email"/>
                   </div>
@@ -43,17 +56,26 @@ const { content }   = Astro.props;
                       Subscribe
                   </button>
             </form> -->
-          </div>
-            <div class="text-center text-sm pt-10 sm:pt-12 font-light flex items-center justify-center">
-              KiloByte Virtual Enterprise is a consultancy firm that designs applications and modifications within the realm of machine learning, blockchain, autonomous operations and fintech.
-            </div>
+    </div>
+    <div
+      class="text-center text-sm pt-10 sm:pt-12 font-light flex items-center justify-center"
+    >
+      KiloByte Virtual Enterprise is a consultancy firm that designs
+      applications and modifications within the realm of machine learning,
+      blockchain, autonomous operations and fintech.
+    </div>
   </div>
 </section>
 
-
-
 <div class="relative mt-16">
-    <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400" preserveAspectRatio="none" viewBox="0 0 1440 54">
-      <path fill="var(--color-primary)" d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"></path>
-    </svg>
+  <svg
+    class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
+    preserveAspectRatio="none"
+    viewBox="0 0 1440 54"
+  >
+    <path
+      fill="var(--color-primary)"
+      d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
+    ></path>
+  </svg>
 </div>
