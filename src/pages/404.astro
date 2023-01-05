@@ -14,11 +14,10 @@ Astro.response.statusText = title; ///	[Astro]		->	[Response]	-> 'Not found'
 import Robo404 from "@c/Element/Lottie/404/404.astro"; ///	[Lottie]	->	404 Animation
 ---
 
-<N title={title} description={description}>
-  <div class="px-4 py-12 space-y-8">
-    <br />
-    <h1>Page Not Found</h1>
-    <p>Not found</p>
-    <Robo404 />
-  </div>
+<N ns="theme" title={title} description={description}>
+  <N ns="ads" template="banner" id="ezoic" />
+  <h1>Page Not Found</h1>
+  <p>Not found</p>
+  <N ns="ads" template="incontent" id="ezoic" />
+  <Robo404 />
 </N>
