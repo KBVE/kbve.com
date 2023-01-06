@@ -15,34 +15,34 @@ tags:
 
 ## Kubernetes
 
-- Kubernetes is a CNCF-certified open-source container orchestration system for automating the deployment, scaling and management of virtual micro machines within a hybrid cloud.
+Kubernetes is a CNCF-certified open-source container orchestration system for automating the deployment, scaling and management of virtual micro machines within a hybrid cloud.
 
-## k
+## K
 
 - Generic `k` alias for kubernetes.
-  - (without sudo)
+  - without sudo
     - Run these two following commands for k.
       - `alias k=kubectl`
       - `echo 'alias k=kubectl' >>~/.bashrc`
-  - (with sudo)
+  - with sudo
     - Run these two following commands for k.
       - `alias 'k=sudo kubectl'`
       - `echo "alias k='sudo kubectl'" >>~/.bashrc`
-  - If you end up using [Oh My ZSH](https://kbve.com/application/zsh), replace `.bashrc` with `.zshrc`
+  - If you end up using [Oh My ZSH](https://kbve.com/application/zsh) , replace `.bashrc` with `.zshrc`
 
 ## Terms
 
 - Cluster:
-  - Group of virtual micro servers that orchestrate as the (`k`) / `k8s` / `kubernetes`.
+  - Group of virtual micro servers that orchestrate as the `k` / `k8s` / `kubernetes`.
     - APIService : `apiservices`
 - Node:
   - Master:
-    - (`k`) - Kubernete that controls the cluster.
+    - `k` - Kubernete that controls the cluster.
   - Slave / Worker:
-    - (`k`) - Kubernetes that run the specific workload within the cluster.
-- Pods (`pod`):
-  - Group of (k) - containers and volumes that operate under the isolated namespace network.
-  - Deployed by Operator (Portainer/Rancher/User) via manifest YAML-schema.
+    - `k` - Kubernetes that run the specific workload within the cluster.
+- Pods `pod`:
+  - Group of `k` - containers and volumes that operate under the isolated namespace network.
+  - Deployed by Operator Portainer/Rancher/User via manifest YAML-schema.
     - Example:
 
       ```shell
@@ -59,7 +59,7 @@ tags:
 
 - Install k3s
   - Note: We are using Ubuntu as the host operating system for the k3s.
-    - Update & Upgrade (`Ubuntu`)
+    - Update & Upgrade `Ubuntu`
 
       - ```shell
         apt-get update
@@ -88,16 +88,16 @@ tags:
       - Verify: `sudo nmap -sU -sT -p0-65535 127.0.0.1`
         - To install nmap, run `sudo apt-get install nmap` and then confirm.
   - Verification
-    - Location for k3s (after install)
+    - Location for k3s after install
       - organic location -> : `/var/lib/rancher/k3s`
     - Ingress
       The default ingress will be Traefik and the yaml will be located at:
 
-      ```shell
-      cd /var/lib/rancher/k3s/server/manifests/traefik.yaml
-      ```
+```shell
+cd /var/lib/rancher/k3s/server/manifests/traefik.yaml
+```
 
-      - Access might require `root`.
+Access might require `root`.
 
 ### k3s Agent
 
@@ -122,7 +122,7 @@ tags:
     sudo kubectl cluster-info   
     ```
 
-- View full config (minified)
+- View full config minified
 
   - ```shell
     sudo kubectl config view --minify
@@ -159,7 +159,7 @@ tags:
       sudo kubectl get all --all-namespaces
       ```
 
-  - In current namespace (`default` by default)
+  - In current namespace `default` by default
 
     - ```shell
       sudo kubectl get all
@@ -172,7 +172,7 @@ tags:
       sudo kubectl get svc --all-namespaces
       ```
 
-  - In current namespace (`default` by default)
+  - In current namespace `default` by default
 
     - ```shell
       sudo kubectl get svc
@@ -242,15 +242,15 @@ environment:
 ```
 
 - Setup Portainer Agent
-  - Load Balancer (lb)
+  - Load Balancer lb
     - LB Command:
 
     ```shell
     sudo kubectl apply -f https://downloads.portainer.io/ce2-16/portainer-agent-k8s-lb.yaml
     ```
 
-    - Agent 2.16 as of 11/17/2022 (Previously the revision was ~2.15 as of 09/30/2022~)
-  - Node Port (nodeport)
+    - Agent 2.16 as of 11/17/2022 Previously the revision was ~2.15 as of 09/30/2022~
+  - Node Port nodeport
     - NodePort Command:
 
     ```shell
@@ -270,7 +270,7 @@ environment:
 ## Harden
 
 - Collection of harden manifests by the DoD
-  - <https://repo1.dso.mil/dsop>
+  - [DSOP](https://repo1.dso.mil/dsop)
 
 ## Kubernetes Storage
 
@@ -278,68 +278,61 @@ environment:
 
 ### Kubernetes NFS
 
-- External Provider
-  - [NFS SubDir](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner)
+External Provider
+[NFS SubDir](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner)
 
-- CSI-Driver-NFS
-  - [CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs)
+CSI-Driver-NFS
+[CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs)
 
 ## okd
 
-- <https://github.com/pvelati/okd-proxmox-scripts>
-- OKD Notes (Incoming)
+- [OKD](https://github.com/pvelati/okd-proxmox-scripts)
+- OKD Notes still need to be worked on.
 
 ## vCluster
 
-- Requirements
-  - According to the official notes:
-    - kubectl (check via `kubectl version`)
-    - helm v3 (check with `helm version`)
-    - a working kube-context with access to a Kubernetes cluster (check with `kubectl get namespaces`)
+Requirements according to the official notes:
+kubectl check via `kubectl version`
+helm v3 check with `helm version`
+a working kube-context with access to a Kubernetes cluster check with `kubectl get namespaces`
 
 ### vCluster Install
 
 Docs on installing vCluster within the environment / system / orchestration.
 
-- vcluster is officially supported for:
-  - Mac (Intel/AMD)
-    - Install by running the following command:
+vcluster is officially supported for:
 
-    - ```shell
-        curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-amd64" && sudo install -c -m 0755 vcluster /usr/local/bin
-        ```
+Mac Intel/AMD
+Install by running the following command:
 
-  - Mac (Silicon/ARM)
-    - Install on the M1 series by the command below:
+```shell
+curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-amd64" && sudo install -c -m 0755 vcluster /usr/local/bin
+```
 
-    - ```shell
-        curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-arm64" && sudo install -c -m 0755 vcluster /usr/local/bin
-        ```
+Mac Silicon/ARM
+Install on the M1 series by the command below:
 
-  - Linux (Intel/AMD)
-    - Install vcluster on generic Unix x86
+```shell
+curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-arm64" && sudo install -c -m 0755 vcluster /usr/local/bin
+```
 
-    - ```shell
-        curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-linux-amd64" && sudo install -c -m 0755 vcluster /usr/local/bin
-        ```
+Linux Intel/AMD
+Install vcluster on generic Unix x86
 
-  - Linux (ARM)
-    - Unix instance runnong on ARM:
+```shell
+curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-linux-amd64" && sudo install -c -m 0755 vcluster /usr/local/bin
+```
 
-    - ```shell
-        curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-linux-arm64" && sudo install -c -m 0755 vcluster /usr/local/bin
-        ```
+Linux ARM
+Unix instance runnong on ARM:
 
-  - Windows (Powershell)
+```shell
+curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-linux-arm64" && sudo install -c -m 0755 vcluster /usr/local/bin
+```
 
-    - ```shell
-        md -Force "$Env:APPDATA\vcluster"; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls,Tls11,Tls12';
-        Invoke-WebRequest -URI "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-windows-amd64.exe" -o $Env:APPDATA\vcluster\vcluster.exe;
-        $env:Path += ";" + $Env:APPDATA + "\vcluster";
-        [Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::User);
-        ```
+Powershell - Still needs to work.
 
-      - Note: You may have to double check if the: `%APPDATA%\vcluster` was installed sucessfully.
+Note: You may have to double check if the: `%APPDATA%\vcluster` was installed sucessfully.
 
 - Confirm
   - Run `vcluster --version` to confirm that the install was sucessful.

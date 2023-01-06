@@ -11,11 +11,10 @@ tags:
 - networking
 - lb
 ---
-<!-- 
+
 import Github from "@c/Action/Github/Github.astro";
 export const components = { github: Github };
 
-import TCF from "./_core/traefik_cloudflare.md"; -->
 
 ## Traefik
 
@@ -30,16 +29,16 @@ import TCF from "./_core/traefik_cloudflare.md"; -->
 - Docker Compose
   - There should be an acme.json file that you create and pass through the docker with the permission of chmod 600.
   - Furthermore, there are two more files that you will have to configure and pass through before launching the traefik container. We provided them in the #config section below.
-  - `<Github src="data/traefik/docker-compose.yml" description="This is a docker compose for traefik." />`
+  - <Github src="data/traefik/docker-compose.yml" description="This is a docker compose for traefik." />
   
 * * *
 
 ## Config
 
 - Traefik.yml Example
-  - `<Github src="data/traefik/traefik.yml" description="This the primary config for our traefik.yml" />`
+  - <Github src="data/traefik/traefik.yml" description="This the primary config for our traefik.yml" />
 - Config.yml Router Example
-  - `<Github src="data/traefik/config.yml" description="This the router config for our reverse proxy. Written by Techo Tim originaly and modified by our team." />`
+  - <Github src="data/traefik/config.yml" description="This the router config for our reverse proxy. Written by Techo Tim originaly and modified by our team." />
 
 * * *
 
@@ -163,7 +162,6 @@ what the middlewares are. [Find more info on the Traefik Middlewares Here](https
 
 * * *
 
-<!-- <TCF /> -->
 
 ## Cloudflare
 

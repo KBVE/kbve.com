@@ -43,78 +43,78 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"application": {
-"android.md": {
-  id: "android.md",
+"android.mdx": {
+  id: "android.mdx",
   slug: "android",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"ansible.md": {
-  id: "ansible.md",
+"ansible.mdx": {
+  id: "ansible.mdx",
   slug: "ansible",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"authelia.md": {
-  id: "authelia.md",
+"authelia.mdx": {
+  id: "authelia.mdx",
   slug: "authelia",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"cubejs.md": {
-  id: "cubejs.md",
+"cubejs.mdx": {
+  id: "cubejs.mdx",
   slug: "cubejs",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"docker.md": {
-  id: "docker.md",
+"docker.mdx": {
+  id: "docker.mdx",
   slug: "docker",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"flipperzero.md": {
-  id: "flipperzero.md",
+"flipperzero.mdx": {
+  id: "flipperzero.mdx",
   slug: "flipperzero",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"flutter.md": {
-  id: "flutter.md",
+"flutter.mdx": {
+  id: "flutter.mdx",
   slug: "flutter",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"gcloud.md": {
-  id: "gcloud.md",
+"gcloud.mdx": {
+  id: "gcloud.mdx",
   slug: "gcloud",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"git.md": {
-  id: "git.md",
+"git.mdx": {
+  id: "git.mdx",
   slug: "git",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"godot.md": {
-  id: "godot.md",
+"godot.mdx": {
+  id: "godot.mdx",
   slug: "godot",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"javascript.md": {
-  id: "javascript.md",
+"javascript.mdx": {
+  id: "javascript.mdx",
   slug: "javascript",
   body: string,
   collection: "application",
@@ -127,155 +127,155 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"longhorn.md": {
-  id: "longhorn.md",
+"longhorn.mdx": {
+  id: "longhorn.mdx",
   slug: "longhorn",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"lvm.md": {
-  id: "lvm.md",
+"lvm.mdx": {
+  id: "lvm.mdx",
   slug: "lvm",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"ml.md": {
-  id: "ml.md",
+"ml.mdx": {
+  id: "ml.mdx",
   slug: "ml",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"mysql.md": {
-  id: "mysql.md",
+"mysql.mdx": {
+  id: "mysql.mdx",
   slug: "mysql",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"nftables.md": {
-  id: "nftables.md",
+"nftables.mdx": {
+  id: "nftables.mdx",
   slug: "nftables",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"nmap.md": {
-  id: "nmap.md",
+"nmap.mdx": {
+  id: "nmap.mdx",
   slug: "nmap",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"nomad.md": {
-  id: "nomad.md",
+"nomad.mdx": {
+  id: "nomad.mdx",
   slug: "nomad",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"obsidian.md": {
-  id: "obsidian.md",
+"obsidian.mdx": {
+  id: "obsidian.mdx",
   slug: "obsidian",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"php.md": {
-  id: "php.md",
+"php.mdx": {
+  id: "php.mdx",
   slug: "php",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"portainer.md": {
-  id: "portainer.md",
+"portainer.mdx": {
+  id: "portainer.mdx",
   slug: "portainer",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"proxmox.md": {
-  id: "proxmox.md",
+"proxmox.mdx": {
+  id: "proxmox.mdx",
   slug: "proxmox",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"pterodactyl.md": {
-  id: "pterodactyl.md",
+"pterodactyl.mdx": {
+  id: "pterodactyl.mdx",
   slug: "pterodactyl",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"rust.md": {
-  id: "rust.md",
+"rust.mdx": {
+  id: "rust.mdx",
   slug: "rust",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"strapi.md": {
-  id: "strapi.md",
+"strapi.mdx": {
+  id: "strapi.mdx",
   slug: "strapi",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"terraform.md": {
-  id: "terraform.md",
+"terraform.mdx": {
+  id: "terraform.mdx",
   slug: "terraform",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"traefik.md": {
-  id: "traefik.md",
+"traefik.mdx": {
+  id: "traefik.mdx",
   slug: "traefik",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"unity.md": {
-  id: "unity.md",
+"unity.mdx": {
+  id: "unity.mdx",
   slug: "unity",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"void.md": {
-  id: "void.md",
+"void.mdx": {
+  id: "void.mdx",
   slug: "void",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"watchtower.md": {
-  id: "watchtower.md",
+"watchtower.mdx": {
+  id: "watchtower.mdx",
   slug: "watchtower",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"webserver.md": {
-  id: "webserver.md",
+"webserver.mdx": {
+  id: "webserver.mdx",
   slug: "webserver",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"wireguard.md": {
-  id: "wireguard.md",
+"wireguard.mdx": {
+  id: "wireguard.mdx",
   slug: "wireguard",
   body: string,
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"zsh.md": {
-  id: "zsh.md",
+"zsh.mdx": {
+  id: "zsh.mdx",
   slug: "zsh",
   body: string,
   collection: "application",
@@ -306,8 +306,15 @@ declare module 'astro:content' {
 },
 },
 "gaming": {
-"lol.md": {
-  id: "lol.md",
+"df.mdx": {
+  id: "df.mdx",
+  slug: "df",
+  body: string,
+  collection: "gaming",
+  data: InferEntrySchema<"gaming">
+},
+"lol.mdx": {
+  id: "lol.mdx",
   slug: "lol",
   body: string,
   collection: "gaming",
@@ -385,6 +392,15 @@ declare module 'astro:content' {
   body: string,
   collection: "npc",
   data: any
+},
+},
+"play": {
+"wvn.mdx": {
+  id: "wvn.mdx",
+  slug: "wvn",
+  body: string,
+  collection: "play",
+  data: InferEntrySchema<"play">
 },
 },
 "releases": {
