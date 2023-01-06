@@ -65,7 +65,7 @@ tags:
               --metadata=startup-script=start_nginx_script.sh
               ```
 
-      - Key concept is : Managed instance groups (MIGs)
+      - Key concept is : Managed instance groups MIGs
         - Mage instance groups or MIGs enable you to operate applications on multiple identical / clone virtual machines, thus allowing your orchestration to become scalable and highly available. This is done by utilizing the components within the automated MIG services, which includes: autoscaling, autohealing, regional (multiple zone) deployment, and automatic updating.
     - Manage Instance Group for the load balancer:
 
@@ -116,9 +116,9 @@ tags:
 
             - Extra information regarding the URL Map:
                     *** Note: URL map is a Google Cloud configuration resource used to route requests to backend services or backend buckets. For example, with an external HTTP(S) load balancer, you can use a single URL map to route requests to different destinations based on the rules configured in the URL map:
-                        Requests for <https://example.com/video> go to one backend service.
-                        Requests for <https://example.com/audio> go to a different backend service.
-                        Requests for <https://example.com/images> go to a Cloud Storage backend bucket.
+                        Requests for [Video](https://example.com/video) go to one backend service.
+                        Requests for [Audio](https://example.com/audio) go to a different backend service.
+                        Requests for [Images](https://example.com/images) go to a Cloud Storage backend bucket.
                         Requests for any other host and path combination go to a default backend service.
             - Create a target HTTP proxy to route requests:
 
@@ -143,5 +143,5 @@ tags:
 
 Note: A forwarding rule and its corresponding IP address represent the frontend configuration of a Google Cloud load balancer. Learn more about the general understanding of forwarding rules from the Forwarding rule overview Guide.
 
-- [Using Forwarding Rules](https://cloud.google.com/load-balancing/docs/using-forwarding-rules)
-- [Rule Concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts)
+[Using Forwarding Rules](https://cloud.google.com/load-balancing/docs/using-forwarding-rules)
+[Rule Concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts)
