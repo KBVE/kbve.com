@@ -31,4 +31,5 @@ export default {
   
   //? External Plugins -> True
   extendPlugins: true,
+  gfm: true,
 };
