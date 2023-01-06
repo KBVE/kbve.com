@@ -89,6 +89,7 @@ const crypto = defineCollection({
 //?       {gaming}
 const gaming = defineCollection({
   schema: {
+    status: z.boolean().optional(),
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -264,7 +265,7 @@ export const collections = {
     //    media: media,
     //?       [TOOLS]
     //    tools: tools,
-    //    play: play,
+    play: play,
     website: website,
 
 }

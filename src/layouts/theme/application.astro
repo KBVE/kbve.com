@@ -6,38 +6,35 @@ import N from "@n/N.astro"; //?	{Namespace}:{N}
 const { content } = Astro.props; ///	[Astro Props]
 ---
 
-<div class="px-4 py-12 space-y-8">
-  <style>
-    .kbvehero {
-      padding: 8rem;
-      display: flex;
-      background-color: var(--t-fg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      min-height: 25vw;
-      color: white;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .kbvetext {
-      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-        -1px 1px 0 #000, 1px 1px 0 #000;
-    }
-  </style>
+<style>
+  .kbvehero {
+    padding: 8rem;
+    display: flex;
+    background-color: var(--t-fg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 25vw;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .kbvetext {
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+</style>
 
-  <div
-    style={{ backgroundImage: `url(${content.img})` }}
-    class="kbvehero rounded-full shadow-2xl hover:skew-y-6 transform-gpu duration-300"
-  >
-    <h1 class="title text-9xl kbvetext">{content.title}</h1>
-  </div>
+<div
+  style={{ backgroundImage: `url(${content.img})` }}
+  class="kbvehero rounded-full shadow-2xl hover:skew-y-6 transform-gpu duration-300"
+>
+  <h1 class="title text-9xl kbvetext">{content.title}</h1>
 </div>
 
 <N ns="ads" template="banner" id="ezoic" />
 
-<div class="px-4 py-8 space-y-1">
-  <div class="shadow-2xl p-4 bg-offset text-center rounded-3xl">
+  <div class="shadow-2xl p-4 space-y-1 bg-offset text-center rounded-3xl">
     {content.description}
   </div>
 
@@ -52,4 +49,3 @@ const { content } = Astro.props; ///	[Astro Props]
   </div>
 
   <N ns="ads" template="incontent" id="ezoic" />
-</div>

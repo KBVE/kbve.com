@@ -14,9 +14,9 @@ tags:
   - docker
 docker_compose: data/watchtower/docker-compose.yml
 ---
-<!-- 
+
 import Github from "@c/Action/Github/Github.astro";
-export const components = { github: Github }; -->
+export const components = { github: Github }; 
 
 ## Watchtower
 
@@ -24,14 +24,15 @@ export const components = { github: Github }; -->
 
 ## Install
 
-<!-- <Github
+<Github
   src="data/watchtower/docker-compose.yml"
   description="This is a docker compose we made."
-/> -->
+/> 
 
 ## Notifications
 
 Incase you need WatchTower to send Notifications, here is an example command that sets the environmental variables:
+
 
 ```shell
 docker run -d \
