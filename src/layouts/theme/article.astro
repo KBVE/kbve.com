@@ -18,17 +18,10 @@ const { content } = Astro.props;						///	[Astro Props]
 				align-items: center;
 				justify-content: center;
 			}
-			.kbvetext {
-				text-shadow:
-						3px 3px 0 #000,
-						-1px -1px 0 #000,  
-						1px -1px 0 #000,
-						-1px 1px 0 #000,
-						1px 1px 0 #000;
-			}
+
 		</style>
 		<div style={{ backgroundImage: `url(${content.img})` }} class="kbvehero rounded-full shadow-2xl hover:skew-y-6 transform-gpu duration-300">
-						<h1 class="title text-9xl kbvetext">{content.title}</h1>
+						<h1 class="title text-9xl text-shadow shadow-black">{content.title}</h1>
 		</div>
 	</div>
 
