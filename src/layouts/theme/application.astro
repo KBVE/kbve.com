@@ -1,9 +1,6 @@
 ---
-//?				{application}:mdx
-//?				[IMPORT]
-import N from "@n/N.astro"; //?	{Namespace}:{N}
-//?				[DATA]
-const { content } = Astro.props; ///	[Astro Props]
+import N from "@n/N.astro"; //?	[IMPORT]:{Namespace}
+const { content } = Astro.props; ///	[DATA]:[Astro Props]
 ---
 
 <div
@@ -22,19 +19,7 @@ const { content } = Astro.props; ///	[Astro Props]
 <div
   class="flex flex-wrap p-2 justify-center text-xs shadow-2xl bg-offset rounded-b-3xl"
 >
-  {
-    content.tags.slice(0, 3).map((tags) => (
-      <a
-        rel="noopener noreferrer"
-        href={`https://kbve.com/t/${tags}`}
-        class="inline-block text-2xl font-semibold sm:text-3xl"
-      >
-        <span class="m-1 p-2 text-xs rounded-full bg-orange-500">
-          #{tags}
-        </span>
-      </a>
-    ))
-  }
+  <N ns="badge" template="tags" data={content.tags} />
 </div>
 
 <div class="shadow-2xl mt-2 p-4 bg-offset rounded-3xl">
