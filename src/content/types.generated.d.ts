@@ -306,19 +306,19 @@ declare module 'astro:content' {
 },
 },
 "emoji": {
-"🏷️.mdx": {
-  id: "🏷️.mdx",
-  slug: "️",
-  body: string,
-  collection: "emoji",
-  data: any
-},
 "💩.mdx": {
   id: "💩.mdx",
   slug: "",
   body: string,
   collection: "emoji",
-  data: any
+  data: InferEntrySchema<"emoji">
+},
+"📺.mdx": {
+  id: "📺.mdx",
+  slug: "",
+  body: string,
+  collection: "emoji",
+  data: InferEntrySchema<"emoji">
 },
 },
 "gaming": {
