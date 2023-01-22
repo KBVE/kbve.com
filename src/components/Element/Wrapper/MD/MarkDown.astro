@@ -1,0 +1,10 @@
+---
+import N from "@n/N.astro";
+const { data } = Astro.props; //? {ASTRO}:Data
+---
+
+<div
+  class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
+>
+  <slot />
+</div>

@@ -238,7 +238,19 @@ const website = defineCollection({
   },
 });
 
-
+//?       {emoji}
+//!       [PLAN]
+// const emoji = defineCollection({
+//   schema: {
+//     status: z.boolean().optional(),
+//     title: z.string(),
+//     repo: z.string(),
+//     prod: z.string(),
+//     js: z.string(),
+//     css: z.boolean().optional(),
+//     foobar: z.string(),
+//    },
+// });
 
 //?       [COLLECTIONS]
 //*       Exporting out all of the {$} collections.
@@ -267,5 +279,6 @@ export const collections = {
     //    tools: tools,
     play: play,
     website: website,
+    //emoji: emoji,
 
 }

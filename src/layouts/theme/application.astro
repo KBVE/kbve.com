@@ -1,51 +1,33 @@
 ---
-//?				{application}:mdx
-//?				[IMPORT]
-import N from "@n/N.astro"; //?	{Namespace}:{N}
-//?				[DATA]
-const { content } = Astro.props; ///	[Astro Props]
+import N from "@n/N.astro"; //?	[IMPORT]:{Namespace}
+const { content } = Astro.props; ///	[DATA]:[Astro Props]
 ---
-
-<style>
-  .kbvehero {
-    padding: 8rem;
-    display: flex;
-    background-color: var(--t-fg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 25vw;
-    color: white;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .kbvetext {
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-      -1px 1px 0 #000, 1px 1px 0 #000;
-  }
-</style>
 
 <div
   style={{ backgroundImage: `url(${content.img})` }}
-  class="kbvehero rounded-full shadow-2xl hover:skew-y-6 transform-gpu duration-300"
+  class="bg-cover p-32 flex flex-col bg-no-repeat justify-center items-center"
 >
-  <h1 class="title text-9xl kbvetext">{content.title}</h1>
-</div>
-
-<N ns="ads" template="banner" id="ezoic" />
+  <h1 class="title text-9xl text-shadow shadow-black">{content.title}</h1>
 
   <div class="shadow-2xl p-4 space-y-1 bg-offset text-center rounded-3xl">
     {content.description}
   </div>
 
-  <N ns="ads" template="incontent" id="ezoic" />
+  <N ns="ads" template="banner" id="ezoic" />
+</div>
 
-  <div class="shadow-2xl p-4 bg-offset rounded-3xl">
-    <div
-      class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
-    >
-      <slot />
-    </div>
+<div
+  class="flex flex-wrap p-2 justify-center text-xs shadow-2xl bg-offset rounded-b-3xl"
+>
+  <N ns="badge" template="tags" data={content.tags} />
+</div>
+
+<div class="shadow-2xl mt-2 p-4 bg-offset rounded-3xl">
+  <div
+    class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
+  >
+    <slot />
   </div>
+</div>
 
-  <N ns="ads" template="incontent" id="ezoic" />
+<N ns="ads" template="incontent" id="ezoic" />
