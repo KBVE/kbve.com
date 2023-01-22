@@ -311,14 +311,14 @@ declare module 'astro:content' {
   slug: "",
   body: string,
   collection: "emoji",
-  data: InferEntrySchema<"emoji">
+  data: any
 },
 "📺.mdx": {
   id: "📺.mdx",
   slug: "",
   body: string,
   collection: "emoji",
-  data: InferEntrySchema<"emoji">
+  data: any
 },
 },
 "gaming": {
