@@ -1,9 +1,0 @@
----
-//*             [TagMap]
-//?             TagMap UX/UI Standard across the website.
-//?             [DATA]
-const { data }  = Astro.props;
----
-<div class="flex flex-wrap p-1 justify-center text-xs ">
-    {data.slice(0, 3).map((tags) =>	<a rel="noopener noreferrer" href={`https://kbve.com/t/${tags}`} class="inline-block text-2xl font-semibold sm:text-3xl"><span class="m-1 px-2 py-2 text-xs rounded-full bg-orange-500">#{tags}</span></a>)}  
-</div>

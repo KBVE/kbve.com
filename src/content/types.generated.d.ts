@@ -305,22 +305,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"crypto">
 },
 },
-"emoji": {
-"💩.mdx": {
-  id: "💩.mdx",
-  slug: "",
-  body: string,
-  collection: "emoji",
-  data: any
-},
-"📺.mdx": {
-  id: "📺.mdx",
-  slug: "",
-  body: string,
-  collection: "emoji",
-  data: any
-},
-},
 "gaming": {
 "df.mdx": {
   id: "df.mdx",
@@ -499,13 +483,6 @@ declare module 'astro:content' {
 "silver91.md": {
   id: "silver91.md",
   slug: "silver91",
-  body: string,
-  collection: "team",
-  data: InferEntrySchema<"team">
-},
-"ziggy9263.md": {
-  id: "ziggy9263.md",
-  slug: "ziggy9263",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">

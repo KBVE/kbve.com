@@ -19,9 +19,6 @@ import AssetScene from "@c/Scene/Assets/AssetController/AssetScene.astro";
 import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astro";
 //import BlogScene
 
-//?     [EXT]
-import MarkDown from "@c/Element/Wrapper/MD/MarkDown.astro";
-
 //?     [Components]    -> Needs to be migrated to our controller.
 import HubspotLiveChat from '@c/Action/HubspotLiveChat';
 import Calendly from '@c/Action/Calendly';
@@ -44,4 +41,3 @@ import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }
 {(template == "socials") && <KBVESocial />}
 {(template == "collections") && <Collections id={id} data={data} />}
-{(template == "md") && <MarkDown data={data} />}
