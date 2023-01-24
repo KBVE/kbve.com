@@ -8,5 +8,5 @@ ClientAliveInterval 420
 ClientAliveCountMax 2
 X11Forwarding no
 PasswordAuthentication no
-PublKeyAuthentication yes
+PubKeyAuthentication yes
 AuthorizedKeysFile .ssh/authorized_keys
