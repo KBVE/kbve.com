@@ -1,6 +1,0 @@
----
- - name: Using Visual Code Editor
-   hosts: localhost
-   tasks:
-     - debug:
-         msg: "Hello World"

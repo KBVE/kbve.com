@@ -14,7 +14,7 @@ if(id != '*')
 			<a rel="noopener noreferrer" href="#" class="text-sm font-semibold">{project.author}</a>
 			<span class="text-xs dark:text-gray-400">4 hours ago</span>
             <div class="flex justify-start p-1 space-x-2">
-                    {project.tags.slice(0,2).map((tags) =>	<a rel="noopener noreferrer" href={`https://kbve.com/t/${tags}`} class="inline-block text-2xl font-semibold sm:text-3xl"><span class="px-2 py-1 text-xs rounded-full bg-orange-500">#{tags}</span></a>)}
+                    {project.tag.slice(0,2).map((tags) =>	<a rel="noopener noreferrer" href={`https://kbve.com/t/${tags}`} class="inline-block text-2xl font-semibold sm:text-3xl"><span class="px-2 py-1 text-xs rounded-full bg-orange-500">#{tags}</span></a>)}
              </div>
 		</div>
         

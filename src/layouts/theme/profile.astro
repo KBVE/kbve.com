@@ -3,176 +3,110 @@
 //?             [TO:DO] : Migrates the Profile System to {N} Namespace.
 //?             [TO:DO] : {team} Collection Template Integration.
 ///             [IMPORTS]
-import Lottie from "@c/Element/Lottie/Lottie.astro"; /// [Lottie]    ->  [Int()]
-import Badge from "@c/Element/Badge/Badge.astro"; /// [Badge]     ->  [Display Member Badges]
-import Banner from "@c/Element/Banner/Banner.astro"; /// [Banner]    ->  [Display Banner]
+import Core from "@l/theme/core.astro";					                    ///	[IMPORT] -> [CORE]
+import SWUP from "@l/theme/swup.astro";					                    ///	[SWUP]
+import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// [Lottie]    ->  [Int()]
+import Badge from "@c/Element/Badge/Badge.astro";                           /// [Badge]     ->  [Display Member Badges]
+import Banner from "@c/Element/Banner/Banner.astro";                        /// [Banner]    ->  [Display Banner]
 import ProfileCard from "@c/Element/Profile/ProfileCard/ProfileCard.astro"; /// [Profile]   ->  [Profile Card]
 //?             [DATA]
-const { content } = Astro.props; ///	[Astro Props]
-let profileStyle =
-  "background-image: url('" +
-  content.img +
-  "'); background-position: center center; background-size: contain; background-repeat: no-repeat;";
+const { content } = Astro.props;						                    ///	[Astro Props]
+let profileStyle = "background-image: url('"+content.img+"'); background-position: center center; background-size: contain; background-repeat: no-repeat;";
 ---
-
-<!-- [BANNER] -->{
-  content.position == "staff" && <Banner bannerConcept="staff" />
-}
-
-<!-- [PROFILE]      ->      [START] -->
-<div class="px-4 py-12 space-y-8">
-  <section
-    class="bg-offset rounded-3xl py-4 dark:bg-gray-800 dark:text-gray-100"
-  >
-    <div class="container flex flex-col mx-auto lg:flex-row">
-      <div class="w-full lg:w-1/3" style={profileStyle}></div>
-
-      <div class="flex flex-col w-full p-6 lg:w-2/3 md:p-8 lg:p-12">
-        <!-- [Badges]   ->  [START]  -->
-        <div class="mt-8 container mx-auto flex items-center justify-around">
-          {content.admin && <Badge badgeRank="admin" />}
-          {content.moderator && <Badge badgeRank="mod" />}
-          {content.dev && <Badge badgeRank="dev" />}
+<Core content={content}>
+	<SWUP>
+        <!-- [MENU Space]   ->      [START] -->
+        <div class="px-4 py-12 space-y-8">
         </div>
-        <!-- [Badges]   ->  [END]  -->
+        <!-- [MENU Space]   ->      [END]   -->
+        
+        <!-- [BANNER] --> {(content.position == "staff") && <Banner bannerConcept="staff" />}
 
-        <h2 class="text-3xl font-semibold leading-none">
-          {content.username}'s Team Page
-        </h2>
-        <p class="mt-4 mb-8 text-sm">{content.description}</p>
-        <p class="mt-4 mb-8 gradient-text uppercase">
-          Bloodtype: {content.bloodtype}
-        </p>
-        <button
-          type="button"
-          class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded-3xl bg-orange-400 dark:text-gray-900"
-          >No Purpose Button
-          <span
-            class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-orange-400"
-            >Meme</span
-          >
-        </button>
-      </div>
-    </div>
-  </section>
-</div>
-<!-- [PROFILE]      ->      [END] -->
+        <!-- [PROFILE]      ->      [START] -->
+        <div class="px-4 py-12 space-y-8">
+            <section class="bg-offset rounded-3xl py-4 dark:bg-gray-800 dark:text-gray-100">
+                <div class="container flex flex-col mx-auto lg:flex-row">
 
-<!-- [LEGACY]       ->      [START] -->
-<div class="px-4 py-12 space-y-8">
-  <section class="dark:bg-gray-800 dark:text-gray-100 bg-offset rounded-3xl">
-    <div class="container flex flex-col-reverse mx-auto lg:flex-row">
-      <div
-        class="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-orange-400 dark:text-gray-900"
-      >
-        <div class="flex space-x-2 sm:space-x-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="flex-shrink-0 w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-            ></path>
-          </svg>
-          <div class="space-y-2">
-            <p class="text-lg font-medium leading-snug">
-              Lorem ipsum dolor sit amet
-            </p>
-            <p class="leading-snug">
-              Praesentium ea et neque distinctio quas eius repudiandae quaerat
-              obcaecati voluptatem similique!
-            </p>
-          </div>
-        </div>
-        <div class="flex space-x-2 sm:space-x-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="flex-shrink-0 w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-            ></path>
-          </svg>
-          <div class="space-y-2">
-            <p class="text-lg font-medium leading-snug">
-              Lorem ipsum dolor sit amet
-            </p>
-            <p class="leading-snug">
-              Praesentium ea et neque distinctio quas eius repudiandae quaerat
-              obcaecati voluptatem similique!
-            </p>
-          </div>
-        </div>
-        <div class="flex space-x-2 sm:space-x-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="flex-shrink-0 w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-            ></path>
-          </svg>
-          <div class="space-y-2">
-            <p class="text-lg font-medium leading-snug">
-              Lorem ipsum dolor sit amet
-            </p>
-            <p class="leading-snug">
-              Praesentium ea et neque distinctio quas eius repudiandae quaerat
-              obcaecati voluptatem similique!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/2 xl:w-3/5 dark:bg-gray-800">
-        <div class="flex items-center justify-center p-4 md:p-8 lg:p-12">
-          <Lottie json={content.lottie} />
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<!-- [LEGACY]       ->      [END]   -->
+                    <div class="w-full lg:w-1/3" style={profileStyle}></div>
+                    
+                    <div class="flex flex-col w-full p-6 lg:w-2/3 md:p-8 lg:p-12">
+            
+                        <!-- [Badges]   ->  [START]  -->
+                        <div class="mt-8 container mx-auto flex items-center justify-around">
+                            {content.admin && <Badge badgeRank="admin" />}
+                            {content.moderator && <Badge badgeRank="mod" />}  
+                            {content.dev && <Badge badgeRank="dev" />}   
+                        </div>
+                        <!-- [Badges]   ->  [END]  -->
 
-<!-- [FOOTER] -->
-<div class="px-4 py-12 space-y-8">
-  <section class="dark:bg-gray-800 dark:text-gray-100">
-    <div
-      class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between"
-    >
-      <div
-        class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 bg-offset rounded-3xl"
-      >
-        <Lottie json={content.lottiefooter} />
-      </div>
+                        <h2 class="text-3xl font-semibold leading-none">{content.username}'s Team Page</h2>
+                        <p class="mt-4 mb-8 text-sm">{content.description}</p>
+                        <p class="mt-4 mb-8 gradient-text uppercase">Bloodtype: {content.bloodtype}</p>
+                        <button type="button" class="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded-3xl bg-orange-400 dark:text-gray-900">No Purpose Button
+                            <span class="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-orange-400">Meme</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- [PROFILE]      ->      [END] -->
 
-      <div
-        class="flex flex-col justify-center p-6 text-center rounded-3xl lg:max-w-md xl:max-w-lg lg:text-left bg-offset"
-      >
-        <ProfileCard
-          imgur={content.img}
-          title={content.jobby}
-          twitter={content.twitter}
-          github={content.github}
-        />
-      </div>
-    </div>
-  </section>
-</div>
+        <!-- [LEGACY]       ->      [START] -->
+        <div class="px-4 py-12 space-y-8">
+        <section class="dark:bg-gray-800 dark:text-gray-100 bg-offset rounded-3xl">
+            <div class="container flex flex-col-reverse mx-auto lg:flex-row">
+                <div class="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-orange-400 dark:text-gray-900">
+                    <div class="flex space-x-2 sm:space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                        <div class="space-y-2">
+                            <p class="text-lg font-medium leading-snug">Lorem ipsum dolor sit amet</p>
+                            <p class="leading-snug">Praesentium ea et neque distinctio quas eius repudiandae quaerat obcaecati voluptatem similique!</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 sm:space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                        <div class="space-y-2">
+                            <p class="text-lg font-medium leading-snug">Lorem ipsum dolor sit amet</p>
+                            <p class="leading-snug">Praesentium ea et neque distinctio quas eius repudiandae quaerat obcaecati voluptatem similique!</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 sm:space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                        <div class="space-y-2">
+                            <p class="text-lg font-medium leading-snug">Lorem ipsum dolor sit amet</p>
+                            <p class="leading-snug">Praesentium ea et neque distinctio quas eius repudiandae quaerat obcaecati voluptatem similique!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 xl:w-3/5 dark:bg-gray-800">
+                    <div class="flex items-center justify-center p-4 md:p-8 lg:p-12">
+                        <Lottie json={content.lottie} />
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div> 
+        <!-- [LEGACY]       ->      [END]   -->
+
+        <!-- [FOOTER] -->
+        <div class="px-4 py-12 space-y-8">
+        <section class="dark:bg-gray-800 dark:text-gray-100">
+            <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 bg-offset rounded-3xl">
+                    <Lottie json={content.lottiefooter} />
+                </div>
+                
+                <div class="flex flex-col justify-center p-6 text-center rounded-3xl lg:max-w-md xl:max-w-lg lg:text-left bg-offset">
+                    <ProfileCard imgur={content.img} title={content.jobby} twitter={content.twitter} github={content.github} />
+                </div>
+            </div>
+        </section>
+        </div>
+    </SWUP>
+</Core>

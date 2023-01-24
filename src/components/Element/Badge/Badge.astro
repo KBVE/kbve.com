@@ -11,18 +11,19 @@ import Twitter from "./Social/Twitter.astro";
 import Discord from "./Social/Discord.astro";
 import YouTube from "./Social/YouTube.astro";
 import Twitch from "./Social/Twitch.astro";
-//?             [TAGS]
-import TagMap from "./Tag/TagMap.astro";
 //?             [DATA]
-const { content, badgeRank = "", element = "", data = "" } = Astro.props;
+const { 
+    content,
+    badgeRank = "",
+    element = "",
+    data = "",
+    } = Astro.props;
 ---
-
-{badgeRank == "admin" && <Admin />}
-{badgeRank == "mod" && <Mod />}
-{badgeRank == "dev" && <Dev />}
-{badgeRank == "github" && <Github />}
-{badgeRank == "twitter" && <Twitter />}
-{badgeRank == "discord" && <Discord />}
-{badgeRank == "youtube" && <YouTube />}
-{badgeRank == "twitch" && <Twitch />}
-{badgeRank == "tags" && data != "" && <TagMap data={data} />}
+{(badgeRank == "admin") && <Admin />}
+{(badgeRank == "mod") && <Mod />}
+{(badgeRank == "dev") && <Dev />}
+{(badgeRank == "github") && <Github />}
+{(badgeRank == "twitter") && <Twitter />}
+{(badgeRank == "discord") && <Discord />}
+{(badgeRank == "youtube") && <YouTube />}
+{(badgeRank == "twitch") && <Twitch />}
