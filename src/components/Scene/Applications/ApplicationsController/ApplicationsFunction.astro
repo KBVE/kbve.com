@@ -18,7 +18,7 @@ if(id != '*'){}
             <h3 class="flex-1 py-2 font-semibold leading-snug">{app.description}</h3>
             </a>
             <div class="flex flex-wrap p-1 justify-center text-xs ">
-                {app.tag.slice(0, 3).map((tags) =>	<a rel="noopener noreferrer" href={`https://kbve.com/t/${tags}`} class="inline-block text-2xl font-semibold sm:text-3xl"><span class="px-2 py-1 text-xs rounded-full bg-orange-500">#{tags}</span></a>)}  
+                {app.data.tags.slice(0, 3).map((tags) =>	<a rel="noopener noreferrer" href={`https://kbve.com/t/${tags}`} class="inline-block text-2xl font-semibold sm:text-3xl"><span class="px-2 py-1 text-xs rounded-full bg-orange-500">#{tags}</span></a>)}  
             </div>
         </div>
     </article>

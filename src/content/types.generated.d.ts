@@ -466,6 +466,13 @@ declare module 'astro:content' {
   collection: "team",
   data: InferEntrySchema<"team">
 },
+"keros.md": {
+  id: "keros.md",
+  slug: "keros",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
 "lvl21bellsprout.md": {
   id: "lvl21bellsprout.md",
   slug: "lvl21bellsprout",
@@ -483,6 +490,13 @@ declare module 'astro:content' {
 "silver91.md": {
   id: "silver91.md",
   slug: "silver91",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"ziggy9263.md": {
+  id: "ziggy9263.md",
+  slug: "ziggy9263",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
