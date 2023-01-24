@@ -1,8 +1,10 @@
 ---
 import N from "@n/N.astro";             //      [NameSpace]
-let _index = 32;                        //      [Index]
+let title = "KBVE Applications ToolBelt";
+let description = "Collection of Applications that KBVE utilizes within our toolbelt";
+
 ---
-<N ns="theme" title={"KBVE.com - Applications Toolbelt"} description={"Collection of Applications that KBVE utilizes within our toolbelt."}>
+<N ns="theme" title={title} description={description}>
   <N ns="banner" template="sale" />
   <N ns="controller" template="application" />
   <N ns="ads" template="midbanner" id="ezoic" />
