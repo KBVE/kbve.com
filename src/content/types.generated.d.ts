@@ -386,9 +386,16 @@ declare module 'astro:content' {
 },
 },
 "npc": {
-"lucifurr.md": {
-  id: "lucifurr.md",
-  slug: "lucifurr",
+"lucifurr/emotion/happy.md": {
+  id: "lucifurr/emotion/happy.md",
+  slug: "lucifurr/emotion/happy",
+  body: string,
+  collection: "npc",
+  data: any
+},
+"lucifurr/lucifurr.md": {
+  id: "lucifurr/lucifurr.md",
+  slug: "lucifurr/lucifurr",
   body: string,
   collection: "npc",
   data: any
