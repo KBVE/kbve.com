@@ -1,6 +1,6 @@
 ---
 ##TO-DO
-layout: ../../layouts/theme/application.astro
+layout: ../../layouts/theme/mdx.astro
 title: Nginx Configuration
 category: Application
 client: Self

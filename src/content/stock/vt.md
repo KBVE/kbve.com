@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/asset.astro
+layout: ../../layouts/theme/mdx.astro
 title: VG Total ETF
 sub_title: Vanguard Total World ETF
 category: Stock

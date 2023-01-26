@@ -10,10 +10,7 @@ const navItems = [
   { title: "Projects", url: "#projects" },
 ];
 ---
-<!-- <header
-  id="page-header"
-  class="absolute bottom-0 z-50 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
-> -->
+
 <header
   id="page-header"
   class="fixed-header absolute top-0 z-50 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
@@ -88,7 +85,7 @@ const navItems = [
 
   const menuModalId = "menu-modal";
 
-  const header: HTMLElement = document.querySelector("#page-header");
+  const header = document.querySelector("#page-header");
   const page = document.documentElement;
   const menu = document.querySelector(`#${menuModalId} ul`);
   const openNavButton = document.querySelector("#open-nav-button");
@@ -102,15 +99,12 @@ const navItems = [
     MicroModal.close(menuModalId);
   };
 
-  openNavButton.addEventListener("click", openMenu);
-  closeNavButton.addEventListener("click", closeMenu);
+  openNavButton?.addEventListener("click", openMenu);
+  closeNavButton?.addEventListener("click", closeMenu);
 
-  // document.addEventListener("scroll", () => {
-  //   const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-  //   header.classList.toggle("fixed-header", d < 0);
-  // });
 
-  menu.addEventListener("click", (event) => {
+
+  menu?.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {
       closeMenu();
     }

@@ -1,17 +1,13 @@
 ---
 import Core from "@l/theme/core.astro";			                                                ///	[IMPORT]        ->  [CORE]
-import SWUP from "@l/theme/swup.astro";			                                                ///	[SWUP]          ->  Currently facing {hydration} issues #102
 
 import ReactUnity from "@c/Element/React/ReactUnity/FlexWindow/FlexWindow.astro";               /// {ReactUnity}    ->  Component for WVN2022
 
-import LottieInt from "@c/Element/Lottie/LottieInt/LottieInt.astro";                            /// [Lottie]        ->  {Int()}
-import Lottie from "@c/Element/Lottie/Lottie.astro";                                            /// [Lottie]        ->  {Loop()->Constant}  -> {CPU_USAGE_WARNING!}
 
 const data = {                                                                                  /// {data}
 	title: "KBVE.com - Winter Visual Novel 2022", description: "KBVE GameJam for Winter Visual Novel 2022!"}	
 const { content = data } = Astro.props;
 
-import ProfileCard from "@c/Element/Profile/ProfileCard/ProfileCard.astro";                     /// [Profile]
 ---
 <Core content={content}>
     <div class="flex gap-2 flex-nowrap">

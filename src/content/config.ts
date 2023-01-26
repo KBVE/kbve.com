@@ -7,16 +7,16 @@ import { z, defineCollection } from 'astro:content';
 //?       {release} - Official release documentation for the website
 //!       [MIGRATION] - This is slated to be migrated out of the collection but kept inside until v2
 const releases = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     version: z.number(),
-  },
+  }),
 });
 
 //?       {legal} - Collection of all <LEGAL> documents within the KBVE organization.
 //TODO    tos.md - Terms of Services - https://github.com/KBVE/kbve.com/issues/249
 const legal = defineCollection({
-  schema: {
+  schema: z.object({
     id: z.string(),
     title: z.string(),
     description: z.string(),
@@ -27,13 +27,13 @@ const legal = defineCollection({
     img: z.string().default(''),
     date: z.string(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 
 //?       {application} - alias of {app} - Collection of all <APPLICATION> notes, documents and references.
 const application = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -42,7 +42,7 @@ const application = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //*       [ASSET]
@@ -52,7 +52,7 @@ const application = defineCollection({
 //?       {stock}
 //!       [MIGRATION] - Currently the stock collection is limited to {.md} files, as {.mdx} / Markdown JS is throwing a large range of errors as of Astro 1.7.1.
 const stock = defineCollection({
-  schema: {
+  schema: z.object({
     ticker: z.string(),
     title: z.string(),
     description: z.string(),
@@ -65,12 +65,12 @@ const stock = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {crypto}
 const crypto = defineCollection({
-  schema: {
+  schema: z.object({
     ticker: z.string(),
     title: z.string(),
     description: z.string(),
@@ -83,12 +83,12 @@ const crypto = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {gaming}
 const gaming = defineCollection({
-  schema: {
+  schema: z.object({
     status: z.boolean().optional(),
     title: z.string(),
     description: z.string(),
@@ -98,12 +98,12 @@ const gaming = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {journal}
 const journal = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -112,13 +112,13 @@ const journal = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {security}
 
 const security = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -127,12 +127,12 @@ const security = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {news}
 const news = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -141,7 +141,7 @@ const news = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //!       [PROFILE]
@@ -151,7 +151,7 @@ const news = defineCollection({
 
 //?       {team}
 const team = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -160,12 +160,12 @@ const team = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {theory}
 const theory = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -175,12 +175,12 @@ const theory = defineCollection({
     date: z.string().optional(),
     url: z.string().optional(),
     ref: z.string().optional(),
-  },
+  }),
 });
 
 //?       {media}
 const media = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
@@ -189,13 +189,13 @@ const media = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {tools}
 //?       :var:status - There might be issues with how the status boolean will be handled. We can manually handle it via the markdown file OR we can use a global list.       
 const tools = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     status: z.boolean().optional(),
     description: z.string(),
@@ -205,13 +205,13 @@ const tools = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {play}
 //!       [PLAN] MD Configurations for Unity Games
 const play = defineCollection({
-  schema: {
+  schema: z.object({
     title: z.string(),
     status: z.boolean().optional(),
     description: z.string(),
@@ -221,13 +221,13 @@ const play = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-  },
+  }),
 });
 
 //?       {website}
 //!       [PLAN] MD Configurations for <Website>
 const website = defineCollection({
-  schema: {
+  schema: z.object({
     status: z.boolean().optional(),
     title: z.string(),
     description: z.string(),
@@ -235,7 +235,7 @@ const website = defineCollection({
     icon: z.string(),
     target: z.boolean().optional(),
     tags: z.array(z.string()),
-  },
+  }),
 });
 
 
