@@ -1,8 +1,8 @@
 ---
 //import _ from "lodash";
 const { id, data }   = Astro.props;
-import { getEntry } from 'astro:content';
-const eula = await getEntry('legal', 'eula.md');
+import { getEntryBySlug } from 'astro:content';
+const eula = await getEntryBySlug('legal', 'eula.md');
 const { Content } = await eula.render();
 ---
 

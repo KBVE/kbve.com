@@ -1,9 +1,9 @@
 ---
+import N from "@c/Namespace/N.astro";
 import ReactUnity from "@c/Element/React/ReactUnity/ReactUnity.astro";
-import ProjectTheme from "@l/theme/project.astro";
-const data = {
-	title: "Play RogueJester Now!", description: "Have fun xD", img: "https://images.unsplash.com/photo-1603994236406-bf7f71dc361e?fit=crop&w=1400&h=700&q=75"}
+let title = "Play RogueJester Now!";
+let description = "Have fun xD";
 ---
-<ProjectTheme content={data}>
+<N title={title} description={description}>
 <ReactUnity id="rj" />
-</ProjectTheme>
+</N>

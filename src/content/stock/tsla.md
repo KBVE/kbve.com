@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/asset.astro
+layout: ../../layouts/theme/mdx.astro
 title: TSLA
 ticker: tsla
 dividend: false

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/security.astro
+layout: ../../layouts/theme/mdx.astro
 title: XSS
 category: Security
 client: Self

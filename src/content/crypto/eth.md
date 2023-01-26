@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/crypto.astro
+layout: ../../layouts/theme/mdx.astro
 title: Ethereum
 ticker: eth
 exchange: COINBASE
