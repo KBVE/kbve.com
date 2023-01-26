@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/news.astro
+layout: ../../layouts/theme/mdx.astro
 title: Rigor Release
 category: News
 client: Self

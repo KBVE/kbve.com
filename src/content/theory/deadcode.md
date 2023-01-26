@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/article.astro
+layout: ../../layouts/theme/mdx.astro
 title: DeadCode
 client: Self
 publishDate: 2022-10-02 00:00:00

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/journal.astro
+layout: ../../layouts/theme/mdx.astro
 title: Visual Novel DevLog
 
 category: Gaming

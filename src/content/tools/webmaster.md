@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/tools.astro
+layout: ../../layouts/theme/mdx.astro
 title: WebMaster Tools
 category: Tools
 client: Self

@@ -146,8 +146,6 @@ const navItems = [
   import MicroModal from "micromodal";
 
   const menuModalId = "menu-modal";
-  //const header: HTMLElement = document.querySelector("#page-header");
-  //const page = document.documentElement;
   const menu = document.querySelector(`#${menuModalId} ul`);
   const openNavButton = document.querySelector("#open-nav-button");
   const closeNavButton = document.querySelector("#close-nav-button");
@@ -160,15 +158,11 @@ const navItems = [
     MicroModal.close(menuModalId);
   };
 
-  openNavButton.addEventListener("click", openMenu);
-  closeNavButton.addEventListener("click", closeMenu);
+  openNavButton?.addEventListener("click", openMenu);
+  closeNavButton?.addEventListener("click", closeMenu);
 
-  // document.addEventListener("scroll", () => {
-  //   const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-  //   header.classList.toggle("fixed-header", d < 0);
-  // });
 
-  menu.addEventListener("click", (event) => {
+  menu?.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {
       closeMenu();
     }
@@ -188,10 +182,10 @@ const navItems = [
     MicroModal.close(menuShacoModalId);
   };
 
-  openShacoBox.addEventListener("click", openShaco);
-  closeShacoBox.addEventListener("click", closeShaco);
+  openShacoBox?.addEventListener("click", openShaco);
+  closeShacoBox?.addEventListener("click", closeShaco);
 
-  menuShaco.addEventListener("click", (event) => {
+  menuShaco?.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {
       closeShaco();
     }
@@ -212,10 +206,10 @@ const navItems = [
     MicroModal.close(menuGearModalId);
   };
 
-  openGearBox.addEventListener("click", openGear);
-  closeGearBox.addEventListener("click", closeGear);
+  openGearBox?.addEventListener("click", openGear);
+  closeGearBox?.addEventListener("click", closeGear);
 
-  menuGear.addEventListener("click", (event) => {
+  menuGear?.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {
       closeGear();
     }
