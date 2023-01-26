@@ -1,0 +1,46 @@
+---
+import LottieInt from "@c/Element/Lottie/LottieInt/LottieInt.astro";        /// [Lottie]    ->  [Int()]
+---
+<div class="grid grid-cols-4 gap-2 pt-8 pb-4">
+    
+  <div class="bg-offset rounded-3xl">
+    <LottieInt className="place-content-center justify-center " id="lizard" mode="scroll" action={[
+        {
+          visibility: [0, 1],
+          type: 'seek',
+          frames: [0, 180], 
+        },
+        ]} name="test" json="https://assets7.lottiefiles.com/private_files/lf30_atgamnvp.json"  width="100%" />
+  </div>
+     
+  <div class="bg-offset rounded-3xl">  
+    <LottieInt className="place-content-center justify-center " id="omonkey" mode="scroll" action={[
+          {
+            visibility: [0, 1],
+            type: 'seek',
+            frames: [0, 150], 
+          },
+          ]} name="test" json="https://assets8.lottiefiles.com/packages/lf20_bburfggv.json"  width="100%" />
+  </div>
+    
+  <div class="bg-offset rounded-3xl">
+    <LottieInt className="place-content-center justify-center " id="cafe" mode="scroll" action={[
+              {
+                visibility: [0, 1],
+                type: 'seek',
+                frames: [0, 180], 
+              },
+              ]} name="test" json="https://assets8.lottiefiles.com/packages/lf20_xkbhgbld.json"  width="100%" />
+  </div>
+        
+  <div class="bg-offset rounded-3xl">
+    <LottieInt className="place-content-center justify-center " id="cat" mode="scroll" action={[
+            {
+              visibility: [0, 1],
+              type: 'seek',
+              frames: [0, 350], 
+            },
+            ]} name="test" json="https://assets9.lottiefiles.com/packages/lf20_nivsnvgo.json"  width="100%" />
+  </div>
+
+</div>

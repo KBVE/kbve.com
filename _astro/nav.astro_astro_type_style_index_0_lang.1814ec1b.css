@@ -1,0 +1,1 @@
+.fixed-header:where(.astro-WAO4PHWP){position:fixed;top:0;bottom:auto;border-color:var(--color-border);background-color:var(--color-background);color:var(--color-text)}.modal:where(.astro-WAO4PHWP).is-open{display:block}
