@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/tools.astro
+layout: ../../layouts/theme/mdx.astro
 title: KBVE Status Page
 category: Tools
 client: Self

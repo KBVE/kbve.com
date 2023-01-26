@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/journal.astro
+layout: ../../layouts/theme/mdx.astro
 title: RogueJester Dev Log
 category: Gaming
 client: Self

@@ -1,0 +1,25 @@
+---
+import N from "@n/N.astro"; //?	{Namespace}:{N}
+const { content } = Astro.props; ///	[Astro Props]
+---
+
+<div
+  style={{ backgroundImage: `url(${content.img})` }}
+  class="object-cover flex justify-center items-center flex-col shadow-2xl p-32 min-h-[15%]"
+>
+  <h1 class="title text-9xl text-shadow-lg shadow-black">{content.title}</h1>
+</div>
+<div class="shadow-2xl p-4 bg-offset text-center rounded-b-3xl">
+  {content.description}
+</div>
+
+<N ns="ads" template="banner" id="ezoic" />
+
+
+<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+  <div
+    class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
+  >
+    <slot />
+  </div>
+</div>

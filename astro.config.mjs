@@ -19,7 +19,7 @@ import markdownConfig from './markdown.config'
 //?   Reference https://kbve.com/application/javascript/#tailwindcss
 import tailwind from "@astrojs/tailwind";
 
-//*   [AplineJS]:[AstroJS]
+//*   [AlpineJS]:[AstroJS]
 //?   Reference https://kbve.com/application/javascript/#alphinejs
 import alpinejs from "@astrojs/alpinejs";
 
@@ -30,10 +30,10 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
 
   // Experimental
-  experimental: {
-    contentCollections: true,
-  },
-  site: "https://kbve.com",
+  // experimental: {
+  //   contentCollections: true,
+  // },
+  site: "https://kbve.com/",
   markdown: markdownConfig,
   integrations: [
   // preact({

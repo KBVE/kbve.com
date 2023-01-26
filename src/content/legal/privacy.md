@@ -1,6 +1,6 @@
 ---
 url: https://kbve.com/legal/privacy/
-layout: ../../layouts/theme/legal.astro
+layout: ../../layouts/theme/mdx.astro
 title: Privacy Policy
 version: 1
 status: true

@@ -3,14 +3,14 @@
 ///         [MambaArticle]          -   {Astro}
 
 const { id = "", 
-        articleClass = "", 
+        //articleClass = "", 
         articleJSON = "",  
         articleTemplate = "",
-        articleMD = "",
+        //articleMD = "",
     } = Astro.props;
 
 import _ from "lodash";
-let data, articleData;
+let data, articleData = "";
 
 if(articleJSON != "")
 {

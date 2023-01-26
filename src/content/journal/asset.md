@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/journal.astro
+layout: ../../layouts/theme/mdx.astro
 title: Asset Dev Log
 category: Core
 client: Self
