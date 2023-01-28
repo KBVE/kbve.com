@@ -136,9 +136,6 @@
     "files.exclude": {
       "public/archive": false,
     },
-    "files.associations": {
-      "*.mdx": "markdown"
-    },
     "editor.codeActionsOnSave": {
         "source.fixAll": false,
         "source.organizeImports": false        

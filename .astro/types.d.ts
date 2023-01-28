@@ -140,8 +140,8 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"kubernetes.md": {
-  id: "kubernetes.md",
+"kubernetes.mdx": {
+  id: "kubernetes.mdx",
   slug: "kubernetes",
   body: string,
   collection: "application",
