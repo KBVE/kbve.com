@@ -231,7 +231,6 @@ const website = defineCollection({
     status: z.boolean().optional(),
     title: z.string(),
     description: z.string(),
-    href: z.string(),
     icon: z.string(),
     target: z.boolean().optional(),
     tags: z.array(z.string()),
