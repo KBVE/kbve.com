@@ -231,10 +231,25 @@ const website = defineCollection({
     status: z.boolean().optional(),
     title: z.string(),
     description: z.string(),
-    href: z.string(),
     icon: z.string(),
     target: z.boolean().optional(),
     tags: z.array(z.string()),
+  }),
+});
+
+//?       {project}
+//!       [PLAN] MD Configurations for <Project>
+const project = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    status: z.boolean().optional(),
+    description: z.string(),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    img: z.string().default(''),
+    date: z.string().optional(),
+    url: z.string().optional(),
   }),
 });
 
@@ -267,5 +282,6 @@ export const collections = {
     //    tools: tools,
     play: play,
     website: website,
+    //asset: [stock, crypto],
 
 }
