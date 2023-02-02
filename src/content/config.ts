@@ -282,5 +282,6 @@ export const collections = {
     //    tools: tools,
     play: play,
     website: website,
+    //asset: [stock, crypto],
 
 }
