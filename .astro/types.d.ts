@@ -44,9 +44,13 @@ declare module 'astro:content' {
 	): E extends ValidEntrySlug<C>
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
+	export function getCollection<C extends keyof typeof entryMap, E extends CollectionEntry<C>>(
+		collection: C,
+		filter?: (entry: CollectionEntry<C>) => entry is E
+	): Promise<E[]>;
 	export function getCollection<C extends keyof typeof entryMap>(
 		collection: C,
-		filter?: (data: CollectionEntry<C>) => boolean
+		filter?: (entry: CollectionEntry<C>) => unknown
 	): Promise<CollectionEntry<C>[]>;
 
 	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
@@ -140,8 +144,8 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"kubernetes.mdx": {
-  id: "kubernetes.mdx",
+"kubernetes.md": {
+  id: "kubernetes.md",
   slug: "kubernetes",
   body: string,
   collection: "application",
@@ -439,6 +443,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"play">
 },
 },
+"project": {
+"api.mdx": {
+  id: "api.mdx",
+  slug: "api",
+  body: string,
+  collection: "project",
+  data: any
+},
+"discord-sh.mdx": {
+  id: "discord-sh.mdx",
+  slug: "discord-sh",
+  body: string,
+  collection: "project",
+  data: any
+},
+},
 "releases": {
 "1.md": {
   id: "1.md",
@@ -585,86 +605,16 @@ declare module 'astro:content' {
 },
 },
 "website": {
-"footer/applications.md": {
-  id: "footer/applications.md",
-  slug: "footer/applications",
+"about.mdx": {
+  id: "about.mdx",
+  slug: "about",
   body: string,
   collection: "website",
   data: InferEntrySchema<"website">
 },
-"footer/assets.md": {
-  id: "footer/assets.md",
-  slug: "footer/assets",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/contact.md": {
-  id: "footer/contact.md",
-  slug: "footer/contact",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/legal.md": {
-  id: "footer/legal.md",
-  slug: "footer/legal",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/login.md": {
-  id: "footer/login.md",
-  slug: "footer/login",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/privacy.md": {
-  id: "footer/privacy.md",
-  slug: "footer/privacy",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/profile.md": {
-  id: "footer/profile.md",
-  slug: "footer/profile",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/projects.md": {
-  id: "footer/projects.md",
-  slug: "footer/projects",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/register.md": {
-  id: "footer/register.md",
-  slug: "footer/register",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/shop.md": {
-  id: "footer/shop.md",
-  slug: "footer/shop",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/support.md": {
-  id: "footer/support.md",
-  slug: "footer/support",
-  body: string,
-  collection: "website",
-  data: InferEntrySchema<"website">
-},
-"footer/terms.md": {
-  id: "footer/terms.md",
-  slug: "footer/terms",
+"c.mdx": {
+  id: "c.mdx",
+  slug: "c",
   body: string,
   collection: "website",
   data: InferEntrySchema<"website">
