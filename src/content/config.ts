@@ -237,6 +237,22 @@ const website = defineCollection({
   }),
 });
 
+//?       {project}
+//!       [PLAN] MD Configurations for <Project>
+const project = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    status: z.boolean().optional(),
+    description: z.string(),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    img: z.string().default(''),
+    date: z.string().optional(),
+    url: z.string().optional(),
+  }),
+});
+
 
 
 //?       [COLLECTIONS]

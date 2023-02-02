@@ -443,6 +443,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"play">
 },
 },
+"project": {
+"api.mdx": {
+  id: "api.mdx",
+  slug: "api",
+  body: string,
+  collection: "project",
+  data: any
+},
+"discord-sh.mdx": {
+  id: "discord-sh.mdx",
+  slug: "discord-sh",
+  body: string,
+  collection: "project",
+  data: any
+},
+},
 "releases": {
 "1.md": {
   id: "1.md",
