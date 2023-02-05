@@ -478,29 +478,29 @@ declare module 'astro:content' {
 },
 },
 "stock": {
-"aapl.md": {
-  id: "aapl.md",
+"aapl.mdx": {
+  id: "aapl.mdx",
   slug: "aapl",
   body: string,
   collection: "stock",
   data: InferEntrySchema<"stock">
 },
-"spy.md": {
-  id: "spy.md",
+"spy.mdx": {
+  id: "spy.mdx",
   slug: "spy",
   body: string,
   collection: "stock",
   data: InferEntrySchema<"stock">
 },
-"tsla.md": {
-  id: "tsla.md",
+"tsla.mdx": {
+  id: "tsla.mdx",
   slug: "tsla",
   body: string,
   collection: "stock",
   data: InferEntrySchema<"stock">
 },
-"vt.md": {
-  id: "vt.md",
+"vt.mdx": {
+  id: "vt.mdx",
   slug: "vt",
   body: string,
   collection: "stock",
