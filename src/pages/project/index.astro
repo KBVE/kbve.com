@@ -9,9 +9,9 @@ const projectEntries = await getCollection("project");
     <section class="py-6 sm:py-12">
         <div class="container p-6 mx-auto space-y-8">
           <div class="rounded-full space-y-2 text-center bg-offset p-4">
-            <h2 class="text-3xl font-bold">Application Toolbelt</h2>
+            <h2 class="text-3xl font-bold">Project Collection</h2>
             <p class="font-serif text-sm dark:text-gray-400">
-              Collection of all the applications within the staff's toolbelt.
+              Collection of all the projects that we work on at KBVE.
             </p>
           </div>
     
@@ -33,7 +33,7 @@ const projectEntries = await getCollection("project");
                           <div class="-space-y-1">
                             <a
                               rel="noopener noreferrer"
-                              href={`https://kbve.com/application/${project.slug}`}
+                              href={`https://kbve.com/project/${project.slug}`}
                               aria-label=""
                             >
                               <h2 class="text-lg gradient-text font-semibold leading-none">
@@ -62,7 +62,7 @@ const projectEntries = await getCollection("project");
                       >
                         <a
                           rel="noopener noreferrer"
-                          href={`https://kbve.com/application/${project.slug}`}
+                          href={`https://kbve.com/project/${project.slug}`}
                           aria-label=""
                         >
                           <h1 class="title text-lg text-shadow-xl shadow-black bg-offset p-3 rounded-lg items-center line-clamp-1">
@@ -172,7 +172,7 @@ const projectEntries = await getCollection("project");
                             <span class="text-base font-semibold" />
                             <a
                               rel="noopener noreferrer"
-                              href={`https://kbve.com/application/${project.slug}`}
+                              href={`https://kbve.com/project/${project.slug}`}
                               aria-label=""
                             >
                               <span class="indent-px text-sm line-clamp-4">
