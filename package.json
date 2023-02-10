@@ -1,6 +1,6 @@
 {
-  "name": "@example/portfolio",
-  "version": "0.0.1",
+  "name": "@kbve/kbve.com",
+  "version": "0.99.8",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "sync": "astro sync",
-    "hamstring": "astro build; astro preview"
+    "hamstring": "astro check",
+    "kbve": "astro sync && astro build && astro preview"
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.14.0",
@@ -18,9 +19,10 @@
     "@astrojs/sitemap": "^1.0.0",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
-    "astro": "^2.0.1",
-    "astro-compress": "1.0.6",
-    "sass": "^1.52.2"
+    "astro": "^2.0.10",
+    "astro-compress": "1.1.32",
+    "sass": "^1.52.2",
+    "svgo": "2.8.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
