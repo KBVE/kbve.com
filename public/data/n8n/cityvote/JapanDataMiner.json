@@ -1,0 +1,160 @@
+{
+  "name": "JapanDataMiner",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "08073008-b66a-46cf-ac68-8b9651104f43",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "",
+        "options": {}
+      },
+      "id": "967ac0f6-8330-413e-bc8b-76e977f0c38d",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -20,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "extractionValues": {
+          "values": [
+            {
+              "key": "listing",
+              "cssSelector": "div.listing",
+              "returnValue": "html"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": false
+        }
+      },
+      "id": "8b4b6afc-06f7-4260-96d3-449d37b2bde3",
+      "name": "HTML Extract",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        200,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "listing",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "data",
+              "cssSelector": "div.row",
+              "returnValue": "html",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {
+          "trimValues": false
+        }
+      },
+      "id": "635973bc-3c77-4d97-a48e-4882c864275e",
+      "name": "Isolate Listing",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        420,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "webhookUri": "",
+        "text": "={{ $json[\"data\"][\"1\"] }}",
+        "options": {}
+      },
+      "id": "bcb26bca-66c8-4dcb-85ff-29361f412fcd",
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        900,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "html": "={{ $json[\"data\"] }}",
+        "options": {
+          "strongDelimiter": "**"
+        }
+      },
+      "id": "4b6a523d-c9ee-4f18-92b2-f8cd11a4a008",
+      "name": "Markdown",
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        620,
+        420
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTML Extract",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML Extract": {
+      "main": [
+        [
+          {
+            "node": "Isolate Listing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Isolate Listing": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "eaf62a0e-f8f4-4ddd-bcc6-9ad3391b528e",
+  "id": "4",
+  "meta": {
+    "instanceId": "290edf19075c573c46d8641c39432c3840460ddf29e6f748ee54a95aeeb3ed59"
+  },
+  "tags": []
+}
