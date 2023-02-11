@@ -1,6 +1,6 @@
 ---
 import { generateImage } from "astro-eleventy-img";
-import { Icon } from "astro-icon";
+//import { Icon } from "astro-icon";
 import Starfield from "@c/Element/Background/Starfield/starfield.astro";
 //import Galaxia from "@c/Element/Background/Starfield/galaxia.astro";
 //import HeroImage from "@c/Element/Picture/HeroImage/hero-image.astro";
@@ -11,11 +11,11 @@ import KBVELogo from "@c/Branding/KBVELogo";
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 
-const { webp, avif, png } = generateImage("src/assets/suss.png", {
+const { webp, avif, png } = generateImage("src/assets/spellbook.png", {
   widths,
   formats: ["webp", "avif", "png"],
-  outputDir: "public/assets/images/suss",
-  urlPath: "/assets/images/suss",
+  outputDir: "public/assets/images/spellbook",
+  urlPath: "/assets/images/spellbook",
 });
 
 const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
