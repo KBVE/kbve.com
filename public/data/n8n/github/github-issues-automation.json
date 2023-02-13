@@ -1,0 +1,202 @@
+{
+  "name": "KBVE.com Git Issues Public",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "appToken",
+        "resource": "ticket",
+        "pipelineId": "0",
+        "stageId": "1",
+        "ticketName": "=GH # {{ $json[\"body\"][\"issue\"][\"url\"].substring($json[\"body\"][\"issue\"][\"url\"].lastIndexOf('/') + 1) }}",
+        "additionalFields": {
+          "associatedCompanyIds": [
+            7101067111
+          ],
+          "category": "PRODUCT_ISSUE",
+          "description": "=Information Found Here: {{ $json[\"body\"][\"issue\"][\"html_url\"] }}"
+        }
+      },
+      "id": "9a7abd91-8ab4-42ca-a225-67594d34a332",
+      "name": "HubSpot",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        -1100,
+        520
+      ],
+      "credentials": {
+        "hubspotAppToken": {
+          "id": "3",
+          "name": "HubSpot App Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "createComment",
+        "owner": "={{ $node[\"Github Trigger\"].json[\"body\"][\"repository\"][\"owner\"][\"login\"] }}",
+        "repository": "={{ $node[\"Github Trigger\"].json[\"body\"][\"repository\"][\"name\"] }}",
+        "issueNumber": "={{ $node[\"Github Trigger\"].json[\"body\"][\"issue\"][\"number\"] }}",
+        "body": "=Automating Tasker\n* * *\n[KBVE Support](https://kbve.com/support/)\n* * *\n[HubSpot Ticket Created](https://app.hubspot.com/contacts/{{ $json[\"portalId\"] }}/ticket/{{ $json[\"objectId\"] }})\n* * *"
+      },
+      "id": "40e13cd2-368e-4162-9518-b1caf99d6f13",
+      "name": "InitGIthub",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        -920,
+        280
+      ],
+      "credentials": {
+        "githubApi": {
+          "id": "4",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "id": "c6062f1a-ec2c-45fc-a139-e3cdec7b2912",
+      "name": "Grafana",
+      "type": "n8n-nodes-base.grafana",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        640
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "team": "9006032826",
+        "space": "90060076415",
+        "folder": "90060240772",
+        "list": "900600470368",
+        "name": "={{ $json[\"properties\"][\"subject\"][\"versions\"][\"0\"][\"value\"] }}",
+        "additionalFields": {
+          "assignees": [
+            57164563
+          ],
+          "content": "={{ $json[\"properties\"][\"content\"][\"versions\"][\"0\"][\"value\"] }}\n* * *\nHubspot Ticket : [HubSpot Ticket Created](https://app.hubspot.com/contacts/{{ $json[\"portalId\"] }}/ticket/{{ $json[\"objectId\"] }})\n",
+          "markdownContent": true,
+          "status": "to do"
+        }
+      },
+      "id": "016872a1-3488-481a-84b4-eb8ae19d0127",
+      "name": "ClickUp",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -920,
+        520
+      ],
+      "credentials": {
+        "clickUpApi": {
+          "id": "6",
+          "name": "ClickUp KBVE"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "components": "setT"
+        }
+      },
+      "id": "a6c8f6fd-ac8f-4b2e-8943-e1d25ed3e91b",
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        400
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "owner": "kbve",
+        "repository": "kbve.com",
+        "events": [
+          "issues"
+        ]
+      },
+      "id": "a103d783-66e6-4236-b1ae-265935e8bdfd",
+      "name": "Github Trigger",
+      "type": "n8n-nodes-base.githubTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1280,
+        520
+      ],
+      "webhookId": "c969ab27-b7a6-4c83-a22b-58eb8fe41135",
+      "credentials": {
+        "githubApi": {
+          "id": "4",
+          "name": "GitHub account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "InitGIthub": {
+      "main": [
+        []
+      ]
+    },
+    "HubSpot": {
+      "main": [
+        [
+          {
+            "node": "InitGIthub",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ClickUp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Grafana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Github Trigger": {
+      "main": [
+        [
+          {
+            "node": "HubSpot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "3ad946b4-1adb-46dd-adb8-857b26846ab6",
+  "id": "7",
+  "meta": {
+    "instanceId": "290edf19075c573c46d8641c39432c3840460ddf29e6f748ee54a95aeeb3ed59"
+  },
+  "tags": []
+}
