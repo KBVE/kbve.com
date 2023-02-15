@@ -306,6 +306,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"application">
 },
 },
+"blog": {
+"theorycraft.mdx": {
+  id: "theorycraft.mdx",
+  slug: "theorycraft",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+},
+},
 "config": {
 "nginx.md": {
   id: "nginx.md",
