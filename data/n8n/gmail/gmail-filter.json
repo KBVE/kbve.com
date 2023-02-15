@@ -1,0 +1,140 @@
+{
+  "name": "Gmail Filter",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "filters": {}
+      },
+      "id": "bc6ca540-105c-4d20-9179-f7c226aee984",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1,
+      "position": [
+        140,
+        860
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "messageId": "={{ $json[\"id\"] }}"
+      },
+      "id": "787c5f1c-211a-4874-b00e-d1c991445336",
+      "name": "Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        320,
+        600
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"From\"] }}",
+              "operation": "contains",
+              "value2": "uber@uber.com"
+            },
+            {
+              "value1": "={{ $json[\"Subject\"] }}",
+              "operation": "regex",
+              "value2": "/eats/i"
+            }
+          ]
+        }
+      },
+      "id": "b6b104c9-a563-4be1-98ce-1176f69457fc",
+      "name": "Common Title Filter",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        560,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ JSON.stringify($json[\"labels\"]) }}",
+              "operation": "regex",
+              "value2": "/personal/i"
+            },
+            {
+              "value1": "={{ JSON.stringify($json[\"labels\"]) }}",
+              "operation": "regex",
+              "value2": "/promo/i"
+            }
+          ]
+        }
+      },
+      "id": "d303c9ec-6bfa-46c4-b6bb-8387348195cb",
+      "name": "Label Search",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        560,
+        240
+      ]
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "main": [
+        [
+          {
+            "node": "Common Title Filter",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Label Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "c9221aba-2925-4ab5-a1b8-09baef5f19db",
+  "id": "10",
+  "meta": {
+    "instanceId": "290edf19075c573c46d8641c39432c3840460ddf29e6f748ee54a95aeeb3ed59"
+  },
+  "tags": []
+}
