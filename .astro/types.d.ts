@@ -444,6 +444,13 @@ declare module 'astro:content' {
 },
 },
 "play": {
+"rj.mdx": {
+  id: "rj.mdx",
+  slug: "rj",
+  body: string,
+  collection: "play",
+  data: InferEntrySchema<"play">
+},
 "wvn.mdx": {
   id: "wvn.mdx",
   slug: "wvn",
@@ -460,9 +467,30 @@ declare module 'astro:content' {
   collection: "project",
   data: any
 },
+"ar.mdx": {
+  id: "ar.mdx",
+  slug: "ar",
+  body: string,
+  collection: "project",
+  data: any
+},
 "discord-sh.mdx": {
   id: "discord-sh.mdx",
   slug: "discord-sh",
+  body: string,
+  collection: "project",
+  data: any
+},
+"galaxia.mdx": {
+  id: "galaxia.mdx",
+  slug: "galaxia",
+  body: string,
+  collection: "project",
+  data: any
+},
+"roguejester.mdx": {
+  id: "roguejester.mdx",
+  slug: "roguejester",
   body: string,
   collection: "project",
   data: any
@@ -598,15 +626,15 @@ declare module 'astro:content' {
 },
 },
 "tools": {
-"status.md": {
-  id: "status.md",
+"status.mdx": {
+  id: "status.mdx",
   slug: "status",
   body: string,
   collection: "tools",
   data: any
 },
-"webmaster.md": {
-  id: "webmaster.md",
+"webmaster.mdx": {
+  id: "webmaster.mdx",
   slug: "webmaster",
   body: string,
   collection: "tools",
