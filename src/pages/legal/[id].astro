@@ -5,8 +5,8 @@ import N from "@n/N.astro"; ///     [Astro]:{namespace}
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const blog = await getCollection("legal");
-  return blog.map((entry) => ({
+  const legal = await getCollection("legal");
+  return legal.map((entry) => ({
     params: {
       id: entry.slug,
     },

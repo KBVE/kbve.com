@@ -1,11 +1,28 @@
 ---
-title: Galaxia MicroServices
-description: A quick break down of the micro services for Galaxia.
+id: 2
+layout: ../../layouts/theme/mdx.astro
+title: Galaxia
+client: Self
+category: API
+frontpage: true
+status: true
+publishDate: 2021-09-07 00:00:00
+date: 10/1/2022
+author: h0lybyte
+img: https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?fit=crop&w=1400&h=700&q=75
+description: Galaxia is an open source cluster-ready api.
 tags:
-- galaxia
-- microservice
-- poc
+- design
+- dev
+- api
 ---
+import Github from "@c/Action/Github/Github.astro";
+export const components = { github: Github };
+
+## Information
+
+- Our current project is Galaxia, which will be an open source cluster-ready API that extends out to various projects. When working on Discord.sh, we decided that it would make sense to build an all-in-one / hyper scalable API.
+
 
 ## Micro
 
@@ -41,3 +58,10 @@ tags:
     - WebSocket: `https://ws.u.kbve.com/`
     - Net: `https://net.u.kbve.com/`
     - DNS: `https://dns.u.kbve.com/`
+
+
+## Install
+- Install using the docker compose.
+  -  <Github src="data/galaxia/docker-compose.yml" description="This is the current docker compose for Galaxia" />
+
+## Notes

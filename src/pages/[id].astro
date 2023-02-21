@@ -1,12 +1,13 @@
 ---
+//?     [Website] : Render Collection of {website}
 ///     [IMPORTS]
 import N from "@n/N.astro"; ///     [Astro]:{namespace}
 
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const blog = await getCollection("website");
-  return blog.map((entry) => ({
+  const website = await getCollection("website");
+  return website.map((entry) => ({
     params: {
       id: entry.slug,
     },
