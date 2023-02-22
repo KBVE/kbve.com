@@ -144,8 +144,8 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 },
-"kubernetes.md": {
-  id: "kubernetes.md",
+"kubernetes.mdx": {
+  id: "kubernetes.mdx",
   slug: "kubernetes",
   body: string,
   collection: "application",
@@ -506,8 +506,8 @@ declare module 'astro:content' {
 },
 },
 "security": {
-"xss.md": {
-  id: "xss.md",
+"xss.mdx": {
+  id: "xss.mdx",
   slug: "xss",
   body: string,
   collection: "security",
@@ -545,50 +545,57 @@ declare module 'astro:content' {
 },
 },
 "team": {
-"example.md": {
-  id: "example.md",
+"example.mdx": {
+  id: "example.mdx",
   slug: "example",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
 },
-"h0lybyte.md": {
-  id: "h0lybyte.md",
+"fudster.mdx": {
+  id: "fudster.mdx",
+  slug: "fudster",
+  body: string,
+  collection: "team",
+  data: InferEntrySchema<"team">
+},
+"h0lybyte.mdx": {
+  id: "h0lybyte.mdx",
   slug: "h0lybyte",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
 },
-"keros.md": {
-  id: "keros.md",
+"keros.mdx": {
+  id: "keros.mdx",
   slug: "keros",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
 },
-"lvl21bellsprout.md": {
-  id: "lvl21bellsprout.md",
+"lvl21bellsprout.mdx": {
+  id: "lvl21bellsprout.mdx",
   slug: "lvl21bellsprout",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
 },
-"sean.md": {
-  id: "sean.md",
+"sean.mdx": {
+  id: "sean.mdx",
   slug: "sean",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
 },
-"silver91.md": {
-  id: "silver91.md",
+"silver91.mdx": {
+  id: "silver91.mdx",
   slug: "silver91",
   body: string,
   collection: "team",
   data: InferEntrySchema<"team">
 },
-"ziggy9263.md": {
-  id: "ziggy9263.md",
+"ziggy9263.mdx": {
+  id: "ziggy9263.mdx",
   slug: "ziggy9263",
   body: string,
   collection: "team",
@@ -596,29 +603,36 @@ declare module 'astro:content' {
 },
 },
 "theory": {
-"deadcode.md": {
-  id: "deadcode.md",
+"deadcode.mdx": {
+  id: "deadcode.mdx",
   slug: "deadcode",
   body: string,
   collection: "theory",
   data: InferEntrySchema<"theory">
 },
-"fintech.md": {
-  id: "fintech.md",
+"fintech.mdx": {
+  id: "fintech.mdx",
   slug: "fintech",
   body: string,
   collection: "theory",
   data: InferEntrySchema<"theory">
 },
-"matrix.md": {
-  id: "matrix.md",
+"healthcare.mdx": {
+  id: "healthcare.mdx",
+  slug: "healthcare",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"matrix.mdx": {
+  id: "matrix.mdx",
   slug: "matrix",
   body: string,
   collection: "theory",
   data: InferEntrySchema<"theory">
 },
-"programming.md": {
-  id: "programming.md",
+"programming.mdx": {
+  id: "programming.mdx",
   slug: "programming",
   body: string,
   collection: "theory",
