@@ -1,19 +1,14 @@
 ---
-/// [WIP]
-/// Main News Module
-import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
-import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
+//? [WIP]
+//? Main News Module
+import N from "@n/N.astro"; /// [IMPORT]  ->  [N]   -> Namespace
+//import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
+//import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
 /// {data}
-const data = {
-	title: "KBVE.com - News", description: "News"}	
-const { content = data } = Astro.props;		
-const apps = await fetch('https://kbve.com/application/application.json').then((response) =>  response.json());
-
+let title = "KBVE.com - News in FinTech, Entertainment and more";
+let description = "All.";
 ---
-<Core content={content}>
-  <SWUP>
-      <div class="px-8 py-24 space-y-8">
-      </div>
-  </SWUP>
-</Core>
 
+<N ns="theme" title={title} description={description}>
+  <!--  -->
+</N>
