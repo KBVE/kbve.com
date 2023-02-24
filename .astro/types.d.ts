@@ -677,6 +677,13 @@ declare module 'astro:content' {
   collection: "website",
   data: InferEntrySchema<"website">
 },
+"search.mdx": {
+  id: "search.mdx",
+  slug: "search",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
 },
 
 	};
