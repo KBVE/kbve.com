@@ -18,6 +18,9 @@
     "allowJs": true,
     // Alias for Components
     "baseUrl": ".",
+    // Astro Images
+    "types": ["@astrojs/image/client"],
+    // Paths
     "paths": {
         "@c/*": ["src/components/*"],
         "@l/*": ["src/layouts/*"],

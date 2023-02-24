@@ -1,4 +1,4 @@
-import { h } from 'preact';
+//import { h } from 'preact';
 const HubspotLiveChat = ({width = null, height = null, display = true}) => {
 
     if(display)
