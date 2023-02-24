@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-//import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
 
 //?     [JS]:[Library]
@@ -13,7 +12,7 @@ import prefetch from "@astrojs/prefetch";
 
 //*   MDX / MD Integration
 import mdx from "@astrojs/mdx";
-import markdownConfig from './markdown.config'
+import markdownConfig from "./markdown.config";
 
 //*   [TailWindCSS] for AstroJS
 //?   Reference https://kbve.com/application/javascript/#tailwindcss
@@ -27,46 +26,45 @@ import alpinejs from "@astrojs/alpinejs";
 import partytown from "@astrojs/partytown";
 
 //* Define Config of AstroJS
-export default defineConfig({
+import image from "@astrojs/image";
 
-  // Experimental
-  // experimental: {
-  //   contentCollections: true,
-  // },
+// https://astro.build/config
+export default defineConfig({
   site: "https://kbve.com/",
   markdown: markdownConfig,
   integrations: [
-  // preact({
-  //   compat: true
-  // }), 
-
-  sitemap({
-    customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"]
-  }), 
-  mdx({
-    ...markdownConfig,
-    //extendPlugins: "astroDefaults"
-  }), 
-  react(),
-  compress(), 
-  prefetch({
-    throttle: 20
-  }), 
-  tailwind(), 
-  alpinejs(), 
-  partytown({
-    // dataLayer.push as a forwarding-event.
-    config: { 
-      forward: ["dataLayer.push"] 
-    },
-  }),
+    sitemap({
+      customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"],
+    }),
+    mdx({
+      ...markdownConfig,
+      //extendPlugins: "astroDefaults"
+    }),
+    //  React
+    react(),
+    //  Post-Build -> Compress
+    compress(),
+    //  Prefetch
+    prefetch({
+      throttle: 20,
+    }),
+    tailwind(),
+    alpinejs(),
+    partytown({
+      // dataLayer.push as a forwarding-event.
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+    // Image Experimental from Astro.
+    image({ serviceEntryPoint: "@astrojs/image/sharp" }),
   ],
-  // Vite
-
+  //  Vite
+  //? Currently there are no custom Vite->SSR
   vite: {
     ssr: {
       //external: ["@11ty/eleventy-img", "svgo"],
-      external: ["@11ty/eleventy-img"]
+      //external: ["@11ty/eleventy-img"]
     },
     // build: {
     //   rollupOptions: {
@@ -77,5 +75,5 @@ export default defineConfig({
     //     },
     //   },
     // },
-  }
+  },
 });
