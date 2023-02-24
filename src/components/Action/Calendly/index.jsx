@@ -1,5 +1,4 @@
 import { Hidden } from '@mui/material';
-import { h } from 'preact';
 const Calendly = ({user = 'kbve', width = 320, height = 700, display = true, hide = 0, text_color="", primary_color="", className = ""}) => {
 
     if(display)

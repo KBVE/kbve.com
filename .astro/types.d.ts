@@ -617,6 +617,13 @@ declare module 'astro:content' {
   collection: "theory",
   data: InferEntrySchema<"theory">
 },
+"gamedesign.mdx": {
+  id: "gamedesign.mdx",
+  slug: "gamedesign",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
 "healthcare.mdx": {
   id: "healthcare.mdx",
   slug: "healthcare",
