@@ -5,15 +5,15 @@ const { content } = Astro.props; ///	[Astro Props]
 
 <div
   style={{ backgroundImage: `url(${content.img})` }}
-  class="object-cover flex justify-center items-center flex-col shadow-2xl p-32 min-h-[15%]"
+  class={`bg-fill bg-center  bg-no-repeat md:bg-cover object-contain flex justify-center items-center flex-col shadow-2xl md:p-16 xl:p-32 p-6 min-h-[15%]`}
 >
-  <h1 class="title text-9xl text-shadow-lg shadow-black">{content.title}</h1>
+  <h1 class="title md:text-9xl text-5xl text-white text-shadow-lg shadow-black">{content.title}</h1>
 </div>
-<div class="shadow-2xl p-4 bg-offset text-center rounded-b-3xl">
+<div class="shadow-2xl p-4 bg-offset text-center rounded-b-3xl ">
   {content.description}
 </div>
 
-<div>
+<div class="">
   <N ns="ads" template="banner" id="ezoic" />
 </div>
 

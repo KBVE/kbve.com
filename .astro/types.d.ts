@@ -495,6 +495,13 @@ declare module 'astro:content' {
   collection: "project",
   data: any
 },
+"rsps.mdx": {
+  id: "rsps.mdx",
+  slug: "rsps",
+  body: string,
+  collection: "project",
+  data: any
+},
 },
 "releases": {
 "1.md": {
@@ -645,6 +652,20 @@ declare module 'astro:content' {
   collection: "theory",
   data: InferEntrySchema<"theory">
 },
+"prompt.mdx": {
+  id: "prompt.mdx",
+  slug: "prompt",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
+"solarpunk.mdx": {
+  id: "solarpunk.mdx",
+  slug: "solarpunk",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+},
 },
 "tools": {
 "status.mdx": {
@@ -673,6 +694,13 @@ declare module 'astro:content' {
 "c.mdx": {
   id: "c.mdx",
   slug: "c",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+},
+"search.mdx": {
+  id: "search.mdx",
+  slug: "search",
   body: string,
   collection: "website",
   data: InferEntrySchema<"website">
