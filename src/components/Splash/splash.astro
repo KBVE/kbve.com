@@ -1,48 +1,85 @@
 ---
-import { Picture } from '@astrojs/image/components';
-
+import { Picture } from "@astrojs/image/components";
 import Starfield from "@c/Element/Background/Starfield/starfield.astro";
-
 import KBVELogo from "@c/Branding/KBVELogo";
-
-import spellbook from '../../assets/spellbook.png';
-
-// const widths = [512, 512];
-// const sizes = "(min-width: 512px) 42vw, 67vw";
-
-// const { webp, avif, png } = generateImage("src/assets/spellbook.png", {
-//   widths,
-//   formats: ["webp", "avif", "png"],
-//   outputDir: "public/assets/images/spellbook",
-//   urlPath: "/assets/images/spellbook",
-// });
-
-// const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
-// const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
-// const pngSrcset = png.map(({ srcset }) => srcset).join(",");
+import spellbook from "@a/img/spellbook.png";
 ---
-<section class="relative h-full  bg-black">
-  <Starfield /> <!-- <Galaxia /> -->  <!--<div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">  <HeroImage />  </div>  -->
+
+<section class="relative h-full bg-black">
+  <Starfield />
+  <!-- <Galaxia /> -->
+  <!--<div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">  <HeroImage />  </div>  -->
   <div class="relative grid h-full sm:grid-cols-2 place-items-center">
-      <h2 class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end">    
-        <div class="py-6 space-y-8"></div>
-        <center><KBVELogo /></center>
-        <div class="font-extrabold tracking-tighter text-center text-8xl gradient-text">
-          Building
-          <br /> Apps,
-          <br /> Games & Memes.
-        </div>
-          <div class="font-extrabold tracking-tighter text-center text-2xl gradient-text">
-            Some machine learning too, 
-            <br /> maybe printer go brrrrr.
+    <h2
+      class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
+    >
+      <div class="py-6 space-y-8"></div>
+      <center><KBVELogo /></center>
+      <div
+        class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
+      >
+        Building
+        <br /> Apps,
+        <br /> Games & Memes.
+      </div>
+      <div
+        class="font-extrabold tracking-tighter text-center text-2xl gradient-text"
+      >
+        <form class="sm:w-1/2 md:w-full p-4" method="get" action="/search/">
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            >Search</label
+          >
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-purple-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg
+              >
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              name="q"
+              class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+              placeholder="Search Everything!"
+              required
+              
+            />
+            <button
+              type="submit"
+              class="text-white absolute right-2.5 bottom-2.5 bg-gradient-to-r from-pink-500 to-purple-700 hover:grayscale  hover:animate-spin-slow ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+              
+              >Search</button
+            >
           </div>
-      </h2>
-      <Picture  class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-auto sm:justify-self-start animate-pulse" src={spellbook} widths={[200, 400, 800]} aspectRatio="1:1" sizes="(max-width: 800px) 100vw, 800px" formats={['avif', 'png', 'webp']} alt="The KBVE Spellbook logo" />
-      
+        </form>
+      </div>
+    </h2>
+    <Picture
+      class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-center sm:justify-self-start animate-pulse"
+      src={spellbook}
+      widths={[200, 400, 800]}
+      aspectRatio="1:1"
+      sizes="(max-width: 800px) 100vw, 800px"
+      formats={["avif", "png", "webp"]}
+      alt="The KBVE Spellbook logo"
+    />
   </div>
 </section>
-<div class="h-12 bg-gradient-to-b from-black "></div>
-
+<div class="h-12 bg-gradient-to-b from-black"></div>
 
 <noscript>
   <style>

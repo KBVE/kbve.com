@@ -26,9 +26,11 @@
         "@l/*": ["src/layouts/*"],
         "@s/*": ["src/styles/*"],
         "@n/*": ["src/components/Namespace/*"],
+        "@a/*": ["src/assets/*"],
         "@components/*": ["src/components/*"],
         "@layout/*": ["src/layouts/*"],
         "@styles/*": ["src/styles/*"],
+        "@assets/*": ["src/assets/*"],
     }
   }
 }
