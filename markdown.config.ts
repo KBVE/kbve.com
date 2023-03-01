@@ -16,7 +16,7 @@ export default {
 		[
 			rehypeToc,
 			{
-				headings: ["h1", "h2", "h3"],
+				headings: ["h1", "h2", "h3", "h4"],
 				cssClasses: {
 					toc: "toc-post",
 					link: "toc-link",
