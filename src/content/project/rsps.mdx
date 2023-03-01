@@ -18,3 +18,14 @@ repo: kbve/api.kbve.com
 
 ## RSPS Information
 
+## Operational Template
+
+The operational template will be a proxmox ready template that will allow us to auto-scale deployment, including allowing the usage of Terraform and Ansible; the base of the template will be Windows 11 with Python and Java installed through the Choco package manager.
+
+### Template Download
+
+In order to avoid legal issues, we can not offer the template with Windows, so we will have to do the setup done through Powershell. The up-to-date Powershell script will be in our VIP room and hosted in private repo.
+
+### Template Security
+
+We recommend that you clone the first template and spin containers using the cloned QEMU virtual machine. As for saving the instance, we recommend that you take a snapshot of the instance once it is ready for production, make sure to include the RAM.
