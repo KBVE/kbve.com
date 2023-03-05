@@ -242,6 +242,20 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 },
+"rustdesk.mdx": {
+  id: "rustdesk.mdx",
+  slug: "rustdesk",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+},
+"simba.mdx": {
+  id: "simba.mdx",
+  slug: "simba",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+},
 "strapi.mdx": {
   id: "strapi.mdx",
   slug: "strapi",
