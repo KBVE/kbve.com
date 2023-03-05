@@ -5,8 +5,8 @@ title: RSPS
 client: Self
 frontpage: true
 publishDate: 2020-03-02 00:00:00
-img: https://images.unsplash.com/photo-1658874919865-35bb32505edc?fit=crop&w=1400&h=700&q=75
-description: Project RSPS is a cluster of different 
+img: https://images.unsplash.com/photo-1662072628456-325410cf83dc?fit=crop&w=1400&h=700&q=75
+description: Project RSPS is a cluster of different projects with the objective to make a MMORPG farm.
 tags:
   - design
   - dev
@@ -14,3 +14,107 @@ tags:
 repo: kbve/api.kbve.com
 ---
 
+# {frontmatter.title}
+
+## RSPS Information
+
+* * *
+
+## Operational Template
+
+The operational template will be a proxmox ready template that will allow us to auto-scale deployment, including allowing the usage of Terraform and Ansible; the base of the template will be Windows 11 with Python and Java installed through the Choco package manager.
+
+* * *
+
+### Template Download
+
+In order to avoid legal issues, we can not offer the template with Windows, so we will have to do the setup done through Powershell. The up-to-date Powershell script will be in our VIP room and hosted in private repo.
+
+* * *
+
+### Template Security
+
+We recommend that you clone the first template and spin containers using the cloned QEMU virtual machine. As for saving the instance, we recommend that you take a snapshot of the instance once it is ready for production, make sure to include the RAM.
+
+* * *
+
+## RS
+
+These are notes on RS specific information, including skills, mini-games and items. 
+
+* * *
+
+### Combat
+
+For combat training, we recommend with starting off at level 1 Chickens, level 2 Cows and level 3-10 Goblins, until the character reaches a total combat level of >20.
+
+* * *
+
+### Fishing
+
+Fishing is a core skill that the accounts have to build, as it provides a fast and cheap form of food, income and total levels. The skill is AFK friendly, allowing multiple instances to train without a risk of death or logging out.
+
+#### Fishing lvl 1 to 20
+The current path for fishing is level 1-20 Shrimps at Draynor and then fly fishing from 20 to 70 at the barbarian village; the village is located west of Varrock and east of Falador, following the main road.
+
+
+* * *
+
+### Cooking
+
+* * *
+
+## IP
+
+The `IP address` for each account/session/instance is very important as to avoid chain bans and have a stable networking.
+
+### VPN
+
+VPN networks help obfuscate/hide the local IP address, thus allowing you to run multiple accounts on the same server.
+
+#### NordVPN
+
+NordVPN lets you have 6 active sessions on their service for around $14.00 a month.
+
+* * *
+
+## Account Order
+
+KBVE Account order form is a quick and easy way to place an order through our system. There are a total of 23 skills, with 15 Free To Play/F2P skills and 8 Pay To Play / P2P skills.
+
+### Account Order Format
+
+```javascript
+
+var HP = 10;
+var ATTACK = 1;
+var STRENGTH = 1;
+var DEFENSE = 1;
+var RANGE = 1;
+var PRAYER = 1;
+var MAGIC = 1;
+var RUNECRAFT = 1;
+var CRAFT = 1;
+var MINING = 1;
+var SMITHING = 1;
+var FISHING = 1;
+var COOKING = 1;
+var FIREMAKING = 1;
+var WOODCUTTING = 1;
+
+var CONSTRUCTION = 1;
+var AGILITY = 1;
+var HERBLORE = 1;
+var THIEVING = 1;
+var FLETCH = 1;
+var SLAYER = 1;
+var HUNTER = 1;
+var FARMING = 1;
+
+```
+
+### Quest Order Format
+
+```javascript
+
+```
