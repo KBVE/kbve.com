@@ -3,7 +3,7 @@ name: RogueJester Updates, Issues
 about: Create an update, upgrade or issue report for RougeJester
 title: '[RJ] : [Update] : '
 labels: 0, update, enhancement, roguejester
-assignees: 'zanerage'
+assignees: ''
 ---
 
 **Describe the Update/Upgrade/Issue**
