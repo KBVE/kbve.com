@@ -44,7 +44,7 @@
     "@types/lodash": "^4.14.186",
     "alpinejs": "^3.11.1",
     "astro-icon": "^0.8.0",
-    "dompurify": "^2.4.1",
+    "dompurify": "^3.0.0",
     "jquery": "^3.6.1",
     "lodash": "^4.17.21",
     "micromodal": "^0.4.10",
