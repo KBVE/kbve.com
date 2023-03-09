@@ -204,6 +204,13 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
+"nginx.mdx": {
+  id: "nginx.mdx",
+  slug: "nginx",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] },
 "nmap.mdx": {
   id: "nmap.mdx",
   slug: "nmap",
@@ -346,15 +353,6 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
-},
-"config": {
-"nginx.md": {
-  id: "nginx.md",
-  slug: "nginx",
-  body: string,
-  collection: "config",
-  data: any
-} & { render(): Render[".md"] },
 },
 "crypto": {
 "btc.md": {
