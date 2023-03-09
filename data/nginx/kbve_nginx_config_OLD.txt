@@ -1,0 +1,119 @@
+
+## This is an older and inactive KBVE Config file for Nginx! It is in the archives for reference only!
+
+server {
+        #Default Port of 80
+        listen 80;
+        listen [::]:80;  
+        
+        #Port of 8080
+        #IPv4
+        #listen 8080;
+        #IPv6
+        #listen [::]:8080; 
+        
+        # Server Name
+        server_name kbve.com www.kbve.com;
+
+        #301 Redirects Below -
+        #return 301 https://$host$request_uri;
+        rewrite     ^   https://$server_name$request_uri? permanent;
+}
+
+server {
+        listen 443 ssl http2;
+        listen [::]:443 ssl http2;
+        server_name www.kbve.com kbve.com;
+            #SSL START
+                    # Default LetsEncrypt / CertBot Locations 
+                    ssl_certificate      /etc/letsencrypt/live/kbve.com/fullchain.pem;
+                    ssl_certificate_key  /etc/letsencrypt/live/kbve.com/privkey.pem;
+                    # or -> Below 
+                    #ssl_certificate /etc/nginx/ssl/domain.com.crt;
+                    #ssl_certificate_key /etc/nginx/ssl/domain.com.key;
+                    
+                    #Standard SSL Options
+                    ssl_session_cache shared:SSL:50m;
+                    ssl_session_timeout 10m;
+                    
+                    #Security Stage A
+                    
+                    #SS: Protocols
+                    ssl_protocols TLSv1.2;
+                    #ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+                    # Ciphers 
+                    ssl_prefer_server_ciphers on;
+                    ssl_ciphers "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384";
+
+                    #RFC-7919 https://ddg.cm/#security+rfc-7919
+                    ssl_dhparam /etc/nginx/ssl/dhparam.pem;
+                    ssl_ecdh_curve secp521r1:secp384r1;
+
+                    #Security Stage B
+
+                    #RFC-6797 https://ddg.cm/#HSTS+rfc-6797
+                    #add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+                    #<Tip> Careful of SubDomain HSTS! :) Conflicts with Cloudflare and internal SSL certs!
+                    #Security Content Option
+                    #add_header Content-Security-Policy "default-src 'self' https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com;";
+                    add_header X-Content-Type-Options nosniff always; 
+
+                    #Security Iframe Options - Protection from click-jacking attacks.
+                    #add_header X-Frame-Options DENY always;
+                    #add_header X-Frame-Options SAMEORIGIN always;
+
+                    add_header X-Xss-Protection "1; mode=block" always; # XSS Protection
+
+
+                    resolver 8.8.8.8;
+                    #Cloudflare Options below
+                    #resolver 1.1.1.1 1.0.0.1 [2606:4700:4700::1111] [2606:4700:4700::1001] valid=300s;
+                    resolver_timeout 5s;
+                    
+
+            #SSL END
+
+        #root /var/www/secure/data/git/kbve/html/kbve.com/;
+        root /var/www/secure/data/html/kbve.com/;
+
+        #Location Basic Start
+        location / {
+                try_files $uri $uri/ $uri/index.html =404;
+        }
+
+        location /nfc {
+                alias /var/www/secure/data/git/kbve/nfc;
+                try_files $uri $uri/ $uri/index.html =404;
+        }
+
+        location ^~ /.well-known/acme-challenge/ {
+                default_type "text/plain";
+                root /var/www/letsencrypt;
+        }
+
+        #Location Basic End
+
+        #Location Proxy Start
+
+        location /api/ {
+                proxy_pass http://192.168.69.420:9000/;
+                #proxy_redirect          https://192.168.69.420/ https://kbve.com/c/;
+                #proxy_redirect off;
+                proxy_http_version 1.1;    
+                #proxy_buffering on;
+                #proxy_buffers 12 12k;  
+                #proxy_set_header        Host $host:$server_port;
+                #proxy_set_header        X-Real-IP $remote_addr;
+                #proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                #proxy_set_header        X-Forwarded-Proto $scheme;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }
+
+
+        #Location Proxy End
+
+}
