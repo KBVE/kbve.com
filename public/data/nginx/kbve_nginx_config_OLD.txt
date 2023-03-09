@@ -1,43 +1,3 @@
----
-##TO-DO
-layout: ../../layouts/theme/mdx.astro
-title: Nginx Configuration
-category: Application
-client: Self
-publishDate: 2022-11-01 00:00:00
-img: https://images.unsplash.com/photo-1551609189-eba71b3a8566?fit=crop&w=1400&h=700&q=75
-repo: 
-description: Nginx Configuration
-tags:
-- webserver
-- nginx
----
-
-## Nginx Configuration
-
-This is a default example of a Nginx configuration file.
-
-### Example WildCard Nginx Configuration
-
-```conf
-#Nginx i wildcard proxy for low level data. 
-server {
-        listen 80 default_server;
-        server_name _;
-        location / {
-                proxy_set_header X-Forwarded-For $remote_addr;
-                proxy_set_header Host $http_host;
-                #proxy_set_header        X-Real-IP $remote_addr;
-                #proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_pass http://192.168.1.69:420;
-        }
-}
-
-```
-
-### Example KBVE Nginx Configuration
-
-```conf
 
 ## This is an older and inactive KBVE Config file for Nginx! It is in the archives for reference only!
 
@@ -157,4 +117,3 @@ server {
         #Location Proxy End
 
 }
-```
