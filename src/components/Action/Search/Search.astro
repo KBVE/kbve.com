@@ -1,9 +1,16 @@
 ---
 //      Seach Action
 //      [IMPORT]
-import SearchData from './search';
+import SearchData from "./search";
 const { src, description } = Astro.props;
 ---
 
-<script is:inline async src="https://cse.google.com/cse.js?cx=partner-pub-3698214103602019:ab1srxiqkuo"></script>
+<!--    [START]   Google CSE Code -->
+<script
+  is:inline
+  async
+  src="https://cse.google.com/cse.js?cx=partner-pub-3698214103602019:ab1srxiqkuo"
+></script>
+<!--    [END]     Google CSE Code --><!--    [START]   SearchData -->
 <SearchData client:only />
+<!--    [END]     SearchData -->
