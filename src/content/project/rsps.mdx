@@ -14,33 +14,37 @@ tags:
 repo: kbve/api.kbve.com
 ---
 
-# {frontmatter.title}
-
-## RSPS Information
+# RSPS Information
 
 * * *
+* * *
+* * *
 
-## Operational Template
+# Operational Template
 
 The operational template will be a proxmox ready template that will allow us to auto-scale deployment, including allowing the usage of Terraform and Ansible; the base of the template will be Windows 11 with Python and Java installed through the Choco package manager.
 
-* * *
-
-### Template Download
+## Template Download
 
 In order to avoid legal issues, we can not offer the template with Windows, so we will have to do the setup done through Powershell. The up-to-date Powershell script will be in our VIP room and hosted in private repo.
 
-* * *
-
-### Template Security
+## Template Security
 
 We recommend that you clone the first template and spin containers using the cloned QEMU virtual machine. As for saving the instance, we recommend that you take a snapshot of the instance once it is ready for production, make sure to include the RAM.
 
 * * *
+* * *
+* * *
 
-## RS
+# RS
 
 These are notes on RS specific information, including skills, mini-games and items. 
+
+* * *
+
+## Skills
+
+The primary focus of the game is to level up your skills to level 99. 
 
 * * *
 
@@ -68,6 +72,11 @@ The current path for fishing is level 1-20 Shrimps at Draynor and then fly fishi
 
 The `IP address` for each account/session/instance is very important as to avoid chain bans and have a stable networking.
 
+
+### Mobile
+
+One of the methods that we will be looking into would be using a mobile provider to help with the obfuscation. There are two ways that you could utilize your mobile data plan, the first would be to download the mobile application (iOS/Android) directly and log in. The second way would be to setup a mobile hotspot and then remotely 
+
 ### VPN
 
 VPN networks help obfuscate/hide the local IP address, thus allowing you to run multiple accounts on the same server.
@@ -77,12 +86,33 @@ VPN networks help obfuscate/hide the local IP address, thus allowing you to run 
 NordVPN lets you have 6 active sessions on their service for around $14.00 a month.
 
 * * *
+* * *
+* * *
 
-## Account Order
+# Tools
+
+## Account Ban
+
+Okay this tool would automatically check our accounts every 12 hours, to see if they were ban? 
+
+* * *
+* * *
+* * *
+
+
+# Notes
+
+This section will be for note taking and keeping track of anything else that we would want to add into the project. I think we could build an automated system that could grab the accounts and then check if there were any bans?
+
+* * *
+* * *
+* * *
+
+# Account Order
 
 KBVE Account order form is a quick and easy way to place an order through our system. There are a total of 23 skills, with 15 Free To Play/F2P skills and 8 Pay To Play / P2P skills.
 
-### Account Order Format
+## Account Order Format
 
 ```javascript
 
@@ -113,7 +143,7 @@ var FARMING = 1;
 
 ```
 
-### Quest Order Format
+## Quest Order Format
 
 ```javascript
 

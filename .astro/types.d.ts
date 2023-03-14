@@ -533,6 +533,15 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdx"] },
 },
+"recipe": {
+"mangojuice.mdx": {
+  id: "mangojuice.mdx",
+  slug: "mangojuice",
+  body: string,
+  collection: "recipe",
+  data: InferEntrySchema<"recipe">
+} & { render(): Render[".mdx"] },
+},
 "releases": {
 "1.md": {
   id: "1.md",

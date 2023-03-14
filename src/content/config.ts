@@ -192,6 +192,22 @@ const theory = defineCollection({
   }),
 });
 
+//?       {recipe}
+const recipe = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    layout: z.string(),
+    description: z.string(),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    img: z.string().default(''),
+    date: z.string().optional(),
+    url: z.string().optional(),
+    ref: z.string().optional(),
+  }),
+});
+
 //?       {media}
 const media = defineCollection({
   schema: z.object({
@@ -283,6 +299,7 @@ export const collections = {
     journal: journal,
     security: security,
     theory: theory,
+    recipe: recipe,
     //?       [ASSET]:[COLLECTION]
     stock: stock,
     crypto: crypto,
