@@ -1,0 +1,24 @@
+---
+///     [IMPORT]
+import N from "@n/N.astro";                         ///     [Astro]:{namespace}
+import { getCollection } from "astro:content";      ///     [getCollection] 
+
+export async function getStaticPaths() {
+  const legal = await getCollection("recipe");
+  return legal.map((entry) => ({
+    params: {
+      id: entry.slug,
+    },
+    props: {
+      entry,
+    },
+  }));
+}
+
+const { id } = Astro.params;
+const { entry } = Astro.props;
+const { Content, headings, injectedFrontmatter } = await entry.render();
+---
+<N ns="theme" title={entry.data.title} description={entry.data.description}>
+    <Content />
+</N>
