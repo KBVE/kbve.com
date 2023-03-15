@@ -9,19 +9,20 @@ import KBVEL from "@c/Branding/KBVEL";
 import KBVELogo from "@c/Branding/KBVELogo";
 ///       [DATA]
 const navItems = [
-  { title: "Application", url: "/application" },
-  { title: "Asset", url: "/asset" },
-  { title: "Project", url: "/project" },
+  { title: "Applications", url: "/application" },
+  { title: "Assets", url: "/asset" },
+  { title: "Projects", url: "/project" },
   { title: "Contact Us", url: "/support" },
-  { title: "Terms of Service", url: "/legal/tos"},
-  { title: "Privacy", url: "/legal/privacy"},
-  { title: "EULA", url: "/legal/eula"}
+  { title: "Terms of Service", url: "/legal/tos" },
+  { title: "Privacy", url: "/legal/privacy" },
+  { title: "EULA", url: "/legal/eula" },
 ];
 ---
+
 <header
   id="page-header"
   class="fixed-header absolute top-0 z-50 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent h-16"
-> 
+>
   <a class="flex items-center gap-3 hover:!text-default" href="/">
     <div class="sr-only">KBVE</div>
     <KBVEL />
@@ -51,94 +52,97 @@ const navItems = [
       </button>
       <ThemeSwitcher />
     </div>
-      <!-- Menu Modal -->
-      <div id="menu-modal" class="hidden modal" aria-hidden="true">
-        <div class="fixed inset-0 px-8 py-4 bg-default text-default">
-          <div class="space-y-4" role="dialog" aria-modal="true">
-            <header class="text-right">
-              <button
-                id="close-nav-button"
-                type="button"
-                class="btn"
-                aria-label="Close navigation"
-              >
-                <Icon pack="mdi" name="close" class="h-8" />
-              </button>
-            </header>
-            <div class="flex justify-center">
-              <!-- <Icon name="logomark" class="h-16" /> -->
-              <KBVELogo />
-            </div>
-            <nav>
-              <ul class="flex flex-col">
-                {
-                  navItems.map(({ title, url }) => (
-                    <li>
-                      <a class="block py-4 text-xl text-center" rel="prefetch" href={url}>
-                        {title}
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
-            </nav>
+    <!-- Menu Modal -->
+    <div id="menu-modal" class="hidden modal" aria-hidden="true">
+      <div class="fixed inset-0 px-8 py-4 bg-default text-default">
+        <div class="space-y-4" role="dialog" aria-modal="true">
+          <header class="text-right">
+            <button
+              id="close-nav-button"
+              type="button"
+              class="btn"
+              aria-label="Close navigation"
+            >
+              <Icon pack="mdi" name="close" class="h-8" />
+            </button>
+          </header>
+          <div class="flex justify-center">
+            <!-- <Icon name="logomark" class="h-16" /> -->
+            <KBVELogo />
           </div>
+          <nav>
+            <ul class="flex flex-col">
+              {
+                navItems.map(({ title, url }) => (
+                  <li>
+                    <a
+                      class="block py-4 text-xl text-center"
+                      rel="prefetch"
+                      href={url}
+                    >
+                      {title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
         </div>
       </div>
-      <!-- Menu Modal -->
+    </div>
+    <!-- Menu Modal -->
 
-      <!-- Shaco Box [START] -->
-      <div id="shaco-modal" class="hidden modal" aria-hidden="true">
-        <div class="fixed inset-0 px-8 py-4 bg-default text-default">
-          <div class="space-y-4" role="dialog" aria-modal="true">
-              <header class="text-right">
-                <button
-                  id="close-shaco-box"
-                  type="button"
-                  class="btn"
-                  aria-label="Close navigation"
-                ><Icon pack="mdi" name="close" class="h-8" />
-                </button>
-              </header>
-              <div class="flex justify-center space-x-8 bg-offset p-4 rounded-full">
-                <KBVELogo /> <span class="gradient-text uppercase font-semibold"> Account</span>
-              </div>
-              <nav>
-                <ul class="flex flex-col">
-                  Test
-                </ul>
-              </nav>
-              </div>
+    <!-- Shaco Box [START] -->
+    <div id="shaco-modal" class="hidden modal" aria-hidden="true">
+      <div class="fixed inset-0 px-8 py-4 bg-default text-default">
+        <div class="space-y-4" role="dialog" aria-modal="true">
+          <header class="text-right">
+            <button
+              id="close-shaco-box"
+              type="button"
+              class="btn"
+              aria-label="Close navigation"
+              ><Icon pack="mdi" name="close" class="h-8" />
+            </button>
+          </header>
+          <div class="flex justify-center space-x-8 bg-offset p-4 rounded-full">
+            <KBVELogo />
+            <span class="gradient-text uppercase font-semibold"> Account</span>
           </div>
+          <nav>
+            <ul class="flex flex-col">Test</ul>
+          </nav>
+        </div>
       </div>
-      <!-- Shaco Box [END] -->    
+    </div>
+    <!-- Shaco Box [END] -->
 
-      <!-- Gear Box [START] -->
-      <div id="gear-modal" class="hidden modal" aria-hidden="true">
-        <div class="fixed inset-0 px-8 py-4 bg-default text-default">
-          <div class="space-y-4" role="dialog" aria-modal="true">
-              <header class="text-right">
-                <button
-                  id="close-gear-box"
-                  type="button"
-                  class="btn"
-                  aria-label="Close navigation"
-                ><Icon pack="mdi" name="close" class="h-8" />
-                </button>
-              </header>
-              <div class="flex justify-center space-x-8 bg-offset p-4 rounded-full">
-                <KBVELogo /> <span class="gradient-text uppercase font-semibold"> Security</span>
-              </div>
-              <nav>
-                <ul class="flex flex-col">
-                  Security Settings... Still have to import NanoStore before hand.
-                </ul>
-              </nav>
-              </div>
+    <!-- Gear Box [START] -->
+    <div id="gear-modal" class="hidden modal" aria-hidden="true">
+      <div class="fixed inset-0 px-8 py-4 bg-default text-default">
+        <div class="space-y-4" role="dialog" aria-modal="true">
+          <header class="text-right">
+            <button
+              id="close-gear-box"
+              type="button"
+              class="btn"
+              aria-label="Close navigation"
+              ><Icon pack="mdi" name="close" class="h-8" />
+            </button>
+          </header>
+          <div class="flex justify-center space-x-8 bg-offset p-4 rounded-full">
+            <KBVELogo />
+            <span class="gradient-text uppercase font-semibold"> Security</span>
           </div>
+          <nav>
+            <ul class="flex flex-col">
+              Security Settings... Still have to import NanoStore before hand.
+            </ul>
+          </nav>
+        </div>
       </div>
-      <!-- Gear Box [END] -->    
-
+    </div>
+    <!-- Gear Box [END] -->
   </div>
 </header>
 
@@ -160,7 +164,6 @@ const navItems = [
 
   openNavButton?.addEventListener("click", openMenu);
   closeNavButton?.addEventListener("click", closeMenu);
-
 
   menu?.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {
@@ -191,7 +194,6 @@ const navItems = [
     }
   });
 
-
   // GearBox
   const menuGearModalId = "gear-modal";
   const menuGear = document.querySelector(`#${menuGearModalId} ul`);
@@ -214,7 +216,6 @@ const navItems = [
       closeGear();
     }
   });
-  
 </script>
 
 <noscript>
@@ -235,11 +236,18 @@ const navItems = [
   }
 </style>
 
-  
-<button id="open-shaco-box" title="Message"
-class="fixed z-20 bottom-20 left-8 bg-orange-400 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-orange-700 hover:drop-shadow-2xl hover:animate-pulse ease-in-out duration-400">
-<Icon pack="mdi" name="account-details" class="h-12"/></button>
+<button
+  id="open-shaco-box"
+  title="Message"
+  class="fixed z-20 bottom-20 left-8 bg-orange-400 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-orange-700 hover:drop-shadow-2xl hover:animate-pulse ease-in-out duration-400"
+>
+  <Icon pack="mdi" name="account-details" class="h-12" /></button
+>
 
-<button id="open-gear-box" title="Contact Sale"
-class="fixed z-20 bottom-20 right-8 bg-blue-600 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-spin duration-400">
-<Icon pack="mdi" name="security" class="h-12"/></button>
+<button
+  id="open-gear-box"
+  title="Contact Sale"
+  class="fixed z-20 bottom-20 right-8 bg-blue-600 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-spin duration-400"
+>
+  <Icon pack="mdi" name="security" class="h-12" /></button
+>
