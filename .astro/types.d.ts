@@ -417,27 +417,27 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] },
 },
 "legal": {
-"eula.md": {
-  id: "eula.md",
+"eula.mdx": {
+  id: "eula.mdx",
   slug: "eula",
   body: string,
   collection: "legal",
   data: InferEntrySchema<"legal">
-} & { render(): Render[".md"] },
-"privacy.md": {
-  id: "privacy.md",
+} & { render(): Render[".mdx"] },
+"privacy.mdx": {
+  id: "privacy.mdx",
   slug: "privacy",
   body: string,
   collection: "legal",
   data: InferEntrySchema<"legal">
-} & { render(): Render[".md"] },
-"tos.md": {
-  id: "tos.md",
+} & { render(): Render[".mdx"] },
+"tos.mdx": {
+  id: "tos.mdx",
   slug: "tos",
   body: string,
   collection: "legal",
   data: InferEntrySchema<"legal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "manga": {
 "rj/main.md": {
