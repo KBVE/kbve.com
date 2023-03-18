@@ -2,7 +2,9 @@
 //?       [index]
 //*       [IMPORT]
 import N from "@n/N.astro"; //?  [Namespace]:[N]
-import Splash from "@c/Splash/splash.astro"; //! [SPLASH]    ->  Splash is still giving issues as of 1/2/2022.
+import Splash from "@c/Splash/splash.astro";                //! [SPLASH]    ->  Splash is still giving issues as of 1/2/2022.
+import WaitList from "@c/Scene/Intro/WaitList.astro";       //! [WL]        ->  WaitList Component from Mamba
+import IntroReview from "@c/Scene/Intro/IntroReview.astro"; //! [IR]        ->  IntroReview Component from Mamba
 ---
 
 <N
@@ -12,9 +14,29 @@ import Splash from "@c/Splash/splash.astro"; //! [SPLASH]    ->  Splash is still
   template={"data"}
 >
   <Splash />
+  <!-- Advert -->
   <N ns="ads" template="banner" id="ezoic" />
-  <!-- <N ns="banner" template="bannerml" data="This is data test" id="1" /> -->
+  <!-- Intro -->
   <N ns="controller" template="intro" />
+
+  <!-- Generic Section -->
+  <div class="container mx-auto space-y-16">
+    <!-- Wait List [Start] -->
+    <WaitList />
+    <!-- Wait List [End] -->
+    
+    <!-- How It Works [Start] -->
+   <N ns="controller" template="how" />
+    <!-- How it Works [End] -->
+    
+    <!-- Intro Review [Start] -->
+    <IntroReview />
+    <!-- Intro Review [End] -->
+
+
+  </div>
+  <!-- <N ns="banner" template="bannerml" data="This is data test" id="1" /> -->
+ 
   <!-- <N ns="ads" template="box" id="ezoic" /> -->
   <N ns="controller" template="features" />
   <N ns="ads" template="footer" id="ezoic" />
