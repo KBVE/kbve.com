@@ -27,23 +27,28 @@ import IntroReview from "@c/Scene/Intro/IntroReview.astro"; //! [IR]        ->  
   <!-- Generic Section -->
   <div class="container mx-auto space-y-16">
     <!-- Wait List [Start] -->
-    <WaitList />
+    <!-- <WaitList /> -->
+    <N ns="controller" template="waitlist" />
     <!-- Wait List [End] -->
 
     <!-- How It Works [Start] -->
+    <!--  -->
     <N ns="controller" template="how" />
     <!-- How it Works [End] -->
 
     <!-- Intro Review [Start] -->
-    <IntroReview />
+    <!-- <IntroReview /> -->
+    <N ns="controller" template="introreview" />
     <!-- Intro Review [End] -->
   </div>
   <!-- <N ns="banner" template="bannerml" data="This is data test" id="1" /> -->
 
   <!-- Blog?  [Start]   -->
+  <!-- <Blog/> -->
   <!-- Blog?  [End]     -->
 
   <!-- Shop?  [Start]   -->
+  <!-- <Shop/> -->
   <!-- Shop?  [End]     -->
 
   <!-- <N ns="ads" template="box" id="ezoic" /> -->

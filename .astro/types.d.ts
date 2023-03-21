@@ -162,6 +162,13 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
+"k8s.mdx": {
+  id: "k8s.mdx",
+  slug: "k8s",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] },
 "kubernetes.mdx": {
   id: "kubernetes.mdx",
   slug: "kubernetes",
@@ -740,6 +747,27 @@ declare module 'astro:content' {
 "search.mdx": {
   id: "search.mdx",
   slug: "search",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+} & { render(): Render[".mdx"] },
+"twitch.mdx": {
+  id: "twitch.mdx",
+  slug: "twitch",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+} & { render(): Render[".mdx"] },
+"twitter.mdx": {
+  id: "twitter.mdx",
+  slug: "twitter",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+} & { render(): Render[".mdx"] },
+"youtube.mdx": {
+  id: "youtube.mdx",
+  slug: "youtube",
   body: string,
   collection: "website",
   data: InferEntrySchema<"website">

@@ -15,7 +15,9 @@ import Features from "@c/Element/Features/Generic/features.astro";          /// 
 //?     [INTRO]:Folder
 import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]     ->  <Intro> should be in vanillaJS to avoid hydration issues.
 import WaitList from "@c/Scene/Intro/WaitList.astro";                       /// [WL]        ->  Wait List for KBVE 
-import How from "@c/Scene/Intro/How.astro";
+import How from "@c/Scene/Intro/How.astro";                                 /// [How]       ->  How Intro Scene
+import IntroReview from "@c/Scene/Intro/IntroReview.astro";                 /// [IR]        ->  Intro Review
+
 
 //?     [WIP]
 import ApplicationsScene from "@c/Scene/Applications/ApplicationsController/ApplicationsScene.astro";
@@ -34,6 +36,7 @@ import Redirect from '@c/Action/Redirect';                                  /// 
 import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 
 ---
+{(template == "introreview" && data == false) && <IntroReview />}
 {(template == "how" && data == false) && <How />}
 {(template == "waitlist" && data == false) && <WaitList />}
 {(template == "intro" && data == false) && <Intro />}
