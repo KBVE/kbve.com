@@ -1,0 +1,53 @@
+---
+//*         [WL]: Wait List
+//!             :   The WaitList.astro component.
+//?             :   Based upon Mamba UI/UX Library
+---
+<!-- Wait List  -->
+<section class="grid gap-6 text-center lg:grid-cols-2 xl:grid-cols-5 space-y-8 m-4 bg-offset rounded-xl">
+  <div class="w-full p-6 rounded-md sm:p-16 xl:col-span-2">
+    <span class="block mb-2 text-violet-400">KBVE VIP</span>
+    <h1 class="text-5xl font-extrabold ">
+      Join our premium membership!
+    </h1>
+    <p class="my-8">
+      <span class="font-medium gradient-text">Quick and easy email sign-up! </span
+      > We will notifiy you once our whitelist opens up xD.
+    </p>
+    <form
+      novalidate=""
+      action=""
+      class="self-stretch space-y-3 ng-untouched ng-pristine ng-valid"
+    >
+      <div>
+        <label for="username" class="text-sm sr-only">Your Username</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Your username"
+          class="w-full rounded-md focus:ring focus:ring-violet-400 border-gray-700"
+          disabled="true"
+        />
+      </div>
+      <div>
+        <label for="email" class="text-sm sr-only">Email address</label>
+        <input
+          id="email"
+          type="text"
+          placeholder="Email address"
+          class="w-full rounded-md focus:ring focus:ring-violet-400 border-gray-700"
+          disabled="true"
+        />
+      </div>
+      <button
+        class="w-full py-2 font-semibold rounded bg-violet-400"
+        >Join the waitlist</button
+      >
+    </form>
+  </div>
+  <img
+    src="https://source.unsplash.com/random/480x360"
+    alt=""
+    class="object-cover w-full h-full rounded-xl xl:col-span-3"
+  />
+</section>

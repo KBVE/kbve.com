@@ -53,10 +53,13 @@ Proxmox Cheatsheet for quick commands.
   - `pct enter $v_id` - Enter the terminal of the container (LXC).
 
 * * *
+* * *
+* * *
 
 # Network
 
 - Proxmox has several types of networking options and integrations. We will go over the basics here and slowly expand to different concepts afterwards.
+- The default ports for proxmox are `8006` for the web panel, which you can log in via PAM/Proxmox PVE and `85` for the PvEDaemon. To double check the ports, run `nmap 127.0.0.1 -p-` to see the two open ports and then run `netstat -nlp | grep -E ":85|:8006"` to get more information.
 
 ## Network Config (OVH)
 

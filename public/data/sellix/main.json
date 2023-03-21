@@ -1,0 +1,127 @@
+{
+	"sections": {
+		"footer": {
+			"name": "Footer",
+			"settings": {
+				"blocks": {
+					"1668599780540": {
+						"name": "Footer social with background",
+						"settings": {
+							"properties": {
+								"footer_Text_title_size": 41,
+								"footer_Text_description": "",
+								"footer_Text_title654654": "Contact us through",
+								"footer_background_image": "https://cdn-theme.mysellix.io/shops/21839/themes/16745/44719ba5da7d3f629ecf15c6d8f91def638e203524596.png",
+								"footer_Text_title_alignment": "center",
+								"footer_Text_title_thickness": 900,
+								"footer_Text_description_size": 14,
+								"footer_Text_description_alignment": "center",
+								"footer_Text_description_thickness": 300
+							}
+						}
+					},
+					"1668604245499": {
+						"name": "Socials",
+						"settings": {
+							"properties": {
+								"sellix_socials_footer_tiktok": "https://kbve.com/tiktok/",
+								"sellix_socials_footer_discord": "https://kbve.com/discord/",
+								"sellix_socials_footer_twitter": "https://kbve.com/twitter/",
+								"sellix_socials_footer_youtube": "https://kbve.com/youtube/",
+								"sellix_socials_footer_twitch": "https://kbve.com/twitch/",
+								"sellix_socials_footer_facebook": "https://kbve.com/facebook/",
+								"sellix_socials_footer_instagram": "https://kbve.com/instagram",
+								"sellix_socials_footer_whatsapp": "https://kbve.com/whatsapp/"
+							}
+						}
+					},
+					"1668607610821": {
+						"name": "Horizontal separator",
+						"settings": {
+							"visible": true,
+							"properties": {
+								"show_on_small_screen": false
+							}
+						}
+					},
+					"1670366130307": {
+						"name": "Menu2",
+						"settings": {
+							"properties": {
+								"menu": "Main Menu"
+							}
+						}
+					}
+				},
+				"visible": true,
+				"properties": {
+					"footer_text": "<p>Copyright © 2022 Guarino - Digital Services theme by VGuarino</a>. All Rights Reserved&nbsp;</p>\n<p></p>\n",
+					"footer_font_size": 14,
+					"footer_font_color": "dark_font_color",
+					"footer_text_position": "center",
+					"footer_background_color": "transparent"
+				},
+				"block_order": [
+					"1668599780540",
+					"1668604245499",
+					"1668607610821",
+					"1670366130307"
+				]
+			}
+		},
+		"header": {
+			"name": "Header",
+			"settings": {
+				"blocks": {
+					"1670278307764": {
+						"name": "Menu2",
+						"settings": {
+							"properties": {
+								"menu": "Main Menu"
+							}
+						}
+					}
+				},
+				"visible": true,
+				"properties": {
+					"shop_name": "KBVE Shop",
+					"cart_title": "Shopping Cart",
+					"logo_image": "https://kbve.com/assets/img/letter_logo.png",
+					"header_height": 100,
+					"logo_alignment": "left",
+					"cart_description": "Add, remove products or go to the checkout page to proceed with the purchase.",
+					"cart_show_border": true,
+					"logo_image_height": 40,
+					"cart_item_font_size": 14,
+					"shop_name_font_size": 24,
+					"cart_item_font_color": "dark_font_color",
+					"cart_title_font_size": 16,
+					"shop_name_font_color": null,
+					"shop_name_text_align": "left",
+					"cart_background_color": "background_accent_dark",
+					"cart_item_font_weight": 400,
+					"cart_title_font_color": "light_font_color",
+					"cart_title_text_align": "left",
+					"shop_name_font_weight": 700,
+					"cart_title_font_weight": 700,
+					"cart_title_line_height": 100,
+					"cart_clear_button_label": "Clear",
+					"header_background_color": "background_accent_dark",
+					"cart_checkout_button_label": "Checkout",
+					"cart_description_font_size": 12,
+					"cart_description_font_color": "light_font_color",
+					"cart_description_text_align": "left",
+					"cart_description_font_weight": 400,
+					"cart_description_line_height": 100
+				},
+				"block_order": [
+					"1670278307764"
+				]
+			}
+		}
+	},
+	"section_order": [
+		"Header",
+		"Footer"
+	]
+}
