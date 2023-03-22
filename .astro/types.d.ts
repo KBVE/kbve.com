@@ -162,13 +162,6 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
-"k8s.mdx": {
-  id: "k8s.mdx",
-  slug: "k8s",
-  body: string,
-  collection: "application",
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
 "kubernetes.mdx": {
   id: "kubernetes.mdx",
   slug: "kubernetes",
