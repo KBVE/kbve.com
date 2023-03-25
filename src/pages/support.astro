@@ -9,6 +9,7 @@ const { content } = Astro.props;
 let title = "KBVE Support & Contact Page";
 let description =
   "Contact our support team directly through a live chat, ticket or schedule an appointment through our calendar. Furthermore, we can be reached via Discord, Twitch and Email, but using the ticket system is the best option.";
+import Calendly from "@w/Calendly.astro";
 ---
 
 <N ns="theme" title={title} description={description}>
@@ -29,11 +30,7 @@ let description =
           <p class="px-4 py-6 pt-0 ml-4 -mt-4">
             Pick a time slot within our calendar below!
           </p>
-          <N
-            ns="controller"
-            template="calendar"
-            className="calendly-inline-widget justify-center overflow-hidden aspect-w-16 aspect-h-9"
-          />
+          <Calendly user="kbve" tail="calendly-inline-widget justify-center overflow-hidden aspect-w-16 aspect-h-9" />
         </details>
         <details class="w-full border rounded-lg bg-offset">
           <summary

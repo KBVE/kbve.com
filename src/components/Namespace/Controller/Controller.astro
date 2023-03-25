@@ -15,7 +15,9 @@ import Features from "@c/Element/Features/Generic/features.astro";          /// 
 //?     [INTRO]:Folder
 import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]     ->  <Intro> should be in vanillaJS to avoid hydration issues.
 import WaitList from "@c/Scene/Intro/WaitList.astro";                       /// [WL]        ->  Wait List for KBVE 
-import How from "@c/Scene/Intro/How.astro";
+import How from "@c/Scene/Intro/How.astro";                                 /// [How]       ->  How Intro Scene
+import IntroReview from "@c/Scene/Intro/IntroReview.astro";                 /// [IR]        ->  Intro Review
+
 
 //?     [WIP]
 import ApplicationsScene from "@c/Scene/Applications/ApplicationsController/ApplicationsScene.astro";
@@ -25,7 +27,6 @@ import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astr
 
 //?     [Components]    -> Needs to be migrated to our controller.
 import HubspotLiveChat from '@c/Action/HubspotLiveChat';
-import Calendly from '@c/Action/Calendly';
 import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// [Lottie]    ->  [Int()]
 import Collections from "./Collections.astro";
 
@@ -34,6 +35,7 @@ import Redirect from '@c/Action/Redirect';                                  /// 
 import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 
 ---
+{(template == "introreview" && data == false) && <IntroReview />}
 {(template == "how" && data == false) && <How />}
 {(template == "waitlist" && data == false) && <WaitList />}
 {(template == "intro" && data == false) && <Intro />}
@@ -43,7 +45,6 @@ import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 {(template == "asset" && data == false) && <AssetScene />}
 {(template == "project" && data == false) && <ProjectScene />}
 {(template == "livechat" && data == false) && <HubspotLiveChat />}
-{(template == "calendar" && data == false) && <Calendly text_color="e7af86" primary_color="e7af86" className={className} />}
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }
 {(template == "socials") && <KBVESocial />}
 {(template == "collections") && <Collections id={id} data={data} />}
