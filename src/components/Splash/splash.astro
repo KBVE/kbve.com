@@ -1,14 +1,14 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import Starfield from "@c/Element/Background/Starfield/starfield.astro";
-import KBVELogo from "@c/Branding/KBVELogo";
-import spellbook from "@a/img/spellbook.png";
+//*       [IMPORT]
+import { Picture } from "@astrojs/image/components";                          /// Astro Picture
+//*       [IMPORT]->[Customs]
+import Starfield from "@c/Element/Background/Starfield/starfield.astro";      /// Starfield Affect
+import KBVELogo from "@c/Branding/KBVELogo";                                  /// KBVE Logo
+import spellbook from "@a/img/spellbook.png";                                 /// SpellBook
 ---
 
 <section class="relative h-full bg-black">
   <Starfield />
-  <!-- <Galaxia /> -->
-  <!--<div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">  <HeroImage />  </div>  -->
   <div class="relative grid h-full sm:grid-cols-2 place-items-center">
     <h2
       class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"

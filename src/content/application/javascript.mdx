@@ -16,27 +16,104 @@ tags:
 
 ## Javascript
 
-- JavaScript / JS is a core client-side language that has evolved into an industry leading collection of libraries and frameworks through Node.
-
-## Info
-
-General information regarding javascript.
+JavaScript / JS is a cross-platform object-oriented computer programming language that was originally designed to add interactivity and functionality to web content. 
+Over the years, it has evolved into an industry leading collection of libraries, packages and frameworks, which are used to create websites that are lively and engaging, as well as applications, games, and more.
 
 * * *
 
-## TailWindCSS
+## Info
+
+If you are a web developer or a web enthusiast, you have probably heard of JavaScript! Or why else would you be here?. 
+But what exactly is JavaScript?!, and why is it so dominant in web and application development?! 
+Suppose you had the ability to create a web page, game or application that can change its appearance based on the time of day, the weather, or the user's preferences. 
+Think of how amazing it would be if you could add interactive elements such as buttons, forms, sliders, or quizzes to your web page without reloading it. 
+Envision what it would be like to create stunning animations and graphics that make your web page stand out from the crowd. 
+JavaScript is the one true king of the web, and it can work wonders with minimal code. Whether you want to create dynamic websites, interactive games, or powerful apps, JavaScript can make it happen.
+In this eye-opening document, we will give you a brief overview of JavaScript, its history, its features, and its applications. 
+You will learn how JavaScript can make your web pages more dynamic and interactive, and how it can help you create stunning web applications that run in the browser. 
+Prepare to unleash the power of JavaScript with this mdx documentation. 
+You will learn everything you need to create dynamic and interactive web applications from scratch. 
+Whether you are a beginner or a seasoned coder, this guide will take your skills to the next level.
+
+* * *
+
+## Design
+
+Would you like to learn how to write JavaScript code that is clean, clear, and consistent?
+Do you have a passion and desire to solve common problems in software design with ease and elegance? 
+How would you like to master JavaScript and dazzle your peers and clients with your brilliant code?
+Did any of these questions resonate with you?
+If that rings a bell, you’ve hit the jackpot by coming to this resource!
+We will introduce you to the power and beauty of `design patterns` and how they can enhance and transform your work.
+Design patterns are reusable solutions that help you organize your code, simplify your logic, and communicate your intent. 
+They are like recipes or templates that you can use to cook up delicious and nutritious code for your app. 
+You will learn about some of the most common and useful design patterns in JavaScript, such as creational, structural, and behavioral patterns. 
+You will also see some real-world examples of how these patterns can make your code more efficient, maintainable, and readable. 
+By the end of this documentation, you will have a better understanding of design within JavaScript and how to apply it to your own projects. 
+And as a bonus, KBVE will also share with you some of the best resources and tools to learn more about design patterns and practice them in your own code. 
+So do not miss this opportunity to become a better JavaScript developer! 
+Read on, discover the secrets of design patterns and experience the magic and potential of design patterns for yourself below.
+
+### Design Patterns
+
+The theory of javascript design patterns can be classified into three major categories, namely creational, structural, and behavioral patterns. 
+These classes differ from each other in various distinctions and aspects, such as how complex and elaborate the pattern is, the level of detail it offers to the developer and end-user, and the scope of its impact on the system being designed.
+Understanding these divisions can help developers choose the most suitable design pattern for their specific needs and goals within the application, interface or project.
+
+#### Creational Design Patterns
+
+Creational patterns enable a more adaptable and reusable code by offering a flexible framework for creating objects or classes. 
+In this nature, the design shields the users from the complex construction process and streamline their interaction with the classes.
+Thus, the pattern controls the user-class interaction and save the developers from handling complex construction.
+
+Factories, builders and singletons are the three core concepts of creational design pattern.
+
+##### Abstract Factory
+
+The `Abstract Factory` concept is a component within creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. 
+This concept is advantageous when a system or application requires the versatility of handling diverse objects that share a thematic connection, or in other words, the system needs to work with multiple types of objects that are related by a common theme.
+
+To exemplify, envision that a developer is working on a cross-platform application that requires generating user interface components, such as buttons, modals, forms, text boxes, and menus.
+The programmer would utilize an `Abstract Factory` to define an interface for creating and rendering these UI elements. 
+Then, the developer could have different concrete factories that implement this interface to create UI building blocks for different platforms (e.g., Windows, Android, iOS, MacOS, Linux).
+As a result, the rest of your application codebase can remain the same and doesn’t need to know the details of how the UI/UX elements are created for each platform. 
+Instead, the application or software can just use the factory interface to create the UI features it needs, thus optimizing productivity and resources.
+
+##### Builder
+
+##### Singleton
+
+#### Structural Design Patterns
+
+Structural Design Patterns, SDP, are concerned with how objects and classes are composed to form larger structures. 
+They help to ensure that changes in one part of the system do not affect other parts.
+
+#### Behavioral Design Patterns
+
+Behavioral Design Patterns, BDP, define the communication between objects and how they interact with each other. 
+They help to ensure that objects work together in a coordinated manner.
+
+### UXUI
+
+Collection of design libraries and frameworks for your javascript applications.
+
+#### MUI
+
+Material UI, which is a library of UI components for Javascript applications that follows Googles design guidelines.
+
+#### TailWindCSS
 
 TailWindCSS or Tailwind is a custom open source CSS framework written in Javascript that enables utility css classes.
 
-### TailWindCSS Install
+##### TailWindCSS Install
 
 Since the core of TailWind is written in NodeJS, you can install it via `npm` || `yarn` || or any node package management software.
 
-### TailWind Config
+##### TailWindCSS Config
 
 The default name for the configuration file is `tailwind.config.js` or `tailwind.config.cjs` and the default location is within the root of the project.
 
-### Animation
+##### TailWindCSS Animation
 
 Animation Utility provides animating elements, which can be extended and abstractly layered through Rive/Lottie.
 
@@ -48,7 +125,7 @@ The default animations are:
 `animate-bounce` : Transform the Y access of the element. primary use case is for aesthetics.
 `hover:$animation` : Conditional statement, where if the mouse is over the element, perform the animation.
 
-#### Spin-Slow
+###### Spin-Slow
 
 This is a custom animation that you can add to TailWindCSS by extending the animations field within the configuration file.
 
@@ -354,7 +431,6 @@ Yarn:
 ```shell
 
 yarn add shiki
-
 ```
 
 ### Shiki Configurations
@@ -362,6 +438,7 @@ yarn add shiki
 Template themes for `Shiki`:
 
 ```ts
+
 export type Theme =
   | 'css-variables'
   | 'dark-plus'
@@ -392,7 +469,9 @@ export type Theme =
   | 'solarized-light'
   | 'vitesse-dark'
   | 'vitesse-light'
+
 ```
+
 
 ## Svelte
 
@@ -425,15 +504,17 @@ I have yet to test it out, keeping this here as a reference for future usage.
 
 - Adding `swup` page into your nodejs application via yarn.
 
-- ```shell
-    yarn add swup
-    ```
+```shell
 
-- Plugins to install for `swup` via yarn.
+yarn add swup
+```
 
-- ```shell
-    yarn add @swup/scripts-plugin @swup/a11y-plugin @swup/head-plugin @swup/slide-theme @swup/scroll-plugin @swup/preload-plugin @swup/body-class-plugin @swup/debug-plugin
-    ```
+Plugins to install for `swup` via yarn.
+
+```shell
+
+yarn add @swup/scripts-plugin @swup/a11y-plugin @swup/head-plugin @swup/slide-theme @swup/scroll-plugin @swup/preload-plugin @swup/body-class-plugin @swup/debug-plugin
+```
 
 ### SWUP Journal
 
@@ -464,4 +545,6 @@ We should note that the library has not been updated for a while and has some se
 
 The official repo is found [here](https://github.com/rwaldron/johnny-five)
 
+* * *
+* * *
 * * *
