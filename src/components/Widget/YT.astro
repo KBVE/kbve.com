@@ -1,0 +1,23 @@
+---
+///                 [Element]:{YT}                          
+//?                 YouTube Video Element with less resource usage.
+//!                 <MUST Pass the full YT URL> ??? So that 3rd party applications can render it safely without issues.  
+
+const { url } = Astro.props;
+---
+
+<!--    ! [START]  Inline Widget React YouTube Script -->
+<script
+  is:inline
+  async
+  src="https://kbve.github.io/widget-react-youtube/index.js"
+></script> 
+<!--    * [PARTYTOWN] 
+<script
+  type="text/partytown"
+  src="https://kbve.github.io/widget-react-youtube/index.js"
+></script>
+<!--!   [END]    -->
+
+<!--*   [@DisplayVideo] -->
+<div class="widget_react_youtube" url={url}></div>

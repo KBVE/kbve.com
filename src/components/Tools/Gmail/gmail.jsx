@@ -1,9 +1,11 @@
-//!     KBVE Search Module
-//?     The Search Module will grab the data points from each instance
+//!     KBVE Gmail Generator Module
+//?     The Generator Module will construct unique gmails to help you organize.
+//?     Unique gmails will be stored in the nanostore / locally and not sent anywhere outside of the user client.
 //*     [IMPORT]
 import DOMPurify from "dompurify";
 
-const SearchData = ({}) => {
+const Gmail = ({}) => {
+  //TODO Re-orangize the Gmail information
   //TODO  Sanitize the input data.
   //*     var clean = DOMPurify.sanitize(dirty, {USE_PROFILES: {html: false, mathMl: false, svg: false}});
   //TODO  Tab System for the different search engines and have extra data points.
@@ -22,4 +24,4 @@ const SearchData = ({}) => {
   //}
 };
 
-export default SearchData;
+export default Gmail;

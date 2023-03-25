@@ -22,14 +22,19 @@
     "types": ["@astrojs/image/client"],
     // Paths
     "paths": {
+        //? Short Path
         "@c/*": ["src/components/*"],
         "@l/*": ["src/layouts/*"],
         "@s/*": ["src/styles/*"],
         "@n/*": ["src/components/Namespace/*"],
+        "@w/*": ["src/components/Widget/*"],
         "@a/*": ["src/assets/*"],
+        //? Full Path
         "@components/*": ["src/components/*"],
         "@layout/*": ["src/layouts/*"],
         "@styles/*": ["src/styles/*"],
+        "@namespace/*": ["src/components/Namespace/*"],
+        "@widget/*": ["src/components/Widget/*"],
         "@assets/*": ["src/assets/*"],
     }
   }
