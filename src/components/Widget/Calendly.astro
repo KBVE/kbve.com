@@ -1,0 +1,23 @@
+---
+//<!--*         Calendly Widget --!>
+//<!--!         No Errors!
+//<!--TODO      Nothing for now!
+//<!--?         [IMPORT]
+const { user, tail } = Astro.props;
+---
+
+<div
+  class={tail}
+  data-url={`https://calendly.com/${user}?hide_landing_page_details=0&hide_gdpr_banner=0&text_color=&primary_color=`}
+  style={{
+    minWidth: `100%`,
+    height: `100%`,
+    overflow: "hidden",
+  }}
+>
+</div>
+<script
+  type="text/javascript"
+  src="https://assets.calendly.com/assets/external/widget.js"
+  async
+></script>

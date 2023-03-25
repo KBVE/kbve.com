@@ -27,7 +27,6 @@ import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astr
 
 //?     [Components]    -> Needs to be migrated to our controller.
 import HubspotLiveChat from '@c/Action/HubspotLiveChat';
-import Calendly from '@c/Action/Calendly';
 import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// [Lottie]    ->  [Int()]
 import Collections from "./Collections.astro";
 
@@ -46,7 +45,6 @@ import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 {(template == "asset" && data == false) && <AssetScene />}
 {(template == "project" && data == false) && <ProjectScene />}
 {(template == "livechat" && data == false) && <HubspotLiveChat />}
-{(template == "calendar" && data == false) && <Calendly text_color="e7af86" primary_color="e7af86" className={className} />}
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }
 {(template == "socials") && <KBVESocial />}
 {(template == "collections") && <Collections id={id} data={data} />}
