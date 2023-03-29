@@ -7,6 +7,7 @@ declare module 'astro:content' {
 		}>;
 	}
 }
+
 declare module 'astro:content' {
 	interface Render {
 		'.md': Promise<{
