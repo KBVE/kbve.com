@@ -25,7 +25,7 @@
     "svgo": "2.8.0"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.1.2",
+    "@astrojs/alpinejs": "^0.2.0",
     "@astrojs/image": "^0.15.1",
     "@astrojs/partytown": "^1.0.1",
     "@astrojs/react": "^2.0.0",
