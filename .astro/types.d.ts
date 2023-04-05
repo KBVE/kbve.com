@@ -710,13 +710,6 @@ declare module 'astro:content' {
   collection: "theory",
   data: InferEntrySchema<"theory">
 } & { render(): Render[".mdx"] },
-"prompt.mdx": {
-  id: "prompt.mdx",
-  slug: "prompt",
-  body: string,
-  collection: "theory",
-  data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
 "solarpunk.mdx": {
   id: "solarpunk.mdx",
   slug: "solarpunk",
