@@ -580,6 +580,13 @@ declare module 'astro:content' {
   collection: "stock",
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] },
+"o.mdx": {
+  id: "o.mdx",
+  slug: "o",
+  body: string,
+  collection: "stock",
+  data: InferEntrySchema<"stock">
+} & { render(): Render[".mdx"] },
 "spy.mdx": {
   id: "spy.mdx",
   slug: "spy",
