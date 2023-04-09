@@ -17,13 +17,19 @@ tags:
 - ubuntu
 ---
 
-# Cheatsheet
+## Information
 
-Proxmox Cheatsheet for quick commands.
+Proxmox is an exquisite open-source server platform that empowers you to orchestrate and administer virtual machines, containers, storage, networking, and backup.
+It is based on Linux (Debian operating system) and uses KVM (qEMU) and LXC as virtualization technologies. 
+Proxmox offers a web interface for easy administration, as well as command-line interface/tools and a RESTful API.
+The objective of this software is provide a base-line to build your own paradigm style hybrid cloud through HA (High Avalibity), CEPH and load balancing built-in. 
+> Hint: Utilize the PAM/PVE settings within Proxmox to secure and abstract the system authentication.
 
-## CLI
+* * * 
 
-- Basic CLI (Command-line interface)
+## Cheatsheet
+
+Proxmox Cheatsheet for quick commands and below are the basic CLI (command-line interface)
 
 ### QEMU
 - qEMU
@@ -56,12 +62,12 @@ Proxmox Cheatsheet for quick commands.
 * * *
 * * *
 
-# Network
+## Network
 
 - Proxmox has several types of networking options and integrations. We will go over the basics here and slowly expand to different concepts afterwards.
 - The default ports for proxmox are `8006` for the web panel, which you can log in via PAM/Proxmox PVE and `85` for the PvEDaemon. To double check the ports, run `nmap 127.0.0.1 -p-` to see the two open ports and then run `netstat -nlp | grep -E ":85|:8006"` to get more information.
 
-## Network Config (OVH)
+### Network Config (OVH)
 
 - Initial IPv4 Configuration during Install
 
@@ -104,11 +110,15 @@ Proxmox Cheatsheet for quick commands.
 
 - Test the command by pinging a domain (google.com) and an IPv4 (8.8.8.8), making sure that it works!
 
-## Windows
+### Windows
 
 This is a generic guide to installing and setting up windows.
 
 ### Offline
+
+* * *
+* * *
+* * *
 
 ## Notes
 
@@ -122,11 +132,14 @@ This is a generic guide to installing and setting up windows.
   - The script alters the css / js , so that the panel has a "Dark" / Discord theme base.
   - `bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh ) install`
 
-## Jokes
+## Podcast
 
-- General jokes/memes about the proxmox and general weird method
+General jokes/memes about the proxmox and general weird methods. 
+We were trying to find a cute and creative way to introduce the vast realm of virtual machines.
 
-## Podcast Jokes
+### Jokes
+
+Dock Swarm
 
 ```yaml
 # Setting up Docker Swarm on multiple Proxmox VE containers
