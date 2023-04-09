@@ -83,7 +83,7 @@ Whether you need to install software, configure settings, run commands, or anyth
 
 Let me dazzle you with an example of a playbook that I borrowed from the Ansible documentation.
 
-```YAML
+```yaml
 ---
 - name: Update web servers
   hosts: webservers
@@ -121,7 +121,7 @@ Each task has a name and a module to call with some parameters.
 
 #### Minecraft Server Update Playbook
 
-```YAML
+```yaml
 - name: Update Minecraft server
   hosts: minecraft
   vars:
@@ -208,8 +208,8 @@ The `gcp_compute_instance` module is an example of how you can achieve your goal
 
 Creating a compute instance with a specific name, zone, machine type, image and network:
 
-```YAML
-- name: Create GCP Instance
+```yaml
+- name: create gcp instance
   google.cloud.gcp_compute_instance:
     name: test_object
     zone: us-central1-a
@@ -236,8 +236,8 @@ The `disk` and `network` variables are assumed to be defined elsewhere in the pl
 
 Deleting a compute instance with a specific name and zone:
 
-```YAML
-- name: Delete GCP Instance
+```yaml
+- name: dlete gcp instance
   google.cloud.gcp_compute_instance:
     name: test_object
     zone: us-central1-a
@@ -251,8 +251,8 @@ It does not need to specify any other parameters, as the `name` and `zone` are e
 
 Updating a compute instance with a new machine type and labels
 
-```YAML
-- name: update a instance
+```yaml
+- name: update gcp instance
   google.cloud.gcp_compute_instance:
     name: test_object
     zone: us-central1-a
@@ -326,7 +326,7 @@ The Two tools that can be used together to automate IT infrastructure.
 
 Example Usage - With Username/Password:
 
-```txt
+```cfg
 provider "awx" {
     hostname = "http://localhost:8078"
     username = "kbvetest"
@@ -336,7 +336,7 @@ provider "awx" {
 
 Example Usage - With Token:
 
-```txt
+```cfg
 provider "awx" {
   hostname = "http://localhost:8078"
   token    = "awxtoken"
