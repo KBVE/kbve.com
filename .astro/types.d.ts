@@ -382,27 +382,27 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "crypto": {
-"btc.md": {
-  id: "btc.md",
+"btc.mdx": {
+  id: "btc.mdx",
   slug: "btc",
   body: string,
   collection: "crypto",
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".md"] },
-"doge.md": {
-  id: "doge.md",
+} & { render(): Render[".mdx"] },
+"doge.mdx": {
+  id: "doge.mdx",
   slug: "doge",
   body: string,
   collection: "crypto",
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".md"] },
-"eth.md": {
-  id: "eth.md",
+} & { render(): Render[".mdx"] },
+"eth.mdx": {
+  id: "eth.mdx",
   slug: "eth",
   body: string,
   collection: "crypto",
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "gaming": {
 "df.mdx": {

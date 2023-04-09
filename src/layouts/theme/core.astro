@@ -16,11 +16,11 @@ const { content, title, description } = Astro.props; //  Import Astro.props
   <head>
     <Head
       title={title || content.title}
-      description={title || content.description}
+      description={description || content.description}
     />
     <SocialMetaTag
       title={title || content.title}
-      description={title || content.description}
+      description={description || content.description}
     />
     <Theme />
   </head>
