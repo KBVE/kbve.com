@@ -7,9 +7,11 @@ const { content } = Astro.props; ///	[Astro Props]
   style={{ backgroundImage: `url(${content.img})` }}
   class={`bg-fill bg-center  bg-no-repeat md:bg-cover object-contain flex justify-center items-center flex-col shadow-2xl md:p-16 p-6 min-h-[15%]`}
 >
-  <h1 class="title md:text-6xl text-5xl text-white text-shadow-lg shadow-black">{content.title}</h1>
+  <h1 class="title md:text-6xl text-5xl text-white text-shadow-lg shadow-black">
+    {content.title}
+  </h1>
 </div>
-<div class="shadow-2xl p-4 bg-offset text-center rounded-b-3xl ">
+<div class="shadow-2xl p-4 bg-offset text-center rounded-b-3xl">
   {content.description}
 </div>
 
@@ -17,10 +19,17 @@ const { content } = Astro.props; ///	[Astro Props]
   <N ns="ads" template="banner" id="ezoic" />
 </div>
 
-<div class="shadow-2xl p-4 bg-offset rounded-3xl">
-  <div
-    class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
-  >
-    <slot />
+<!-- Wide center column -->
+<div class="flex flex-wrap">
+  <div class="w-full md:w-1/5 "></div> 
+  <div class="w-full md:w-3/5 ">
+    <div class="shadow-2xl p-4 bg-offset rounded-3xl">
+      <div
+        class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
+      >
+        <slot />
+      </div>
+    </div>
   </div>
+ <div class="w-full md:w-1/5 "></div>
 </div>
