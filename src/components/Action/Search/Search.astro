@@ -43,6 +43,14 @@ const { src, description } = Astro.props;
       <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
         <a
           class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+          onclick="changeAtiveTab(event,'tab-you')"
+        >
+          <i class="fas fa-briefcase text-base mr-1"></i> YOU
+        </a>
+      </li>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
           onclick="changeAtiveTab(event,'tab-gpt')"
         >
           <i class="fas fa-briefcase text-base mr-1"></i> GPT
@@ -78,12 +86,25 @@ const { src, description } = Astro.props;
               I am thinking of storing the data into the user's localStorage.
             </p>
           </div>
+          <!-- You.com -->
+          <div class="hidden" id="tab-you">
+            <p>
+              You.com
+              <br />
+              <SearchData engine="you" client:only />
+              <br />
+              Still a work in process
+            </p>
+          </div>
+          <!-- GPT -->
           <div class="hidden" id="tab-gpt">
             <p>
               GPT Tab
               <br />
+              <SearchData engine="bing" client:only />
               <br />
-              Still a work in process
+              Still a work in process.
+              I am thinking it might be better to open all the GPT links up via _target links? This is to avoid issues iframing them onto the main site.
             </p>
           </div>
         </div>
@@ -119,3 +140,10 @@ const { src, description } = Astro.props;
     document.getElementById(tabID).classList.add("block");
   }
 </script>
+<!-- 
+MIT License
+Copyright (c) 2023 Mammi, Creative Tim, VLocks
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
