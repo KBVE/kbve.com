@@ -531,6 +531,13 @@ declare module 'astro:content' {
   collection: "project",
   data: any
 } & { render(): Render[".mdx"] },
+"charles.mdx": {
+  id: "charles.mdx",
+  slug: "charles",
+  body: string,
+  collection: "project",
+  data: any
+} & { render(): Render[".mdx"] },
 "discord-sh.mdx": {
   id: "discord-sh.mdx",
   slug: "discord-sh",

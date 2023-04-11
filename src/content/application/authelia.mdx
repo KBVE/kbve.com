@@ -13,42 +13,58 @@ tags:
   - firewall
 ---
 
+import Details from "@w/Details.astro";
+
 ## Information
 
 > Tldr; Authelia is an authentication and authorization application that provides a backend server and frontend portal through various core features and plugins.
 
-Have you ever wondered how to secure your web applications with a simple and elegant solution? 
-Do you want to offer your users a seamless and convenient login experience across multiple domains and services? 
-If so, you might be interested in Autheila, an open-source authentication and authorization server that provides two-factor authentication and single sign-on (SSO) for your applications via a web portal. 
-In this document, I will introduce you to the features and benefits of Autheila, and show you how to set it up with some common reverse proxies like [Nginx](https://kbve.com/application/nginx), [Traefik](https://kbve.com/application/traefik), or HAProxy.
+Have you ever wondered how to secure your web applications with a simple, secure and elegant solution?
+Do you want to offer your users a seamless and convenient login experience across multiple domains and services?
+If so, you might be interested in Autheila, an open-source authentication and authorization server that provides two-factor authentication and single sign-on (SSO) for your applications via a web portal.
+In this document, KBVE will introduce you and your dev team to the features and benefits of Autheila, and show you how to set it up with some common reverse proxies like [Nginx](https://kbve.com/application/nginx), [Traefik](https://kbve.com/application/traefik), or HAProxy.
 By the end of this reference document, you will be able to protect your web applications with Autheila and enjoy a secure and hassle-free authentication process.
 
-
+<Details data="Metaphor for Autheila">
 ### Metaphor
 
-Autheila is a gatekeeper. 
-Autheila acts as a gatekeeper for your web applications, allowing or denying access based on your authentication and authorization policies. 
-It also provides a single key for your users to unlock multiple gates, saving them time and hassle. 
+Autheila is a gatekeeper!
+Autheila acts as a gatekeeper for your web applications, allowing or denying access based on your authentication and authorization policies.
+It also provides a single key for your users to unlock multiple gates, saving them time and hassle.
 Autheila is like a smart and reliable gatekeeper that keeps your web applications safe and user-friendly.
 
+</Details>
+
+<Details data="Autheila for a 5yr old!">
 ### 5
 
-> A quick description of Autheila for a 5 year old.
-
-Imagine you have a lot of toys that you like to play with on different websites. 
-Some of them are your own toys, and some of them are shared with your friends. 
-You do not want anyone else to take or break your toys, so you need a way to keep them safe. 
-Autheila is like a special friend who helps you do that. 
-Autheila asks you for your name and a secret code every time you want to play with your toys. 
-Sometimes, Autheila also asks you for another secret code that only you know or have. 
-This way, Autheila makes sure that it is really you and not someone else who wants to play with your toys. 
-Autheila also remembers your name and secret codes for all the websites, so you don’t have to type them again and again. 
-You just have to tell Autheila once, and then you can play with any toy you want. 
+Imagine you have a lot of toys that you like to play with on different websites.
+Some of them are your own toys, and some of them are shared with your friends.
+You do not want anyone else to take or break your toys, so you need a way to keep them safe.
+Autheila is like a special friend who helps you do that.
+Autheila asks you for your name and a secret code every time you want to play with your toys.
+Sometimes, Autheila also asks you for another secret code that only you know or have.
+This way, Autheila makes sure that it is really you and not someone else who wants to play with your toys.
+Autheila also remembers your name and secret codes for all the websites, so you don’t have to type them again and again.
+You just have to tell Autheila once, and then you can play with any toy you want.
 Autheila is like a smart and helpful friend who protects your toys and makes it easy for you to play with them.
+</Details>
 
-* * *
-* * *
-* * *
+---
+
+## Install
+
+There are different methods to install Authelia, depending on your preferences and environment. 
+
+### Docker
+
+---
+
+---
+
+---
+
+---
 
 ## Notes
 
@@ -56,9 +72,13 @@ Autheila is like a smart and helpful friend who protects your toys and makes it 
 
 #### Journal
 
-##### 04-10-2023
-General Authelia information and concepts.
+<Details data="04-11-2023">
+Added a quick details component to make the page a bit less clustered
+</Details>
 
+<Details data="04-10-2023">
+General Authelia information and concepts.
+</Details>
 ### License
 
 - Authelia is an open source application.

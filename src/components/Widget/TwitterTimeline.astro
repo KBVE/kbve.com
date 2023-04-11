@@ -1,0 +1,22 @@
+---
+//<!--*         TwitterTime Widget --!>
+//<!--!         No Errors!
+//<!--TODO      Grab the Twitter handle from the Team's MDX file.
+//<!--*         [IMPORT]
+//<!--?         Nothing to import for now
+//<!--*         [DATA]
+const { data, tail = "" } = Astro.props;
+let twitter = `https://twitter.com/${data}?ref_src=twsrc%5Etfw`;
+let tweets = `Tweets by ${data}`;
+---
+
+<div class={tail}>
+  <a
+    class="twitter-timeline"
+    data-theme="dark"
+    href={twitter}
+    >{tweets}</a
+  >
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
+  ></script>
+</div>

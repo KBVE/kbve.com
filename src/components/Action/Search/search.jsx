@@ -15,9 +15,7 @@ const SearchData = ({}) => {
   console.log(clean);
   //if (clean) {
   return (
-    <div>
-      <div className="gcse-search"></div>
-    </div>
+   console.log('okay')
   );
   //}
 };

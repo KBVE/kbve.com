@@ -114,6 +114,29 @@ Proxmox Cheatsheet for quick commands and below are the basic CLI (command-line 
 
 This is a generic guide to installing and setting up windows.
 
+#### Windows Error
+
+Quick and short solutions to common window errors that we faced when deploying.
+
+##### VirtIO Drivers
+
+There are two drivers that you can use, the `stable` and `latest` iso.
+To add them into your Proxmox instance, go to the iso folder, located below and then download the right driver ISO.
+
+```shell
+cd /var/lib/vz/template/iso
+```
+- Stable
+```shell
+wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
+```
+- Latest (in the case if Stable does not work.)
+```shell
+wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso
+```
+
+After downloading the right ISO, attach it to your KVM/QEMU instance and then reboot the machine. After the reboot, go to `My Computer` and run the iso to install the proper drivers.
+
 ### Offline
 
 * * *
