@@ -1,8 +1,8 @@
 ---
-//      Seach Action
-//      [IMPORT]
+//<!--*      Seach Action
+//<!--*      [IMPORT]
 import SearchData from "./search";
-//<!--*   [DATA]
+//<!--*      [DATA]
 const { src, description } = Astro.props;
 ---
 
@@ -12,63 +12,78 @@ const { src, description } = Astro.props;
   async
   src="https://cse.google.com/cse.js?cx=partner-pub-3698214103602019:ab1srxiqkuo"
 ></script>
-<!--    [END]     Google CSE Code --><!--    [START]   SearchData -->
-
-<!--    [END]     SearchData --><!-- component -->
-
-<!-- component -->
-
-<!-- New Component from Creative Tim's Discord, Huge thanks -->
+<!--    [END]     Google CSE Code --><!--    [START]   SearchData --><!--    [END]     SearchData --><!-- component --><!-- component --><!-- New Component from Creative Tim's Discord, Huge thanks -->
 <div class="flex flex-wrap" id="tabs-id">
   <div class="w-full">
     <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
       <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-slate-600" onclick="changeAtiveTab(event,'tab-profile')">
-          <i class="fas fa-space-shuttle text-base mr-1"></i>  Google
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-slate-600"
+          onclick="changeAtiveTab(event,'tab-profile')"
+        >
+          <i class="fas fa-space-shuttle text-base mr-1"></i> Google
         </a>
       </li>
       <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white" onclick="changeAtiveTab(event,'tab-settings')">
-          <i class="fas fa-cog text-base mr-1"></i>  Settings
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+          onclick="changeAtiveTab(event,'tab-settings')"
+        >
+          <i class="fas fa-cog text-base mr-1"></i> Settings
         </a>
       </li>
       <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white" onclick="changeAtiveTab(event,'tab-options')">
-          <i class="fas fa-briefcase text-base mr-1"></i>  Options
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+          onclick="changeAtiveTab(event,'tab-options')"
+        >
+          <i class="fas fa-briefcase text-base mr-1"></i> Options
+        </a>
+      </li>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+          onclick="changeAtiveTab(event,'tab-gpt')"
+        >
+          <i class="fas fa-briefcase text-base mr-1"></i> GPT
         </a>
       </li>
     </ul>
-    <div class="relative flex flex-col min-w-0 break-words bg-offset w-full mb-6 shadow-lg rounded">
+    <div
+      class="relative flex flex-col min-w-0 break-words bg-offset w-full mb-6 shadow-lg rounded"
+    >
       <div class="px-4 py-5 flex-auto">
         <div class="tab-content tab-space">
           <div class="block" id="tab-profile">
             <p>
               <div class="">
                 <div class="gcse-search"></div>
-              </div> 
+              </div>
               <SearchData client:only />
             </p>
           </div>
           <div class="hidden" id="tab-settings">
             <p>
-              Completely synergize resource taxing relationships via
-              premier niche markets. Professionally cultivate one-to-one
-              customer service with robust ideas.
+              Settings Tab.
               <br />
               <br />
-              Dynamically innovate resource-leveling customer service for
-              state of the art customer service.
+              There will be options for additional search engines? or options.
             </p>
           </div>
           <div class="hidden" id="tab-options">
             <p>
-              Efficiently unleash cross-media information without
-              cross-media value. Quickly maximize timely deliverables for
-              real-time schemas.
+              Options for the Search engine.
               <br />
               <br />
-              Dramatically maintain clicks-and-mortar solutions
-              without functional solutions.
+              I am thinking of storing the data into the user's localStorage.
+            </p>
+          </div>
+          <div class="hidden" id="tab-gpt">
+            <p>
+              GPT Tab
+              <br />
+              <br />
+              Still a work in process
             </p>
           </div>
         </div>
@@ -76,16 +91,19 @@ const { src, description } = Astro.props;
     </div>
   </div>
 </div>
+<!-- Core Tab Javascript -->
 <script type="text/javascript">
-  function changeAtiveTab(event,tabID){
+  function changeAtiveTab(event, tabID) {
     let element = event.target;
-    while(element.nodeName !== "A"){
+    while (element.nodeName !== "A") {
       element = element.parentNode;
     }
     ulElement = element.parentNode.parentNode;
     aElements = ulElement.querySelectorAll("li > a");
-    tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
-    for(let i = 0 ; i < aElements.length; i++){
+    tabContents = document
+      .getElementById("tabs-id")
+      .querySelectorAll(".tab-content > div");
+    for (let i = 0; i < aElements.length; i++) {
       aElements[i].classList.remove("text-white");
       aElements[i].classList.remove("bg-slate-600");
       aElements[i].classList.add("text-slate-600");
