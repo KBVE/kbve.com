@@ -3,7 +3,7 @@
 //*     [IMPORT]
 import DOMPurify from "dompurify";
 
-const SearchData = ({}) => {
+const SearchData = ({ engine = "" }) => {
   //TODO  Sanitize the input data.
   //*     var clean = DOMPurify.sanitize(dirty, {USE_PROFILES: {html: false, mathMl: false, svg: false}});
   //TODO  Tab System for the different search engines and have extra data points.
@@ -12,12 +12,21 @@ const SearchData = ({}) => {
   let clean = DOMPurify.sanitize(searchParams.get("q"), {
     USE_PROFILES: { html: false, mathMl: false, svg: false },
   });
-  console.log(clean);
-  //if (clean) {
-  return (
-   console.log('okay')
-  );
-  //}
+  if (clean && engine == "you") {
+    return (
+      <div class="">
+        <iframe src={`https://you.com/search?q=${clean}&tbm=youchat`} onload="iframeLoaded()" className="w-full h-screen"></iframe>
+        {clean}
+      </div>
+    )
+  }
+  if (clean && engine == "bing") {
+    return (
+      <div class="">
+        Not yet ready! Sorry
+      </div>
+    )
+  }
 };
 
 export default SearchData;
