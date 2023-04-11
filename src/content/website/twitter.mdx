@@ -2,10 +2,27 @@
 status: true
 layout: ../../layouts/theme/mdx.astro
 title: KBVE Twitter
-description: KBVE Twitter Page
+description: The official KBVE Twitter Page! You can see each teammate's twitter timeline but KBVE does not have an official twitter account, so best to use h0lybyte as a reference.
 img: https://images.unsplash.com/photo-1613062975324-f95b97f29233?fit=crop&w=1400&h=700&q=75
 icon: community
 tags:
 - community
 - concept
 ---
+
+import TwitterTimeline from "@w/TwitterTimeline.astro";
+import Details from "@w/Details.astro";
+
+KBVE does not have an official twitter but check out our team's Twitter feed below! We suggest to follow them all ;D
+
+<Details data="h0lybyte's Twitter">
+<TwitterTimeline data="h0lybyte" />
+</Details>
+
+<Details data="Fudster's Twitter">
+<TwitterTimeline data="Fudsyy" />
+</Details>
+
+<Details data="Ziggy's Twitter">
+<TwitterTimeline data="jzanecook" />
+</Details>
