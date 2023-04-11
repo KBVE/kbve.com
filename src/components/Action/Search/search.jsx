@@ -15,7 +15,7 @@ const SearchData = ({ engine = "" }) => {
   if (clean && engine == "you") {
     return (
       <div class="">
-        <iframe src={`https://you.com/search?q=${clean}&tbm=youchat`} onload="iframeLoaded()" className="w-full h-screen"></iframe>
+        <iframe src={`https://you.com/search?q=${clean}&tbm=youchat&cfr=chat`} onload="iframeLoaded()" className="w-full h-screen"></iframe>
         {clean}
       </div>
     )
