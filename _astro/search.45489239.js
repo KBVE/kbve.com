@@ -1,0 +1,2 @@
+import{p as o}from"./purify.es.7357be35.js";//!     KBVE Search Module
+const r=({})=>{const e=new URL(window.location.href).searchParams;let s=o.sanitize(e.get("q"),{USE_PROFILES:{html:!1,mathMl:!1,svg:!1}});return console.log(s),console.log("okay")};export{r as default};
