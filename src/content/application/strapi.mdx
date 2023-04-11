@@ -3,18 +3,41 @@ layout: ../../layouts/theme/mdx.astro
 title: Strapi
 category: Application
 client: Self
-publishDate: 2022-10-07 03:35:00
+publishDate: 2023-04-10 03:35:00
 img: https://images.unsplash.com/photo-1622279488885-d831e8e76cef?fit=crop&w=1400&h=700&q=75
 repo: https://github.com/strapi/strapi
-description: 🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript, fully customizable and developer-first.
+description: 🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript, fully customizable and developer-first. This document will provide you with everything you need to install and maintain your Strapi instance.
 tags:
 - api
 - cms
+- nodejs
 ---
 
-## Strapi Reference
+## Information
 
-### MySQL Instructions
+Strapi, an open-source headless CMS written in NodeJS, is the ultimate solution for creating and managing your content in a modern and flexible way through an user-friendly admin panel.
+You can customize every aspect of your content model and logic, and choose from a variety of databases to store your data. 
+Furthermore, Strapi also supports both RESTful and GraphQL APIs, so you can easily connect your content to any front-end framework or platform you prefer.
+Whether you want to build a blog, a portfolio, an e-commerce platform, or anything else, Strapi can help you achieve your goals with ease and elegance while delivering your content faster and easier.
+
+
+* * *
+
+## Install
+
+> Before the installation process, we recommend setting up the [database](#database).
+
+* * *
+
+## Database
+
+Strapi supports various databases.
+
+### MySQL
+
+> Find additional information on [MySQL](https://kbve.com/application/mysql/)
+
+Below are the generic commands for setting up a `strapi` database. 
 
 - `CREATE DATABASE strapi;`
 - `CREATE USER 'strapi'@'localhost';`
@@ -27,10 +50,18 @@ tags:
 
 > In this scenario, you probably did what I did and altered the password with `ALTER USER 'strapi'@'localhost' IDENTIFIED BY 'strapi';` which is incorrect, insert `WITH mysql_native_password` in there and you should be good afterwards.
 
-### hCaptcha
+* * *
+
+## Security
+
+### Captcha
+
+#### hCaptcha
 
 - In the .env include the secret_key , which you can obtain from hCaptcha via their settings for the account.
 - Note: HCAPTCHA=secret_key
+
+* * *
 
 ## i18n
 
@@ -39,7 +70,11 @@ tags:
 - 10/11/2022 - R&D within the i18n and utilizing it on the front-end.
 - Issue [#73](https://github.com/KBVE/kbve.com/issues/73)
 
-## Login
+* * *
+
+## Functions
+
+### Login
 
 - The login for Strapi can be either a combination of `username + password` or `email + password`. Both `username` and `email` are passed through as an entity defined as `indentifier`. After the login action is sucessful, the API returns two variables:
   - User:
@@ -51,7 +86,7 @@ tags:
   - JWT:
     - The JWT (`jwt` or `token`) is an extremely important piece of data that contains the authentication for the user. We are currently reviewing how we should go about storing this token and utilizing it later down the line.
 
-## Register
+### Register
 
 - For registration, we ask the user to submit a generic form that contains the following variables:
   - Username
@@ -64,6 +99,14 @@ tags:
     - After the user solves the captcha, an one-time code is generated, which is passed along as a `token`. If the captcha is wrong or missing, the Strapi returns an error.
 - We still need to take the errors that `Strapi` sends back , parse and then render them client side.
 
-### Journal
+## Notes
 
-- Updating to 4.5v and then re-organizing the notes!
+### Log
+
+#### Journal
+
+##### 2023-04-10
+Updating the notes with a bit more information and organizing.
+
+##### 2023-03-20 
+Updating to 4.5v and then re-organizing the notes!
