@@ -18,7 +18,7 @@ const Gmail = ({}) => {
   //if (clean) {
   return (
     <div>
-      <div className="gcse-search"></div>
+      
     </div>
   );
   //}

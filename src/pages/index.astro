@@ -2,6 +2,7 @@
 //<!-- ?       [index]
 //<!-- *       [IMPORT]
 import N from "@n/N.astro"; //<!-- ?  [Namespace]:[N]
+import SHash from "@c/Tools/SHash";
 //<!-- *       [MIGRATION]: -> [@Components]
 import Splash from "@c/Splash/splash.astro"; //<!-- ! [SPLASH]    ->  Splash is still giving issues as of 1/2/2022.
 import WaitList from "@c/Scene/Intro/WaitList.astro"; //<!-- ! [WL]        ->  WaitList Component from Mamba
@@ -17,6 +18,7 @@ let description = "KBVE - KiloByte Virtual Enterprise is a consultancy firm that
   description={description}
   template={"data"}
 >
+  <SHash client:only />
   <!-- Splash -->
   <Splash />
   <!-- Advert -->

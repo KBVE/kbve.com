@@ -13,6 +13,8 @@ tags:
   - host
 ---
 
+import Details from "@w/Details.astro";
+
 ## Introduction
 
 > Automation software that enables `IaC` - also known as, infrastructure as code, thus allowing user to provision, configure, deploy and secure a whole array of software, applications and machines.
@@ -23,15 +25,15 @@ Ansible is a versatile and secure automation tool that harnesses the power of op
 The software / application works by connecting to your devices by sending out tiny programs called modules that perform your tasks with precision and speed.
 Ansible can help you automate provisioning, configuration management, application deployment, and many other manual IT processes
 
+<Details data="Metaphor for Ansible">
 Think of it like: 
 
 - Ansible is like a remote control that lets you manage your devices with the push of a button.
 - Ansible is like a chef that prepares a delicious meal using different ingredients and recipes.
 - Ansible is like a conductor that orchestrates a symphony of servers and applications.
+</Details>
 
-### 5
-
-> A quick description of the Ansible for a 5 year old.
+<Details data="Ansible described for a 5yr old!">
 
   Ansible is a tool that helps people do things with computers. 
 Sometimes people have many computers and they want to do the same thing on all of them. 
@@ -41,6 +43,7 @@ Ansible makes it easy and fun and has a list of things that people want to do wi
 It can read the list and do the things one by one and then also check if the things are done correctly. 
 Ansible can talk to different kinds of computers and tell them what to do. 
 Think of Ansible like a friend that helps people with computers.
+</Details>
 
 * * *
 
@@ -59,7 +62,13 @@ You can also install Ansible from source code if you want to use the latest deve
 You can also customize and fine-tune other settings in the `ansible.cfg` file or by using environment variables or command-line options.
 To confirm that Ansible is installed and configured correctly, you can run the ansible command with the ping module to test the connectivity and responsiveness of your managed nodes.
 
-* * *
+<Details data="Need extra installation help?">
+
+[Ask our support team?](https://kbve.com/support/) or visit our [Discord](https://kbve.com/discord/)
+
+If you need help with [Python, read our docs](https://kbve.com/application/python/)
+
+</Details>
 * * *
 
 ## Cheatsheet
@@ -326,7 +335,7 @@ The Two tools that can be used together to automate IT infrastructure.
 
 Example Usage - With Username/Password:
 
-```cfg
+```ini
 provider "awx" {
     hostname = "http://localhost:8078"
     username = "kbvetest"
@@ -336,7 +345,7 @@ provider "awx" {
 
 Example Usage - With Token:
 
-```cfg
+```ini
 provider "awx" {
   hostname = "http://localhost:8078"
   token    = "awxtoken"
