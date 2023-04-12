@@ -13,21 +13,21 @@
     "kbve": "astro sync && astro build && astro preview"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.18.3",
+    "@astrojs/mdx": "^0.18.4",
     "@astrojs/preact": "^2.1.0",
     "@astrojs/prefetch": "^0.2.1",
     "@astrojs/sitemap": "^1.2.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
-    "astro": "^2.2.1",
+    "astro": "^2.2.3",
     "astro-compress": "^1.1.35",
-    "sass": "^1.61.0",
+    "sass": "^1.62.0",
     "svgo": "2.8.0",
     "yarn-upgrade-all": "^0.7.2"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.1",
-    "@astrojs/image": "^0.16.5",
+    "@astrojs/image": "^0.16.6",
     "@astrojs/partytown": "^1.2.0",
     "@astrojs/react": "^2.1.1",
     "@astrojs/tailwind": "^3.1.1",

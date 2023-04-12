@@ -30,10 +30,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.3.1.tgz#76930733f6711af0242307da681ca9d278a33df7"
   integrity sha512-xV/3r+Hrfpr4ECfJjRjeaMkJvU73KiOADowHjhkqidfNPVAWPzbqw1KePXuMK1TjzMvoAVE7E163oqfH3lDwSw==
 
-"@astrojs/image@^0.16.5":
-  version "0.16.5"
-  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.16.5.tgz#243ebc059a6a199afe64a8e3d2a176d94d3c7ad8"
-  integrity sha512-pps2fXTcPqUJOaATgrXT2eQwYJeW2fmd+QuQLqBiiIQHaECNugHCt/MwBi9skn+195VcFtYM3eCTjvmRrx4fPQ==
+"@astrojs/image@^0.16.6":
+  version "0.16.6"
+  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.16.6.tgz#227268462d5b21cdf191a337eb9b3213d74cf5ae"
+  integrity sha512-/MJ0aByhuNAT7VeMwXVjS0e5IH8MxsYeEnymOJ0/1VBmZFmcbtb1nUeLE0uO3EV3kNYGRJtwGyald8YJ9ncW4A==
   dependencies:
     "@altano/tiny-async-pool" "^1.0.2"
     http-cache-semantics "^4.1.0"
@@ -79,10 +79,10 @@
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
 
-"@astrojs/mdx@^0.18.3":
-  version "0.18.3"
-  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-0.18.3.tgz#784468827803568c4e05f12dd95a612589e3db94"
-  integrity sha512-fFkzYthnFqxmdp6IesvzU6FDHdAGo9bf4dbMOPCREcBfEhATqSpT9gjK/HdJ5s1MfZI8jjYeSC3yzhmNlq62qA==
+"@astrojs/mdx@^0.18.4":
+  version "0.18.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-0.18.4.tgz#adabbeaa48ce787f23134753e6448867a2a4ff5c"
+  integrity sha512-yLlHF74oBtCCPnCY4LBios3OrXc97IXIBVOWuyXxmNwAYMA4xIfClN2YP9cFQJITDI/d80qrANzQLQInUNKlHA==
   dependencies:
     "@astrojs/markdown-remark" "^2.1.3"
     "@astrojs/prism" "^2.1.1"
@@ -99,6 +99,7 @@
     remark-gfm "^3.0.1"
     remark-smartypants "^2.0.0"
     shiki "^0.11.1"
+    source-map "^0.7.4"
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
 
@@ -1342,10 +1343,10 @@ astro-icon@^0.8.0:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
-astro@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.2.1.tgz#548ba89ec695592a205e2c1b6e39aa8f78d6f1bc"
-  integrity sha512-yYPRzh3su38bi3VBCKmYAUBkQSaFQMKFsu8JAVDzFRoGLbskJ/6JkDX2abSB9/iRug8GAKaH/FWxXOTzIsSQ7Q==
+astro@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.2.3.tgz#62ab6bdeffa4f44d879ea9c89db6015230fd2ee4"
+  integrity sha512-Pd67ZBoYxqeyHCZ0UpdmDZYNgcs7JTwc0NMzUScrH4y2hjSY4S8iwmNUtd9pf65gkxMpEbqfvQj06kLzgi4HZg==
   dependencies:
     "@astrojs/compiler" "^1.3.1"
     "@astrojs/language-server" "^0.28.3"
@@ -4639,10 +4640,10 @@ sass-formatter@^0.7.5:
   dependencies:
     suf-log "^2.5.3"
 
-sass@^1.61.0:
-  version "1.61.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.61.0.tgz#d1f6761bb833887b8fdab32a24e052c40531d02b"
-  integrity sha512-PDsN7BrVkNZK2+dj/dpKQAWZavbAQ87IXqVvw2+oEYI+GwlTWkvbQtL7F2cCNbMqJEYKPh1EcjSxsnqIb/kyaQ==
+sass@^1.62.0:
+  version "1.62.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.62.0.tgz#3686b2195b93295d20765135e562366b33ece37d"
+  integrity sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -4803,7 +4804,7 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-source-map@^0.7.0, source-map@^0.7.3:
+source-map@^0.7.0, source-map@^0.7.3, source-map@^0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
