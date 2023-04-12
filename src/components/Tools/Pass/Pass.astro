@@ -1,0 +1,175 @@
+---
+//<!--*         Pass Tool
+//<!--!         [IMPORT]
+//<!--TODO      Migrate NFC Pass to a quick pass tool for us to use.
+---
+
+<div class="canvas">
+  <div class="container">
+    <div class="page-header">
+      <h1>Passkeep - Secure Password Generator</h1>
+    </div>
+    <p class="lead">SHA256 Generate:</p>
+
+    <!-- form -->
+    <p>
+      <form class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
+        <div class="form-group">
+          <label for="sdomain" class="text-primary">Domain: </label>
+          <input
+            type="text"
+            class="form-control"
+            name="sdomain"
+            id="sdomain"
+            aria-describedby="domainHelp"
+            placeholder="Enter Domain"
+          />
+          <p id="domainHelp" class="form-text text-muted"
+            >Domain TLD is used as the salt for the password. Salt: <b> <div class="gradient-text" id="tld"> </div> </b> </p>
+        </div>
+        <div class="form-group">
+          <label for="eIPassword1" class="text-primary">Master Password: </label>
+          <input
+            type="password"
+            class="form-control"
+            id="eIPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="finalpass" class="text-primary">Finalized Password: </label>
+          <input
+            type="text"
+            class="form-control"
+            id="finalpass"
+            placeholder="finalpass"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="regex" class="text-primary">Regex: </label>
+          <input
+            type="text"
+            class="form-control"
+            id="regex"
+            placeholder="Regex"
+          />
+        </div>
+
+        <button type="button" class="px-4 py-2 border rounded-md border-gray-100 gradient-text" onclick="generate();"
+          >Generate</button
+        >
+      </form>
+    </p>
+    <!-- /.form -->
+  </div><!-- /.container -->
+</div>
+<!-- /.canvas -->
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"
+  integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"
+  integrity="sha256-bbNosz5JlGdezcH8vxdbJ+b/hVKQTTRxrb+kM13pxc0="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/psl/1.1.27/psl.min.js"
+  integrity="sha384-SwQ/3RKNbCrSStLwvLgMkcjj41mDiEno7qwiosvV95+RSGf8gK+akwDNqt1dmVnA"
+  crossorigin="anonymous"
+></script>
+
+<script type="text/javascript">
+  // Functions Below by Kory Becker
+
+  function getHostName(url) {
+    var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+    if (
+      match != null &&
+      match.length > 2 &&
+      typeof match[2] === "string" &&
+      match[2].length > 0
+    ) {
+      return match[2];
+    } else {
+      return null;
+    }
+  }
+  function getDomain(url) {
+    var hostName = getHostName(url);
+    var domain = hostName;
+
+    if (hostName != null) {
+      var parts = hostName.split(".").reverse();
+
+      if (parts != null && parts.length > 1) {
+        domain = parts[1] + "." + parts[0];
+
+        if (
+          hostName.toLowerCase().indexOf(".co.uk") != -1 &&
+          parts.length > 2
+        ) {
+          domain = parts[2] + "." + domain;
+        }
+      }
+    }
+
+    return domain;
+  }
+
+  function generate() {
+    var r_salt = psl.get($("#sdomain").val());
+    if (r_salt == null) {
+      var r_salt = getDomain($("#sdomain").val());
+    }
+    console.log(r_salt);
+    var password = $("#eIPassword1").val();
+    var finalpassword = $.Deferred();
+    console.log(r_salt + password);
+    if (r_salt != null) {
+      finalpassword = sha256(r_salt + password);
+      $("#tld").html(r_salt);
+      $("#finalpass").val(finalpassword);
+    } else {
+      $("#tld").html("Error in salt");
+      $("#finalpass").val("ERROR");
+    }
+  }
+
+  /**
+* Implementing Regex :
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* //
+
+
+//   $('#tld').html($('#domain').val());
+/**
+function _salt() {
+
+  var salt = $.Deferred();
+   $("#domain").on("ended", function() {
+       salt = getDomain($('#domain').val());
+    });
+      return playsound.promise();
+}
+
+**/
+</script>
