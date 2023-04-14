@@ -483,13 +483,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] },
 },
 "news": {
-"release-rigor.md": {
-  id: "release-rigor.md",
+"release-rigor.mdx": {
+  id: "release-rigor.mdx",
   slug: "release-rigor",
   body: string,
   collection: "news",
   data: InferEntrySchema<"news">
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "npc": {
 "lucifurr/emotion/happy.md": {

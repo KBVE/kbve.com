@@ -9,18 +9,30 @@ img: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fit=crop&w=140
 description: Realty Income is a blue chip real estate investment trust that pays a monthly dividend.
 ticker: O
 dividend: true
-exchange: NASDAQ
+exchange: NYSE
 tags:
 - reit
 - us
 - branding
 ---
 
+import Details from "@w/Details.astro";
+import TradingView from "@w/TradingView.astro";
+
+
 ## Information
 $O is the stock symbol for *Realty Income Corporation*, a real estate investment trust (REIT) that owns and operates over 6,500 commercial properties in the United States and Europe. 
 The company motto is "The Monthly Dividend Company" because it is known for paying monthly dividends to its shareholders and has increased its dividend for 109 consecutive quarters since its public listing in 1994.
 
-### Intro
+---
+
+## Charts
+
+<TradingView data="NYSE:O" />
+
+---
+
+## Intro
 
 If you are looking for a reliable source of monthly income from your investments, you might want to consider Realty Income Corporation ($O), a real estate investment trust (REIT) that owns and operates over 6,500 commercial properties in the United States and Europe.
 Realty Income is known as "The Monthly Dividend Company" because it has paid dividends to its shareholders every month since its public listing in 1994. In fact, it has increased its dividend for 109 consecutive quarters, making it one of the few S&P 500 Dividend Aristocrats.
@@ -29,8 +41,20 @@ Realty Income's stock performance has been impressive over the years. It has del
 If you are interested in investing in Realty Income, you can buy its shares through any online brokerage platform that offers access to the NYSE. You can also learn more about the company by visiting its website at www.realtyincome.com.
 Realty Income is a great example of a REIT that provides consistent and growing income to its investors. By owning high-quality properties with long-term leases, it has built a solid reputation as one of the best dividend stocks in the market.
 
-***
 
-## Charts
+---
 
-***
+## Notes
+
+These are the collection of notes for the Reality Income MDX Document.
+
+### Log
+
+- [X] Add Charts for $O
+- [ ] Add tabs with charts!
+
+#### Journal
+
+<Details data="2023-04-14">
+Testing the charts for O
+</Details>

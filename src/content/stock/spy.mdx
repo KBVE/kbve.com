@@ -10,13 +10,37 @@ isin: US78462F1030
 cusip: 78462F103
 ticker: spy
 dividend: true
-exchange: NYSE
+exchange: AMEX
 tags:
-- trust
-- us
-- etf
+  - trust
+  - us
+  - etf
 ---
+
+import Details from "@w/Details.astro";
+import TradingView from "@w/TradingView.astro";
 
 ## Information
 
-- The S&P 500 index is a stock market index that tracks ~500 of the largest U.S. companies by market capitalization; the index is a product of S&P Dow Jones Indices, a joint venture of S&P Global and CME Group.
+The S&P 500 index is a stock market index that tracks ~500 of the largest U.S. companies by market capitalization; the index is a product of S&P Dow Jones Indices, a joint venture of S&P Global and CME Group.
+
+---
+
+## Charts
+
+<TradingView data="AMEX:spy" />
+
+---
+
+## Notes
+
+These are the collection of notes for the SPY 500 MDX Document.
+
+### Log
+
+- [x] Add Charts for $SPY
+- [ ] Add tabs with charts!
+
+#### Journal
+
+<Details data="2023-04-14">Testing the charts for $SPY</Details>
