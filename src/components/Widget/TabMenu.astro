@@ -1,0 +1,76 @@
+---
+//<!--*         TabMenu Widget --!>
+//<!--!         No Errors!
+//<!--TODO      Nothing for now!
+//<!--?         [IMPORT]
+    const { data, tail, first, ref} = Astro.props;
+---
+
+<div class="flex flex-wrap" id="tabs-id">
+    <div class="w-full">
+      <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
+        
+        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <a
+              class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-slate-600"
+              onclick={`changeAtiveTab(event,'tab-${first}')`}
+            >
+              <i class="fas fa-space-shuttle text-base mr-1"></i> {first}
+            </a>
+        </li>
+        
+        {
+            data.map((app) => (
+              <>
+              <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+          <a
+            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-white"
+            onclick={`changeAtiveTab(event,'tab-${app}')`}
+          >
+            <i class="fas fa-space-shuttle text-base mr-1"></i> {app}
+          </a>
+        </li>
+              </>)
+              )
+        }
+       
+      </ul>
+      <div
+        class="relative flex flex-col min-w-0 break-words bg-offset w-full mb-6 shadow-lg rounded"
+      >
+        <div class="px-4 py-5 flex-auto">
+          <div class="tab-content tab-space">
+            <slot />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Core Tab Javascript -->
+  <script is:inline type="text/javascript">
+    function changeAtiveTab(event, tabID) {
+      let element = event.target;
+      while (element.nodeName !== "A") {
+        element = element.parentNode;
+      }
+      ulElement = element.parentNode.parentNode;
+      aElements = ulElement.querySelectorAll("li > a");
+      tabContents = document
+        .getElementById("tabs-id")
+        .querySelectorAll(".tab-content > div");
+      for (let i = 0; i < aElements.length; i++) {
+        aElements[i].classList.remove("text-white");
+        aElements[i].classList.remove("bg-slate-600");
+        aElements[i].classList.add("text-slate-600");
+        aElements[i].classList.add("bg-white");
+        tabContents[i].classList.add("hidden");
+        tabContents[i].classList.remove("block");
+      }
+      element.classList.remove("text-slate-600");
+      element.classList.remove("bg-white");
+      element.classList.add("text-white");
+      element.classList.add("bg-slate-600");
+      document.getElementById(tabID).classList.remove("hidden");
+      document.getElementById(tabID).classList.add("block");
+    }
+  </script>
