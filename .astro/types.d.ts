@@ -126,6 +126,13 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
+"appwrite.mdx": {
+  id: "appwrite.mdx",
+  slug: "appwrite",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] },
 "authelia.mdx": {
   id: "authelia.mdx",
   slug: "authelia",
@@ -741,6 +748,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "tools": {
+"pass.mdx": {
+  id: "pass.mdx",
+  slug: "pass",
+  body: string,
+  collection: "tools",
+  data: any
+} & { render(): Render[".mdx"] },
 "status.mdx": {
   id: "status.mdx",
   slug: "status",

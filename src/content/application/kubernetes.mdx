@@ -13,11 +13,13 @@ tags:
   - cloud
 ---
 
-## Kubernetes
+## Information
 
 Kubernetes is a CNCF-certified open-source container orchestration system for automating the deployment, scaling and management of virtual micro machines within a hybrid cloud.
 
-## K
+---
+
+## Kubernetes
 
 - Generic `k` alias for kubernetes.
   - without sudo
@@ -41,8 +43,10 @@ Kubernetes is a CNCF-certified open-source container orchestration system for au
   - Slave / Worker:
     - `k` - Kubernetes that run the specific workload within the cluster.
 - Pods `pod`:
+
   - Group of `k` - containers and volumes that operate under the isolated namespace network.
   - Deployed by Operator Portainer/Rancher/User via manifest YAML-schema.
+
     - Example:
 
       ```shell
@@ -58,7 +62,9 @@ Kubernetes is a CNCF-certified open-source container orchestration system for au
 ### k3s Install
 
 - Install k3s
+
   - Note: We are using Ubuntu as the host operating system for the k3s.
+
     - Update & Upgrade `Ubuntu`
 
       - ```shell
@@ -81,12 +87,13 @@ Kubernetes is a CNCF-certified open-source container orchestration system for au
       sudo chown $(id -u):$(id -g) $HOME/.kube/config
       ```
 
-      - Create directory: `mkdir -p $HOME/.kube`  
+      - Create directory: `mkdir -p $HOME/.kube`
       - Copy over Rancher `sudo cp /etc/rancher/k3s/k3s.* $HOME/.kube/config`
       - Permissions: `sudo chown $(id -u):$(id -g) $HOME/.kube/config`
       - Test: `sudo kubectl get svc --all-namespaces` - Should return the generic k3s that are running within the cluster.
       - Verify: `sudo nmap -sU -sT -p0-65535 127.0.0.1`
         - To install nmap, run `sudo apt-get install nmap` and then confirm.
+
   - Verification
     - Location for k3s after install
       - organic location -> : `/var/lib/rancher/k3s`
@@ -105,21 +112,21 @@ Access might require `root`.
   - Master Token
     - Before the agents can connect, they will need a token from the master, which can be obtained from below:
 
-* * *
+---
 
 ## Help
 
 - Kubectl Help
   - `sudo kubectl -h` || `k -h`
 
-* * *
+---
 
 ## Cheatsheet
 
 - Cluster:
 
   - ```shell
-    sudo kubectl cluster-info   
+    sudo kubectl cluster-info
     ```
 
 - View full config minified
@@ -153,6 +160,7 @@ Access might require `root`.
     ```
 
 - Get everything running in kubernetes
+
   - In all namespaces
 
     - ```shell
@@ -166,6 +174,7 @@ Access might require `root`.
       ```
 
 - Get services running in kubernetes
+
   - In all namespaces
 
     - ```shell
@@ -187,7 +196,7 @@ Access might require `root`.
 - Delete deployment via $name
 
   - ```shell
-    sudo kubectl delete deployment.apps/$name` 
+    sudo kubectl delete deployment.apps/$name`
     ```
 
 - Delete namespace , defined by $name
@@ -197,6 +206,7 @@ Access might require `root`.
     ```
 
     - std out: namespace "$name" deleted - Successful.
+
 - Get classes for storage
 
   - ```shell
@@ -205,6 +215,8 @@ Access might require `root`.
 
     - std out: storage provisioners.
 
+---
+
 ## Patch
 
 - Kube Patches
@@ -212,6 +224,7 @@ Access might require `root`.
 ### Kubectl Patch
 
 - Patching an existing service
+
   - Generic Command:
 
     ```shell
@@ -220,15 +233,19 @@ Access might require `root`.
 
 - Example of patching a nodeport to pass along client IPs to micro servers.
 
-  - ```shell
+  - ````shell
           sudo kubectl patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Local"}}'`
           ```
+
+    ````
 
   - Example of patching a nodeport to load balance.
 
     - ```shell
       sudo kubectl patch svc nodeport -p  '{"spec":{"externalTrafficPolicy":"Cluster"}}'
       ```
+
+---
 
 ## Portainer Agent
 
@@ -242,7 +259,9 @@ environment:
 ```
 
 - Setup Portainer Agent
+
   - Load Balancer lb
+
     - LB Command:
 
     ```shell
@@ -250,7 +269,9 @@ environment:
     ```
 
     - Agent 2.16 as of 11/17/2022 Previously the revision was ~2.15 as of 09/30/2022~
+
   - Node Port nodeport
+
     - NodePort Command:
 
     ```shell
@@ -262,6 +283,7 @@ environment:
     - Environment Address: `$addrString:$ipInt32` - The location for the kubernetes cluster. i.e `k8scluster007.kbve.com:9001`
       - Note: Make sure the port 9001 is open for communication between the cluster and Portainer.
   - Advance Optional Settings
+
     - Group: `$groupString` - The name of the group for the cluster
     - Tags: `$tagsMap` - Drop down to select the tags for the cluster.
 
@@ -272,9 +294,11 @@ environment:
 - Collection of harden manifests by the DoD
   - [DSOP](https://repo1.dso.mil/dsop)
 
-## Kubernetes Storage
+---
 
-- A major component for the
+## Storage
+
+- A major component for kubernetes (clusters) is how to handle the storage and volumes.
 
 ### Kubernetes NFS
 
@@ -284,10 +308,14 @@ External Provider
 CSI-Driver-NFS
 [CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs)
 
+---
+
 ## okd
 
 - [OKD](https://github.com/pvelati/okd-proxmox-scripts)
 - OKD Notes still need to be worked on.
+
+---
 
 ## vCluster
 
@@ -336,3 +364,5 @@ Note: You may have to double check if the: `%APPDATA%\vcluster` was installed su
 
 - Confirm
   - Run `vcluster --version` to confirm that the install was sucessful.
+
+---
