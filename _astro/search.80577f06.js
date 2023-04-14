@@ -1,0 +1,2 @@
+import{p as t}from"./purify.es.7357be35.js";import{j as r}from"./jsx-runtime.1f80f1dd.js";import"./index.254df4da.js";//!     KBVE Search Module
+const m=({engine:s=""})=>{const e=new URL(window.location.href).searchParams;let a=t.sanitize(e.get("q"),{USE_PROFILES:{html:!1,mathMl:!1,svg:!1}});return a&&"you"==s?r.jsxs("div",{class:"",children:[r.jsx("iframe",{src:`https://you.com/search?q=${a}&tbm=youchat&cfr=chat`,onload:"iframeLoaded()",className:"w-full h-screen"}),a]}):a&&"bing"==s?r.jsx("div",{class:"",children:"Not yet ready! Sorry"}):void 0};export{m as default};
