@@ -1,20 +1,20 @@
 ---
 layout: ../../layouts/theme/mdx.astro
-title: Ethereum
-ticker: eth
-exchange: COINBASE
+title: Binance Coin
+ticker: bnb
+exchange: BINANCE
 category: Crypto
 client: Self
 frontpage: true
-publishDate: 2022-08-24 00:00:00
-img: https://images.unsplash.com/photo-1622790698141-94e30457ef12?fit=crop&w=1400&h=700&q=75
-description: Ethereum is a decentralized smart contract blockchain system.
+publishDate: 2023-04-14 00:00:00
+img: https://images.unsplash.com/photo-1624438253998-7bb8eca8a3f0?fit=crop&w=1400&h=700&q=75
+description: BNB token is the native coin of Binance Chain, which is the blockchain platform of Binance, the largest cryptocurrency exchange in the world. The BNB token can be used for various purposes such as paying for fees, participating in token sales, staking, lending, spending and sending crypto.
 isin: None
 tags:
-- technology
-- global
-- blockchain
-- eth
+  - technology
+  - global
+  - blockchain
+  - eth
 ---
 
 import Details from "@w/Details.astro";
@@ -22,14 +22,15 @@ import TradingView from "@w/TradingView.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
 
-
 ## Information
 
-Ethereum is a PoS blockchain eco-system that provides smart contract functionality.
+BNB Token
+
+---
 
 <TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
   <TabData tail="block" data="chart">
-    <TradingView data="bitstamp:ETHUSD" />
+    <TradingView data="BINANCE:BNBUSD" />
   </TabData>
   <TabData data="settings">Settings</TabData>
   <TabData data="options">Options</TabData>
@@ -39,19 +40,16 @@ Ethereum is a PoS blockchain eco-system that provides smart contract functionali
 
 ## Notes
 
-These are the collection of notes for the Ether MDX Document.
+These are the collection of notes for the BNB MDX Document.
 
 ### Log
 
-- [X] Add Charts for ETHUSD
+- [x] Add Charts for BNB Token
 - [ ] Add tabs with charts!
 - [ ] Multi Currency support for Charts?
 
 #### Journal
 
-<Details data="2023-04-14">
-Testing the charts for Eth
-</Details>
-
+<Details data="2023-04-14">Adding the BNB Token</Details>
 </TabData>
 </TabMenu>

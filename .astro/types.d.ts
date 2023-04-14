@@ -389,6 +389,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "crypto": {
+"bnb.mdx": {
+  id: "bnb.mdx",
+  slug: "bnb",
+  body: string,
+  collection: "crypto",
+  data: InferEntrySchema<"crypto">
+} & { render(): Render[".mdx"] },
 "btc.mdx": {
   id: "btc.mdx",
   slug: "btc",
@@ -406,6 +413,13 @@ declare module 'astro:content' {
 "eth.mdx": {
   id: "eth.mdx",
   slug: "eth",
+  body: string,
+  collection: "crypto",
+  data: InferEntrySchema<"crypto">
+} & { render(): Render[".mdx"] },
+"xrp.mdx": {
+  id: "xrp.mdx",
+  slug: "xrp",
   body: string,
   collection: "crypto",
   data: InferEntrySchema<"crypto">

@@ -1,15 +1,15 @@
 ---
 layout: ../../layouts/theme/mdx.astro
-title: Bitcoin
-ticker: btc
-exchange: Bitstamp
+title: XRP Ripple Coin
+ticker: xrp
+exchange: BINANCE
 category: Crypto
 client: Self
 frontpage: true
-publishDate: 2022-08-24 00:00:00
-img: https://images.unsplash.com/photo-1621416894569-0f39ed31d247?fit=crop&w=1400&h=700&q=75
-description: Bitcoin is the first decentralized blockchain cryptocurrency.
-isin: XC000A2YY636
+publishDate: 2023-04-14 00:00:00
+img: https://images.unsplash.com/photo-1624438253998-7bb8eca8a3f0?fit=crop&w=1400&h=700&q=75
+description: This is XRP
+isin: None
 tags:
 - technology
 - global
@@ -21,16 +21,15 @@ import TradingView from "@w/TradingView.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
 
+
 ## Information
 
-Bitcoin is the first cryptocurrency based upon a SHA-256 blockchain.
+Ripple 
 
 ---
-
-
 <TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
   <TabData tail="block" data="chart">
-    <TradingView data="bitstamp:BTCUSD" />
+    <TradingView data="BINANCE:BNBUSD" />
   </TabData>
   <TabData data="settings">Settings</TabData>
   <TabData data="options">Options</TabData>
@@ -40,18 +39,18 @@ Bitcoin is the first cryptocurrency based upon a SHA-256 blockchain.
 
 ## Notes
 
-These are the collection of notes for the BTC MDX Document.
+These are the collection of notes for the XRP / Ripple MDX Document.
 
 ### Log
 
-- [X] Add Charts for BTCUSD
+- [X] Add Charts for BNB Token
 - [ ] Add tabs with charts!
 - [ ] Multi Currency support for Charts?
 
 #### Journal
 
 <Details data="2023-04-14">
-Testing the charts for BTC
+    Adding the BNB Token
 </Details>
 
 </TabData>
