@@ -11,11 +11,39 @@ ticker: aapl
 dividend: true
 exchange: NASDAQ
 tags:
-- technology
-- us
-- branding
+  - technology
+  - us
+  - branding
 ---
+
+import Details from "@w/Details.astro";
+import TradingView from "@w/TradingView.astro";
 
 ## Information
 
-- Apple Inc. is one of the most popular consumer electronics and software companies in the world. They are the largest technology company by revenue and the most profitable company in the world. Apple's products are highly popular and are used by people all over the world. Apple has been around for a long time now, and for good reason. They have always been a company that has been on the cutting edge of technology, and they are always coming up with new and innovative ways to improve the lives of their customers. They are one of the Big Five American information technology companies, alongside Alphabet, Amazon and Microsoft.
+Apple Inc. is one of the most popular consumer electronics and software companies in the world.
+Apple has been around for a long time now, and for good reason because their products are highly popular and are used by people all over the world.
+They have always been a company that has been on the cutting edge of technology, and they are always coming up with new and innovative ways to improve the lives of their customers.
+
+---
+
+## Charts
+
+<TradingView data="NASDAQ:AAPL" />
+
+---
+
+## Notes
+
+These are the collection of notes for the AAPL MDX Document.
+
+### Log
+
+- [X] Add Charts for AAPL
+- [ ] Add tabs with charts!
+
+#### Journal
+
+<Details data="2023-04-14">
+Testing the charts for AAPL
+</Details>
