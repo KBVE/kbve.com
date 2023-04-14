@@ -18,6 +18,8 @@ tags:
 
 import Details from "@w/Details.astro";
 import TradingView from "@w/TradingView.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
 
 ## Information
 
@@ -25,11 +27,16 @@ Bitcoin is the first cryptocurrency based upon a SHA-256 blockchain.
 
 ---
 
-## Charts
 
-<TradingView data="bitstamp:BTCUSD" />
-
----
+<TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
+  <TabData tail="block" data="chart">
+    <TradingView data="bitstamp:BTCUSD" />
+  </TabData>
+  <TabData data="settings">Settings</TabData>
+  <TabData data="options">Options</TabData>
+  <TabData data="exchange">Exchanges</TabData>
+  <TabData data="reports">Reports</TabData>
+  <TabData data="notes">
 
 ## Notes
 
@@ -46,3 +53,6 @@ These are the collection of notes for the BTC MDX Document.
 <Details data="2023-04-14">
 Testing the charts for BTC
 </Details>
+
+</TabData>
+</TabMenu>
