@@ -1,0 +1,13 @@
+---
+//<!--*         TabData Widget --!>
+//<!--!         No Errors!
+//<!--TODO      Nothing for now!
+//<!--?         [IMPORT]
+    const { data, tail = "hidden"} = Astro.props;
+---
+
+<div class={tail} id={`tab-${data}`}>
+    <p>
+      <slot />
+    </p>
+</div>
