@@ -11,7 +11,7 @@ const { content } = Astro.props; ///	[Astro Props]
     {content.title}
   </h1>
 </div>
-<div class="shadow-2xl p-4 bg-offset text-center rounded-b-3xl">
+<div class="shadow-2xl shadow-fuchsia-400  p-4 bg-offset text-center rounded-b-3xl">
   {content.description}
 </div>
 
@@ -21,9 +21,9 @@ const { content } = Astro.props; ///	[Astro Props]
 
 <!-- Wide center column -->
 <div class="flex flex-wrap">
-  <div class="w-full md:w-1/5 "></div> 
-  <div class="w-full md:w-3/5 ">
-    <div class="shadow-2xl p-4 bg-offset rounded-3xl">
+  <div class="w-full md:w-1/12 "></div>
+  <div class="w-full md:w-10/12 ">
+    <div class="shadow-2xl  p-4 bg-offset rounded-3xl">
       <div
         class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
       >
@@ -31,5 +31,5 @@ const { content } = Astro.props; ///	[Astro Props]
       </div>
     </div>
   </div>
- <div class="w-full md:w-1/5 "></div>
+ <div class="w-full md:w-1/12 "></div>
 </div>

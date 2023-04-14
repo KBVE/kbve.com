@@ -15,7 +15,11 @@ const {
 <tv-widget data-data={data}>
   <!-- TradingView Widget BEGIN -->
   <div class="tradingview-widget-container">
-    <div id="tradingview_1fdf2" class="min-h-max h-96"></div>
+    <div id="tradingview_1fdf2" class="w-full h-96"></div>
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="tradingview-widget-copyright">
       <a href="#tradingview" rel="noopener" target="_blank">
         <span class="blue-text">Stock charts {data}</span>
@@ -34,7 +38,8 @@ const {
         super();
         const data = this.dataset.data;
         new TradingView.widget({
-          autosize: true,
+          width: "100%",
+          autosize: false,
           symbol: data,
           interval: "D",
           timezone: "Etc/UTC",

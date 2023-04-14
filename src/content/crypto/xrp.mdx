@@ -18,18 +18,24 @@ tags:
 
 import Details from "@w/Details.astro";
 import TradingView from "@w/TradingView.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+
 
 ## Information
 
 Ripple 
 
 ---
-
-## Charts
-
-<TradingView data="BINANCE:BNBUSD" />
-
----
+<TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
+  <TabData tail="block" data="chart">
+    <TradingView data="BINANCE:BNBUSD" />
+  </TabData>
+  <TabData data="settings">Settings</TabData>
+  <TabData data="options">Options</TabData>
+  <TabData data="exchange">Exchanges</TabData>
+  <TabData data="reports">Reports</TabData>
+  <TabData data="notes">
 
 ## Notes
 
@@ -46,3 +52,6 @@ These are the collection of notes for the XRP / Ripple MDX Document.
 <Details data="2023-04-14">
     Adding the BNB Token
 </Details>
+
+</TabData>
+</TabMenu>
