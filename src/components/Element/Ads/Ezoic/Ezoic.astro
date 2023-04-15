@@ -12,12 +12,11 @@ import EzoicInContent from "./EzoicInContent.astro"; //?        {Ezoic}:[118]
 import EzoicContent from "./EzoicContent.astro"; //?            {Ezoic}:[119]
 import EzoicSmallBox from "./EzoicSmallBox.astro"; //?          {Ezoic}:[120]
 import EzoicMidBanner from "./EzoicMidBanner.astro"; //?        {Ezoic}:[121]
-//122?
-//123?
+import EzoicMDX from "./EzoicMDX.astro";            //?         {Ezoic}:[123]
 //?             [DATA]
 const { content, template, data, id, className = "" } = Astro.props;
 ---
-
+{template == "mdx" && <EzoicMDX data={data} />}
 {template == "banner" && <EzoicBanner data={data} />}
 {template == "box" && <EzoicBox data={data} />}
 {template == "footer" && <EzoicFooter data={data} />}
