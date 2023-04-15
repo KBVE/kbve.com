@@ -13,7 +13,14 @@ tags:
   - firewall
 ---
 
+import GitHub from "@w/Github.astro";
 import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import YT from "@w/YT.astro";
+
+<TabMenu first="intro" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
+  <TabData tail="block" data="intro">
 
 ## Information
 
@@ -50,21 +57,50 @@ You just have to tell Autheila once, and then you can play with any toy you want
 Autheila is like a smart and helpful friend who protects your toys and makes it easy for you to play with them.
 </Details>
 
----
-
 ## Install
 
 There are different methods to install Authelia, depending on your preferences and environment. 
 
 ### Docker
 
----
 
----
+</TabData>
 
----
+  <TabData data="cheatsheet">
 
----
+  ## Cheatsheet
+
+  Autheila
+
+  </TabData>
+
+<TabData data="system">
+
+## System
+
+System resources, information and general help.
+
+## Backups
+
+</TabData>
+
+<TabData data="errors">
+
+## Errors
+
+Common errors within Autheila that our team has ran across. 
+
+</TabData>
+
+<TabData data="videos">
+
+## Videos
+
+Autheila videos that will help you with installing, updating and other things.
+
+</TabData>
+
+<TabData data="notes">
 
 ## Notes
 
@@ -83,3 +119,6 @@ General Authelia information and concepts.
 
 - Authelia is an open source application.
 - Authelia operates under the Apache 2.0 license.
+
+</TabData>
+</TabMenu>
