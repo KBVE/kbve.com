@@ -19,9 +19,11 @@ import Details from "@w/Details.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
 import YT from "@w/YT.astro";
+import N from "@n/N.astro";
 
 <TabMenu first="intro" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
-  <TabData tail="block" data="intro">
+
+<TabData tail="block" data="intro">
 
 ## Information
 
@@ -29,13 +31,15 @@ Join the global Android community of millions of users and developers who collab
 Unleash your creativity and make your smartphone, tablet, or smartwatch truly your own with the endless array of apps and features available on Android, tailored to fit your unique needs and preferences.
 Our job at KBVE will be to provide you with everything you need to deploy your own Android application on almost any device!
 
-
 ## Introduction
 
 Everything you need to get started with Android!
 
-  </TabData>
-  <TabData data="cheatsheet">
+<N ns="ads" template="mdx2" id="ezoic" />
+
+</TabData>
+
+<TabData data="cheatsheet">
 
 ## Cheatsheet
 
@@ -128,16 +132,17 @@ Generic Android Keyevents:
 - Java: `pulibc class KeyEvent extends InputEvent implements Parcelable`
 
 </TabData>
+
 <TabData data="system">
 
-## System Information 
+## System Information
 
 </TabData>
 
 <TabData data="errors">
 
 ## Errors
-  
+
 </TabData>
   
 <TabData data="videos">
@@ -164,5 +169,6 @@ Notes for Android MDX.
 
 <Details data="2023-04-15">Testing the tabs for Android MDX</Details>
 
-  </TabData>
+</TabData>
+
 </TabMenu>

@@ -18,9 +18,10 @@ import Details from "@w/Details.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
 import YT from "@w/YT.astro";
+import N from "@n/N.astro";
 
-<TabMenu first="intro" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
-  <TabData tail="block" data="intro">
+<TabMenu first="general" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
+  <TabData tail="block" data="general">
 
 ## Information
 
@@ -33,6 +34,7 @@ In this document, KBVE will introduce you and your dev team to the features and 
 By the end of this reference document, you will be able to protect your web applications with Autheila and enjoy a secure and hassle-free authentication process.
 
 <Details data="Metaphor for Autheila">
+
 ### Metaphor
 
 Autheila is a gatekeeper!
@@ -55,22 +57,20 @@ This way, Autheila makes sure that it is really you and not someone else who wan
 Autheila also remembers your name and secret codes for all the websites, so you don’t have to type them again and again.
 You just have to tell Autheila once, and then you can play with any toy you want.
 Autheila is like a smart and helpful friend who protects your toys and makes it easy for you to play with them.
+
 </Details>
 
 ## Install
 
-There are different methods to install Authelia, depending on your preferences and environment. 
-
-### Docker
-
+There are different methods to install Authelia, depending on your preferences and environment.
 
 </TabData>
 
   <TabData data="cheatsheet">
 
-  ## Cheatsheet
+## Cheatsheet
 
-  Autheila
+Autheila
 
   </TabData>
 
@@ -80,7 +80,6 @@ There are different methods to install Authelia, depending on your preferences a
 
 System resources, information and general help.
 
-## Backups
 
 </TabData>
 
@@ -88,7 +87,7 @@ System resources, information and general help.
 
 ## Errors
 
-Common errors within Autheila that our team has ran across. 
+Common errors within Authelia that our team has ran across.
 
 </TabData>
 
@@ -96,7 +95,7 @@ Common errors within Autheila that our team has ran across.
 
 ## Videos
 
-Autheila videos that will help you with installing, updating and other things.
+Authelia videos that will help you with installing, updating and other things.
 
 </TabData>
 
@@ -104,21 +103,22 @@ Autheila videos that will help you with installing, updating and other things.
 
 ## Notes
 
+Notes on Authelia
+
 ### Log
 
 #### Journal
 
-<Details data="04-11-2023">
-Added a quick details component to make the page a bit less clustered
-</Details>
+<Details data="2023-04-15">Added a test case for the tab system. Looking to see if there might be any other issues when building out the system.</Details>
+<Details data="2023-04-11">Added a quick details component to make the page a bit less clustered</Details>
+<Details data="2023-04-10">General Authelia information and concepts.</Details>
 
-<Details data="04-10-2023">
-General Authelia information and concepts.
-</Details>
 ### License
 
 - Authelia is an open source application.
 - Authelia operates under the Apache 2.0 license.
+
+<N ns="ads" template="mdx2" id="ezoic" />
 
 </TabData>
 </TabMenu>
