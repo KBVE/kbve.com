@@ -19,6 +19,8 @@ tags:
 
 import Details from "@w/Details.astro";
 import TradingView from "@w/TradingView.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
 
 ## Information
 
@@ -26,11 +28,20 @@ The S&P 500 index is a stock market index that tracks ~500 of the largest U.S. c
 
 ---
 
-## Charts
+<TabMenu first="chart" data={["intro", "options", "exchange", "reports", "notes"]}>
+  <TabData tail="block" data="chart">
+    <TradingView data="AMEX:spy" />
+  </TabData>
+  <TabData data="intro">
 
-<TradingView data="AMEX:spy" />
+## Intro
 
----
+
+</TabData>
+  <TabData data="options">Options</TabData>
+  <TabData data="exchange">Exchanges</TabData>
+  <TabData data="reports">Reports</TabData>
+  <TabData data="notes">
 
 ## Notes
 
@@ -44,3 +55,6 @@ These are the collection of notes for the SPY 500 MDX Document.
 #### Journal
 
 <Details data="2023-04-14">Testing the charts for $SPY</Details>
+
+</TabData>
+</TabMenu>
