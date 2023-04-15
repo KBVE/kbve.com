@@ -14,16 +14,14 @@ tags:
   - mobile
 ---
 
-import GitHub from "@w/Github.astro";
 import Details from "@w/Details.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
-import YT from "@w/YT.astro";
 import N from "@n/N.astro";
 
-<TabMenu first="intro" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
+<TabMenu first="general" data={["cheatsheet", "system", "errors", "media", "notes"]}>
 
-<TabData tail="block" data="intro">
+<TabData tail="block" data="general">
 
 ## Information
 
@@ -98,6 +96,12 @@ You can use ADB shell commands to perform actions such as changing the resolutio
 - `adb shell ps` - Query process status on the device.
 - `exit` - To exit ADB.
 
+---
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+---
+
 ### Key Events
 
 Android Key Events - A quick breakdown for each event and how the operating system handles them.
@@ -145,13 +149,21 @@ Generic Android Keyevents:
 
 </TabData>
   
-<TabData data="videos">
+<TabData data="media">
   
 ## Videos
 
-<YT url="https://www.youtube.com/watch?v=fis26HvvDII" />
+<N ns="c" template="yt" data="https://www.youtube.com/watch?v=fis26HvvDII" />
 
-<YT url="https://www.youtube.com/watch?v=aS__9RbCyHg" />
+--- 
+
+<N ns="c" template="yt" data="https://www.youtube.com/watch?v=aS__9RbCyHg" />
+
+---
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+---
 
 </TabData>
 
@@ -164,6 +176,7 @@ Notes for Android MDX.
 ### Log
 
 - [ ] Need more information and data for the Android MDX.
+- [ ] Add Namespace into the Android MDx.
 
 #### Journal
 

@@ -13,57 +13,65 @@ tags:
   - host
 ---
 
-import GitHub from "@w/Github.astro";
 import Details from "@w/Details.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
-import YT from "@w/YT.astro";
 import N from "@n/N.astro";
+
+<TabMenu first="general" data={["cheatsheet", "media", "notes"]}>
+
+<TabData tail="block" data="general">
 
 ## Introduction
 
 > Automation software that enables `IaC` - also known as, infrastructure as code, thus allowing user to provision, configure, deploy and secure a whole array of software, applications and machines.
 
-  With Ansible, you can automate complex IT tasks with minimal effort and maximum efficiency. 
+With Ansible, you can automate complex IT tasks with minimal effort and maximum efficiency.
 Ansible lets you manage systems, deploy applications, and coordinate workflows with simple and powerful modules.
 Ansible is a versatile and secure automation tool that harnesses the power of open source, Python, and SSH to connect and automate your devices.
 The software / application works by connecting to your devices by sending out tiny programs called modules that perform your tasks with precision and speed.
 Ansible can help you automate provisioning, configuration management, application deployment, and many other manual IT processes
 
 <Details data="Metaphor for Ansible">
-Think of it like: 
+Think of it like:
 
 - Ansible is like a remote control that lets you manage your devices with the push of a button.
 - Ansible is like a chef that prepares a delicious meal using different ingredients and recipes.
 - Ansible is like a conductor that orchestrates a symphony of servers and applications.
+
 </Details>
 
 <Details data="Ansible described for a 5yr old!">
 
-  Ansible is a tool that helps people do things with computers. 
-Sometimes people have many computers and they want to do the same thing on all of them. 
-For example, they might want to make them play a game, or show a picture, or talk to each other. 
-Doing the same thing on many computers can be hard and boring. 
-Ansible makes it easy and fun and has a list of things that people want to do with computers. 
-It can read the list and do the things one by one and then also check if the things are done correctly. 
-Ansible can talk to different kinds of computers and tell them what to do. 
+Ansible is a tool that helps people do things with computers.
+Sometimes people have many computers and they want to do the same thing on all of them.
+For example, they might want to make them play a game, or show a picture, or talk to each other.
+Doing the same thing on many computers can be hard and boring.
+Ansible makes it easy and fun and has a list of things that people want to do with computers.
+It can read the list and do the things one by one and then also check if the things are done correctly.
+Ansible can talk to different kinds of computers and tell them what to do.
 Think of Ansible like a friend that helps people with computers.
+
 </Details>
 
-* * *
+---
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+---
 
 ## Install
 
-  To install Ansible, you need two machines: a control node and a managed node. 
-The control node is where you run Ansible commands and playbooks, and the managed node is where Ansible performs the tasks. 
+To install Ansible, you need two machines: a control node and a managed node.
+The control node is where you run Ansible commands and playbooks, and the managed node is where Ansible performs the tasks.
 The control node can be any UNIX-like machine with Python 3.9 or newer installed, while the managed node can be any device that supports Python 2.7 or newer and SSH or PowerShell remoting.
 
-  Depending on your operating system, you can install Ansible from different sources.
-For example, on Ubuntu, you can use the apt package manager to install Ansible from the official repositories. 
-On Windows, you can use Windows Subsystem for Linux (WSL) to install Ansible from PyPI using pip / pip3. 
+Depending on your operating system, you can install Ansible from different sources.
+For example, on Ubuntu, you can use the apt package manager to install Ansible from the official repositories.
+On Windows, you can use Windows Subsystem for Linux (WSL) to install Ansible from PyPI using pip / pip3.
 You can also install Ansible from source code if you want to use the latest development version.
 
-  After installing Ansible, you need to configure it by setting up the inventory file that lists the managed nodes and their connection details. 
+After installing Ansible, you need to configure it by setting up the inventory file that lists the managed nodes and their connection details.
 You can also customize and fine-tune other settings in the `ansible.cfg` file or by using environment variables or command-line options.
 To confirm that Ansible is installed and configured correctly, you can run the ansible command with the ping module to test the connectivity and responsiveness of your managed nodes.
 
@@ -74,23 +82,14 @@ To confirm that Ansible is installed and configured correctly, you can run the a
 If you need help with [Python, read our docs](https://kbve.com/application/python/)
 
 </Details>
-* * *
 
-## Cheatsheet
-
-> tldr; Commands that will make it easier operate ansible scripts / playbooks. This cheatsheet is still a work-in-progress.
-
-An Ansible cheatsheet is a quick and handy reference guide that provides examples and tips on how to use Ansible command line tools and playbooks, thus enabling you to unleash the power of Ansible!
-With an Ansible cheatsheet at your fingertips, you can breeze through a variety of tasks that would otherwise be tedious and time-consuming.
-Whether you need to test the connectivity to your nodes, switch to a different user, use a custom SSH key, use password-based authentication, run ad-hoc commands, create and run playbooks, use modules and roles, or anything else, an Ansible cheatsheet will make your life easier and more fun.
-
-* * *
+---
 
 ## Playbook
 
-An Ansible playbook is your automation blueprint written in YAML/JSON. 
-It tells Ansible what to do, where to do it, and how to do it. 
-With a playbook, you can transform your IT tasks into simple and repeatable steps that run on any number of hosts. 
+An Ansible playbook is your automation blueprint written in YAML/JSON.
+It tells Ansible what to do, where to do it, and how to do it.
+With a playbook, you can transform your IT tasks into simple and repeatable steps that run on any number of hosts.
 Whether you need to install software, configure settings, run commands, or anything else, an Ansible playbook will make it happen in a snap.
 
 ### Playbook Examples
@@ -124,13 +123,12 @@ Let me dazzle you with an example of a playbook that I borrowed from the Ansible
       ansible.builtin.service:
         name: postgresql
         state: started
-
 ```
 
-This playbook has two plays. 
+This playbook has two plays.
 The first one updates the web servers by installing the latest version of apache and writing a config file.
-The second one updates the database servers by installing the latest version of postgresql and starting the service. 
-Each play has a name, a list of hosts to target, a remote user to execute the tasks, and a list of tasks to perform. 
+The second one updates the database servers by installing the latest version of postgresql and starting the service.
+Each play has a name, a list of hosts to target, a remote user to execute the tasks, and a list of tasks to perform.
 Each task has a name and a module to call with some parameters.
 
 #### Minecraft Server Update Playbook
@@ -180,30 +178,30 @@ This playbook is composed of four parts:
 - The variables that the playbook will use, such as `minecraft_version`, `minecraft_url`, and `minecraft_home`.
 - The tasks that the playbook will execute, such as getting the latest Minecraft version, downloading the server jar file, and restarting the Minecraft service.
 
-Each task has a name, a module to use, and some parameters for the module. 
-Some tasks also have a condition (`when`) that determines when they will run. 
-For example, the task `Download Minecraft server jar` will only run if the jar file does not exist in the `minecraft_home` directory. 
-The playbook uses the `register` keyword to store the output of some tasks in variables, such as `latest_version` and `jar_file`. 
+Each task has a name, a module to use, and some parameters for the module.
+Some tasks also have a condition (`when`) that determines when they will run.
+For example, the task `Download Minecraft server jar` will only run if the jar file does not exist in the `minecraft_home` directory.
+The playbook uses the `register` keyword to store the output of some tasks in variables, such as `latest_version` and `jar_file`.
 These variables can be used in later tasks or conditions and this playbook could be expanded to include file checks with hashing.
 
-* * *
+---
 
 ## Modules
 
 > tldr; Ansible has a large collection of modules that can be used for various tasks and purposes.
 
-* * *
+---
 
 ### Cloud Modules
 
 Cloud modules can be used to interact with different cloud providers, such as AWS, Azure, Google Cloud, etc.
 
-The cloud modules within Ansible are a set of modules that can be used to interact with different cloud providers and services. 
-They allow you to provision, configure and manage cloud resources, such as virtual machines, networks, storage, databases, etc. 
+The cloud modules within Ansible are a set of modules that can be used to interact with different cloud providers and services.
+They allow you to provision, configure and manage cloud resources, such as virtual machines, networks, storage, databases, etc.
 
 #### AWS Modules
 
-These modules can be used to work with Amazon Web Services (AWS), such as EC2, S3, CloudFormation, etc. 
+These modules can be used to work with Amazon Web Services (AWS), such as EC2, S3, CloudFormation, etc.
 For example, you can use the `ec2_instance` module to create and manage EC2 instances on AWS.
 
 #### Azure Modules
@@ -229,21 +227,21 @@ Creating a compute instance with a specific name, zone, machine type, image and 
     zone: us-central1-a
     machine_type: n1-standard-1
     disks:
-    - auto_delete: true
-      boot: true
-      source: "{{ disk }}"
+      - auto_delete: true
+        boot: true
+        source: "{{ disk }}"
     network_interfaces:
-    - network: "{{ network }}"
-      access_configs:
-      - name: External NAT
-        nat_ip: "{{ address }}"
-        type: ONE_TO_ONE_NAT
+      - network: "{{ network }}"
+        access_configs:
+          - name: External NAT
+            nat_ip: "{{ address }}"
+            type: ONE_TO_ONE_NAT
     state: present
 ```
 
-This example creates a compute instance with a specific name, zone, machine type, image and network. 
-It uses the `state: present` parameter to indicate that the instance should exist. 
-It also specifies the `disks` and `network_interfaces` parameters to configure the disk and network settings of the instance. 
+This example creates a compute instance with a specific name, zone, machine type, image and network.
+It uses the `state: present` parameter to indicate that the instance should exist.
+It also specifies the `disks` and `network_interfaces` parameters to configure the disk and network settings of the instance.
 The `disk` and `network` variables are assumed to be defined elsewhere in the playbook or inventory.
 
 ##### Delete GCP Instance
@@ -257,8 +255,9 @@ Deleting a compute instance with a specific name and zone:
     zone: us-central1-a
     state: absent
 ```
-For this task, it deletes a compute instance with a specific `name` and `zone`. 
-It uses the `state: absent` parameter to indicate that the instance should not exist. 
+
+For this task, it deletes a compute instance with a specific `name` and `zone`.
+It uses the `state: absent` parameter to indicate that the instance should not exist.
 It does not need to specify any other parameters, as the `name` and `zone` are enough to identify the instance to delete.
 
 ##### Update GCP Instance
@@ -277,20 +276,24 @@ Updating a compute instance with a new machine type and labels
     state: present
 ```
 
-The update example performs the task of updating a compute instance with a new machine type and labels. 
-It uses the `state: present` parameter to indicate that the instance should exist. 
-It also specifies the `machine_type` and `labels` parameters to change the machine type and labels of the instance. 
-The machine type determines the CPU and memory resources of the instance, and the labels are key-value pairs that can be used to organize and filter instances. 
+The update example performs the task of updating a compute instance with a new machine type and labels.
+It uses the `state: present` parameter to indicate that the instance should exist.
+It also specifies the `machine_type` and `labels` parameters to change the machine type and labels of the instance.
+The machine type determines the CPU and memory resources of the instance, and the labels are key-value pairs that can be used to organize and filter instances.
 Any other parameters that are not specified will remain unchanged.
 
-* * *
+---
 
 #### OpenStack Modules
 
-OpenStack modules can be used to work with OpenStack, an open source cloud platform that provides infrastructure as a service (IaaS). 
+OpenStack modules can be used to work with OpenStack, an open source cloud platform that provides infrastructure as a service (IaaS).
 The `os_server` module is an example of how you can have full control over your OpenStack servers.
 
-* * *
+---
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+---
 
 ### Network Modules
 
@@ -306,19 +309,19 @@ Employing these modules, you have full control over your database servers and ob
 
 ### Windows Modules
 
-Windows modules can be used to manage Windows systems and applications, such as Active Directory, IIS, PowerShell, etc. 
+Windows modules can be used to manage Windows systems and applications, such as Active Directory, IIS, PowerShell, etc.
 For example, you can use the `win_service` module to manage Windows services.
 
-* * *
+---
 
 ## AWX
 
 > tldr; AWX is a web-base RESTFul API and task engine that operates on top of Ansible, thus enabling you to automate certain aspects of the IT/DevOps.
 
-AWX is an open source project that gives you a sleek and modern web-based user interface, a powerful and flexible REST API, and a robust and scalable task engine to work with Ansible. 
-It is the upstream project of Red Hat Ansible Automation Platform, which is a premium solution that offers additional features and support for enterprise customers. 
-With AWX, you can easily manage your Ansible playbooks, inventories, credentials, and vaults in a collaborative and secure way among your team members. 
-Moreover, AWX empowers you to plan and run your Ansible playbooks on your managed nodes with speed, efficiency and dependability; you can set up custom schedules, workflows, notifications, and callbacks to automate your Ansible operations and monitor their outcomes. 
+AWX is an open source project that gives you a sleek and modern web-based user interface, a powerful and flexible REST API, and a robust and scalable task engine to work with Ansible.
+It is the upstream project of Red Hat Ansible Automation Platform, which is a premium solution that offers additional features and support for enterprise customers.
+With AWX, you can easily manage your Ansible playbooks, inventories, credentials, and vaults in a collaborative and secure way among your team members.
+Moreover, AWX empowers you to plan and run your Ansible playbooks on your managed nodes with speed, efficiency and dependability; you can set up custom schedules, workflows, notifications, and callbacks to automate your Ansible operations and monitor their outcomes.
 In conclusion, AWX gives you full control and visibility over your Ansible playbooks and their execution.
 
 ### AWX Repo
@@ -327,11 +330,17 @@ In conclusion, AWX gives you full control and visibility over your Ansible playb
 
 The AWX repository is a GitHub repository that contains a treasure trove of source code and other resources.
 
+---
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+---
+
 ### AWX Terraform
 
 > More information on [Terraform](https://kbve.com/application/terraform)
 
-Terraform AWX Provider from Denouche. 
+Terraform AWX Provider from Denouche.
 
 By using AWX and Terraform together, you can leverage the power and flexibility of Ansible to manage your AWS resources with ease and efficiency.
 The Two tools that can be used together to automate IT infrastructure.
@@ -359,21 +368,57 @@ provider "awx" {
 
 > Remember that if you set both (username/password) and (token), then the (token) will have precedence.
 
-* * *
+---
+
+</TabData>
+
+<TabData data="cheatsheet">
+
+---
+
+## Cheatsheet
+
+> tldr; Commands that will make it easier operate ansible scripts / playbooks. This cheatsheet is still a work-in-progress.
+
+An Ansible cheatsheet is a quick and handy reference guide that provides examples and tips on how to use Ansible command line tools and playbooks, thus enabling you to unleash the power of Ansible!
+With an Ansible cheatsheet at your fingertips, you can breeze through a variety of tasks that would otherwise be tedious and time-consuming.
+Whether you need to test the connectivity to your nodes, switch to a different user, use a custom SSH key, use password-based authentication, run ad-hoc commands, create and run playbooks, use modules and roles, or anything else, an Ansible cheatsheet will make your life easier and more fun.
+
+</TabData>
+<TabData data="media">
+
+## Videos
+
+We will be adding more videos.
+
+<N ns="c" template="yt" data="https://www.youtube.com/watch?v=EcnqJbxBcM0" />
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+</TabData>
+
+<TabData data="notes">
 
 ## Notes
 
-We should start to include all the playbooks that we have written.
+We should start to include all the playbooks that we have written! 
 
 ### Log
 
+- [ ] Add some videos for Ansible.
+- [ ] Include Ansible + n8n integration content.
+
 #### Journal
 
+<Details data="2023-04-16">
+Added tabs to the Ansible MDX.
+</Details>
 
 <Details data="2023-04-10">
-##### 04-10-2023
-Going to update the basics of the documentation. I will go back and add more information next week.
+Going to update the basics of the documentation. I will go back and add moreinformation next week.
 </Details>
+
 ### License
 
-> ?
+</TabData>
+</TabMenu>

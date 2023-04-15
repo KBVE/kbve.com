@@ -14,6 +14,15 @@ tags:
   - flutter
 ---
 
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+
+<TabMenu first="general" data={[ "guides", "media", "notes"]}>
+<TabData tail="block" data="general">
+
 ## Information
 
 > TLDR; Flutter is an open source cross platform development kit.
@@ -72,10 +81,36 @@ You can install Flutter on Windows by following these steps:
 
 * * *
 
+</TabData>
+
+
+<TabData data="guides">
+
+## Guides
+
+
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
+
 ## Notes
 
+Our official notes for the Flutter MDX.
+
 ### Log
+
+- [ ] Add Media for Flutter.
+- [ ] Under guides, we could include links to exisiting courses for Flutter.
 
 #### Journal
 
 ##### 2023-04-10
+
+</TabData>
+</TabMenu>
