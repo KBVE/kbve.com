@@ -18,6 +18,8 @@ tags:
 
 import Details from "@w/Details.astro";
 import TradingView from "@w/TradingView.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
 
 ## Information
 
@@ -25,9 +27,19 @@ Tesla is a multinational automotive / technology company.
 
 ---
 
-## Chart
+<TabMenu first="chart" data={["intro", "options", "exchange", "reports", "notes"]}>
+  <TabData tail="block" data="chart">
+    <TradingView data="NASDAQ:TSLA" />
+  </TabData>
+  <TabData data="intro">
 
-<TradingView data="NASDAQ:TSLA" />
+## Intro
+
+</TabData>
+  <TabData data="options">Options</TabData>
+  <TabData data="exchange">Exchanges</TabData>
+  <TabData data="reports">Reports</TabData>
+  <TabData data="notes">
 
 ---
 
@@ -44,3 +56,5 @@ These are the collection of notes for the TSLA MDX Document.
 <Details data="2023-04-14">
 Preparing the fintech information for $TSLA.
 </Details>
+</TabData>
+</TabMenu>
