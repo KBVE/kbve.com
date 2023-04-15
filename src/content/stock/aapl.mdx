@@ -18,6 +18,8 @@ tags:
 
 import Details from "@w/Details.astro";
 import TradingView from "@w/TradingView.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
 
 ## Information
 
@@ -27,11 +29,19 @@ They have always been a company that has been on the cutting edge of technology,
 
 ---
 
-## Charts
+<TabMenu first="chart" data={["intro", "options", "exchange", "reports", "notes"]}>
+  <TabData tail="block" data="chart">
+    <TradingView data="NASDAQ:AAPL" />
+  </TabData>
+  <TabData data="intro">
 
-<TradingView data="NASDAQ:AAPL" />
+## Intro
 
----
+</TabData>
+  <TabData data="options">Options</TabData>
+  <TabData data="exchange">Exchanges</TabData>
+  <TabData data="reports">Reports</TabData>
+  <TabData data="notes">
 
 ## Notes
 
@@ -47,3 +57,5 @@ These are the collection of notes for the AAPL MDX Document.
 <Details data="2023-04-14">
 Testing the charts for AAPL
 </Details>
+</TabData>
+</TabMenu>
