@@ -8,33 +8,45 @@ publishDate: 2022-10-25 00:00:00
 img: https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?fit=crop&w=1400&h=700&q=75
 description: Android is an open source operating system based off of Linux that runs within the ARM architecture; the primary use-case is within the mobile/tablet eco-system but it has been expanding into server, desktop and embedables.
 tags:
-- technology
-- android
-- debug
-- mobile
+  - technology
+  - android
+  - debug
+  - mobile
 ---
 
-## Introduction
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import YT from "@w/YT.astro";
+
+## Information
 
 Join the global Android community of millions of users and developers who collaborate to improve the open-source mobile operating system, giving you endless possibilities to customize your device.
 Unleash your creativity and make your smartphone, tablet, or smartwatch truly your own with the endless array of apps and features available on Android, tailored to fit your unique needs and preferences.
 Our job at KBVE will be to provide you with everything you need to deploy your own Android application on almost any device!
 
-* * *
-* * *
-* * *
+<TabMenu first="intro" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
+  <TabData tail="block" data="intro">
 
-## ADB Cheatsheet
+## Introduction
 
-The ADB cheatsheet provides a general list of basic commands for Android operating system and applications. 
+Everything you need to get started with Android!
+
+  </TabData>
+  <TabData data="cheatsheet">
+
+## Cheatsheet
+
+The ADB cheatsheet provides a general list of basic commands for Android operating system and applications.
 Please note that certain commands require the device to be rooted, furthermore certain Android versions may require a tweak to the commands.
 
 ### Device Commands
 
-Android ADB Device commands are commands that you can use to control the Android device over USB from a computer. 
+Android ADB Device commands are commands that you can use to control the Android device over USB from a computer.
 You can use them to list all devices, restart server and reboot!
 
 - `adb devices` - List all connected devices.
+
   - `adb devices -l` - Query additional information from devices.
   - `adb get-state` - Information on the device state.
   - `adb get-serialno` - Query the device serial number.
@@ -51,7 +63,7 @@ You can use them to list all devices, restart server and reboot!
 
 > Warning: Shell commands can brick your operating system, so make sure to double check them before running.
 
-ADB shell is a command-line interface that you can use to access the shell and run various commands on your Android device. 
+ADB shell is a command-line interface that you can use to access the shell and run various commands on your Android device.
 You can use ADB shell commands to perform actions such as changing the resolution of your device display, uninstalling bloatware or system apps, enabling and disabling features, modifying the system files, ect..
 
 > Remember to keep a backup of the commands that you run via shell, I recommend creating a `log.txt` file and output all the commands to that file.
@@ -87,6 +99,7 @@ Android Key Events - A quick breakdown for each event and how the operating syst
 Generic Android Keyevents:
 
 - `adb shell input keyevent`
+
   - `adb shell input keyevent 0` - Keycode 0
   - `adb shell input keyevent 1` - Soft Left
   - `adb shell input keyevent 2` - Soft Right
@@ -108,7 +121,46 @@ Generic Android Keyevents:
     - `adb shell input keyevent 17` - STAR Key
     - `adb shell input keyevent 18` - Pound Key
 
-
 - Koltin: `open class KeyEvent: InputEvent, Parcelable`
 
 - Java: `pulibc class KeyEvent extends InputEvent implements Parcelable`
+
+</TabData>
+<TabData data="system">
+
+## System Information 
+
+</TabData>
+
+<TabData data="errors">
+
+## Errors
+  
+</TabData>
+  
+<TabData data="videos">
+  
+## Videos
+
+<YT url="https://www.youtube.com/watch?v=fis26HvvDII" />
+
+<YT url="https://www.youtube.com/watch?v=aS__9RbCyHg" />
+
+</TabData>
+
+<TabData data="notes">
+
+## Notes
+
+Notes for Android MDX.
+
+### Log
+
+- [ ] Need more information and data for the Android MDX.
+
+#### Journal
+
+<Details data="2023-04-15">Testing the tabs for Android MDX</Details>
+
+  </TabData>
+</TabMenu>
