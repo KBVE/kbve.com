@@ -14,10 +14,14 @@ tags:
   - mobile
 ---
 
+import GitHub from "@w/Github.astro";
 import Details from "@w/Details.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
 import YT from "@w/YT.astro";
+
+<TabMenu first="intro" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
+  <TabData tail="block" data="intro">
 
 ## Information
 
@@ -25,8 +29,6 @@ Join the global Android community of millions of users and developers who collab
 Unleash your creativity and make your smartphone, tablet, or smartwatch truly your own with the endless array of apps and features available on Android, tailored to fit your unique needs and preferences.
 Our job at KBVE will be to provide you with everything you need to deploy your own Android application on almost any device!
 
-<TabMenu first="intro" data={["cheatsheet", "system", "errors", "videos", "notes"]}>
-  <TabData tail="block" data="intro">
 
 ## Introduction
 
