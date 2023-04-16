@@ -19,22 +19,30 @@ import How from "@c/Scene/Intro/How.astro";                                 /// 
 import IntroReview from "@c/Scene/Intro/IntroReview.astro";                 /// [IR]        ->  Intro Review
 
 
-//?     [WIP]
+//?     [WIP] : Scenes
 import ApplicationsScene from "@c/Scene/Applications/ApplicationsController/ApplicationsScene.astro";
 import AssetScene from "@c/Scene/Assets/AssetController/AssetScene.astro";
 import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astro";
+
 //import BlogScene
 
-//?     [Components]    -> Needs to be migrated to our controller.
-import HubspotLiveChat from '@w/HubSpotChat.astro';
+//?     [Components]    -> Some entites / references have to be migrated to our controller.
 import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// [Lottie]    ->  [Int()]
 import Collections from "./Collections.astro";
+
+//<!--?     [Widgets]
+import HubspotLiveChat from '@w/HubSpotChat.astro';
+import Github from "@w/Github.astro";
+import YT from "@w/YT.astro";
+
 
 //?     [Library]   ->  [Permanent]
 import Redirect from '@c/Action/Redirect';                                  /// [REDIRECT]
 import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 
 ---
+{(template == "yt") && <YT url={data} />}
+{(template == "github") && <Github src={data} />}
 {(template == "introreview" && data == false) && <IntroReview />}
 {(template == "how" && data == false) && <How />}
 {(template == "waitlist" && data == false) && <WaitList />}

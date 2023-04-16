@@ -8,25 +8,54 @@ publishDate: 2023-01-01 00:00:00
 img: https://images.unsplash.com/photo-1595844730298-b960ff98fee0?fit=crop&w=1400&h=700&q=75
 description: The Webmaster Tool is an AiO reference tool-belt for any website owner/designer. It will include all the links you need to help bolster your website above the competition!
 tags:
-- webmaster
-- tools
-- seo
-- website
+  - webmaster
+  - tools
+  - seo
+  - website
 ---
 
 import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+<TabMenu first="general" data={["vip", "guides", "media", "notes"]}>
+
+<TabData tail="block" data="general">
 
 ## Information
 
-If you have a website, you probably want to make sure that it is visible and performing well on search engines like Google and Bing. 
-But how do you know if your site is indexed, optimized, and free of errors? 
-That’s where the amazing KBVE webmaster tool comes in. 
-Our webmaster tool is a collection of free services offered by search engines that allow you to monitor and maintain your site’s presence and performance. 
+If you have a website, you probably want to make sure that it is visible and performing well on search engines like Google and Bing.
+But how do you know if your site is indexed, optimized, and free of errors?
+That’s where the amazing KBVE webmaster tool comes in.
+Our webmaster tool is a collection of free services offered by search engines that allow you to monitor and maintain your site’s presence and performance.
 They also help you identify and fix any issues that might affect your site’s ranking or user experience.
 
 ## ToolBelt
 
 ---
+
+</TabData>
+
+<TabData data="vip">
+
+## VIP
+
+</TabData>
+
+<TabData data="guides">
+
+## Guides
+
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
 
 ## Notes
 
@@ -34,12 +63,20 @@ These are the official notes for the `webmaster` MDX reference document.
 
 ### Log
 
-- [X] Migrating to MDX.
+- [x] Migrating to MDX.
 - [ ] Migrating AiO Webmaster tool to public.
 - [ ] Updating the general information for the MDX document.
 - [ ] Adding a couple extra videos.
 
 #### Journal
+
+<Details data="2023-04-16">
+
+Added tabs to the webmaster tool.
+
+Testing the private script.
+
+</Details>
 
 <Details data="2023-04-11">
 
@@ -61,3 +98,6 @@ Currently, it seems that mdx files are causing a decent amount of issues for us 
 I am going to use this as a test case for the mdx problems, hopefully I could find a patchwork solution until the next major release for AstroJS. I did reach out to the team but it seems that they are on holiday break but they are aware of the issues and have stated that this is an experimental area.
 
 </Details>
+
+</TabData>
+</TabMenu>

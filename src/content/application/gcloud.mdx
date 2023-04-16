@@ -13,6 +13,16 @@ tags:
   - cloud
 ---
 
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+<TabMenu first="general" data={["guides", "media", "notes"]}>
+
+<TabData tail="block" data="general">
+
+## Information
 
 ## GCloud Compute
 
@@ -145,3 +155,30 @@ Note: A forwarding rule and its corresponding IP address represent the frontend 
 
 [Using Forwarding Rules](https://cloud.google.com/load-balancing/docs/using-forwarding-rules)
 [Rule Concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts)
+
+</TabData>
+
+<TabData data="guides">
+
+## Guides
+
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
+
+## Notes
+
+### Log
+
+#### Journal
+
+<Details data="2023-04-16">Updated GCloud with tabs. </Details>
+
+</TabData>
+</TabMenu>

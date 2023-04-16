@@ -6,16 +6,21 @@ client: Self
 frontpage: true
 publishDate: 2020-03-02 00:00:00
 img: https://images.unsplash.com/photo-1662072628456-325410cf83dc?fit=crop&w=1400&h=700&q=75
-description: Project RSPS is a cluster of different projects with the objective to make a MMORPG farm.
+description: Project RSPS is a cluster of different projects with the objective to make a MMORPG bot farm. 
 tags:
-  - design
-  - dev
-  - branding
-repo: kbve/api.kbve.com
+  - mmorpg
+  - automation
+  - gaming
 ---
 
 import Details from "@w/Details.astro";
-import Github from "@w/Github.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+<TabMenu first="general" data={["guides","shop", "media", "notes"]}>
+
+<TabData tail="block" data="general">
 
 ## RSPS Information
 
@@ -204,9 +209,17 @@ We could include links to what the staff have done to fight/handle the automatio
 
 ---
 
----
+</TabData>
 
----
+<TabData data="guides">
+
+## Guides
+
+</TabData>
+
+<TabData data="shop">
+
+## Shop
 
 ## Account Order
 
@@ -247,7 +260,17 @@ var FARMING = 1;
 
 ```
 
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+
 ---
+<TabData data="notes">
 
 ## Notes
 
@@ -265,3 +288,6 @@ Updating the RSPS MDX to include a bit more information.
 </Details>
 
 ### License
+
+</TabData>
+</TabMenu>

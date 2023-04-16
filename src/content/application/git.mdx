@@ -12,6 +12,15 @@ tags:
   - git
 ---
 
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+<TabMenu first="general" data={["guides", "media", "notes"]}>
+
+<TabData tail="block" data="general">
+
 ## Git
 
 Everything you will need to prepare for git!
@@ -201,3 +210,30 @@ ln -s ../../submodules/UnitySubModules/Vuplex
 ```
 
 ---
+
+</TabData>
+
+<TabData data="guides">
+
+## Guides
+
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
+
+## Notes
+
+### Log
+
+#### Journal
+
+<Details data="2023-04-16"> Added tabs to the GIT MDX. </Details>
+
+</TabData>
+</TabMenu>
