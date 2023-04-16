@@ -22,6 +22,7 @@
     } = Astro.props;
     let _ns = ns;
 //? [SAFETY]
+    if(ns == "c"){ _ns = "controller"}
     if(ns === "null"){ _ns = namespace}
 ---
 {(_ns == "theme") && <Theme title={title} description={description} template={template}><slot /></Theme>}

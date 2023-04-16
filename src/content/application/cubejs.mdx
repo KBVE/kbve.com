@@ -14,6 +14,15 @@ tags:
   - sql
   - cloud
 ---
+
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+<TabMenu first="general" data={["guides", "media", "notes"]}>
+<TabData tail="block" data="general">
+
 ## Information
 
 If you are looking for a powerful and flexible framework to build amazing data applications, you should check out CubeJS. 
@@ -146,10 +155,25 @@ npm update @cubejs-backend/server
 yarn upgrade @cubejs-backend/server
 ```
 
-* * *
+***
 
-## Tutorials
+</TabData>
+<TabData data="guides">
 
-* * *
+## Guides
 
-##
+CubeJS Guides
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
+
+## Notes
+
+</TabData>
+</TabMenu>
