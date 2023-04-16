@@ -11,9 +11,40 @@ tags:
 - php
 - script
 ---
+
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+<TabMenu first="general" data={["guides","functions", "media", "notes"]}>
+
+<TabData tail="block" data="general">
+
 ## PHP
 
-### Functions
+! This needs to be rewritten. Its too memey.
+
+PHP is a popular and powerful scripting language that can create dynamic and interactive web pages.
+HP has many advantages and features that make it a widely-used, free, and efficient tool for web development. 
+PHP is a server-side scripting language, which means that it runs on the web server and not on the browser. 
+This allows PHP to interact with databases, files, sessions, cookies, and other web services.
+PHP is also open-source, which means that it is free to download and use, and that anyone can contribute to its development and improvement. 
+PHP is very simple to learn and use, as it can be embedded within HTML code and has a syntax that is similar to C and Java.
+PHP supports multiple platforms, web servers, and databases, as well as object-oriented, procedural, and functional programming paradigms.
+PHP also has many extensions and libraries for various purposes, such as graphics, encryption, XML parsing, email sending, and more.
+In conclusion, PHP is a versatile and convenient scripting language that can create dynamic and interactive web pages with ease and efficiency.
+
+<TabData data="guides">
+
+## Guides
+
+</TabData>
+
+
+<TabData data="functions">
+
+## Functions
 
 #### SS_BETWEEN
 
@@ -47,3 +78,23 @@ echo $u;
 ?>
 
 ```
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
+
+## Notes
+
+### Log
+
+#### Journal
+
+<Details data="2023-04-16">Updated PHP with tabs. </Details>
+
+</TabData>
+</TabMenu>
