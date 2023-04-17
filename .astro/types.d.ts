@@ -458,6 +458,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "journal": {
+"2023-04-17.md": {
+  id: "2023-04-17.md",
+  slug: "2023-04-17",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
 "asset.mdx": {
   id: "asset.mdx",
   slug: "asset",
