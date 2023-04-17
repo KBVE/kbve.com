@@ -379,6 +379,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
 },
+"arcade": {
+"rj.mdx": {
+  id: "rj.mdx",
+  slug: "rj",
+  body: string,
+  collection: "arcade",
+  data: InferEntrySchema<"arcade">
+} & { render(): Render[".mdx"] },
+"wvn.mdx": {
+  id: "wvn.mdx",
+  slug: "wvn",
+  body: string,
+  collection: "arcade",
+  data: InferEntrySchema<"arcade">
+} & { render(): Render[".mdx"] },
+},
 "blog": {
 "theorycraft.mdx": {
   id: "theorycraft.mdx",
@@ -520,22 +536,6 @@ declare module 'astro:content' {
   collection: "npc",
   data: any
 } & { render(): Render[".md"] },
-},
-"play": {
-"rj.mdx": {
-  id: "rj.mdx",
-  slug: "rj",
-  body: string,
-  collection: "play",
-  data: InferEntrySchema<"play">
-} & { render(): Render[".mdx"] },
-"wvn.mdx": {
-  id: "wvn.mdx",
-  slug: "wvn",
-  body: string,
-  collection: "play",
-  data: InferEntrySchema<"play">
-} & { render(): Render[".mdx"] },
 },
 "project": {
 "api.mdx": {
