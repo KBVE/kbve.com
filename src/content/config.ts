@@ -110,7 +110,7 @@ const journal = defineCollection({
     footnote: z.string().optional(),
     author: z.string().default('KBVE Team'),
     img: z.string().default(''),
-    date: z.string().optional(),
+    date: z.date().optional(),
     url: z.string().optional(),
   }),
 });
