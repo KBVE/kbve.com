@@ -14,17 +14,51 @@ tags:
   - information
 ---
 
-## Obsidian
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+
+<TabMenu first="general" data={["guides","media", "notes"]}>
+<TabData tail="block" data="general">
+
+## Information
 
 ## Install
-
-## Log
-
-- `[ ]` ~Create `Concept` Issue Ticket~
-- `[ ]` ~Obsidian - init - Start the initialization of Obsidian~
-- `[ ]` Map out the integration of Obsidian and AstroJS
 
 ## Plugins
 
 Plugin Requirement:
 [mdx-as-md-obsidian](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/mdx-as-md-obsidian)
+
+</TabData>
+<TabData data="guides">
+
+## Guides
+
+Our list of guides that make it easier to use Obsidian. 
+
+### Daily Notes
+
+A quick guide, [Daily Notes by DannB.org](https://dannb.org/blog/2022/obsidian-daily-note-template/), on setting up daily notes for the KBVE Vault. 
+We did not yet add the templating system because we are still having some MDX errors. 
+
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
+
+## Log
+
+- [ ] ~Create `Concept` Issue Ticket~
+- [ ] ~Obsidian - init - Start the initialization of Obsidian~
+- [ ] Map out the integration of Obsidian and AstroJS
+
+</TabData>
+
+</TabMenu>

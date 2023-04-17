@@ -458,27 +458,34 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "journal": {
-"asset.md": {
-  id: "asset.md",
+"2023-04-17.md": {
+  id: "2023-04-17.md",
+  slug: "2023-04-17",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"asset.mdx": {
+  id: "asset.mdx",
   slug: "asset",
   body: string,
   collection: "journal",
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
-"roguejester.md": {
-  id: "roguejester.md",
+} & { render(): Render[".mdx"] },
+"roguejester.mdx": {
+  id: "roguejester.mdx",
   slug: "roguejester",
   body: string,
   collection: "journal",
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
-"visualnovel.md": {
-  id: "visualnovel.md",
+} & { render(): Render[".mdx"] },
+"visualnovel.mdx": {
+  id: "visualnovel.mdx",
   slug: "visualnovel",
   body: string,
   collection: "journal",
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "legal": {
 "eula.mdx": {
