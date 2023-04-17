@@ -240,7 +240,7 @@ const tools = defineCollection({
 
 //?       {play}
 //!       [PLAN] MD Configurations for Unity Games
-const play = defineCollection({
+const arcade = defineCollection({
   schema: z.object({
     title: z.string(),
     status: z.boolean().optional(),
@@ -312,7 +312,7 @@ export const collections = {
     //    media: media,
     //?       [TOOLS]
     //    tools: tools,
-    play: play,
+    arcade: arcade,
     website: website,
     //asset: [stock, crypto],
 
