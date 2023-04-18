@@ -4,67 +4,6 @@
 //<!--TODO      Migrate NFC Pass to a quick pass tool for us to use.
 ---
 
-<div class="canvas">
-  <div class="container">
-    <div class="page-header">
-      <h1>Pass Generator - Secure Password Generator</h1>
-    </div>
-    <p class="lead">SHA256 Generate:</p>
-
-    <!-- form -->
-    <p>
-      <form class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
-        <div class="form-group">
-          <label for="sdomain" class="text-primary">Domain: </label>
-          <input
-            type="text"
-            class="form-control"
-            name="sdomain"
-            id="sdomain"
-            aria-describedby="domainHelp"
-            placeholder="Enter Domain"
-          />
-          <p id="domainHelp" class="form-text text-muted"
-            >Domain TLD is used as the salt for the password. Salt: <b> <div class="gradient-text" id="tld"> </div> </b> </p>
-        </div>
-        <div class="form-group">
-          <label for="eIPassword1" class="text-primary">Master Password: </label>
-          <input
-            type="password"
-            class="form-control"
-            id="eIPassword1"
-            placeholder="Password"
-          />
-        </div>
-        <div class="form-group">
-          <label for="finalpass" class="text-primary">Finalized Password: </label>
-          <input
-            type="text"
-            class="form-control"
-            id="finalpass"
-            placeholder="finalpass"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="regex" class="text-primary">Regex: </label>
-          <input
-            type="text"
-            class="form-control"
-            id="regex"
-            placeholder="Regex"
-          />
-        </div>
-
-        <button type="button" class="px-4 py-2 border rounded-md border-gray-100 gradient-text" onclick="generate();"
-          >Generate</button
-        >
-      </form>
-    </p>
-    <!-- /.form -->
-  </div><!-- /.container -->
-</div>
-<!-- /.canvas -->
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -86,6 +25,7 @@
   integrity="sha384-SwQ/3RKNbCrSStLwvLgMkcjj41mDiEno7qwiosvV95+RSGf8gK+akwDNqt1dmVnA"
   crossorigin="anonymous"
 ></script>
+
 
 <script is:inline type="text/javascript">
 
@@ -174,3 +114,66 @@ function _salt() {
 
 **/
 </script>
+
+
+<div class="canvas">
+  <div class="container">
+    <div class="page-header">
+      <h1>Pass Generator - Secure Password Generator</h1>
+    </div>
+    <p class="lead">SHA256 Generate:</p>
+
+    <!-- form -->
+    <p>
+      <form class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
+        <div class="form-group">
+          <label for="sdomain" class="text-primary">Domain: </label>
+          <input
+            type="text"
+            class="form-control"
+            name="sdomain"
+            id="sdomain"
+            aria-describedby="domainHelp"
+            placeholder="Enter Domain"
+          />
+          <p id="domainHelp" class="form-text text-muted"
+            >Domain TLD is used as the salt for the password. Salt: <b> <div class="gradient-text" id="tld"> </div> </b> </p>
+        </div>
+        <div class="form-group">
+          <label for="eIPassword1" class="text-primary">Master Password: </label>
+          <input
+            type="password"
+            class="form-control"
+            id="eIPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="finalpass" class="text-primary">Finalized Password: </label>
+          <input
+            type="text"
+            class="form-control"
+            id="finalpass"
+            placeholder="finalpass"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="regex" class="text-primary">Regex: </label>
+          <input
+            type="text"
+            class="form-control"
+            id="regex"
+            placeholder="Regex"
+          />
+        </div>
+
+        <button type="button" class="px-4 py-2 border rounded-md border-gray-100 gradient-text" onclick="generate();"
+          >Generate</button
+        >
+      </form>
+    </p>
+    <!-- /.form -->
+  </div><!-- /.container -->
+</div>
+<!-- /.canvas -->

@@ -1,4 +1,5 @@
 ---
+//<!--!         Work In Progress
 //?     Team Page for KBVE
 //?     We can have each person on the team have their own profile via "./_core/{username}.mdx" and then build a json with all our team members.
 //?     Then on projects that the team member is on, we can quickly call them into the project using their {}.mdx
@@ -11,6 +12,23 @@ let description = "All the team members, staff and homies from the block.";
 
 ---
 <N ns="theme" title={title} description={description}>
-    <!-- <N ns="banner" template="article" data="This is data test" />
-    <N ns="article" element="react" id="eula" template="legal" theme="default" data="https://kbve.com/legal/eula.json" /> -->
+    <section class="py-6 sm:py-12">
+        <div class="container p-6 mx-auto space-y-8">
+          <div class="rounded-full space-y-2 text-center bg-offset p-4">
+            <h2 class="text-3xl font-bold">KBVE Team</h2>
+            <p class="font-serif text-sm dark:text-gray-400">
+              All our team members!
+            </p>
+          </div>
+    
+          <N
+            ns="controller"
+            template="oracle"
+            element="team"
+            data="team"
+          />
+        </div>
+      </section>
+      <N ns="ads" template="midbanner" id="ezoic" />
+    
 </N>

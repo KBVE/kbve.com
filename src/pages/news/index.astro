@@ -1,14 +1,27 @@
 ---
-//? [WIP]
-//? Main News Module
-import N from "@n/N.astro"; /// [IMPORT]  ->  [N]   -> Namespace
-//import Core from "@l/theme/core.astro";			///	[IMPORT]  ->  [CORE]
-//import SWUP from "@l/theme/swup.astro";			///	[SWUP]    ->  Currently facing {hydration} issues #102
-/// {data}
+//<!--?         [News]
+//<!--TODO      [News API]
+//<!--!         [BROKEN]
+//<!--*         [IMPORT]
+//<!--?         [Namespace]
+import N from "@n/N.astro";
+//<!--*         [DATA]
 let title = "KBVE.com - News in FinTech, Entertainment, Gaming and more";
 let description = "All.";
 ---
 
 <N ns="theme" title={title} description={description}>
-  <!--  -->
+  <section class="py-6 sm:py-12">
+    <div class="container p-6 mx-auto space-y-8">
+      <div class="rounded-full space-y-2 text-center bg-offset p-4">
+        <h2 class="text-3xl font-bold">KBVE News</h2>
+        <p class="font-serif text-sm dark:text-gray-400">
+          Latest News section from KBVE.
+        </p>
+      </div>
+
+      <N ns="controller" template="oracle" element="news" data="news" />
+    </div>
+  </section>
+  <N ns="ads" template="midbanner" id="ezoic" />
 </N>
