@@ -1,37 +1,49 @@
 {
   "main": {
-    "id": "e143e9ce115f6cae",
+    "id": "603ba26dcc649b42",
     "type": "split",
     "children": [
       {
-        "id": "f10a8038675ae301",
-        "type": "leaf",
-        "state": {
-          "type": "empty",
-          "state": {}
-        }
+        "id": "7ce88ac86b99d980",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c7465625174e3d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "journal/2023-04-19.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "d7786d46ff78b749",
+    "id": "5c9801162ba6fe1e",
     "type": "split",
     "children": [
       {
-        "id": "09e2419b9606daa2",
+        "id": "341e2fbb2d8602c6",
         "type": "tabs",
         "children": [
           {
-            "id": "d5ec064fba271943",
+            "id": "3afb4e43388f73a5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
-            "id": "3af79f47899e885b",
+            "id": "f6c3eee99f87497a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -46,33 +58,35 @@
             }
           },
           {
-            "id": "c75d67e3c1ae9720",
+            "id": "a904c8e34978b437",
             "type": "leaf",
             "state": {
               "type": "starred",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
   "right": {
-    "id": "6352bbac06fa7347",
+    "id": "91b2bd98f18da4cd",
     "type": "split",
     "children": [
       {
-        "id": "46e19d2b7c85b23c",
+        "id": "4bf47be0a97d999b",
         "type": "tabs",
         "children": [
           {
-            "id": "e86a0bfbe79fb7c9",
+            "id": "f829237f56efb1f0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "journal/2023-04-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,18 +98,19 @@
             }
           },
           {
-            "id": "743dcf04a8635be8",
+            "id": "b119796549ab348f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "journal/2023-04-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "7c3a7ed662fb2070",
+            "id": "aa25eb4e63c51756",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -106,11 +121,13 @@
             }
           },
           {
-            "id": "18b80a2c1df23cca",
+            "id": "cea0c864dd5a0773",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "journal/2023-04-19.md"
+              }
             }
           }
         ]
@@ -120,6 +137,33 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f10a8038675ae301",
-  "lastOpenFiles": []
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "3c7465625174e3d9",
+  "lastOpenFiles": [
+    "journal/2023-04-18.md",
+    "journal/2023-04-19.md",
+    "journal/2023-04-17.md",
+    "_bin/2023-04-17.md",
+    "_bin/_js/unsplash.js",
+    "_bin/_js",
+    "journal/2023-04.md",
+    "_bin/_daily.md",
+    "journal/_daily.md",
+    "journal/daily",
+    "2023-04-17.md",
+    "Untitled.canvas",
+    "application/ansible.mdx",
+    "application/android.mdx",
+    "releases/1.md"
+  ]
 }

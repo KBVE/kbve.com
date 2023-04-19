@@ -379,6 +379,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
 },
+"arcade": {
+"rj.mdx": {
+  id: "rj.mdx",
+  slug: "rj",
+  body: string,
+  collection: "arcade",
+  data: InferEntrySchema<"arcade">
+} & { render(): Render[".mdx"] },
+"wvn.mdx": {
+  id: "wvn.mdx",
+  slug: "wvn",
+  body: string,
+  collection: "arcade",
+  data: InferEntrySchema<"arcade">
+} & { render(): Render[".mdx"] },
+},
 "blog": {
 "theorycraft.mdx": {
   id: "theorycraft.mdx",
@@ -442,27 +458,41 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "journal": {
-"asset.md": {
-  id: "asset.md",
+"2023-04-17.md": {
+  id: "2023-04-17.md",
+  slug: "2023-04-17",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"2023-04-18.md": {
+  id: "2023-04-18.md",
+  slug: "2023-04-18",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"2023-04-19.md": {
+  id: "2023-04-19.md",
+  slug: "2023-04-19",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"asset.mdx": {
+  id: "asset.mdx",
   slug: "asset",
   body: string,
   collection: "journal",
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
-"roguejester.md": {
-  id: "roguejester.md",
-  slug: "roguejester",
-  body: string,
-  collection: "journal",
-  data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
-"visualnovel.md": {
-  id: "visualnovel.md",
+} & { render(): Render[".mdx"] },
+"visualnovel.mdx": {
+  id: "visualnovel.mdx",
   slug: "visualnovel",
   body: string,
   collection: "journal",
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "legal": {
 "eula.mdx": {
@@ -520,22 +550,6 @@ declare module 'astro:content' {
   collection: "npc",
   data: any
 } & { render(): Render[".md"] },
-},
-"play": {
-"rj.mdx": {
-  id: "rj.mdx",
-  slug: "rj",
-  body: string,
-  collection: "play",
-  data: InferEntrySchema<"play">
-} & { render(): Render[".mdx"] },
-"wvn.mdx": {
-  id: "wvn.mdx",
-  slug: "wvn",
-  body: string,
-  collection: "play",
-  data: InferEntrySchema<"play">
-} & { render(): Render[".mdx"] },
 },
 "project": {
 "api.mdx": {

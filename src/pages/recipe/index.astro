@@ -1,9 +1,26 @@
 ---
-/// [WIP] Recipe Page
-import N from "@c/Namespace/N.astro";               //? [NAMESPACE]
-/// {DATA}
+//<!--?         [Recipe]
+//<!--*         [IMPORT]
+//<!--?         [NameSpace]
+import N from "@n/N.astro";
+//<!--*         [DATA]
 let title = "KBVE Recipes & Cookbook";
-let description = "A cookbook for a mad scientist. Our recipes will be a journy of tears and errors, but hopefully creating some brilliant meals!";
+let description =
+  "A cookbook for a mad scientist. Our recipes will be a journy of tears and errors, but hopefully creating some brilliant meals!";
 ---
+
 <N ns="theme" title={title} description={description}>
+  <section class="py-6 sm:py-12">
+    <div class="container p-6 mx-auto space-y-8">
+      <div class="rounded-full space-y-2 text-center bg-offset p-4">
+        <h2 class="text-3xl font-bold">KBVE Cookbook and Recipes</h2>
+        <p class="font-serif text-sm dark:text-gray-400">
+          Our evergrowing cookbook filled with recipes.
+        </p>
+      </div>
+
+      <N ns="controller" template="oracle" element="recipe" data="recipe" />
+    </div>
+  </section>
+  <N ns="ads" template="midbanner" id="ezoic" />
 </N>

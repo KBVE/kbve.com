@@ -1,12 +1,24 @@
 ---
-/// [PLACEHOLDER] - Nothing to see here until v2
-/// [WIP] Gaming Page will definitely be in the back burner. 
-//? [NAMESPACE]
+//<!--?         [Gaming]
+//<!--*         [IMPORT]
+//<!--?         [NAMESPACE]
 import N from "@c/Namespace/N.astro";
-/// {DATA}
+//<!--*         [DATA]
 let title = "KBVE Gaming";
 let description = "Information on KBVE Gaming";
-//? Codex, Divinity, Enticement, Grimoire, Hex, Tome, Vacuole
 ---
 <N ns="theme" title={title} description={description}>
+    <section class="py-6 sm:py-12">
+        <div class="container p-6 mx-auto space-y-8">
+          <div class="rounded-full space-y-2 text-center bg-offset p-4">
+            <h2 class="text-3xl font-bold">KBVE Gaming</h2>
+            <p class="font-serif text-sm dark:text-gray-400">
+              Latest information from the KBVE Gaming Division.
+            </p>
+          </div>
+    
+          <N ns="controller" template="oracle" element="gaming" data="gaming" />
+        </div>
+      </section>
+      <N ns="ads" template="midbanner" id="ezoic" />
 </N>
