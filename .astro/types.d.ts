@@ -486,13 +486,6 @@ declare module 'astro:content' {
   collection: "journal",
   data: InferEntrySchema<"journal">
 } & { render(): Render[".mdx"] },
-"roguejester.mdx": {
-  id: "roguejester.mdx",
-  slug: "roguejester",
-  body: string,
-  collection: "journal",
-  data: InferEntrySchema<"journal">
-} & { render(): Render[".mdx"] },
 "visualnovel.mdx": {
   id: "visualnovel.mdx",
   slug: "visualnovel",
