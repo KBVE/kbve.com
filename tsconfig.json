@@ -30,6 +30,7 @@
         "@w/*": ["src/components/Widget/*"],
         "@a/*": ["src/assets/*"],
         //? Full Path
+        "@lib/*": ["src/lib/*"],
         "@components/*": ["src/components/*"],
         "@layout/*": ["src/layouts/*"],
         "@styles/*": ["src/styles/*"],
