@@ -1,0 +1,82 @@
+---
+/** 
+ * 
+
+File by Appwrite Team, located here: https://github.com/appwrite/demos-for-astro/blob/main/example-blog/src/lib/appwrite.ts
+
+MIT License
+
+Copyright (c) 2023 Appwrite, 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ */
+
+//<!--*             [IMPORT]
+import N from "@n/N.astro"; //      [NameSpace]
+let title = "KBVE Account";
+let description =
+  "Manage your KBVE Profile and Account through our online portal";
+  
+---
+<N ns="theme" title={title} description={description}>
+    <script>
+        import { user$, logout } from "@lib/appwrite";
+      
+        const loginElem: HTMLElement | null =
+          document.querySelector("#accountLoginLink");
+        const userElem: HTMLElement | null = document.querySelector("#accountUser");
+      
+        user$.subscribe((user) => {
+          if (!loginElem || !userElem) return;
+          if (user) {
+            loginElem.style.display = "none";
+            userElem.style.display = "block";
+      
+            const accountUserDetailElem: HTMLElement | null =
+              document.querySelector("#accountUserDetail");
+            if (accountUserDetailElem)
+              accountUserDetailElem.innerHTML = `Email: ${user.email} Admin: ${
+                user.prefs.admin || false
+              }`;
+          } else {
+            loginElem.style.display = "block";
+            userElem.style.display = "none";
+          }
+        });
+      
+        const logoutElem: HTMLButtonElement | null =
+          document.querySelector("#account-logout");
+        logoutElem?.addEventListener("click", (e) => {
+          logout();
+        });
+      </script>
+
+        <h1 class="heading-level-1">Account</h1>
+
+        <section id="accountLoginLink">
+        <a href="/account/login">Login</a>
+        </section>
+
+        <section id="accountUser">
+        <div class="u-flex u-flex-vertical u-gap-4">
+            <section id="accountUserDetail"></section>
+            <button id="account-logout" class="button">Logout</button>
+        </div>
+        </section>
+</N>
