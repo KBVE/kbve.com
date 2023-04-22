@@ -217,7 +217,7 @@ const [isLoading, setIsLoading] = React.useState(false);
           >
             <TextField
               id={`username-input`}
-              type="username"
+              type="text"
               label="Username"
               value={username}
               error={username !== ""}
