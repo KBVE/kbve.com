@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -150,8 +149,9 @@
   },
   "active": "3c7465625174e3d9",
   "lastOpenFiles": [
-    "journal/2023-04-21.md",
+    "application/android.mdx",
     "journal/2023-04-22.md",
+    "journal/2023-04-21.md",
     "journal/2023-04-19.md",
     "journal/2023-04-18.md",
     "journal/2023-04-17.md",
@@ -165,7 +165,6 @@
     "2023-04-17.md",
     "Untitled.canvas",
     "application/ansible.mdx",
-    "application/android.mdx",
     "releases/1.md"
   ]
 }
