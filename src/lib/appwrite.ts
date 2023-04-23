@@ -39,6 +39,7 @@ export const appwriteDatabases = new Databases(appwriteClient);
 export const appwriteStorage = new Storage(appwriteClient);
 
 /** Database */
+/** We are currently not using these but will keep them here for testing */
 export interface BlogPost extends Models.Document {
     title: string;
     date: string;
@@ -100,15 +101,16 @@ export const logout = async () => {
     }
 }
 
-export const register = async (email: string, password: string) => {
+export const register = async (email: string, password: string, name: string) => {
     try {
-        await appwriteAccount.create(ID.unique(), email, password);
+        await appwriteAccount.create(ID.unique(), email, password, name);
         const session = await appwriteAccount.createEmailSession(email, password);
         isLoggedIn.set(session);
         window.location.href = '/account';
     } catch (error) {
         const appwriteError = error as AppwriteException;
-        alert(appwriteError.message)
+        //alert(appwriteError.message)
+        throw(appwriteError.message);
     }
 }
 
