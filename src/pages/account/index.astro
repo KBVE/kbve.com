@@ -3,10 +3,11 @@
  * 
 
 File by Appwrite Team, located here: https://github.com/appwrite/demos-for-astro/
+CSS Profile by Tailwind ToolBox, located here: https://github.com/tailwindtoolbox/Profile-Card/
 
 MIT License
 
-Copyright (c) 2023 Appwrite, 
+Copyright (c) 2023 Appwrite, Tailwind Toolbox
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -42,6 +43,20 @@ let description =
     const loginElem: HTMLElement | null =
       document.querySelector("#accountLoginLink");
     const userElem: HTMLElement | null = document.querySelector("#accountUser");
+
+
+
+    function get_gravatar_image_url (email, size, default_image, allowed_rating, force_default)
+    {
+        email = typeof email !== 'undefined' ? email : 'john.doe@example.com';
+        size = (size >= 1 && size <= 2048) ? size : 80;
+        default_image = typeof default_image !== 'undefined' ? default_image : 'mm';
+        allowed_rating = typeof allowed_rating !== 'undefined' ? allowed_rating : 'g';
+        force_default = force_default === true ? 'y' : 'n';
+        
+        return ("https://secure.gravatar.com/avatar/" + md5(email.toLowerCase().trim()) + "?size=" + size + "&default=" + encodeURIComponent(default_image) + "&rating=" + allowed_rating + (force_default === 'y' ? "&forcedefault=" + force_default : ''));
+    }
+
 
     function _hide(element: string)
     {
@@ -79,9 +94,7 @@ let description =
           }
           _k('#data',JSON.stringify(user));
 
-          accountUserDetailElem.innerHTML = `Email: ${user.email} Admin: ${
-            user.prefs.admin || false
-          }`;
+          //accountUserDetailElem.innerHTML = `Email: ${user.email} Admin: ${user.prefs.admin || false}`;
         }
       } else {
         loginElem.style.display = "block";
@@ -96,7 +109,7 @@ let description =
     });
   </script>
 
-  <h1 class="heading-level-1">Account</h1>
+ 
 
   <section id="accountLoginLink">
     <a href="/account/login">Login</a>
