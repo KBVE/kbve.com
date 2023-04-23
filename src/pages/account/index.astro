@@ -29,6 +29,7 @@ SOFTWARE.
 
 //<!--*             [IMPORT]
 import N from "@n/N.astro"; //      [NameSpace]
+import Profile from "@w/Profile.astro";
 let title = "KBVE Account";
 let description =
   "Manage your KBVE Profile and Account through our online portal";
@@ -42,6 +43,22 @@ let description =
       document.querySelector("#accountLoginLink");
     const userElem: HTMLElement | null = document.querySelector("#accountUser");
 
+    function _hide(element: string)
+    {
+      let __v: HTMLElement | null = document.querySelector(element);
+      if(__v) { __v.style.display = "none"; }
+    }
+
+    function _k(element: string, value: string)
+    {
+      let __v: HTMLElement | null = document.querySelector(element);
+      if(__v) { __v.innerHTML = value; }
+      else 
+      {
+        console.log(`Cant Find ${element} `);
+      }
+    }
+
     user$.subscribe((user) => {
       if (!loginElem || !userElem) return;
       if (user) {
@@ -50,8 +67,18 @@ let description =
 
         const accountUserDetailElem: HTMLElement | null =
           document.querySelector("#accountUserDetail");
+
         if (accountUserDetailElem) {
           console.log(user);
+          _hide("#loader");
+          _k('#username',user.name);
+          _k('#email',user.email);
+          _k('#phone', user.phone || 'Phone is not set!');
+          if(user.prefs.admin) {
+          _k('#title', 'Admin');
+          }
+          _k('#data',JSON.stringify(user));
+
           accountUserDetailElem.innerHTML = `Email: ${user.email} Admin: ${
             user.prefs.admin || false
           }`;
@@ -76,9 +103,22 @@ let description =
     <a href="/account/register">Register</a>
   </section>
 
+  <section id="loader">
+    <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
+    <div class="flex flex-col m-8 rounded shadow-md w-60 sm:w-80 animate-pulse h-96">
+      <div class="h-48 rounded-t dark:bg-gray-700"></div>
+      <div class="flex-1 px-4 py-8 space-y-4 sm:p-8 dark:bg-gray-900">
+        <div class="w-full h-6 rounded dark:bg-gray-700"></div>
+        <div class="w-full h-6 rounded dark:bg-gray-700"></div>
+        <div class="w-3/4 h-6 rounded dark:bg-gray-700"></div>
+      </div>
+    </div>
+  </section>
+
   <section id="accountUser">
     <div class="u-flex u-flex-vertical u-gap-4">
       <section id="accountUserDetail"></section>
+      <Profile />
       <button id="account-logout" class="button">Logout</button>
     </div>
   </section>
