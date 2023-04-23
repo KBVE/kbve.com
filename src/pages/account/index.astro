@@ -2,7 +2,7 @@
 /** 
  * 
 
-File by Appwrite Team, located here: https://github.com/appwrite/demos-for-astro/blob/main/example-blog/src/lib/appwrite.ts
+File by Appwrite Team, located here: https://github.com/appwrite/demos-for-astro/
 
 MIT License
 
@@ -32,51 +32,54 @@ import N from "@n/N.astro"; //      [NameSpace]
 let title = "KBVE Account";
 let description =
   "Manage your KBVE Profile and Account through our online portal";
-  
 ---
+
 <N ns="theme" title={title} description={description}>
-    <script>
-        import { user$, logout } from "@lib/appwrite";
-      
-        const loginElem: HTMLElement | null =
-          document.querySelector("#accountLoginLink");
-        const userElem: HTMLElement | null = document.querySelector("#accountUser");
-      
-        user$.subscribe((user) => {
-          if (!loginElem || !userElem) return;
-          if (user) {
-            loginElem.style.display = "none";
-            userElem.style.display = "block";
-      
-            const accountUserDetailElem: HTMLElement | null =
-              document.querySelector("#accountUserDetail");
-            if (accountUserDetailElem)
-              accountUserDetailElem.innerHTML = `Email: ${user.email} Admin: ${
-                user.prefs.admin || false
-              }`;
-          } else {
-            loginElem.style.display = "block";
-            userElem.style.display = "none";
-          }
-        });
-      
-        const logoutElem: HTMLButtonElement | null =
-          document.querySelector("#account-logout");
-        logoutElem?.addEventListener("click", (e) => {
-          logout();
-        });
-      </script>
+  <script>
+    import { user$, logout } from "@lib/appwrite";
 
-        <h1 class="heading-level-1">Account</h1>
+    const loginElem: HTMLElement | null =
+      document.querySelector("#accountLoginLink");
+    const userElem: HTMLElement | null = document.querySelector("#accountUser");
 
-        <section id="accountLoginLink">
-        <a href="/account/login">Login</a>
-        </section>
+    user$.subscribe((user) => {
+      if (!loginElem || !userElem) return;
+      if (user) {
+        loginElem.style.display = "none";
+        userElem.style.display = "block";
 
-        <section id="accountUser">
-        <div class="u-flex u-flex-vertical u-gap-4">
-            <section id="accountUserDetail"></section>
-            <button id="account-logout" class="button">Logout</button>
-        </div>
-        </section>
+        const accountUserDetailElem: HTMLElement | null =
+          document.querySelector("#accountUserDetail");
+        if (accountUserDetailElem) {
+          console.log(user);
+          accountUserDetailElem.innerHTML = `Email: ${user.email} Admin: ${
+            user.prefs.admin || false
+          }`;
+        }
+      } else {
+        loginElem.style.display = "block";
+        userElem.style.display = "none";
+      }
+    });
+
+    const logoutElem: HTMLButtonElement | null =
+      document.querySelector("#account-logout");
+    logoutElem?.addEventListener("click", (e) => {
+      logout();
+    });
+  </script>
+
+  <h1 class="heading-level-1">Account</h1>
+
+  <section id="accountLoginLink">
+    <a href="/account/login">Login</a>
+    <a href="/account/register">Register</a>
+  </section>
+
+  <section id="accountUser">
+    <div class="u-flex u-flex-vertical u-gap-4">
+      <section id="accountUserDetail"></section>
+      <button id="account-logout" class="button">Logout</button>
+    </div>
+  </section>
 </N>
