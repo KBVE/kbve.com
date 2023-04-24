@@ -1,4 +1,4 @@
-import { graphql } from "./AppWriteConfig";
+import { graphql } from "@w/GraphQL";
 import { useEffect, useState } from "react";
 import { useStore } from "@nanostores/react";
 
