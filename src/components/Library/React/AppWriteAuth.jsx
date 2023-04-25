@@ -90,12 +90,35 @@ const AWAuth = () => {
                     name
                     emailVerification
                     email
+                    phone
+                    phoneVerification
+                }
+            }`,
+    });
+    if (response.errors) {
+      throw response.errors[0].message;
+    }
+    return response.data.accountGet;
+  };
+  //?         [QUERY_ACCOUNT] : [END]
+
+  //?         [QUERY_ACCOUNT] : [START]
+  const queryAccountIP = async () => {
+    const response = await graphql.query({
+      query: `query {
+                accountGet {
+                    _id
+                    name
+                    emailVerification
+                    email
+                    phone
                 }
             }`,
     });
     return response.data.accountGet;
   };
   //?         [QUERY_ACCOUNT] : [END]
+
   //?         [CONFIRM_EMAIL] : [START]
 const confirmEmailVerification = async (userId, secret) => {
     const response = await graphql.mutation({

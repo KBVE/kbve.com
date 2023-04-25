@@ -1,7 +1,7 @@
 const Spinner = () => {
   return (
     <>
-      <section className="flex flex-col items-center justify-center">
+      <section className="flex flex-col items-center justify-center my-32">
         <div
           className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
           role="status"

@@ -4,7 +4,7 @@ import ProfileJSX from "@w/Profile";
 
 const Profile = () => {
   const { userProfile } = AWAuth();
-
+  console.log(userProfile);
   if (!userProfile) {
     return (
       <>
@@ -15,9 +15,14 @@ const Profile = () => {
   } else {
     return (
       <div className="profile">
-        <h1 className="name">Welcome, {userProfile?.name}</h1>
-        <h2 className="email">Email: {userProfile?.email}</h2>
-        <ProfileJSX />
+        <ProfileJSX
+          username={userProfile?.name}
+          email={userProfile?.email}
+          emailVerification={userProfile.emailVerification}
+          phone={userProfile?.phone}
+          phoneVerification={userProfile?.phoneVerification}
+          hash={userProfile?._id}
+        />
       </div>
     );
   }

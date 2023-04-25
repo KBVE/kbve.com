@@ -10,10 +10,8 @@ let description =
   "Manage your KBVE Profile and Account through our online portal";
 ---
 
-<N ns="theme" title={title} description={description}>
-  <div id="root">
-    <div id="profile">
+<N ns="theme" title={title} description={description} data="">
+ 
       <Auth client:only="react" />
-    </div>
-  </div>
+   
 </N>
