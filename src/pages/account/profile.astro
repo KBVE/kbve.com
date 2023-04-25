@@ -1,0 +1,17 @@
+---
+//<!--*         [Profile]
+//<!--*         [IMPORT]
+import N from "@n/N.astro"; //      [NameSpace]
+import Auth from "@r/AppWriteProfile";
+
+//<!--*         [DATA]
+let title = "KBVE Profile";
+let description =
+  "Manage your KBVE Profile and Account through our online portal";
+---
+
+<N ns="theme" title={title} description={description} data="">
+ 
+      <Auth client:only="react" />
+   
+</N>
