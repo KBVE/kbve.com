@@ -29,8 +29,11 @@
         "@n/*": ["src/components/Namespace/*"],
         "@w/*": ["src/components/Widget/*"],
         "@a/*": ["src/assets/*"],
+        "@r/*": ["src/components/Library/React/*"],
+        //"@h/*": ["src/components/Library/React/Hooks/*"],
         //? Full Path
-        "@lib/*": ["src/lib/*"],
+        //"@hooks": ["src/components/Library/React/Hooks/*"],
+        "@lib/*": ["src/components/Library/*"],
         "@components/*": ["src/components/*"],
         "@layout/*": ["src/layouts/*"],
         "@styles/*": ["src/styles/*"],

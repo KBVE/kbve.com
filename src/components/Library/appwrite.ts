@@ -66,7 +66,7 @@ appwriteAccount.getSession('current').then(function (response) {
 }, function (error) {
     isLoggedIn.set(undefined)
 })
-
+// @ts-ignore
 export const user$: WritableAtom<undefined | Models.Account<Models.Preferences>> = atom(undefined);
 
 isLoggedIn.subscribe(async (session) => {
@@ -82,7 +82,7 @@ export const login = async (email: string, password: string) => {
         window.location.href = '/account';
     } catch (error) {
         const appwriteError = error as AppwriteException;
-        alert(appwriteError.message)
+        throw(appwriteError.message)
     }
 }
 
@@ -97,7 +97,7 @@ export const logout = async () => {
         }
     } catch (error) {
         const appwriteError = error as AppwriteException;
-        alert(appwriteError.message)
+        throw(appwriteError.message)
     }
 }
 
@@ -119,6 +119,6 @@ export const account = async () => {
         return appwriteAccount.get();
     } catch (error) {
         const appwriteError = error as AppwriteException;
-        alert(appwriteError.message)
+        throw(appwriteError.message)
     }
 }
