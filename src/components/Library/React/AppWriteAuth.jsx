@@ -1,6 +1,6 @@
 import { graphql } from "@w/GraphQL";
 import { useEffect, useState } from "react";
-import { useStore } from "@nanostores/react";
+//import { useStore } from "@nanostores/react";
 
 //! CREDIT TO https://github.com/rishipurwar1/
 
@@ -96,7 +96,7 @@ const AWAuth = () => {
             }`,
     });
     if (response.errors) {
-      throw response.errors[0].message;
+      return response.errors[0];
     }
     return response.data.accountGet;
   };

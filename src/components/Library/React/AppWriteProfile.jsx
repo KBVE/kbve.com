@@ -12,7 +12,18 @@ const Profile = () => {
         <Spinner />
       </>
     );
-  } else {
+  } 
+  else if(userProfile && userProfile?.message )
+  {
+    return (
+      <>
+        {" "}
+        {userProfile?.message}
+      </>
+    )
+  
+  }
+  else {
     return (
       <div className="profile">
         <ProfileJSX
