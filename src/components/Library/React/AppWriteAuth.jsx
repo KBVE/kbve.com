@@ -104,7 +104,7 @@ const AWAuth = () => {
 
   //?         [QUERY_ACCOUNT] : [START]
   const queryAccountIP = async () => {
-    const response = await graphql.query({
+    const response = await graphql.mutation({
       query: `query {
                 accountGet {
                     _id
