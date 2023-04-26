@@ -121,12 +121,11 @@ const AWAuth = () => {
 
   //*         [SEND_EMAIL] : [START]
 
-
-const sendVerificationEmail = async () => {
+  const sendVerificationEmail = async () => {
     const response = await graphql.mutation({
       query: `mutation {
         accountCreateVerification(
-            url: "http://localhost:3000/profile"
+            url: "http://kbve.com/account/profile"
         ) {
             _id
             _createdAt
@@ -136,12 +135,12 @@ const sendVerificationEmail = async () => {
         }
     }`,
     });
-  }
+  };
 
-    //?       [SEND_EMAIL] : [END]
+  //?       [SEND_EMAIL] : [END]
 
   //?         [CONFIRM_EMAIL] : [START]
-const confirmEmailVerification = async (userId, secret) => {
+  const confirmEmailVerification = async (userId, secret) => {
     const response = await graphql.mutation({
       query: `mutation (
           $userId: String!,
