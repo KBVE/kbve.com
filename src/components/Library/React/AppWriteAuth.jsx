@@ -119,6 +119,27 @@ const AWAuth = () => {
   };
   //?         [QUERY_ACCOUNT] : [END]
 
+  //*         [SEND_EMAIL] : [START]
+
+
+const sendVerificationEmail = async () => {
+    const response = await graphql.mutation({
+      query: `mutation {
+        accountCreateVerification(
+            url: "http://localhost:3000/profile"
+        ) {
+            _id
+            _createdAt
+            userId
+            secret
+            expire
+        }
+    }`,
+    });
+  }
+
+    //?       [SEND_EMAIL] : [END]
+
   //?         [CONFIRM_EMAIL] : [START]
 const confirmEmailVerification = async (userId, secret) => {
     const response = await graphql.mutation({
@@ -161,6 +182,7 @@ const confirmEmailVerification = async (userId, secret) => {
     sessionLogout,
     userProfile,
     confirmEmailVerification,
+    sendVerificationEmail,
   };
 };
 
