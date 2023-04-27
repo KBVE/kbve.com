@@ -125,7 +125,7 @@ const AWAuth = () => {
     const response = await graphql.mutation({
       query: `mutation {
         accountCreateVerification(
-            url: "http://kbve.com/account/profile"
+            url: "https://kbve.com/account/profile"
         ) {
             _id
             _createdAt
