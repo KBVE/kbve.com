@@ -1,6 +1,7 @@
 import AWAuth from "@r/AppWriteAuth";
 import Spinner from "@w/Spinner";
 import ProfileJSX from "@w/Profile";
+import { redirect } from "react-router-dom";
 
 const Profile = () => {
   const { userProfile } = AWAuth();
@@ -12,7 +13,12 @@ const Profile = () => {
         <Spinner />
       </>
     );
-  } else {
+  } 
+  else if(userProfile && userProfile?.message )
+  {
+    window.location.replace('https://kbve.com/account/login');
+  }
+  else {
     return (
       <div className="profile">
         <ProfileJSX

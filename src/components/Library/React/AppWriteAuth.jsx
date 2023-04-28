@@ -1,6 +1,6 @@
 import { graphql } from "@w/GraphQL";
 import { useEffect, useState } from "react";
-import { useStore } from "@nanostores/react";
+//import { useStore } from "@nanostores/react";
 
 //! CREDIT TO https://github.com/rishipurwar1/
 
@@ -96,7 +96,7 @@ const AWAuth = () => {
             }`,
     });
     if (response.errors) {
-      throw response.errors[0].message;
+      return response.errors[0];
     }
     return response.data.accountGet;
   };
@@ -104,7 +104,7 @@ const AWAuth = () => {
 
   //?         [QUERY_ACCOUNT] : [START]
   const queryAccountIP = async () => {
-    const response = await graphql.query({
+    const response = await graphql.mutation({
       query: `query {
                 accountGet {
                     _id
@@ -119,8 +119,28 @@ const AWAuth = () => {
   };
   //?         [QUERY_ACCOUNT] : [END]
 
+  //*         [SEND_EMAIL] : [START]
+
+  const sendVerificationEmail = async () => {
+    const response = await graphql.mutation({
+      query: `mutation {
+        accountCreateVerification(
+            url: "https://kbve.com/account/profile"
+        ) {
+            _id
+            _createdAt
+            userId
+            secret
+            expire
+        }
+    }`,
+    });
+  };
+
+  //?       [SEND_EMAIL] : [END]
+
   //?         [CONFIRM_EMAIL] : [START]
-const confirmEmailVerification = async (userId, secret) => {
+  const confirmEmailVerification = async (userId, secret) => {
     const response = await graphql.mutation({
       query: `mutation (
           $userId: String!,
@@ -161,6 +181,7 @@ const confirmEmailVerification = async (userId, secret) => {
     sessionLogout,
     userProfile,
     confirmEmailVerification,
+    sendVerificationEmail,
   };
 };
 
