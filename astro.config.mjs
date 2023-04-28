@@ -28,44 +28,44 @@ import partytown from "@astrojs/partytown";
 //* Define Config of AstroJS
 import image from "@astrojs/image";
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://kbve.com/",
   markdown: markdownConfig,
-  integrations: [
-    sitemap({
-      customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"],
-    }),
-    mdx({
-      ...markdownConfig,
-      //extendPlugins: "astroDefaults"
-    }),
-    //  React
-    react(),
-    //  Post-Build -> Compress
-    compress(),
-    //  Prefetch
-    prefetch({
-      throttle: 20,
-    }),
-    tailwind(),
-    alpinejs(),
-    partytown({
-      // dataLayer.push as a forwarding-event.
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
-    // Image Experimental from Astro.
-    image({ serviceEntryPoint: "@astrojs/image/sharp" }),
-  ],
+  integrations: [sitemap({
+    customPages: ["https://app.kbve.com/#/", "https://app.kbve.com/#/asset/"]
+  }), mdx({
+    ...markdownConfig
+    //extendPlugins: "astroDefaults"
+  }),
+  //  React
+  react(),
+  //  Post-Build -> Compress
+  compress(),
+  //  Prefetch
+  prefetch({
+    throttle: 20
+  }), tailwind(), alpinejs(), partytown({
+    // dataLayer.push as a forwarding-event.
+    config: {
+      forward: ["dataLayer.push"]
+    }
+  }),
+  // Image Experimental from Astro.
+  image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), 
+  // Svelte
+  svelte()],
   //  Vite
   //? Currently there are no custom Vite->SSR
   vite: {
     ssr: {
       //external: ["@11ty/eleventy-img", "svgo"],
       //external: ["@11ty/eleventy-img"]
-    },
+    }
     // build: {
     //   rollupOptions: {
     //     output: {
@@ -75,5 +75,5 @@ export default defineConfig({
     //     },
     //   },
     // },
-  },
+  }
 });
