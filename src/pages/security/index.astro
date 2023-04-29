@@ -1,7 +1,8 @@
 ---
 /// [WIP] Security Page - Breakdown of the Security
 //? [NAMESPACE]
-import N from "@c/Namespace/N.astro";
+import N from "@n/N.astro";
+import Oracle from "@w/Oracle.astro";
 /// {DATA}
 let title = "KBVE Security";
 let description = "Reference points for security within KBVE and general user/client/business safety. Documentation will be updated as we build out";
@@ -101,9 +102,7 @@ let description = "Reference points for security within KBVE and general user/cl
             <!-- Security Oracle [START] -->
 
 
-            <N
-            ns="controller"
-            template="oracle"
+            <Oracle 
             element="security"
             data="security"
           />

@@ -16,16 +16,16 @@ let description = "KBVE All in One Search Engine is the idea of having a search 
   title={title}
   description={description}
   >
-<!--    [START]   Google Style -->
-
-<!--    [END]     Google Style -->
-<!--    [START]   Google CSE Code -->
+<!--    Google CSE Code -   [START] -->
 <script
   is:inline
   src="https://cse.google.com/cse.js?cx=partner-pub-3698214103602019:ab1srxiqkuo"
 ></script>
-<!--    [END]     Google CSE Code --><!--    [START]   SearchData --><!--    [END]     SearchData --><!-- component --><!-- component --><!-- New Component from Creative Tim's Discord, Huge thanks -->
-<div class="flex flex-wrap" id="tabs-id">
+<!--    Google CSE Code -   [END] -->
+
+
+<!--    SearchData      -   [START] -->
+<div class="flex flex-wrap p-6" id="tabs-id">
   <div class="w-full">
     <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
       <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -34,6 +34,14 @@ let description = "KBVE All in One Search Engine is the idea of having a search 
           onclick="changeAtiveTab(event,'tab-profile')"
         >
           <i class="fas fa-space-shuttle text-base mr-1"></i> Google
+        </a>
+      </li>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+          onclick="changeAtiveTab(event,'tab-other')"
+        >
+          <i class="fas fa-briefcase text-base mr-1"></i> Other
         </a>
       </li>
       <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -52,14 +60,7 @@ let description = "KBVE All in One Search Engine is the idea of having a search 
           <i class="fas fa-briefcase text-base mr-1"></i> Options
         </a>
       </li>
-      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a
-          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-          onclick="changeAtiveTab(event,'tab-you')"
-        >
-          <i class="fas fa-briefcase text-base mr-1"></i> YOU
-        </a>
-      </li>
+
       <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
         <a
           class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
@@ -68,7 +69,10 @@ let description = "KBVE All in One Search Engine is the idea of having a search 
           <i class="fas fa-briefcase text-base mr-1"></i> GPT
         </a>
       </li>
+
     </ul>
+
+  
     <div
       class="relative flex flex-col min-w-0 break-words bg-offset w-full mb-6 shadow-lg rounded"
     >
@@ -76,10 +80,11 @@ let description = "KBVE All in One Search Engine is the idea of having a search 
         <div class="tab-content tab-space">
           <div class="block" id="tab-profile">
             <p>
+              <SearchData client:only="react" />
+              <br />
               <div class="text-primary">
                 <div class="gcse-search"></div>
               </div>
-              <SearchData client:only="react" />
             </p>
           </div>
           <div class="hidden" id="tab-settings">
@@ -98,16 +103,19 @@ let description = "KBVE All in One Search Engine is the idea of having a search 
               I am thinking of storing the data into the user's localStorage.
             </p>
           </div>
-          <!-- You.com -->
-          <div class="hidden" id="tab-you">
-            <p>
-              You.com
-              <br />
-              <!-- <SearchData engine="you" client:only="react" /> -->
-              <br />
-              Still a work in process
-            </p>
-          </div>
+
+          <!-- Other Engines [START] -->
+                   <div class="hidden" id="tab-other">
+                    <p>
+                      
+                      <br />
+                     <SearchData client:only="react" />
+                      <br />
+                      Other Searches
+                    </p>
+                  </div>
+          <!-- Other Engines [END] -->
+
           <!-- GPT -->
           <div class="hidden" id="tab-gpt">
             <p>

@@ -3,6 +3,7 @@
 //<!--*         [IMPORT]
 //<!--?         [NameSpace]
     import N from "@n/N.astro";
+    import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
 let title = "Play on the KBVE Arcade";
 let description =
@@ -18,10 +19,7 @@ let description =
             We are currently working on adding more games to the Arcade.
         </p>
       </div>
-
-      <N
-        ns="controller"
-        template="oracle"
+     <Oracle
         element="arcade"
         data="arcade"
       />

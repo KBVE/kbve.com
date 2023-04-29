@@ -3,8 +3,8 @@
 //<!--TODO      [News API]
 //<!--!         [BROKEN]
 //<!--*         [IMPORT]
-//<!--?         [Namespace]
 import N from "@n/N.astro";
+import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
 let title = "KBVE.com - News in FinTech, Entertainment, Gaming and more";
 let description = "All.";
@@ -20,7 +20,7 @@ let description = "All.";
         </p>
       </div>
 
-      <N ns="controller" template="oracle" element="news" data="news" />
+      <Oracle element="news" data="news" />
     </div>
   </section>
   <N ns="ads" template="midbanner" id="ezoic" />

@@ -4,29 +4,95 @@
 //!       [PLAN]: There will be a point where we have to update [CORE] for multi-language support but this is definitely not within any timeframe for now.
 //?       [IMPORTS]
 import "../../styles/index.css"; //  Import Style.css
-import Head from "@l/theme/header.astro"; //  Import {Header -> Head}
-import Theme from "@l/theme/theme.astro"; //  Import Header -> Theme
-import SocialMetaTag from "@c/SocialMedia/MetaTag.astro"; //  Import SocialMedia -> MetaTag
+import Footer from "@l/theme/footer.astro"; // Footer
+import Nav from "./nav.astro";
 //?       [DATA]
-const { content, title, description } = Astro.props; //  Import Astro.props
+const {
+  content,
+  title,
+  description,
+  image = "https://kbve.com/assets/img/social.png",
+} = Astro.props; //  Import Astro.props
+const url = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
-    <Head
-      title={title || content.title}
-      description={description || content.description}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={url} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
     />
-    <SocialMetaTag
-      title={title || content.title}
-      description={description || content.description}
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
-    <Theme />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      />
+    </noscript>
+
+    <!-- Meta Property Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    
+<script>
+  const themeSaved = localStorage.getItem("theme");
+
+  if (themeSaved) {
+    document.documentElement.dataset.theme = themeSaved;
+//      document.documentElement.classList.add(themeSaved);
+  } else {
+    document.documentElement.dataset.theme = "dark";
+//      document.documentElement.classList.add("dark");
+  }
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      if (!localStorage.getItem("theme")) {
+        document.documentElement.dataset.theme = event.matches
+          ? "dark"
+          : "light";
+      }
+    });
+</script>
   </head>
+
   <body
     class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
   >
-    <slot />
+    <Nav />
+    <main class="content" id="swup">
+      <slot />
+    </main>
+
+    <footer
+      class="px-4 divide-y divide-gray-400 dark:bg-gray-800 dark:text-gray-100"
+    >
+      <Footer />
+    </footer>
   </body>
 </html>
