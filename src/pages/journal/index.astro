@@ -2,7 +2,8 @@
 //<!--?         [Journal]
 //<!--*         [IMPORT]
 //<!--?         [NAMESPACE]
-import N from "@c/Namespace/N.astro";
+import N from "@n/N.astro";
+import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
 let title = "KBVE Journal & Dev Logs";
 let description =
@@ -19,7 +20,7 @@ let description =
         </p>
       </div>
 
-      <N ns="controller" template="oracle" element="journal" data="journal" />
+      <Oracle element="journal" data="journal" />
     </div>
   </section>
   <N ns="ads" template="midbanner" id="ezoic" />

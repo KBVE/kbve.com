@@ -1,8 +1,8 @@
 ---
 //<!--?         [Recipe]
 //<!--*         [IMPORT]
-//<!--?         [NameSpace]
 import N from "@n/N.astro";
+import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
 let title = "KBVE Recipes & Cookbook";
 let description =
@@ -19,7 +19,7 @@ let description =
         </p>
       </div>
 
-      <N ns="controller" template="oracle" element="recipe" data="recipe" />
+      <Oracle element="recipe" data="recipe" />
     </div>
   </section>
   <N ns="ads" template="midbanner" id="ezoic" />

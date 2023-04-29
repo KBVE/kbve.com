@@ -1,30 +1,56 @@
 //!     KBVE Search Module
-//?     The Search Module will grab the data points from each instance
+//?     The Search Module will grab the data points from each instance.
 //*     [IMPORT]
 import DOMPurify from "dompurify";
+import { useEffect, useState } from "react";
 
-const SearchData = ({ engine = "" }) => {
-  //TODO  Sanitize the input data.
-  //*     var clean = DOMPurify.sanitize(dirty, {USE_PROFILES: {html: false, mathMl: false, svg: false}});
-  //TODO  Tab System for the different search engines and have extra data points.
-  const url = new URL(window.location.href);
-  const searchParams = url.searchParams;
-  let clean = DOMPurify.sanitize(searchParams.get("q"), {
-    USE_PROFILES: { html: false, mathMl: false, svg: false },
-  });
-  if (clean && engine == "you") {
+//!     [Function]
+//?     Both functions below are from Gibolt to address the _blank target vulnerability.
+const onClickUrl = (url) => {
+  return () => openInNewTab(url)
+}
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
+
+
+const SearchData = ({dork = ""}) => {
+
+  //TODO  Under settings add more dorks for Google, to refine and make searching easier.
+  
+  //*     [DATA]
+  const [query, setQuery] = useState(null);
+  //const [se, setEngine] = useState(engine);
+
+  //*     [useEffect]
+  useEffect(() => {
+    const sanitizeData = async () => {
+      const url = new URL(window.location.href);
+      const searchParams = url.searchParams;
+      var clean = DOMPurify.sanitize(searchParams.get("q"), {
+        USE_PROFILES: { html: false, mathMl: false, svg: false },
+      });
+      setQuery(clean);
+    };
+    sanitizeData();
+  }, []);
+
+  
+
+  if (query) {
     return (
-      <div class="">
-        <iframe src={`https://you.com/search?q=${clean}&tbm=youchat&cfr=chat`} onload="iframeLoaded()" className="w-full h-screen"></iframe>
-        {clean}
+      <>
+      <div className="space-x-2">
+        <button type="button" className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800" onClick={onClickUrl(`https://kbve.com/search?q=${query}+site:reddit.com`)}>+Reddit</button>
+        <button type="button" className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800" onClick={onClickUrl(`https://kbve.com/search?q=${query}+site:stackoverflow.com`)}>+StackOverFlow</button>
+        <button type="button" className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800" onClick={onClickUrl(`https://kbve.com/search?q=${query}+site:kbve.com`)}>+KBVE</button>
+        <button type="button" className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800" onClick={onClickUrl(`https://duckduckgo.com/?q=${query}&kp=-1&kl=us-en`)}>DuckDuckGo</button>
+        <button type="button" className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800" onClick={onClickUrl(`https://you.com/search?q=${query}&tbm=youchat&cfr=chat`)}>YOU</button>
+        <button type="button" className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800" onClick={onClickUrl(`http://ecosia.org/search.php?q=${query}`)}>Ecosia</button>
+        <button type="button" className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800" onClick={onClickUrl(`https://yep.com/web?q=${query}`)}>Yep</button>
       </div>
-    )
-  }
-  if (clean && engine == "bing") {
-    return (
-      <div class="">
-        Not yet ready! Sorry
-      </div>
+      </>
     )
   }
 };

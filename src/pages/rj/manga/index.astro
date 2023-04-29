@@ -1,17 +1,16 @@
 ---
-import Core from "@l/theme/core.astro";			                            ///	[IMPORT]        ->  [CORE]
-import SWUP from "@l/theme/swup.astro";			                            ///	[SWUP]          ->  Currently facing {hydration} issues #102
-
+//<!--*         [IMPORT]
 import N from "@n/N.astro";                                                 /// [NAMESPACE]
-
-const data = {                                                              /// {data}
-	title: "Rogue Jester Official Manga", description: "The Official Manga for RJ! From KBVE"}	
-const { content = data } = Astro.props;
-
 import Banner from "@c/Element/Banner/Banner.astro";                        /// [Banner]    ->  [Display Banner]
+
+//<!--*         [DATA]
+let title = "Rogue Jester Official Manga";
+let description = "The Official Manga for RJ! From KBVE";
+const { content} = Astro.props;
+
 ---
-<Core content={content}>
-    <SWUP>
+<N ns="theme" title={title} description={description}>
+
         <div class="px-8 py-6 space-y-8">
         </div>
         <Banner bannerConcept="manga" />
@@ -169,5 +168,4 @@ import Banner from "@c/Element/Banner/Banner.astro";                        /// 
         </div>
         </div>
 
-    </SWUP>
-</Core>
+</N>

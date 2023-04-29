@@ -3,6 +3,7 @@
 //<!--*         [IMPORT]
 //<!--?         [NAMESPACE]
 import N from "@c/Namespace/N.astro";
+import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
 let title = "KBVE Blog";
 let description = "Latest News, Articles and Blog Posts from KBVE.com";
@@ -19,7 +20,7 @@ let description = "Latest News, Articles and Blog Posts from KBVE.com";
           </p>
         </div>
   
-        <N ns="controller" template="oracle" element="blog" data="blog" />
+        <Oracle element="blog" data="blog" />
       </div>
     </section>
     <N ns="ads" template="midbanner" id="ezoic" />

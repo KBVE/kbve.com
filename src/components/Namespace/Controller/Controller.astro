@@ -30,7 +30,6 @@ import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astr
 //?     [Components]    -> Some entites / references have to be migrated to our controller.
 import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// [Lottie]    ->  [Int()]
 import Collections from "./Collections.astro";
-import Oracle from "./Oracle.astro";
 
 //<!--?     [Widgets]
 import HubspotLiveChat from '@w/HubSpotChat.astro';
@@ -40,10 +39,8 @@ import YT from "@w/YT.astro";
 
 //?     [Library]   ->  [Permanent]
 import Redirect from '@c/Action/Redirect';                                  /// [REDIRECT]
-import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 
 ---
-{(template == "oracle") && <Oracle id={id} data={data} element={element} />}
 {(template == "yt") && <YT url={data} />}
 {(template == "github") && <Github src={data} />}
 {(template == "introreview" && data == false) && <IntroReview />}
@@ -57,5 +54,4 @@ import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
 {(template == "project" && data == false) && <ProjectScene />}
 {(template == "livechat" && data == false) && <HubspotLiveChat />}
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }
-{(template == "socials") && <KBVESocial />}
 {(template == "collections") && <Collections id={id} data={data} />}
