@@ -21,12 +21,10 @@ articleData = _.find(data, ['id', id]);
 
 
 import Loader from "./Template/Loader.astro";                       ///         Skeleton Loader
-import Legal from "./Template/Legal.astro";                         
 import Blog from "./Template/Blog.astro";                           
 import BlogPost from "./Template/BlogPost.astro";                   
 ---
 
 {(id == "") && <Loader />}
-{(articleTemplate == "legal") && <Legal data={articleData} />}
 {(articleTemplate == "blog") && <Blog data={articleData} />}
 {(articleTemplate == "blogpost") && <BlogPost data={articleData} />}
