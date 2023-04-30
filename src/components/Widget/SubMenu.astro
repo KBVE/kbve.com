@@ -1,60 +1,57 @@
 ---
-//*       [INTRO]
-//?       ^POST: Cleaning up the Intro Page 1/2/2022
-//?       [IMPORT]
+//<!--*             [SubMenu] - [Widget]
+//<!--*             [IMPORT]
 import { Icon } from "astro-icon";
 import ContentSection from "@w/ContentSection.astro";
 ---
 
 <ContentSection title="KiloByte Virtual Enterprise " id="intro">
-  <!-- <Icon slot="eyebrow" name="mdi:linux" class="h-32 text-primary" /> -->
-  <!-- <Fragment slot="lead">
-    KBVE is a collection of users that research
-    <span class="text-primary">modern</span> applications.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience. ◈
-  </Fragment>
-   -->
-  <div class="grid grid-cols-2 gap-2 sm:grid-cols-6 ">
     
+  <Fragment slot="lead">
+    <Icon name="mdi:linux" class="h-8 text-primary" />
+  </Fragment>
+
+  <!-- Generic Guest Menu -->
+  <div class="grid grid-cols-2 gap-2 sm:grid-cols-6">
     <a
-      href="/register"
+      href="/account/register/"
       class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+      target="_blank"
     >
       <Icon pack="mdi" name="telescope" class="h-8" />
       <span>Register</span>
     </a>
     <a
-      href="/application"
+      href="/application/"
       class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
     >
       <Icon pack="mdi" name="rocket" class="h-8" />
       <span>Application</span>
     </a>
     <a
-      href="/asset"
+      href="/asset/"
       class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
     >
       <Icon pack="mdi" name="rocket" class="h-8" />
       <span>Assets</span>
     </a>
     <a
-      href="/news"
+      href="/news/"
       class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
     >
       <Icon pack="mdi" name="rocket" class="h-8" />
       <span>News</span>
     </a>
     <a
-      href="/blog"
+      href="/blog/"
       class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
     >
       <Icon pack="mdi" name="rocket" class="h-8" />
       <span>Blog</span>
     </a>
     <a
-    href="/tools"
-    class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+      href="/tools/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
     >
       <Icon pack="mdi" name="alarm-panel" class="h-8" />
       <span>Tools!</span>
