@@ -3,6 +3,7 @@
 //<!--*         [IMPORT]
 //<!--?         [NameSpace]
 import N from "@n/N.astro";
+import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
 let title = "Crypto Analysis, Charts, Data and Information - KBVE.com";
 let description =
@@ -19,9 +20,7 @@ let description =
         </p>
       </div>
 
-      <N
-        ns="controller"
-        template="oracle"
+      <Oracle
         element="asset/crypto"
         data="crypto"
       />

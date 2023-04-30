@@ -1,9 +1,11 @@
 ---
-//?       [IMPORT]
+//<!--*       [IMPORT]
 import N from "@n/N.astro";
+import { getCollection } from "astro:content";
+import Oracle from "@w/Oracle.astro";
+//?<!--*     [DATA]
 let title = "KBVE.com - Asset Module";
 let description = "Asset Class - Collection of Assets";
-import { getCollection } from "astro:content";
 const stockEntries = await getCollection("stock");
 const cryptoEntries = await getCollection("crypto");
 //let assetEntries = new Map(function*() { yield* stockEntries; yield* cryptoEntries; }());
@@ -19,8 +21,8 @@ const cryptoEntries = await getCollection("crypto");
         </p>
       </div>
       
-      <N ns="controller" template="oracle" element="asset/stock" data="stock" />
-      <N ns="controller" template="oracle" element="asset/crypto" data="crypto" />
+      <Oracle element="asset/stock" data="stock" />
+      <Oracle element="asset/crypto" data="crypto" />
 
     </div>
   </section>

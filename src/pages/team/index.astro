@@ -6,7 +6,8 @@
 //?     We can also integrate the members through the cards, then have their permissions sync across all projects, through an easy and secure way.
 
 ///     [IMPORTS]
-import N from "@n/N.astro";                               ///     [Astro]:{namespace}
+import N from "@n/N.astro";                             
+import Oracle from "@w/Oracle.astro";
 let title = "KBVE.com - Team Members";
 let description = "All the team members, staff and homies from the block.";	
 
@@ -21,9 +22,7 @@ let description = "All the team members, staff and homies from the block.";
             </p>
           </div>
     
-          <N
-            ns="controller"
-            template="oracle"
+          <Oracle
             element="team"
             data="team"
           />

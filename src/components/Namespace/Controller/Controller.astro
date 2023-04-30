@@ -11,7 +11,6 @@ const {
 //?     Controller Imports - Extensions
 
 //?     [OPTIONAL]
-import Features from "@c/Element/Features/Generic/features.astro";          /// [FEATUREs]  ->  Plan to be removed.
 
 //?     [INTRO]:Folder
 import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]     ->  <Intro> should be in vanillaJS to avoid hydration issues.
@@ -21,16 +20,11 @@ import IntroReview from "@c/Scene/Intro/IntroReview.astro";                 /// 
 
 
 //?     [WIP] : Scenes
-import ApplicationsScene from "@c/Scene/Applications/ApplicationsController/ApplicationsScene.astro";
-import AssetScene from "@c/Scene/Assets/AssetController/AssetScene.astro";
-import ProjectScene from "@c/Scene/Projects/ProjectsController/ProjectScene.astro";
-
 //import BlogScene
 
 //?     [Components]    -> Some entites / references have to be migrated to our controller.
 import Lottie from "@c/Element/Lottie/Lottie.astro";                        /// [Lottie]    ->  [Int()]
 import Collections from "./Collections.astro";
-import Oracle from "./Oracle.astro";
 
 //<!--?     [Widgets]
 import HubspotLiveChat from '@w/HubSpotChat.astro';
@@ -39,23 +33,16 @@ import YT from "@w/YT.astro";
 
 
 //?     [Library]   ->  [Permanent]
-import Redirect from '@c/Action/Redirect';                                  /// [REDIRECT]
-import KBVESocial from "@c/SocialMedia/KBVESocial/KBVESocial.astro";
+import Redirect from '@w/Redirect';                                  /// [REDIRECT]
 
 ---
-{(template == "oracle") && <Oracle id={id} data={data} element={element} />}
 {(template == "yt") && <YT url={data} />}
 {(template == "github") && <Github src={data} />}
 {(template == "introreview" && data == false) && <IntroReview />}
 {(template == "how" && data == false) && <How />}
 {(template == "waitlist" && data == false) && <WaitList />}
 {(template == "intro" && data == false) && <Intro />}
-{(template == "features" && data == false) && <Features />}
 {(template == "redirect") && <Redirect url={data} />}
-{(template == "application" && data == false) && <ApplicationsScene />}
-{(template == "asset" && data == false) && <AssetScene />}
-{(template == "project" && data == false) && <ProjectScene />}
 {(template == "livechat" && data == false) && <HubspotLiveChat />}
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }
-{(template == "socials") && <KBVESocial />}
 {(template == "collections") && <Collections id={id} data={data} />}

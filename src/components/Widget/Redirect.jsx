@@ -1,3 +1,6 @@
+//*             [REDIRECT]
+//!             BROKEN and needs to be rebuilt.
+
 const Redirect = ({url = "https://kbve.com", display = true}) => {
     if(display)
 	return (

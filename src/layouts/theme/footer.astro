@@ -6,6 +6,7 @@
 //!       [IMPORTS]
 ///       [NAMESPACE]     ->        [N]
 import N from "@n/N.astro";
+import Badge from "@w/Badge.astro";
 //!       [DATA]          ->        [$const]
 const { content } = Astro.props;
 ///       <Utility>: These components will have to be removed and replaced with collections engine.
@@ -32,17 +33,51 @@ const { content } = Astro.props;
           Register
         </a>
       </li>
+      <!-- [LEGAL] - [START] -->
       <li class="my-2">
         <a
           class="text-secondary hover:text-primary transition-colors duration-200"
-          href="https://kbve.com/legal"
+          href="https://kbve.com/legal/tos/"
         >
-          Legal
+          Terms of Service
         </a>
       </li>
+      <li class="my-2">
+        <a
+          class="text-secondary hover:text-primary transition-colors duration-200"
+          href="https://kbve.com/legal/privacy/"
+        >
+          Privacy Policy
+        </a>
+      </li>
+      <li class="my-2">
+        <a
+          class="text-secondary hover:text-primary transition-colors duration-200"
+          href="https://kbve.com/legal/eula/"
+        >
+          EULA
+        </a>
+      </li>
+      <!-- [LEGAL] - [END] -->
     </ul>
     <div class="pt-8 flex max-w-xs mx-auto items-center justify-between">
-      <N ns="controller" template="socials" />
+      
+      <a href="https://kbve.com/github/" target="_blank" rel="prefetch">
+        <Badge hex="333333" icon="mdi:github" />
+      </a>
+      <a href="https://kbve.com/twitter/" target="_blank" rel="prefetch">
+        <Badge hex="00acee" icon="mdi:twitter" />
+      </a>
+      <a href="https://kbve.com/discord/" target="_blank" rel="prefetch">
+        <Badge hex="7289da" icon="ion:logo-discord" />
+      </a>
+      <a href="https://kbve.com/youtube/" target="_blank" rel="prefetch">
+        <Badge hex="FF0000" icon="ph:youtube-logo-fill" />
+      </a>
+      <a href="https://kbve.com/twitch/" target="_blank" rel="prefetch">
+        <Badge hex="6441a5" icon="mdi:twitch" />
+      </a>
+
     </div>
     <N ns="ads" template="footer" id="ezoic" />
     <div

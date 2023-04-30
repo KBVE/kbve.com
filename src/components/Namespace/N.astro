@@ -1,12 +1,9 @@
 ---
 //? {Astro}->[Namespace]=[N]
 //? [IMPORTS]
-    import Article from "@n/Article/Article.astro";
     import Theme from "@n/Theme/Theme.astro";
     import Banner from "@c/Element/Banner/Banner.astro";
     import Controller from "./Controller/Controller.astro";
-    import Badge from "@c/Element/Badge/Badge.astro";
-    import Card from "@c/Element/Card/Card.astro";
     import Ads from "@c/Element/Ads/Ads.astro";
 //? [DATA]
     const {
@@ -26,9 +23,6 @@
     if(ns === "null"){ _ns = namespace}
 ---
 {(_ns == "theme") && <Theme title={title} description={description} template={template}><slot /></Theme>}
-{(_ns == "article") && <Article element={element} id={id} template={template} data={data} />}
 {(_ns == "banner") && <Banner bannerConcept={template} id={id} data={data} />}
 {(_ns == "controller") && <Controller id={id} template={template} data={data} className={className} element={element} />}
-{(_ns == "badge") && <Badge badgeRank={template} data={data} />}
-{(_ns == "card") && <Card card={template} data={data} id={id} />}
 {(_ns == "ads") && <Ads template={template} data={data} id={id} className={className} />}

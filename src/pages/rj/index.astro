@@ -1,16 +1,13 @@
 ---
-import Core from "@l/theme/core.astro";			                            ///	[IMPORT]        ->  [CORE]
-import SWUP from "@l/theme/swup.astro";			                            ///	[SWUP]          ->  Currently facing {hydration} issues #102
+import N from "@n/N.astro";
 
-
-
-const data = {                                                              /// {data}
-	title: "Rogue Jester Action Shooter RPG Official Page", description: "KBVE Presents an action rpg shooter that encompasses the nature of cyberpunk aesthetics with a touch of meme-like zest."}	
-const { content = data } = Astro.props;
+let title = "Rogue Jester Action Shooter RPG Official Page";
+let description = "KBVE Presents an action rpg shooter that encompasses the nature of cyberpunk aesthetics with a touch of meme-like zest.";	
+const { content } = Astro.props;
 
 ---
-<Core content={content}>
-    <SWUP>
+<N ns="theme" title={title} description={description}>
+
         <div class="px-8 py-6 space-y-8">
         </div>
         <div class="px-8 py-6 space-y-8">
@@ -199,8 +196,7 @@ const { content = data } = Astro.props;
             <!--    [Links]?    -->
 
             
-    </SWUP>
-</Core>
+   </N>
 
 <!--    [NOTES] 
 
