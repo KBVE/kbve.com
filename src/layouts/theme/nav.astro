@@ -4,7 +4,7 @@
 //!       [TO:DO]: Structure in the <N> : Namespace.
 ///       [IMPORTS]
 import { Icon } from "astro-icon";
-import ThemeSwitcher from "@c/Splash/theme-switcher.astro";
+import ThemeSwitcher from "@n/Theme/ThemeSwitch.astro"; // Migrating this into the Nav Bar
 import KBVEL from "@c/Branding/KBVEL";
 import KBVELogo from "@c/Branding/KBVELogo";
 ///       [DATA]
@@ -13,9 +13,7 @@ const navItems = [
   { title: "Assets", url: "/asset/" },
   { title: "Projects", url: "/project/" },
   { title: "Contact Us", url: "/support/" },
-  { title: "Terms of Service", url: "/legal/tos/" },
-  { title: "Privacy", url: "/legal/privacy/" },
-  { title: "EULA", url: "/legal/eula/" },
+  { title: "Legal", url: "/legal/" },
 ];
 ---
 
