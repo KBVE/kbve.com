@@ -1,18 +1,20 @@
 ---
-//*         [WL]: Wait List
-//!             :   The WaitList.astro component.
-//?             :   Based upon Mamba UI/UX Library
+//<!--*             [WaitList] : [Widget]
+//<!--?             WaitList Widget that will create a quick verification? / user? : We can create the user without having to set a username.
+//<!--TODO          Integrating AppWrite into the application structure.
+//<!--!             Error: Verfication email does not send or goes into SPAM. We might want to create a function inside of AppWrite to handle this.
 ---
-<!-- Wait List  -->
-<section class="grid gap-6 text-center lg:grid-cols-2 xl:grid-cols-5 space-y-8 m-4 bg-offset rounded-xl">
+
+<section
+  class="grid gap-6 text-center lg:grid-cols-2 xl:grid-cols-5 space-y-8 m-4 bg-offset rounded-xl"
+>
   <div class="w-full p-6 rounded-md sm:p-16 xl:col-span-2">
     <span class="block mb-2 text-violet-400">KBVE VIP</span>
-    <h1 class="text-5xl font-extrabold ">
-      Join our premium membership!
-    </h1>
+    <h1 class="text-5xl font-extrabold">Join our premium membership!</h1>
     <p class="my-8">
-      <span class="font-medium gradient-text">Quick and easy email sign-up! </span
-      > We will notifiy you once our whitelist opens up xD.
+      <span class="font-medium gradient-text"
+        >Quick and easy email sign-up!
+      </span> We will notifiy you once our whitelist opens up xD.
     </p>
     <form
       novalidate=""
@@ -39,8 +41,7 @@
           disabled="true"
         />
       </div>
-      <button
-        class="w-full py-2 font-semibold rounded bg-violet-400"
+      <button class="w-full py-2 font-semibold rounded bg-violet-400"
         >Join the waitlist</button
       >
     </form>
