@@ -11,7 +11,6 @@ const {
 //?     Controller Imports - Extensions
 
 //?     [OPTIONAL]
-import Features from "@c/Element/Features/Generic/features.astro";          /// [FEATUREs]  ->  Plan to be removed.
 
 //?     [INTRO]:Folder
 import Intro from "@c/Scene/Intro/intro.astro";                             /// [INTRO]     ->  <Intro> should be in vanillaJS to avoid hydration issues.
@@ -43,7 +42,6 @@ import Redirect from '@w/Redirect';                                  /// [REDIRE
 {(template == "how" && data == false) && <How />}
 {(template == "waitlist" && data == false) && <WaitList />}
 {(template == "intro" && data == false) && <Intro />}
-{(template == "features" && data == false) && <Features />}
 {(template == "redirect") && <Redirect url={data} />}
 {(template == "livechat" && data == false) && <HubspotLiveChat />}
 {(template == "lottie" && data != false) && <Lottie json={data} styler={className} /> }

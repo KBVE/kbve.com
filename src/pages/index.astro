@@ -7,6 +7,7 @@ import SHash from "@c/Tools/SHash";
 import Splash from "@c/Splash/splash.astro"; //<!-- ! [SPLASH]    ->  Splash is still giving issues as of 1/2/2022.
 import WaitList from "@c/Scene/Intro/WaitList.astro"; //<!-- ! [WL]        ->  WaitList Component from Mamba
 import IntroReview from "@c/Scene/Intro/IntroReview.astro"; //<!-- ! [IR]        ->  IntroReview Component from Mamba
+import Features from "@w/Features.astro";
 //<!-- *       [Page Data]
 let title = "KBVE.com - Gaming, Media, FinTech, Coding and Applications";
 let description = "KBVE - KiloByte Virtual Enterprise is a consultancy firm that designs applications and modifications within the realm of machine learning, blockchain, autonomous operations and fintech. KBVE is also an art collective group that engages in artful intelligence projects.";
@@ -57,6 +58,6 @@ let description = "KBVE - KiloByte Virtual Enterprise is a consultancy firm that
   <!-- Shop?  [End]     -->
 
   <!-- <N ns="ads" template="box" id="ezoic" /> -->
-  <N ns="controller" template="features" />
+  <Features />
   <N ns="ads" template="footer" id="ezoic" />
 </N>
