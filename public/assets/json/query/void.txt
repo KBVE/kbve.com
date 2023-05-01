@@ -1,0 +1,2 @@
+//* GraphQL Queries
+//? Collection of queries to be saved locally
