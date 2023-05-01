@@ -1,0 +1,1 @@
+@keyframes float{0%{transform:translateZ(0)}to{transform:translate3d(0,30px,0)}}picture:where(.astro-6MDBUNJA){animation:float linear 2.5s infinite alternate}@media (prefers-reduced-motion:reduce){picture:where(.astro-6MDBUNJA){animation:none}#starfield{display:none}#splash-bg-fallback:where(.astro-6MDBUNJA){display:block}}
