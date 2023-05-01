@@ -1,0 +1,60 @@
+---
+//<!--*             [SubMenu] - [Widget]
+//<!--*             [IMPORT]
+import { Icon } from "astro-icon";
+import ContentSection from "@w/ContentSection.astro";
+---
+
+<ContentSection title="KiloByte Virtual Enterprise " id="intro">
+    
+  <Fragment slot="lead">
+    <Icon name="mdi:linux" class="h-8 text-primary" />
+  </Fragment>
+
+  <!-- Generic Guest Menu -->
+  <div class="grid grid-cols-2 gap-2 sm:grid-cols-6">
+    <a
+      href="/account/register/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+      target="_blank"
+    >
+      <Icon pack="mdi" name="telescope" class="h-8" />
+      <span>Register</span>
+    </a>
+    <a
+      href="/application/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+    >
+      <Icon pack="mdi" name="rocket" class="h-8" />
+      <span>Application</span>
+    </a>
+    <a
+      href="/asset/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+    >
+      <Icon pack="mdi" name="rocket" class="h-8" />
+      <span>Assets</span>
+    </a>
+    <a
+      href="/news/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+    >
+      <Icon pack="mdi" name="rocket" class="h-8" />
+      <span>News</span>
+    </a>
+    <a
+      href="/blog/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+    >
+      <Icon pack="mdi" name="rocket" class="h-8" />
+      <span>Blog</span>
+    </a>
+    <a
+      href="/tools/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+    >
+      <Icon pack="mdi" name="alarm-panel" class="h-8" />
+      <span>Tools!</span>
+    </a>
+  </div>
+</ContentSection>

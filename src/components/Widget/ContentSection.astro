@@ -2,8 +2,8 @@
 const { title, id } = Astro.props;
 ---
 
-<section {id} class="flex flex-col items-center space-y-4 scroll-mt-24 ">
-  <div class="flex flex-col items-center">
+<section {id} class="flex flex-col items-center space-y-4 scroll-mt-24 mt-8">
+  <div class="flex flex-col items-center bg-offset p-8 rounded-lg shadow-2xl">
     <slot name="eyebrow" />
     <h2
       class="text-6xl font-extrabold tracking-tight text-center gradient-text"
@@ -11,7 +11,7 @@ const { title, id } = Astro.props;
       {title}
     </h2>
   </div>
-  <p class="max-w-xl text-2xl font-extrabold text-center">
+  <p class="max-w-xl text-2xl font-extrabold text-center bg-offset p-8 rounded-lg shadow-2xl">
     <slot name="lead" />
   </p>
   <slot />

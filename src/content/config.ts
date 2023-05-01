@@ -42,6 +42,7 @@ const application = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
+    information: z.string().optional(),
   }),
 });
 
@@ -222,6 +223,60 @@ const media = defineCollection({
   }),
 });
 
+//!       [MEDIA -> INNER COLLECTIONS]
+
+//?       {shows}
+const shows = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    img: z.string().default(''),
+    date: z.string().optional(),
+    url: z.string().optional(),
+  }),
+});
+
+//?       {music}
+const music = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    img: z.string().default(''),
+    date: z.string().optional(),
+    url: z.string().optional(),
+  }),
+});
+
+const EpisodeData = z.array(
+  z.number(),
+  z.string(),
+);
+
+type Episode = z.infer<typeof EpisodeData>;
+
+//?       {podcast}
+const podcast = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    img: z.string().default(''),
+    date: z.string().optional(),
+    url: z.string().optional(),
+    episodes: z.any(),
+  }),
+});
+
+
+
 //?       {tools}
 //?       :var:status - There might be issues with how the status boolean will be handled. We can manually handle it via the markdown file OR we can use a global list.       
 const tools = defineCollection({
@@ -284,7 +339,6 @@ const project = defineCollection({
 });
 
 
-
 //?       [COLLECTIONS]
 //*       Exporting out all of the {$} collections.
 
@@ -309,7 +363,10 @@ export const collections = {
     //?       [CONTENT]:[COLLECTIONS]
     news: news,
     blog: blog,
-    //    media: media,
+    media: media,
+    music: music,
+    shows: shows,
+    podcast: podcast,
     //?       [TOOLS]
     //    tools: tools,
     arcade: arcade,
