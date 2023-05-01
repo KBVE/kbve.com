@@ -1,0 +1,14 @@
+mutation (
+                  $email: String!,
+                  $password: String!,
+                  $name: String
+            ) {
+                  accountCreate(
+                      userId: "unique()",
+                      email: $email,
+                      password: $password,
+                      name: $name
+                  ) {
+                    _id
+                  }
+              }

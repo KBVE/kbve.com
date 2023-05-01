@@ -1,0 +1,53 @@
+---
+//<!--*             [ADS]
+//<!--?             Rebuilt Advertisement Widget.
+//<!--*             [IMPORT]
+//<!--*             [DATA]
+const {
+  adNetwork = "local",
+  id = "",
+  className = "container mx-auto p-2",
+} = Astro.props;
+---
+
+<div class={className}>
+  <!-- [LOCAL]->[START] -->
+  {
+    adNetwork == "local" && (
+      <Fragment>
+        <div id={``} />
+      </Fragment>
+    )
+  }
+  <!-- [LOCAL]->[END] -->
+
+  <!-- [EZOIC]->[START] -->
+  {
+    adNetwork == "ezoic" && (
+      <Fragment>
+        <div id={`ezoic-pub-ad-placeholder-${id}`} />
+      </Fragment>
+    )
+  }
+  <!-- [EZOIC]->[END] -->
+
+  <!-- [A-ADS]->[START] -->
+  {
+    adNetwork == "aads" && (
+      <Fragment>
+        <iframe />
+      </Fragment>
+    )
+  }
+  <!-- [A-ADS]->[END] -->
+
+  <!-- [ADSENSE]->[START] -->
+  {
+    adNetwork == "adsense" && (
+      <Fragment>
+        <iframe />
+      </Fragment>
+    )
+  }
+  <!-- [ADSENSE]->[END] -->
+</div>

@@ -556,6 +556,13 @@ declare module 'astro:content' {
   collection: "journal",
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] },
+"2023-05-01.md": {
+  id: "2023-05-01.md",
+  slug: "2023-05-01",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
 "asset.mdx": {
   id: "asset.mdx",
   slug: "asset",
@@ -603,6 +610,24 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] },
 },
+"media": {
+"radio.mdx": {
+  id: "radio.mdx",
+  slug: "radio",
+  body: string,
+  collection: "media",
+  data: InferEntrySchema<"media">
+} & { render(): Render[".mdx"] },
+},
+"music": {
+"mandalorian-lofi.mdx": {
+  id: "mandalorian-lofi.mdx",
+  slug: "mandalorian-lofi",
+  body: string,
+  collection: "music",
+  data: InferEntrySchema<"music">
+} & { render(): Render[".mdx"] },
+},
 "news": {
 "release-rigor.mdx": {
   id: "release-rigor.mdx",
@@ -627,6 +652,15 @@ declare module 'astro:content' {
   collection: "npc",
   data: any
 } & { render(): Render[".md"] },
+},
+"podcast": {
+"darknet-diaries.mdx": {
+  id: "darknet-diaries.mdx",
+  slug: "darknet-diaries",
+  body: string,
+  collection: "podcast",
+  data: InferEntrySchema<"podcast">
+} & { render(): Render[".mdx"] },
 },
 "project": {
 "api.mdx": {
@@ -704,6 +738,15 @@ declare module 'astro:content' {
   body: string,
   collection: "security",
   data: InferEntrySchema<"security">
+} & { render(): Render[".mdx"] },
+},
+"shows": {
+"wolfram.mdx": {
+  id: "wolfram.mdx",
+  slug: "wolfram",
+  body: string,
+  collection: "shows",
+  data: InferEntrySchema<"shows">
 } & { render(): Render[".mdx"] },
 },
 "stock": {

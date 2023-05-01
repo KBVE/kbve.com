@@ -1,0 +1,29 @@
+---
+//<!--?     [News]  - This file generates all the media from the collections.
+//<!--!     [INFO]  - Information related to this file can be found in our github notes.
+//<!--*     [IMPORTS]
+import N from "@n/N.astro"; //<!--*     [Astro]:{namespace}
+import { getCollection } from "astro:content"; //<!--*     [Astro]:{Content}
+//<!--*     [Function]
+//<!--?     [f()]:getStaticPaths()->getCollections() - Returns the News collections
+export async function getStaticPaths() {
+  const media = await getCollection("media");
+  return media.map((entry) => ({
+    params: {
+      id: entry.slug,
+    },
+    props: {
+      entry,
+    },
+  }));
+}
+//<!--*     [DATA]
+const { id } = Astro.params;
+const { entry } = Astro.props;
+const { Content, headings, injectedFrontmatter } = await entry.render();
+---
+
+<N ns="theme" title={entry.data.title} description={entry.data.description}>
+  <Content />
+  <N ns="ads" template="banner" id="ezoic" />
+</N>
