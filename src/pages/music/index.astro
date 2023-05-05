@@ -1,25 +1,25 @@
 ---
-//<!--?         [Podcast]
-//<!--TODO      [Podcast API]
+//<!--?         [Music]
+//<!--TODO      [Music API]
 //<!--!         [BROKEN]
 //<!--*         [IMPORT]
 import N from "@n/N.astro";
 import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
-let title = "KBVE Shows! Reviews and recommendations for great tv content!";
-let description = "Need something to watch late at night? How about when you are on the treadmill?";
+let title = "KBVE Media - Podcasts, Shows, Movies, Music and More!";
+let description = "All the Media content that KBVE has compiled for your entertainment and pleasure!";
 ---
 
 <N ns="theme" title={title} description={description}>
   <section class="py-6 sm:py-12">
     <div class="container p-6 mx-auto space-y-8">
       <div class="rounded-full space-y-2 text-center bg-offset p-4">
-        <h2 class="text-3xl font-bold">KBVE Shows</h2>
+        <h2 class="text-3xl font-bold">KBVE Music</h2>
         <p class="font-serif text-sm dark:text-gray-400">
-          Epic collection of shows, including new or indie works.
+          Latest Music and hidden gems!.
         </p>
       </div>
-      <Oracle element="media/shows" data="shows" />
+      <Oracle element="music" data="music" />
     </div>
   </section>
   <N ns="ads" template="midbanner" id="ezoic" />
