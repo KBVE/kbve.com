@@ -21,6 +21,6 @@ export const getStaticPaths = (async () => {
   
 export function get({ props }: APIContext) {
     return {
-      body: JSON.stringify({ entry: props.entry }),
+      body: JSON.stringify({ entry : props.entry }),
     };
   }
