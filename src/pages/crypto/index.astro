@@ -1,25 +1,29 @@
 ---
-//<!--?         [Music]
-//<!--TODO      [Music API]
-//<!--!         [BROKEN]
+//<!--?         [Crypto]
 //<!--*         [IMPORT]
+//<!--?         [NameSpace]
 import N from "@n/N.astro";
 import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
-let title = "KBVE Media - Podcasts, Shows, Movies, Music and More!";
-let description = "All the Media content that KBVE has compiled for your entertainment and pleasure!";
+let title = "Crypto Analysis, Charts, Data and Information - KBVE.com";
+let description =
+  "Collection of documentation, references and information related to Crypto. Amazing charts and abstract details will be coming soon.";
 ---
 
 <N ns="theme" title={title} description={description}>
   <section class="py-6 sm:py-12">
     <div class="container p-6 mx-auto space-y-8">
       <div class="rounded-full space-y-2 text-center bg-offset p-4">
-        <h2 class="text-3xl font-bold">KBVE Music</h2>
+        <h2 class="text-3xl font-bold">Crypto Analysis</h2>
         <p class="font-serif text-sm dark:text-gray-400">
-          Latest Music and hidden gems!.
+          Crypto charts, data, information, analysis and reports.
         </p>
       </div>
-      <Oracle element="media/music" data="music" />
+
+      <Oracle
+        element="crypto"
+        data="crypto"
+      />
     </div>
   </section>
   <N ns="ads" template="midbanner" id="ezoic" />
