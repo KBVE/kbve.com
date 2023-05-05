@@ -563,6 +563,34 @@ declare module 'astro:content' {
   collection: "journal",
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] },
+"2023-05-02.md": {
+  id: "2023-05-02.md",
+  slug: "2023-05-02",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"2023-05-03.md": {
+  id: "2023-05-03.md",
+  slug: "2023-05-03",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"2023-05-04.md": {
+  id: "2023-05-04.md",
+  slug: "2023-05-04",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"2023-05-05.md": {
+  id: "2023-05-05.md",
+  slug: "2023-05-05",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
 "asset.mdx": {
   id: "asset.mdx",
   slug: "asset",
