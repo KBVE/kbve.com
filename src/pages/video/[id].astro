@@ -1,14 +1,14 @@
 ---
-//<!--?     [Shows]  - This file generates all the Shows from the collections.
+//<!--?     [Video]  - This file generates all the Video from the collections.
 //<!--!     [INFO]  - Information related to this file can be found in our github notes.
 //<!--*     [IMPORTS]
 import N from "@n/N.astro"; //<!--*     [Astro]:{namespace}
 import { getCollection } from "astro:content"; //<!--*     [Astro]:{Content}
 //<!--*     [Function]
-//<!--?     [f()]:getStaticPaths()->getCollections() - Returns the Shows collections
+//<!--?     [f()]:getStaticPaths()->getCollections() - Returns the Video collections
 export async function getStaticPaths() {
-  const shows = await getCollection("shows");
-  return shows.map((entry) => ({
+  const video = await getCollection("video");
+  return video.map((entry) => ({
     params: {
       id: entry.slug,
     },

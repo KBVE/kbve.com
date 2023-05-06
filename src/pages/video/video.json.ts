@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 export async function get() {
-	const shows = await getCollection("shows");
+	const video = await getCollection("video");
 	return {
-		body: JSON.stringify(shows),
+		body: JSON.stringify(video),
 	};
 }
