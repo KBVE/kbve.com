@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "7ce88ac86b99d980",
+        "id": "ea83c05aaa20f856",
         "type": "tabs",
         "children": [
           {
-            "id": "3c7465625174e3d9",
+            "id": "d4c68ffd98d8a2dd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "journal/2023-05-05.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "697c0d0453a09312",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "journal/2023-05-04.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -105,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2023-05-05.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2023-05-05.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "journal/2023-05-05.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -167,23 +147,26 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c7465625174e3d9",
+  "active": "d4c68ffd98d8a2dd",
   "lastOpenFiles": [
+    "music/ravi-george.mdx",
+    "music/george-beatles.md",
+    "music/george-beatles.mdx",
+    "music/adtr-albums.mdx",
+    "music/olifejp-collection.mdx",
+    "journal/2023-05-06.md",
+    "video/wolfram.mdx",
+    "video",
+    "podcast/darknet-diaries.mdx",
+    "music/adtr-homesick.mdx",
+    "music/mandalorian-lofi.mdx",
+    "journal/2023-05-05.md",
     "journal/2023-05-03.md",
     "journal/2023-05-04.md",
     "journal/2023-05-02.md",
-    "journal/2023-05-05.md",
     "journal/2023-05-01.md",
-    "podcast/darknet-diaries.mdx",
-    "music/mandalorian-lofi.mdx",
     "music/electric.mdx",
     "music/wolfram.mdx",
-    "shows/wolfram.mdx",
-    "shows",
-    "podcast",
-    "music",
-    "npc/rj",
-    "media/wolfram.mdx",
     "journal/2023-04-30.md",
     "journal/2023-04-29.md",
     "journal/2023-04-28.md",
@@ -202,8 +185,6 @@
     "journal/2023-04.md",
     "_bin/_daily.md",
     "journal/_daily.md",
-    "2023-04-17.md",
-    "Untitled.canvas",
-    "releases/1.md"
+    "Untitled.canvas"
   ]
 }

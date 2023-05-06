@@ -11,9 +11,9 @@ img: https://images.unsplash.com/photo-1621416894569-0f39ed31d247?fit=crop&w=140
 description: Bitcoin is the first decentralized blockchain cryptocurrency.
 isin: XC000A2YY636
 tags:
-- technology
-- global
-- blockchain
+  - technology
+  - global
+  - blockchain
 ---
 
 import Details from "@w/Details.astro";
@@ -27,16 +27,38 @@ Bitcoin is the first cryptocurrency based upon a SHA-256 blockchain.
 
 ---
 
-
 <TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
   <TabData tail="block" data="chart">
-    <TradingView data="bitstamp:BTCUSD" />
-  </TabData>
-  <TabData data="settings">Settings</TabData>
-  <TabData data="options">Options</TabData>
-  <TabData data="exchange">Exchanges</TabData>
-  <TabData data="reports">Reports</TabData>
-  <TabData data="notes">
+
+## Charts
+
+<TradingView data="bitstamp:BTCUSD" />
+
+</TabData>
+
+<TabData data="settings">
+  
+## Settings
+
+</TabData>
+  <TabData data="options">
+  
+## Options
+
+</TabData>
+  <TabData data="exchange">
+  
+## Exchanges
+</TabData>
+  <TabData data="reports">
+  
+## Reports
+
+Analysis and reports related to bitcoin!
+
+</TabData>
+
+<TabData data="notes">
 
 ## Notes
 
@@ -44,14 +66,17 @@ These are the collection of notes for the BTC MDX Document.
 
 ### Log
 
-- [X] Add Charts for BTCUSD
+- [x] Add Charts for BTCUSD
 - [ ] Add tabs with charts!
 - [ ] Multi Currency support for Charts?
 
 #### Journal
 
 <Details data="2023-04-14">
-Testing the charts for BTC
+
+- 2023-04-14
+  - Testing the charts for BTC
+
 </Details>
 
 </TabData>
