@@ -43,6 +43,7 @@ const application = defineCollection({
     date: z.string().optional(),
     url: z.string().optional(),
     information: z.string().optional(),
+    media: z.any().optional(),
   }),
 });
 
@@ -252,6 +253,7 @@ const music = defineCollection({
     date: z.string().optional(),
     url: z.string().optional(),
     media: z.any(),
+    feature: z.string().optional(),
   }),
 });
 

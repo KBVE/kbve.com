@@ -655,16 +655,30 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "music": {
-"adtr-homesick.mdx": {
-  id: "adtr-homesick.mdx",
-  slug: "adtr-homesick",
+"adtr-albums.mdx": {
+  id: "adtr-albums.mdx",
+  slug: "adtr-albums",
   body: string,
   collection: "music",
   data: InferEntrySchema<"music">
 } & { render(): Render[".mdx"] },
-"mandalorian-lofi.mdx": {
-  id: "mandalorian-lofi.mdx",
-  slug: "mandalorian-lofi",
+"olifejp-collection.mdx": {
+  id: "olifejp-collection.mdx",
+  slug: "olifejp-collection",
+  body: string,
+  collection: "music",
+  data: InferEntrySchema<"music">
+} & { render(): Render[".mdx"] },
+"ravi-george.mdx": {
+  id: "ravi-george.mdx",
+  slug: "ravi-george",
+  body: string,
+  collection: "music",
+  data: InferEntrySchema<"music">
+} & { render(): Render[".mdx"] },
+"starwars-lofi.mdx": {
+  id: "starwars-lofi.mdx",
+  slug: "starwars-lofi",
   body: string,
   collection: "music",
   data: InferEntrySchema<"music">

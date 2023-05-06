@@ -15,7 +15,17 @@ tags:
   - mobile
 
 ---
+
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
 import N from "@n/N.astro";
+
+<TabMenu first="general" data={["cheatsheet", "system", "errors", "media", "notes"]}>
+
+<TabData tail="block" data="general">
+
+# {frontmatter.title}
 
 ## Information
 
@@ -28,6 +38,10 @@ Our job at KBVE will be to provide you with everything you need to deploy your o
 Everything you need to get started with Android!
 
 <N ns="ads" template="mdx2" id="ezoic" />
+
+</TabData>
+
+<TabData data="cheatsheet">
 
 ## Cheatsheet
 
@@ -125,12 +139,22 @@ Generic Android Keyevents:
 
 - Java: `pulibc class KeyEvent extends InputEvent implements Parcelable`
 
+</TabData>
+
+<TabData data="system">
 
 ## System Information
 
+</TabData>
+
+<TabData data="errors">
+
 ## Errors
 
-    
+</TabData>
+  
+<TabData data="media">
+  
 ## Videos
 
 <N ns="c" template="yt" data="https://www.youtube.com/watch?v=fis26HvvDII" />
@@ -145,6 +169,9 @@ Generic Android Keyevents:
 
 ---
 
+</TabData>
+
+<TabData data="notes">
 
 ## Notes
 
@@ -157,4 +184,8 @@ Notes for Android MDX.
 
 #### Journal
 
-- 2023-04-15 Testing the tabs for Android MDX
+<Details data="2023-04-15">Testing the tabs for Android MDX</Details>
+
+</TabData>
+
+</TabMenu>
