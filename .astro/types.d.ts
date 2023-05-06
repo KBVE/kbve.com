@@ -591,6 +591,13 @@ declare module 'astro:content' {
   collection: "journal",
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] },
+"2023-05-06.md": {
+  id: "2023-05-06.md",
+  slug: "2023-05-06",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
 "asset.mdx": {
   id: "asset.mdx",
   slug: "asset",
@@ -648,9 +655,30 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "music": {
-"mandalorian-lofi.mdx": {
-  id: "mandalorian-lofi.mdx",
-  slug: "mandalorian-lofi",
+"adtr-albums.mdx": {
+  id: "adtr-albums.mdx",
+  slug: "adtr-albums",
+  body: string,
+  collection: "music",
+  data: InferEntrySchema<"music">
+} & { render(): Render[".mdx"] },
+"olifejp-collection.mdx": {
+  id: "olifejp-collection.mdx",
+  slug: "olifejp-collection",
+  body: string,
+  collection: "music",
+  data: InferEntrySchema<"music">
+} & { render(): Render[".mdx"] },
+"ravi-george.mdx": {
+  id: "ravi-george.mdx",
+  slug: "ravi-george",
+  body: string,
+  collection: "music",
+  data: InferEntrySchema<"music">
+} & { render(): Render[".mdx"] },
+"starwars-lofi.mdx": {
+  id: "starwars-lofi.mdx",
+  slug: "starwars-lofi",
   body: string,
   collection: "music",
   data: InferEntrySchema<"music">
@@ -766,15 +794,6 @@ declare module 'astro:content' {
   body: string,
   collection: "security",
   data: InferEntrySchema<"security">
-} & { render(): Render[".mdx"] },
-},
-"shows": {
-"wolfram.mdx": {
-  id: "wolfram.mdx",
-  slug: "wolfram",
-  body: string,
-  collection: "shows",
-  data: InferEntrySchema<"shows">
 } & { render(): Render[".mdx"] },
 },
 "stock": {
@@ -944,6 +963,15 @@ declare module 'astro:content' {
   body: string,
   collection: "tools",
   data: any
+} & { render(): Render[".mdx"] },
+},
+"video": {
+"wolfram.mdx": {
+  id: "wolfram.mdx",
+  slug: "wolfram",
+  body: string,
+  collection: "video",
+  data: InferEntrySchema<"video">
 } & { render(): Render[".mdx"] },
 },
 "website": {
