@@ -226,7 +226,7 @@ const media = defineCollection({
 //!       [MEDIA -> INNER COLLECTIONS]
 
 //?       {shows}
-const shows = defineCollection({
+const video = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -236,6 +236,7 @@ const shows = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
+    media: z.any(),
   }),
 });
 
@@ -250,6 +251,7 @@ const music = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
+    media: z.any(),
   }),
 });
 
@@ -271,7 +273,7 @@ const podcast = defineCollection({
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
-    episodes: z.any(),
+    media: z.any(),
   }),
 });
 
@@ -365,7 +367,7 @@ export const collections = {
     blog: blog,
     media: media,
     music: music,
-    shows: shows,
+    video: video,
     podcast: podcast,
     //?       [TOOLS]
     //    tools: tools,

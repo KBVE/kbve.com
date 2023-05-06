@@ -591,6 +591,13 @@ declare module 'astro:content' {
   collection: "journal",
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] },
+"2023-05-06.md": {
+  id: "2023-05-06.md",
+  slug: "2023-05-06",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
 "asset.mdx": {
   id: "asset.mdx",
   slug: "asset",
@@ -648,6 +655,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "music": {
+"adtr-homesick.mdx": {
+  id: "adtr-homesick.mdx",
+  slug: "adtr-homesick",
+  body: string,
+  collection: "music",
+  data: InferEntrySchema<"music">
+} & { render(): Render[".mdx"] },
 "mandalorian-lofi.mdx": {
   id: "mandalorian-lofi.mdx",
   slug: "mandalorian-lofi",
@@ -766,15 +780,6 @@ declare module 'astro:content' {
   body: string,
   collection: "security",
   data: InferEntrySchema<"security">
-} & { render(): Render[".mdx"] },
-},
-"shows": {
-"wolfram.mdx": {
-  id: "wolfram.mdx",
-  slug: "wolfram",
-  body: string,
-  collection: "shows",
-  data: InferEntrySchema<"shows">
 } & { render(): Render[".mdx"] },
 },
 "stock": {
@@ -944,6 +949,15 @@ declare module 'astro:content' {
   body: string,
   collection: "tools",
   data: any
+} & { render(): Render[".mdx"] },
+},
+"video": {
+"wolfram.mdx": {
+  id: "wolfram.mdx",
+  slug: "wolfram",
+  body: string,
+  collection: "video",
+  data: InferEntrySchema<"video">
 } & { render(): Render[".mdx"] },
 },
 "website": {

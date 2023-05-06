@@ -1,0 +1,30 @@
+---
+//<!--*       [IMPORT]
+    import N from "@n/N.astro";
+import { getCollection } from "astro:content";
+import Oracle from "@w/Oracle.astro";
+//?<!--*     [DATA]
+let title = "KBVE.com - Asset Module";
+let description = "Asset Class - Collection of Assets";
+const stockEntries = await getCollection("stock");
+const cryptoEntries = await getCollection("crypto");
+//let assetEntries = new Map(function*() { yield* stockEntries; yield* cryptoEntries; }());
+---
+
+<N ns="theme" title={title} description={description}>
+  <section class="py-6 sm:py-12">
+    <div class="container p-6 mx-auto space-y-8">
+      <div class="rounded-full space-y-2 text-center bg-offset p-4">
+        <h2 class="text-3xl font-bold">Asset Collection</h2>
+        <p class="font-serif text-sm dark:text-gray-400">
+          Collection of all assets that are tracked by KBVE.
+        </p>
+      </div>
+      
+      <Oracle element="stock" data="stock" />
+      <Oracle element="crypto" data="crypto" />
+
+    </div>
+  </section>
+  <N ns="ads" template="midbanner" id="ezoic" />
+</N>

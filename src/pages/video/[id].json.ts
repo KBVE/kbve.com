@@ -3,8 +3,8 @@ import type { APIContext } from 'astro';
 import { getCollection, getEntryBySlug } from "astro:content";
 
 export const getStaticPaths = (async () => {
-    const shows = await getCollection('shows');
-    return shows.map((entry) => ({
+    const video = await getCollection('video');
+    return video.map((entry) => ({
         params: {
           id: entry.slug,
         },
