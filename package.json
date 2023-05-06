@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "sync": "astro sync",
-    "hamstring": "astro check",
+    "ham": "astro check",
     "kbve": "yarn-upgrade-all && astro sync && astro build && astro dev"
   },
   "devDependencies": {

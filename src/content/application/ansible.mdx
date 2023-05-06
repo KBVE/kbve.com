@@ -13,16 +13,10 @@ tags:
   - host
 ---
 
-import Details from "@w/Details.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
 import N from "@n/N.astro";
 
-<TabMenu first="general" data={["cheatsheet", "media", "notes"]}>
 
-<TabData tail="block" data="general">
-
-## Introduction
+## Information
 
 > Automation software that enables `IaC` - also known as, infrastructure as code, thus allowing user to provision, configure, deploy and secure a whole array of software, applications and machines.
 
@@ -32,16 +26,15 @@ Ansible is a versatile and secure automation tool that harnesses the power of op
 The software / application works by connecting to your devices by sending out tiny programs called modules that perform your tasks with precision and speed.
 Ansible can help you automate provisioning, configuration management, application deployment, and many other manual IT processes
 
-<Details data="Metaphor for Ansible">
+- Metaphor for Ansible
+
 Think of it like:
 
 - Ansible is like a remote control that lets you manage your devices with the push of a button.
 - Ansible is like a chef that prepares a delicious meal using different ingredients and recipes.
 - Ansible is like a conductor that orchestrates a symphony of servers and applications.
 
-</Details>
-
-<Details data="Ansible described for a 5yr old!">
+- Ansible described for a 5yr old!
 
 Ansible is a tool that helps people do things with computers.
 Sometimes people have many computers and they want to do the same thing on all of them.
@@ -51,8 +44,6 @@ Ansible makes it easy and fun and has a list of things that people want to do wi
 It can read the list and do the things one by one and then also check if the things are done correctly.
 Ansible can talk to different kinds of computers and tell them what to do.
 Think of Ansible like a friend that helps people with computers.
-
-</Details>
 
 ---
 
@@ -75,13 +66,6 @@ After installing Ansible, you need to configure it by setting up the inventory f
 You can also customize and fine-tune other settings in the `ansible.cfg` file or by using environment variables or command-line options.
 To confirm that Ansible is installed and configured correctly, you can run the ansible command with the ping module to test the connectivity and responsiveness of your managed nodes.
 
-<Details data="Need extra installation help?">
-
-[Ask our support team?](https://kbve.com/support/) or visit our [Discord](https://kbve.com/discord/)
-
-If you need help with [Python, read our docs](https://kbve.com/application/python/)
-
-</Details>
 
 ---
 
@@ -370,9 +354,6 @@ provider "awx" {
 
 ---
 
-</TabData>
-
-<TabData data="cheatsheet">
 
 ---
 
@@ -384,8 +365,7 @@ An Ansible cheatsheet is a quick and handy reference guide that provides example
 With an Ansible cheatsheet at your fingertips, you can breeze through a variety of tasks that would otherwise be tedious and time-consuming.
 Whether you need to test the connectivity to your nodes, switch to a different user, use a custom SSH key, use password-based authentication, run ad-hoc commands, create and run playbooks, use modules and roles, or anything else, an Ansible cheatsheet will make your life easier and more fun.
 
-</TabData>
-<TabData data="media">
+---
 
 ## Videos
 
@@ -395,9 +375,7 @@ We will be adding more videos.
 
 <N ns="ads" template="mdx2" id="ezoic" />
 
-</TabData>
-
-<TabData data="notes">
+---
 
 ## Notes
 
@@ -410,15 +388,11 @@ We should start to include all the playbooks that we have written!
 
 #### Journal
 
-<Details data="2023-04-16">
-Added tabs to the Ansible MDX.
-</Details>
+- 2023-04-16
+  - Added tabs to the Ansible MDX.
 
-<Details data="2023-04-10">
-Going to update the basics of the documentation. I will go back and add moreinformation next week.
-</Details>
+- 2023-04-10
+  - Going to update the basics of the documentation. I will go back and add moreinformation next week.
 
 ### License
 
-</TabData>
-</TabMenu>
