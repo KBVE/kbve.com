@@ -10,7 +10,7 @@
     "astro": "astro",
     "sync": "astro sync",
     "ham": "astro check",
-    "kbve": "yarn-upgrade-all && astro sync && astro build && astro dev"
+    "kbve": "yarn-upgrade-all && astro sync && astro build && astro dev --host"
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.19.1",

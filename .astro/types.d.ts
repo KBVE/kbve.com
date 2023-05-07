@@ -934,6 +934,13 @@ declare module 'astro:content' {
   collection: "theory",
   data: InferEntrySchema<"theory">
 } & { render(): Render[".mdx"] },
+"phytochemicals.mdx": {
+  id: "phytochemicals.mdx",
+  slug: "phytochemicals",
+  body: string,
+  collection: "theory",
+  data: InferEntrySchema<"theory">
+} & { render(): Render[".mdx"] },
 "programming.mdx": {
   id: "programming.mdx",
   slug: "programming",
@@ -992,6 +999,13 @@ declare module 'astro:content' {
 "c.mdx": {
   id: "c.mdx",
   slug: "c",
+  body: string,
+  collection: "website",
+  data: InferEntrySchema<"website">
+} & { render(): Render[".mdx"] },
+"events.mdx": {
+  id: "events.mdx",
+  slug: "events",
   body: string,
   collection: "website",
   data: InferEntrySchema<"website">
