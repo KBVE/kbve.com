@@ -777,9 +777,9 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "recipe": {
-"mangojuice.mdx": {
-  id: "mangojuice.mdx",
-  slug: "mangojuice",
+"mango-juice.mdx": {
+  id: "mango-juice.mdx",
+  slug: "mango-juice",
   body: string,
   collection: "recipe",
   data: InferEntrySchema<"recipe">

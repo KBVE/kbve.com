@@ -14,14 +14,9 @@ tags:
   - website
 ---
 
-import Details from "@w/Details.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
 import N from "@n/N.astro";
 
-<TabMenu first="general" data={["vip", "guides", "media", "notes"]}>
-
-<TabData tail="block" data="general">
+---
 
 ## Information
 
@@ -31,31 +26,13 @@ That’s where the amazing KBVE webmaster tool comes in.
 Our webmaster tool is a collection of free services offered by search engines that allow you to monitor and maintain your site’s presence and performance.
 They also help you identify and fix any issues that might affect your site’s ranking or user experience.
 
-## ToolBelt
-
 ---
 
-</TabData>
+## Tool
 
-<TabData data="vip">
+The Webmaster Tool
 
-## VIP
-
-</TabData>
-
-<TabData data="guides">
-
-## Guides
-
-</TabData>
-
-<TabData data="media">
-
-## Media
-
-</TabData>
-
-<TabData data="notes">
+---
 
 ## Notes
 
@@ -70,34 +47,26 @@ These are the official notes for the `webmaster` MDX reference document.
 
 #### Journal
 
-<Details data="2023-04-16">
+- 2023-05-07
 
-Added tabs to the webmaster tool.
+Started to write the JSX file for the webmaster tool.
+Under the blueprint, I will test it out here through AstroJS and then later on migrate it into its own repo.
+`widget-tool-webmaster` ? And then have the tools page just pull the bundled javascript file and run it. 
 
-Testing the private script.
+- 2023-04-16
 
-</Details>
+Added tabs to the webmaster tool. Testing the private script.
 
-<Details data="2023-04-11">
+- 2023-04-11
 
 Added the details widget and will start to expand upon the notes, with the goal of launching our first webmaster tool within the end of Q2.
-
 Also added a task list under the log, to make it easier.
 
-</Details>
-
-<Details data="2022-12-10">
+- 2022-12-10
 
 It looks like we have better mdx support with AstroJS v2, I think I might try a bring the webmaster tool online via this page.
-
 Dev Notes for launch.
-
 Major issue with MDX files on the render and dev side.
-
 Currently, it seems that mdx files are causing a decent amount of issues for us within the `Content` System/API.
-I am going to use this as a test case for the mdx problems, hopefully I could find a patchwork solution until the next major release for AstroJS. I did reach out to the team but it seems that they are on holiday break but they are aware of the issues and have stated that this is an experimental area.
-
-</Details>
-
-</TabData>
-</TabMenu>
+I am going to use this as a test case for the mdx problems, hopefully I could find a patchwork solution until the next major release for AstroJS. 
+I did reach out to the team but it seems that they are on holiday break but they are aware of the issues and have stated that this is an experimental area.

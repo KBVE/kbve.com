@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "tools/webmaster.mdx",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d2a74e1311f986fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "journal/2023-05-07.md",
                 "mode": "source",
                 "source": false
@@ -93,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "tools/webmaster.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "tools/webmaster.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2023-05-07.md"
+                "file": "tools/webmaster.mdx"
               }
             }
           }
@@ -157,24 +169,24 @@
   },
   "active": "d4c68ffd98d8a2dd",
   "lastOpenFiles": [
+    "tools/status.mdx",
+    "tools/pass.mdx",
+    "tools/webmaster.mdx",
     "journal/2023-05-07.md",
-    "music/adtr-albums.mdx",
+    "recipe/mango-juice.mdx",
+    "team/ziggy9263.mdx",
+    "team/silver91.mdx",
+    "team/sean.mdx",
+    "team/lvl21bellsprout.mdx",
+    "team/keros.mdx",
+    "team/example.mdx",
     "journal/2023-05-06.md",
-    "music/ravi-george.mdx",
     "music/george-beatles.md",
-    "music/george-beatles.mdx",
-    "music/olifejp-collection.mdx",
-    "video/wolfram.mdx",
-    "video",
-    "podcast/darknet-diaries.mdx",
-    "music/adtr-homesick.mdx",
-    "music/mandalorian-lofi.mdx",
     "journal/2023-05-05.md",
     "journal/2023-05-03.md",
     "journal/2023-05-04.md",
     "journal/2023-05-02.md",
     "journal/2023-05-01.md",
-    "music/electric.mdx",
     "journal/2023-04-30.md",
     "journal/2023-04-29.md",
     "journal/2023-04-28.md",
