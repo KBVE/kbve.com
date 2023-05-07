@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/webmaster.mdx",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d2a74e1311f986fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "theory/socialmedia.mdx",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "theory/socialmedia.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "theory/socialmedia.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2023-05-07.md"
+                "file": "theory/socialmedia.mdx"
               }
             }
           }
@@ -168,20 +155,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d2a74e1311f986fc",
+  "active": "d4c68ffd98d8a2dd",
   "lastOpenFiles": [
+    "theory/programming.mdx",
+    "theory/fintech.mdx",
+    "theory/socialmedia.mdx",
+    "tools/webmaster.mdx",
+    "theory/socialmedia.md",
+    "journal/2023-05-07.md",
+    "theory/gamedesign.mdx",
+    "theory/game-design.mdx",
     "theory/phytochemicals.mdx",
     "theory/polyphenols.mdx",
     "theory/polphenols.mdx",
-    "journal/2023-05-07.md",
-    "tools/webmaster.mdx",
     "tools/status.mdx",
     "tools/pass.mdx",
-    "recipe/mango-juice.mdx",
-    "team/ziggy9263.mdx",
-    "team/silver91.mdx",
-    "team/sean.mdx",
-    "team/lvl21bellsprout.mdx",
     "journal/2023-05-06.md",
     "music/george-beatles.md",
     "journal/2023-05-05.md",
@@ -205,7 +193,6 @@
     "journal/2023-04-17.md",
     "_bin/2023-04-17.md",
     "journal/2023-04.md",
-    "_bin/_daily.md",
     "Untitled.canvas"
   ]
 }
