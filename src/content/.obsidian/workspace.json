@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "theory/socialmedia.mdx",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "theory/socialmedia.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "theory/socialmedia.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2023-05-07.md"
+                "file": "theory/socialmedia.mdx"
               }
             }
           }
@@ -157,24 +157,26 @@
   },
   "active": "d4c68ffd98d8a2dd",
   "lastOpenFiles": [
+    "theory/programming.mdx",
+    "theory/fintech.mdx",
+    "theory/socialmedia.mdx",
+    "tools/webmaster.mdx",
+    "theory/socialmedia.md",
     "journal/2023-05-07.md",
-    "music/adtr-albums.mdx",
+    "theory/gamedesign.mdx",
+    "theory/game-design.mdx",
+    "theory/phytochemicals.mdx",
+    "theory/polyphenols.mdx",
+    "theory/polphenols.mdx",
+    "tools/status.mdx",
+    "tools/pass.mdx",
     "journal/2023-05-06.md",
-    "music/ravi-george.mdx",
     "music/george-beatles.md",
-    "music/george-beatles.mdx",
-    "music/olifejp-collection.mdx",
-    "video/wolfram.mdx",
-    "video",
-    "podcast/darknet-diaries.mdx",
-    "music/adtr-homesick.mdx",
-    "music/mandalorian-lofi.mdx",
     "journal/2023-05-05.md",
     "journal/2023-05-03.md",
     "journal/2023-05-04.md",
     "journal/2023-05-02.md",
     "journal/2023-05-01.md",
-    "music/electric.mdx",
     "journal/2023-04-30.md",
     "journal/2023-04-29.md",
     "journal/2023-04-28.md",
@@ -191,7 +193,6 @@
     "journal/2023-04-17.md",
     "_bin/2023-04-17.md",
     "journal/2023-04.md",
-    "_bin/_daily.md",
     "Untitled.canvas"
   ]
 }

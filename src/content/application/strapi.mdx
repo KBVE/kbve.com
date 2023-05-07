@@ -19,13 +19,33 @@ Strapi, an open-source headless CMS written in NodeJS, is the ultimate solution 
 You can customize every aspect of your content model and logic, and choose from a variety of databases to store your data. 
 Furthermore, Strapi also supports both RESTful and GraphQL APIs, so you can easily connect your content to any front-end framework or platform you prefer.
 Whether you want to build a blog, a portfolio, an e-commerce platform, or anything else, Strapi can help you achieve your goals with ease and elegance while delivering your content faster and easier.
-
+This document is design to help provide an all-inclusive breakdown of Strapi from handling the database, installation, upgrades to scaling and custom plugins. We recommend going over the different setup(s), starting with running it locally and then see how you would like to run the application.
 
 * * *
 
 ## Install
 
 > Before the installation process, we recommend setting up the [database](#database).
+
+We are currently running Node v18.x for Strapi 4.10.x but if you wish to run Strapi under Node v16.x then use Strapi version 4.0.x to 4.3.8. According to their documents, if you are planning to run the SQLite database, then you will also need to have python installed and configured. 
+
+The KBVE way of installing and operating Strapi would be with Docker via a Strapi image. However if you want to run it without any extra virtualization, then do it via locally. 
+
+### Local Install
+
+This is a simple way to run Strapi as a local installation! The command to get started is: 
+```shell
+yarn create strapi-app my-project --quickstart
+```
+After the creation process is done then head over to: `http://localhost:1337/admin` and create your first admin account. Afterwards you can mess around with the collections and get a better feel! Skip down to the `Collections` part of this documentation for more information.
+
+### Docker Install
+
+The KBVE way of getting Strapi up and running would be to run a docker-compose, which would pull our Strapi image, MariaDB/MySQL for the database and configure the networking / storage within your docker swarm. If you need help setting up docker and the docker swarm, then we suggest you head over to our [Docker application notes section](https://kbve.com/application/docker) for more information.
+
+## Update
+
+There are a couple ways of updating your Strapi instance, including using docker, yarn or manually. 
 
 * * *
 
