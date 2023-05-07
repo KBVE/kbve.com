@@ -4,31 +4,32 @@
 //<!--TODO      Migrate NFC Pass to a quick pass tool for us to use.
 ---
 
-
 <script
+  is:inline
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   crossorigin="anonymous"
 ></script>
 <script
+  is:inline
   src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"
   integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
   crossorigin="anonymous"
 ></script>
 <script
+  is:inline
   src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"
   integrity="sha256-bbNosz5JlGdezcH8vxdbJ+b/hVKQTTRxrb+kM13pxc0="
   crossorigin="anonymous"
 ></script>
 <script
+  is:inline
   src="https://cdnjs.cloudflare.com/ajax/libs/psl/1.1.27/psl.min.js"
   integrity="sha384-SwQ/3RKNbCrSStLwvLgMkcjj41mDiEno7qwiosvV95+RSGf8gK+akwDNqt1dmVnA"
   crossorigin="anonymous"
 ></script>
 
-
-<script is:inline type="text/javascript">
-
+<script is:inline>
   // Functions Below by Kory Becker
 
   function getHostName(url) {
@@ -115,7 +116,6 @@ function _salt() {
 **/
 </script>
 
-
 <div class="canvas">
   <div class="container">
     <div class="page-header">
@@ -125,9 +125,11 @@ function _salt() {
 
     <!-- form -->
     <p>
-      <form class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
+      <form
+        class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid"
+      >
         <div class="form-group">
-          <label for="sdomain" class="text-primary">Domain: </label>
+          <label for="sdomain" class="text-primary">Domain:</label>
           <input
             type="text"
             class="form-control"
@@ -136,11 +138,14 @@ function _salt() {
             aria-describedby="domainHelp"
             placeholder="Enter Domain"
           />
-          <p id="domainHelp" class="form-text text-muted"
-            >Domain TLD is used as the salt for the password. Salt: <b> <div class="gradient-text" id="tld"> </div> </b> </p>
+          <p id="domainHelp" class="form-text text-muted">
+            Domain TLD is used as the salt for the password. Salt: <b>
+              <div class="gradient-text" id="tld"></div>
+            </b>
+          </p>
         </div>
         <div class="form-group">
-          <label for="eIPassword1" class="text-primary">Master Password: </label>
+          <label for="eIPassword1" class="text-primary">Master Password:</label>
           <input
             type="password"
             class="form-control"
@@ -149,7 +154,9 @@ function _salt() {
           />
         </div>
         <div class="form-group">
-          <label for="finalpass" class="text-primary">Finalized Password: </label>
+          <label for="finalpass" class="text-primary"
+            >Finalized Password:
+          </label>
           <input
             type="text"
             class="form-control"
@@ -159,7 +166,7 @@ function _salt() {
         </div>
 
         <div class="form-group">
-          <label for="regex" class="text-primary">Regex: </label>
+          <label for="regex" class="text-primary">Regex:</label>
           <input
             type="text"
             class="form-control"
@@ -168,8 +175,10 @@ function _salt() {
           />
         </div>
 
-        <button type="button" class="px-4 py-2 border rounded-md border-gray-100 gradient-text" onclick="generate();"
-          >Generate</button
+        <button
+          type="button"
+          class="px-4 py-2 border rounded-md border-gray-100 gradient-text"
+          onclick="generate();">Generate</button
         >
       </form>
     </p>
