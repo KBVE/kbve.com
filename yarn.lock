@@ -1066,12 +1066,10 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
-"@nanostores/react@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@nanostores/react/-/react-0.5.0.tgz#91f7b193eb663850632c1c571ef75aafb6fcae4a"
-  integrity sha512-1i+VhIwK+R51RXmnLul/C7a2WYkBF17/KsHsPzIboMXVjKfUvPbViZrwaeiqLFyHFUPgylq2//VkPqx3wmiCeg==
-  dependencies:
-    use-sync-external-store "^1.2.0"
+"@nanostores/react@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@nanostores/react/-/react-0.6.0.tgz#5f1c0ece7d71b054bff994723111ef4346cd869f"
+  integrity sha512-kDHf4Wm+J82RMXg1ZUbeod8D3yJsf+/cSf7MogTH8kwo2qs7IKKBfVmHHf+fHKQzb0DWR0mpErNs3QCT6OWdOA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -5377,10 +5375,10 @@ svelte2tsx@^0.5.11:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@^3.59.0:
-  version "3.59.0"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.59.0.tgz#0d991cb1af5e4b61aad2021b004815aad05e7ee1"
-  integrity sha512-Di1wVPwdWriw5pSyInMRpr5EZmwrzKxtDKv5aXu8A/WDUi59Y5bIvl42eLef0x1vwz+ZtrjdnT8nXir2bDqR/A==
+svelte@^3.59.1:
+  version "3.59.1"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.59.1.tgz#3de3d56b9165748f32f3131589b8d183cabe7449"
+  integrity sha512-pKj8fEBmqf6mq3/NfrB9SLtcJcUvjYSWyePlfCqN9gujLB25RitWK8PvFzlwim6hD/We35KbPlRteuA6rnPGcQ==
 
 svgo@2.8.0, svgo@^2.8.0:
   version "2.8.0"
@@ -5719,11 +5717,6 @@ update-browserslist-db@^1.0.10:
   dependencies:
     escalade "^3.1.1"
     picocolors "^1.0.0"
-
-use-sync-external-store@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
-  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   version "1.0.2"
