@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "journal/2023-05-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "journal/2023-05-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2023-05-07.md",
+                "file": "journal/2023-05-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2023-05-07.md"
+                "file": "journal/2023-05-08.md"
               }
             }
           }
@@ -157,19 +157,19 @@
   },
   "active": "d4c68ffd98d8a2dd",
   "lastOpenFiles": [
+    "journal/2023-05-07.md",
+    "journal/2023-05-08.md",
     "theory/programming.mdx",
     "theory/fintech.mdx",
     "theory/socialmedia.mdx",
     "tools/webmaster.mdx",
     "theory/socialmedia.md",
-    "journal/2023-05-07.md",
     "theory/gamedesign.mdx",
     "theory/game-design.mdx",
     "theory/phytochemicals.mdx",
     "theory/polyphenols.mdx",
     "theory/polphenols.mdx",
     "tools/status.mdx",
-    "tools/pass.mdx",
     "journal/2023-05-06.md",
     "music/george-beatles.md",
     "journal/2023-05-05.md",
