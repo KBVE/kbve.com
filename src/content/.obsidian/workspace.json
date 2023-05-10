@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d4c68ffd98d8a2dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "application/flipperzero.mdx",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "0b5f003137d5b309",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/programming.mdx",
+                "file": "journal/2023-05-10.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/programming.mdx",
+                "file": "journal/2023-05-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "theory/programming.mdx",
+                "file": "journal/2023-05-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "theory/programming.mdx"
+                "file": "journal/2023-05-10.md"
               }
             }
           }
@@ -170,11 +157,13 @@
   },
   "active": "0b5f003137d5b309",
   "lastOpenFiles": [
-    "blog/theorycraft.mdx",
-    "application/flipperzero.mdx",
+    "journal/2023-05-09.md",
+    "journal/2023-05-10.md",
     "journal/2023-05-08.md",
-    "journal/2023-05-07.md",
+    "application/flipperzero.mdx",
     "theory/programming.mdx",
+    "blog/theorycraft.mdx",
+    "journal/2023-05-07.md",
     "theory/fintech.mdx",
     "theory/socialmedia.mdx",
     "tools/webmaster.mdx",
@@ -183,7 +172,6 @@
     "theory/game-design.mdx",
     "theory/phytochemicals.mdx",
     "theory/polyphenols.mdx",
-    "theory/polphenols.mdx",
     "journal/2023-05-06.md",
     "music/george-beatles.md",
     "journal/2023-05-05.md",
@@ -205,7 +193,6 @@
     "journal/2023-04-19.md",
     "journal/2023-04-18.md",
     "journal/2023-04-17.md",
-    "_bin/2023-04-17.md",
     "Untitled.canvas"
   ]
 }
