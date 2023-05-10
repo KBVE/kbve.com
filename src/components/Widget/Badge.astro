@@ -9,6 +9,7 @@ const { icon, hex } = Astro.props;
 <button
   type="button"
   class={`text-white bg-[#${hex}] hover:bg-[#${hex}]/90 focus:ring-4 focus:outline-none focus:ring-[#${hex}]/50 font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center  justify-center  dark:focus:ring-[#${hex}]/55 mr-2 mb-2`}
+  aria-label={`${icon}`}
 >
   <Icon name={icon} class="w-6 h-6" />
 </button>
