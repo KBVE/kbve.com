@@ -25,10 +25,10 @@
   resolved "https://registry.yarnpkg.com/@appwrite.io/pink-icons/-/pink-icons-0.0.5.tgz#7e8a81f3310fb701ad23f17ed6199c516038ffd8"
   integrity sha512-Ej9usq4C9pwrqCvSNvRnFJ1jPF1+iXq2+edBbuttF1f30jFlOXol/Z7gkDR1ofwtWUBFs2X+181dIPLJHICq+A==
 
-"@appwrite.io/pink@^0.0.6-rc.11":
-  version "0.0.6-rc.11"
-  resolved "https://registry.yarnpkg.com/@appwrite.io/pink/-/pink-0.0.6-rc.11.tgz#3894d4673abc1c1a4df26b7c176ba9f954ccb8fc"
-  integrity sha512-wHuWZM1SbBV7GQymBcBGDgtN5teu2OeMl9vB+IM6Ctg+Jkqjlc8QyO8Ef6Om8EFuSJCEzxCugMQPM0Ohtt/V2g==
+"@appwrite.io/pink@^0.0.6-rc.12":
+  version "0.0.6-rc.12"
+  resolved "https://registry.yarnpkg.com/@appwrite.io/pink/-/pink-0.0.6-rc.12.tgz#001bac978c58274a169eaf46ac0140d0eaf838dc"
+  integrity sha512-NZ/ozrkFwv7U9jBaxdBljOT9/TEBvnzkWQGAd/A5SK2xHEgw3M85ndv2ZzIqKEaxMDEoeRsg76Ym0MmUILDmdg==
   dependencies:
     "@appwrite.io/pink-icons" "*"
     normalize.css "^8.0.1"
@@ -159,10 +159,10 @@
     "@babel/core" ">=7.0.0-0 <8.0.0"
     "@babel/plugin-transform-react-jsx" "^7.17.12"
 
-"@astrojs/sitemap@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-1.3.0.tgz#d102f72e155538af611db8edb2f1b43d0436c8d6"
-  integrity sha512-s1/v9MfnxVLvH5v4edK02bBAOMp5tuEvhPT1pJ2qaqXM6QZuqatk/xQU3kuWebQh+yqnD2yBeeHbmfwr4gG1vw==
+"@astrojs/sitemap@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-1.3.1.tgz#2833f329e43d7210d651a1e5155625d138c6f65b"
+  integrity sha512-4ZBug4ml+2Nl5/Uh4VSja8Kij/DU7/RaNMciXCNm1EzQkP/jm+nqMG1liDDcQK5zXPAoLeaat06IbhNlruvQjg==
   dependencies:
     sitemap "^7.1.1"
     zod "^3.17.3"
@@ -1596,10 +1596,10 @@ astro-icon@^0.8.0:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
-astro@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.4.3.tgz#7a81437c816b7bfc0864ed6da575146491a34b0e"
-  integrity sha512-WU7sMkgFNQs4WZzEmpjOYZthcT8+LSmwIR0GvWzVYlb+dIMfFCQyg99LNHdhg/XZKi08ztaHmRf4ZBjJvZHsgA==
+astro@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.4.4.tgz#8e38e8575a4764e01c8ced13cbfe6379bb3fdfef"
+  integrity sha512-2DFxcnZySS/OzBbiuWpoVGJBikcHfbwO5xmk5ohItswoMs+PfZ5P/B6mXplTjaosjm3M43c0OIsd8Mq6UksQZQ==
   dependencies:
     "@astrojs/compiler" "^1.4.0"
     "@astrojs/language-server" "^1.0.0"
