@@ -25,10 +25,10 @@
   resolved "https://registry.yarnpkg.com/@appwrite.io/pink-icons/-/pink-icons-0.0.5.tgz#7e8a81f3310fb701ad23f17ed6199c516038ffd8"
   integrity sha512-Ej9usq4C9pwrqCvSNvRnFJ1jPF1+iXq2+edBbuttF1f30jFlOXol/Z7gkDR1ofwtWUBFs2X+181dIPLJHICq+A==
 
-"@appwrite.io/pink@^0.0.6-rc.12":
-  version "0.0.6-rc.12"
-  resolved "https://registry.yarnpkg.com/@appwrite.io/pink/-/pink-0.0.6-rc.12.tgz#001bac978c58274a169eaf46ac0140d0eaf838dc"
-  integrity sha512-NZ/ozrkFwv7U9jBaxdBljOT9/TEBvnzkWQGAd/A5SK2xHEgw3M85ndv2ZzIqKEaxMDEoeRsg76Ym0MmUILDmdg==
+"@appwrite.io/pink@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@appwrite.io/pink/-/pink-0.0.6.tgz#1d22fb0d800b5d23830015b3290d1a86f939152a"
+  integrity sha512-TqlqzkDYz9HUQ9oa+igFLm82wY6OsUHB+CiVkNLMTO2v66UIFwbukbBOvFtD+Gou/quGPusbtzd10Z/Pjd0TSA==
   dependencies:
     "@appwrite.io/pink-icons" "*"
     normalize.css "^8.0.1"
@@ -44,10 +44,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.4.1.tgz#9cf6d011a1dbdc9ff81923ec02b45043c1c71924"
   integrity sha512-aXAxapNWZwGN41P+Am/ma/2kAzKOhMNaY6YuvLkUHFv+UZkmDHD6F0fE1sQA2Up0bLjgPQa1VQzoAaii5tZWaA==
 
-"@astrojs/image@^0.16.7":
-  version "0.16.7"
-  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.16.7.tgz#5bbaf4558413bbae09798c76eac16ebe5e0dc470"
-  integrity sha512-8X1DnMh3lUTA7BNt7dF0rfWTXNwvLoPWWXtLi+TdO3CW1SvdY9LJRuCEWwHfnKzcQ0EC2TfLwjukpbtJuCRxjw==
+"@astrojs/image@^0.16.8":
+  version "0.16.8"
+  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.16.8.tgz#8c906866b1d847c90c342eee7726ca88ae56a027"
+  integrity sha512-ka18Y8HXllitE4TN66tmxqc1j+pgfqfq5i/D3I0QmmH2hFd7olFNVDrd15S4ZM1U5jxZORUv+PuJU0g8dZEjqQ==
   dependencies:
     "@altano/tiny-async-pool" "^1.0.2"
     http-cache-semantics "^4.1.0"
@@ -973,10 +973,10 @@
     source-map "^0.7.0"
     vfile "^5.0.0"
 
-"@mui/base@5.0.0-alpha.128":
-  version "5.0.0-alpha.128"
-  resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.128.tgz#8ce4beb971ac989df0b1d3b2bd3e9274dbfa604f"
-  integrity sha512-wub3wxNN+hUp8hzilMlXX3sZrPo75vsy1cXEQpqdTfIFlE9HprP1jlulFiPg5tfPst2OKmygXr2hhmgvAKRrzQ==
+"@mui/base@5.0.0-beta.0":
+  version "5.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-beta.0.tgz#4145f8a700e04d68d703da70d3c26c62d278f4e5"
+  integrity sha512-ap+juKvt8R8n3cBqd/pGtZydQ4v2I/hgJKnvJRGjpSh3RvsvnDHO4rXov8MHQlH6VqpOekwgilFLGxMZjNTucA==
   dependencies:
     "@babel/runtime" "^7.21.0"
     "@emotion/is-prop-valid" "^1.2.0"
@@ -987,10 +987,10 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
-"@mui/core-downloads-tracker@^5.12.3":
-  version "5.12.3"
-  resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.12.3.tgz#3dffe62dccc065ddd7338e97d7be4b917004287e"
-  integrity sha512-yiJZ+knaknPHuRKhRk4L6XiwppwkAahVal3LuYpvBH7GkA2g+D9WLEXOEnNYtVFUggyKf6fWGLGnx0iqzkU5YA==
+"@mui/core-downloads-tracker@^5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.13.0.tgz#cb2c732165f60533862707d9bcedfab8e6c0ff48"
+  integrity sha512-5nXz2k8Rv2ZjtQY6kXirJVyn2+ODaQuAJmXSJtLDUQDKWp3PFUj6j3bILqR0JGOs9R5ejgwz3crLKsl6GwjwkQ==
 
 "@mui/icons-material@^5.11.16":
   version "5.11.16"
@@ -999,18 +999,18 @@
   dependencies:
     "@babel/runtime" "^7.21.0"
 
-"@mui/material@^5.12.3":
-  version "5.12.3"
-  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.12.3.tgz#398c1b123fb065763558bc1f9fc47d1f8cb87d0c"
-  integrity sha512-xNmKlrEN4HsTaKFNLZfc7ie7CXx2YqEeO//hsXZx2p3MGtDdeMr2sV3jC4hsFs57RhQlF79weY7uVvC8xSuVbg==
+"@mui/material@^5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.13.0.tgz#23c63a9d117dca22b81bb82db6e9c4d761c8fbf1"
+  integrity sha512-ckS+9tCpAzpdJdaTF+btF0b6mF9wbXg/EVKtnoAWYi0UKXoXBAVvEUMNpLGA5xdpCdf+A6fPbVUEHs9TsfU+Yw==
   dependencies:
     "@babel/runtime" "^7.21.0"
-    "@mui/base" "5.0.0-alpha.128"
-    "@mui/core-downloads-tracker" "^5.12.3"
+    "@mui/base" "5.0.0-beta.0"
+    "@mui/core-downloads-tracker" "^5.13.0"
     "@mui/system" "^5.12.3"
     "@mui/types" "^7.2.4"
     "@mui/utils" "^5.12.3"
-    "@types/react-transition-group" "^4.4.5"
+    "@types/react-transition-group" "^4.4.6"
     clsx "^1.2.1"
     csstype "^3.1.2"
     prop-types "^15.8.1"
@@ -1381,10 +1381,10 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
-"@types/react-transition-group@^4.4.5":
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.5.tgz#aae20dcf773c5aa275d5b9f7cdbca638abc5e416"
-  integrity sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==
+"@types/react-transition-group@^4.4.6":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.6.tgz#18187bcda5281f8e10dfc48f0943e2fdf4f75e2e"
+  integrity sha512-VnCdSxfcm08KjsJVQcfBmhEQAPnLB8G08hAxn39azX1qYBQ/5RVQuoHuKIcfKOdncuaUvEpFKFzEvbtIMsfVew==
   dependencies:
     "@types/react" "*"
 
@@ -1479,10 +1479,10 @@ acorn@^8.0.0, acorn@^8.5.0, acorn@^8.8.0, acorn@^8.8.2:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
-alpinejs@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.12.0.tgz#ff84d788231e7cc3fc38e363b7ebbc4f9d7031b2"
-  integrity sha512-YENcRBA9dlwR8PsZNFMTHbmdlTNwd1BkCeivPvOzzCKHas6AfwNRsDK9UEFmE5dXTMEZjnnpCTxV8vkdpWiOCw==
+alpinejs@^3.12.1:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.12.1.tgz#97c1b975e68fb7c5dcd601cb58130ce163c5fc5d"
+  integrity sha512-GjEmZscHuCPv/XRbzabQLFH3I1+M3TbZqEsLDuYai/Yw+pE1IL7DK4ejRfqBSaysi4wWZ1k5IqVG2aefhWWqsQ==
   dependencies:
     "@vue/reactivity" "~3.1.1"
 
@@ -1596,10 +1596,10 @@ astro-icon@^0.8.0:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
-astro@^2.4.4:
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.4.4.tgz#8e38e8575a4764e01c8ced13cbfe6379bb3fdfef"
-  integrity sha512-2DFxcnZySS/OzBbiuWpoVGJBikcHfbwO5xmk5ohItswoMs+PfZ5P/B6mXplTjaosjm3M43c0OIsd8Mq6UksQZQ==
+astro@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.4.5.tgz#2766a0b929a7e2e48169ed31180b6d5175175e90"
+  integrity sha512-osxLnuLXaOX0FjWOVQH8cmK4N/Gdj/ZdEkeyMJWsUss7xQU4Q64tAxB/dAv75f/XZiu+PprmndJkyQ4sYLOv1g==
   dependencies:
     "@astrojs/compiler" "^1.4.0"
     "@astrojs/language-server" "^1.0.0"
@@ -3187,10 +3187,10 @@ jiti@^1.18.2:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.18.2.tgz#80c3ef3d486ebf2450d9335122b32d121f2a83cd"
   integrity sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==
 
-jquery@^3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.4.tgz#ba065c188142100be4833699852bf7c24dc0252f"
-  integrity sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ==
+jquery@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.0.tgz#fe2c01a05da500709006d8790fe21c8a39d75612"
+  integrity sha512-umpJ0/k8X0MvD1ds0P9SfowREz2LenHsQaxSohMZ5OMNEU2r0tf8pdeEFTHMFxWVxKNyU9rTtK3CWzUCTKJUeQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
