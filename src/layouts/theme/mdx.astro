@@ -5,7 +5,7 @@ const { content } = Astro.props; ///	[Astro Props]
 
 <div
   style={{ backgroundImage: `url(${content.img})` }}
-  class={`bg-fill bg-center  bg-no-repeat md:bg-cover object-contain flex justify-center items-center flex-col shadow-2xl md:p-16 p-6 min-h-[15%]`}
+  class={`bg-contained bg-center bg-no-repeat md:bg-cover object-contain flex justify-center items-center flex-col shadow-2xl md:p-32 p-12 `}
 >
   <h1 class="title md:text-6xl text-5xl text-white text-shadow-lg shadow-black">
     {content.title}
