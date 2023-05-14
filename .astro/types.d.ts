@@ -294,6 +294,13 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
+"python.mdx": {
+  id: "python.mdx",
+  slug: "python",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] },
 "rust.mdx": {
   id: "rust.mdx",
   slug: "rust",

@@ -88,7 +88,34 @@ const navItems = [
       </div>
     </div>
     <!-- Menu Modal -->
+  </div>
+</header>
 
+<script>
+  import MicroModal from "micromodal";
+
+  const menuModalId = "menu-modal";
+  const menu = document.querySelector(`#${menuModalId} ul`);
+  const openNavButton = document.querySelector("#open-nav-button");
+  const closeNavButton = document.querySelector("#close-nav-button");
+
+  const openMenu = () => {
+    MicroModal.show(menuModalId, { disableScroll: true });
+  };
+
+  const closeMenu = () => {
+    MicroModal.close(menuModalId);
+  };
+
+  openNavButton?.addEventListener("click", openMenu);
+  closeNavButton?.addEventListener("click", closeMenu);
+
+  menu?.addEventListener("click", (event) => {
+    if ((event.target as HTMLElement).tagName === "A") {
+      closeMenu();
+    }
+  });
+</script>
 
 <noscript>
   <style>

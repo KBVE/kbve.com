@@ -37,6 +37,9 @@ let description =
 ---
 
 <N ns="theme" title={title} description={description}>
+
+  <!--! [AppWrite]->[START] -->
+
   <script>
     import { user$, logout } from "@lib/appwrite";
 
@@ -44,13 +47,17 @@ let description =
       document.querySelector("#accountLoginLink");
     const userElem: HTMLElement | null = document.querySelector("#accountUser");
 
-
+    // The issue that we face within this setup is that we can not scope it beyond the vanilla.
+    // This means that while it will be fast, it does not mean that it will be safe.
+    // The trade off of speed for security is one that is of an issue.
 
     // These three functions below will be removed and the profile widget will get converted into a jsx.
 
+
+    // This function below is out of line, I will have to register a Gravatar as well for the email.
     function get_gravatar_image_url (email, size, default_image, allowed_rating, force_default)
     {
-        email = typeof email !== 'undefined' ? email : 'john.doe@example.com';
+        email = typeof email !== 'undefined' ? email : 'example@kbve.com';
         size = (size >= 1 && size <= 2048) ? size : 80;
         default_image = typeof default_image !== 'undefined' ? default_image : 'mm';
         allowed_rating = typeof allowed_rating !== 'undefined' ? allowed_rating : 'g';
@@ -60,12 +67,14 @@ let description =
     }
 
 
+    // Hide the element based upon the string that is given.
     function _hide(element: string)
     {
       let __v: HTMLElement | null = document.querySelector(element);
       if(__v) { __v.style.display = "none"; }
     }
 
+    // Set the _K value of the element, both being a predefined set of objects that get identified via string, which gets parsed through javascript.
     function _k(element: string, value: string)
     {
       let __v: HTMLElement | null = document.querySelector(element);
@@ -75,6 +84,10 @@ let description =
         console.log(`Cant Find ${element} `);
       }
     }
+
+    //<!--! We want to migrate the console.log outside of the general javascript browser. While it makes sense to let the user know of the error, we should use this chance to build a solid reporting system. 
+    //<!--TODO We want to make a reporting system that can be expanded outside of existing js frameworks, so that the system and the unit testing that we build is simple.
+    //<!--TODO Keep Reports easy, stupid, simple.
 
     user$.subscribe((user) => {
       if (!loginElem || !userElem) return;
@@ -86,6 +99,11 @@ let description =
           document.querySelector("#accountUserDetail");
 
         if (accountUserDetailElem) {
+          //<!--! This is a new scope that we started, ideally we would want this replacement done through a nanostore based system. 
+          //<!--! We should not call the `api` for each request because it will then load the server. We let a 3rd party api handle soft reads?
+
+
+         //<!--? This does not replace all but rather just one instance. I think that it makes esense to expand it to all but that could cause issues with the i18n.
           console.log(user);
           _hide("#loader");
           _k('#username',user.name);
@@ -95,7 +113,7 @@ let description =
           _k('#title', 'Admin');
           }
           _k('#data',JSON.stringify(user));
-
+          //<!--? The line below was removed because it was not yet ready for what we had planned.
           //accountUserDetailElem.innerHTML = `Email: ${user.email} Admin: ${user.prefs.admin || false}`;
         }
       } else {
@@ -110,8 +128,13 @@ let description =
       logout();
     });
   </script>
+  <!--! [AppWrite]->[END] -->
 
- 
+
+  <!-- Well fetch failures... since I dont have internet. Forgot to build a way to give them dump data. -->
+  <!-- Damn this means we are at lose again.  -->
+
+
 
   <section id="accountLoginLink">
     <a href="/account/login">Login</a>
