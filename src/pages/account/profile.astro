@@ -5,6 +5,8 @@ import N from "@n/N.astro"; //      [NameSpace]
 import Auth from "@r/AppWriteProfile";
 
 //<!--*         [DATA]
+//<!--!      `[DATA]          ->        [$const]
+const { content } = Astro.props;
 let title = "KBVE Profile";
 let description =
   "Manage your KBVE Profile and Account through our online portal";
@@ -12,6 +14,25 @@ let description =
 
 <N ns="theme" title={title} description={description} data="">
  
+
+  <!--? IDEA KING 1? -->
+  <!-- Starts with a blank screen? This needs to be fixed. -->
+  <!--! Cache under a couple different CDNs, like Ezoic, Cloudflare and Google are having issues with the current cache concept -->
+  <!--! They are making it a bit harder to clean the automation logger for their respective movements. 
+  <!--! One of the reasons that I believe for it is because they got a bot problem. -->
+
+
+
+  <!--? IDEA 2?  -->
       <Auth client:only="react" />
-   
-</N>
+
+      <!--TODO This is the current working one for the setup for the website. We have to atleast keep one concept within the system. -->
+      <!--TODO Think of it like a test case that we can reference back and then remove if we need to. This would be a placemarker, kinda like a bookmark-->
+  
+
+  <!--? IDEA 3? -->
+
+    <!--? Calling the auth via the client:only can be an issue when running the cloud? We ran into this issue before because of rocketloader.  -->
+    <!--? The rpboblem was that rocketloader was expressing a javascript file that had prebuilt js files ready to render and cache. In theory  -->
+
+    </N>

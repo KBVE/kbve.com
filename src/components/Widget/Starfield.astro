@@ -1,10 +1,19 @@
 ---
-
+//<!--?         [INFO]=> The file for the splash is design to not be too focused on the way we handle the different points of information. 
+//<!--?         The starfield file is not the best file to call upon as it isnt the fastest, we can improve upon the way that it calls the stars that are being called.
+//<!--?         The issue with the calls within the object of the star is that the cost of performance is too high, it can also open up attack vectors within the indirect calls.
+//<!--*         [DATA]
+  const { icon, hex } = Astro.props;
+//<!--!         We will be dropping this file because it will cost too much to run. The security to call this file within Astro will drop the performance cost as well.
+//<!--TODO      Remove the file and state the reason besides the call of icon and hex.
 ---
 
+<!-- The div-container is the location of the rendered file(s). -->
 <div id="starfield" class="absolute inset-0">
   <canvas id="starfield-canvas"></canvas>
 </div>
+
+<!-- The script below is the setup for the basics of the starfield. We know that the current count is a set of 800 units. -->
 
 <script>
   const COUNT = 800;
@@ -99,3 +108,7 @@
     rafId = requestAnimationFrame(frame);
   }
 </script>
+
+<!-- End of the script!  -->
+<!--! This was a great script from the start to finish, it helped a ton to understand the different aspects of Astro.  -->
+<!--! It is a shame that Google does not have their shit together xD -->
