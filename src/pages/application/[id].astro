@@ -1,9 +1,8 @@
 ---
-///     [IMPORTS]
-import N from "@n/N.astro"; ///     [Astro]:{namespace}
-import { Debug } from 'astro/components';
+//<!--*     [IMPORTS]
+import N from "@n/N.astro"; 
 import { getCollection } from "astro:content";
-
+//<!--*     [FUN]
 export async function getStaticPaths() {
   const blog = await getCollection("application");
   return blog.map((entry) => ({
@@ -15,6 +14,7 @@ export async function getStaticPaths() {
     },
   }));
 }
+//<!--*     [DATA]
 const { id } = Astro.params;
 const { entry } = Astro.props;
 const { Content, headings, injectedFrontmatter } = await entry.render();
