@@ -7,8 +7,6 @@
 const { tail = "w-full aspect-w-16 aspect-h-9" } = Astro.props;
 
 ---
-<!--! Why are we building a platform for a dead future medai company? Is it worth the risk and the genearl lack of users that we will gain from it? -->
-<!--! What are the perks that we gain from keeping Twitch astro alive. -->
 <!-- Add a placeholder for the Twitch embed -->
 <div id="twitch-embed" class={tail}></div>
 <!-- Load the Twitch embed JavaScript file -->
@@ -22,6 +20,6 @@ const { tail = "w-full aspect-w-16 aspect-h-9" } = Astro.props;
         layout: "video",
         autoplay: false,
         // Only needed if this page is going to be embedded on other websites
-        parent: ["embed.example.com", "othersite.example.com"]
+        parent: ["kbve.com", "www.kbve.com"]
   });
 </script>
