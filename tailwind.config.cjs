@@ -47,6 +47,12 @@ module.exports = {
     fontSize: false,
     aspectRatio: false,
   },
+  variants: {
+    extend: {
+      // ...
+     backgroundOpacity: ['active'],
+    }
+  },
   plugins: [
     require("tailwindcss-fluid-type"),
     require('@tailwindcss/forms'),
