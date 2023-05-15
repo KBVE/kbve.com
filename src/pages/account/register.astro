@@ -145,13 +145,13 @@ let description =
     });
   </script>
 
-  <section class="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
-    <div class="container h-full p-10">
+  <section class="gradient-form h-min bg-neutral-700">
+    <div class="container mx-auto p-10">
       <div
         class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200"
       >
         <div class="w-full">
-          <div class="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
+          <div class="block rounded-lg  shadow-lg bg-offset">
             <div class="g-0 lg:flex lg:flex-wrap">
               <!-- Left column container-->
               <div class="px-4 md:px-0 lg:w-6/12">
@@ -192,8 +192,8 @@ let description =
                   Register Start
                  -->
                   <div class="items-center content-center justify-center">
-                    <div class="w-full max-w-md p-8 space-y-3 rounded-xl">
-                      <h1 class="text-2xl font-bold text-center">Register</h1>
+                    <div class="w-full p-4 space-y-3 rounded-xl">
+                      <h1 class="text-2xl font-bold text-center text-default">Register</h1>
                       <form
                         novalidate=""
                         action=""
@@ -201,7 +201,7 @@ let description =
                       >
                         <!-- Email [START] -->
                         <div class="space-y-1 text-sm">
-                          <label for="email" class="block dark:text-gray-400"
+                          <label for="email" class="block text-default"
                             >Email</label
                           >
                           <input
@@ -215,7 +215,7 @@ let description =
                         <!-- Email [END] -->
                         <!-- Username [START] -->
                         <div class="space-y-1 text-sm">
-                          <label for="username" class="block dark:text-gray-400"
+                          <label for="username" class="block text-default"
                             >Username</label
                           >
                           <input
@@ -228,7 +228,7 @@ let description =
                         </div>
                         <!-- Username [END] -->
                         <div class="space-y-1 text-sm">
-                          <label for="password" class="block dark:text-gray-400"
+                          <label for="password" class="block text-default"
                             >Password</label
                           >
                           <input
@@ -239,7 +239,7 @@ let description =
                             class="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
                           />
                           <div
-                            class="flex justify-end text-xs dark:text-gray-400"
+                            class="flex justify-end text-xs text-default"
                           >
                             <a rel="noopener noreferrer" href="#"
                               >Need a Password?</a
@@ -247,13 +247,13 @@ let description =
                           </div>
                         </div>
                         <button
-                          class="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400"
+                          class="block w-full p-3 text-center rounded-sm text-default bg-violet-400"
                           >Sign up</button
                         >
                       </form>
                       <div class="flex items-center pt-4 space-x-1">
                         <div class="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-                        <p class="px-3 text-sm dark:text-gray-400">
+                        <p class="px-3 text-sm text-default">
                           Login with social accounts
                         </p>
                         <div class="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
@@ -261,7 +261,7 @@ let description =
                       <div class="flex justify-center space-x-4">
                         <button
                           aria-label="Log in with Google"
-                          class="p-3 rounded-sm"
+                          class="p-3 rounded-sm text-default"
                           id="googleSSO"
                         >
                           <svg
@@ -276,7 +276,7 @@ let description =
                         </button>
                         <button
                           aria-label="Log in with Twitter"
-                          class="p-3 rounded-sm"
+                          class="p-3 rounded-sm text-default"
                           id="twitterSSO"
                         >
                           <svg
@@ -291,7 +291,7 @@ let description =
                         </button>
                         <button
                           aria-label="Log in with GitHub"
-                          class="p-3 rounded-sm"
+                          class="p-3 rounded-sm text-default"
                           id="githubSSO"
                         >
                           <svg
@@ -305,12 +305,12 @@ let description =
                           </svg>
                         </button>
                       </div>
-                      <p class="text-xs text-center sm:px-6 dark:text-gray-400">
+                      <p class="text-xs text-center sm:px-6 text-default">
                         Already have an account?
                         <a
                           rel="noopener noreferrer"
                           href="https://kbve.com/account/login/"
-                          class="underline dark:text-gray-100">Sign In</a
+                          class="underline text-default">Sign In</a
                         >
                       </p>
                     </div>

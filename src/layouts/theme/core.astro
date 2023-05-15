@@ -4,6 +4,9 @@
 import "../../styles/index.css"; //  Import Style.css
 import Footer from "@l/theme/footer.astro"; // Footer
 import Nav from "./nav.astro"; // Navigation Astro
+import Disable from "@w/Disable.astro"; // Disable Astro
+import LaunchApp from "@w/LaunchApp.astro";
+import Socials from "@w/Socials.astro";
 //?       [DATA]
 const {
   content,
@@ -12,7 +15,6 @@ const {
   image = "https://kbve.com/assets/img/social.png",
 } = Astro.props; //  Import Astro.props
 const url = new URL(Astro.url.pathname, Astro.site);
-const app_url = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -93,15 +95,17 @@ const app_url = Astro.url.pathname;
           * Sidebar - [START]
          -->
         <div class="mt-20 space-y-8"></div>
-        <div class="h-full p-3 space-y-2 w-full bg-offset dark:text-gray-100">
+        <div
+          class="h-full p-3 space-y-2 w-full bg-offset opacity-25 hover:opacity-100 ease-in-out duration-1000"
+        >
           <div class="flex items-center p-2 space-x-4">
             <img
               src="https://source.unsplash.com/100x100/?portrait"
               alt=""
-              class="w-12 h-12 rounded-full dark:bg-gray-500"
+              class="w-12 h-12 rounded-full"
             />
             <div>
-              <h2 class="text-lg font-semibold">Leroy Jenkins</h2>
+              <h2 class="text-lg font-semibold gradient-text">Guest Guesty</h2>
               <span class="flex items-center space-x-1">
                 <a
                   rel="noopener noreferrer"
@@ -130,6 +134,7 @@ const app_url = Astro.url.pathname;
                     ></path>
                   </svg>
                   <span>Dashboard</span>
+                  <Disable />
                 </a>
               </li>
               <li>
@@ -257,53 +262,17 @@ const app_url = Astro.url.pathname;
               </li>
             </ul>
           </div>
-        </div>
 
-        <!-- 
-          * Sidebar - [END]
-         -->
+          <div class="p-2">
+            <LaunchApp />
+          </div>
 
-         
-         <!--
-          ! Loading Cute Buttons
-          -->
-
-          <!--
-              <div class="b mx-auto h-16 w-64 flex justify-center items-center">
-                <div class="i h-16 w-64 bg-gradient-to-br from-yellow-400 to-yellow-600 items-center rounded-full shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
-                </div>
-                <a class="text-center text-white font-semibold z-10 pointer-events-none">Hover on me!</a>
-              </div>
-            -->
-
-            <div class="mt-12 bg-offset">
-            <div class="b animate-bounce mx-auto h-16 w-64 flex justify-center items-center">
-                <div class="i h-16 w-64 bg-gradient-to-br from-indigo-500 via-fuchsia-400 to-orange-500 items-center rounded-xl shadow-2xl  cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
-                </div>
-                <a class="text-center text-white font-semibold z-10  flex justify-content items-center" href=`https://app.kbve.com/#${app_url}` target="_blank" rel="prefetch"><span class=""><svg class="w-5 h-5 right-1.5 relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg></span>Launch in App</a>
-              </div>
+          <div class="divide-y divide-gray-700 p-2">
+            <div class="grid grid-cols-6 gap-4">
+              <Socials />
             </div>
-          <!--
-              <div class="b relative mx-auto h-16 w-64 flex justify-center items-center">
-                <div class="i h-16 w-64 bg-purple-600 items-center rounded-xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
-                </div>
-                <a class="text-center text-white font-semibold z-10 pointer-events-none">Hover on me!</a>
-                <span class="absolute flex h-6 w-6 top-0 right-0 transform translate-x-2.5 -translate-y-2.5">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span class="absolute inline-flex rounded-full h-6 w-6 bg-purple-500"></span>
-                </span>
-          
-              </div>
-            -->
-             <!--  <div class="b animate-pulse mx-auto h-16 w-64 flex justify-center items-center">
-                <div class="i h-16 w-64 bg-pink-600 items-center rounded-2xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
-                </div>
-                <a class="text-center text-white font-semibold z-10 pointer-events-none">Hover on me!</a>
-              </div>
-              -->
-             
+          </div>
+        </div>
       </aside>
 
       <!--* MAIN Content Slot-->
