@@ -1,30 +1,57 @@
 ---
-import N from "@n/N.astro"; //?	{Namespace}:{N}
 const { content } = Astro.props; ///	[Astro Props]
+import Ads from "@w/Ads.astro"; //? AAds
+import VideoComponent from "@c/Element/Video/Video.astro";
 ---
 
+
 <div
+  class="flex flex-wrap mb-12 justify-center items-center bg-fixed bg-center bg-cover overflow-auto"
   style={{ backgroundImage: `url(${content.img})` }}
-  class={`bg-contained bg-center bg-no-repeat md:bg-cover object-contain flex justify-center items-center flex-col shadow-2xl md:p-32 p-12 `}
 >
-  <h1 class="title md:text-6xl text-5xl text-white text-shadow-lg shadow-black">
-    {content.title}
-  </h1>
-</div>
-<div class="shadow-2xl shadow-fuchsia-400 p-4 text-center rounded-b-3xl gradient-text">
-  {content.description}
-</div>
+  <div class="order-first relative w-80 h-80 m-4 bg-offset rounded-3xl hover:scale-110 duration-150 ease-in-out">
+    <div class="max-w-xs shadow-md">
+      <div class="flex flex-col justify-between p-6 space-y-8">
+        <div class="space-y-2">
+          <h2 class="text-lg font-semibold tracking-wide">{content.title}</h2>
+          <p class="text-default text-xs">{content.description}</p>
+        </div>
+      </div>
+    </div>
 
-<div class="">
-  <N ns="ads" template="mdx" id="ezoic" />
-</div>
+    <div class="absolute inset-x-0 bottom-0 p-4">
+      {
+        content.tags.slice(0, 3).map((tags) => (
+          <a
+            rel="noopener noreferrer"
+            href={`https://kbve.com/t/${tags}`}
+            class="inline-block text-2xl font-semibold sm:text-3xl"
+          >
+            <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+              #{tags}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
 
+  <div class="relative w-80 h-80 m-4 bg-offset rounded-3xl">
+    <Ads adNetwork="ezoic" id="123" />
+  </div>
+  <div class="relative w-80 h-80 m-4 bg-offset rounded-3xl">
+    {content.media && <div class="absolute inset-x-0 bottom-0 p-4">{/** 
+      <VideoComponent
+      iframe
+      src={content.media[1].src}
+      id={content.media[1].id}
+      description={content.media[1].description}
+    /> */ }</div>}
+  </div>
 
-<!-- Wide center column -->
-<div class="flex flex-wrap">
-  <div class="w-full md:w-1/12"></div>
-  <div class="w-full md:w-10/12">
-    <div class="shadow-2xl  p-4 bg-offset rounded-3xl">
+  <!-- Wide center column -->
+  <div class="min-w-fit m-4">
+    <div class="shadow-2xl p-4 bg-offset	 rounded-3xl">
       <div
         class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
       >
@@ -32,5 +59,4 @@ const { content } = Astro.props; ///	[Astro Props]
       </div>
     </div>
   </div>
- <div class="w-full md:w-1/12"></div>
 </div>
