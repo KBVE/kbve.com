@@ -1,6 +1,6 @@
 ---
-import N from "@n/N.astro"; //?	{Namespace}:{N}
 const { content } = Astro.props; ///	[Astro Props]
+import Ads from "@w/Ads.astro"; //? AAds
 ---
 
 <div
@@ -15,8 +15,8 @@ const { content } = Astro.props; ///	[Astro Props]
   {content.description}
 </div>
 
-<div class="">
-  <N ns="ads" template="mdx" id="ezoic" />
+<div class="container mx-auto p-2 bg-offset m-4">
+  <Ads adNetwork="ezoic" id="123" />
 </div>
 
 
