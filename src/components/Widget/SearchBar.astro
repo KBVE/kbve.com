@@ -1,22 +1,44 @@
 ---
 
 ---
-<div class="mb-3">
-    <div class="relative mb-4 flex w-full flex-wrap items-stretch">
-      <input
-        type="search"
-        class="relative text-default m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6]  outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
-        placeholder="Search"
-        aria-label="Search"
-        aria-describedby="button-addon3" />
-  
-      <!--Search button-->
-      <button
-        class="relative z-[2] rounded-r border-2 border-primary px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-        type="button"
-        id="button-addon3"
-        data-te-ripple-init>
-        Search
-      </button>
+    <div class="relative flex w-full flex-wrap items-stretch">
+      <form class="sm:w-1/2 md:w-full" method="get" action="/search/">
+        <label
+          for="default-search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5 text-purple-900"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="default-search"
+            name="q"
+            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+            placeholder="Search Everything!"
+            required
+          />
+          <button
+            type="submit"
+            class="text-white absolute right-2.5 bottom-2.5 bg-gradient-to-r from-pink-500 to-purple-700 hover:grayscale hover:animate-spin-slow ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+            >Search</button
+          >
+        </div>
+      </form>
     </div>
-  </div>
