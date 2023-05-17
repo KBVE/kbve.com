@@ -28,7 +28,7 @@ const SearchData = ({dork = ""}) => {
     const sanitizeData = async () => {
       const url = new URL(window.location.href);
       const searchParams = url.searchParams;
-      var clean = DOMPurify.sanitize(searchParams.get("q"), {
+      const clean = DOMPurify.sanitize(searchParams.get("q"), {
         USE_PROFILES: { html: false, mathMl: false, svg: false },
       });
       setQuery(clean);
