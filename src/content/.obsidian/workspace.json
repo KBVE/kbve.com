@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2023-05-10.md",
+                "file": "journal/2023-05-16.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2023-05-10.md",
+                "file": "journal/2023-05-16.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2023-05-10.md",
+                "file": "journal/2023-05-16.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2023-05-10.md"
+                "file": "journal/2023-05-16.md"
               }
             }
           }
@@ -146,53 +147,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "templater-obsidian:Templater": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "templater-obsidian:Templater": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "0b5f003137d5b309",
   "lastOpenFiles": [
-    "journal/2023-05-11.md",
+    "_bin/_daily.md",
+    "journal/2023-05-16.md",
+    "journal/2023-04-28.md",
+    "journal/2023-05-15.md",
     "journal/2023-05-10.md",
+    "journal/2023-05-11.md",
     "journal/2023-05-09.md",
     "journal/2023-05-08.md",
     "application/flipperzero.mdx",
     "theory/programming.mdx",
     "blog/theorycraft.mdx",
     "journal/2023-05-07.md",
-    "theory/fintech.mdx",
-    "theory/socialmedia.mdx",
-    "tools/webmaster.mdx",
-    "theory/socialmedia.md",
-    "theory/gamedesign.mdx",
-    "theory/game-design.mdx",
-    "theory/phytochemicals.mdx",
-    "theory/polyphenols.mdx",
-    "journal/2023-05-06.md",
-    "music/george-beatles.md",
-    "journal/2023-05-05.md",
-    "journal/2023-05-03.md",
-    "journal/2023-05-04.md",
-    "journal/2023-05-02.md",
-    "journal/2023-05-01.md",
-    "journal/2023-04-30.md",
-    "journal/2023-04-29.md",
-    "journal/2023-04-28.md",
-    "journal/2023-04-22.md",
-    "journal/2023-04-27.md",
-    "journal/2023-04-26.md",
-    "journal/2023-04-25.md",
-    "journal/2023-04-24.md",
-    "journal/2023-04-23.md",
-    "journal/2023-04-21.md",
-    "journal/2023-04-20.md",
-    "journal/2023-04-19.md",
-    "journal/2023-04-18.md",
-    "Untitled.canvas"
+    "theory/fintech.mdx"
   ]
 }

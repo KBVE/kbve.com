@@ -4,12 +4,13 @@ import Ads from "@w/Ads.astro"; //? AAds
 import VideoComponent from "@c/Element/Video/Video.astro";
 ---
 
-
 <div
   class="flex flex-wrap mb-12 justify-center items-center bg-fixed bg-center bg-cover overflow-auto"
   style={{ backgroundImage: `url(${content.img})` }}
 >
-  <div class="order-first relative w-80 h-80 m-4 bg-offset rounded-3xl hover:scale-110 duration-150 ease-in-out">
+  <div
+    class="order-first relative w-80 h-80 m-4 bg-offset rounded-3xl hover:scale-110 duration-150 ease-in-out"
+  >
     <div class="max-w-xs shadow-md">
       <div class="flex flex-col justify-between p-6 space-y-8">
         <div class="space-y-2">
@@ -36,22 +37,28 @@ import VideoComponent from "@c/Element/Video/Video.astro";
     </div>
   </div>
 
-  <div class="relative w-80 h-80 m-4 bg-offset rounded-3xl">
+  <div class="relative w-80 h-80 m-4 justify-center bg-offset rounded-3xl">
     <Ads adNetwork="ezoic" id="123" />
   </div>
   <div class="relative w-80 h-80 m-4 bg-offset rounded-3xl">
-    {content.media && <div class="absolute inset-x-0 bottom-0 p-4">{/** 
+    {
+      content.media && (
+        <div class="absolute inset-x-0 bottom-0 p-4">
+          {/** 
       <VideoComponent
       iframe
       src={content.media[1].src}
       id={content.media[1].id}
       description={content.media[1].description}
-    /> */ }</div>}
+    /> */}
+        </div>
+      )
+    }
   </div>
 
-  <!-- Wide center column -->
+  <!-- Main Content -->
   <div class="min-w-fit m-4">
-    <div class="shadow-2xl p-4 bg-offset	 rounded-3xl">
+    <div class="shadow-2xl p-4 bg-offset rounded-3xl">
       <div
         class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
       >
@@ -59,4 +66,5 @@ import VideoComponent from "@c/Element/Video/Video.astro";
       </div>
     </div>
   </div>
+  <!-- MDX END -->
 </div>
