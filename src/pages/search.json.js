@@ -1,6 +1,6 @@
-const postImportResult = import.meta.glob('./**/**/*.mdx', { eager: true });
+const postImportResult = import.meta.glob('../content/**/**/*.mdx', { eager: true });
 const posts = Object.values(postImportResult);
-var counterId = 0;
+let counterId = 0;
 
 
 export const get = async () => {
