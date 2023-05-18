@@ -12,6 +12,7 @@ on:
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Node v16 might have to upgrade the pages.yml v18
 permissions:
   actions: write
   contents: write
