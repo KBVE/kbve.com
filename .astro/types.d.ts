@@ -315,6 +315,13 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
+"ryujinx.mdx": {
+  id: "ryujinx.mdx",
+  slug: "ryujinx",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] },
 "simba.mdx": {
   id: "simba.mdx",
   slug: "simba",
@@ -650,6 +657,13 @@ declare module 'astro:content' {
 "2023-05-17.md": {
   id: "2023-05-17.md",
   slug: "2023-05-17",
+  body: string,
+  collection: "journal",
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] },
+"2023-05-18.md": {
+  id: "2023-05-18.md",
+  slug: "2023-05-18",
   body: string,
   collection: "journal",
   data: InferEntrySchema<"journal">

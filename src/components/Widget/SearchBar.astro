@@ -1,8 +1,9 @@
 ---
 
+const { target = "_blank", searchClass = "relative flex w-full flex-wrap items-stretch pb-4" } = Astro.props;
 ---
-    <div class="relative flex w-full flex-wrap items-stretch">
-      <form class="sm:w-1/2 md:w-full" method="get" action="/search/">
+    <div class={searchClass}>
+      <form class="sm:w-1/2 md:w-full" method="get" action="/search/" target={target}>
         <label
           for="default-search"
           class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
