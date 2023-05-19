@@ -3,169 +3,160 @@
 //<!--*      [IMPORT]
 import N from "@n/N.astro";
 import SearchData from "@w/Search";
+import SearchBar from "@w/SearchBar.astro";
 //<!--*      [DATA]
 const { src } = Astro.props;
 
 let title = "KBVE Search Engine - All In One";
-let description = "KBVE All in One Search Engine is the idea of having a search engine that helps you search multiple engines with ease. We will try to expand upon each one and make it faster to run specific keywords, thus narrowing down exactly what you want to find.";
-
+let description =
+  "KBVE All in One Search Engine is the idea of having a search engine that helps you search multiple engines with ease. We will try to expand upon each one and make it faster to run specific keywords, thus narrowing down exactly what you want to find.";
 ---
 
-<N
-  ns="theme"
-  title={title}
-  description={description}
-  >
-<!--    Google CSE Code -   [START] -->
-<script
-  is:inline
-  src="https://cse.google.com/cse.js?cx=partner-pub-3698214103602019:ab1srxiqkuo"
-></script>
-<!--    Google CSE Code -   [END] -->
+<N ns="theme" title={title} description={description}>
+  <!--    Google CSE Code -   [START] -->
+  <script
+    is:inline
+    src="https://cse.google.com/cse.js?cx=partner-pub-3698214103602019:ab1srxiqkuo"
+  ></script>
+  <!--    Google CSE Code -   [END] -->
+  <!--    Import -->
+  <link rel="stylesheet" href="/assets/css/gsc-control.css" />
 
+  <!--    SearchData      -   [START] -->
+  <div class="flex flex-wrap p-6" id="tabs-id">
+    <div class="w-full">
+      <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
+        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+          <a
+            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-slate-600"
+            onclick="changeAtiveTab(event,'tab-profile')">
+            <i class="fas fa-space-shuttle text-base mr-1"></i> Google
+          </a>
+        </li>
+        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+          <a
+            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+            onclick="changeAtiveTab(event,'tab-other')">
+            <i class="fas fa-briefcase text-base mr-1"></i> Other
+          </a>
+        </li>
+        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+          <a
+            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+            onclick="changeAtiveTab(event,'tab-settings')">
+            <i class="fas fa-cog text-base mr-1"></i> Settings
+          </a>
+        </li>
+        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+          <a
+            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+            onclick="changeAtiveTab(event,'tab-options')">
+            <i class="fas fa-briefcase text-base mr-1"></i> Options
+          </a>
+        </li>
 
-<!--    SearchData      -   [START] -->
-<div class="flex flex-wrap p-6" id="tabs-id">
-  <div class="w-full">
-    <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
-      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a
-          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-slate-600"
-          onclick="changeAtiveTab(event,'tab-profile')"
-        >
-          <i class="fas fa-space-shuttle text-base mr-1"></i> Google
-        </a>
-      </li>
-      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a
-          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-          onclick="changeAtiveTab(event,'tab-other')"
-        >
-          <i class="fas fa-briefcase text-base mr-1"></i> Other
-        </a>
-      </li>
-      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a
-          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-          onclick="changeAtiveTab(event,'tab-settings')"
-        >
-          <i class="fas fa-cog text-base mr-1"></i> Settings
-        </a>
-      </li>
-      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a
-          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-          onclick="changeAtiveTab(event,'tab-options')"
-        >
-          <i class="fas fa-briefcase text-base mr-1"></i> Options
-        </a>
-      </li>
+        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+          <a
+            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
+            onclick="changeAtiveTab(event,'tab-gpt')">
+            <i class="fas fa-briefcase text-base mr-1"></i> GPT
+          </a>
+        </li>
+      </ul>
 
-      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-        <a
-          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-          onclick="changeAtiveTab(event,'tab-gpt')"
-        >
-          <i class="fas fa-briefcase text-base mr-1"></i> GPT
-        </a>
-      </li>
+      <div
+        class="relative flex flex-col min-w-0 break-words bg-offset w-full mb-6 shadow-lg rounded">
+        <div class="px-4 py-5 flex-auto">
+          <div class="tab-content tab-space">
+            <div class="block" id="tab-profile">
+              <p>
+                <SearchData client:only="react" />
+                <br />
+                <SearchBar target="_self" />
+                <div class="gsc-control ">
+                  <div class="gcse-searchresults-only"></div>
+                </div>
+                <!-- <div class="gcse-search"></div> -->
+              </p>
+            </div>
+            <div class="hidden" id="tab-settings">
+              <p>
+                Settings Tab.
+                <br />
+                <br />
+                There will be options for additional search engines? or options.
+              </p>
+            </div>
+            <div class="hidden" id="tab-options">
+              <p>
+                Options for the Search engine.
+                <br />
+                <br />
+                I am thinking of storing the data into the user's localStorage.
+              </p>
+            </div>
 
-    </ul>
+            <!-- Other Engines [START] -->
+            <div class="hidden" id="tab-other">
+              <p>
+                <br />
+                <SearchData client:only="react" />
+                <br />
+                Other Searches
+              </p>
+            </div>
+            <!-- Other Engines [END] -->
 
-  
-    <div
-      class="relative flex flex-col min-w-0 break-words bg-offset w-full mb-6 shadow-lg rounded"
-    >
-      <div class="px-4 py-5 flex-auto">
-        <div class="tab-content tab-space">
-          <div class="block" id="tab-profile">
-            <p>
-              <SearchData client:only="react" />
-              <br />
-              <div class="text-primary">
-                <div class="gcse-search"></div>
-              </div>
-            </p>
-          </div>
-          <div class="hidden" id="tab-settings">
-            <p>
-              Settings Tab.
-              <br />
-              <br />
-              There will be options for additional search engines? or options.
-            </p>
-          </div>
-          <div class="hidden" id="tab-options">
-            <p>
-              Options for the Search engine.
-              <br />
-              <br />
-              I am thinking of storing the data into the user's localStorage.
-            </p>
-          </div>
-
-          <!-- Other Engines [START] -->
-                   <div class="hidden" id="tab-other">
-                    <p>
-                      
-                      <br />
-                     <SearchData client:only="react" />
-                      <br />
-                      Other Searches
-                    </p>
-                  </div>
-          <!-- Other Engines [END] -->
-
-          <!-- GPT -->
-          <div class="hidden" id="tab-gpt">
-            <p>
-              GPT Tab
-              <br />
-              <!-- <SearchData engine="bing" client:only /> -->
-              <br />
-              Still a work in process.
-              I am thinking it might be better to open all the GPT links up via _target links? This is to avoid issues iframing them onto the main site.
-            </p>
+            <!-- GPT -->
+            <div class="hidden" id="tab-gpt">
+              <p>
+                GPT Tab
+                <br />
+                <!-- <SearchData engine="bing" client:only /> -->
+                <br />
+                Still a work in process. I am thinking it might be better to open
+                all the GPT links up via _target links? This is to avoid issues iframing
+                them onto the main site.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Core Tab Javascript -->
-<script type="text/javascript">
-  function changeAtiveTab(event, tabID) {
-    let element = event.target;
-    while (element.nodeName !== "A") {
-      element = element.parentNode;
+  <!-- Core Tab Javascript -->
+  <script type="text/javascript">
+    function changeAtiveTab(event, tabID) {
+      let element = event.target;
+      while (element.nodeName !== "A") {
+        element = element.parentNode;
+      }
+      let ulElement = element.parentNode.parentNode;
+      let aElements = ulElement.querySelectorAll("li > a");
+      let tabContents = document
+        .getElementById("tabs-id")
+        .querySelectorAll(".tab-content > div");
+      for (let i = 0; i < aElements.length; i++) {
+        aElements[i].classList.remove("text-white");
+        aElements[i].classList.remove("bg-slate-600");
+        aElements[i].classList.add("text-slate-600");
+        aElements[i].classList.add("bg-white");
+        tabContents[i].classList.add("hidden");
+        tabContents[i].classList.remove("block");
+      }
+      element.classList.remove("text-slate-600");
+      element.classList.remove("bg-white");
+      element.classList.add("text-white");
+      element.classList.add("bg-slate-600");
+      document.getElementById(tabID).classList.remove("hidden");
+      document.getElementById(tabID).classList.add("block");
     }
-    ulElement = element.parentNode.parentNode;
-    aElements = ulElement.querySelectorAll("li > a");
-    tabContents = document
-      .getElementById("tabs-id")
-      .querySelectorAll(".tab-content > div");
-    for (let i = 0; i < aElements.length; i++) {
-      aElements[i].classList.remove("text-white");
-      aElements[i].classList.remove("bg-slate-600");
-      aElements[i].classList.add("text-slate-600");
-      aElements[i].classList.add("bg-white");
-      tabContents[i].classList.add("hidden");
-      tabContents[i].classList.remove("block");
-    }
-    element.classList.remove("text-slate-600");
-    element.classList.remove("bg-white");
-    element.classList.add("text-white");
-    element.classList.add("bg-slate-600");
-    document.getElementById(tabID).classList.remove("hidden");
-    document.getElementById(tabID).classList.add("block");
-  }
-</script>
-<!-- 
+  </script>
+  <!-- 
 MIT License
 Copyright (c) 2023 Mammi, Creative Tim, VLocks
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
-
 </N>
