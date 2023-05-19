@@ -13,15 +13,7 @@ tags:
   - backend
 ---
 
-import GitHub from "@w/Github.astro";
-import Details from "@w/Details.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
 import N from "@n/N.astro";
-
-<TabMenu first="general" data={["cheatsheet", "system", "guides", "media", "notes"]}>
-
-<TabData tail="block" data="general">
 
 ## Information
 
@@ -32,41 +24,25 @@ Get ready to revolutionize your app development process with Appwrite!
 
 ---
 
+<N ns="ads" template="mdx2" id="ezoic" />
+
+---
+
 ## Install
-
-</TabData>
-
-
-<TabData data="cheatsheet">
 
 ## Cheatsheet
 
-</TabData>
-
-<TabData data="system">
 
 ## System
 
-</TabData>
-
-<TabData data="guides">
 
 ## Guides
 
 TODO
 
-</TabData>
-
-
-<TabData data="media">
-
 ## Videos
 
-
-</TabData>
-
-
-<TabData data="notes">
+---
 
 ## Notes
 
@@ -79,19 +55,14 @@ These will be all the notes for AppWrite, as we migrate over to it.
 
 #### Journal
 
-<Details data="2023-04-14">
+##### 2023-04-14
 Added email configuration to the appwrite server variables.
-</Details>
 
-<Details data="2023-04-12">
+##### 2023-04-12
 Starting the mdx sheet for AppWrite. I will try to include all the reference material here.
-</Details>
 
 ### License
 
-<Details data="Appwrite License">
-appwrite/appwrite is licensed under the BSD 3-Clause "New" or "Revised" License located here [license.md](https://github.com/appwrite/appwrite/blob/master/LICENSE)
-</Details>
+#### Appwrite License
 
-</TabData>
-</TabMenu>
+Appwrite / appwrite is licensed under the BSD 3-Clause "New" or "Revised" License located here [license.md](https://github.com/appwrite/appwrite/blob/master/LICENSE)

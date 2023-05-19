@@ -315,6 +315,13 @@ declare module 'astro:content' {
   collection: "application",
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] },
+"ryujinx.mdx": {
+  id: "ryujinx.mdx",
+  slug: "ryujinx",
+  body: string,
+  collection: "application",
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] },
 "simba.mdx": {
   id: "simba.mdx",
   slug: "simba",

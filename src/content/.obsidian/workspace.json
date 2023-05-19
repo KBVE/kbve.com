@@ -18,14 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "2bb09451c721e002",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
         ]
       }
@@ -166,6 +158,7 @@
   },
   "active": "0b5f003137d5b309",
   "lastOpenFiles": [
+    "application/ryujinx.mdx",
     "journal/2023-05-18.md",
     "journal/2023-05-17.md",
     "journal/2023-05-16.md",
