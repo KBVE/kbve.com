@@ -769,6 +769,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"2023-05-21.md": {
+	id: "2023-05-21.md";
+  slug: "2023-05-21";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -911,6 +918,13 @@ declare module 'astro:content' {
   collection: "project";
   data: any
 } & { render(): Render[".mdx"] };
+"cityvote.mdx": {
+	id: "cityvote.mdx";
+  slug: "cityvote";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
 "discord-sh.mdx": {
 	id: "discord-sh.mdx";
   slug: "discord-sh";
@@ -935,6 +949,13 @@ declare module 'astro:content' {
 "rsps.mdx": {
 	id: "rsps.mdx";
   slug: "rsps";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
+"search-engine.mdx": {
+	id: "search-engine.mdx";
+  slug: "search-engine";
   body: string;
   collection: "project";
   data: any

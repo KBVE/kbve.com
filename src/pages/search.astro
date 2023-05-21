@@ -73,10 +73,27 @@ let description =
                 <SearchData client:only="react" />
                 <br />
                 <SearchBar target="_self" />
-                <div class="gsc-control ">
+                <div class="gsc-control">
                   <div class="gcse-searchresults-only"></div>
                 </div>
-                <!-- <div class="gcse-search"></div> -->
+                <!-- InLine Test Case [START] -->
+                <script is:inline>
+                  document.addEventListener("readystatechange", (event) => {
+                    if (event.target.readyState === "complete") {
+                      var searchElem = document.getElementById("master-1");
+                      if (searchElem) {
+                        var contentDocument = searchElem.contentDocument;
+                        //contentDocument.innerHTML += "<style> .my-class { color: red; } </style> ";
+                        console.log("Found by cross origin settings will be a pain.");
+                      } else {
+                        console.log("Lost the element! Yay!");
+                      }
+                    }
+                  });
+                </script>
+                <!-- InLine Test Case [END] -->
+
+                <!--? This was the older way to display the advertisements <div class="gcse-search"></div> -->
               </p>
             </div>
             <div class="hidden" id="tab-settings">
