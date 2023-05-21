@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2023-05-21.md",
+                "file": "project/cityvote.mdx",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2023-05-21.md",
+                "file": "project/cityvote.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2023-05-21.md",
+                "file": "project/cityvote.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2023-05-21.md"
+                "file": "project/cityvote.mdx"
               }
             }
           }
@@ -157,7 +157,13 @@
   },
   "active": "c8df0be9056595b8",
   "lastOpenFiles": [
+    "project/cityvote.md",
+    "project/cityvote.mdx",
+    "project/api.mdx",
+    "project/ar.mdx",
+    "project/galaxia.mdx",
     "project/search-engine.mdx",
+    "application/android.mdx",
     "journal/2023-05-21.md",
     "journal/2023-05-20.md",
     "journal/2023-05-19.md",
@@ -175,7 +181,6 @@
     "application/flipperzero.mdx",
     "theory/programming.mdx",
     "blog/theorycraft.mdx",
-    "journal/2023-05-07.md",
-    "theory/fintech.mdx"
+    "journal/2023-05-07.md"
   ]
 }
