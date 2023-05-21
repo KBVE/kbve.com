@@ -20,8 +20,7 @@ declare module 'astro:content' {
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';
-	export type CollectionEntry<C extends keyof typeof entryMap> =
-		(typeof entryMap)[C][keyof (typeof entryMap)[C]];
+	export type CollectionEntry<C extends keyof AnyEntryMap> = AnyEntryMap[C][keyof AnyEntryMap[C]];
 
 	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
 	/**
@@ -75,1042 +74,1156 @@ declare module 'astro:content' {
 
 	export type SchemaContext = { image: ImageFunction };
 
-	type BaseCollectionConfig<S extends BaseSchema> = {
+	type DataCollectionConfig<S extends BaseSchema> = {
+		type: 'data';
 		schema?: S | ((context: SchemaContext) => S);
 	};
-	export function defineCollection<S extends BaseSchema>(
-		input: BaseCollectionConfig<S>
-	): BaseCollectionConfig<S>;
 
-	type EntryMapKeys = keyof typeof entryMap;
+	type ContentCollectionConfig<S extends BaseSchema> = {
+		type?: 'content';
+		schema?: S | ((context: SchemaContext) => S);
+	};
+
+	type CollectionConfig<S> = ContentCollectionConfig<S> | DataCollectionConfig<S>;
+
+	export function defineCollection<S extends BaseSchema>(
+		input: CollectionConfig<S>
+	): CollectionConfig<S>;
+
 	type AllValuesOf<T> = T extends any ? T[keyof T] : never;
-	type ValidEntrySlug<C extends EntryMapKeys> = AllValuesOf<(typeof entryMap)[C]>['slug'];
+	type ValidContentEntrySlug<C extends keyof ContentEntryMap> = AllValuesOf<
+		ContentEntryMap[C]
+	>['slug'];
 
 	export function getEntryBySlug<
-		C extends keyof typeof entryMap,
-		E extends ValidEntrySlug<C> | (string & {})
+		C extends keyof ContentEntryMap,
+		E extends ValidContentEntrySlug<C> | (string & {})
 	>(
 		collection: C,
 		// Note that this has to accept a regular string too, for SSR
 		entrySlug: E
-	): E extends ValidEntrySlug<C>
+	): E extends ValidContentEntrySlug<C>
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
-	export function getCollection<C extends keyof typeof entryMap, E extends CollectionEntry<C>>(
+
+	export function getDataEntryById<C extends keyof DataEntryMap, E extends keyof DataEntryMap[C]>(
+		collection: C,
+		entryId: E
+	): Promise<CollectionEntry<C>>;
+
+	export function getCollection<C extends keyof AnyEntryMap, E extends CollectionEntry<C>>(
 		collection: C,
 		filter?: (entry: CollectionEntry<C>) => entry is E
 	): Promise<E[]>;
-	export function getCollection<C extends keyof typeof entryMap>(
+	export function getCollection<C extends keyof AnyEntryMap>(
 		collection: C,
 		filter?: (entry: CollectionEntry<C>) => unknown
 	): Promise<CollectionEntry<C>[]>;
 
+	export function getEntry<
+		C extends keyof ContentEntryMap,
+		E extends ValidContentEntrySlug<C> | (string & {})
+	>(entry: {
+		collection: C;
+		slug: E;
+	}): E extends ValidContentEntrySlug<C>
+		? Promise<CollectionEntry<C>>
+		: Promise<CollectionEntry<C> | undefined>;
+	export function getEntry<
+		C extends keyof DataEntryMap,
+		E extends keyof DataEntryMap[C] | (string & {})
+	>(entry: {
+		collection: C;
+		id: E;
+	}): E extends keyof DataEntryMap[C]
+		? Promise<DataEntryMap[C][E]>
+		: Promise<CollectionEntry<C> | undefined>;
+	export function getEntry<
+		C extends keyof ContentEntryMap,
+		E extends ValidContentEntrySlug<C> | (string & {})
+	>(
+		collection: C,
+		slug: E
+	): E extends ValidContentEntrySlug<C>
+		? Promise<CollectionEntry<C>>
+		: Promise<CollectionEntry<C> | undefined>;
+	export function getEntry<
+		C extends keyof DataEntryMap,
+		E extends keyof DataEntryMap[C] | (string & {})
+	>(
+		collection: C,
+		id: E
+	): E extends keyof DataEntryMap[C]
+		? Promise<DataEntryMap[C][E]>
+		: Promise<CollectionEntry<C> | undefined>;
+
+	/** Resolve an array of entry references from the same collection */
+	export function getEntries<C extends keyof ContentEntryMap>(
+		entries: {
+			collection: C;
+			slug: ValidContentEntrySlug<C>;
+		}[]
+	): Promise<CollectionEntry<C>[]>;
+	export function getEntries<C extends keyof DataEntryMap>(
+		entries: {
+			collection: C;
+			id: keyof DataEntryMap[C];
+		}[]
+	): Promise<CollectionEntry<C>[]>;
+
+	export function reference<C extends keyof AnyEntryMap>(
+		collection: C
+	): import('astro/zod').ZodEffects<
+		import('astro/zod').ZodString,
+		C extends keyof ContentEntryMap
+			? {
+					collection: C;
+					slug: ValidContentEntrySlug<C>;
+			  }
+			: {
+					collection: C;
+					id: keyof DataEntryMap[C];
+			  }
+	>;
+	// Allow generic `string` to avoid excessive type errors in the config
+	// if `dev` is not running to update as you edit.
+	// Invalid collection names will be caught at build time.
+	export function reference<C extends string>(
+		collection: C
+	): import('astro/zod').ZodEffects<import('astro/zod').ZodString, never>;
+
 	type ReturnTypeOrOriginal<T> = T extends (...args: any[]) => infer R ? R : T;
-	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
+	type InferEntrySchema<C extends keyof AnyEntryMap> = import('astro/zod').infer<
 		ReturnTypeOrOriginal<Required<ContentConfig['collections'][C]>['schema']>
 	>;
 
-	const entryMap: {
+	type ContentEntryMap = {
 		"application": {
 "android.mdx": {
-  id: "android.mdx",
-  slug: "android",
-  body: string,
-  collection: "application",
+	id: "android.mdx";
+  slug: "android";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "ansible.mdx": {
-  id: "ansible.mdx",
-  slug: "ansible",
-  body: string,
-  collection: "application",
+	id: "ansible.mdx";
+  slug: "ansible";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "appwrite.mdx": {
-  id: "appwrite.mdx",
-  slug: "appwrite",
-  body: string,
-  collection: "application",
+	id: "appwrite.mdx";
+  slug: "appwrite";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "authelia.mdx": {
-  id: "authelia.mdx",
-  slug: "authelia",
-  body: string,
-  collection: "application",
+	id: "authelia.mdx";
+  slug: "authelia";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "cubejs.mdx": {
-  id: "cubejs.mdx",
-  slug: "cubejs",
-  body: string,
-  collection: "application",
+	id: "cubejs.mdx";
+  slug: "cubejs";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "docker.mdx": {
-  id: "docker.mdx",
-  slug: "docker",
-  body: string,
-  collection: "application",
+	id: "docker.mdx";
+  slug: "docker";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "flipperzero.mdx": {
-  id: "flipperzero.mdx",
-  slug: "flipperzero",
-  body: string,
-  collection: "application",
+	id: "flipperzero.mdx";
+  slug: "flipperzero";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "flutter.mdx": {
-  id: "flutter.mdx",
-  slug: "flutter",
-  body: string,
-  collection: "application",
+	id: "flutter.mdx";
+  slug: "flutter";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "gcloud.mdx": {
-  id: "gcloud.mdx",
-  slug: "gcloud",
-  body: string,
-  collection: "application",
+	id: "gcloud.mdx";
+  slug: "gcloud";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "git.mdx": {
-  id: "git.mdx",
-  slug: "git",
-  body: string,
-  collection: "application",
+	id: "git.mdx";
+  slug: "git";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "godot.mdx": {
-  id: "godot.mdx",
-  slug: "godot",
-  body: string,
-  collection: "application",
+	id: "godot.mdx";
+  slug: "godot";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "javascript.mdx": {
-  id: "javascript.mdx",
-  slug: "javascript",
-  body: string,
-  collection: "application",
+	id: "javascript.mdx";
+  slug: "javascript";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "kubernetes.mdx": {
-  id: "kubernetes.mdx",
-  slug: "kubernetes",
-  body: string,
-  collection: "application",
+	id: "kubernetes.mdx";
+  slug: "kubernetes";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "longhorn.mdx": {
-  id: "longhorn.mdx",
-  slug: "longhorn",
-  body: string,
-  collection: "application",
+	id: "longhorn.mdx";
+  slug: "longhorn";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "lvm.mdx": {
-  id: "lvm.mdx",
-  slug: "lvm",
-  body: string,
-  collection: "application",
+	id: "lvm.mdx";
+  slug: "lvm";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "ml.mdx": {
-  id: "ml.mdx",
-  slug: "ml",
-  body: string,
-  collection: "application",
+	id: "ml.mdx";
+  slug: "ml";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "mysql.mdx": {
-  id: "mysql.mdx",
-  slug: "mysql",
-  body: string,
-  collection: "application",
+	id: "mysql.mdx";
+  slug: "mysql";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "nftables.mdx": {
-  id: "nftables.mdx",
-  slug: "nftables",
-  body: string,
-  collection: "application",
+	id: "nftables.mdx";
+  slug: "nftables";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "nginx.mdx": {
-  id: "nginx.mdx",
-  slug: "nginx",
-  body: string,
-  collection: "application",
+	id: "nginx.mdx";
+  slug: "nginx";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "nmap.mdx": {
-  id: "nmap.mdx",
-  slug: "nmap",
-  body: string,
-  collection: "application",
+	id: "nmap.mdx";
+  slug: "nmap";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "nomad.mdx": {
-  id: "nomad.mdx",
-  slug: "nomad",
-  body: string,
-  collection: "application",
+	id: "nomad.mdx";
+  slug: "nomad";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "obsidian.mdx": {
-  id: "obsidian.mdx",
-  slug: "obsidian",
-  body: string,
-  collection: "application",
+	id: "obsidian.mdx";
+  slug: "obsidian";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "php.mdx": {
-  id: "php.mdx",
-  slug: "php",
-  body: string,
-  collection: "application",
+	id: "php.mdx";
+  slug: "php";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "portainer.mdx": {
-  id: "portainer.mdx",
-  slug: "portainer",
-  body: string,
-  collection: "application",
+	id: "portainer.mdx";
+  slug: "portainer";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "proxmox.mdx": {
-  id: "proxmox.mdx",
-  slug: "proxmox",
-  body: string,
-  collection: "application",
+	id: "proxmox.mdx";
+  slug: "proxmox";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "pterodactyl.mdx": {
-  id: "pterodactyl.mdx",
-  slug: "pterodactyl",
-  body: string,
-  collection: "application",
+	id: "pterodactyl.mdx";
+  slug: "pterodactyl";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "python.mdx": {
-  id: "python.mdx",
-  slug: "python",
-  body: string,
-  collection: "application",
+	id: "python.mdx";
+  slug: "python";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "rust.mdx": {
-  id: "rust.mdx",
-  slug: "rust",
-  body: string,
-  collection: "application",
+	id: "rust.mdx";
+  slug: "rust";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "rustdesk.mdx": {
-  id: "rustdesk.mdx",
-  slug: "rustdesk",
-  body: string,
-  collection: "application",
+	id: "rustdesk.mdx";
+  slug: "rustdesk";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "ryujinx.mdx": {
-  id: "ryujinx.mdx",
-  slug: "ryujinx",
-  body: string,
-  collection: "application",
+	id: "ryujinx.mdx";
+  slug: "ryujinx";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "simba.mdx": {
-  id: "simba.mdx",
-  slug: "simba",
-  body: string,
-  collection: "application",
+	id: "simba.mdx";
+  slug: "simba";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "strapi.mdx": {
-  id: "strapi.mdx",
-  slug: "strapi",
-  body: string,
-  collection: "application",
+	id: "strapi.mdx";
+  slug: "strapi";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "terraform.mdx": {
-  id: "terraform.mdx",
-  slug: "terraform",
-  body: string,
-  collection: "application",
+	id: "terraform.mdx";
+  slug: "terraform";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "traefik.mdx": {
-  id: "traefik.mdx",
-  slug: "traefik",
-  body: string,
-  collection: "application",
+	id: "traefik.mdx";
+  slug: "traefik";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "unity.mdx": {
-  id: "unity.mdx",
-  slug: "unity",
-  body: string,
-  collection: "application",
+	id: "unity.mdx";
+  slug: "unity";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "void.mdx": {
-  id: "void.mdx",
-  slug: "void",
-  body: string,
-  collection: "application",
+	id: "void.mdx";
+  slug: "void";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "watchtower.mdx": {
-  id: "watchtower.mdx",
-  slug: "watchtower",
-  body: string,
-  collection: "application",
+	id: "watchtower.mdx";
+  slug: "watchtower";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "webserver.mdx": {
-  id: "webserver.mdx",
-  slug: "webserver",
-  body: string,
-  collection: "application",
+	id: "webserver.mdx";
+  slug: "webserver";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "wireguard.mdx": {
-  id: "wireguard.mdx",
-  slug: "wireguard",
-  body: string,
-  collection: "application",
+	id: "wireguard.mdx";
+  slug: "wireguard";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "zsh.mdx": {
-  id: "zsh.mdx",
-  slug: "zsh",
-  body: string,
-  collection: "application",
+	id: "zsh.mdx";
+  slug: "zsh";
+  body: string;
+  collection: "application";
   data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "arcade": {
 "rj.mdx": {
-  id: "rj.mdx",
-  slug: "rj",
-  body: string,
-  collection: "arcade",
+	id: "rj.mdx";
+  slug: "rj";
+  body: string;
+  collection: "arcade";
   data: InferEntrySchema<"arcade">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "wvn.mdx": {
-  id: "wvn.mdx",
-  slug: "wvn",
-  body: string,
-  collection: "arcade",
+	id: "wvn.mdx";
+  slug: "wvn";
+  body: string;
+  collection: "arcade";
   data: InferEntrySchema<"arcade">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "blog": {
 "theorycraft.mdx": {
-  id: "theorycraft.mdx",
-  slug: "theorycraft",
-  body: string,
-  collection: "blog",
+	id: "theorycraft.mdx";
+  slug: "theorycraft";
+  body: string;
+  collection: "blog";
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "crypto": {
 "bnb.mdx": {
-  id: "bnb.mdx",
-  slug: "bnb",
-  body: string,
-  collection: "crypto",
+	id: "bnb.mdx";
+  slug: "bnb";
+  body: string;
+  collection: "crypto";
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "btc.mdx": {
-  id: "btc.mdx",
-  slug: "btc",
-  body: string,
-  collection: "crypto",
+	id: "btc.mdx";
+  slug: "btc";
+  body: string;
+  collection: "crypto";
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "doge.mdx": {
-  id: "doge.mdx",
-  slug: "doge",
-  body: string,
-  collection: "crypto",
+	id: "doge.mdx";
+  slug: "doge";
+  body: string;
+  collection: "crypto";
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "eth.mdx": {
-  id: "eth.mdx",
-  slug: "eth",
-  body: string,
-  collection: "crypto",
+	id: "eth.mdx";
+  slug: "eth";
+  body: string;
+  collection: "crypto";
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "xrp.mdx": {
-  id: "xrp.mdx",
-  slug: "xrp",
-  body: string,
-  collection: "crypto",
+	id: "xrp.mdx";
+  slug: "xrp";
+  body: string;
+  collection: "crypto";
   data: InferEntrySchema<"crypto">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "gaming": {
 "df.mdx": {
-  id: "df.mdx",
-  slug: "df",
-  body: string,
-  collection: "gaming",
+	id: "df.mdx";
+  slug: "df";
+  body: string;
+  collection: "gaming";
   data: InferEntrySchema<"gaming">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "lol.mdx": {
-  id: "lol.mdx",
-  slug: "lol",
-  body: string,
-  collection: "gaming",
+	id: "lol.mdx";
+  slug: "lol";
+  body: string;
+  collection: "gaming";
   data: InferEntrySchema<"gaming">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "journal": {
 "2023-04-17.md": {
-  id: "2023-04-17.md",
-  slug: "2023-04-17",
-  body: string,
-  collection: "journal",
+	id: "2023-04-17.md";
+  slug: "2023-04-17";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-18.md": {
-  id: "2023-04-18.md",
-  slug: "2023-04-18",
-  body: string,
-  collection: "journal",
+	id: "2023-04-18.md";
+  slug: "2023-04-18";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-19.md": {
-  id: "2023-04-19.md",
-  slug: "2023-04-19",
-  body: string,
-  collection: "journal",
+	id: "2023-04-19.md";
+  slug: "2023-04-19";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-20.md": {
-  id: "2023-04-20.md",
-  slug: "2023-04-20",
-  body: string,
-  collection: "journal",
+	id: "2023-04-20.md";
+  slug: "2023-04-20";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-21.md": {
-  id: "2023-04-21.md",
-  slug: "2023-04-21",
-  body: string,
-  collection: "journal",
+	id: "2023-04-21.md";
+  slug: "2023-04-21";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-22.md": {
-  id: "2023-04-22.md",
-  slug: "2023-04-22",
-  body: string,
-  collection: "journal",
+	id: "2023-04-22.md";
+  slug: "2023-04-22";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-23.md": {
-  id: "2023-04-23.md",
-  slug: "2023-04-23",
-  body: string,
-  collection: "journal",
+	id: "2023-04-23.md";
+  slug: "2023-04-23";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-24.md": {
-  id: "2023-04-24.md",
-  slug: "2023-04-24",
-  body: string,
-  collection: "journal",
+	id: "2023-04-24.md";
+  slug: "2023-04-24";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-25.md": {
-  id: "2023-04-25.md",
-  slug: "2023-04-25",
-  body: string,
-  collection: "journal",
+	id: "2023-04-25.md";
+  slug: "2023-04-25";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-26.md": {
-  id: "2023-04-26.md",
-  slug: "2023-04-26",
-  body: string,
-  collection: "journal",
+	id: "2023-04-26.md";
+  slug: "2023-04-26";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-27.md": {
-  id: "2023-04-27.md",
-  slug: "2023-04-27",
-  body: string,
-  collection: "journal",
+	id: "2023-04-27.md";
+  slug: "2023-04-27";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-28.md": {
-  id: "2023-04-28.md",
-  slug: "2023-04-28",
-  body: string,
-  collection: "journal",
+	id: "2023-04-28.md";
+  slug: "2023-04-28";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-29.md": {
-  id: "2023-04-29.md",
-  slug: "2023-04-29",
-  body: string,
-  collection: "journal",
+	id: "2023-04-29.md";
+  slug: "2023-04-29";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-04-30.md": {
-  id: "2023-04-30.md",
-  slug: "2023-04-30",
-  body: string,
-  collection: "journal",
+	id: "2023-04-30.md";
+  slug: "2023-04-30";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-01.md": {
-  id: "2023-05-01.md",
-  slug: "2023-05-01",
-  body: string,
-  collection: "journal",
+	id: "2023-05-01.md";
+  slug: "2023-05-01";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-02.md": {
-  id: "2023-05-02.md",
-  slug: "2023-05-02",
-  body: string,
-  collection: "journal",
+	id: "2023-05-02.md";
+  slug: "2023-05-02";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-03.md": {
-  id: "2023-05-03.md",
-  slug: "2023-05-03",
-  body: string,
-  collection: "journal",
+	id: "2023-05-03.md";
+  slug: "2023-05-03";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-04.md": {
-  id: "2023-05-04.md",
-  slug: "2023-05-04",
-  body: string,
-  collection: "journal",
+	id: "2023-05-04.md";
+  slug: "2023-05-04";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-05.md": {
-  id: "2023-05-05.md",
-  slug: "2023-05-05",
-  body: string,
-  collection: "journal",
+	id: "2023-05-05.md";
+  slug: "2023-05-05";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-06.md": {
-  id: "2023-05-06.md",
-  slug: "2023-05-06",
-  body: string,
-  collection: "journal",
+	id: "2023-05-06.md";
+  slug: "2023-05-06";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-07.md": {
-  id: "2023-05-07.md",
-  slug: "2023-05-07",
-  body: string,
-  collection: "journal",
+	id: "2023-05-07.md";
+  slug: "2023-05-07";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-08.md": {
-  id: "2023-05-08.md",
-  slug: "2023-05-08",
-  body: string,
-  collection: "journal",
+	id: "2023-05-08.md";
+  slug: "2023-05-08";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-09.md": {
-  id: "2023-05-09.md",
-  slug: "2023-05-09",
-  body: string,
-  collection: "journal",
+	id: "2023-05-09.md";
+  slug: "2023-05-09";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-10.md": {
-  id: "2023-05-10.md",
-  slug: "2023-05-10",
-  body: string,
-  collection: "journal",
+	id: "2023-05-10.md";
+  slug: "2023-05-10";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-15.md": {
-  id: "2023-05-15.md",
-  slug: "2023-05-15",
-  body: string,
-  collection: "journal",
+	id: "2023-05-15.md";
+  slug: "2023-05-15";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-16.md": {
-  id: "2023-05-16.md",
-  slug: "2023-05-16",
-  body: string,
-  collection: "journal",
+	id: "2023-05-16.md";
+  slug: "2023-05-16";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-17.md": {
-  id: "2023-05-17.md",
-  slug: "2023-05-17",
-  body: string,
-  collection: "journal",
+	id: "2023-05-17.md";
+  slug: "2023-05-17";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "2023-05-18.md": {
-  id: "2023-05-18.md",
-  slug: "2023-05-18",
-  body: string,
-  collection: "journal",
+	id: "2023-05-18.md";
+  slug: "2023-05-18";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
+"2023-05-19.md": {
+	id: "2023-05-19.md";
+  slug: "2023-05-19";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"2023-05-20.md": {
+	id: "2023-05-20.md";
+  slug: "2023-05-20";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
-  id: "asset.mdx",
-  slug: "asset",
-  body: string,
-  collection: "journal",
+	id: "asset.mdx";
+  slug: "asset";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "visualnovel.mdx": {
-  id: "visualnovel.mdx",
-  slug: "visualnovel",
-  body: string,
-  collection: "journal",
+	id: "visualnovel.mdx";
+  slug: "visualnovel";
+  body: string;
+  collection: "journal";
   data: InferEntrySchema<"journal">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "legal": {
 "eula.mdx": {
-  id: "eula.mdx",
-  slug: "eula",
-  body: string,
-  collection: "legal",
+	id: "eula.mdx";
+  slug: "eula";
+  body: string;
+  collection: "legal";
   data: InferEntrySchema<"legal">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "privacy.mdx": {
-  id: "privacy.mdx",
-  slug: "privacy",
-  body: string,
-  collection: "legal",
+	id: "privacy.mdx";
+  slug: "privacy";
+  body: string;
+  collection: "legal";
   data: InferEntrySchema<"legal">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "tos.mdx": {
-  id: "tos.mdx",
-  slug: "tos",
-  body: string,
-  collection: "legal",
+	id: "tos.mdx";
+  slug: "tos";
+  body: string;
+  collection: "legal";
   data: InferEntrySchema<"legal">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "manga": {
 "rj/main.md": {
-  id: "rj/main.md",
-  slug: "rj/main",
-  body: string,
-  collection: "manga",
+	id: "rj/main.md";
+  slug: "rj/main";
+  body: string;
+  collection: "manga";
   data: any
-} & { render(): Render[".md"] },
-},
+} & { render(): Render[".md"] };
+};
 "media": {
 "radio.mdx": {
-  id: "radio.mdx",
-  slug: "radio",
-  body: string,
-  collection: "media",
+	id: "radio.mdx";
+  slug: "radio";
+  body: string;
+  collection: "media";
   data: InferEntrySchema<"media">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "music": {
 "adtr-albums.mdx": {
-  id: "adtr-albums.mdx",
-  slug: "adtr-albums",
-  body: string,
-  collection: "music",
+	id: "adtr-albums.mdx";
+  slug: "adtr-albums";
+  body: string;
+  collection: "music";
   data: InferEntrySchema<"music">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "olifejp-collection.mdx": {
-  id: "olifejp-collection.mdx",
-  slug: "olifejp-collection",
-  body: string,
-  collection: "music",
+	id: "olifejp-collection.mdx";
+  slug: "olifejp-collection";
+  body: string;
+  collection: "music";
   data: InferEntrySchema<"music">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "ravi-george.mdx": {
-  id: "ravi-george.mdx",
-  slug: "ravi-george",
-  body: string,
-  collection: "music",
+	id: "ravi-george.mdx";
+  slug: "ravi-george";
+  body: string;
+  collection: "music";
   data: InferEntrySchema<"music">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "starwars-lofi.mdx": {
-  id: "starwars-lofi.mdx",
-  slug: "starwars-lofi",
-  body: string,
-  collection: "music",
+	id: "starwars-lofi.mdx";
+  slug: "starwars-lofi";
+  body: string;
+  collection: "music";
   data: InferEntrySchema<"music">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "news": {
 "release-rigor.mdx": {
-  id: "release-rigor.mdx",
-  slug: "release-rigor",
-  body: string,
-  collection: "news",
+	id: "release-rigor.mdx";
+  slug: "release-rigor";
+  body: string;
+  collection: "news";
   data: InferEntrySchema<"news">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "npc": {
 "lucifurr/emotion/happy.md": {
-  id: "lucifurr/emotion/happy.md",
-  slug: "lucifurr/emotion/happy",
-  body: string,
-  collection: "npc",
+	id: "lucifurr/emotion/happy.md";
+  slug: "lucifurr/emotion/happy";
+  body: string;
+  collection: "npc";
   data: any
-} & { render(): Render[".md"] },
+} & { render(): Render[".md"] };
 "lucifurr/lucifurr.md": {
-  id: "lucifurr/lucifurr.md",
-  slug: "lucifurr/lucifurr",
-  body: string,
-  collection: "npc",
+	id: "lucifurr/lucifurr.md";
+  slug: "lucifurr/lucifurr";
+  body: string;
+  collection: "npc";
   data: any
-} & { render(): Render[".md"] },
-},
+} & { render(): Render[".md"] };
+};
 "podcast": {
 "darknet-diaries.mdx": {
-  id: "darknet-diaries.mdx",
-  slug: "darknet-diaries",
-  body: string,
-  collection: "podcast",
+	id: "darknet-diaries.mdx";
+  slug: "darknet-diaries";
+  body: string;
+  collection: "podcast";
   data: InferEntrySchema<"podcast">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "project": {
 "api.mdx": {
-  id: "api.mdx",
-  slug: "api",
-  body: string,
-  collection: "project",
+	id: "api.mdx";
+  slug: "api";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "ar.mdx": {
-  id: "ar.mdx",
-  slug: "ar",
-  body: string,
-  collection: "project",
+	id: "ar.mdx";
+  slug: "ar";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "charles.mdx": {
-  id: "charles.mdx",
-  slug: "charles",
-  body: string,
-  collection: "project",
+	id: "charles.mdx";
+  slug: "charles";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "discord-sh.mdx": {
-  id: "discord-sh.mdx",
-  slug: "discord-sh",
-  body: string,
-  collection: "project",
+	id: "discord-sh.mdx";
+  slug: "discord-sh";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "galaxia.mdx": {
-  id: "galaxia.mdx",
-  slug: "galaxia",
-  body: string,
-  collection: "project",
+	id: "galaxia.mdx";
+  slug: "galaxia";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "roguejester.mdx": {
-  id: "roguejester.mdx",
-  slug: "roguejester",
-  body: string,
-  collection: "project",
+	id: "roguejester.mdx";
+  slug: "roguejester";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "rsps.mdx": {
-  id: "rsps.mdx",
-  slug: "rsps",
-  body: string,
-  collection: "project",
+	id: "rsps.mdx";
+  slug: "rsps";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "recipe": {
 "mango-juice.mdx": {
-  id: "mango-juice.mdx",
-  slug: "mango-juice",
-  body: string,
-  collection: "recipe",
+	id: "mango-juice.mdx";
+  slug: "mango-juice";
+  body: string;
+  collection: "recipe";
   data: InferEntrySchema<"recipe">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "releases": {
 "1.md": {
-  id: "1.md",
-  slug: "1",
-  body: string,
-  collection: "releases",
+	id: "1.md";
+  slug: "1";
+  body: string;
+  collection: "releases";
   data: InferEntrySchema<"releases">
-} & { render(): Render[".md"] },
-},
+} & { render(): Render[".md"] };
+};
 "security": {
 "xss.mdx": {
-  id: "xss.mdx",
-  slug: "xss",
-  body: string,
-  collection: "security",
+	id: "xss.mdx";
+  slug: "xss";
+  body: string;
+  collection: "security";
   data: InferEntrySchema<"security">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "stock": {
 "aapl.mdx": {
-  id: "aapl.mdx",
-  slug: "aapl",
-  body: string,
-  collection: "stock",
+	id: "aapl.mdx";
+  slug: "aapl";
+  body: string;
+  collection: "stock";
   data: InferEntrySchema<"stock">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "o.mdx": {
-  id: "o.mdx",
-  slug: "o",
-  body: string,
-  collection: "stock",
+	id: "o.mdx";
+  slug: "o";
+  body: string;
+  collection: "stock";
   data: InferEntrySchema<"stock">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "spy.mdx": {
-  id: "spy.mdx",
-  slug: "spy",
-  body: string,
-  collection: "stock",
+	id: "spy.mdx";
+  slug: "spy";
+  body: string;
+  collection: "stock";
   data: InferEntrySchema<"stock">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "tsla.mdx": {
-  id: "tsla.mdx",
-  slug: "tsla",
-  body: string,
-  collection: "stock",
+	id: "tsla.mdx";
+  slug: "tsla";
+  body: string;
+  collection: "stock";
   data: InferEntrySchema<"stock">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "vt.mdx": {
-  id: "vt.mdx",
-  slug: "vt",
-  body: string,
-  collection: "stock",
+	id: "vt.mdx";
+  slug: "vt";
+  body: string;
+  collection: "stock";
   data: InferEntrySchema<"stock">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "team": {
 "example.mdx": {
-  id: "example.mdx",
-  slug: "example",
-  body: string,
-  collection: "team",
+	id: "example.mdx";
+  slug: "example";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "fudster.mdx": {
-  id: "fudster.mdx",
-  slug: "fudster",
-  body: string,
-  collection: "team",
+	id: "fudster.mdx";
+  slug: "fudster";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "h0lybyte.mdx": {
-  id: "h0lybyte.mdx",
-  slug: "h0lybyte",
-  body: string,
-  collection: "team",
+	id: "h0lybyte.mdx";
+  slug: "h0lybyte";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "keros.mdx": {
-  id: "keros.mdx",
-  slug: "keros",
-  body: string,
-  collection: "team",
+	id: "keros.mdx";
+  slug: "keros";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "lvl21bellsprout.mdx": {
-  id: "lvl21bellsprout.mdx",
-  slug: "lvl21bellsprout",
-  body: string,
-  collection: "team",
+	id: "lvl21bellsprout.mdx";
+  slug: "lvl21bellsprout";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "sean.mdx": {
-  id: "sean.mdx",
-  slug: "sean",
-  body: string,
-  collection: "team",
+	id: "sean.mdx";
+  slug: "sean";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "silver91.mdx": {
-  id: "silver91.mdx",
-  slug: "silver91",
-  body: string,
-  collection: "team",
+	id: "silver91.mdx";
+  slug: "silver91";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "ziggy9263.mdx": {
-  id: "ziggy9263.mdx",
-  slug: "ziggy9263",
-  body: string,
-  collection: "team",
+	id: "ziggy9263.mdx";
+  slug: "ziggy9263";
+  body: string;
+  collection: "team";
   data: InferEntrySchema<"team">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "theory": {
 "deadcode.mdx": {
-  id: "deadcode.mdx",
-  slug: "deadcode",
-  body: string,
-  collection: "theory",
+	id: "deadcode.mdx";
+  slug: "deadcode";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "fintech.mdx": {
-  id: "fintech.mdx",
-  slug: "fintech",
-  body: string,
-  collection: "theory",
+	id: "fintech.mdx";
+  slug: "fintech";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "gamedesign.mdx": {
-  id: "gamedesign.mdx",
-  slug: "gamedesign",
-  body: string,
-  collection: "theory",
+	id: "gamedesign.mdx";
+  slug: "gamedesign";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "healthcare.mdx": {
-  id: "healthcare.mdx",
-  slug: "healthcare",
-  body: string,
-  collection: "theory",
+	id: "healthcare.mdx";
+  slug: "healthcare";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "matrix.mdx": {
-  id: "matrix.mdx",
-  slug: "matrix",
-  body: string,
-  collection: "theory",
+	id: "matrix.mdx";
+  slug: "matrix";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "phytochemicals.mdx": {
-  id: "phytochemicals.mdx",
-  slug: "phytochemicals",
-  body: string,
-  collection: "theory",
+	id: "phytochemicals.mdx";
+  slug: "phytochemicals";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "programming.mdx": {
-  id: "programming.mdx",
-  slug: "programming",
-  body: string,
-  collection: "theory",
+	id: "programming.mdx";
+  slug: "programming";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "socialmedia.mdx": {
-  id: "socialmedia.mdx",
-  slug: "socialmedia",
-  body: string,
-  collection: "theory",
+	id: "socialmedia.mdx";
+  slug: "socialmedia";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "solarpunk.mdx": {
-  id: "solarpunk.mdx",
-  slug: "solarpunk",
-  body: string,
-  collection: "theory",
+	id: "solarpunk.mdx";
+  slug: "solarpunk";
+  body: string;
+  collection: "theory";
   data: InferEntrySchema<"theory">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "tools": {
 "pass.mdx": {
-  id: "pass.mdx",
-  slug: "pass",
-  body: string,
-  collection: "tools",
+	id: "pass.mdx";
+  slug: "pass";
+  body: string;
+  collection: "tools";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "status.mdx": {
-  id: "status.mdx",
-  slug: "status",
-  body: string,
-  collection: "tools",
+	id: "status.mdx";
+  slug: "status";
+  body: string;
+  collection: "tools";
   data: any
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "webmaster.mdx": {
-  id: "webmaster.mdx",
-  slug: "webmaster",
-  body: string,
-  collection: "tools",
+	id: "webmaster.mdx";
+  slug: "webmaster";
+  body: string;
+  collection: "tools";
   data: any
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "video": {
 "wolfram.mdx": {
-  id: "wolfram.mdx",
-  slug: "wolfram",
-  body: string,
-  collection: "video",
+	id: "wolfram.mdx";
+  slug: "wolfram";
+  body: string;
+  collection: "video";
   data: InferEntrySchema<"video">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 "website": {
 "about.mdx": {
-  id: "about.mdx",
-  slug: "about",
-  body: string,
-  collection: "website",
+	id: "about.mdx";
+  slug: "about";
+  body: string;
+  collection: "website";
   data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "c.mdx": {
-  id: "c.mdx",
-  slug: "c",
-  body: string,
-  collection: "website",
+	id: "c.mdx";
+  slug: "c";
+  body: string;
+  collection: "website";
   data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "discord.mdx": {
-  id: "discord.mdx",
-  slug: "discord",
-  body: string,
-  collection: "website",
+	id: "discord.mdx";
+  slug: "discord";
+  body: string;
+  collection: "website";
   data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "events.mdx": {
-  id: "events.mdx",
-  slug: "events",
-  body: string,
-  collection: "website",
+	id: "events.mdx";
+  slug: "events";
+  body: string;
+  collection: "website";
   data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "twitch.mdx": {
-  id: "twitch.mdx",
-  slug: "twitch",
-  body: string,
-  collection: "website",
+	id: "twitch.mdx";
+  slug: "twitch";
+  body: string;
+  collection: "website";
   data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "twitter.mdx": {
-  id: "twitter.mdx",
-  slug: "twitter",
-  body: string,
-  collection: "website",
+	id: "twitter.mdx";
+  slug: "twitter";
+  body: string;
+  collection: "website";
   data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdx"] };
 "youtube.mdx": {
-  id: "youtube.mdx",
-  slug: "youtube",
-  body: string,
-  collection: "website",
+	id: "youtube.mdx";
+  slug: "youtube";
+  body: string;
+  collection: "website";
   data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] },
-},
+} & { render(): Render[".mdx"] };
+};
 
 	};
+
+	type DataEntryMap = {
+		"_bin": {
+};
+"compose": {
+};
+"vip": {
+};
+
+	};
+
+	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
 	type ContentConfig = typeof import("../src/content/config");
 }
