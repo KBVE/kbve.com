@@ -1329,6 +1329,7 @@
   /* trailing cursor section
    */
   .gsc-imageResult .gsc-cursor-box {
+    
     clear : both;
   }
   
@@ -1338,8 +1339,11 @@
   }
   
   .gsc-results .gsc-cursor {
+    color : var(--color-primary) !important;
+    fill: var(--color-secondary) !important;
     display : inline;
   }
+
   
   .gsc-results .gsc-cursor-box {
     margin-bottom : 10px;
@@ -1347,7 +1351,7 @@
   
   .gsc-results .gsc-cursor-box .gsc-cursor-page {
     cursor : pointer;
-    color : var(--color-primary);
+    color : var(--color-primary) !important;
     background-color: transparent;
     text-decoration: underline;
     margin-right : 8px;
@@ -1360,6 +1364,12 @@
     font-weight : bold;
     text-decoration: none;
   }
+
+  /*** H0ly Search Edits 05-21-2023 **/
+
+  .gsc-results .gsc-webResult .gsc-cursor {
+    color : var(--color-primary) !important;
+  }
   
   
   
@@ -1368,17 +1378,17 @@
   /* generic, cross cutting result style
    * - in the form of .gs-result .gs-xxx where xxx is the generic style
    * .gs-title : typically the first line of a result, typically a link, image results over ride this, since for image results, the image is the link
-   * .gs-divider : typically seperates results from ads
+   * .gs-divider : typically separates results from ads
    * .gs-visibleUrl : typically the last line of a result, displayed in green. sometimes a link (like in blog search)
    * .gs-clusterUrl : for news, and other similar services, this is a cluster of additional results
-   * img.gs-image : an actial image in a result
+   * img.gs-image : an actual image in a result
    * .gs-phone : a phone number
    * .gs-address : an address (includes street, city, region, country)
    * .gs-streetAddress : a street (including #)
    * .gs-city : a city
    * .gs-region : a region (zip code, area, etc.)
    * .gs-country : a country
-   * .gs-snippet : snippetized content
+   * .gs-snippet : snippet content
    * .gs-watermark : indicator that user selected this result
    * .gs-metadata : generic metadata, e.g.,
    * .gs-image-box : generic container for a result's image (within a table)
@@ -1412,7 +1422,7 @@
     text-decoration: none;
   }
   
-  /* relative and absolute dates, note, news/books inlines these */
+  /* relative and absolute dates, note, news/books in lines these */
   .gs-relativePublishedDate,
   .gs-publishedDate {
     color: #6f6f6f;
@@ -1667,7 +1677,7 @@
   .gs-webResult div.gs-visibleUrl-long,
   .gs-promotion div.gs-visibleUrl-long {
     overflow : hidden;
-    display : none;
+    
   }
   
   /* Per result labels
@@ -1818,8 +1828,8 @@
   
   
   /* book search specific over rides
-   * - default image width garuntee
-   * - appropriate cell seperation
+   * - default image width guarantee
+   * - appropriate cell separation
    */
   
   .gs-patentResult td {
@@ -1982,6 +1992,11 @@
   .gsc-collapsable {
     cursor: pointer;
   }
+
+  .gsc-collapsible {
+    cursor: pointer;
+  }
+  
   
   /*
    * Cross-browser implementation of the "display: inline-block" CSS property.
@@ -2011,11 +2026,13 @@
   
   /* By default show url at the bottom of the snippet */
   .gsc-url-top {
-    display: none;
+    color: var(--color-secondary) !important;
+   
   }
   
   .gsc-url-bottom {
-    display: block;
+    color: var(--color-secondary) !important;
+    
   }
   
   /* By default show thumbnail at the left of the snippet */
@@ -2225,7 +2242,7 @@
     display: none;
   }
   
-  /* CSS for richsnippets feature. */
+  /* CSS for rich snippets feature. */
   .gsc-richsnippet-popup-box {
     position: fixed !important;
     z-index: 100003;
