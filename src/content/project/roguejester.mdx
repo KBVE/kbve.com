@@ -15,16 +15,6 @@ tags:
 - roguejester
 ---
 
-import Details from "@w/Details.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
-import N from "@n/N.astro";
-
-<TabMenu first="general" data={["guides", "media", "task", "notes"]}>
-
-
-<TabData tail="block" data="general">
-
 ## RJ Project
 
 We are currently testing the Git LFS and the CI/CD for the Steam release. We definitely think the dark and darker style but set in the cyberpunk future is the best way to describe the path the game will take.
@@ -46,22 +36,44 @@ We are currently testing the Git LFS and the CI/CD for the Steam release. We def
 • New Classes Added(Each class got unique ability)
 • SFX GunShots(NO BGX)
 
-</TabData>
-<TabData data="guides">
 
-## Guides
+## Errors
 
-</TabData>
+Current errors for Rogue Jester that we need to resolve:
 
-<TabData data="media">
+Error 1:
 
-## Media
+Error: Only Capsule and Sphere Colliders are supported by the Lean ability.
+UnityEngine.Debug:LogError (object)
+Opsive.UltimateCharacterController.FirstPersonController.Character.Abilities.Lean:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/FirstPersonController/Character/Abilities/Lean.cs:78)
+Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:InitializeAbilities () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:340)
+Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:AwakeInternal () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:301)
+Opsive.UltimateCharacterController.Character.CharacterLocomotion:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/CharacterLocomotion.cs:310)
 
-</TabData>
 
-<TabData data="task">
+Error 2:
 
-## Task
+Error: Only Capsule and Sphere Colliders are supported by the Item Pullback ability.
+UnityEngine.Debug:LogError (object)
+Opsive.UltimateCharacterController.ThirdPersonController.Character.Abilities.Items.ItemPullback:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/ThirdPersonController/Character/Abilities/ItemAbilities/ItemPullback.cs:54)
+Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:InitializeItemAbilities () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:366)
+Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:AwakeInternal () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:302)
+Opsive.UltimateCharacterController.Character.CharacterLocomotion:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/CharacterLocomotion.cs:310)
+
+Error 3:
+
+UnassignedReferenceException: The variable m_AvailableModels of ModelManager has not been assigned.
+You probably need to assign the m_AvailableModels variable of the ModelManager script in the inspector.
+Opsive.UltimateCharacterController.Character.ModelManager.Start () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/ModelManager.cs:62)
+
+Error 4:
+
+NullReferenceException: Object reference not set to an instance of an object
+Opsive.UltimateInventorySystem.UI.Currency.MultiCurrencyView.DrawCurrency (Opsive.UltimateInventorySystem.Exchange.CurrencyCollection currencyCollection) (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Currency/MultiCurrencyView.cs:62)
+Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.CurrencyUpdate (Opsive.UltimateInventorySystem.Exchange.CurrencyOwnerBase currencyOwner) (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:86)
+Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.Initialize () (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:63)
+Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.Start () (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:38)
+
 
 ### Steam
 
@@ -69,19 +81,15 @@ These are the official Steam Tasks
 
 - [ ] Library Capsule
 
-<Details data="Library Capsule">
 
 Library Capsule *600px wide x 900px tall
 - `Design`: This should be graphically-centric and give the user some sense of the experience. Please use the key art that is being used for any retail boxes or marketing as well as the name of your game, ideally using the same logo / title as printed on any retail or marketing. Do not include quotes, marketing copy, or other strings of text beyond the title of your application. The art should depict something important about your product. The logo should be easily legible against the background.
 - `Usage`: This image is primarily used in the library overview and collection views
 - `Sizes`: 600px x 900px (an additional half-size 300px x 450px PNG will be auto-generated from larger file)
 
-</Details>
 
 - [ ] Library Hero
 
-
-<Details data="Library Hero">
 
 Library Hero *3840px wide x 1240px tall
 The hero graphic and logo are layered and move independently when the page is scrolled, creating a subtle parallax effect. Consider how the product logo will be placed on top of the hero image (left bottom corner or centered). You'll want to ensure the logo is both visible and legible against the background.
@@ -95,11 +103,9 @@ Appears at the top of a user's library details page for this product.
 - `Sizes`:
 3840px x 1240px (an additional half-size 1920px x 620px PNG will be auto-generated from larger file)
 
-</Details>
 
 - [ ] Library Logo
 
-<Details data="Library Logo">
 
 Library Logo *1280px wide x 720px tall
 
@@ -115,11 +121,9 @@ Appears at the top of a user's library details page for this product, placed on 
 - `Sizes`:
 1280px x 720px (an additional half-size 640 x 360px PNG will be auto-generated from larger file) Ensure that the logo extends the full width of the PNG, without extra padding.
 
-</Details>
 
 - [ ] Placement Tool
 
-<Details data="Placement Tool">
 The four green anchor points relate to the four possible positions your logo can be pinned. Bottom-left, top center, mid-center, and bottom-center.
 
 In most cases, the bottom-left position should be used.
@@ -135,11 +139,6 @@ Typically you can take the top edge and leave it higher than the bounds of the l
 
 Once you are happy with your logo position, proportion, and scale, hit the save button to commit your changes.
 
-</Details>
-
-</TabData>
-
-<TabData data="notes">
 
 ### TODO
 
@@ -421,7 +420,6 @@ We should make it so that the Unity pulls this information and displays it onto 
 4. MainScene
 5. SecondaryScene
 6. LevelSelection
-7. -- null
 
 
 ### Assets
@@ -467,7 +465,3 @@ We should make it so that the Unity pulls this information and displays it onto 
 #### Robot 3D Sphere
 
 - Official [Link](https://assetstore.unity.com/packages/3d/characters/robots/robot-sphere-136226)
-
-
-</TabData>
-</TabMenu>
