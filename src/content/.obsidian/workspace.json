@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/cityvote.mdx",
+                "file": "journal/2023-05-22.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a7f8062d036f53c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "journal/2023-05-23.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "project/cityvote.mdx",
+                "file": "journal/2023-05-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "project/cityvote.mdx",
+                "file": "journal/2023-05-23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "project/cityvote.mdx"
+                "file": "journal/2023-05-23.md"
               }
             }
           }
@@ -155,10 +168,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8df0be9056595b8",
+  "active": "4a7f8062d036f53c",
   "lastOpenFiles": [
-    "project/cityvote.md",
+    "journal/2023-05-23.md",
+    "journal/2023-05-22.md",
     "project/cityvote.mdx",
+    "project/cityvote.md",
     "project/api.mdx",
     "project/ar.mdx",
     "project/galaxia.mdx",
