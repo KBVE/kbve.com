@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/05-25.md",
+                "file": "journal/05-27.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/05-25.md",
+                "file": "journal/05-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/05-25.md",
+                "file": "journal/05-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/05-25.md"
+                "file": "journal/05-27.md"
               }
             }
           }
@@ -157,8 +157,10 @@
   },
   "active": "c48e6c2b10f2923c",
   "lastOpenFiles": [
-    "journal/05-24.md",
+    "journal/05-26.md",
+    "journal/05-27.md",
     "journal/05-25.md",
+    "journal/05-24.md",
     "journal/2023-05-25.md",
     "journal/05-23.md",
     "journal/05-22.md",
@@ -181,8 +183,6 @@
     "journal/05-01.md",
     "journal/04-30.md",
     "journal/04-29.md",
-    "journal/04-28.md",
-    "journal/04-27.md",
     "project/roguejester.mdx",
     "project/cityvote.mdx",
     "project/api.mdx",
