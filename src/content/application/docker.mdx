@@ -14,19 +14,26 @@ tags:
   - container
 ---
 
-import Details from "@w/Details.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
 import N from "@n/N.astro";
-
-<TabMenu first="general" data={[ "guides", "media", "notes"]}>
-<TabData tail="block" data="general">
 
 ## Information
 
-- A hybrid-source application designed to deploy nested-virtual machines that are containerized applications.
+In one sentence, we can describe docker as a hybrid-source application designed to deploy nested-virtual machines that are containerized applications.
+Docker is a powerful tool that can help you develop, deploy, and manage your applications.
+The Docker build process lets you package your application and all its dependencies into a single image.
+This image can then be run on any machine that has Docker installed, regardless of the underlying operating system.
+Think of the image as a virtual cd or iso, it has everything needed to run your software wrapped into a single fancy file. 
+Finally the image/container makes it easy to deploy your application to any environment, whether it's a local development machine, a cloud server, or a production environment.
+It's easy to get started with Docker, and you can be up and running in just a few minutes to about a hour if you are a bit noobie.
+Remember that containers are lightweight, isolated environments that make it easy to deploy your applications.
+They're also portable, so you can run them on any machine that has Docker installed.
+So docker takes your source code, wraps it all into an image, then runs the image in a virtual machine aka container.
+Also, in this documentation, we will include more additional tips, such as security and optimization, for your docker adventure. 
 
 ## Cheatsheet
+
+This is a quick cheetsheet for Docker, everyone comes back to these sheet for when they run into future problems or forget a certain command. 
+It is not important to understand this cheetsheet until you have a couple sessions of docker delopyment under your belt, so if you are a newbie, do not freak out!
 
 - Basic CLI (Command-line interface)
   - Container Management Commands
@@ -140,7 +147,24 @@ import N from "@n/N.astro";
 
 ---
 
-## Docker Install
+## Setup
+
+Docker is the future of application development because of how fast, easy and portable the software is.
+In this section of the document, we will focus on setting up the application on various operating systems, including linux, windows and mac.
+With Docker, you can build, deploy, and manage your applications in a fraction of the time it would take with traditional methods.
+If you're not using Docker, you're missing out. 
+So what are you waiting for homie!? 
+Let us begin the setup quest for Docker today!
+
+
+### Install
+
+This section breaks down the various areas of installing `docker`.
+To install Docker, simply visit the Docker website and download the installer for your operating system. 
+
+#### Linux
+
+The operating sysetm that we perfer is `Ubuntu` and here is a quick and brief tutorial:
 
 - Ubuntu Installation Guide
   - Core Pre-Installation
@@ -156,23 +180,38 @@ import N from "@n/N.astro";
     - Adding Docker Compose through `sudo apt-get install docker-compose-plugin`, you may need to update before installing.
     - Verifying the installation through `docker compose version` and if there are any issues, visit our support.
 
+
+#### Windows
+
+Before we being our journey on setting up `Docker` onto Windows, you will have to make sure that WSL is installed and ready.
+Furthermore, you may need to enable the Hyper-V through your bios.
+
+The best way to setup `Docker` is by installing the engine through `Choco` because it will help keep the engine up to date.
+
+
 ---
 
-</TabData>
-
-<TabData data="guides">
 
 ## Guides
 
-</TabData>
+Additional guides for docker and reference material will be here.
 
-<TabData data="media">
 
 ## Media
 
-</TabData>
+We will include some YT videos here in the future for people to watch! 
+I believe I will also make a small session video later on from setting up docker from scratch.
 
-<TabData data="notes">
+
+---
+
+## Errors
+
+We will try to document all the errors that we face within Docker!
+Sometimes there are just so many and it can be a pain to shift through them all.
+
+
+---
 
 ## Notes
 
@@ -196,5 +235,3 @@ Official Notes for the [Beta Desktop](https://docs.docker.com/desktop/wasm/)
 
 I am still test casing it locally, one of the cool aspects would be to run Edge WASI/WASM through Portainer.
 
-</TabData>
-</TabMenu>

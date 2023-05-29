@@ -559,240 +559,247 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "journal": {
-"2023-04-17.md": {
-	id: "2023-04-17.md";
-  slug: "2023-04-17";
+"04-17.md": {
+	id: "04-17.md";
+  slug: "04-17";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-18.md": {
-	id: "2023-04-18.md";
-  slug: "2023-04-18";
+"04-18.md": {
+	id: "04-18.md";
+  slug: "04-18";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-19.md": {
-	id: "2023-04-19.md";
-  slug: "2023-04-19";
+"04-19.md": {
+	id: "04-19.md";
+  slug: "04-19";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-20.md": {
-	id: "2023-04-20.md";
-  slug: "2023-04-20";
+"04-20.md": {
+	id: "04-20.md";
+  slug: "04-20";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-21.md": {
-	id: "2023-04-21.md";
-  slug: "2023-04-21";
+"04-21.md": {
+	id: "04-21.md";
+  slug: "04-21";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-22.md": {
-	id: "2023-04-22.md";
-  slug: "2023-04-22";
+"04-22.md": {
+	id: "04-22.md";
+  slug: "04-22";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-23.md": {
-	id: "2023-04-23.md";
-  slug: "2023-04-23";
+"04-23.md": {
+	id: "04-23.md";
+  slug: "04-23";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-24.md": {
-	id: "2023-04-24.md";
-  slug: "2023-04-24";
+"04-24.md": {
+	id: "04-24.md";
+  slug: "04-24";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-25.md": {
-	id: "2023-04-25.md";
-  slug: "2023-04-25";
+"04-25.md": {
+	id: "04-25.md";
+  slug: "04-25";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-26.md": {
-	id: "2023-04-26.md";
-  slug: "2023-04-26";
+"04-26.md": {
+	id: "04-26.md";
+  slug: "04-26";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-27.md": {
-	id: "2023-04-27.md";
-  slug: "2023-04-27";
+"04-27.md": {
+	id: "04-27.md";
+  slug: "04-27";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-28.md": {
-	id: "2023-04-28.md";
-  slug: "2023-04-28";
+"04-28.md": {
+	id: "04-28.md";
+  slug: "04-28";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-29.md": {
-	id: "2023-04-29.md";
-  slug: "2023-04-29";
+"04-29.md": {
+	id: "04-29.md";
+  slug: "04-29";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-04-30.md": {
-	id: "2023-04-30.md";
-  slug: "2023-04-30";
+"04-30.md": {
+	id: "04-30.md";
+  slug: "04-30";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-01.md": {
-	id: "2023-05-01.md";
-  slug: "2023-05-01";
+"05-01.md": {
+	id: "05-01.md";
+  slug: "05-01";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-02.md": {
-	id: "2023-05-02.md";
-  slug: "2023-05-02";
+"05-02.md": {
+	id: "05-02.md";
+  slug: "05-02";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-03.md": {
-	id: "2023-05-03.md";
-  slug: "2023-05-03";
+"05-03.md": {
+	id: "05-03.md";
+  slug: "05-03";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-04.md": {
-	id: "2023-05-04.md";
-  slug: "2023-05-04";
+"05-04.md": {
+	id: "05-04.md";
+  slug: "05-04";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-05.md": {
-	id: "2023-05-05.md";
-  slug: "2023-05-05";
+"05-05.md": {
+	id: "05-05.md";
+  slug: "05-05";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-06.md": {
-	id: "2023-05-06.md";
-  slug: "2023-05-06";
+"05-06.md": {
+	id: "05-06.md";
+  slug: "05-06";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-07.md": {
-	id: "2023-05-07.md";
-  slug: "2023-05-07";
+"05-07.md": {
+	id: "05-07.md";
+  slug: "05-07";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-08.md": {
-	id: "2023-05-08.md";
-  slug: "2023-05-08";
+"05-08.md": {
+	id: "05-08.md";
+  slug: "05-08";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-09.md": {
-	id: "2023-05-09.md";
-  slug: "2023-05-09";
+"05-09.md": {
+	id: "05-09.md";
+  slug: "05-09";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-10.md": {
-	id: "2023-05-10.md";
-  slug: "2023-05-10";
+"05-10.md": {
+	id: "05-10.md";
+  slug: "05-10";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-15.md": {
-	id: "2023-05-15.md";
-  slug: "2023-05-15";
+"05-15.md": {
+	id: "05-15.md";
+  slug: "05-15";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-16.md": {
-	id: "2023-05-16.md";
-  slug: "2023-05-16";
+"05-16.md": {
+	id: "05-16.md";
+  slug: "05-16";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-17.md": {
-	id: "2023-05-17.md";
-  slug: "2023-05-17";
+"05-17.md": {
+	id: "05-17.md";
+  slug: "05-17";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-18.md": {
-	id: "2023-05-18.md";
-  slug: "2023-05-18";
+"05-18.md": {
+	id: "05-18.md";
+  slug: "05-18";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-19.md": {
-	id: "2023-05-19.md";
-  slug: "2023-05-19";
+"05-19.md": {
+	id: "05-19.md";
+  slug: "05-19";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-20.md": {
-	id: "2023-05-20.md";
-  slug: "2023-05-20";
+"05-20.md": {
+	id: "05-20.md";
+  slug: "05-20";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-21.md": {
-	id: "2023-05-21.md";
-  slug: "2023-05-21";
+"05-21.md": {
+	id: "05-21.md";
+  slug: "05-21";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-22.md": {
-	id: "2023-05-22.md";
-  slug: "2023-05-22";
+"05-22.md": {
+	id: "05-22.md";
+  slug: "05-22";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-23.md": {
-	id: "2023-05-23.md";
-  slug: "2023-05-23";
+"05-23.md": {
+	id: "05-23.md";
+  slug: "05-23";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
-"2023-05-24.md": {
-	id: "2023-05-24.md";
-  slug: "2023-05-24";
+"05-24.md": {
+	id: "05-24.md";
+  slug: "05-24";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"05-25.md": {
+	id: "05-25.md";
+  slug: "05-25";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
