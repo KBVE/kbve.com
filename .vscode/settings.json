@@ -143,7 +143,7 @@
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
     "[astro]": {
-      "editor.defaultFormatter": "astro-build.astro-vscode",
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
       
     },
     "[javascript]": {
