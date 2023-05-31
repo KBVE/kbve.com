@@ -13,6 +13,7 @@ const {
   title,
   description,
   image = "https://kbve.com/assets/img/social.png",
+  bg,
 } = Astro.props; //  Import Astro.props
 const url = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -83,7 +84,7 @@ const url = new URL(Astro.url.pathname, Astro.site);
     </script>
     <!-- Light/Dark [END] -->
   </head>
-
+  
   <body
     class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
   >
