@@ -1,0 +1,103 @@
+---
+//<!--? Magic Conch Shell from Deconiums
+//<!--*     [IMPORT]
+import N from "@n/N.astro";
+//<!--*     [DATA]
+const { character, data } = Astro.props;
+let title = "Shadow Shell of the Magical Conch - by KBVE";
+let description =
+  "We decided to visit the depths of the underground dark realm and have obtained the legendary shadow shell of the magical conch! This is a fan service / paradoy tool that is meant for the memes!";
+---
+
+<N ns="theme" title={title} description={description}>
+  <!--*     [SCRIPT] -> [START] -->
+  <!--*     Original Script below is by Deconimus  -->
+  <script is:inline>
+    var yes = new Audio("/assets/audio/yes.ogg");
+    var no = new Audio("/assets/audio/no.ogg");
+    var lastMod = 0;
+    var waitTime = 3000;
+    function sleep (time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+    }
+    function playAnswer() {
+        var answer = (Math.random() >= 0.5) ? "Yes" : "No";
+        var audio = (answer === "Yes") ? yes : no;
+        audio.play();
+        answerText.innerHTML = answer
+        lastMod = new Date().getTime();
+        sleep(waitTime).then(() => {
+            var time = new Date().getTime();
+            if (time - lastMod >= waitTime) {
+                answerText.innerHTML = ""
+                lastMod = time;
+            }
+        });
+    }
+</script>
+  <!--*     [SCRIPT] -> [END] -->
+
+  <!--*     [CSS]   -> [START] -->
+
+  <!--*     [CSS]   -> [END] -->
+  <div
+    class="flex flex-wrap mb-12 justify-center items-center bg-fixed bg-center bg-cover overflow-auto"
+    style={{ backgroundImage: `url(/assets/img/bg/bikini_bottom_bg.jpg)` }}
+  >
+    <div
+      class="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10"
+    >
+      <h1
+        class="text-5xl antialiased font-bold leading-none text-center gradient-text text-shadow-xl"
+      >
+        Ask the Shadow Conch of Darkness!
+      </h1>
+      <div
+        class="flex flex-col p-8 shadow-sm rounded-2xl lg:p-12 bg-offset dark:text-gray-100"
+      >
+        <div class="flex flex-col items-center w-full">
+          <h2 class="text-3xl font-semibold text-center">
+            Type your question below!
+          </h2>
+          <div class="flex flex-col items-center py-6 space-y-3">
+            Then click the shell!       
+          </div>
+          <div class="flex flex-col w-full">
+            <textarea
+              rows="3"
+              placeholder="Message..."
+              class="p-4 rounded-md resize-none text-gray-600"
+              spellcheck="false"></textarea>
+            
+          </div>
+          <h1  class="text-3xl font-semibold text-center gradient-text py-8" id="answerText"></h1>
+        </div>
+        
+      </div>
+      <!--* [MAIN SHELL] -> [START] -->
+      <div class="flex flex-row justify-center">
+        <img
+          src="/assets/img/conch/conch_shell.png"
+          class="hover:animate-pulse hover:scale-110 hover:cursor-grab hover:grayscale"
+          onclick="playAnswer();"
+        />
+      </div>
+      <!--* [MAIN SHELL] -> [END] -->
+      
+      <!--* [CREDITS] -->
+      <div class="px-8 py-2 bg-offset">
+        <div class="flex text-sm items-center mx-auto container justify-center md:justify-between py-2">
+            <div>
+                <span>Credits:</span> Deconimus, Frank, KBVE, 
+            </div>
+            <a href="#" rel="noopener noreferrer" class="items-center gap-2 hidden md:flex">
+                <svg role="img" viewBox="0 0 22 22" class="fill-current h-4 w-4">
+                    <path clip-rule="evenodd" d="M6.5 1.75a1.75 1.75 0 100 3.5h3.51a8.785 8.785 0 00-.605-1.389C8.762 2.691 7.833 1.75 6.5 1.75zm5.49 3.5h3.51a1.75 1.75 0 000-3.5c-1.333 0-2.262.941-2.905 2.111a8.778 8.778 0 00-.605 1.389zM1.75 6.75v3.5h18.5v-3.5H1.75zm18 5H21a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75h-2.761a3.25 3.25 0 00-2.739-5c-2.167 0-3.488 1.559-4.22 2.889a9.32 9.32 0 00-.28.553 9.32 9.32 0 00-.28-.553C9.988 1.809 8.667.25 6.5.25a3.25 3.25 0 00-2.739 5H1A.75.75 0 00.25 6v5c0 .414.336.75.75.75h1.25V21c0 .414.336.75.75.75h16a.75.75 0 00.75-.75v-9.25zm-1.5 0H3.75v8.5h14.5v-8.5z" fill-rule="evenodd"></path>
+                </svg>
+                <span class="hover:underline focus-visible:underline">Memes</span>
+            </a>
+        </div>
+    </div>
+    </div>
+  </div>
+</N>
