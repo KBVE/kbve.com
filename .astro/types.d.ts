@@ -832,6 +832,41 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"05-30.md": {
+	id: "05-30.md";
+  slug: "05-30";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"05-31.md": {
+	id: "05-31.md";
+  slug: "05-31";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"06-01.md": {
+	id: "06-01.md";
+  slug: "06-01";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"06-02.md": {
+	id: "06-02.md";
+  slug: "06-02";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"06-03.md": {
+	id: "06-03.md";
+  slug: "06-03";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1205,6 +1240,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "tools": {
+"conch.mdx": {
+	id: "conch.mdx";
+  slug: "conch";
+  body: string;
+  collection: "tools";
+  data: any
+} & { render(): Render[".mdx"] };
 "pass.mdx": {
 	id: "pass.mdx";
   slug: "pass";

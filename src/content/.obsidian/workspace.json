@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/05-29.md",
+                "file": "journal/05-31.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6a4ebb0c45516e7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "journal/06-03.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/05-29.md",
+                "file": "journal/06-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/05-29.md",
+                "file": "journal/06-03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/05-29.md"
+                "file": "journal/06-03.md"
               }
             }
           }
@@ -155,11 +168,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c48e6c2b10f2923c",
+  "active": "6a4ebb0c45516e7b",
   "lastOpenFiles": [
+    "journal/06-02.md",
+    "journal/05-31.md",
+    "journal/06-03.md",
+    "journal/06-01.md",
+    "journal/05-30.md",
+    "tools/conch.mdx",
+    "journal/05-29.md",
     "journal/05-28.md",
     "journal/05-27.md",
-    "journal/05-29.md",
     "_bin/_daily.md",
     "journal/05-26.md",
     "journal/05-25.md",
@@ -178,11 +197,6 @@
     "journal/05-09.md",
     "journal/05-08.md",
     "journal/05-07.md",
-    "journal/05-06.md",
-    "journal/05-05.md",
-    "journal/05-04.md",
-    "journal/05-03.md",
-    "journal/05-02.md",
     "project/roguejester.mdx",
     "project/cityvote.mdx",
     "project/api.mdx",
@@ -191,7 +205,6 @@
     "project/search-engine.mdx",
     "application/android.mdx",
     "application/ryujinx.mdx",
-    "application/flipperzero.mdx",
-    "theory/programming.mdx"
+    "application/flipperzero.mdx"
   ]
 }
