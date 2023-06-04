@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/06-03.md",
+                "file": "project/cv.mdx",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/06-03.md",
+                "file": "project/cv.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/06-03.md",
+                "file": "project/cv.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/06-03.md"
+                "file": "project/cv.mdx"
               }
             }
           }
@@ -170,9 +170,15 @@
   },
   "active": "6a4ebb0c45516e7b",
   "lastOpenFiles": [
+    "project/galaxia.mdx",
+    "project/cv.mdx",
+    "project/cityvote.mdx",
+    "project/charles.mdx",
+    "project/ar.mdx",
+    "project/api.mdx",
+    "journal/06-03.md",
     "journal/06-02.md",
     "journal/05-31.md",
-    "journal/06-03.md",
     "journal/06-01.md",
     "journal/05-30.md",
     "tools/conch.mdx",
@@ -196,15 +202,9 @@
     "journal/05-10.md",
     "journal/05-09.md",
     "journal/05-08.md",
-    "journal/05-07.md",
     "project/roguejester.mdx",
-    "project/cityvote.mdx",
-    "project/api.mdx",
-    "project/ar.mdx",
-    "project/galaxia.mdx",
     "project/search-engine.mdx",
     "application/android.mdx",
-    "application/ryujinx.mdx",
-    "application/flipperzero.mdx"
+    "application/ryujinx.mdx"
   ]
 }
