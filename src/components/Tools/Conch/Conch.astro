@@ -1,36 +1,7 @@
 ---
 // Magic Conch.
-import Conch from "./Conch";
 ---
 
-<script is:inline>
-  var yes = new Audio("/assets/audio/yes.ogg");
-  var no = new Audio("/assets/audio/no.ogg");
-  var lastMod = 0;
-  var waitTime = 2500;
-  function sleep(time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
-  function playAnswer() {
-    var answerElement = document.getElementById("answerElement");
-    var answer = Math.random() >= 0.5 ? "Yes" : "No";
-    var audio = answer === "Yes" ? yes : no;
-    audio.play();
-    answerElement.innerHTML = answer;
-    lastMod = new Date().getTime();
-    sleep(waitTime).then(() => {
-      var time = new Date().getTime();
-      if (time - lastMod >= waitTime) {
-        answerElement.innerHTML = `<textarea
-              rows="3"
-              placeholder="Message..."
-              class="p-4 rounded-md resize-none text-gray-600 w-full"
-              spellcheck="false" />`;
-        lastMod = time;
-      }
-    });
-  }
-</script>
 <div
   class="flex flex-wrap justify-center items-center bg-fixed bg-center bg-cover overflow-auto"
   style={{ backgroundImage: `url(/assets/img/bg/bikini_bottom_bg.jpg)` }}
@@ -39,7 +10,8 @@ import Conch from "./Conch";
     class="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10"
   >
   
-  <Conch client:only="react" />
+  <script type="text/partytown" src="https://conch.kbve.com/index.js"></script>
+  <div class="widget_react_conch" data-limit="50" data-json="application"></div>
   <!--  
     <div
       class="flex flex-col p-4 shadow-sm rounded-2xl lg:p-8 bg-offset dark:text-gray-100"
