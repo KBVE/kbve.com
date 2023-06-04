@@ -1,5 +1,6 @@
 ---
 // Magic Conch.
+import ReactConch from './ReactConch';
 ---
 
 <div
@@ -10,8 +11,7 @@
     class="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10"
   >
   
-  <script type="text/partytown" src="https://conch.kbve.com/index.js"></script>
-  <div class="widget_react_conch" data-limit="50" data-json="application"></div>
+  <ReactConch client:only="react" />
   <!--  
     <div
       class="flex flex-col p-4 shadow-sm rounded-2xl lg:p-8 bg-offset dark:text-gray-100"

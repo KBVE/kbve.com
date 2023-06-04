@@ -27,8 +27,8 @@ SOFTWARE.
  */
 
 //*         [IMPORT]
-import { Account, AppwriteException, Client, Databases, Storage, ID, Models } from 'appwrite';
-import { atom, WritableAtom } from 'nanostores';
+import { Account, AppwriteException, Client, Functions, Databases, Storage, ID, Models } from 'appwrite';
+import { atom, WritableAtom, task } from 'nanostores';
 
 /** Setup */
 export const appwriteClient = new Client()
@@ -37,6 +37,7 @@ export const appwriteClient = new Client()
 
 export const appwriteDatabases = new Databases(appwriteClient);
 export const appwriteStorage = new Storage(appwriteClient);
+export const appwriteFunctions = new Functions(appwriteClient);
 
 /** Database */
 /** We are currently not using these but will keep them here for testing */
@@ -48,13 +49,13 @@ export interface BlogPost extends Models.Document {
     slug: string;
     imageurl: string;
 }
-export interface BlogPostList extends Models.DocumentList<BlogPost> { }
+export type BlogPostList = Models.DocumentList<BlogPost>
 
 export interface BlogComment extends Models.Document {
     postId: string;
     comment: string;
 }
-export interface BlogCommentList extends Models.DocumentList<BlogComment> { }
+export type BlogCommentList = Models.DocumentList<BlogComment>
 
 /** Account */
 export const appwriteAccount = new Account(appwriteClient);
@@ -68,6 +69,10 @@ appwriteAccount.getSession('current').then(function (response) {
 })
 // @ts-ignore
 export const user$: WritableAtom<undefined | Models.Account<Models.Preferences>> = atom(undefined);
+
+export const function$: WritableAtom<undefined | Models.Execution> = atom(undefined);
+
+export const api$: WritableAtom<Boolean> = atom(false);
 
 isLoggedIn.subscribe(async (session) => {
     if (session?.userId) {
@@ -109,7 +114,6 @@ export const register = async (email: string, password: string, name: string) =>
         window.location.href = '/account';
     } catch (error) {
         const appwriteError = error as AppwriteException;
-        //alert(appwriteError.message)
         throw(appwriteError.message);
     }
 }
@@ -121,4 +125,30 @@ export const account = async () => {
         const appwriteError = error as AppwriteException;
         throw(appwriteError.message)
     }
+}
+
+export const exe = async (functionId, data) => {
+    try {
+        return appwriteFunctions.createExecution(functionId, data);
+    } catch (error) {
+        const appwriteError = error as AppwriteException;
+        throw(appwriteError.message)
+    }
+}
+
+export const program = async (functionId, data) => {
+    if(api$.get()) {
+        console.log('[API] is currently running')
+        return;
+    }
+    task(async () => {
+        api$.set(true);
+        console.log(`Task API -> ${api$.get()}`);
+        console.log(`Started Task ${functionId}`);
+        console.log(`Data ${data}`);
+        function$.set(await exe(functionId, data));
+        api$.set(false);
+        console.log(`Task API -> ${api$.get()}`);
+        console.log("Task Ended");
+      });
 }

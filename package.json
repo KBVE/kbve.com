@@ -82,7 +82,8 @@
     "svelte": "^3.59.1",
     "tailwindcss": "^3.3.2",
     "tailwindcss-fluid-type": "^2.0.3",
-    "typewriter-effect": "^2.20.1"
+    "typewriter-effect": "^2.20.1",
+    "use-sound": "^4.0.1"
   },
   "yarn-upgrade-all": {
     "ignore": [
