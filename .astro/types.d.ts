@@ -1016,13 +1016,6 @@ declare module 'astro:content' {
   collection: "project";
   data: any
 } & { render(): Render[".mdx"] };
-"cv.mdx": {
-	id: "cv.mdx";
-  slug: "cv";
-  body: string;
-  collection: "project";
-  data: any
-} & { render(): Render[".mdx"] };
 "discord-sh.mdx": {
 	id: "discord-sh.mdx";
   slug: "discord-sh";
@@ -1250,6 +1243,13 @@ declare module 'astro:content' {
 "conch.mdx": {
 	id: "conch.mdx";
   slug: "conch";
+  body: string;
+  collection: "tools";
+  data: any
+} & { render(): Render[".mdx"] };
+"cv.mdx": {
+	id: "cv.mdx";
+  slug: "cv";
   body: string;
   collection: "tools";
   data: any

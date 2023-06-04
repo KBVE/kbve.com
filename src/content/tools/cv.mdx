@@ -1,21 +1,21 @@
 ---
-id: 11
 layout: ../../layouts/theme/mdx.astro
-title: CV Builder
+title: CV Resume Builder
+category: Tools
 client: Self
-category: API
-frontpage: true
-status: true
-publishDate: 2023-05-21 00:00:00
-author: KBVE
-img: https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?fit=crop&w=1400&h=700&q=75
-description: Open source resume builder by KBVE Team
-repo: https://github.com/KBVE/cityvote-scrapper
+publishDate: 2023-04-12 00:00:00
+img: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?fit=crop&w=1400&h=700&q=75
+description: An open source and simple resume builder!
 tags:
-- design
-- search
-- concept
+- tools
+- resume
+- cv
 ---
+
+import CV from "@c/Tools/CV/CV.astro"
+
+<CV />
+
 
 ## Information
 The resume builder application / project will be something that can be built really quick and should have a couple amazing functionalities built into it!
@@ -68,7 +68,7 @@ I am thinking we will do the rendering inside of React and maybe follow the basi
 
 I suppose within the render concept would be the style library, I am looking at using tailwind because it seems to be straightforward and easy, with almost all the basic css being very user friendly. 
 
-The input of the resume data might be better in markdown? I will come back to this part when I get a bit closer towards the render aspect.
+The input of the resume data might be better in markdown? I will come back to this part when I get a bit closer towards the render aspect. In this first run of setting up the resume builder, I am thinking we would use the interweave react library, which safely renders HTML and markdown.
 
 ### Print
 The print will definitely be near the end as it might be a bit rough to resolve. I really do not want to mess around with PDF output right now.
@@ -77,3 +77,9 @@ The print will definitely be near the end as it might be a bit rough to resolve.
 
 ## Notes
 There were some talks about integrating GPT into the resume building aspect, but I am thinking that should be near the end, once the three core scopes above are addressed, then we can go back to the data scope and start to add GPT functionality. In this situation, we already have several cloud functions that are ready to deploy into a production environment, so we could utilize those when we reach this area.
+
+---
+
+## Developer
+
+The location for the codebase will be under src/module/CV within the KBVE.com repo! We were debating if we wanted to create a whole new repository for the project but it might be a bit too much?
