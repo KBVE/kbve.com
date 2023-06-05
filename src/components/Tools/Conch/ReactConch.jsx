@@ -1,3 +1,4 @@
+//!         [NOT DONE] -> Needs new cloud function with scope of user.
 import React, { useEffect, useState, useRef } from 'react';
 import useSound from 'use-sound';
 import { user$, function$, api$, program } from '@lib/appwrite';
@@ -5,12 +6,18 @@ import { useStore } from '@nanostores/react';
 import TypewriterMacro from "@lib/TypewriterMacro";
 
 function getStringBetween(str, start, end) {
+    try {
 	const result = str.match(new RegExp(`${start}(.*)${end}`));
-
 	return result[1];
+    }
+    catch (error)
+    {
+        return;
+    }
 }
 
 const ReactConch = () => {
+
 	const $user = useStore(user$);
 	const $function = useStore(function$);
 	const $api = useStore(api$);
@@ -27,26 +34,42 @@ const ReactConch = () => {
 	const [playNo] = useSound('https://conch.kbve.com/no.ogg'); // useSound("https://kbve.com/assets/audio/no.ogg");
 
 
-    function getMacro(__message) {
-        return TypewriterMacro(__message);
+    const GetMacro = () => {
+		const __gptYes = gpt.toLocaleLowerCase().includes('yes');
+		const __gptNo = gpt.toLocaleLowerCase().includes('no');
+
+		if(__gptYes)
+			playYes();
+		
+		else if (__gptNo)
+			playNo();
+        return TypewriterMacro(gpt);
     }
 
 	useEffect(() => {
 		if ($api) {
 			setCSS('grayscale animate-spin');
+			setGPT('...Loading');
 		} else {
 			setCSS('hover:animate-pulse hover:scale-110 hover:cursor-grab');
 		}
 		if ($function) {
 			console.log('Found Function');
-			setGPT(
-				getStringBetween(
-					$function.response,
-					'{"content":"',
-					'","role"',
-				).replace(/\n/g, '<br />'),
-			);
-			//console.log(gpt);
+            if($function.statusCode === 200)
+            {
+                setGPT(
+                    getStringBetween(
+                        $function.response,
+                        '{"content":"',
+                        '","role"',
+                    ).replace(/\n/g, '<br />'),
+                )
+            }
+            if($function?.statusCode === 500)
+            {
+                console.log('500 Error');
+            }
+            
 		}
 	}, [$api, $function]);
 
@@ -56,19 +79,10 @@ const ReactConch = () => {
 
 	async function _ask() {
 		if ($api) return;
-		const magic = getRandomInt(2);
 		const obj = JSON.stringify({
-			question: ref.current.value,
+			question: `${ref.current.value}. Answer this question with a yes or no! No neither!`,
 		});
 		await program('6479653d74613fd2766e', obj);
-		if (magic === 1) {
-			setGPT('Yes');
-			playYes();
-		}
-		if (magic === 0) {
-			setGPT('No');
-			playNo();
-		}
 	}
 
 	function _renderAPI() {
@@ -91,7 +105,7 @@ const ReactConch = () => {
 				<div className="flex flex-col items-center w-full">
 					<div className="flex flex-row justify-center bg-gray-900 p-4 rounded-xl">
 						<span>
-							{ TypewriterMacro(gpt)}
+							<GetMacro />
 						</span>
 					</div>
 				</div>
