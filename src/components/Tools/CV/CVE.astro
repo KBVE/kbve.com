@@ -1,0 +1,62 @@
+---
+//?     [CV]
+//?     [IMPORT]
+//import CVWrapped from "./CVWrapped.astro"
+import { Interweave, Markup } from 'interweave';
+import CVEditor from './CVEditor.jsx';
+
+//?     [DATA]
+const {} = Astro.props;
+---
+
+<Markup
+	content='This string <b>contains</b> HTML. <div class="text-5xl gradient-text">Something</div>'
+	client:only="react"
+/>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css"
+	rel="stylesheet"
+	type="text/css"
+/>
+<link
+	href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/plugins/code_view.min.css"
+	rel="stylesheet"
+	type="text/css"
+/>
+<script
+	is:inline
+	type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"
+></script>
+<script
+	is:inline
+	type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/code_view.min.js"
+></script>
+<script
+    is:inline
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/plugins/print.min.js"
+></script>
+<div id="froala"></div>
+<div id="eg-previewer"></div>
+<script is:inline>
+	var editor = new FroalaEditor(
+		'#froala',
+		{
+			htmlExecuteScripts: false,
+			htmlAllowComments: false,
+			pluginsEnabled: ['codeView'],
+			codeViewKeepActiveButtons: ['selectAll'],
+			events: {
+				'codeView.update': function () {
+					document.getElementById('eg-previewer').textContent =
+						this.codeView.get();
+				}
+				
+			},
+		},
+		function () {},
+	);
+</script>

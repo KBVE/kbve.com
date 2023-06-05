@@ -70,6 +70,7 @@
       "middlewares",
       "minio",
       "moba",
+      "nanostores",
       "netfliter",
       "netmaker",
       "netname",

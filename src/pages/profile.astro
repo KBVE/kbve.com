@@ -3,7 +3,7 @@
 ///				[MIGRATION]: Remove the /Core + SWUP/ and integrate the {N} Namespace.
 ///				[IMPORT]
 import N from "@n/N.astro";
-import Profile from "@c/Scene/Authentication/Profile"; /// [Profile]
+//import Profile from "@c/Scene/Authentication/Profile"; /// [Profile]
 ///				[DATA]
 const { content } = Astro.props;
 let title = "KBVE Profile";
@@ -12,6 +12,6 @@ let description = "KBVE Profile across the KBVE Platform";
 
 <N ns="theme" title={title} description={description}>
   <div class="px-8 py-24 space-y-8" id="root">
-    <Profile client:only="react" />
+    <!-- <Profile client:only="react" /> -->
   </div>
 </N>

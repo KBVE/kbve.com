@@ -4,7 +4,7 @@
 //*     [IMPORT]
 import DOMPurify from "dompurify";
 
-const Search = ({}) => {
+const Search = ({ _search }) => {
   //!     There might be security issues, so I will only keep this light.
   //*     var clean = DOMPurify.sanitize(dirty, {USE_PROFILES: {html: false, mathMl: false, svg: false}});
 
