@@ -49,7 +49,7 @@ const ReactConch = () => {
 	useEffect(() => {
 		if ($api) {
 			setCSS('grayscale animate-spin');
-			setGPT('...Loading');
+			setGPT('...Slowly rubbing the shell, bringing it closer to climax');
 		} else {
 			setCSS('hover:animate-pulse hover:scale-110 hover:cursor-grab');
 		}

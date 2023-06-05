@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tools/cv.mdx",
+                "file": "journal/06-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tools/cv.mdx",
+                "file": "journal/06-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tools/cv.mdx"
+                "file": "journal/06-04.md"
               }
             }
           }
@@ -167,8 +168,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6a4ebb0c45516e7b",
+  "active": "616f4df5ed8ff2d2",
   "lastOpenFiles": [
+    "journal/06-05.md",
     "journal/06-04.md",
     "tools/cv.mdx",
     "project/galaxia.mdx",
