@@ -11,6 +11,9 @@ import How from "@w/How.astro";
 import Review from "@w/Reviews.astro";
 import SearchBar from "@w/SearchBar.astro";
 import MockCard from "@w/MockCard.astro";
+import IntroductionCard from "@c/Card/IntroductionCard.astro";
+import NewsCard from "@c/Card/NewsCard.astro";
+import NullCard from "@c/Card/NullCard.astro";
 //<!-- *       [Data]
 let title = "KBVE.com - Gaming, Media, FinTech, Coding and Applications";
 let description =
@@ -20,14 +23,17 @@ let description =
 <N ns="theme" title={title} description={description} template={"data"}>
   <SHash client:only="react" />
   <!-- <Splash /><N ns="ads" template="banner" id="ezoic" /> -->
-  <div class="container mx-auto space-y-16 p-4">
-    <SubMenu />
-    <SearchBar />
+  <div class="space-y-4 p-4">
+    <IntroductionCard />
+   
     <MockCard />
-    <WaitList />
-    <How /> <!-- Remove -->
+    <!-- <WaitList />
+    <How />
     <Review />
+    -->
+    <NewsCard />
+    <NullCard><How /></NullCard>
+    <NullCard bg="https://images.unsplash.com/photo-1545423269-690becec20d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1247&q=80"><Review /></NullCard>
+    <NullCard><Features /></NullCard>
   </div>
-  <Features />
-  <N ns="ads" template="footer" id="ezoic" />
 </N>

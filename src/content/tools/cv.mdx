@@ -1,0 +1,106 @@
+---
+layout: ../../layouts/theme/mdx.astro
+title: CV Resume Builder
+category: Tools
+client: Self
+publishDate: 2023-04-12 00:00:00
+img: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?fit=crop&w=1400&h=700&q=75
+description: An open source and simple resume builder!
+tags:
+- tools
+- resume
+- cv
+---
+
+import CV from "@c/Tools/CV/CV.astro"
+
+<CV />
+
+* * *
+
+## Information
+The resume builder application / project will be something that can be built really quick and should have a couple amazing functionalities built into it!
+
+Without going too deep into the scope, I am going to start going through existing online resume builders and see if I can get the general gist of what everyone is looking for. I am thinking that this should not be too complex of a project and we should aim to modularize as much of it as we can.
+
+## Scope
+The project scope will be split into three areas of focus, data, render and print. The data aspect will focus on the storage and information that the CV/Resume will need, the render will be the output and display of the CV and finally the print would be the finished product, i.e print ready, maybe in png, pdf, ect...
+
+### Data
+The data for the resume builder will be stored locally through the local storage, we will most likely use nanostores to manage that for us. According to some of the searching that I have done, the base line of data management seems to be a JSONResume schema, which follows this breakdown.
+
+- `meta` - Metadata for the Resume
+	- `tool` - The current tool that is using the meta data.
+- `basics` - Basic information for the person.
+	- `name` - The name of the person on the resume
+	- `label` - Personal label / title of that person, i.e `Web Developer` , `Full Stack Developer`
+	- `image` - Personal profile of the person, usually a headshot.
+	- `summary` - A general summary for that person, limited to a couple sentences.
+	- `website` - The person's official website.
+	- `email` - The person's email.
+	- `location` - JSON Object
+		- `city` - City where the person lives.
+		- `countryCode` - Nation that the person is from/lives.
+	- profiles - Array of user profiles
+		- `0` - First Index of the array
+			- `username` - Username of the profile
+			- `url` - URL of the profile
+			- `network` - Network for the profile, including Github, Twitter, ect..
+- `education` - An array for the education.
+	- `endDate` - Date for the end
+	- `startDate` - Date for the start
+	- `area` - The area that the person studied.
+	- `studyType` - The type of program, Masters, Degree, Cert. ect..
+	- `institution` - Location of where the program/education was offered. 
+- `references` - An array for the references
+	- `reference` - A small summary for the reference
+	- `name` - Name of the person that is in relationship to the reference
+- `skills` - An array for the skills
+	- `keywords` - An array for the keywords related to this skill
+	- `level` - Level of the skill, i.e Senior, Jr, 
+	- `name` - Name of the skill, Frontend, Backend, Devops
+- `awards` - An array for the rewards
+	- `title` - Title of the award
+	- `date` - The date when the award was given.
+	- `awarder` - The entity that gave the award.
+	- `summary` - The summary of the reward
+- `work` - An array of the companies that you have worked for.
+	- `name` - Name of the company.
+	- `position` - Position held at the company
+	- `url` - URL of the company.
+	- `startDate` - Start date of when you started at the company.
+	- `endDate` - The end date of when you stopped working at the company.
+	- `summary` - The summary of the job.
+- interests - Array
+	- `name` - Name of the interest.
+	- `keywords` - Array of keywords related to that interest.
+- projects - Array
+	- `name` - Name of the project.
+	- `startDate` - Start date of the project.
+	- `endDate` - End date of the project.
+	- `summary` - Summary of the project.
+	- `highlights` - Array of additional information.
+	- `url` - URL of the project 
+
+We can break down each category further, `meta` seems to be for the meta storage data, including theme choice. language and image references. 
+
+### Render
+I am thinking we will do the rendering inside of React and maybe follow the basic markdown concept for the resume. We might not want to let people inject direct HTML to avoid XSS attacks and if any developer really wants to add their own HTML, they could just output the existing resume and then edit it locally near the end.
+
+I suppose within the render concept would be the style library, I am looking at using tailwind because it seems to be straightforward and easy, with almost all the basic css being very user friendly. 
+
+The input of the resume data might be better in markdown? I will come back to this part when I get a bit closer towards the render aspect. In this first run of setting up the resume builder, I am thinking we would use the interweave react library, which safely renders HTML and markdown.
+
+### Print
+The print will definitely be near the end as it might be a bit rough to resolve. I really do not want to mess around with PDF output right now.
+
+---
+
+## Notes
+There were some talks about integrating GPT into the resume building aspect, but I am thinking that should be near the end, once the three core scopes above are addressed, then we can go back to the data scope and start to add GPT functionality. In this situation, we already have several cloud functions that are ready to deploy into a production environment, so we could utilize those when we reach this area.
+
+---
+
+## Developer
+
+The location for the codebase will be under src/module/CV within the KBVE.com repo! We were debating if we wanted to create a whole new repository for the project but it might be a bit too much?
