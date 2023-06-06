@@ -23,6 +23,10 @@ const ReactConch = () => {
 	const $function = useStore(function$);
 	const $api = useStore(api$);
 
+	const [textBox, setTextBox] = useState(true);
+
+	const [question, setQuestion] = useState('');
+
 	const [shellCSS, setCSS] = useState(
 		'hover:animate-pulse hover:scale-110 hover:cursor-grab',
 	);
@@ -36,14 +40,16 @@ const ReactConch = () => {
 
 
     const GetMacro = () => {
+
 		const __gptYes = gpt.toLocaleLowerCase().includes('yes');
 		const __gptNo = gpt.toLocaleLowerCase().includes('no');
 
 		if(__gptYes)
-			playYes();
+			(playYes())
 		
 		else if (__gptNo)
-			playNo();
+			(playNo())
+
         return TypewriterMacro(gpt);
     }
 
@@ -65,6 +71,7 @@ const ReactConch = () => {
                         '","role"',
                     ).replace(/\n/g, '<br />'),
                 )
+				setTextBox(false);
             }
             if($function?.statusCode === 500)
             {
@@ -74,12 +81,10 @@ const ReactConch = () => {
 		}
 	}, [$api, $function]);
 
-	function getRandomInt(max) {
-		return Math.floor(Math.random() * max);
-	}
 
 	async function _ask() {
 		if ($api) return;
+		setQuestion(ref.current.value);
 		const obj = JSON.stringify({
 			question: `${ref.current.value}. Answer this question with a yes or no! No neither!`,
 		});
@@ -132,6 +137,26 @@ const ReactConch = () => {
 		);
 	}
 
+	
+	function _renderButton() {
+		return (
+			<>
+				<div className="flex flex-col items-center w-full space-y-4 mt-4">
+					<div className="flex flex-row justify-center bg-gray-900 p-4 rounded-xl">
+						<span className="text-2xl gradient-text">
+							Ask: {question}
+						</span>
+						<a href="/tools/conch/?new">
+							<button type="button" className="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-gray-100 text-gray-900">Ask Again?
+							<span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 bg-orange-400">Ask</span>
+						</button>
+						</a>
+					</div>
+				</div>
+			</>
+		);
+	}
+
 	function _renderCard() {
 		return (
 			<>
@@ -172,15 +197,7 @@ const ReactConch = () => {
 							<div />
 							<div className="flex flex-col w-full">
 								{gpt && _renderGPT()}
-								<span className="text-3xl font-semibold text-center gradient-text py-2">
-									<textarea
-										ref={ref}
-										rows="3"
-										placeholder="Type your magic message here and click the shell below..."
-										className="p-4 rounded-md resize text-gray-600 w-1/2"
-										spellCheck="false"
-									/>
-								</span>
+								{textBox ? _renderText() : _renderButton()}
 							</div>
 						</div>
 					</div>
