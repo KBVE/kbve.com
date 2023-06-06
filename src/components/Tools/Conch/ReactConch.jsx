@@ -3,22 +3,19 @@ import React, { useEffect, useState, useRef } from 'react';
 import useSound from 'use-sound';
 import { user$, function$, api$, program } from '@lib/appwrite';
 import { useStore } from '@nanostores/react';
-import TypewriterMacro from "@lib/TypewriterMacro";
+import TypewriterMacro from '@lib/TypewriterMacro';
 import InlineText from '@c/Library/Skeleton/InlineText';
 
 function getStringBetween(str, start, end) {
-    try {
-	const result = str.match(new RegExp(`${start}(.*)${end}`));
-	return result[1];
-    }
-    catch (error)
-    {
-        return;
-    }
+	try {
+		const result = str.match(new RegExp(`${start}(.*)${end}`));
+		return result[1];
+	} catch (error) {
+		return;
+	}
 }
 
 const ReactConch = () => {
-
 	const $user = useStore(user$);
 	const $function = useStore(function$);
 	const $api = useStore(api$);
@@ -38,20 +35,15 @@ const ReactConch = () => {
 	const [playYes] = useSound('https://conch.kbve.com/yes.ogg'); // useSound("https://kbve.com/assets/audio/yes.ogg");
 	const [playNo] = useSound('https://conch.kbve.com/no.ogg'); // useSound("https://kbve.com/assets/audio/no.ogg");
 
-
-    const GetMacro = () => {
-
+	const GetMacro = () => {
 		const __gptYes = gpt.toLocaleLowerCase().includes('yes');
 		const __gptNo = gpt.toLocaleLowerCase().includes('no');
 
-		if(__gptYes)
-			(playYes())
-		
-		else if (__gptNo)
-			(playNo())
+		if (__gptYes) playYes();
+		else if (__gptNo) playNo();
 
-        return TypewriterMacro(gpt);
-    }
+		return TypewriterMacro(gpt);
+	};
 
 	useEffect(() => {
 		if ($api) {
@@ -62,25 +54,21 @@ const ReactConch = () => {
 		}
 		if ($function) {
 			console.log('Found Function');
-            if($function.statusCode === 200)
-            {
-                setGPT(
-                    getStringBetween(
-                        $function.response,
-                        '{"content":"',
-                        '","role"',
-                    ).replace(/\n/g, '<br />'),
-                )
+			if ($function.statusCode === 200) {
+				setGPT(
+					getStringBetween(
+						$function.response,
+						'{"content":"',
+						'","role"',
+					).replace(/\n/g, '<br />'),
+				);
 				setTextBox(false);
-            }
-            if($function?.statusCode === 500)
-            {
-                console.log('500 Error');
-            }
-            
+			}
+			if ($function?.statusCode === 500) {
+				console.log('500 Error');
+			}
 		}
 	}, [$api, $function]);
-
 
 	async function _ask() {
 		if ($api) return;
@@ -137,19 +125,22 @@ const ReactConch = () => {
 		);
 	}
 
-	
 	function _renderButton() {
 		return (
 			<>
 				<div className="flex flex-col items-center w-full space-y-4 mt-4">
 					<div className="flex flex-row justify-center bg-gray-900 p-4 rounded-xl">
-						<span className="text-2xl gradient-text">
-							Ask: {question}
-						</span>
+						<span className="text-2xl gradient-text">Ask: {question}</span>
 						<a href="/tools/conch/?new">
-							<button type="button" className="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-gray-100 text-gray-900">Ask Again?
-							<span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 bg-orange-400">Ask</span>
-						</button>
+							<button
+								type="button"
+								className="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-gray-100 text-gray-900"
+							>
+								Ask Again?
+								<span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 bg-orange-400">
+									Ask
+								</span>
+							</button>
 						</a>
 					</div>
 				</div>
@@ -176,9 +167,14 @@ const ReactConch = () => {
 							>
 								Shadow Conch of Darkness
 							</a>
-							<span className="text-xs text-gray-400 flex content-center">
-								v0.1.0 - Welcome {$user?.name || <InlineText />} || UserID:&nbsp;
-								{$user?.$id || <InlineText />}
+							<span className="text-xs flex content-center">
+								v0.2
+							</span>
+							<span className="text-xs flex content-center">
+								Welcome {$user?.name || <InlineText />}
+							</span>
+							<span className="text-xs flex content-center">
+								UserID:&nbsp; {$user?.$id || <InlineText />}
 							</span>
 						</div>
 					</div>
@@ -203,10 +199,10 @@ const ReactConch = () => {
 					</div>
 
 					<div className="bg-offset p-4 m-4 rounded-lg">
-						<h2 className="mb-1 text-xl font-semibold">
+						<h2 className="text-xl font-semibold">
 							Many years ago, in a dark universe within the shadow realm...
 						</h2>
-						<p className="text-sm dark:text-gray-400">
+						<p className="text-sm ">
 							There was a magical but dangerous shell. Shall you use it for
 							personal power? Help society? Or something far more evil.
 						</p>
