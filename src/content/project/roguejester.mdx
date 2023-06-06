@@ -8,40 +8,61 @@ status: true
 img: https://images.unsplash.com/photo-1603994236406-bf7f71dc361e?fit=crop&w=1400&h=700&q=75
 description: Rogue Jester is a Rogue-like FPS that we are building to learn more about Unity.
 tags:
-- unity
-- unity-webgl
-- gaming
-- fps
-- roguejester
+  - unity
+  - unity-webgl
+  - gaming
+  - fps
+  - roguejester
 ---
 
-## RJ Project
+## Information
 
-We are currently testing the Git LFS and the CI/CD for the Steam release. We definitely think the dark and darker style but set in the cyberpunk future is the best way to describe the path the game will take.
+We are currently testing the Git LFS and the CI/CD for the Steam release.
+We definitely think the dark and darker style but set in the cyberpunk future is the best way to describe the path the game will take.
+
+---
 
 ## Ideas
 
-• Get Unity Assets for Robots NPC Bosses etc(low poly)
-• Add more levels to the game
-• Creating Levels (need ideas what kinda of levels and what assets to use)
-• Borderlands is the TO-GO game
-• Improving AI( adding new state machines to the game so enemies are more interesting)
-• Boss Fights
-• Game is in space We use Space SkyBox
-• Leveling Up System(MAX HP increases when player levels up)
-• Talent Tree(TBD)
-• Add MiniMap(UI)
-• Upgrade System(Upgrade Weapons)
-• New Weapons Added
-• New Classes Added(Each class got unique ability)
-• SFX GunShots(NO BGX)
+- Get Unity Assets for Robots NPC Bosses etc `low poly`
+- Add more levels to the game
+- Creating Levels - need ideas what kinda of levels and what assets to use
+- Borderlands is the TO-GO game
+- Improving AI - adding new state machines to the game so enemies are more interesting
+- Boss Fights
+- Game is in space We use Space SkyBox
+- Leveling Up System - MAX HP increases when player levels up
+- Talent Tree - TBD
+- Add MiniMap - UI
+- Upgrade System - Upgrade Weapons
+- New Weapons Added
+- New Classes Added - Each class got unique ability
+- SFX GunShots - `NO BGX`
 
+---
 
 ## Errors
 
 Current errors for Rogue Jester that we need to resolve:
 
-Error 1:
+### Build Error
+
+These are the active build errors for the RJ application or CI/CD for the project.
+
+#### Build Error 1:
+
+```
+
+[error] Error: unrecognized project! Please check your app configuration - if this is a Unity application, We expect your "Project Subdirectory" to be set to the path which directly contains the ProjectSettings and Assets directories. For a native app, this should be set to the path which directly contains the project file (.xcodeproj, project.properties, etc).
+
+```
+
+
+### Application Error
+
+Application Error 1:
+
+```
 
 Error: Only Capsule and Sphere Colliders are supported by the Lean ability.
 UnityEngine.Debug:LogError (object)
@@ -50,8 +71,12 @@ Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:Initial
 Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:AwakeInternal () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:301)
 Opsive.UltimateCharacterController.Character.CharacterLocomotion:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/CharacterLocomotion.cs:310)
 
+```
+
 
 Error 2:
+
+```
 
 Error: Only Capsule and Sphere Colliders are supported by the Item Pullback ability.
 UnityEngine.Debug:LogError (object)
@@ -60,13 +85,21 @@ Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:Initial
 Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:AwakeInternal () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:302)
 Opsive.UltimateCharacterController.Character.CharacterLocomotion:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/CharacterLocomotion.cs:310)
 
+```
+
 Error 3:
+
+```
 
 UnassignedReferenceException: The variable m_AvailableModels of ModelManager has not been assigned.
 You probably need to assign the m_AvailableModels variable of the ModelManager script in the inspector.
 Opsive.UltimateCharacterController.Character.ModelManager.Start () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/ModelManager.cs:62)
 
+```
+
 Error 4:
+
+```
 
 NullReferenceException: Object reference not set to an instance of an object
 Opsive.UltimateInventorySystem.UI.Currency.MultiCurrencyView.DrawCurrency (Opsive.UltimateInventorySystem.Exchange.CurrencyCollection currencyCollection) (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Currency/MultiCurrencyView.cs:62)
@@ -74,6 +107,29 @@ Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.CurrencyUpdate (
 Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.Initialize () (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:63)
 Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.Start () (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:38)
 
+```
+
+### Closed
+
+The issues and errors that have been closed.
+
+#### Unity Cloud Error 1
+
+`Unity Cloud Error 1` was the failure of the Unity DevOps / Build tools to automatically detect the current version of Unity that our project sent.
+
+```
+Something went wrong when submitting your build(s)
+Could not auto Default Windows desktop 64-bit detect unity version. Failed to parse Unity Version from ProjectSettings/ProjectVersion.txt. Reason: The specified revision was not found serverpath:/ProjectSettings/ProjectVersion.txt#br:main@roguejester@KBVE@cloud
+
+```
+
+
+
+---
+
+## Integration
+
+Services and concepts that we would like to integrate `RJ` with.
 
 ### Steam
 
@@ -81,46 +137,44 @@ These are the official Steam Tasks
 
 - [ ] Library Capsule
 
+Library Capsule \*600px wide x 900px tall
 
-Library Capsule *600px wide x 900px tall
 - `Design`: This should be graphically-centric and give the user some sense of the experience. Please use the key art that is being used for any retail boxes or marketing as well as the name of your game, ideally using the same logo / title as printed on any retail or marketing. Do not include quotes, marketing copy, or other strings of text beyond the title of your application. The art should depict something important about your product. The logo should be easily legible against the background.
 - `Usage`: This image is primarily used in the library overview and collection views
 - `Sizes`: 600px x 900px (an additional half-size 300px x 450px PNG will be auto-generated from larger file)
 
-
 - [ ] Library Hero
 
-
-Library Hero *3840px wide x 1240px tall
+Library Hero \*3840px wide x 1240px tall
 The hero graphic and logo are layered and move independently when the page is scrolled, creating a subtle parallax effect. Consider how the product logo will be placed on top of the hero image (left bottom corner or centered). You'll want to ensure the logo is both visible and legible against the background.
+
 - `Design`:
-This should be a visually rich image that is easily recognizable. For best results, please use the key art that is used for any retail boxes or marketing. Do not include quotes or other strings of text.
+  This should be a visually rich image that is easily recognizable. For best results, please use the key art that is used for any retail boxes or marketing. Do not include quotes or other strings of text.
 
 At the center of the template is a "safe area" of 860px x 380px. This area will remain uncropped across scaling and resizing of the Steam client window. Artwork should extend across the entire template, but critical content should be within the safe area. For ex: a main character's face should be entirely in the safe area or risk being cropped.
+
 - `Usage`:
-Appears at the top of a user's library details page for this product.
+  Appears at the top of a user's library details page for this product.
 
 - `Sizes`:
-3840px x 1240px (an additional half-size 1920px x 620px PNG will be auto-generated from larger file)
-
+  3840px x 1240px (an additional half-size 1920px x 620px PNG will be auto-generated from larger file)
 
 - [ ] Library Logo
 
-
-Library Logo *1280px wide x 720px tall
+Library Logo \*1280px wide x 720px tall
 
 After upload, you can use the preview tool to select the logo's position. Options include: left bottom corner, centered top, centered middle, and centered bottom.
 
 Note: If a hero graphic and logo are not uploaded, the hero area will display a screenshot from the store, with the application name in text overlaid in the bottom left corner.
+
 - `Design`:
-For best results, use the logo that is being used for any retail boxes or marketing. You’ll want to ensure the logo is both visible and legible against the hero graphic background, sometimes a drop shadow can help. The PNG image should have a transparent background.
+  For best results, use the logo that is being used for any retail boxes or marketing. You’ll want to ensure the logo is both visible and legible against the hero graphic background, sometimes a drop shadow can help. The PNG image should have a transparent background.
 
 - `Usage`:
-Appears at the top of a user's library details page for this product, placed on top of the hero graphic.
+  Appears at the top of a user's library details page for this product, placed on top of the hero graphic.
 
 - `Sizes`:
-1280px x 720px (an additional half-size 640 x 360px PNG will be auto-generated from larger file) Ensure that the logo extends the full width of the PNG, without extra padding.
-
+  1280px x 720px (an additional half-size 640 x 360px PNG will be auto-generated from larger file) Ensure that the logo extends the full width of the PNG, without extra padding.
 
 - [ ] Placement Tool
 
@@ -138,7 +192,6 @@ Once you have determined your logo position, use the blue logo box to size your 
 Typically you can take the top edge and leave it higher than the bounds of the logo. Play around with it and try scaling your window to get a sense for how your logo will adjust as the window scale changes.
 
 Once you are happy with your logo position, proportion, and scale, hit the save button to commit your changes.
-
 
 ### TODO
 
@@ -185,34 +238,37 @@ Once you are happy with your logo position, proportion, and scale, hit the save 
 ### Theme Song
 
 - [Original Ticket for the Theme Song Idea](https://github.com/KBVE/kbve.com/issues/43)
+
 The game will have one exclusive theme song, which we will refer to as `Going to Work`
 
 Describe the music topic
 Music Theory: "Going to work"
 
 00:00 : 00:30 - Intro Lofi Punk
-00:29 - 01:00 - Verse1 from @PeacefulFire
+00:29 - 01:00 - Verse1 from PeacefulFire
 01:00 - 01:25 - Longer Chorus Phuck Work
-01:15 - 01:30 - Verse2 from @PeacefulFire
+01:15 - 01:30 - Verse2 from PeacefulFire
 
 Sample [1](https://www.youtube.com/watch?v=Wqb39YhgTgs)
 
-@PeacefulFire
-```yaml
+PeacefulFire
+
+```
 #I'm here for the company
 #Not here for the capital
 #Been agitate lately
 #Actually Anti-affable, maybe
+
 ```
 
+---
 
 ### Journal
 
 - Collective thoughts, concepts and ideas for the RogueJester FPS.
-- Ideas How to Convert 1.  System.Text.Json namespace to convert C# objects to JSON and vice-versa.
+- Ideas How to Convert 1. System.Text.Json namespace to convert C# objects to JSON and vice-versa.
 - Explained in this [link](https://www.tutorialsteacher.com/articles/convert-object-to-json-in-csharp#:~:text=The.NET%205%20framework%20provides%20the%20built-in%20JsonSerializer%20class,built-in%20JsonSerializer%20class%20that%20converts%20objects%20to%20JSON)
-- Thus, convert the JSON string to class object in C# using the JsonSerializer.Deserialize () method.
-
+- Thus, convert the JSON string to class object in C# using the `JsonSerializer.Deserialize () method`.
 
 ## Steamworks
 
@@ -222,7 +278,7 @@ From SteamWorks Github IO [Install](https://steamworks.github.io/installation/#u
 
 They stated three options, A, B and C. I think we should go with Option A?
 
-Option A: .unitypackage
+Option A: `.unitypackage`
 Download the .unitypackage from the Releases page on GitHub.
 Import everything into your project
 [Release](https://github.com/rlabrecque/Steamworks.NET/releases)
@@ -253,7 +309,7 @@ public class GlobalValue : MonoBehaviour
         get { return PlayerPrefs.GetInt("PickPlayerID", 0); }
         set { PlayerPrefs.SetInt("PickPlayerID", value); }
     }
-    
+
     public static int SavedCoins
     {
         get { return PlayerPrefs.GetInt("Coins", 0); }
@@ -353,13 +409,13 @@ GlobalValue.PlayerJWT.set("JWTHere?");
 
 ```
 
-Now I am thinking it might be ` //2 ` based upon what the other references to GlobalValue, so I suppose we could try.
+Now I am thinking it might be `//2` based upon what the other references to GlobalValue, so I suppose we could try.
 
-I will also change the `PlayerName` 
+I will also change the `PlayerName`
 
 function to PlayerUsername , to keep within the naming flow.
 
-Also do we need to call PlayerPrefs.Save(); 
+Also do we need to call PlayerPrefs.Save();
 
 ? Does GlobalValue already do that?
 
@@ -410,7 +466,6 @@ Silver comes in clutch and finds out that there was a `duplicate on GameManager 
 
 We should make it so that the Unity pulls this information and displays it onto the Menu -> Patch.
 
-
 ### Scene
 
 0. LoginMenu
@@ -420,7 +475,6 @@ We should make it so that the Unity pulls this information and displays it onto 
 4. MainScene
 5. SecondaryScene
 6. LevelSelection
-
 
 ### Assets
 
@@ -434,7 +488,7 @@ We should make it so that the Unity pulls this information and displays it onto 
 
 #### Search
 
-- Quick [Search](https://assetstore.unity.com/?category=3d%2Fcharacters%2Frobots&free=true&orderBy=1) on the Unity Assets page for FREE* 3D Characters -> Robots
+- Quick [Search](https://assetstore.unity.com/?category=3d%2Fcharacters%2Frobots&free=true&orderBy=1) on the Unity Assets page for FREE\* 3D Characters -> Robots
 
 #### 3D Robot Solider
 

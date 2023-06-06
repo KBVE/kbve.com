@@ -69,13 +69,16 @@ export const updateResumeSingleton = async ( mapKey: string, mapValue: string) =
         }
         catch (error)
         {
-            
+            //! -> Send Error to the Error Atom ()
         }
     });
 }
 
 export const updateResumeMap = async ( mapJSON ) => {
     task(async() => {
+
+        //? Parse through Form Map Submission
+        //?     -> Run Task Singleton on each variable to set the key/value.
 
     });
 }
