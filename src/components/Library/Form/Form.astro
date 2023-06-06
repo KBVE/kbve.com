@@ -1,0 +1,5 @@
+---
+const { data, className } = Astro.props;
+import LoginForm from "@c/Library/Form/LoginForm.jsx";
+---
+{(className == 'login') && <LoginForm/>}
