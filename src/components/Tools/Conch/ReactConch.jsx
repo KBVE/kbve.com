@@ -4,6 +4,7 @@ import useSound from 'use-sound';
 import { user$, function$, api$, program } from '@lib/appwrite';
 import { useStore } from '@nanostores/react';
 import TypewriterMacro from "@lib/TypewriterMacro";
+import InlineText from '@c/Library/Skeleton/InlineText';
 
 function getStringBetween(str, start, end) {
     try {
@@ -150,9 +151,9 @@ const ReactConch = () => {
 							>
 								Shadow Conch of Darkness
 							</a>
-							<span className="text-xs text-gray-400">
-								v0.1.0 - Welcome {$user?.name || 'Guest'} || UserID:{' '}
-								{$user?.$id || '0'}{' '}
+							<span className="text-xs text-gray-400 flex content-center">
+								v0.1.0 - Welcome {$user?.name || <InlineText />} || UserID:&nbsp;
+								{$user?.$id || <InlineText />}
 							</span>
 						</div>
 					</div>
