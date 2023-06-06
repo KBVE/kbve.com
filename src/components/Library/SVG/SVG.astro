@@ -1,0 +1,9 @@
+---
+import ReactSVG from './ReactIconSVG.jsx'
+//?     SVG Library
+const { 
+    data = 'react',
+    name, } = Astro.props
+---
+
+{(data == "react") && <ReactSVG client:only="react" name={name} />}
