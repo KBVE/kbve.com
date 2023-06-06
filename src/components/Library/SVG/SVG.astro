@@ -1,0 +1,8 @@
+---
+//?     SVG Library
+const { 
+    data = 'react',
+    name, } = Astro.props
+---
+
+{(data == "react") && <reactSVG client:only="react" name={name} />}
