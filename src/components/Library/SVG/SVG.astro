@@ -1,8 +1,9 @@
 ---
+import ReactSVG from './ReactSVG'
 //?     SVG Library
 const { 
     data = 'react',
     name, } = Astro.props
 ---
 
-{(data == "react") && <reactSVG client:only="react" name={name} />}
+{(data == "react") && <ReactSVG client:only="react" name={name} />}

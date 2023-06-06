@@ -1,9 +1,12 @@
 import React from 'react';
+import * as Icons from 'react-icons/md'
 
-const reactSVG = ({name}) => {
+const ReactSVG = ({name}) => {
 
-    return name;
+    const Icon = Icons[name] ? Icons[name] : Icons.MdError;
+
+    return <Icon />;
 
 }
 
-export default reactSVG;
+export default ReactSVG;

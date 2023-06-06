@@ -4,6 +4,7 @@ import Disable from '@w/Disable.astro'; // Disable Astro
 import LaunchApp from '@w/LaunchApp.astro';
 import Socials from '@w/Socials.astro';
 import { Icon } from 'astro-icon';
+import SVG from '@c/Library/SVG/SVG.astro';
 ---
 
 <aside class="self-start sticky top-0 md:basis-1/6 p-4 hidden md:block">
@@ -75,10 +76,11 @@ import { Icon } from 'astro-icon';
 						href="/application"
 						class="flex items-center p-2 space-x-3 rounded-md"
 					>
-						<Icon
+            <SVG name="MdOutlineDesktopWindows" />
+						<!-- <Icon
 							class="w-5 h-5 fill-current text-gray-400"
 							name="mdi:desktop-classic"
-						/>
+						/> -->
 						<span>Applications</span>
 					</a>
 				</li>
