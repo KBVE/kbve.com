@@ -1,63 +1,72 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import { login } from "@lib/appwrite.ts";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { login } from '@lib/appwrite.ts';
 
 const LoginForm = () => {
-  const { register, errors, handleSubmit } = useForm();
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
 
-  const onSubmit = async (data) => {
+	const onSubmit = async (data) => {
+    let _response = '';
+    try
+      {
+        await login(data.email, data.password)
+      }
+      catch (error)
+      {
+        _response = error;
+      }
+		console.log(_response);
+	};
+
+	/* const onSubmit = async (data) => {
     const fields = { fields: data };
     //login(fields?.email, fields?.password);
   };
+  */
 
-  return (
-    <>
-      <h1 className="text-center text-4xl font-semibold mt-10">Register to KBVE</h1>
-      <form
-        className="max-w-xl m-auto py-10 mt-10 px-12 border"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <label className="text-gray-600 font-medium">Email</label>
-        <input
-          className="border-solid border-gray-300 border py-2 px-4 w-full rounded text-gray-700"
-          name="email"
-          placeholder="your@email.com"
-          ref={register({
-            required: "Please enter an email",
-          })}
-          id="email"
-        />
-        {errors.email && (
-          <div className="mb-3 text-normal text-red-500">
-            {errors.email.message}
-          </div>
-        )}
+	return (
+		<>
+			<form
+				className="max-w-xl m-auto py-10 mt-10 px-12 border"
+				onSubmit={handleSubmit(onSubmit)}
+			>
+				<label className="text-gray-600 font-medium">Email</label>
+				<input
+					className="border-solid text-gray-700 border-gray-300 border py-2 px-4 w-full rounded"
+					type="email"
+					{...register('email', { required: true })}
+				/>
+				{errors.email && <span>This field is required</span>}
 
-        <label className="text-gray-600 font-medium block mt-4">Password</label>
-        <input
-          className="border-solid border-gray-300 border py-2 px-4 w-full rounded text-gray-700"
-          name="password"
-          type="password"
-          id="password"
-          placeholder=""
-          ref={register({
-            required: "Please enter a password",
-          })}
-        />
-        {errors.password && (
+				<label className="text-gray-600 font-medium block mt-4">Password</label>
+				<input
+					className="border-solid text-gray-700 border-gray-300 border py-2 px-4 w-full rounded"
+					name="password"
+					type="password"
+					placeholder=""
+					{...register('password', {
+						required: "Please add a password",
+					})}
+				/>
+				{errors.password && (
           <div className="mb-3 text-normal text-red-500 ">
             {errors.password.message}
           </div>
         )}
-        <button
-          className="mt-4 w-full bg-green-400 hover:bg-green-600 text-green-100 border py-3 px-6 font-semibold text-md rounded"
-          type="submit"
-        >
-          Login
+			
+				<button
+					className="mt-4 w-full bg-gradient-to-br from-indigo-500 via-fuchsia-400 to-orange-500 items-center rounded-xl shadow-2xl cursor-pointer  overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out border py-3 px-6 font-semibold text-md"
+					type="submit"
+				>
+        Login
         </button>
-      </form>
-    </>
-  );
+			</form>
+		</>
+	);
 };
 
 export default LoginForm;
