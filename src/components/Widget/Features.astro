@@ -1,43 +1,43 @@
 ---
 import ContentSection from "@w/ContentSection.astro";
-import { Icon } from "astro-icon";
+import SVG from "@c/Library/SVG/SVG.astro";
 
 const features = [
   {
     title: "Bring Your Own Mind",
     description:
       "Always willing to accept help.",
-    icon: "mdi:handshake",
+    icon: "mdiHandshake",
   },
   {
     title: "Clean up and Optimization",
     description:
       "Needs some bloat to be cut / reduced",
-    icon: "mdi:feather",
+    icon: "mdiFeather",
   },
   {
     title: "Components Missing",
     description:
       "More need to be added.",
-    icon: "mdi:directions-fork",
+    icon: "mdiDirectionsFork",
   },
   {
     title: "Integrations",
     description:
       "Public / Private Integrations are TO:DO",
-    icon: "mdi:graph",
+    icon: "mdiGraph",
   },
   {
     title: "Test Case",
     description:
       "Search is TO:DO",
-    icon: "mdi:search-web",
+    icon: "mdiSearchWeb",
   },
   {
     title: "Community",
     description:
       "KBVE Community! Join us now!",
-    icon: "mdi:account-group",
+    icon: "mdiAccountGroup",
   },
 ];
 ---
@@ -52,8 +52,8 @@ const features = [
     {
       features.map(({ title, description, icon }) => (
         <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
-          <div class="w-16 h-16 p-3 border-2 border-current rounded-full">
-            <Icon name={icon} />
+          <div class="p-2 border-2 border-current rounded-full">
+            <SVG name={icon} />
           </div>
           <p class="text-xl font-extrabold text-center">{title}</p>
           <p class="text-sm text-center text-offset">{description}</p>

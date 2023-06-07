@@ -3,7 +3,7 @@
 //!       [ERROR]: There might be null errors with the current configuration of <Modal> components.
 //!       [TO:DO]: Structure in the <N> : Namespace.
 ///       [IMPORTS]
-import { Icon } from "astro-icon";
+import SVG from "@c/Library/SVG/SVG.astro";
 import ThemeSwitcher from "@n/Theme/ThemeSwitch.astro"; // Migrating this into the Nav Bar
 import KBVEL from "@c/Branding/KBVEL";
 import KBVELogo from "@c/Branding/KBVELogo";
@@ -46,7 +46,7 @@ const navItems = [
         class="btn sm:hidden"
         aria-label="Navigation"
       >
-        <Icon name="mdi:menu" class="h-8" />
+        <SVG name="mdiMenu" className="h-8"/>
       </button>
       <ThemeSwitcher />
     </div>
@@ -61,7 +61,7 @@ const navItems = [
               class="btn"
               aria-label="Close navigation"
             >
-              <Icon pack="mdi" name="close" class="h-8" />
+            <SVG name="mdiClose" className="h-8"/>
             </button>
           </header>
           <div class="flex justify-center">
