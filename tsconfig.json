@@ -33,6 +33,7 @@
         //"@h/*": ["src/components/Library/React/Hooks/*"],
         //? Full Path
         //"@hooks": ["src/components/Library/React/Hooks/*"],
+        "@theme/*": ["src/layout/theme/*"],
         "@card/*": ["src/components/Card/*"],
         "@mdx/*": ["src/components/Library/MDX/*"],
         "@lib/*": ["src/components/Library/*"],
