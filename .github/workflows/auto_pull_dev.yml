@@ -13,9 +13,9 @@ jobs:
       - name: auto-deploy
         uses: diillson/auto-pull-request@v1.0.1
         with:
-          destination_branch: "alpha"                      # If blank, default: master
-          pr_title: "Pulling ${{ github.ref }} into master" # Title of pull request
-          pr_body: |                                    # Full markdown support, requires pr_title to be set
+          destination_branch: "alpha"                       # If blank, default: master
+          pr_title: "Pulling ${{ github.ref }} into alpha"  # Title of pull request
+          pr_body: |                                        # Full markdown support, requires pr_title to be set
             :crown: *An automated PR*
             This is a test case
           pr_label: "auto-pr"
