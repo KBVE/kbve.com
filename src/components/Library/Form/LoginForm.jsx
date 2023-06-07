@@ -22,11 +22,6 @@ const LoginForm = () => {
 		console.log(_response);
 	};
 
-	/* const onSubmit = async (data) => {
-    const fields = { fields: data };
-    //login(fields?.email, fields?.password);
-  };
-  */
 
 	return (
 		<>
