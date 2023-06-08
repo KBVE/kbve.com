@@ -1363,9 +1363,9 @@ declare module 'astro:content' {
 	type DataEntryMap = {
 		"_bin": {
 };
-"compose": {
+"config": {
 };
-"vip": {
+"location": {
 };
 
 	};
