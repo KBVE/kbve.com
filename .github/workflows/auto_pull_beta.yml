@@ -1,3 +1,5 @@
+name: KBVE Auto Beta <-> Main Pull Request
+
 on:
     push:
       branches:
@@ -13,9 +15,14 @@ jobs:
         - name: auto-deploy
           uses: diillson/auto-pull-request@v1.0.1
           with:
-              destination_branch: "main"                       # If blank, default: master
-              pr_title: "Pulling ${{ github.ref }} into Main"  # Title of pull request
-              pr_body: |                                        # Full markdown support, requires pr_title to be set
+              destination_branch: "main"                      
+              pr_title: "Pulling ${{ github.ref }} into Main" 
+              pr_body: |                                       
                 :crown: *An automated PR*
-                Automatic Main Pull
+                Automatic Pull for final stage!
+                - - -
+                  For Webmaster information please visit our [Webmaster Tools](https://kbve.com/tools/webmaster/)
+                - - -
+                  Reviewer added: h0lybyte
               pr_label: "auto-pr"
+              pr_reviewer: "h0lybyte"
