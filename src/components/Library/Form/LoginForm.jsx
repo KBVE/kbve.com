@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { login } from '@lib/appwrite.ts';
 
-const LoginForm = () => {
+const LoginForm = ({ data }) => {
 	const {
 		register,
 		handleSubmit,
@@ -10,18 +10,14 @@ const LoginForm = () => {
 	} = useForm();
 
 	const onSubmit = async (data) => {
-    let _response = '';
-    try
-      {
-        await login(data.email, data.password)
-      }
-      catch (error)
-      {
-        _response = error;
-      }
+		let _response = '';
+		try {
+			await login(data.email, data.password);
+		} catch (error) {
+			_response = error;
+		}
 		console.log(_response);
 	};
-
 
 	return (
 		<>
@@ -44,21 +40,21 @@ const LoginForm = () => {
 					type="password"
 					placeholder=""
 					{...register('password', {
-						required: "Please add a password",
+						required: 'Please add a password',
 					})}
 				/>
 				{errors.password && (
-          <div className="mb-3 text-normal text-red-500 ">
-            {errors.password.message}
-          </div>
-        )}
-			
+					<div className="mb-3 text-normal text-red-500 ">
+						{errors.password.message}
+					</div>
+				)}
+
 				<button
 					className="mt-4 w-full bg-gradient-to-br from-indigo-500 via-fuchsia-400 to-orange-500 items-center rounded-xl shadow-2xl cursor-pointer  overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out border py-3 px-6 font-semibold text-md"
 					type="submit"
 				>
-        Login
-        </button>
+					Login
+				</button>
 			</form>
 		</>
 	);
