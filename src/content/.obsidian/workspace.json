@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/06-07.md",
+                "file": "journal/06-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/06-07.md",
+                "file": "journal/06-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/06-07.md",
+                "file": "journal/06-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/06-07.md"
+                "file": "journal/06-08.md"
               }
             }
           }
@@ -182,10 +182,11 @@
   },
   "active": "e5ddacef612a3415",
   "lastOpenFiles": [
-    "journal/06-07.md",
-    "journal/06-04.md",
     "journal/06-06.md",
+    "journal/06-07.md",
+    "journal/06-08.md",
     "journal/06-05.md",
+    "journal/06-04.md",
     "tools/cv.mdx",
     "project/galaxia.mdx",
     "project/cv.mdx",
@@ -215,7 +216,6 @@
     "journal/05-18.md",
     "journal/05-17.md",
     "journal/05-16.md",
-    "journal/05-15.md",
     "project/roguejester.mdx",
     "project/search-engine.mdx"
   ]
