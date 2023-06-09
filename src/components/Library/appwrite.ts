@@ -96,7 +96,7 @@ isLoggedIn.subscribe(async (session) => {
 	}
 });
 
-export const OAuth = async ({ __provider }) => {
+export const OAuth = async ( __provider: string ) => {
 	try {
 		return appwriteAccount.createOAuth2Session(
 			__provider,
