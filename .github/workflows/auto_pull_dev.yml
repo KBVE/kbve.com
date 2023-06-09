@@ -1,3 +1,5 @@
+name: KBVE Auto Dev <-> Alpha Pull Request
+
 on:
   push:
     branches:
@@ -17,5 +19,13 @@ jobs:
           pr_title: "Pulling ${{ github.ref }} into alpha"  # Title of pull request
           pr_body: |                                        # Full markdown support, requires pr_title to be set
             :crown: *An automated PR*
-            This is a test case
+            Pulling Dev branches into Alpha
+             - - -
+              For Support, please visit [KBVE Support](https://kbve.com/support/)
+             - - -
+              For Git References, please visit [KBVE Git Application Reference](https://kbve.com/application/git/)
+             - - -
+              For Project Information, please visit [KBVE Projects Information](https://kbve.com/project/)
+             - - -
+              Thank you for your contribution!
           pr_label: "auto-pr"
