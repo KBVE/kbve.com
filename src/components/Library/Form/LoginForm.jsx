@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { login, OAuth } from '@lib/appwrite.ts';
+import { login, github } from '@lib/appwrite.ts';
 
 const LoginForm = ({ data }) => {
 	const {
@@ -72,7 +72,10 @@ const LoginForm = ({ data }) => {
 					Login
 				</button>
 
-				<button aria-label="Log in with GitHub" className="p-3 rounded-sm p-8 m-4" type="button" onClick={OAuth('github')}> Login with Github
+				
+			</form>
+
+			<button aria-label="Log in with GitHub" className="p-3 rounded-sm p-8 m-4" type="button" onClick={github}> Login with Github
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32 32"
@@ -83,7 +86,6 @@ const LoginForm = ({ data }) => {
                   ></path>
                 </svg>
               </button>
-			</form>
 		</>
 	);
 };

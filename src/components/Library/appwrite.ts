@@ -96,10 +96,10 @@ isLoggedIn.subscribe(async (session) => {
 	}
 });
 
-export const OAuth = async ({ __provider }) => {
+export const github = async () => {
 	try {
 		return appwriteAccount.createOAuth2Session(
-			__provider,
+			"github",
 			"https://kbve.com/account/",
 			"https://kbve.com/account/login/?failure",
 		);
