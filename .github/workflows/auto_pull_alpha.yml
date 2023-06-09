@@ -1,3 +1,5 @@
+name: KBVE Auto Alpha <-> Beta Pull Request
+
 on:
   push:
     branches:
@@ -13,9 +15,14 @@ jobs:
       - name: auto-deploy
         uses: diillson/auto-pull-request@v1.0.1
         with:
-            destination_branch: "beta"                       # If blank, default: master
-            pr_title: "Pulling ${{ github.ref }} into beta"  # Title of pull request
-            pr_body: |                                        # Full markdown support, requires pr_title to be set
+            destination_branch: "beta"                       
+            pr_title: "Pulling ${{ github.ref }} into beta"  
+            pr_body: |                                      
               :crown: *An automated PR*
-              Automatic Beta Pull
+              Migrating from `alpha` stage to `beta` stage.
+              - - -
+                This stage is for security checks and general production prep.
+              - - -
+                For Security , please visit our [Security Reference Page](https://kbve.com/security/)
+              - - -
             pr_label: "auto-pr"
