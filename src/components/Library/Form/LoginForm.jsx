@@ -19,21 +19,36 @@ const LoginForm = ({ data }) => {
 		console.log(_response);
 	};
 
+	const ErrorMessage = (__message) => {
+		return (
+			<>
+				<div role="alert space-y-4 p-4">
+					<div class="bg-red-500 font-bold rounded-t px-4 py-2">
+						Warning!
+					</div>
+					<div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+						<p>{__message}</p>
+					</div>
+					</div>
+			</>
+		);
+	};
+
 	return (
 		<>
 			<form
 				className="max-w-xl m-auto py-10 mt-10 px-12 border"
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<label className="text-gray-600 font-medium">Email</label>
+				<label className="font-medium block mt-4">Email</label>
 				<input
 					className="border-solid text-gray-700 border-gray-300 border py-2 px-4 w-full rounded"
 					type="email"
-					{...register('email', { required: true })}
+					{...register('email', { required: 'Please add your email' })}
 				/>
-				{errors.email && <span>This field is required</span>}
+				{errors.email && ErrorMessage(errors.email.message)}
 
-				<label className="text-gray-600 font-medium block mt-4">Password</label>
+				<label className="font-medium block mt-4">Password</label>
 				<input
 					className="border-solid text-gray-700 border-gray-300 border py-2 px-4 w-full rounded"
 					name="password"
@@ -43,11 +58,7 @@ const LoginForm = ({ data }) => {
 						required: 'Please add a password',
 					})}
 				/>
-				{errors.password && (
-					<div className="mb-3 text-normal text-red-500 ">
-						{errors.password.message}
-					</div>
-				)}
+				{errors.password && ErrorMessage(errors.password.message)}
 
 				<button
 					className="mt-4 w-full bg-gradient-to-br from-indigo-500 via-fuchsia-400 to-orange-500 items-center rounded-xl shadow-2xl cursor-pointer  overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out border py-3 px-6 font-semibold text-md"

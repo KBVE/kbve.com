@@ -25,7 +25,7 @@ jobs:
              - - -
               For Git References, please visit [KBVE Git Application Reference](https://kbve.com/application/git/)
              - - -
-              For Project Information, please visit [KBVE Projects Information](https://kbve.com/projects/)
+              For Project Information, please visit [KBVE Projects Information](https://kbve.com/project/)
              - - -
               Thank you for your contribution!
           pr_label: "auto-pr"

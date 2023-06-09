@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6a4ebb0c45516e7b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "tools/cv.mdx",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "616f4df5ed8ff2d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "journal/06-06.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e5ddacef612a3415",
             "type": "leaf",
             "state": {
@@ -43,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,7 +155,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e5ddacef612a3415",
+  "active": "3afb4e43388f73a5",
   "lastOpenFiles": [
     "journal/06-06.md",
     "journal/06-07.md",
