@@ -902,6 +902,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: any
 } & { render(): Render[".md"] };
+"06-09.md": {
+	id: "06-09.md";
+  slug: "06-09";
+  body: string;
+  collection: "journal";
+  data: any
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1375,11 +1382,13 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"_bin": {
+		".obsidian": {
 };
-"compose": {
+"_bin": {
 };
-"vip": {
+"config": {
+};
+"location": {
 };
 
 	};
