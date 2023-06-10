@@ -96,17 +96,65 @@ isLoggedIn.subscribe(async (session) => {
 	}
 });
 
+
+// ? Github
+
 export const github = async () => {
 	try {
 		return appwriteAccount.createOAuth2Session(
 			"github",
 			"https://kbve.com/account/",
 			"https://kbve.com/account/login/?failure",
-		);
+		)
 	} catch (error) {
-		throw error;
+		return error;
 	}
 }
+
+// ? Discord
+
+export const discord = async () => {
+	try {
+		return appwriteAccount.createOAuth2Session(
+			"discord",
+			"https://kbve.com/account/",
+			"https://kbve.com/account/login/?failure",
+		)
+	} catch (error) {
+		return error;
+	}
+}
+
+// ? Google
+
+export const google = async () => {
+	try {
+		return appwriteAccount.createOAuth2Session(
+			"google",
+			"https://kbve.com/account/",
+			"https://kbve.com/account/login/?failure",
+		)
+	} catch (error) {
+		return error;
+	}
+}
+
+
+// ? Twitch
+
+export const twitch = async () => {
+	try {
+		return appwriteAccount.createOAuth2Session(
+			"discord",
+			"https://kbve.com/account/",
+			"https://kbve.com/account/login/?failure",
+		)
+	} catch (error) {
+		return error;
+	}
+}
+
+
 
 export const login = async (email: string, password: string) => {
 	try {
