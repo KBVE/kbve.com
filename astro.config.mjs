@@ -28,7 +28,11 @@ import partytown from "@astrojs/partytown";
 //* Define Config of AstroJS
 import image from "@astrojs/image";
 
+//*   [Svelte]:[AstroJS]
 import svelte from "@astrojs/svelte";
+
+//!   [Million.js]
+import million from "million/compiler";
 
 // https://astro.build/config
 export default defineConfig({
@@ -62,6 +66,7 @@ export default defineConfig({
   //  Vite
   //? Currently there are no custom Vite->SSR
   vite: {
+    plugins: [million.vite({ mode: 'react', optimize: true, server: true })],
     ssr: {
       //external: ["@11ty/eleventy-img", "svgo"],
       //external: ["@11ty/eleventy-img"]
