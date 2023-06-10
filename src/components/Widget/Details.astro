@@ -5,11 +5,11 @@
 //<!--*         [IMPORT]
 //<!--?         Nothing to import for now
 //<!--*         [DATA]
-const {data, tail = "flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700" } = Astro.props;
+const {data, tail = "flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700", title } = Astro.props;
 ---
 <div class={tail}>
     <details>
-        <summary class="py-2 outline-none cursor-pointer focus:underline text-primary">{data}</summary>
+        <summary class="py-2 outline-none cursor-pointer focus:underline text-primary">{data || title}</summary>
         <div class="px-4 pb-4">
             <p><slot /></p>
         </div>
