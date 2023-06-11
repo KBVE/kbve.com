@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { login, github, discord, google, twitch } from '@lib/appwrite.ts';
+import { login, OAuth2} from '@lib/appwrite.ts';
 import * as Icons from '@mdi/js';
 
 const LoginForm = ({ data }) => {
@@ -11,6 +11,14 @@ const LoginForm = ({ data }) => {
 	} = useForm();
 
 	const [loginError, setLoginError] = React.useState();
+
+	const Auth = (provider) => {
+		try {
+			return OAuth2(provider);
+		} catch (error) {
+			return error;
+		}
+	}
 
 	const onSubmit = async (data) => {
 		try {
@@ -73,7 +81,7 @@ const LoginForm = ({ data }) => {
 						aria-label="Log in with GitHub"
 						className="w-full hover:scale-x-110 hover:scale-y-105 transition duration-300 rounded-full p-8 m-4 bg-[#171515] hover:bg-[#171515]/60 focus:ring-4 focus:outline-none focus:ring-[#171515]/50 font-medium text-xs px-2.5 py-2.5 text-center inline-flex items-center  justify-center  dark:focus:ring-[#171515]/55 mr-2 mb-2"
 						type="button"
-						onClick={github}
+						onClick={() => Auth("github")}
 					>
 						{' '}
 						Sign in with Github
@@ -92,7 +100,7 @@ const LoginForm = ({ data }) => {
 						aria-label="Log in with Discord"
 						className="w-full hover:scale-x-110 hover:scale-y-105 transition duration-300 rounded-full p-8 m-4 bg-[#7289da] hover:bg-[#7289da]/90 focus:ring-4 focus:outline-none focus:ring-[#171515]/50 font-medium text-xs px-2.5 py-2.5 text-center inline-flex items-center  justify-center  dark:focus:ring-[#171515]/55 mr-2 mb-2"
 						type="button"
-						onClick={discord}
+						onClick={() => Auth("discord")}
 					>
 						{' '}
 						Sign in with Discord
@@ -115,7 +123,7 @@ const LoginForm = ({ data }) => {
 						aria-label="Log in with Google"
 						className="w-full hover:scale-x-110 hover:scale-y-105 transition duration-300 rounded-full p-8 m-4 bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium text-xs px-2.5 py-2.5 text-center inline-flex items-center  justify-center  dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
 						type="button"
-						onClick={google}
+						onClick={() => Auth("google")}
 					>
 						{' '}
 						Sign in with Google
@@ -137,7 +145,7 @@ const LoginForm = ({ data }) => {
 						aria-label="Log in with Twitch"
 						className=" w-full hover:scale-x-110 hover:scale-y-105 transition duration-300 rounded-full p-8 m-4 bg-[#6441a5] hover:bg-[#6441a5]/90 focus:ring-4 focus:outline-none focus:ring-[#6441a5]/50 font-medium text-xs px-2.5 py-2.5 text-center inline-flex items-center  justify-center  dark:focus:ring-[#6441a5]/55 mr-2 mb-2"
 						type="button"
-						onClick={twitch}
+						onClick={() => Auth("twitch")}
 					>
 						{' '}
 						Sign in with Twitch

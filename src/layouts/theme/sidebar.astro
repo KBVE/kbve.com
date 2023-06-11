@@ -13,7 +13,10 @@ import SVG from '@c/Library/SVG/SVG.astro';
 	<div
 		class="mt-20 h-full p-3 space-y-2 bg-offset opacity-60 hover:opacity-100 ease-in-out duration-1000 min-w-[300px]"
 	>
-		<div class="flex items-center p-2 space-x-4">
+	<!-- https://kbve.com/assets/img/bot/ -->
+	<!-- #1c033c -->
+	<img src={'/assets/img/bot/kibo.png'} alt="KBVE_BOT_LOGO" class="w-32 h-32 mx-auto rounded-full shadow-2xl shadow-[#1c033c] hover:shadow-overdrive hover:shadow-[#1c033c] transition-shadow hover:animate-pulse" />
+		<!-- <div class="flex items-center p-2 space-x-4">
 			<img
 				src="https://source.unsplash.com/100x100/?portrait"
 				alt=""
@@ -21,15 +24,15 @@ import SVG from '@c/Library/SVG/SVG.astro';
 			/>
 			<div>
 				<h2 class="text-lg font-semibold gradient-text">Menu</h2>
-				<!-- <span class="flex items-center space-x-1">
+				<span class="flex items-center space-x-1">
 					<a
 						rel="noopener noreferrer"
 						href="#"
 						class="text-xs hover:underline text-gray-400">View profile</a
 					>
-				</span> -->
+				</span>
 			</div>
-		</div>
+		</div> -->
 		<div class="divide-y divide-gray-700">
 			<ul class="pt-2 pb-4 space-y-1 text-sm">
 				<li>
@@ -111,7 +114,7 @@ import SVG from '@c/Library/SVG/SVG.astro';
 					<a
 						rel="noopener noreferrer"
 						href="/recipe/"
-						class="flex items-center p-2 space-x-3 rounded-md"
+						class="flex items-center p-2 space-x-3 rounded-md hover:shadow-overdrive transition-all"
 					>
 						<SVG name="mdiCookieOutline" />
 						<span>Recipe</span>
