@@ -61,6 +61,7 @@
     "appwrite": "^11.0.0",
     "astro": "^2.6.3",
     "astro-compress": "^1.1.47",
+    "crypto-js": "^4.1.1",
     "dompurify": "^3.0.3",
     "interweave": "^13.1.0",
     "jquery": "^3.7.0",
