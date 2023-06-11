@@ -8,7 +8,7 @@ import React from 'react';
  */
 const InlineText = ({ width = 100, height = 24 }) => {
   return (
-    <div className={`w-[${width}px] h-[${height}px] rounded bg-gray-700 animate-pulse inline-flex ml-2 mr-2`} />
+    <div className={`w-[${width}px] h-[${height}px] rounded bg-gray-300 animate-pulse inline-flex ml-2 mr-2`} />
   )
 }
 
