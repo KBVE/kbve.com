@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8b6629e62c49575e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "project/roguejester.mdx",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "791a858604c73675",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "journal/06-10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -77,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "91b2bd98f18da4cd",
@@ -93,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "crypto/btc.mdx",
+                "file": "journal/06-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "crypto/btc.mdx",
+                "file": "journal/06-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "crypto/btc.mdx"
+                "file": "journal/06-10.md"
               }
             }
           }
@@ -141,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,12 +181,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e5ddacef612a3415",
+  "active": "3afb4e43388f73a5",
   "lastOpenFiles": [
+    "crypto/btc.mdx",
+    "project/roguejester.mdx",
+    "project/rsps.mdx",
+    "project/discord-sh.mdx",
+    "journal/06-10.md",
     "news/release-rigor.mdx",
     "music/adtr-albums.mdx",
     "blog/theorycraft.mdx",
-    "journal/06-10.md",
     "journal/06-09.md",
     "journal/06-08.md",
     "journal/06-06.md",
@@ -170,15 +201,11 @@
     "project/galaxia.mdx",
     "project/cv.mdx",
     "project/cityvote.mdx",
-    "project/charles.mdx",
-    "project/ar.mdx",
-    "project/api.mdx",
     "journal/06-03.md",
     "journal/06-02.md",
     "journal/05-31.md",
     "journal/06-01.md",
     "journal/05-30.md",
-    "tools/conch.mdx",
     "journal/05-29.md",
     "journal/05-28.md",
     "journal/05-27.md",

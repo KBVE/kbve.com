@@ -41,6 +41,12 @@ module.exports = {
         lg: '0 8px 16px var(--tw-shadow-color)',
         xl: '0 32px 64px var(--tw-shadow-color)',
       },
+      boxShadow: {
+        'overdrive': '0 10px 420px 150px rgb(0 0 0 / 0.25)',
+      },
+      zIndex: {
+        '100': '100',
+      },
     },
   },
   corePlugins: {
