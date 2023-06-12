@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/06-11.md",
+                "file": "journal/06-12.md",
                 "mode": "source",
                 "source": false
               }
@@ -119,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/06-11.md",
+                "file": "journal/06-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/06-11.md",
+                "file": "journal/06-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/06-11.md"
+                "file": "journal/06-12.md"
               }
             }
           }
@@ -183,10 +183,11 @@
   },
   "active": "7f342b0851c853ea",
   "lastOpenFiles": [
+    "journal/06-11.md",
+    "journal/06-12.md",
     "recipe/mcconaughey-diet.mdx",
     "project/roguejester.mdx",
     "journal/06-10.md",
-    "journal/06-11.md",
     "crypto/btc.mdx",
     "project/rsps.mdx",
     "project/discord-sh.mdx",
@@ -201,7 +202,6 @@
     "journal/06-04.md",
     "tools/cv.mdx",
     "project/galaxia.mdx",
-    "project/cv.mdx",
     "journal/06-03.md",
     "journal/06-02.md",
     "journal/05-31.md",
