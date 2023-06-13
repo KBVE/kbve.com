@@ -916,6 +916,20 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"06-11.md": {
+	id: "06-11.md";
+  slug: "06-11";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"06-12.md": {
+	id: "06-12.md";
+  slug: "06-12";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1109,6 +1123,13 @@ declare module 'astro:content' {
   collection: "recipe";
   data: InferEntrySchema<"recipe">
 } & { render(): Render[".mdx"] };
+"mcconaughey-diet.mdx": {
+	id: "mcconaughey-diet.mdx";
+  slug: "mcconaughey-diet";
+  body: string;
+  collection: "recipe";
+  data: InferEntrySchema<"recipe">
+} & { render(): Render[".mdx"] };
 };
 "releases": {
 "1.md": {
@@ -1283,6 +1304,13 @@ declare module 'astro:content' {
 "solarpunk.mdx": {
 	id: "solarpunk.mdx";
   slug: "solarpunk";
+  body: string;
+  collection: "theory";
+  data: InferEntrySchema<"theory">
+} & { render(): Render[".mdx"] };
+"swartz-guerilla-manifesto.mdx": {
+	id: "swartz-guerilla-manifesto.mdx";
+  slug: "swartz-guerilla-manifesto";
   body: string;
   collection: "theory";
   data: InferEntrySchema<"theory">

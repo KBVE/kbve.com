@@ -1,0 +1,14 @@
+---
+//<!--*         [IMPORT]
+import N from '@n/N.astro'; //      [NameSpace]
+import ReactLogout from "@lib/Profile/ReactLogout";
+//<!--*         [DATA]
+//<!--!         [DATA]          ->        [$const]
+const { content } = Astro.props;
+let title = 'KBVE Logout';
+let description = 'Log out of KBVE';
+---
+
+<N ns="theme" title={title} description={description}>
+    <ReactLogout client:only="react" />
+</N>
