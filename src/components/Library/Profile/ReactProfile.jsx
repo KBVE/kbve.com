@@ -49,7 +49,7 @@ const ReactProfile = () => {
 					src={
 						$user?.email
 							? Gravatar({ email: $user?.email })
-							: 'https://source.unsplash.com/75x75/?portrait'
+							: 'https://source.unsplash.com/192x192/?portrait'
 					}
 					alt=""
 					className="self-center flex-shrink-0 w-48 h-48 border rounded-full md:justify-self-start bg-gray-500 border-gray-700"
