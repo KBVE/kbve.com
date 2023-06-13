@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e5ddacef612a3415",
+            "id": "1a0f6c1e75a595c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "crypto/btc.mdx",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8b6629e62c49575e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "project/roguejester.mdx",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "791a858604c73675",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "journal/06-10.md",
+                "file": "journal/06-12.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -119,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/06-10.md",
+                "file": "journal/06-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/06-10.md",
+                "file": "journal/06-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/06-10.md"
+                "file": "journal/06-12.md"
               }
             }
           }
@@ -181,13 +156,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3afb4e43388f73a5",
+  "active": "1a0f6c1e75a595c2",
   "lastOpenFiles": [
-    "crypto/btc.mdx",
     "project/roguejester.mdx",
+    "crypto/btc.mdx",
+    "journal/06-12.md",
+    "journal/06-11.md",
+    "recipe/mcconaughey-diet.mdx",
+    "journal/06-10.md",
     "project/rsps.mdx",
     "project/discord-sh.mdx",
-    "journal/06-10.md",
     "news/release-rigor.mdx",
     "music/adtr-albums.mdx",
     "blog/theorycraft.mdx",
@@ -199,8 +177,6 @@
     "journal/06-04.md",
     "tools/cv.mdx",
     "project/galaxia.mdx",
-    "project/cv.mdx",
-    "project/cityvote.mdx",
     "journal/06-03.md",
     "journal/06-02.md",
     "journal/05-31.md",
@@ -216,8 +192,6 @@
     "journal/2023-05-25.md",
     "journal/05-23.md",
     "journal/05-22.md",
-    "journal/05-21.md",
-    "journal/05-20.md",
-    "journal/05-19.md"
+    "journal/05-21.md"
   ]
 }
