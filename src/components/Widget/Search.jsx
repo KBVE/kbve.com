@@ -42,7 +42,7 @@ const SearchData = ({ dork = "" }) => {
             type="button"
             className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800"
             onClick={onClickUrl(
-              `https://kbve.com/search?q=${query}+site:reddit.com`
+              `/search?q=${query}+site:reddit.com`
             )}
           >
             +Reddit
@@ -51,7 +51,7 @@ const SearchData = ({ dork = "" }) => {
             type="button"
             className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800"
             onClick={onClickUrl(
-              `https://kbve.com/search?q=${query}+site:stackoverflow.com`
+              `/search?q=${query}+site:stackoverflow.com`
             )}
           >
             +SOF
@@ -60,7 +60,7 @@ const SearchData = ({ dork = "" }) => {
             type="button"
             className="px-8 py-3 font-semibold rounded shadow-2xl ring-2 ring-fushsia-900/5  dark:bg-gray-100 dark:text-gray-800"
             onClick={onClickUrl(
-              `https://kbve.com/search?q=${query}+site:kbve.com`
+              `/search?q=${query}+site:kbve.com`
             )}
           >
             +KBVE

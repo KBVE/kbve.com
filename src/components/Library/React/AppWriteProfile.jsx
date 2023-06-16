@@ -16,7 +16,7 @@ const Profile = () => {
   } 
   else if(userProfile?.message )
   {
-    window.location.replace('https://kbve.com/account/login');
+    window.location.replace('/account/login');
   }
   else {
     return (
