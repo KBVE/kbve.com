@@ -37,7 +37,7 @@ function getDomain(url) {
   return domain;
 }
 
-const ReactWebmaster = ({ dork = "" }) => {
+const ReactWebmaster = () => {
   const [domain, setDomain] = useState(null);
 
   useEffect(() => {
