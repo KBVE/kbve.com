@@ -20,7 +20,7 @@ import VideoComponent from '@c/Element/Video/Video.astro';
 							content.tags.slice(0, 3).map((tags) => (
 								<a
 									rel="noopener noreferrer"
-									href={`https://kbve.com/t/${tags}`}
+									href={`/t/${tags}`}
 									class="inline-block text-2xl font-semibold sm:text-3xl"
 								>
 									<span class="p-2 m-1 text-xs rounded-full bg-orange-500">
@@ -45,7 +45,7 @@ import VideoComponent from '@c/Element/Video/Video.astro';
 	<div class="w-96 relative md:w-full m-4">
 		<div class="shadow-2xl p-4 bg-offset rounded-3xl">
 			<div
-				class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
+				class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
 			>
 				<slot />
 			</div>

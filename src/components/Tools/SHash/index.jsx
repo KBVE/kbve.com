@@ -15,7 +15,7 @@ const Search = ({ _search }) => {
   });
   if (clean) {
     clean = clean.slice(1);
-    window.location = `https://kbve.com/search/?q=${clean}`;
+    window.location = `/search/?q=${clean}`;
   }
 };
 

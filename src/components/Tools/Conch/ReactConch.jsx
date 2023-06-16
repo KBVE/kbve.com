@@ -161,7 +161,7 @@ const ReactConch = () => {
 						<div className="flex flex-col space-y-1">
 							<a
 								rel="noopener noreferrer"
-								href="https://kbve.com/tools/conch/"
+								href="/tools/conch/"
 								target="_blank"
 								className="text-sm font-semibold"
 							>
@@ -183,7 +183,7 @@ const ReactConch = () => {
 							<div className="flex flex-row justify-center">
 								{/* rome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 								<img
-									src="https://kbve.com/assets/img/conch/conch_shell.png"
+									src="/assets/img/conch/conch_shell.png"
 									className={shellCSS}
 									alt="Magic Shell"
 									onClick={_ask}
