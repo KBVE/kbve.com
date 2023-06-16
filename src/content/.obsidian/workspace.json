@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/06-13.md",
+                "file": "journal/06-15.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/06-13.md",
+                "file": "journal/06-15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/06-13.md",
+                "file": "journal/06-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/06-13.md"
+                "file": "journal/06-15.md"
               }
             }
           }
@@ -158,8 +158,9 @@
   },
   "active": "1a0f6c1e75a595c2",
   "lastOpenFiles": [
+    "journal/06-14.md",
+    "journal/06-15.md",
     "journal/06-12.md",
-    "journal/06-13.md",
     "project/roguejester.mdx",
     "crypto/btc.mdx",
     "journal/06-11.md",
@@ -192,7 +193,6 @@
     "journal/05-24.md",
     "journal/2023-05-25.md",
     "journal/05-23.md",
-    "journal/05-22.md",
-    "journal/05-21.md"
+    "journal/05-22.md"
   ]
 }
