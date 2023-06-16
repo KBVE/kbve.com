@@ -930,6 +930,27 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"06-13.md": {
+	id: "06-13.md";
+  slug: "06-13";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"06-14.md": {
+	id: "06-14.md";
+  slug: "06-14";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"06-15.md": {
+	id: "06-15.md";
+  slug: "06-15";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1061,6 +1082,13 @@ declare module 'astro:content' {
 "ar.mdx": {
 	id: "ar.mdx";
   slug: "ar";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
+"bizops.mdx": {
+	id: "bizops.mdx";
+  slug: "bizops";
   body: string;
   collection: "project";
   data: any
