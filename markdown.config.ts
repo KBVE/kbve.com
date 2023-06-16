@@ -10,6 +10,9 @@ import rehypeExternalLinks from "rehype-external-links";
 //!     import rehypeSlug from "rehype-slug";   There is a bug with displaying the Table of Contents , when importing the .MD files inside of the .MDX
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 
+//!   [June 13, 2023] - Adding Mermaid
+import { mermaid } from "./src/components/Library/MDX/mermaid"
+
 export default {
   extendMarkdownConfig: true,
   rehypePlugins: [
@@ -37,4 +40,5 @@ export default {
   //? External Plugins -> True
   extendPlugins: true,
   gfm: true,
+  remarkPlugins: [mermaid],
 };
