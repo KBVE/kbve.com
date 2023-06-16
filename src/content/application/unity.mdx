@@ -169,6 +169,11 @@ private IEnumerator LoginEnumProcess() //  [VOID]  -> {LoginEnumProcess()}
 Another `API` that you can use inside of Unity is AppWrite but there is only an unofficial plugin for the integration.
 Thus we suggest being careful if using it in a production environment.
 
+The unofficial plugin repo is hosted on [Github](https://github.com/AlexMeesters/unity-appwrite-plugin)
+
+The prerequisites for the plugin are [UniTask](https://kbve.com/application/unity/#unitask) and JSON.NET, information on both can be found further down in this guide.
+
+
 ### Firebase
 
 Firebase integration with Unity makes it easy for developers to add these features to their games without sacrificing security.
@@ -294,7 +299,6 @@ When defusing the situation, we recommend build multiple test cases with all com
 We been in situations where a foot of a humanoid object was not tagged as a `Player`, thus causing the whole collision engine to be off and not registering the functionality within a scene.
 
 
-
 ### UCC
 
 Ultimate Character Controller was the plugin of choice when doing RSDD aka rapid self-destructive development.
@@ -374,9 +378,19 @@ The two part video tutorial goes through a UCC / Inventory integration.
 
 We moved the Steam into their own [notes](https://kbve.com/application/unity/#steam)
 
-### SimpleJSON
 
-- SimpleJSON is a plugin for JSON parsing in C#.
+### JSON
+
+There are a couple options for JSON plugins, the two main ones that we recommend are the JSON.NET library from Nuget and the SimpleJSON.
+
+#### JSON.NET
+
+Here is a simple [guide](https://github.com/jilleJr/Newtonsoft.Json-for-Unity/wiki/Install-official-via-UPM) on how to install the official JSON.NET plugin from NewtonSoft.
+
+#### SimpleJSON
+
+SimpleJSON is a plugin for JSON parsing in C#.
+
 - Official [Repo](https://github.com/Bunny83/SimpleJSON)
 
 ### Modular AI
