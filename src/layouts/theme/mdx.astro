@@ -1,59 +1,90 @@
 ---
 const { content } = Astro.props; ///	[Astro Props]
-import Ads from "@w/Ads.astro"; //? AAds
-import VideoComponent from "@c/Element/Video/Video.astro";
+import Ads from '@w/Ads.astro'; //? AAds
+import VideoComponent from '@c/Element/Video/Video.astro';
 ---
 
 <div
-  class="flex flex-wrap mb-12 justify-center items-center bg-fixed bg-center bg-cover overflow-auto"
-  style={{ backgroundImage: `url(${content.img})` }}
+	class="flex flex-wrap mb-12 justify-center items-center bg-fixed bg-center bg-cover overflow-auto"
+	style={{ backgroundImage: `url(${content.img})` }}
 >
-  <div
-    class="relative w-96 m-4 md:w-full bg-offset rounded-3xl"
-  >
-    <div class="shadow-md">
-      <div class="flex flex-col md:flex-row">
-        <!-- Main Title / Description -->
-        <div class="grow space-y-2 justify-between p-6">
-          <h2 class="text-lg font-semibold tracking-wide">{content.title}</h2>
-          <p class="text-default text-xs">{content.description}</p>
-          <div class="relative inset-x-0 bottom-0 p-4">
-            {
-              content.tags.slice(0, 3).map((tags) => (
-                <a
-                  rel="noopener noreferrer"
-                  href={`https://kbve.com/t/${tags}`}
-                  class="inline-block text-2xl font-semibold sm:text-3xl"
-                >
-                  <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
-                    #{tags}
-                  </span>
-                </a>
-              ))
-            }
-          </div>
-        </div>
-        <!-- Additional Field -->
-        <div class="grow space-y-2 p-6 relative m-4 justify-center bg-offset rounded-3xl">
-            <Ads adNetwork="ezoic" id="123" />
-        </div>
-      </div>
-    </div>
+	<div class="relative w-96 m-4 md:w-full bg-offset rounded-3xl">
+		<div class="shadow-md">
+			<div class="flex flex-col md:flex-row">
+				<!-- Main Title / Description -->
+				<div class="grow space-y-2 justify-between p-6">
+					<h2 class="text-lg font-semibold tracking-wide">{content.title}</h2>
+					<p class="text-default text-xs">{content.description}</p>
+					<div class="relative inset-x-0 bottom-0 p-4">
+						{
+							content.tags.slice(0, 3).map((tags) => (
+								<a
+									rel="noopener noreferrer"
+									href={`https://kbve.com/t/${tags}`}
+									class="inline-block text-2xl font-semibold sm:text-3xl"
+								>
+									<span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+										#{tags}
+									</span>
+								</a>
+							))
+						}
+					</div>
+				</div>
+				<!-- Additional Field -->
+				<div
+					class="grow space-y-2 p-6 relative m-4 justify-center bg-offset rounded-3xl"
+				>
+					<Ads adNetwork="ezoic" id="123" />
+				</div>
+			</div>
+		</div>
+	</div>
 
-
-   
-  </div>
-
-
-  <!-- Main Content -->
-  <div class="w-96 relative md:w-full m-4">
-    <div class="shadow-2xl p-4 bg-offset rounded-3xl">
-      <div
-        class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
-      >
-        <slot />
-      </div>
-    </div>
-  </div>
-  <!-- MDX END -->
+	<!-- Main Content -->
+	<div class="w-96 relative md:w-full m-4">
+		<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+			<div
+				class="prose max-w-none prose-td:text-secondary prose-tr:text-primary prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary"
+			>
+				<slot />
+			</div>
+		</div>
+	</div>
+	<!-- MDX END -->
 </div>
+
+<script>
+	/**
+   * Originally from https://github.com/JuanM04
+   * Taken from https://github.com/withastro/astro/issues/4433#issuecomment-1584019991
+	 * @params {HTMLCollectionOf<HTMLElement>} graphs
+	 */
+	async function renderDiagrams(graphs) {
+		const { default: mermaid } = await import('mermaid');
+		mermaid.initialize({
+			startOnLoad: false,
+			fontFamily: 'var(--sans-font)',
+			// @ts-ignore This works, but TS expects a enum for some reason
+			theme: localStorage.getItem('theme') === 'dark'
+				? 'dark'
+				: 'default',
+		});
+
+		for (const graph of graphs) {
+			const content = graph.getAttribute('data-content');
+			if (!content) continue;
+			let svg = document.createElement('svg');
+			const id = (svg.id = 'mermaid-' + Math.round(Math.random() * 100000));
+			graph.appendChild(svg);
+			mermaid.render(id, content).then((result) => {
+				graph.innerHTML = result.svg;
+			});
+		}
+	}
+
+	const graphs = document.getElementsByClassName('mermaid');
+	if (document.getElementsByClassName('mermaid').length > 0) {
+		renderDiagrams(graphs);
+	}
+</script>

@@ -33,6 +33,7 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.2",
     "@astrojs/image": "^0.17.0",
+    "@astrojs/markdown-remark": "^2.2.1",
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/partytown": "^1.2.3",
     "@astrojs/preact": "^2.2.1",
@@ -66,6 +67,7 @@
     "interweave": "^13.1.0",
     "jquery": "^3.7.0",
     "lodash": "^4.17.21",
+    "mermaid": "^10.2.3",
     "micromodal": "^0.4.10",
     "million": "^2.4.6-beta.2",
     "nanostores": "^0.9.2",
@@ -86,7 +88,9 @@
     "svelte": "^3.59.1",
     "tailwindcss": "^3.3.2",
     "tailwindcss-fluid-type": "^2.0.3",
+    "ts-dedent": "^2.2.0",
     "typewriter-effect": "^2.20.1",
+    "unist-util-visit": "^4.1.2",
     "use-sound": "^4.0.1"
   },
   "yarn-upgrade-all": {
