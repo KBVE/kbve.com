@@ -79,18 +79,16 @@ const ReactWebmaster = () => {
 	const ProcessMessage = () => {
 		return (
 			<>
-				<div className="gradient-text font-medium block m-2 p-2">
-					Processing {domain}
-					{WebTools(domain)}
-				</div>
-			</>
+			
+					{WebTools(domain)}			</>
 		);
 	};
 
 	return (
 		<>
+			{domain && ProcessMessage()}				
 			<form className="max-w-xl m-auto py-2" onSubmit={handleSubmit(onSubmit)}>
-				{domain && ProcessMessage()}
+				
 				{webmasterError && ErrorMessage(webmasterError)}
 				<label className="font-medium block mt-4 gradient-text">
 					Domain Address:{' '}
