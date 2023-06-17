@@ -4,13 +4,14 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   //darkMode: ['class', '[data-mode="dark"]'],
-  content: {
-          files: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue,mdx,md}'],
+  content: [
+          './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue,mdx,md}',
+          './node_modules/flowbite/**/*.js'
           // transform: {
           //   mdx: (content) => {
           //     return remark().process(content)
           //   }}
-      },
+  ],
   //content: ["./src/components/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
@@ -60,6 +61,7 @@ module.exports = {
     }
   },
   plugins: [
+    require('flowbite/plugin'),
     require("tailwindcss-fluid-type"),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
