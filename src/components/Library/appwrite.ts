@@ -63,6 +63,8 @@ export const api$: WritableAtom<Boolean> = atom(false);
 
 export const error$: WritableAtom<undefined> = atom(undefined);
 
+export const data$: WritableAtom<undefined> = atom(undefined);
+
 isLoggedIn.subscribe(async (session) => {
 	if (session?.userId) {
 		user$.set(await account());
@@ -169,6 +171,13 @@ export const getError = async () => {
 	}
 };
 
+export const placeData = async (__data) => {
+	task(async () => {
+		console.log(`[Task API] Setting ${__data}`);
+		data$.set(__data);
+		console.log(`[Task API] Data Set -> ${data$.get()}`);
+	})
+};
 
 /** 
  * 
