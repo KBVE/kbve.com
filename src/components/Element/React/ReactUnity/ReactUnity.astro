@@ -2,7 +2,7 @@
 const { id, buttonClass = "relative px-8 py-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900" } = Astro.props;
 import _ from "lodash";
 
-let data = await fetch('https://kbve.com/project/unity-webgl.json').then((response) =>  response.json());
+let data = await fetch('/project/unity-webgl.json').then((response) =>  response.json());
 let UnityGame = _.find(data, ['id', id]);
 
 import ReactUnity from ".";
