@@ -1,113 +1,117 @@
 ---
 //<!--?       [CORE]:Template
 //<!--*       [IMPORTS]
-import "../../styles/index.css"; //  Import Style.css
-import Footer from "@l/theme/footer.astro"; // Footer
-import Nav from "./nav.astro"; // Navigation Astro
-import Sidebar from "./sidebar.astro";
+import '../../styles/index.css'; //  Import Style.css
+import Footer from '@l/theme/footer.astro'; // Footer
+import Nav from './nav.astro'; // Navigation Astro
+import Sidebar from './sidebar.astro';
 
 //?       [DATA]
 const {
-  content,
-  title,
-  description,
-  image = "https://kbve.com/assets/img/social.png",
-  bg,
+	content,
+	title,
+	description,
+	image = '/assets/img/social.png',
+	bg,
 } = Astro.props; //  Import Astro.props
 const url = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="motion-safe:scroll-smooth" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="canonical" href={url} />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="canonical" href={url} />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 
-    <!-- Fonts -->
+		<!-- Fonts -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
-      />
-    </noscript>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="preload"
+			as="style"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+			media="print"
+			onload="this.media='all'"
+		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+			/>
+		</noscript>
 
-    <!-- Meta Property Tags [START] -->
-    <meta property="og:title" content={title} />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:url" content={url} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <!-- Meta Property Tags [END] -->
+		<!-- Meta Property Tags [START] -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:url" content={url} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<!-- Meta Property Tags [END] -->
 
-    <!-- Light/Dark [START] -->
-    <script>
-      const themeSaved = localStorage.getItem("theme");
+		<!-- Light/Dark [START] -->
+		<script>
+			const themeSaved = localStorage.getItem('theme');
 
-      if (themeSaved) {
-        document.documentElement.dataset.theme = themeSaved;
-        //      document.documentElement.classList.add(themeSaved);
-      } else {
-        document.documentElement.dataset.theme = "dark";
-        //      document.documentElement.classList.add("dark");
-      }
+			if (themeSaved) {
+				document.documentElement.dataset.theme = themeSaved;
+				//      document.documentElement.classList.add(themeSaved);
+			} else {
+				document.documentElement.dataset.theme = 'dark';
+				//      document.documentElement.classList.add("dark");
+			}
 
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (event) => {
-          if (!localStorage.getItem("theme")) {
-            document.documentElement.dataset.theme = event.matches
-              ? "dark"
-              : "light";
-          }
-        });
-    </script>
-    <!-- Light/Dark [END] -->
-  </head>
-  
-  <body
-    class="text-base bg-default text-default selection:bg-secondary selection:text-white"
-  >
-    <Nav />
+			window
+				.matchMedia('(prefers-color-scheme: dark)')
+				.addEventListener('change', (event) => {
+					if (!localStorage.getItem('theme')) {
+						document.documentElement.dataset.theme = event.matches
+							? 'dark'
+							: 'light';
+					}
+				});
+		</script>
+		<!-- Light/Dark [END] -->
+		<!-- /** 
+      Party Town load the FlowBite
+      */ -->
+		<!-- [START] FlowBite -->
+		<script
+			is:inline
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
+		></script>
+		<!-- [END FlowBite] -->
+	</head>
 
-    <div class="flex flex-col flex-grow md:flex-row">
-      
-      <Sidebar />
-      <!--* MAIN Content Slot-->
-      <main class="">
-        
-        <slot />
-        
-      </main>
-      
-    </div>
+	<body
+		class="text-base bg-default text-default selection:bg-secondary selection:text-white"
+	>
+		<Nav />
 
-      <!-- * Footer [START] -->
-  <footer
-  class="flex px-4 divide-y divide-gray-400 dark:bg-gray-800 dark:text-gray-100"
->
-  <Footer />
-</footer>
-<!--* Footer [END]  -->
-  </body>
+		<div class="flex flex-col flex-grow md:flex-row">
+			<Sidebar />
+			<!--* MAIN Content Slot-->
+			<main class="">
+				<slot />
+			</main>
+		</div>
 
+		<!-- * Footer [START] -->
+		<footer
+			class="flex px-4 divide-y divide-gray-400 dark:bg-gray-800 dark:text-gray-100"
+		>
+			<Footer />
+		</footer>
+		<!--* Footer [END]  -->
+	</body>
 </html>

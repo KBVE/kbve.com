@@ -7,7 +7,7 @@ const { content } = Astro.props;
 		<div class="rounded-r-3xl bg-no-repeat bg-cover col-span-full lg:col-span-4" style={{ backgroundImage: `url(${content.img})` }}></div>
 		<div class="rounded-l-3xl bg-offset flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
 			<div class="flex justify-start p-1 space-x-2">
-				{content.tags.map((tags) =>	<a rel="noopener noreferrer" href={`https://kbve.com/t/${tags}`} class="inline-block text-2xl font-semibold sm:text-3xl"><span class="px-2 py-1 text-xs rounded-full bg-orange-500">#{tags}</span></a>)}
+				{content.tags.map((tags) =>	<a rel="noopener noreferrer" href={`/t/${tags}`} class="inline-block text-2xl font-semibold sm:text-3xl"><span class="px-2 py-1 text-xs rounded-full bg-orange-500">#{tags}</span></a>)}
 			</div>
 			<h1 class="text-3xl font-semibold">{content.title}</h1>
 			<p class="flex-1 pt-2">{content.description}</p>
