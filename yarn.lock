@@ -5638,10 +5638,10 @@ micromodal@^0.4.10:
   resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.4.10.tgz#d6f59c21d2f4a5af480f65909eb9608a1d558c73"
   integrity sha512-BUrEnzMPFBwK8nOE4xUDYHLrlGlLULQVjpja99tpJQPSUEWgw3kTLp1n1qv0HmKU29AiHE7Y7sMLiRziDK4ghQ==
 
-million@^2.4.6-beta.2:
-  version "2.4.6-beta.2"
-  resolved "https://registry.yarnpkg.com/million/-/million-2.4.6-beta.2.tgz#05558d90984670b96d963936413b0379ec4cf336"
-  integrity sha512-UTUIfDZLBx1WG+nsBjeJGPPH0rR4b3yGPe4iZ2GOGpwUbrp0UjxRZeEQSFsaYctn9PPTId2Huowb9kQ5BQcj/A==
+million@^2.4.6:
+  version "2.4.6"
+  resolved "https://registry.yarnpkg.com/million/-/million-2.4.6.tgz#9b5469b481d48dbc808fd8d9f9e27365c2daf98f"
+  integrity sha512-wKrtnYBwyzpiBb7m+hiLlkv978VR8MbVSw0r9A71nOirot3Wzwa7/2jdhDVCF5HIOc47QfQpl5qZWIsdxHN7vg==
   dependencies:
     "@babel/core" "^7.21.0"
     "@babel/plugin-syntax-jsx" "^7.21.4"
@@ -6374,10 +6374,10 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-hook-form@^7.44.3:
-  version "7.44.3"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.44.3.tgz#a99e560c6ef2b668db1daaebc4f98267331b6828"
-  integrity sha512-/tHId6p2ViAka1wECMw8FEPn/oz/w226zehHrJyQ1oIzCBNMIJCaj6ZkQcv+MjDxYh9MWR7RQic7Qqwe4a5nkw==
+react-hook-form@^7.45.0:
+  version "7.45.0"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.45.0.tgz#df2bbc8cee598855a63ba446e0bb06f7c8120ccf"
+  integrity sha512-AbHeZ4ad+0dEIknSW9dBgIwcvRDfZ1O97sgj75WaMdOX0eg8TBiUf9wxzVkIjZbk76BBIE9lmFOzyD4PN80ZQg==
 
 react-icons@^4.9.0:
   version "4.9.0"
