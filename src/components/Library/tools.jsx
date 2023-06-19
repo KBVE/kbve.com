@@ -1,5 +1,14 @@
-//?     Both functions below are from Gibolt to address the _blank target vulnerability.
+import DOMPurify from 'dompurify';
 
+
+export const clean = (data) =>
+{
+	return DOMPurify.sanitize(data, {
+		USE_PROFILES: { html: false, mathMl: false, svg: false },
+	});
+}
+
+//?     Both functions below are from Gibolt to address the _blank target vulnerability.
 export const onClickUrl = (url) => {
 	return () => openInNewTab(url);
 };
@@ -50,5 +59,21 @@ export const BgWrapper = (props) => {
 				</div>
 			</div>
 		</div>
+	);
+};
+
+
+export const elementErrorMessage = (__message) => {
+	return (
+		<>
+			<div role="alert space-y-4 m-4 p-4">
+				<div className="bg-red-500 font-bold rounded-t px-4 py-2">
+					Warning!
+				</div>
+				<div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+					<p>{__message}</p>
+				</div>
+			</div>
+		</>
 	);
 };
