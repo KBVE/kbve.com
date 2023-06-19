@@ -1,0 +1,28 @@
+name: Portainer
+
+on:
+    workflow_dispatch:
+
+permissions:
+    actions: write
+    contents: write
+    pages: write
+    id-token: write
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout the repository using git
+              uses: actions/checkout@v3
+
+            - name: Install Portainer
+              uses: appleboy/ssh-action@v0.1.10
+              with:
+                host: ${{ secrets.PORTAINER_HOST }}
+                port: ${{ secrets.SSH_PORT }}
+                username: ${{ secrets.PORTAINER_USERNAME }}
+                key: ${{ secrets.SSH_KEY }}
+                script: |
+                  whoami
+                  ls -al
