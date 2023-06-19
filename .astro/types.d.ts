@@ -1011,13 +1011,34 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "manga": {
-"rj/main.md": {
-	id: "rj/main.md";
-  slug: "rj/main";
+"rj/filler/1.mdx": {
+	id: "rj/filler/1.mdx";
+  slug: "rj/filler/1";
   body: string;
   collection: "manga";
-  data: any
-} & { render(): Render[".md"] };
+  data: InferEntrySchema<"manga">
+} & { render(): Render[".mdx"] };
+"rj/filler/index.mdx": {
+	id: "rj/filler/index.mdx";
+  slug: "rj/filler";
+  body: string;
+  collection: "manga";
+  data: InferEntrySchema<"manga">
+} & { render(): Render[".mdx"] };
+"rj/introduction/1.mdx": {
+	id: "rj/introduction/1.mdx";
+  slug: "rj/introduction/1";
+  body: string;
+  collection: "manga";
+  data: InferEntrySchema<"manga">
+} & { render(): Render[".mdx"] };
+"rj/introduction/index.mdx": {
+	id: "rj/introduction/index.mdx";
+  slug: "rj/introduction";
+  body: string;
+  collection: "manga";
+  data: InferEntrySchema<"manga">
+} & { render(): Render[".mdx"] };
 };
 "media": {
 "radio.mdx": {
