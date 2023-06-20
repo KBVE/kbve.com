@@ -1,3 +1,5 @@
 ---
-
+import ReactManga from "@lib/Manga/ReactManga.jsx"
+const { data } = Astro.props;
 ---
+<ReactManga data={data} client:only="react" />

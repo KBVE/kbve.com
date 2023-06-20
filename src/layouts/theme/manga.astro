@@ -6,13 +6,6 @@ import Lottie from '@c/Element/Lottie/Lottie.astro'; //    [Lottie]
 import TypeWriter from '@lib/typewriter.jsx';
 import TypewriterMacro from '@lib/TypewriterMacro.jsx';
 
-let textString = String('Text to display');
-
-if(content.charactertext)
-{
-    textString = String(content.charactertext)
-}
-
 ---
 
 <!--    Style Sheets  -->
@@ -41,20 +34,11 @@ if(content.charactertext)
 		--highlight-color: rgb(126, 87, 194);
 	}
 
-	body {
-		background-color: var(--background-color);
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-		margin: 0px;
-		overflow: hidden;
-	}
-
 	* {
 		box-sizing: border-box;
 	}
 
-	a {
+	a{
 		text-decoration: none;
 	}
 
@@ -62,11 +46,6 @@ if(content.charactertext)
 		color: var(--highlight-color);
 	}
 
-	main {
-		flex-grow: 1;
-		position: relative;
-		overflow: hidden;
-	}
 
 	main > article {
 		height: 100%;
@@ -345,22 +324,9 @@ if(content.charactertext)
 		});
 	};
 
-	/* -- Mobile Nav Toggle -- */
-
-	//const nav = document.querySelector("nav");
-	// const nav = document.querySelector(`[data-x="x"]`);
-	// const handleNavToggle = () => {
-	//     nav.dataset.transitionable = "true";
-	//     nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
-	// }
-
-	// window.matchMedia("(max-width: 800px)").onchange = e => {
-	//     nav.dataset.transitionable = "false";
-	//     nav.dataset.toggled = "false";
-	// };
 </script>
 
-<main class="grow relative overflow-hidden">
+<main class="grow relative overflow-hidden flex flex-col h-screen m-0">
 	<!-- Removed overflow-y-auto -->
 
 	<!-- INTRO TO CHAPTER -->
@@ -378,21 +344,17 @@ if(content.charactertext)
 			<div
 				class="absolute bg-black/60 bottom-0 rounded-3xl shadow-md w-full indent-8 invisible md:visible p-4"
 			>
-				<!-- <p class="text-2xl text-primary kbvetext">{character_chat}</p> -->
+				<p class="text-2xl text-primary kbvetext">{content.charactertext}</p>
 				<p>
-                     <TypeWriter 
-                    text={textString}
-                    buttonClassName={"bg-[#8b5cf6] hover:bg-[#8b5cf6]/90 focus:ring-4 focus:outline-none focus:ring-[#8b5cf6]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#8b5cf6]/55 mr-2 mb-2"}
-                    typewriterClassName={"text-2xl gradient-text"} 
-                    client:only="react" 
-                  /> 
+                
+				</p>
                   
 			</div>
 		</div>
 
 		<div class="order-2 md:hidden visible md:invisible">
 			<p class="justify-center items-center flex-initial shrink p-8 bg-offset">
-				{textString}
+				{String(content.charactertext)}
 			</p>
 		</div>
 
