@@ -1,0 +1,440 @@
+---
+const { content } = Astro.props; ///	[Astro Props]
+import Ads from '@w/Ads.astro'; //? AAds
+import VideoComponent from '@c/Element/Video/Video.astro';
+import Lottie from '@c/Element/Lottie/Lottie.astro'; //    [Lottie]
+import TypeWriter from '@lib/typewriter.jsx';
+import TypewriterMacro from '@lib/TypewriterMacro.jsx';
+
+let textString = String('Text to display');
+
+if(content.charactertext)
+{
+    textString = String(content.charactertext)
+}
+
+---
+
+<!--    Style Sheets  -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap"
+	rel="stylesheet"
+/>
+
+<style>
+	.kbvetext {
+		text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+			-1px 1px 0 #000, 1px 1px 0 #000;
+	}
+</style>
+<!--    PartyTown Font Awesome     -->
+<script type="text/partytown" src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/js/fontawesome.min.js"
+></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+<style>
+	/** Style Sheet is from Hyperplexed */
+	:root {
+		--border-color: rgb(255, 255, 255, 0.1);
+		--highlight-color: rgb(126, 87, 194);
+	}
+
+	body {
+		background-color: var(--background-color);
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		margin: 0px;
+		overflow: hidden;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: var(--highlight-color);
+	}
+
+	main {
+		flex-grow: 1;
+		position: relative;
+		overflow: hidden;
+	}
+
+	main > article {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 2fr;
+		grid-template-rows: 2fr;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		transition: transform 400ms ease;
+	}
+
+	main > article[data-status='inactive'] {
+		transform: translateX(-100%);
+		transition: none;
+	}
+
+	main > article[data-status='active'] {
+		transform: translateX(0%);
+	}
+
+	main > article[data-status='before'] {
+		transform: translateX(-100%);
+	}
+
+	main > article[data-status='after'] {
+		transform: translateX(100%);
+	}
+
+	main > article[data-status='becoming-active-from-before'] {
+		transform: translateX(-100%);
+		transition: none;
+	}
+
+	main > article[data-status='becoming-active-from-after'] {
+		transform: translateX(100%);
+		transition: none;
+	}
+
+	main > article > .article-section {
+		height: 100%;
+		display: flex;
+	}
+
+	main > article > .article-description-section,
+	main > article > .article-nav-section {
+		border-left: 1px solid var(--border-color);
+	}
+
+	main > article > .article-title-section,
+	main > article > .article-nav-section {
+		border-top: 1px solid var(--border-color);
+	}
+
+	/* main > article:nth-child(2) > .article-image-section {
+    background-image: url("https://images.unsplash.com/photo-1535905557558-afc4877a26fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
+    }
+
+    main > article:nth-child(3) > .article-image-section {
+    background-image: url("https://images.unsplash.com/photo-1660580554695-d2ca5008f1f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80");
+    }
+
+    main > article:nth-child(4) > .article-image-section {
+    background-image: url("https://images.unsplash.com/photo-1660766877755-4cac24f6cf21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80");
+    } */
+
+	main > article > .article-image-section {
+		background-position: center;
+		background-size: cover;
+	}
+
+	main > article > .article-description-section {
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 4rem;
+	}
+
+	main > article > .article-description-section > p {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 1.25em;
+	}
+
+	main > article > .article-description-section > p > a:hover {
+		text-decoration: underline;
+	}
+
+	main > article > .article-title-section {
+		align-items: center;
+		justify-content: space-between;
+		padding: 2rem 4rem;
+	}
+
+	main > article > .article-title-section * {
+		color: white;
+	}
+
+	main > article > .article-title-section > h2 {
+		flex-basis: 50%;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 3.5rem;
+		line-height: 3rem;
+		margin: 0px;
+		text-transform: uppercase;
+	}
+
+	main > article > .article-title-section > i {
+		color: rgba(255, 255, 255, 0.75);
+		font-size: 4rem;
+	}
+
+	main > article > .article-nav-section > .article-nav-button {
+		background-color: transparent;
+		flex-grow: 1;
+		border: none;
+		outline: none;
+		color: rgba(255, 255, 255, 0.75);
+		font-size: 3rem;
+		cursor: pointer;
+	}
+
+	main > article > .article-nav-section > .article-nav-button:hover {
+		background-color: rgba(255, 255, 255, 0.02);
+	}
+
+	main > article > .article-nav-section > .article-nav-button:nth-child(2) {
+	}
+
+	@media (max-width: 1200px) {
+		main {
+			overflow-y: auto;
+		}
+
+		main > article {
+			grid-template-columns: none;
+			grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
+			height: max(900px, 100%);
+		}
+
+		main > article > .article-title-section > h2 {
+			font-size: 3rem;
+			line-height: 2.6rem;
+		}
+
+		main > article > .article-title-section > i {
+			font-size: 3rem;
+		}
+
+		main > article > .article-description-section,
+		main > article > .article-nav-section {
+		}
+
+		main > article > .article-image-section {
+			order: 1;
+		}
+
+		main > article > .article-title-section {
+			order: 2;
+		}
+
+		main > article > .article-description-section {
+			justify-content: center;
+			order: 3;
+		}
+
+		main > article > .article-nav-section {
+			order: 4;
+		}
+	}
+
+	@media (max-width: 800px) {
+		main > article {
+			grid-template-rows: 1fr repeat(4, 0.5fr);
+			/* height: max(900px, 100%); */
+		}
+
+		main > article > .article-title-section {
+			padding: 2rem;
+		}
+
+		main > article > .article-title-section > h2 {
+			flex-basis: 70%;
+			font-size: 1.75em;
+			line-height: 1.5rem;
+		}
+
+		main > article > .article-title-section > i {
+			font-size: 2rem;
+		}
+
+		main > article > .article-description-section {
+			padding: 2rem;
+		}
+
+		main > article > .article-description-section > p {
+			font-size: 1rem;
+		}
+	}
+
+
+    
+	@media (max-width: 800px) {
+		main > article {
+			grid-template-rows: 1fr repeat(4, 0.5fr);
+			/* height: max(900px, 100%); */
+		}
+
+		main > article > .article-title-section {
+			padding: 2rem;
+		}
+
+		main > article > .article-title-section > h2 {
+			flex-basis: 70%;
+			font-size: 1.75em;
+			line-height: 1.5rem;
+		}
+
+		main > article > .article-title-section > i {
+			font-size: 2rem;
+		}
+
+		main > article > .article-description-section {
+			padding: 2rem;
+		}
+
+		main > article > .article-description-section > p {
+			font-size: 1rem;
+		}
+	}
+</style>
+
+<script is:inline>
+	/*      -- Rebuilt of Hyperplexed / Dylan Brouwear -- */
+	/*      -- Carousel Navigation -- */
+	/*      ActiveIndex keeps track of the current display */
+	let activeIndex = 0;
+
+	/*      Slides -> Tags by Article               */
+	const slides = document.getElementsByTagName('article');
+
+	/*      {Function}  -> {handleLeftClick}    */
+	const handleLeftClick = () => {
+		const nextIndex =
+			activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
+
+		const currentSlide = document.querySelector(
+				`[data-index="${activeIndex}"]`,
+			),
+			nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+
+		currentSlide.dataset.status = 'after';
+		nextSlide.dataset.status = 'becoming-active-from-before';
+
+		setTimeout(() => {
+			nextSlide.dataset.status = 'active';
+			activeIndex = nextIndex;
+		});
+	};
+
+	/*      {Function}  -> {handleRightClick}   */
+	const handleRightClick = () => {
+		const nextIndex =
+			activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
+
+		const currentSlide = document.querySelector(
+				`[data-index="${activeIndex}"]`,
+			),
+			nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+
+		currentSlide.dataset.status = 'before';
+		nextSlide.dataset.status = 'becoming-active-from-after';
+
+		setTimeout(() => {
+			nextSlide.dataset.status = 'active';
+			activeIndex = nextIndex;
+		});
+	};
+
+	/* -- Mobile Nav Toggle -- */
+
+	//const nav = document.querySelector("nav");
+	// const nav = document.querySelector(`[data-x="x"]`);
+	// const handleNavToggle = () => {
+	//     nav.dataset.transitionable = "true";
+	//     nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
+	// }
+
+	// window.matchMedia("(max-width: 800px)").onchange = e => {
+	//     nav.dataset.transitionable = "false";
+	//     nav.dataset.toggled = "false";
+	// };
+</script>
+
+<main class="grow relative overflow-hidden">
+	<!-- Removed overflow-y-auto -->
+
+	<!-- INTRO TO CHAPTER -->
+	<article data-index="0" data-status="active" class="">
+		<!-- [SCENE]    ->  [BG] -->
+		<div
+			class="relative bg-cover overflow-hidden order-1 h-full"
+			style={{ backgroundImage: `url(${content.img})` }}
+		>
+			<div class="w-4/5"></div>
+			<div class="absolute bottom-0 right-0">
+				<img src={content.character} class="flex" />
+			</div>
+
+			<div
+				class="absolute bg-black/60 bottom-0 rounded-3xl shadow-md w-full indent-8 invisible md:visible p-4"
+			>
+				<!-- <p class="text-2xl text-primary kbvetext">{character_chat}</p> -->
+				<p>
+                     <TypeWriter 
+                    text={textString}
+                    buttonClassName={"bg-[#8b5cf6] hover:bg-[#8b5cf6]/90 focus:ring-4 focus:outline-none focus:ring-[#8b5cf6]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#8b5cf6]/55 mr-2 mb-2"}
+                    typewriterClassName={"text-2xl gradient-text"} 
+                    client:only="react" 
+                  /> 
+                  
+			</div>
+		</div>
+
+		<div class="order-2 md:hidden visible md:invisible">
+			<p class="justify-center items-center flex-initial shrink p-8 bg-offset">
+				{textString}
+			</p>
+		</div>
+
+		<div
+			class="flex border border-indigo-500/[.5] justify-center items-center p-4 order-3"
+		>
+			<!--  [?Save]   ->  [Nanostore]  -->
+			<i class="text-primary flex-1 fa-light fa-save"></i>
+			<i class="text-primary flex-1 fa-light fa-save"></i>
+			<i class="gradient-text flex-1 fa-light fa-flask-potion">1</i>
+			<!--  [Inventory] -->
+			<i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+			<!--  [Placeholder] -->
+			<i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+			<i class="text-secondary flex-1 fa-light fa-suitcase"></i>
+		</div>
+
+		<div class="article-nav-section flex order-4 border border-indigo-500/[.5]">
+			<button
+				class="article-nav-button"
+				type="button"
+				onclick="handleLeftClick();"
+			>
+				<Lottie
+					json="/assets/json/lottie/left.json"
+					styler="flex-none h-16 lg:h-32"
+				/>
+				<i class="fa-light fa-plus-large"></i>
+			</button>
+			<button
+				class="article-nav-button"
+				type="button"
+				onclick="handleRightClick();"
+			>
+				<Lottie
+					json="/assets/json/lottie/right.json"
+					styler="flex-none h-16 lg:h-32"
+				/>
+				<i class="fa-light fa-arrow-right-long"></i>
+			</button>
+		</div>
+	</article>
+
+	<slot />
+</main>
