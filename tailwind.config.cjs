@@ -65,7 +65,6 @@ module.exports = {
     require("tailwindcss-fluid-type"),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
