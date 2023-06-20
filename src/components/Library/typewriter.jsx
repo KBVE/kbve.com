@@ -41,7 +41,7 @@ export default function xTypeWriter({text, typewriterClassName, buttonClassName}
     const sendRequest = React.useCallback(async () => {
         if (_isWriting) { return; }
         setWriting(true);
-        await this.sendRequest();                            //!     THROWS ERROR
+        await this.sendRequest();                        //!     THROWS ERROR
         if (isMounted.current){   setWriting(false);  }
       }, [_isWriting]) 
     

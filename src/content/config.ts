@@ -289,7 +289,7 @@ const manga = defineCollection({
     footnote: z.string().optional(),
     author: z.string().default('KBVE Team'),
     character: z.string(),
-    charactertext: z.string().optional(),
+    charactertext: z.string(),
     img: z.string().default(''),
     date: z.string().optional(),
     url: z.string().optional(),
