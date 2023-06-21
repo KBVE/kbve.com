@@ -17,13 +17,14 @@
         data = "",
         className = "",
         bg,
+        render = true,
     } = Astro.props;
     let _ns = ns;
 //? [SAFETY]
     if(ns == "c"){ _ns = "controller"}
     if(ns === "null"){ _ns = namespace}
 ---
-{(_ns == "theme") && <Theme title={title} description={description} template={template} bg={bg}><slot /></Theme>}
+{(_ns == "theme") && <Theme title={title} description={description} template={template} bg={bg} render={render}><slot /></Theme>}
 {(_ns == "banner") && <Banner bannerConcept={template} id={id} data={data} />}
 {(_ns == "controller") && <Controller id={id} template={template} data={data} className={className} element={element} />}
 {(_ns == "ads") && <Ads template={template} data={data} id={id} className={className} />}

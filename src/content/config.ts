@@ -280,6 +280,24 @@ const podcast = defineCollection({
 });
 
 
+//?       {manga}
+const manga = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    character: z.string(),
+    charactertext: z.string(),
+    img: z.string().default(''),
+    date: z.string().optional(),
+    url: z.string().optional(),
+    media: z.any(),
+  }),
+});
+
+
 
 //?       {tools}
 //?       :var:status - There might be issues with how the status boolean will be handled. We can manually handle it via the markdown file OR we can use a global list.       
@@ -371,6 +389,8 @@ export const collections = {
     music: music,
     video: video,
     podcast: podcast,
+    //?       [MANGA]
+    manga: manga,
     //?       [TOOLS]
     //    tools: tools,
     arcade: arcade,

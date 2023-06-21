@@ -13,6 +13,7 @@ const {
 	description,
 	image = '/assets/img/social.png',
 	bg,
+	render = true,
 } = Astro.props; //  Import Astro.props
 const url = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -100,6 +101,8 @@ const url = new URL(Astro.url.pathname, Astro.site);
 	<body
 		class="text-base bg-default text-default selection:bg-secondary selection:text-white"
 	>
+
+	{(render == true) &&
 		<Nav />
 
 		<div class="flex flex-col flex-grow md:flex-row">
@@ -117,5 +120,10 @@ const url = new URL(Astro.url.pathname, Astro.site);
 			<Footer />
 		</footer>
 		<!--* Footer [END]  -->
+	}
+
+	{(render == false) && 
+	<slot />
+	}
 	</body>
 </html>
