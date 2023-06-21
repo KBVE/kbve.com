@@ -1,7 +1,17 @@
 import React from "react";
+import TypewriterMacro from "@lib/TypewriterMacro";
 
-const ReactManga = () => {
 
+const ReactManga = ({data}) => {
+    return (
+        <>
+            {data}
+        </>
+    )
 }
 
-module.exports = ReactManga;
+
+
+
+
+export default ReactManga;

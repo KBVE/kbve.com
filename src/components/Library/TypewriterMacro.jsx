@@ -10,7 +10,6 @@ const TypewriterMacro = (_message) => {
 						.typeString(_message)
 						.callFunction(() => {
 							console.log('Typing String');
-							//? Call Unity when Manga is typing?
 						})
 						.start();
 				}}
