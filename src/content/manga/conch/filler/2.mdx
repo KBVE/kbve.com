@@ -1,0 +1,37 @@
+---
+layout: ../../../../layouts/theme/manga.astro
+scene: 2
+title: Yakuza Boss Office - Protagonist
+category: Conch
+client: Self
+publishDate: 2023-05-01 00:00:00
+img: https://i.imgur.com/yA7P2Fi.png
+character: https://i.imgur.com/dthJ2OT.png
+charactername: Yakuza Boss
+charactertext: I won't disappoint you.
+repo:
+description: Once upon a time, in the bustling city of Tokyo, I was a full stack developer, the best of the best.
+tags:
+  - crime
+  - podcast
+  - darknet
+media:
+  72:
+    {
+      src: "yt",
+      id: "ttohYNSCkik",
+      description: "The largest bank robbery in history didn't require guns, masks, or threats. It was all done with careful planning, perfect timing, and a few computer keystrokes.",
+    }
+  3: { src: "yt", id: "ttohYNSCkik", description: "Episode 3?" }
+---
+{/*! The Protag Image is Missing */}
+{/*! The Background Image is Missing */}
+{/*TODO import Manga from "@lib/Manga/Manga.astro" */}
+import CharacterBubble from "@lib/Manga/CharacterBubble.astro";
+import TypeWriter from "@lib/Manga/TypeWriter.astro"; 
+
+{/*TODO <TypeWriter data="Hello" />*/}
+
+<TypeWriter>
+{frontmatter.charactertext}
+</TypeWriter>

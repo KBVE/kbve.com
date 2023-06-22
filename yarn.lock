@@ -5629,10 +5629,10 @@ micromodal@^0.4.10:
   resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.4.10.tgz#d6f59c21d2f4a5af480f65909eb9608a1d558c73"
   integrity sha512-BUrEnzMPFBwK8nOE4xUDYHLrlGlLULQVjpja99tpJQPSUEWgw3kTLp1n1qv0HmKU29AiHE7Y7sMLiRziDK4ghQ==
 
-million@^2.4.8-beta.1:
-  version "2.4.8-beta.1"
-  resolved "https://registry.yarnpkg.com/million/-/million-2.4.8-beta.1.tgz#c6e0dc3c651040d60c57daca8c258e5701c73fd3"
-  integrity sha512-7SSiBx7qsqR6YcpFsQGkt5mggtKvNCElP7mk8CpBB6RWEty5aVMgwJGnN7Xv2tkll3KQ3gXmuQuxHa2vHgzJSw==
+million@^2.4.8-beta.3:
+  version "2.4.8-beta.3"
+  resolved "https://registry.yarnpkg.com/million/-/million-2.4.8-beta.3.tgz#4ce9c20739ca662d9c7963ce57f1da45cb89d99b"
+  integrity sha512-WG/YEZ/RFR7ln/yNzETrvrh6C0p0/72RRX4n2Oi56w80U2aHVhfqoQZUKAh7ks16p3igCaPcOZTyZdqV2ThS3A==
   dependencies:
     "@babel/core" "^7.21.0"
     "@babel/plugin-syntax-jsx" "^7.21.4"
@@ -6370,10 +6370,10 @@ react-hook-form@^7.45.0:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.45.0.tgz#df2bbc8cee598855a63ba446e0bb06f7c8120ccf"
   integrity sha512-AbHeZ4ad+0dEIknSW9dBgIwcvRDfZ1O97sgj75WaMdOX0eg8TBiUf9wxzVkIjZbk76BBIE9lmFOzyD4PN80ZQg==
 
-react-icons@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.9.0.tgz#ba44f436a053393adb1bdcafbc5c158b7b70d2a3"
-  integrity sha512-ijUnFr//ycebOqujtqtV9PFS7JjhWg0QU6ykURVHuL4cbofvRCf3f6GMn9+fBktEFQOIVZnuAYLZdiyadRQRFg==
+react-icons@^4.10.1:
+  version "4.10.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.10.1.tgz#3f3b5eec1f63c1796f6a26174a1091ca6437a500"
+  integrity sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
@@ -6780,10 +6780,10 @@ sass-formatter@^0.7.5:
   dependencies:
     suf-log "^2.5.3"
 
-sass@^1.63.4:
-  version "1.63.4"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.63.4.tgz#caf60643321044c61f6a0fe638a07abbd31cfb5d"
-  integrity sha512-Sx/+weUmK+oiIlI+9sdD0wZHsqpbgQg8wSwSnGBjwb5GwqFhYNwwnI+UWZtLjKvKyFlKkatRK235qQ3mokyPoQ==
+sass@^1.63.6:
+  version "1.63.6"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.63.6.tgz#481610e612902e0c31c46b46cf2dad66943283ea"
+  integrity sha512-MJuxGMHzaOW7ipp+1KdELtqKbfAWbH7OLIdoSMnVe3EXPMTmxTmlaZDCTsgIpPCs3w99lLo9/zDKkOrJuT5byw==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
