@@ -1,3 +1,9 @@
 ---
-
+import TypeWriterManga from "./TypeWriterManga"
+const { data } = Astro.props;
 ---
+<div class="min-h-[29px]">
+<TypeWriterManga client:only="react">
+    <slot />
+</TypeWriterManga>
+</div>
