@@ -1,0 +1,40 @@
+---
+layout: ../../../../layouts/theme/manga.astro
+sceneleft: /manga/fintech/abc/
+sceneright: ai-warning
+title: Artificial Intelligence
+category: Podcast
+client: Self
+publishDate: 2023-05-01 00:00:00
+img: https://images.unsplash.com/photo-1519638399535-1b036603ac77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2531&q=80
+effect: brightness-125
+character: https://i.imgur.com/dthJ2OT.png
+charactername: Protag
+charactertext: |
+  Artifical Intelligence is an interesting field for us to talk about.
+  It extends out into the machine learning and advance algorithims.
+repo:
+description: Lore for the first scnene
+tags:
+  - crime
+  - podcast
+  - darknet
+media:
+  72:
+    {
+      src: "yt",
+      id: "ttohYNSCkik",
+      description: "The largest bank robbery in history didn't require guns, masks, or threats. It was all done with careful planning, perfect timing, and a few computer keystrokes.",
+    }
+  3: { src: "yt", id: "ttohYNSCkik", description: "Episode 3?" }
+---
+{/*! The Protag Image is Missing */}
+{/*! The Background Image is Missing */}
+{/*TODO import Manga from "@lib/Manga/Manga.astro" */}
+import TypeWriter from "@lib/Manga/TypeWriter.astro";
+
+{/*TODO <TypeWriter data="Hello" />*/}
+
+<TypeWriter>
+{frontmatter.charactertext}
+</TypeWriter>
