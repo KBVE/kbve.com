@@ -986,6 +986,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: any
 } & { render(): Render[".md"] };
+"06-22.md": {
+	id: "06-22.md";
+  slug: "06-22";
+  body: string;
+  collection: "journal";
+  data: any
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1049,6 +1056,41 @@ declare module 'astro:content' {
 "conch/filler/index.mdx": {
 	id: "conch/filler/index.mdx";
   slug: "conch/filler";
+  body: string;
+  collection: "manga";
+  data: any
+} & { render(): Render[".mdx"] };
+"fintech/abc/a.mdx": {
+	id: "fintech/abc/a.mdx";
+  slug: "fintech/abc/a";
+  body: string;
+  collection: "manga";
+  data: any
+} & { render(): Render[".mdx"] };
+"fintech/abc/ai-warning.mdx": {
+	id: "fintech/abc/ai-warning.mdx";
+  slug: "fintech/abc/ai-warning";
+  body: string;
+  collection: "manga";
+  data: any
+} & { render(): Render[".mdx"] };
+"fintech/abc/b-datascientist.mdx": {
+	id: "fintech/abc/b-datascientist.mdx";
+  slug: "fintech/abc/b-datascientist";
+  body: string;
+  collection: "manga";
+  data: any
+} & { render(): Render[".mdx"] };
+"fintech/abc/b.mdx": {
+	id: "fintech/abc/b.mdx";
+  slug: "fintech/abc/b";
+  body: string;
+  collection: "manga";
+  data: any
+} & { render(): Render[".mdx"] };
+"fintech/abc/index.mdx": {
+	id: "fintech/abc/index.mdx";
+  slug: "fintech/abc";
   body: string;
   collection: "manga";
   data: any

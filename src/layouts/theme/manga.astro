@@ -6,6 +6,7 @@ import Lottie from '@c/Element/Lottie/Lottie.astro'; //    [Lottie]
 import TypeWriter from '@lib/typewriter.jsx';
 import TypewriterMacro from '@lib/TypewriterMacro.jsx';
 
+/*
 let right = 0;
 let left = 0;
 
@@ -32,6 +33,17 @@ else if(content.scene > 1)
 	rightURL = `${right}`;
 }
 
+*/
+
+let leftURL = '';
+let rightURL = '';
+
+if((content.sceneleft) && (content.sceneright))
+{
+	leftURL = content.sceneleft;
+	rightURL = content.sceneright;
+}
+
 ---
 
 
@@ -42,7 +54,7 @@ else if(content.scene > 1)
 		<div class="grow relative overflow-hidden flex flex-col h-screen m-0">
 		<!-- [SCENE]    ->  [BG] -->
 		<div
-			class="relative bg-cover overflow-hidden order-1 h-full"
+			class={`relative bg-cover overflow-hidden order-1 h-full ${content.effect}`}
 			style={{ backgroundImage: `url(${content.img})` }}
 		>
 			<div class="w-4/5"></div>
