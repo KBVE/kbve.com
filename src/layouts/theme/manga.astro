@@ -38,58 +38,43 @@ else if(content.scene > 1)
 let leftURL = '';
 let rightURL = '';
 
-if((content.sceneleft) && (content.sceneright))
-{
+if (content.sceneleft && content.sceneright) {
 	leftURL = content.sceneleft;
 	rightURL = content.sceneright;
 }
-
 ---
 
-
-
-<main data-taxi>
+<main class="">
 	<!-- Removed overflow-y-auto -->
-	<article data-taxi-view>
-		<div class="grow relative overflow-hidden flex flex-col h-screen m-0">
+	<article
+		class="grow relative overflow-hidden overscroll-y-none flex flex-col h-screen m-0"
+	>
 		<!-- [SCENE]    ->  [BG] -->
 		<div
 			class={`relative bg-cover overflow-hidden order-1 h-full ${content.effect}`}
 			style={{ backgroundImage: `url(${content.img})` }}
 		>
-			<div class="w-4/5"></div>
-			<div class="absolute bottom-0 right-0">
-			 <img src={content.character} class="flex" />
-			</div>
-
-			<div
-				class="absolute bg-black/60 bottom-0 rounded-3xl shadow-md w-full indent-8 visible p-4"
-			>
-			{(content.charactername ? content.charactername : '...')} <slot />    
-			</div>
+			
+			<slot />
+		
 		</div>
 
-
 		<div class="h-1/6 flex order-4 border border-indigo-500/[.5]">
-			<a href={leftURL} rel="prefetch"
-				class="w-1/2"
-			>
+			<a href={leftURL} rel="prefetch" class="w-1/2">
 				<Lottie
 					json="/assets/json/lottie/left.json"
 					styler="flex-none h-16 lg:h-32"
 				/>
-				<i class="fa-light fa-plus-large"></i>
+				<!-- <i class="fa-light fa-plus-large"></i> -->
 			</a>
 
 			<a href={rightURL} rel="prefetch" class="w-1/2">
-			
 				<Lottie
 					json="/assets/json/lottie/right.json"
 					styler="flex-none h-16 lg:h-32"
 				/>
-				<i class="fa-light fa-arrow-right-long"></i>
+				<!-- <i class="fa-light fa-arrow-right-long"></i> -->
 			</a>
-		</div>
 		</div>
 	</article>
 </main>

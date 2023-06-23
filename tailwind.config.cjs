@@ -48,6 +48,9 @@ module.exports = {
       zIndex: {
         '100': '100',
       },
+      scale: {
+        flip: '-1',
+      },
     },
   },
   corePlugins: {

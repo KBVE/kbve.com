@@ -1,18 +1,16 @@
 ---
 layout: ../../../../layouts/theme/manga.astro
-sceneleft: /manga/fintech/abc/ai-warning/
-sceneright: /manga/fintech/abc/b/
-title: Blockchain
+sceneleft: /manga/fintech/abc/b/
+sceneright: /manga/fintech/abc/cloud-machine/
+title: Cloud Community
 category: Podcast
 client: Self
 publishDate: 2023-05-01 00:00:00
 img: https://images.unsplash.com/photo-1519638399535-1b036603ac77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2531&q=80
 effect: brightness-125
-character: https://i.imgur.com/dthJ2OT.png
-charactername: ...
 charactertext: |
-  The next topic we can talk about is B for blockchain.
-  To help, I will bring in our data scientist.
+  Now let us get into the cloud computing. 
+  This technology handles all the processing within KBVE and our digital realm.
 repo:
 description: Lore for the first scnene
 tags:
@@ -33,9 +31,10 @@ import TypeWriter from "@lib/Manga/TypeWriter.astro";
 import MangaCharacter from '@lib/Manga/MangaCharacter.astro';
 
 <MangaCharacter
-  npc="protag"
-	className="absolute bottom-0 left-0 scale-x-flip"
+  npc="lucifurr"
+	className="absolute bottom-0 right-0 scale-x-flip "
 />
+
 
 <TypeWriter>
 {frontmatter.charactertext}
