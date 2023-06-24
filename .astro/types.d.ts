@@ -1002,6 +1002,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"06-23.md": {
+	id: "06-23.md";
+  slug: "06-23";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1189,6 +1196,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "npc": {
+"holy.mdx": {
+	id: "holy.mdx";
+  slug: "holy";
+  body: string;
+  collection: "npc";
+  data: any
+} & { render(): Render[".mdx"] };
 "lucifurr.mdx": {
 	id: "lucifurr.mdx";
   slug: "lucifurr";
