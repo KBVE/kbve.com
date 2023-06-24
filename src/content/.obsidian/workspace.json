@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/06-22.md",
+                "file": "journal/06-21.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/06-22.md",
+                "file": "journal/06-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/06-22.md",
+                "file": "journal/06-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/06-22.md"
+                "file": "journal/06-21.md"
               }
             }
           }
@@ -157,6 +157,8 @@
   },
   "active": "1a0f6c1e75a595c2",
   "lastOpenFiles": [
+    "journal/06-22.md",
+    "journal/06-23.md",
     "npc/protag/biometrics.mdx",
     "npc/protag/bio.mdx",
     "npc/protag",
@@ -167,9 +169,7 @@
     "manga/fintech/abc/blockchain.mdx",
     "manga/fintech/abc/a.mdx",
     "manga/fintech/abc/1.mdx",
-    "manga/fintech/cryptowolf",
     "journal/06-21.md",
-    "journal/06-22.md",
     "journal/06-20.md",
     "journal/06-18.md",
     "journal/06-17.md",
