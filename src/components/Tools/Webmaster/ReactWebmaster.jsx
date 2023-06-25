@@ -77,6 +77,7 @@ const ReactWebmaster = () => {
 	};
 
 	const ProcessMessage = () => {
+		console.log('Processing Domain');
 		return (
 			<>
 			
