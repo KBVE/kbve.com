@@ -3,79 +3,49 @@ import { elementButtonClick, BgWrapper } from '@lib/tools.jsx';
 //import { useStore } from '@nanostores/react';
 //import { placeData, data$ } from "@lib/appwrite";
 
-const GoogleSearchConsole = (__domain) => {
-	return (
-		<>
-			<div>
-				{elementButtonClick(
-					`https://search.google.com/search-console?resource_id=sc-domain:${__domain}`,
-					'Google Search Console',
-				)}
-			</div>
-		</>
-	);
-};
+const WebList = (domain) => [
+	{
+		url: `https://search.google.com/search-console?resource_id=sc-domain:${domain}`,
+		name: 'Google Search Console',
+		tag: 'seo',
+	},
+	{
+		url: `https://pagespeed.web.dev/analysis?url=${domain}`,
+		name: 'WebDev Page Speed',
+		tag: 'dev',
+	},
+	{
+		url: `https://app.ahrefs.com/v2-site-explorer/overview?mode=subdomains&target=${domain}`,
+		name: 'Ahrefs SEO Report',
+		tag: 'seo',
+	},
+	{
+		url: `https://www.google.com/search?q=site%3A${domain}`,
+		name: 'Google RAW Index',
+		tag: 'seo',
+	},
+	{
+		url: `https://www.kbve.com/search/?q=site%3A${domain}`,
+		name: 'Google 3rd Party Index',
+		tag: 'seo',
+	},
+	{
+		url: `https://builtwith.com/${domain}`,
+		name: 'Built With',
+		tag: 'dev',
+	},
+	{
+		url: `${domain}`,
+		name: '',
+		tag: '',
+	},
+];
 
-export const PageSpeed = (__domain) => {
-	return (
-		<>
-			<div>
-				{elementButtonClick(
-					`https://pagespeed.web.dev/analysis?url=${__domain}`,
-					'WebDev Page Speed',
-				)}
-			</div>
-		</>
-	);
-};
-
-export const AhrefTool = (__domain) => {
-	return (
-		<>
-			<div>
-				{elementButtonClick(
-					`https://app.ahrefs.com/v2-site-explorer/overview?mode=subdomains&target=${__domain}`,
-					'Ahrefs SEO Report',
-				)}
-			</div>
-		</>
-	);
-};
-
-export const GoogleRawIndex = (__domain) => {
-	return (
-		<>
-			<div>
-				{elementButtonClick(
-					`https://www.google.com/search?q=site%3A${__domain}`,
-					'Google Raw Index',
-				)}
-			</div>
-		</>
-	);
-};
-
-export const GoogleThirdPartyIndex = (__domain) => {
-	return (
-		<>
-			<div>
-				{elementButtonClick(
-					`https://www.kbve.com/search/?q=site%3A${__domain}`,
-					'Google 3rd Party Index',
-				)}
-			</div>
-		</>
-	);
-};
-
-export const BuiltWith = (__domain) => {
-	return (
-		<>
-			<div>
-				{elementButtonClick(`https://builtwith.com/${__domain}`, 'Built With')}
-			</div>
-		</>
-	);
+const ToolWrap = ({ domain, tag }) => {
+	return WebList(domain).map((e) => {
+		if (e.tag == tag)
+			return <div key={e.url}>{elementButtonClick(e.url, e.name)}</div>;
+	});
 };
 
 export const WebTools = (__domain) => {
@@ -83,24 +53,18 @@ export const WebTools = (__domain) => {
 		<>
 			<section className="">
 				<div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-					{SEOList(__domain)}
-					{GoogleSearchConsole(__domain)}
-					{PageSpeed(__domain)}
-					{AhrefTool(__domain)}
-					{BuiltWith(__domain)}
-					{GoogleRawIndex(__domain)}
-					{GoogleThirdPartyIndex(__domain)}
+					<SEOList domain={__domain} />
 				</div>
 			</section>
 		</>
 	);
 };
 
-export const SEOList = (__domain) => {
-		return (
+export const SEOList = ({domain}) => {
+	return (
 		<>
 			{' '}
-			<BgWrapper src='https://images.unsplash.com/photo-1682686581484-a220483e6291?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'>
+			<BgWrapper src="https://images.unsplash.com/photo-1682686581484-a220483e6291?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
 				<div className="rounded-lg p-8 md:p-12 mb-8">
 					<a
 						href="/#"
@@ -126,6 +90,9 @@ export const SEOList = (__domain) => {
 						/ SEM.
 					</p>
 
+					<div className='p-2'>
+						<ToolWrap domain={domain} tag="seo" />
+					</div>
 					<a
 						href="/#"
 						className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 "

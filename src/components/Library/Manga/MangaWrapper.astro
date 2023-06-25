@@ -1,0 +1,16 @@
+---
+const { content, data } = Astro.props;
+---
+<div
+			class={`relative bg-cover overflow-hidden order-1 h-full ${content.effect}`}
+			style={{ backgroundImage: `url(${content.img})` }}
+		>
+
+
+			<div
+				class="absolute bg-black/60 bottom-0 rounded-3xl shadow-md w-full indent-8 visible p-4"
+			>
+				{content.charactername ? content.charactername : '...'}
+				<slot />
+			</div>
+</div>
