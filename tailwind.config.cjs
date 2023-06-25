@@ -35,6 +35,7 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 5s linear infinite',
+        'pulse-short': 'pulse 5s ease-in-out',
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
@@ -47,6 +48,12 @@ module.exports = {
       },
       zIndex: {
         '100': '100',
+      },
+      scale: {
+        flip: '-1',
+      },
+      keyframes: {
+       
       },
     },
   },
