@@ -1,0 +1,24 @@
+---
+import { getEntry } from 'astro:content';
+const { className = "absolute bottom-0 right-0", img, content, npc } = Astro.props;
+
+let characterModel = '';
+
+if(img)
+{
+    characterModel = img;
+}
+
+if(npc)
+{
+    const npcProfile = await getEntry('npc', npc);
+    characterModel = npcProfile?.data.avatar;
+}
+
+---
+
+<div>
+    <div class={className}>
+        <img src={characterModel} class="flex" />
+    </div>
+</div>

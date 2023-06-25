@@ -27,13 +27,16 @@ media:
     }
   3: { src: "yt", id: "ttohYNSCkik", description: "Episode 3?" }
 ---
-{/*! The Protag Image is Missing */}
-{/*! The Background Image is Missing */}
-{/*TODO import Manga from "@lib/Manga/Manga.astro" */}
+
 import TypeWriter from "@lib/Manga/TypeWriter.astro";
+import MangaCharacter from "@lib/Manga/MangaCharacter.astro";
 
-{/*TODO <TypeWriter data="Hello" />*/}
-
+<MangaCharacter
+  npc="protag"
+	className="absolute bottom-0 left-0 scale-x-flip animate-pulse-short"
+/>
 <TypeWriter>
+
 {frontmatter.charactertext}
+
 </TypeWriter>
