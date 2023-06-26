@@ -2,7 +2,7 @@
 import * as Icons from '@mdi/js';
 import { mdiAlertCircleOutline } from '@mdi/js';
 //?     SVG Library
-const { name, className = "w-5 h-5" } = Astro.props;
+const { name, className = "w-6 h-6" } = Astro.props;
 const icon = Object.keys(Icons).includes(name)
 	? Icons[name]
 	: mdiAlertCircleOutline;
