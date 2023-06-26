@@ -3,8 +3,8 @@ const KBVEL = () => {
     <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="150"
-        height="50"
+        width="75"
+        height="25"
         viewBox="0 0 112.5 37.5"
       >
         <defs>

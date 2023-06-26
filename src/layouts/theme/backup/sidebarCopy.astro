@@ -6,21 +6,33 @@ import Socials from '@w/Socials.astro';
 import SVG from '@c/Library/SVG/SVG.astro';
 ---
 
-<aside
-	class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-default md:translate-x-0"
-	aria-label="Sidenav"
-	id="drawer-navigation"
->
+<aside class="self-start sticky top-0 md:basis-1/6 p-4 hidden md:block">
 	<!-- 
       * Sidebar - [START]
      -->
-	<div class="bg-offset overflow-y-auto py-5 px-3 h-full">
-		<img
-			src={'/assets/img/bot/kbve.png'}
-			alt="KBVE_BOT_LOGO"
-			class="w-32 h-32 mx-auto rounded-full shadow-2xl shadow-[#1c033c] hover:shadow-overdrive hover:shadow-[#1c033c] transition-shadow hover:animate-pulse"
-		/>
-
+	<div
+		class="mt-20 h-full p-3 space-y-2 bg-offset opacity-60 hover:opacity-100 ease-in-out duration-1000 min-w-[300px]"
+	>
+	<!-- https://kbve.com/assets/img/bot/ -->
+	<!-- #1c033c -->
+	<img src={'/assets/img/bot/kbve.png'} alt="KBVE_BOT_LOGO" class="w-32 h-32 mx-auto rounded-full shadow-2xl shadow-[#1c033c] hover:shadow-overdrive hover:shadow-[#1c033c] transition-shadow hover:animate-pulse" />
+		<!-- <div class="flex items-center p-2 space-x-4">
+			<img
+				src="https://source.unsplash.com/100x100/?portrait"
+				alt=""
+				class="w-12 h-12 rounded-full"
+			/>
+			<div>
+				<h2 class="text-lg font-semibold gradient-text">Menu</h2>
+				<span class="flex items-center space-x-1">
+					<a
+						rel="noopener noreferrer"
+						href="#"
+						class="text-xs hover:underline text-gray-400">View profile</a
+					>
+				</span>
+			</div>
+		</div> -->
 		<div class="divide-y divide-gray-700">
 			<ul class="pt-2 pb-4 space-y-1 text-sm">
 				<li>
@@ -35,61 +47,14 @@ import SVG from '@c/Library/SVG/SVG.astro';
 					</a>
 				</li>
 				<li>
-					<button
-						type="button"
-						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
-						aria-controls="dropdown-pages"
-						data-collapse-toggle="dropdown-pages"
+					<a
+						rel="noopener noreferrer"
+						href="/search/"
+						class="flex items-center p-2 space-x-3 rounded-md"
 					>
-						<SVG name="mdiAccountCircleOutline" />
-						<span class="flex-1 ml-3 text-left whitespace-nowrap">Account</span>
-						<svg
-							aria-hidden="true"
-							class="w-6 h-6"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-								clip-rule="evenodd"></path>
-						</svg>
-					</button>
-					<ul id="dropdown-pages" class="hidden py-2 space-y-2">
-						<li>
-							
-							<a
-								href="#"
-								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
-								>
-								<SVG name="mdiSecurity" />
-								&nbsp;
-								Settings
-								</a
-							>
-						</li>
-						<li>
-							<a
-								href="#"
-								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
-								>
-								<SVG name="mdiFactory" />
-								&nbsp;
-								Kanban</a
-							>
-						</li>
-						<li>
-							<a
-								href="#"
-								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
-								>
-								<SVG name="mdiCalendarImportOutline" />
-								&nbsp;
-								Calendar</a
-							>
-						</li>
-					</ul>
+						<SVG name="mdiMagnify" />
+						<span>Search</span>
+					</a>
 				</li>
 				<li>
 					<a
@@ -98,6 +63,10 @@ import SVG from '@c/Library/SVG/SVG.astro';
 						class="flex items-center p-2 space-x-3 rounded-md"
 					>
 						<SVG name="mdiDesktopClassic" />
+						<!-- <Icon
+							class="w-5 h-5"
+							name="mdi:desktop-classic"
+						/> -->
 						<span>Applications</span>
 					</a>
 				</li>
@@ -171,6 +140,7 @@ import SVG from '@c/Library/SVG/SVG.astro';
 						<span>Journal</span>
 					</a>
 				</li>
+				
 			</ul>
 			<ul class="pt-4 p-2 space-y-1 text-sm">
 				<li>
@@ -194,6 +164,7 @@ import SVG from '@c/Library/SVG/SVG.astro';
 					</a>
 				</li>
 			</ul>
+			
 		</div>
 
 		<!-- <div class="p-2">
