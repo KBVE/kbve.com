@@ -47,14 +47,14 @@ import KBVEL from "@c/Branding/KBVEL";
           <a href="/" class="flex items-center justify-between mr-4">
             <KBVEL />
           </a>
-          <form action="#" method="GET" class="hidden md:block md:pl-2">
+          <form action="/search/" method="GET" class="hidden md:block md:pl-2">
             <label for="topbar-search" class="sr-only">Search</label>
             <div class="relative md:w-64 lg:w-96">
               <div
                 class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
               >
                 <svg
-                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  class="w-5 h-5 text-gray-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,9 +68,9 @@ import KBVEL from "@c/Branding/KBVEL";
               </div>
               <input
                 type="text"
-                name="email"
+                name="q"
                 id="topbar-search"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5"
                 placeholder="Search"
               />
             </div>
@@ -110,7 +110,7 @@ import KBVEL from "@c/Branding/KBVEL";
           </button>
           <!-- Dropdown menu -->
           <div
-            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700 rounded-xl"
+            class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700 rounded-xl"
             id="notification-dropdown"
           >
             <div

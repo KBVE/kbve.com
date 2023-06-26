@@ -23,7 +23,7 @@ const   oracleEntries = await getCollection(data);
                       />
                       <div class="-space-y-1">
                         <a
-                          rel="noopener noreferrer"
+                          rel="noopener noreferrer prefetch"
                           href={`/${element}/${app.slug}`}
                           aria-label=""
                         >
@@ -148,7 +148,7 @@ const   oracleEntries = await getCollection(data);
                     <div class="flex flex-wrap p-2 justify-center text-xs ">
                         {app.data.tags.slice(0, 3).map((tags) => (
                           <a
-                            rel="noopener noreferrer"
+                            rel="noopener noreferrer prefetch"
                             href={`/t/${tags}`}
                             class="inline-block text-2xl font-semibold sm:text-3xl"
                           >
@@ -162,7 +162,7 @@ const   oracleEntries = await getCollection(data);
                       <p class="text-sm">
                         <span class="text-base font-semibold" />
                         <a
-                          rel="noopener noreferrer"
+                          rel="noopener noreferrer prefetch"
                           href={`/${element}/${app.slug}`}
                           aria-label=""
                         >
