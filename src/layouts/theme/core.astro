@@ -22,6 +22,29 @@ const url = new URL(Astro.url.pathname, Astro.site);
 <!DOCTYPE html>
 <html lang="en" class="motion-safe:scroll-smooth" data-theme="dark">
 	<head>
+		<!-- Light/Dark [START] -->
+		<script is:inline>
+			const themeSaved = localStorage.getItem('theme');
+
+			if (themeSaved) {
+				document.documentElement.dataset.theme = themeSaved;
+				//      document.documentElement.classList.add(themeSaved);
+			} else {
+				document.documentElement.dataset.theme = 'dark';
+				//      document.documentElement.classList.add("dark");
+			}
+
+			window
+				.matchMedia('(prefers-color-scheme: dark)')
+				.addEventListener('change', (event) => {
+					if (!localStorage.getItem('theme')) {
+						document.documentElement.dataset.theme = event.matches
+							? 'dark'
+							: 'light';
+					}
+				});
+		</script>
+		<!-- Light/Dark [END] -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="/favicon.ico" sizes="any" />
@@ -61,29 +84,7 @@ const url = new URL(Astro.url.pathname, Astro.site);
 		<meta name="twitter:card" content="summary_large_image" />
 		<!-- Meta Property Tags [END] -->
 
-		<!-- Light/Dark [START] -->
-		<script is:inline>
-			const themeSaved = localStorage.getItem('theme');
-
-			if (themeSaved) {
-				document.documentElement.dataset.theme = themeSaved;
-				//      document.documentElement.classList.add(themeSaved);
-			} else {
-				document.documentElement.dataset.theme = 'dark';
-				//      document.documentElement.classList.add("dark");
-			}
-
-			window
-				.matchMedia('(prefers-color-scheme: dark)')
-				.addEventListener('change', (event) => {
-					if (!localStorage.getItem('theme')) {
-						document.documentElement.dataset.theme = event.matches
-							? 'dark'
-							: 'light';
-					}
-				});
-		</script>
-		<!-- Light/Dark [END] -->
+		
 
 		<!-- [START] FlowBite -->
 
