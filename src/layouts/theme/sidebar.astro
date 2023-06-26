@@ -101,25 +101,63 @@ import SVG from '@c/Library/SVG/SVG.astro';
 						<span>Applications</span>
 					</a>
 				</li>
+				
 				<li>
-					<a
-						rel="noopener noreferrer"
-						href="/tools/"
-						class="flex items-center p-2 space-x-3 rounded-md"
-					>
-						<SVG name="mdiTools" />
-						<span>Tools</span>
-					</a>
-				</li>
-				<li>
-					<a
-						rel="noopener noreferrer"
-						href="/asset/"
-						class="flex items-center p-2 space-x-3 rounded-md"
+					<button
+						type="button"
+						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
+						aria-controls="dropdown-assets"
+						data-collapse-toggle="dropdown-assets"
 					>
 						<SVG name="mdiChartLine" />
-						<span>Assets</span>
-					</a>
+						<span class="flex-1 ml-3 text-left whitespace-nowrap">Assets</span>
+						<svg
+							aria-hidden="true"
+							class="w-6 h-6"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<ul id="dropdown-assets" class="hidden py-2 space-y-2">
+						<li>
+							
+							<a
+								href="/asset/"
+								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiSecurity" />
+								&nbsp;
+								Assets
+								</a
+							>
+						</li>
+						<li>
+							<a
+								href="/stock/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiFactory" />
+								&nbsp;
+								Stocks</a
+							>
+						</li>
+						<li>
+							<a
+								href="/crypto/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiCalendarImportOutline" />
+								&nbsp;
+								Crypto</a
+							>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a
@@ -132,67 +170,75 @@ import SVG from '@c/Library/SVG/SVG.astro';
 					</a>
 				</li>
 				<li>
-					<a
-						rel="noopener noreferrer"
-						href="/theory/"
-						class="flex items-center p-2 space-x-3 rounded-md"
-					>
-						<SVG name="mdiHumanFemaleBoy" />
-						<span>Theory</span>
-					</a>
-				</li>
-				<li>
-					<a
-						rel="noopener noreferrer"
-						href="/recipe/"
-						class="flex items-center p-2 space-x-3 rounded-md hover:shadow-overdrive transition-all"
-					>
-						<SVG name="mdiCookieOutline" />
-						<span>Recipe</span>
-					</a>
-				</li>
-				<li>
-					<a
-						rel="noopener noreferrer"
-						href="/news/"
-						class="flex items-center p-2 space-x-3 rounded-md"
+					<button
+						type="button"
+						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
+						aria-controls="dropdown-content"
+						data-collapse-toggle="dropdown-content"
 					>
 						<SVG name="mdiNewspaperVariantOutline" />
-						<span>News</span>
-					</a>
-				</li>
-				<li>
-					<a
-						rel="noopener noreferrer"
-						href="/journal/"
-						class="flex items-center p-2 space-x-3 rounded-md"
-					>
-						<SVG name="mdiNoteOutline" />
-						<span>Journal</span>
-					</a>
+						<span class="flex-1 ml-3 text-left whitespace-nowrap">Content</span>
+						<svg
+							aria-hidden="true"
+							class="w-6 h-6"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<ul id="dropdown-content" class="hidden py-2 space-y-2">
+						<li>
+							
+							<a
+								href="/theory/"
+								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiHumanFemaleBoy" />
+								&nbsp;
+								Theory
+								</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipe/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiCookieOutline" />
+								&nbsp;
+								Recipe</a
+							>
+						</li>
+						<li>
+							<a
+								href="/journal/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiNoteOutline" />
+								&nbsp;
+								Journal</a
+							>
+						</li>
+					</ul>
 				</li>
 			</ul>
 			<ul class="pt-4 p-2 space-y-1 text-sm">
 				<li>
 					<a
-						rel="noopener noreferrer"
-						href="/account/"
+						rel="noopener noreferrer prefetch"
+						href="/support/"
 						class="flex items-center space-x-3 rounded-md"
 					>
 						<SVG name="mdiAccountCircleOutline" />
-						<span>Account</span>
+						<span>Support</span>
 					</a>
 				</li>
-				<li>
-					<a
-						rel="noopener noreferrer"
-						href="/account/message/"
-						class="flex items-center space-x-3 rounded-md"
-					>
-						<SVG name="mdiEmailOutline" />
-						<span>Messages</span>
-					</a>
-				</li>
+				
 			</ul>
 		</div>
 
@@ -218,6 +264,24 @@ import SVG from '@c/Library/SVG/SVG.astro';
 							rel="noopener noreferrer"
 							href="/legal/"
 							class="text-xs hover:underline text-gray-400">Legal</a
+						>
+						&nbsp;
+						<a
+						rel="noopener noreferrer"
+						href="/legal/tos/"
+						class="text-xs hover:underline text-gray-400">Terms</a
+						>
+						&nbsp;
+						<a
+						rel="noopener noreferrer"
+						href="/legal/eula/"
+						class="text-xs hover:underline text-gray-400">EULA</a
+						>
+						&nbsp;
+						<a
+						rel="noopener noreferrer"
+						href="/legal/privacy/"
+						class="text-xs hover:underline text-gray-400">Privacy</a
 						>
 					</span>
 				</div>

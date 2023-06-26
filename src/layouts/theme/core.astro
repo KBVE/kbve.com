@@ -106,14 +106,15 @@ const url = new URL(Astro.url.pathname, Astro.site);
 	{(render == true) &&
 		<Shell>
 			<slot />
+				<!-- * Footer [START] -->
+			<footer
+				class="flex px-4 divide-y divide-gray-400 "
+			>
+				<Footer />
+			</footer>
+			<!--* Footer [END]  -->
 		</Shell>
-		<!-- * Footer [START] -->
-		<footer
-			class="flex px-4 divide-y divide-gray-400 "
-		>
-			<Footer />
-		</footer>
-		<!--* Footer [END]  -->
+
 	}
 		{(render == false) && 
 			<slot />
