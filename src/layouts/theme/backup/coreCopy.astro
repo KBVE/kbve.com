@@ -62,7 +62,7 @@ const url = new URL(Astro.url.pathname, Astro.site);
 		<!-- Meta Property Tags [END] -->
 
 		<!-- Light/Dark [START] -->
-		<script is:inline>
+		<script>
 			const themeSaved = localStorage.getItem('theme');
 
 			if (themeSaved) {
@@ -86,7 +86,12 @@ const url = new URL(Astro.url.pathname, Astro.site);
 		<!-- Light/Dark [END] -->
 
 		<!-- [START] FlowBite -->
-
+			<!-- 
+		<script
+			type="text/partytown"
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
+		></script>
+			-->
 		 <script
 			is:inline
 			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"
@@ -98,19 +103,27 @@ const url = new URL(Astro.url.pathname, Astro.site);
 		class="text-base bg-default text-default selection:bg-secondary selection:text-white"
 	>
 	{(render == true) &&
-		<Shell>
-			<slot />
-		</Shell>
-		<!-- * Footer [START] -->
-		<footer
-			class="flex px-4 divide-y divide-gray-400 "
-		>
-			<Footer />
-		</footer>
-		<!--* Footer [END]  -->
-	}
-		{(render == false) && 
-			<slot />
-			}
+        <Nav />
+
+        <div class="flex flex-col flex-grow md:flex-row">
+            <Sidebar />
+            <!--* MAIN Content Slot-->
+            <main class="">
+                <slot />
+            </main>
+        </div>
+
+        <!-- * Footer [START] -->
+        <footer
+            class="flex px-4 divide-y divide-gray-400 "
+        >
+            <Footer />
+        </footer>
+        <!--* Footer [END]  -->
+    }
+	{(render == false) && 
+		<slot />
+		}
+
 	</body>
 </html>
