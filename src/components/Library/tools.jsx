@@ -23,7 +23,7 @@ export const elementButtonClick = (__url, __text) => {
 		<>
 			<button
 				type="button"
-				className="m-2 px-8 py-3 font-semibold rounded bg-gray-100 text-gray-800"
+				className="m-1 px-8 py-3 font-semibold rounded bg-gray-100 text-gray-800 hover:bg-gray-300"
 				onClick={onClickUrl(__url)}
 			>
 				{__text}
@@ -39,7 +39,7 @@ export const BgWrapper = (props) => {
 				<div className="relative flex flex-col min-w-0 break-words bg-offset shadow-soft-xl rounded-2xl bg-clip-border">
 					<div className="flex-auto ">
 						<div className="flex flex-wrap">
-							<div className="rounded-lg shadow">
+							<div className="rounded-lg shadow w-full">
 								<div className="w-full max-w-full px-3">
 									<div className="border-black/12.5 shadow-soft-xl relative flex h-full min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-offset bg-clip-border p-4">
 										<div

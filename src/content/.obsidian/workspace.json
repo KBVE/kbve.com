@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4f999787d59ddac5",
+        "id": "5ff1833a740ebe9a",
         "type": "tabs",
         "children": [
           {
-            "id": "1a0f6c1e75a595c2",
+            "id": "a52b5814d499e0cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/06-21.md",
+                "file": "journal/06-25.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/06-21.md",
+                "file": "journal/06-25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/06-21.md",
+                "file": "journal/06-25.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/06-21.md"
+                "file": "journal/06-25.md"
               }
             }
           }
@@ -155,8 +155,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1a0f6c1e75a595c2",
+  "active": "a52b5814d499e0cf",
   "lastOpenFiles": [
+    "journal/06-25.md",
+    "journal/06-24.md",
+    "manga/fintech/abc/cloud-function.mdx",
+    "manga/fintech/abc/cloud-machine copy.mdx",
+    "manga/fintech/abc/cloud-machine.mdx",
+    "manga/fintech/abc/c copy.mdx",
+    "journal/06-21.md",
     "npc/holy.mdx",
     "journal/06-22.md",
     "journal/06-23.md",
@@ -165,12 +172,6 @@
     "npc/protag",
     "manga/fintech/abc/b-datascientist.mdx",
     "manga/fintech/abc/ai-warning.mdx",
-    "manga/fintech/abc/a copy.mdx",
-    "manga/fintech/abc/b.mdx",
-    "manga/fintech/abc/blockchain.mdx",
-    "manga/fintech/abc/a.mdx",
-    "manga/fintech/abc/1.mdx",
-    "journal/06-21.md",
     "journal/06-20.md",
     "journal/06-18.md",
     "journal/06-17.md",
@@ -191,7 +192,6 @@
     "journal/05-31.md",
     "journal/06-01.md",
     "journal/05-30.md",
-    "journal/05-29.md",
-    "journal/05-28.md"
+    "journal/05-29.md"
   ]
 }

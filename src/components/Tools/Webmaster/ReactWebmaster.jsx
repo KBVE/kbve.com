@@ -4,6 +4,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import DOMPurify from 'dompurify';
 import { WebTools } from './WebTools.jsx';
+import { elementErrorMessage } from '@lib/tools.jsx';
 
 //* [START] -> Domain Functions Below by Kory Becker
 function getHostName(url) {
@@ -63,18 +64,7 @@ const ReactWebmaster = () => {
 		}
 	};
 
-	const ErrorMessage = (__message) => {
-		return (
-			<>
-				<div role="alert space-y-4 p-4">
-					<div class="bg-red-500 font-bold rounded-t px-4 py-2">Warning!</div>
-					<div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
-						<p>{__message}</p>
-					</div>
-				</div>
-			</>
-		);
-	};
+	
 
 	const ProcessMessage = () => {
 		console.log('Processing Domain');
@@ -90,7 +80,7 @@ const ReactWebmaster = () => {
 			{domain && ProcessMessage()}				
 			<form className="max-w-xl m-auto py-2" onSubmit={handleSubmit(onSubmit)}>
 				
-				{webmasterError && ErrorMessage(webmasterError)}
+				{webmasterError && elementErrorMessage(webmasterError)}
 				<label className="font-medium block mt-4 gradient-text">
 					Domain Address:{' '}
 				</label>
@@ -100,7 +90,7 @@ const ReactWebmaster = () => {
 					placeholder="https://kbve.com/"
 					{...register('domain', { required: 'Please add your domain!' })}
 				/>
-				{errors.domain && ErrorMessage(errors.domain.message)}
+				{errors.domain && elementErrorMessage(errors.domain.message)}
 				<button
 					className="mt-8 w-full bg-gradient-to-br from-indigo-500 via-fuchsia-400 to-orange-500 items-center rounded-xl shadow-2xl cursor-pointer  overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out border py-3 px-6 font-semibold text-md"
 					type="submit"

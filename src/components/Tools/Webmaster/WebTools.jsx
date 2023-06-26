@@ -1,5 +1,5 @@
 import React from 'react';
-import { elementButtonClick, BgWrapper } from '@lib/tools.jsx';
+import { elementButtonClick,  BgWrapper } from '@lib/tools.jsx';
 //import { useStore } from '@nanostores/react';
 //import { placeData, data$ } from "@lib/appwrite";
 
@@ -43,7 +43,7 @@ const WebList = (domain) => [
 
 const ToolWrap = ({ domain, tag }) => {
 	return WebList(domain).map((e) => {
-		if (e.tag == tag)
+		if (e.tag === tag)
 			return <div key={e.url}>{elementButtonClick(e.url, e.name)}</div>;
 	});
 };
@@ -52,7 +52,7 @@ export const WebTools = (__domain) => {
 	return (
 		<>
 			<section className="">
-				<div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+				<div className="py-8 px-4 mx-auto">
 					<SEOList domain={__domain} />
 				</div>
 			</section>
@@ -82,17 +82,22 @@ export const SEOList = ({domain}) => {
 						</svg>
 						Tutorial
 					</a>
-					<h1 className="text-gray-900 dark:text-white text-md font-extrabold mb-2">
-						SEO / Marketing Quick Links
+					<h1 className=" text-md font-extrabold mb-2">
+						Webmaster Quick Links
 					</h1>
-					<p className="text-sm font-normal text-gray-500">
-						Links to 3rd party applications and software to help manage your SEO
-						/ SEM.
+					<p className="text-sm font-normal">
+						These are quick links to 3rd party applications and software to help manage your website.
 					</p>
 
 					<div className='p-2'>
 						<ToolWrap domain={domain} tag="seo" />
 					</div>
+
+					
+					<div className='p-2'>
+						<ToolWrap domain={domain} tag="dev" />
+					</div>
+
 					<a
 						href="/#"
 						className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 "
