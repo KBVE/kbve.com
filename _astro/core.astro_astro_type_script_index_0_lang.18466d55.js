@@ -1,1 +1,0 @@
-const e=localStorage.getItem("theme");document.documentElement.dataset.theme=e||"dark",window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",(e=>{localStorage.getItem("theme")||(document.documentElement.dataset.theme=e.matches?"dark":"light")}));
