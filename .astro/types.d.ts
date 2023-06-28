@@ -1030,6 +1030,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"06-28.md": {
+	id: "06-28.md";
+  slug: "06-28";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1294,6 +1301,13 @@ declare module 'astro:content' {
 "galaxia.mdx": {
 	id: "galaxia.mdx";
   slug: "galaxia";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
+"rareicon.mdx": {
+	id: "rareicon.mdx";
+  slug: "rareicon";
   body: string;
   collection: "project";
   data: any
