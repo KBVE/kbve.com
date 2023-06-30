@@ -15,14 +15,21 @@ tags:
   - roguejester
 ---
 
+import Details from '@w/Details.astro';
+
 ## Information
 
-We are currently testing the Git LFS and the CI/CD for the Steam release.
+We are currently testing for the Steam Demo release.
+
 We definitely think the dark and darker style but set in the cyberpunk future is the best way to describe the path the game will take.
 
 ---
 
-## Ideas
+## Notes
+
+### Ideas
+
+<Details data="Ideas">
 
 - Get Unity Assets for Robots NPC Bosses etc `low poly`
 - Add more levels to the game
@@ -33,178 +40,35 @@ We definitely think the dark and darker style but set in the cyberpunk future is
 - Game is in space We use Space SkyBox
 - Leveling Up System - MAX HP increases when player levels up
 - Talent Tree - TBD
-- Add MiniMap - UI
 - Upgrade System - Upgrade Weapons
 - New Weapons Added
 - New Classes Added - Each class got unique ability
 - SFX GunShots - `NO BGX`
+- Original Ticket for the Theme Song Idea https://github.com/KBVE/kbve.com/issues/43
 
----
+</Details>
 
-## Errors
+### Log
 
-Current errors for Rogue Jester that we need to resolve:
-
-### Build Error
-
-These are the active build errors for the RJ application or CI/CD for the project.
-
-#### Build Error 1:
-
-```
-
-[error] Error: unrecognized project! Please check your app configuration - if this is a Unity application, We expect your "Project Subdirectory" to be set to the path which directly contains the ProjectSettings and Assets directories. For a native app, this should be set to the path which directly contains the project file (.xcodeproj, project.properties, etc).
-
-```
-
-
-### Application Error
-
-Application Error 1:
-
-```
-
-Error: Only Capsule and Sphere Colliders are supported by the Lean ability.
-UnityEngine.Debug:LogError (object)
-Opsive.UltimateCharacterController.FirstPersonController.Character.Abilities.Lean:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/FirstPersonController/Character/Abilities/Lean.cs:78)
-Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:InitializeAbilities () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:340)
-Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:AwakeInternal () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:301)
-Opsive.UltimateCharacterController.Character.CharacterLocomotion:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/CharacterLocomotion.cs:310)
-
-```
-
-
-Error 2:
-
-```
-
-Error: Only Capsule and Sphere Colliders are supported by the Item Pullback ability.
-UnityEngine.Debug:LogError (object)
-Opsive.UltimateCharacterController.ThirdPersonController.Character.Abilities.Items.ItemPullback:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/ThirdPersonController/Character/Abilities/ItemAbilities/ItemPullback.cs:54)
-Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:InitializeItemAbilities () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:366)
-Opsive.UltimateCharacterController.Character.UltimateCharacterLocomotion:AwakeInternal () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/UltimateCharacterLocomotion.cs:302)
-Opsive.UltimateCharacterController.Character.CharacterLocomotion:Awake () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/CharacterLocomotion.cs:310)
-
-```
-
-Error 3:
-
-```
-
-UnassignedReferenceException: The variable m_AvailableModels of ModelManager has not been assigned.
-You probably need to assign the m_AvailableModels variable of the ModelManager script in the inspector.
-Opsive.UltimateCharacterController.Character.ModelManager.Start () (at Assets/Opsive/UltimateCharacterController/Scripts/Character/ModelManager.cs:62)
-
-```
-
-Error 4:
-
-```
-
-NullReferenceException: Object reference not set to an instance of an object
-Opsive.UltimateInventorySystem.UI.Currency.MultiCurrencyView.DrawCurrency (Opsive.UltimateInventorySystem.Exchange.CurrencyCollection currencyCollection) (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Currency/MultiCurrencyView.cs:62)
-Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.CurrencyUpdate (Opsive.UltimateInventorySystem.Exchange.CurrencyOwnerBase currencyOwner) (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:86)
-Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.Initialize () (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:63)
-Opsive.UltimateInventorySystem.UI.Monitors.CurrencyOwnerMonitor.Start () (at Assets/Opsive/UltimateInventorySystem/Scripts/UI/Monitors/CurrencyOwnerMonitor.cs:38)
-
-```
-
-### Closed
-
-The issues and errors that have been closed.
-
-#### Unity Cloud Error 1
-
-`Unity Cloud Error 1` was the failure of the Unity DevOps / Build tools to automatically detect the current version of Unity that our project sent.
-
-```
-Something went wrong when submitting your build(s)
-Could not auto Default Windows desktop 64-bit detect unity version. Failed to parse Unity Version from ProjectSettings/ProjectVersion.txt. Reason: The specified revision was not found serverpath:/ProjectSettings/ProjectVersion.txt#br:main@roguejester@KBVE@cloud
-
-```
-
-
-
----
-
-## Integration
-
-Services and concepts that we would like to integrate `RJ` with.
-
-### Steam
-
-These are the official Steam Tasks
-
-- [ ] Library Capsule
-
-Library Capsule \*600px wide x 900px tall
-
-- `Design`: This should be graphically-centric and give the user some sense of the experience. Please use the key art that is being used for any retail boxes or marketing as well as the name of your game, ideally using the same logo / title as printed on any retail or marketing. Do not include quotes, marketing copy, or other strings of text beyond the title of your application. The art should depict something important about your product. The logo should be easily legible against the background.
-- `Usage`: This image is primarily used in the library overview and collection views
-- `Sizes`: 600px x 900px (an additional half-size 300px x 450px PNG will be auto-generated from larger file)
-
-- [ ] Library Hero
-
-Library Hero \*3840px wide x 1240px tall
-The hero graphic and logo are layered and move independently when the page is scrolled, creating a subtle parallax effect. Consider how the product logo will be placed on top of the hero image (left bottom corner or centered). You'll want to ensure the logo is both visible and legible against the background.
-
-- `Design`:
-  This should be a visually rich image that is easily recognizable. For best results, please use the key art that is used for any retail boxes or marketing. Do not include quotes or other strings of text.
-
-At the center of the template is a "safe area" of 860px x 380px. This area will remain uncropped across scaling and resizing of the Steam client window. Artwork should extend across the entire template, but critical content should be within the safe area. For ex: a main character's face should be entirely in the safe area or risk being cropped.
-
-- `Usage`:
-  Appears at the top of a user's library details page for this product.
-
-- `Sizes`:
-  3840px x 1240px (an additional half-size 1920px x 620px PNG will be auto-generated from larger file)
-
-- [ ] Library Logo
-
-Library Logo \*1280px wide x 720px tall
-
-After upload, you can use the preview tool to select the logo's position. Options include: left bottom corner, centered top, centered middle, and centered bottom.
-
-Note: If a hero graphic and logo are not uploaded, the hero area will display a screenshot from the store, with the application name in text overlaid in the bottom left corner.
-
-- `Design`:
-  For best results, use the logo that is being used for any retail boxes or marketing. You’ll want to ensure the logo is both visible and legible against the hero graphic background, sometimes a drop shadow can help. The PNG image should have a transparent background.
-
-- `Usage`:
-  Appears at the top of a user's library details page for this product, placed on top of the hero graphic.
-
-- `Sizes`:
-  1280px x 720px (an additional half-size 640 x 360px PNG will be auto-generated from larger file) Ensure that the logo extends the full width of the PNG, without extra padding.
-
-- [ ] Placement Tool
-
-The four green anchor points relate to the four possible positions your logo can be pinned. Bottom-left, top center, mid-center, and bottom-center.
-
-In most cases, the bottom-left position should be used.
-
-You may want a centered logo if...
-
-Your logo is symmetrical or close to symmetrical or a logo that's contained in a circle.
-Your background header image has more of the interesting parts on the outside edges and the center has areas of rest.
-Your background header image is symmetrically balanced and positioning the logo in the bottom-left throws the balance off.
-Once you have determined your logo position, use the blue logo box to size your logo appropriately. The blue box acts as a bounding box for the logo, it will not scale outside this box. The right edge of the blue box determines the maximum proportion the logo will scale to compared to the background hero graphic (this is useful if there is background art you don’t want the logo to overlap.) The top edge of the blue box determines the maximum size the logo will scale to (this is useful if you are finding the logo is too big when the window has been scaled up.)
-
-Typically you can take the top edge and leave it higher than the bounds of the logo. Play around with it and try scaling your window to get a sense for how your logo will adjust as the window scale changes.
-
-Once you are happy with your logo position, proportion, and scale, hit the save button to commit your changes.
-
-### TODO
-
-- [x] ~Create `Concept` Issue Ticket~
-- [x] ~RogueJester - (init) - Start the initialization of RogueJester~
-- [x] ~Map out the ideas~
-- [x] Update SkyBox
 - [ ] h0lybyte: Integrate the React with Unity
-- [x] Player Level Up System(max level TBD)
-- [x] HP Getting Upgraded on Level
-- [x] Added Currency inside game(killed enemies drop currency)
-- [x] Currency is saved trought out scene
 - [ ] Added + 2 more levels(total levels 4)
+- [ ] Enemy Ai Improved
+- [ ] Upgrade System
+- [ ] Boss Fight
+- [ ] When player drops down he doesent die. Game needs to reset.
+- [ ] Re-design Menu so responsive for more platforms
+- [ ] Move Gameplay Actions into Button for android usage
+- [ ] Displaying Stats in the game panel (TBD)
+- [ ] Inventory System
+- [ ] When player dies he loses items that he bring with him
+- [ ] Main Menu Inventory(player select what items to bring for the next level)
+- [ ] Inventory data values stored in JSON
+- [ ] New VFX for weapons
+- [ ] InventoryDisplaying in Menu
+- [ ] Steam Integration [Git Issue](https://github.com/KBVE/kbve.com/issues/366)
+
+<Details data="Closed">
+
 - [x] User Interface all the values are displayed on the screen or in the menu
 - [x] Main Menu (Modern Menu Designed)much more fun to interact with!
 - [x] LoginSceneDesign
@@ -213,298 +77,203 @@ Once you are happy with your logo position, proportion, and scale, hit the save 
 - [x] Scaling UI in game for all devices
 - [x] Level SelectionScene and Functionality
 - [x] SceneFlow
-- [ ] Enemy Ai Improved
-- [ ] Upgrade System
-- [ ] Boss Fight
-- [ ] When player drops down he doesent die. Game needs to reset.
-- [ ] Mobile Controls movement adopted for android
-- [ ] Re-design Menu(so responsive for more platforms)
-- [ ] Move Gameplay Actions into Button for android usage
-- [ ] Displaying Stats in the game panel (TBD)
-- [ ] Inventory System
-- [ ] When player dies he loses items that he bring with him
-- [ ] Main Menu Inventory(player select what items to bring for the next level)
-- [ ] Inventory data values stored in JSON
-- [ ] New vfx for weapons
-- [ ] InventoryDisplaying in Menu
+- [x] Player Level Up System(max level TBD)
+- [x] HP Getting Upgraded on Level
+- [x] Added Currency inside game(killed enemies drop currency)
+- [x] Currency is saved trought out scene
+- [x] ~Create `Concept` Issue Ticket~
+- [x] ~RogueJester - (init) - Start the initialization of RogueJester~
+- [x] ~Map out the ideas~
+- [x] Update SkyBox
 
-### Boundary
-
-- h0lybyte: Level3
-- ZaneRage: Everything Else
-
-- Should create a header!
-
-### Theme Song
-
-- [Original Ticket for the Theme Song Idea](https://github.com/KBVE/kbve.com/issues/43)
-
-The game will have one exclusive theme song, which we will refer to as `Going to Work`
-
-Describe the music topic
-Music Theory: "Going to work"
-
-00:00 : 00:30 - Intro Lofi Punk
-00:29 - 01:00 - Verse1 from PeacefulFire
-01:00 - 01:25 - Longer Chorus Phuck Work
-01:15 - 01:30 - Verse2 from PeacefulFire
-
-Sample [1](https://www.youtube.com/watch?v=Wqb39YhgTgs)
-
-PeacefulFire
-
-```
-#I'm here for the company
-#Not here for the capital
-#Been agitate lately
-#Actually Anti-affable, maybe
-
-```
+</Details>
 
 ---
 
-### Notes
+### Journal
 
-#### 6-26-2023
+Collective thoughts, concepts and ideas for the RogueJester FPS.
+
+---
+
+#### J13
+
+06-26-2023
+
+@h0lybyte wants to organize the notes a bit more.
+The goal would be to make the notes a bit easier to read and flow.
+@ziggy added Mermaid, which I believe we should use moving forward with our notes.
+
+Updated the Project file for RogueJester
+
+
+```mermaid
+graph
+
+id1(("This is an idea"))
+id1 --> A{{"Write Ideas"}}
+id1 --> id2{{"Create Proof of Concept"}}
+A --> B[" Add into MDX Document"]
+B --> C[" Slot a meeting to talk"]
+B --> D[" Prepare small summary"]
+C --> E[" Notify anyone involved within 72H"]
+id2 --> AA[" Render a public PoC to display"]
+
+
+```
+
+#### J12
 
 RogueJester CheckIn 6-26-2023
+
 -> Updates:
 
-	> Kanban Review/Backlog Grooming : https://github.com/orgs/KBVE/projects/3/views/5
-  
-  > Issue 70 (currency) : https://github.com/KBVE/roguejester/issues/70
-  andsam to create a concept document on the currency (Khash,Credd,Coupon)
-  h0ly to shift Credd and Coupons to API and leave Khash local
+Kanban Review/Backlog Grooming : https://github.com/orgs/KBVE/projects/3/views/5
 
-  > h0ly hidden gems : https://www.humblebundle.com/software/unity-hidden-gems-software
+Issue 70 currency : https://github.com/KBVE/roguejester/issues/70 andsam to create a concept document on the currency Khash,Credd,Coupon
+
+h0ly to shift Credd and Coupons to API and leave Khash local
+
+h0ly hidden gems : https://www.humblebundle.com/software/unity-hidden-gems-software
 
 -> Next Actions
- -> h0ly doing Cutscene Work 
-  -https://github.com/KBVE/roguejester/issues/68
-  -https://github.com/KBVE/roguejester/issues/197
+-> h0ly doing Cutscene Work
+-> https://github.com/KBVE/roguejester/issues/68
+-> https://github.com/KBVE/roguejester/issues/197
 
--> h0ly + andsam review github kbve issue Logs 
--> silver working on Island set, weapon design, assets for Island 
+-> h0ly + andsam review github kbve issue Logs
+-> silver working on Island set, weapon design, assets for Island
 
--> andsam configuring environment
--> andsam to high level set design for Town 
- 
+-> andsam configuring environment -> andsam to high level set design for Town
 
-  
+```mermaid
+graph
 
+A["Updates"] --> B["Kanban Review/Backlog Grooming"]
+B --> C["Issue 70 currency"]
+C --> D["andsam to create a concept document on the currency "]
+D --> E["h0ly to shift Credd and Coupons to API and leave Khash local"]
+B --> F["h0ly hidden gems"]
+B --> K["h0ly + andsam review github kbve issue Logs"]
+B --> L["silver working on Island set, weapon design, assets for Island"]
+L --> M["andsam configuring environment"]
+M --> N["andsam to high level set design for Town"]
 
-#### 6-23-2023
+click C "https://github.com/KBVE/roguejester/issues/70" "Currency Issue"
+click F "https://www.humblebundle.com/software/unity-hidden-gems-software" "Gems Bundle"
+```
+
+Next Action
+
+```mermaid
+graph
+
+A["Next Actions"] --> B["h0ly doing Cutscene Work"]
+B --> C["Issue 68"]
+B --> D["Issue 197"]
+D --> F
+C --> E["Loading Core Manga Scene"]
+C --> F["Preparing Manga Scene in React"]
+D --> G["Character MDX Files"]
+
+click C "https://github.com/KBVE/roguejester/issues/68" "Issue 68"
+click D "https://github.com/KBVE/kbve.com/issues/197" "Issue 197"
+```
+
+---
+---
+---
+
+### Archive
+
+We will migrate older journal entries into here below.
+
+<Details data="J11">
+
+#### J11
+
+##### 06-23-2023
 
 RogueJester CheckIn 6-23-2023
+
 -> Updates:
 
-	>> Humanoid Animations and Aiming has been fixed -silver
-	>> Turret and Customization for Assets -silver
+> > Humanoid Animations and Aiming has been fixed -silver
+> > Turret and Customization for Assets -silver
 
-	>> Town Generation Work to be scheduled -andsam
-	>> High Level Roadmap In Progress, Ready for 6/23 -andsam
-	
-	>> Review of Humble Bundle Unity Verified Hidden Gems -bell
-	
+> > Town Generation Work to be scheduled -andsam
+> > High Level Roadmap In Progress, Ready for 6/23 -andsam
 
--> Discussion Topics
-  >> Level and Set Design Meeting scheduled for next RogueJester Meeting 6-26
-
--> Next Actions:
-Decision on Humble Pack
- https://www.humblebundle.com/software/unity-hidden-gems-software
+> > Review of Humble Bundle Unity Verified Hidden Gems -bell
+> > -> Discussion Topics
+> > Level and Set Design Meeting scheduled for next RogueJester Meeting 6-26
+> > -> Next Actions:
+> > Decision on Humble Pack
+> > https://www.humblebundle.com/software/unity-hidden-gems-software
 
 New Scheduling Set Up
 
-#### 6-19-2023
+</Details>
+
+<Details data="J10">
+
+#### J10
+
+##### 06-19-2023
 
 RogueJester CheckIn 6-19-2023
 -> Previous Updates:
 
-	>>Github LFS Resolved, Using Unity Plastic SCM to handle Build Maintenance. via h0ly + Silver
-
-	>>Town Generation Work via Silver
+> > Github LFS Resolved, Using Unity Plastic SCM to handle Build Maintenance. via h0ly + Silver
+> > Town Generation Work via Silver
 
 -> Discussion Topics
-	-> Town +Island Scene Combination
-		--> proposal of town/scene combination is aligned to open-world concept
-		--> assets within each sub-scene would be appropriate these sections
-		--> Conclusion Is:  Faraway sub-island with town/city assets on it will be created, and will remain to create the illusion of faraway city for the player in the Island Scene
-		
-	-> Night Scene - Tutorial
-		--> Gives the player an opportunity to acclimate to the game and its controls.
-	
-	-> HumbleBundle Assets 
-		-> Lowpoly's elapsed on 6/16 WOMP WOMP : 
-	https://animpic-studio.art/ 
-	
-		-> Eldamar Assets will be loaded in later today / tomorrow
-		
-		-> Unity Hidden Gems ends 6/29
-		-> https://www.humblebundle.com/software/unity-hidden-gems-software
-		
-	-> Writing Direction
-		-> Discussion Pending
-	
-	
+-> Town +Island Scene Combination
+--> proposal of town/scene combination is aligned to open-world concept
+--> assets within each sub-scene would be appropriate these sections
+--> Conclusion Is: Faraway sub-island with town/city assets on it will be created, and will remain to create the illusion of faraway city for the player in the Island Scene
 
-### Journal
+-> Night Scene - Tutorial
+--> Gives the player an opportunity to acclimate to the game and its controls.
 
-- Collective thoughts, concepts and ideas for the RogueJester FPS.
-- Ideas How to Convert 1. System.Text.Json namespace to convert C# objects to JSON and vice-versa.
-- Explained in this [link](https://www.tutorialsteacher.com/articles/convert-object-to-json-in-csharp#:~:text=The.NET%205%20framework%20provides%20the%20built-in%20JsonSerializer%20class,built-in%20JsonSerializer%20class%20that%20converts%20objects%20to%20JSON)
-- Thus, convert the JSON string to class object in C# using the `JsonSerializer.Deserialize () method`.
+-> HumbleBundle Assets
+-> Lowpoly's elapsed on 6/16 WOMP WOMP :
+https://animpic-studio.art/
+-> Eldamar Assets will be loaded in later today / tomorrow
+-> Unity Hidden Gems ends 6/29
+-> https://www.humblebundle.com/software/unity-hidden-gems-software
 
-## Steamworks
+-> Writing Direction
+-> Discussion Pending
 
-I was looking through the notes and they recommend that we use SteaMworks SDK 1.53 aka Release 20.1.0
+</Details>
 
-From SteamWorks Github IO [Install](https://steamworks.github.io/installation/#unity-instructions)
+<Details data="J9">
 
-They stated three options, A, B and C. I think we should go with Option A?
+#### J9
 
-Option A: `.unitypackage`
-Download the .unitypackage from the Releases page on GitHub.
-Import everything into your project
-[Release](https://github.com/rlabrecque/Steamworks.NET/releases)
+##### 06-10-2023
 
-So I will grab the unitypackage and then proceed to import it.
+Older Entry has not been found saved within the cloud.
 
-I wonder if I will need to apply to the Steam store to get an API key? Hmm.
 
-As we wait, I will update the pipeline for the Windows build.
+</Details>
 
-Steam Store [Docs](https://partner.steamgames.com/doc/store)
+<Details data="J8">
 
-After reviewing the scopes that they provide, we are building the `demo` , just need to confirm that with external people.
+#### J8
 
-## Player Global Values
+##### 05-10-2023
 
-Original as of 1.2.x
+Older Entry has not been found saved within the cloud.
 
-```c#
-using System.Collections;
-using System.Collections.Generic;
-using Unity.FPS.Game;
-using UnityEngine;
+</Details>
 
-public class GlobalValue : MonoBehaviour
-{
-    public static int PickPlayerID {
-        get { return PlayerPrefs.GetInt("PickPlayerID", 0); }
-        set { PlayerPrefs.SetInt("PickPlayerID", value); }
-    }
+<Details data="J7">
 
-    public static int SavedCoins
-    {
-        get { return PlayerPrefs.GetInt("Coins", 0); }
-        set
-        {
-            PlayerPrefs.SetInt("Coins", value);
-        }
-    }
+#### J7
 
-    public static float SavedCurrentExp
-    {
-        get { return PlayerPrefs.GetFloat("CurrentEXP", 10); }
-        set
-        {
-            PlayerPrefs.SetFloat("CurrentEXP", value);
-        }
-    }
-
-    public static int PlayerLevel
-    {
-        get { return PlayerPrefs.GetInt("PlayerLevel", 1); }
-        set
-        {
-            PlayerPrefs.SetInt("PlayerLevel", value);
-        }
-    }
-
-    public static float MaxHp
-    {
-        get { return PlayerPrefs.GetFloat("PlayerMaxHp", 100); }
-        set
-        {
-            PlayerPrefs.SetFloat("PlayerMaxHp", value);
-        }
-    }
-
-}
-```
-
-I am thinking we can add these to the PlayerPrefs
-
-```c#
-
-    public static string PlayerName {
-        get {   return PlayerPrefs.GetString("PlayerName", "Guest");   }
-        set {   PlayerPrefs.SetString("PlayerName", value);   }
-    }
-
-```
-
-Can you do nested functions?
-
-```c#
-
-    public static string _pN {
-        get { return PlayerName(); }
-        set { PlayerName(); }
-    }
-
-```
-
-I will test case these tonight, when I get a chance to mess around with after the main branch builds.
-
-Okay so I went ahead and added a couple more things to the `GlobalValue.cs` file:
-
-Lets start with the PlayerName, PlayerJWT and PlayerEmail
-
-```c#
-    public static string PlayerName {
-        get {   return PlayerPrefs.GetString("PlayerName", "Guest");   }
-        set {   PlayerPrefs.SetString("PlayerName", value);   }
-    }
-
-    public static string PlayerJWT {
-        get {   return PlayerPrefs.GetString("PlayerJWT", "Guest");   }
-        set {   PlayerPrefs.SetString("PlayerJWT", value);   }
-    }
-
-    public static string PlayerEmail {
-        get {   return PlayerPrefs.GetString("PlayerEmail", "Guest");   }
-        set {   PlayerPrefs.SetString("PlayerEmail", value);   }
-    }
-```
-
-So would we call them like this?
-
-```c#
-
-//1
-GlobalValue.PlayerJWT.Set("JWTHere");
-
-//2
-GlobalValue.PlayerJWT = "JWTHere";
-
-//3
-GlobalValue.PlayerJWT.set("JWTHere?");
-
-```
-
-Now I am thinking it might be `//2` based upon what the other references to GlobalValue, so I suppose we could try.
-
-I will also change the `PlayerName`
-
-function to PlayerUsername , to keep within the naming flow.
-
-Also do we need to call PlayerPrefs.Save();
-
-? Does GlobalValue already do that?
-
-## J7
+#### 12-10-2022
 
 We decided to remove almost all of the Unity MicroFPS codebase and introduced Opsive controller / inventory system.
 
@@ -512,95 +281,120 @@ The reason we decided to switch over is because it will speed up development and
 
 I believe majority of this week will be spent on focusing on integrating both Opsive plugins into the game. Thus all of Patch 1.2.x will be towards getting everything for the player done.
 
-## Error inside the GameManager
-
 So we were working on the pipeline, durning the development hell that is Unity, and ran into a "Build" success but a "Build and Run" failure.
+
 We spent some time re-merging the base, switching branches, thinking it might be a cluster of different issues.
 Silver comes in clutch and finds out that there was a `duplicate on GameManager Prefab Replacer , 2 of the same script on same object`.
 
-## J6
+</Details>
+
+<Details data="J6">
+
+#### J6
+
+##### 05-10-2023
+
+Older Entry has not been found saved within the cloud.
+
+</Details>
+
+<Details data="J5">
+
+#### J5
+
+##### 11-15-2022
 
 - Had an issue with the basing earlier in the day. We will split the branches further, to avoid conflicts and issues when rebasing / merging branches.
 - When migrating from the public to private repo, there were some issues with `secrets` and CI/CD, these issues are still open and should be resolved this week.
 
-## J5
+##### 11/14/2022
 
-- 11/15/2022
-- Had an issue with the basing earlier in the day. We will split the branches further, to avoid conflicts and issues when rebasing / merging branches.
-- When migrating from the public to private repo, there were some issues with `secrets` and CI/CD, these issues are still open and should be resolved this week.
+- Improving the UI/UX
+- Expanding Character Stats
 
-## J4
+</Details>
 
-- 11/14/2022
-  - Improving the UI/UX
-  - Expanding Character Stats
+<Details data="J4">
 
-## Patch 1.2.x
+#### J4
 
-- 11/13/2022
-  - Start expanding the assets inside the game and work with some core logic.
+##### 11-11-2022
 
-## Patch 1.1
+Older Entry has not been found saved within the cloud.
 
-- 11/12/2022
-  - ZaneRage and h0lybyte did the basics the idea / concept.
-  - New asset models for the 3D robot soldiers.
-  - Added several more assets to the game!
+  </Details>
 
-## First Official Entry
+<Details data="J3">
 
-We should make it so that the Unity pulls this information and displays it onto the Menu -> Patch.
+#### J3
 
-### Scene
+##### 11-13-2022
 
-0. LoginMenu
-1. IntroMenu
-2. WInScene
-3. LoseScene
-4. MainScene
-5. SecondaryScene
-6. LevelSelection
+- Start expanding the assets inside the game and work with some core logic.
+- ZaneRage and h0lybyte did the basics the idea / concept.
+- New asset models for the 3D robot soldiers.
+- Added several more assets to the game!
 
-### Assets
+</Details>
 
-- This is a full breakdown of the assets that we are using in RogueJester FPS. We will keep the credits and a semi-active list of all the components that we are using.
+<Details data="J2">
 
-#### SkyBox
+#### J2
 
-- SkyBox provides us with a visual background.
-- Asset: [SkyBox Vol 2](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-volume-2-nebula-3392)
-  ZaneRage: Adding the Asset
+##### 11-12-2022
 
-#### Search
+Older Entry has not been found saved within the cloud.
+
+</Details>
+
+<Details data="J1">
+
+#### J1
+
+##### 11-11-2022
+
+Older Entry has not been found saved within the cloud.
+
+</Details>
+
+<Details data="J0">
+
+#### J0
+
+##### 11-01-2022
+
+- Ideas How to Convert 1. System.Text.Json namespace to convert C# objects to JSON and vice-versa.
+- Explained in this [link](https://www.tutorialsteacher.com/articles/convert-object-to-json-in-csharp#:~:text=The.NET%205%20framework%20provides%20the%20built-in%20JsonSerializer%20class,built-in%20JsonSerializer%20class%20that%20converts%20objects%20to%20JSON)
+- Thus, convert the JSON string to class object in C# using the `JsonSerializer.Deserialize () method`.
+
+</Details>
+
+---
+
+## Assets
+
+List of Assets and Plugins that we are using inside of the RJ Project.
+
+<Details data="List">
+
+- [SteamWorks](https://kbve.com/application/unity/)
+- [SkyBox](https://kbve.com/application/unity/#skybox) || [Direct Asset Link](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-volume-2-nebula-3392)
+- [UCC](https://kbve.com/application/unity/#ucc)
+- [Gaia](https://kbve.com/application/unity/#gaia)
+- [3D Robot Soldier](https://assetstore.unity.com/packages/3d/characters/robots/robot-soldier-142438)
+- [UAV Trident](https://assetstore.unity.com/packages/3d/vehicles/space/uav-trident-46128)
+- [Combat Drone](https://assetstore.unity.com/packages/3d/low-poly-combat-drone-82234)
+- [Spider Orange](https://assetstore.unity.com/packages/3d/characters/robots/spider-orange-181154)
+- [Robot Metallic Humanoid](https://assetstore.unity.com/packages/3d/characters/robots/robot-metallic-humanoid-171295)
+- [Sentry 3D Robot](https://assetstore.unity.com/packages/3d/characters/robots/sentry-robot-222899)
+- [Robot 3D Sphere](https://assetstore.unity.com/packages/3d/characters/robots/robot-sphere-136226)
+
+</Details>
+
+---
+
+## REF
 
 - Quick [Search](https://assetstore.unity.com/?category=3d%2Fcharacters%2Frobots&free=true&orderBy=1) on the Unity Assets page for FREE\* 3D Characters -> Robots
 
-#### 3D Robot Solider
-
-- Official [Link](https://assetstore.unity.com/packages/3d/characters/robots/robot-soldier-142438)
-- ZaneRage: those are soo cool for enemies
-- h0lybyte: Okay, I will grab and commit them for Patch 1.2.x
-
-#### UAV Trident
-
-- Official [Link](https://assetstore.unity.com/packages/3d/vehicles/space/uav-trident-46128)
-
-#### Combat Drone
-
-- Official [Link](https://assetstore.unity.com/packages/3d/low-poly-combat-drone-82234)
-
-#### Spider Orange
-
-- Official [Link](https://assetstore.unity.com/packages/3d/characters/robots/spider-orange-181154)
-
-#### Robot Metallic Humanoid
-
-- Official [Link](https://assetstore.unity.com/packages/3d/characters/robots/robot-metallic-humanoid-171295)
-
-#### Sentry 3D Robot
-
-- Official [Link](https://assetstore.unity.com/packages/3d/characters/robots/sentry-robot-222899)
-
-#### Robot 3D Sphere
-
-- Official [Link](https://assetstore.unity.com/packages/3d/characters/robots/robot-sphere-136226)
+---
