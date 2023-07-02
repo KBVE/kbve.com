@@ -5,7 +5,7 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
   //darkMode: ['class', '[data-mode="dark"]'],
   content: [
-          './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue,mdx,md}',
+          './src/**/*.{astro,html,js,jsx,svelte,ts,ts*,tsx,vue,mdx,md}',
           './node_modules/flowbite/**/*.js'
           // transform: {
           //   mdx: (content) => {

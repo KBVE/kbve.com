@@ -1,12 +1,10 @@
 import DOMPurify from 'dompurify';
 
-
-export const clean = (data) =>
-{
+export const clean = (data) => {
 	return DOMPurify.sanitize(data, {
 		USE_PROFILES: { html: false, mathMl: false, svg: false },
 	});
-}
+};
 
 //?     Both functions below are from Gibolt to address the _blank target vulnerability.
 export const onClickUrl = (url) => {
@@ -62,16 +60,66 @@ export const BgWrapper = (props) => {
 	);
 };
 
-
 export const elementErrorMessage = (__message) => {
 	return (
 		<>
-			<div role="alert space-y-4 m-4 p-4">
-				<div className="bg-red-500 font-bold rounded-t px-4 py-2">
-					Warning!
+			<div
+				id="alert-additional-content-2"
+				className="p-4 mb-4 text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
+				role="alert"
+			>
+				<div className="flex items-center">
+					<svg
+						aria-hidden="true"
+						className="w-5 h-5 mr-2"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<title>Info</title>
+						<path
+							fillRule="evenodd"
+							d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+							clipRule="evenodd"
+						/>
+					</svg>
+					<span className="sr-only">Info</span>
+					<h3 className="text-lg font-medium">Alert</h3>
 				</div>
-				<div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
-					<p>{__message}</p>
+				<div className="mt-2 mb-4 text-sm">
+				<p>{__message}</p>
+
+				</div>
+				<div className="flex">
+					<button
+						type="button"
+						className="text-white bg-red-800 hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+					>
+						<svg
+							aria-hidden="true"
+							className="-ml-0.5 mr-2 h-4 w-4"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>	
+							<title>Eye</title>
+							<path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+							<path
+								fillRule="evenodd"
+								d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+								clipRule="evenodd"
+							/>
+						</svg>
+						View more
+					</button>
+					<button
+						type="button"
+						className="text-red-800 bg-transparent border border-red-800 hover:bg-red-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:hover:bg-red-600 dark:border-red-600 dark:text-red-500 dark:hover:text-white dark:focus:ring-red-800"
+						data-dismiss-target="#alert-additional-content-2"
+						aria-label="Close"
+					>
+						Dismiss
+					</button>
 				</div>
 			</div>
 		</>
