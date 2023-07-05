@@ -25,7 +25,7 @@ export const elementButtonClick = (__url, __text) => {
 		<>
 			<button
 				type="button"
-				className="m-1 px-8 py-3 font-semibold rounded bg-gray-100 text-gray-800 hover:bg-gray-300"
+				className="m-1 px-2 py-2 font-semibold rounded bg-gray-100 text-gray-800 hover:bg-gray-300 text-sm"
 				onClick={onClickUrl(__url)}
 			>
 				{__text}
