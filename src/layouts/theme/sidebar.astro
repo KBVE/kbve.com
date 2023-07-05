@@ -14,7 +14,7 @@ import SVG from '@c/Library/SVG/SVG.astro';
 	<!-- 
       * Sidebar - [START]
      -->
-	<div class="bg-offset overflow-y-auto py-5 px-3 h-full">
+	<div class="bg-offset overflow-y-hidden py-5 px-3 h-full">
 		<img
 			src={'/assets/img/bot/kbve.png'}
 			alt="KBVE_BOT_LOGO"
@@ -60,7 +60,7 @@ import SVG from '@c/Library/SVG/SVG.astro';
 						<li>
 							
 							<a
-								href="#"
+								href="/account/settings/"
 								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
 								>
 								<SVG name="mdiSecurity" />
@@ -71,17 +71,17 @@ import SVG from '@c/Library/SVG/SVG.astro';
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/account/profile/"
 								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
 								>
 								<SVG name="mdiFactory" />
 								&nbsp;
-								Kanban</a
+								Profile</a
 							>
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/account/calendar/"
 								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
 								>
 								<SVG name="mdiCalendarImportOutline" />
@@ -89,6 +89,7 @@ import SVG from '@c/Library/SVG/SVG.astro';
 								Calendar</a
 							>
 						</li>
+						
 					</ul>
 				</li>
 				<li>
@@ -224,6 +225,86 @@ import SVG from '@c/Library/SVG/SVG.astro';
 								Journal</a
 							>
 						</li>
+						<li>
+							<a
+								href="/security/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiCashLock" />
+								&nbsp;
+								Security</a
+							>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button
+						type="button"
+						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
+						aria-controls="dropdown-media"
+						data-collapse-toggle="dropdown-media"
+					>
+						<SVG name="mdiMultimedia" />
+						<span class="flex-1 ml-3 text-left whitespace-nowrap">Media</span>
+						<svg
+							aria-hidden="true"
+							class="w-6 h-6"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<ul id="dropdown-media" class="hidden py-2 space-y-2">
+						<li>
+							
+							<a
+								href="/manga/"
+								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiSwordCross" />
+								&nbsp;
+								Manga
+								</a
+							>
+						</li>
+						<li>
+							<a
+								href="/gaming/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiNintendoGameBoy" />
+								&nbsp;
+								Gaming</a
+							>
+						</li>
+						<li>
+							<a
+								href="/music/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiMusicCircleOutline" />
+								&nbsp;
+								Music</a
+							>
+						</li>
+						<li>
+							<a
+								href="/video/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiVideoOutline" />
+								&nbsp;
+								Video</a
+							>
+						</li>
+
+
+						
 					</ul>
 				</li>
 			</ul>
