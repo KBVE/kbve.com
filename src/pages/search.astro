@@ -2,8 +2,8 @@
 //<!--*      [Search]
 //<!--*      [IMPORT]
 import N from "@n/N.astro";
-import SearchData from "@w/Search";
-import SearchBar from "@w/SearchBar.astro";
+import SearchData from "@tools/Search/Search";
+import SearchBar from "@tools/Search/SearchBar.astro";
 //<!--*      [DATA]
 const { src } = Astro.props;
 
@@ -29,39 +29,19 @@ let description =
         <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
           <a
             class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-slate-600"
-            onclick="changeAtiveTab(event,'tab-profile')">
-            <i class="fas fa-space-shuttle text-base mr-1"></i> Google
+            onclick="changeAtiveTab(event,'tab-profile');">
+            <i class="fas fa-space-shuttle text-base mr-1"></i> Search
           </a>
         </li>
+  
         <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
           <a
             class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-            onclick="changeAtiveTab(event,'tab-other')">
-            <i class="fas fa-briefcase text-base mr-1"></i> Other
-          </a>
-        </li>
-        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-          <a
-            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-            onclick="changeAtiveTab(event,'tab-settings')">
+            onclick="changeAtiveTab(event,'tab-settings');">
             <i class="fas fa-cog text-base mr-1"></i> Settings
           </a>
         </li>
-        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-          <a
-            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-            onclick="changeAtiveTab(event,'tab-options')">
-            <i class="fas fa-briefcase text-base mr-1"></i> Options
-          </a>
-        </li>
 
-        <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-          <a
-            class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-pink-600 bg-white"
-            onclick="changeAtiveTab(event,'tab-gpt')">
-            <i class="fas fa-briefcase text-base mr-1"></i> GPT
-          </a>
-        </li>
       </ul>
 
       <div
@@ -72,7 +52,6 @@ let description =
               <p>
                 <SearchData client:only="react" />
                 <br />
-                <SearchBar target="_self" />
                 <div class="gsc-control">
                   <div class="gcse-searchresults-only"></div>
                 </div>
@@ -171,7 +150,7 @@ let description =
   </script>
   <!-- 
 MIT License
-Copyright (c) 2023 Mammi, Creative Tim, VLocks
+Copyright (c) 2023 Mammi, Creative Tim, VLocks, KBVE
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
