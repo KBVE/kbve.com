@@ -15,9 +15,9 @@ const { swf = '', className = '' } = Astro.props;
 
             const swf = this.dataset.swf;
 			// Read the message from the data attribute.
-			window.RufflePlayer = window.RufflePlayer || {};
+			(window as any).RufflePlayer = (window as any).RufflePlayer || {};
 			window.addEventListener('load', (event) => {
-				const ruffle = window.RufflePlayer.newest();
+				const ruffle = (window as any).RufflePlayer.newest();
 				const player = ruffle.createPlayer();
 				const container = document.getElementById('container');
 				container?.appendChild(player);
