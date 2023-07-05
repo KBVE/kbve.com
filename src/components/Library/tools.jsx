@@ -1,12 +1,14 @@
 import DOMPurify from 'dompurify';
+import React from 'react';
+import { Alert } from 'flowbite-react';
+import { HiInformationCircle } from 'react-icons/hi';
 
 
-export const clean = (data) =>
-{
+export const clean = (data) => {
 	return DOMPurify.sanitize(data, {
 		USE_PROFILES: { html: false, mathMl: false, svg: false },
 	});
-}
+};
 
 //?     Both functions below are from Gibolt to address the _blank target vulnerability.
 export const onClickUrl = (url) => {
@@ -23,7 +25,7 @@ export const elementButtonClick = (__url, __text) => {
 		<>
 			<button
 				type="button"
-				className="m-1 px-8 py-3 font-semibold rounded bg-gray-100 text-gray-800 hover:bg-gray-300"
+				className="m-1 px-2 py-2 font-semibold rounded bg-gray-100 text-gray-800 hover:bg-gray-300 text-sm"
 				onClick={onClickUrl(__url)}
 			>
 				{__text}
@@ -65,15 +67,23 @@ export const BgWrapper = (props) => {
 
 export const elementErrorMessage = (__message) => {
 	return (
-		<>
-			<div role="alert space-y-4 m-4 p-4">
-				<div className="bg-red-500 font-bold rounded-t px-4 py-2">
-					Warning!
-				</div>
-				<div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
-					<p>{__message}</p>
-				</div>
-			</div>
-		</>
-	);
+		<div className="p-2 m-2">  <Alert
+		additionalContent={__message}
+		color="warning"
+		icon={HiInformationCircle}
+		rounded
+		withBorderAccent
+	  >
+		<span>
+		  <p>
+			<span className="font-medium">
+			  Warning!
+			</span>
+			
+		  </p>
+		</span>
+	  </Alert>
+	  </div>
+	
+	)
 };
