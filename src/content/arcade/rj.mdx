@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/theme/ruffle.astro
 id: rj
 title: RougeJester Play
 description: Play the older webGL build for RogueJester
@@ -8,9 +9,17 @@ old_dataUrl: https://roguejester.kbve.com/Build/WebGL.data.unityweb
 frameworkUrl: https://roguejester.kbve.com/Build/WebGL.framework.js.unityweb
 codeUrl: https://roguejester.kbve.com/Build/WebGL.wasm.unityweb
 tags:
-- unity
-- unity-webgl
-- gaming
-- fps
-- roguejester
+  - unity
+  - unity-webgl
+  - gaming
+  - fps
+  - roguejester
+media:
+  unity:
+    {
+      loaderUrl: 'https://roguejester.kbve.com/Build/WebGL.loader.js',
+      dataUrl: 'https://media.githubusercontent.com/media/kbve/roguejester.kbve.com/main/Build/WebGL.data.unityweb',
+      frameworkUrl: 'https://roguejester.kbve.com/Build/WebGL.framework.js.unityweb',
+      codeUrl: 'https://roguejester.kbve.com/Build/WebGL.wasm.unityweb',
+    }
 ---
