@@ -488,6 +488,13 @@ declare module 'astro:content' {
   collection: "arcade";
   data: InferEntrySchema<"arcade">
 } & { render(): Render[".mdx"] };
+"robotunicornattack.mdx": {
+	id: "robotunicornattack.mdx";
+  slug: "robotunicornattack";
+  body: string;
+  collection: "arcade";
+  data: InferEntrySchema<"arcade">
+} & { render(): Render[".mdx"] };
 "wvn.mdx": {
 	id: "wvn.mdx";
   slug: "wvn";
@@ -1079,6 +1086,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"07-05.md": {
+	id: "07-05.md";
+  slug: "07-05";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1312,13 +1326,6 @@ declare module 'astro:content' {
   collection: "project";
   data: any
 } & { render(): Render[".mdx"] };
-"bizops.mdx": {
-	id: "bizops.mdx";
-  slug: "bizops";
-  body: string;
-  collection: "project";
-  data: any
-} & { render(): Render[".mdx"] };
 "charles.mdx": {
 	id: "charles.mdx";
   slug: "charles";
@@ -1506,6 +1513,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "theory": {
+"bizops.mdx": {
+	id: "bizops.mdx";
+  slug: "bizops";
+  body: string;
+  collection: "theory";
+  data: InferEntrySchema<"theory">
+} & { render(): Render[".mdx"] };
 "deadcode.mdx": {
 	id: "deadcode.mdx";
   slug: "deadcode";
