@@ -1,0 +1,1 @@
+class n extends HTMLElement{constructor(){super();const t=this.dataset.swf;window.RufflePlayer=window.RufflePlayer||{},window.addEventListener("load",s=>{const e=window.RufflePlayer.newest().createPlayer();document.getElementById("container")?.appendChild(e),e.load(t),e.style.width="100vw",e.style.height="100vh"})}}customElements.define("astro-ruffle",n);
