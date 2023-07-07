@@ -7,8 +7,9 @@ function decodeHTMLEntities(text) {
 }
 const Mender = () => {
 
-    const url = new URL(window.location.href);
-    const decode = decodeHTMLEntities(url.hash.slice(1));
+    const decode = 'help';
+    //const url = new URL(window.location.href);
+    //const decode = decodeHTMLEntities(url.hash.slice(1));
     return <Markup content={decode} />;
    
   };

@@ -13,31 +13,37 @@ tags:
   - branding
 repo: kbve/api.kbve.com
 ---
-import Github from "@w/Github.astro";
+
+import Github from '@w/Github.astro';
 export const components = { github: Github };
 
 ## Docs
 
 - Official documentation will be provided for the API, we are currently going to base the API off of Strapi.
 
-* * *
+---
 
 ## Install
 
 - To help scale the API backend, we are also currently developing the backend cluster of both the API and the database that stores the information (MariaDB).
-    - Current Docker Compose for ve2
-        <Github src="data/api/ve2/docker-compose.yml" description="This is the current docker compose for a ve2 that runs our API." />
+  - Current Docker Compose for ve2
+    {' '}
+    <Github
+    	src="data/api/ve2/docker-compose.yml"
+    	description="This is the current docker compose for a ve2 that runs our API."
+    />
 
-* * * 
+---
 
 ## Uptime
+
 - ![API Uptime Badge](https://api.checklyhq.com/v1/badges/checks/206925a6-0f7b-4669-a4fd-b61b3f5b70fc?style=for-the-badge&theme=default&responseTime=true)
 
-* * *
-
+---
 
 ## Auth
-- Auth Journal 
+
+- Auth Journal
   - For the core of the API, we will use JWT as the `key` in between the $User and $API.
 - React JSX
   - The first mod will be the core auth system between the client $User and server $API, which includes the register and login. While we build it out, we will include generic defensive components into the foundation, then re-visit and apply external security, such as limits and firewalls (some may operate outside of the API).
@@ -46,7 +52,7 @@ export const components = { github: Github };
       - Cookie - `user` - will store the client $User data.
       - Library: `react-cookie` will be used to help maintain the cookies.
 
-* * *
+---
 
 ### Goal
 

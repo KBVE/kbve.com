@@ -6,6 +6,7 @@
  *TODO: []
  */
 import NotificationBoilerPlate from './NotificationBoilerPlate.astro';
+import ReactNotification from './ReactNotification';
 ---
 
 <!-- Notifications -->
@@ -41,6 +42,8 @@ import NotificationBoilerPlate from './NotificationBoilerPlate.astro';
 
 	<!-- Boilerplate [START] -->
 	<NotificationBoilerPlate />
+    <ReactNotification client:only="react" />
+    
 	<!-- Boilerplate [END] -->
 	<a
 		href="#"
