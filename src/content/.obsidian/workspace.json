@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/07-05.md",
+                "file": "journal/07-06.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "91b2bd98f18da4cd",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-05.md",
+                "file": "journal/07-06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-05.md",
+                "file": "journal/07-06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-05.md"
+                "file": "journal/07-06.md"
               }
             }
           }
@@ -157,8 +158,9 @@
   },
   "active": "a52b5814d499e0cf",
   "lastOpenFiles": [
-    "journal/07-04.md",
     "journal/07-05.md",
+    "journal/07-06.md",
+    "journal/07-04.md",
     "journal/07-03.md",
     "journal/07-02.md",
     "journal/07-01.md",
@@ -191,7 +193,6 @@
     "journal/06-12.md",
     "journal/06-11.md",
     "journal/06-10.md",
-    "journal/06-09.md",
-    "journal/06-08.md"
+    "journal/06-09.md"
   ]
 }

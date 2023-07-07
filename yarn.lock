@@ -2080,10 +2080,10 @@ astro-eslint-parser@^0.14.0:
     espree "^9.0.0"
     semver "^7.3.8"
 
-astro@^2.7.3:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.7.3.tgz#732f3c6238807bc247b9f0acc450ee59f13dd629"
-  integrity sha512-DwPvvOYElhCNyAWUlFd17HhTNBx+XXnAZfM/PYHq7RicvC/tG4loBjlYk/Yw7x9wQCkbKjoxVRiNYvmvSUmisw==
+astro@^2.7.4:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.7.4.tgz#d1c67f4f4e47ac7155aedf511862af7c08783024"
+  integrity sha512-LDALXeMfD4U6jkM6ZywtKuBkGMxMZjSCFqbNXEKtD3OWZr3hiLNhE3YDgUScCBkQJSROWrS0W9/UVPpsS36+ow==
   dependencies:
     "@astrojs/compiler" "^1.5.3"
     "@astrojs/internal-helpers" "^0.1.1"
@@ -7203,10 +7203,10 @@ svelte2tsx@^0.6.15:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-4.0.3.tgz#7a2a4268fecee6b0baefd64e054131961a771f8d"
-  integrity sha512-SSJZBR+Uca3Xa/R18/7IkkifDdz2Jfuq2eXMUphDhabDxQL6qR8QAUoEmrtYWhzeV0civoFw4Dcvo2yscysdeg==
+svelte@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-4.0.4.tgz#9b07785b369a6db3b4fbc73b5c65033a3d757349"
+  integrity sha512-DDJavyX1mpNFLZ7jU9FwBKouemh6CJHZXwePBa5GXSaW5GuHZ361L2/1uznBqOCxu2UsUoWu8wRsB2iB8QG5sQ==
   dependencies:
     "@ampproject/remapping" "^2.2.1"
     "@jridgewell/sourcemap-codec" "^1.4.15"
