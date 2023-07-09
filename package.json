@@ -13,7 +13,7 @@
     "kbve": "yarn-upgrade-all && astro sync && astro build && astro dev --host"
   },
   "devDependencies": {
-    "@types/eslint": "^8.40.2",
+    "@types/eslint": "^8.44.0",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "astro-eslint-parser": "^0.14.0",
@@ -92,7 +92,7 @@
     "tailwindcss-fluid-type": "^2.0.3",
     "ts-dedent": "^2.2.0",
     "typewriter-effect": "^2.20.1",
-    "unist-util-visit": "^4.1.2",
+    "unist-util-visit": "^5.0.0",
     "use-sound": "^4.0.1"
   },
   "yarn-upgrade-all": {

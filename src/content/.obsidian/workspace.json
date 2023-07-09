@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/07-07.md",
+                "file": "journal/07-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "91b2bd98f18da4cd",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-07.md",
+                "file": "journal/07-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-07.md",
+                "file": "journal/07-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-07.md"
+                "file": "journal/07-08.md"
               }
             }
           }
@@ -160,17 +159,24 @@
   "lastOpenFiles": [
     "journal/07-06.md",
     "journal/07-07.md",
-    "journal/07-05.md",
+    "journal/07-08.md",
     "journal/07-04.md",
-    "journal/07-03.md",
-    "journal/07-02.md",
-    "journal/07-01.md",
-    "journal/06-30.md",
-    "journal/06-29.md",
-    "journal/06-28.md",
-    "journal/06-27.md",
+    "journal/07-05.md",
+    "journal/06-12.md",
+    "journal/06-15.md",
+    "journal/06-17.md",
+    "journal/06-23.md",
+    "journal/06-22.md",
     "journal/06-26.md",
     "journal/06-25.md",
+    "journal/06-27.md",
+    "journal/06-28.md",
+    "journal/06-30.md",
+    "journal/06-29.md",
+    "journal/07-03.md",
+    "journal/07-01.md",
+    "journal/07-02.md",
+    "project/stream.mdx",
     "journal/06-24.md",
     "manga/fintech/abc/cloud-function.mdx",
     "manga/fintech/abc/cloud-machine copy.mdx",
@@ -178,21 +184,14 @@
     "manga/fintech/abc/c copy.mdx",
     "journal/06-21.md",
     "npc/holy.mdx",
-    "journal/06-22.md",
-    "journal/06-23.md",
     "npc/protag/biometrics.mdx",
     "npc/protag/bio.mdx",
     "npc/protag",
     "manga/fintech/abc/b-datascientist.mdx",
-    "manga/fintech/abc/ai-warning.mdx",
     "journal/06-20.md",
     "journal/06-18.md",
-    "journal/06-17.md",
     "journal/06-16.md",
-    "journal/06-15.md",
     "journal/06-14.md",
-    "journal/06-12.md",
-    "journal/06-11.md",
-    "journal/06-10.md"
+    "journal/06-11.md"
   ]
 }
