@@ -488,9 +488,16 @@ declare module 'astro:content' {
   collection: "arcade";
   data: any
 } & { render(): Render[".mdx"] };
-"robotunicornattack.mdx": {
-	id: "robotunicornattack.mdx";
-  slug: "robotunicornattack";
+"robot-unicorn-attack.mdx": {
+	id: "robot-unicorn-attack.mdx";
+  slug: "robot-unicorn-attack";
+  body: string;
+  collection: "arcade";
+  data: any
+} & { render(): Render[".mdx"] };
+"time-crisis.mdx": {
+	id: "time-crisis.mdx";
+  slug: "time-crisis";
   body: string;
   collection: "arcade";
   data: any
