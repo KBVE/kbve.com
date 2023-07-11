@@ -2,7 +2,8 @@
 //<!--?     [Video]  - This file generates all the Video from the collections.
 //<!--!     [INFO]  - Information related to this file can be found in our github notes.
 //<!--*     [IMPORTS]
-import N from "@n/N.astro"; //<!--*     [Astro]:{namespace}
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
 import { getCollection } from "astro:content"; //<!--*     [Astro]:{Content}
 //<!--*     [Function]
 //<!--?     [f()]:getStaticPaths()->getCollections() - Returns the Video collections
@@ -23,6 +24,8 @@ const { entry } = Astro.props;
 const { Content, headings, injectedFrontmatter } = await entry.render();
 ---
 
-<N ns="theme" title={entry.data.title} description={entry.data.description}>
+<KBVE title={entry.data.title} description={entry.data.description}>
+  <Menu>
   <Content />
-</N>
+</Menu>
+</KBVE>
