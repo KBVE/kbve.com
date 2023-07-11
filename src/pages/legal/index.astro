@@ -1,26 +1,30 @@
 ---
 //<!--?         [Legal]
 //<!--*         [IMPORT]
-import N from "@n/N.astro";
-import Oracle from "@w/Oracle.astro";
+import N from '@n/N.astro';
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+import Oracle from '@w/Oracle.astro';
 //<!--*         [DATA]
-let title = "KBVE.com - Legal Information";
+let title = 'KBVE.com - Legal Information';
 let description =
-  "KBVE Legal Information, ToS, Privacy and other legal documents";
+	'KBVE Legal Information, ToS, Privacy and other legal documents';
 ---
 
-<N ns="theme" title={title} description={description}>
-  <section class="py-6 sm:py-12">
-    <div class="container p-6 mx-auto space-y-8">
-      <div class="rounded-full space-y-2 text-center bg-offset p-4">
-        <h2 class="text-3xl font-bold">KBVE Legal</h2>
-        <p class="font-serif text-sm dark:text-gray-400">
-          KBVE Terms of Service, Privacy, EULA and other legal documents.
-        </p>
-      </div>
+<KBVE title={title} description={description}>
+	<Menu>
+		<section class="py-6 sm:py-12">
+			<div class="container p-6 mx-auto space-y-8">
+				<div class="rounded-full space-y-2 text-center bg-offset p-4">
+					<h2 class="text-3xl font-bold">KBVE Legal</h2>
+					<p class="font-serif text-sm dark:text-gray-400">
+						KBVE Terms of Service, Privacy, EULA and other legal documents.
+					</p>
+				</div>
 
-      <Oracle element="legal" data="legal" />
-    </div>
-  </section>
-  <N ns="ads" template="midbanner" id="ezoic" />
-</N>
+				<Oracle element="legal" data="legal" />
+			</div>
+		</section>
+		<N ns="ads" template="midbanner" id="ezoic" />
+	</Menu>
+</KBVE>

@@ -1,27 +1,28 @@
 ---
 ///     [IMPORTS]
-import N from "@n/N.astro";                                 ///     [Astro]:{namespace}
+import N from '@n/N.astro'; ///     [Astro]:{namespace}
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-
-  const arcade = await getCollection('arcade');
-  return arcade.map(entry => ({
-    params: { 
-              id: entry.slug,
-            },
-    props: {
-              entry,
-    },
-  }));
-
+	const arcade = await getCollection('arcade');
+	return arcade.map((entry) => ({
+		params: {
+			id: entry.slug,
+		},
+		props: {
+			entry,
+		},
+	}));
 }
 const { id } = Astro.params;
 const { entry } = Astro.props;
 const { Content, headings, injectedFrontmatter } = await entry.render();
 ---
-<N ns="theme" title={entry.data.title} description={entry.data.description}>
 
-          <Content />
-    
-</N>
+<KBVE title={entry.data.title} description={entry.data.description}>
+	<Menu>
+		<Content />
+	</Menu>
+</KBVE>
