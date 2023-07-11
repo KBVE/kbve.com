@@ -2,6 +2,8 @@
 //<!--*         [Profile]
 //<!--*         [IMPORT]
 import N from '@n/N.astro'; //      [NameSpace]
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
 import UserProfile from '@lib/Profile/Profile.astro';
 //<!--*         [DATA]
 //<!--!         [DATA]          ->        [$const]
@@ -11,51 +13,52 @@ let description =
 	'Manage your KBVE Profile and Account through our online portal';
 ---
 
-<N ns="theme" title={title} description={description}  template={"data"}>
-
-  
-<div class="flex flex-wrap mt-24">
-	<div class="w-full px-3">
-		<div
-			class="relative flex flex-col min-w-0 break-words bg-offset shadow-soft-xl rounded-2xl bg-clip-border"
-		>
-			<div class="flex-auto p-4">
-				<div class="flex flex-wrap">
-					<div class="rounded-lg shadow">
-            <h5 class="p-5 mb-2 text-2xl font-bold tracking-tight default-text">
-            User Account Page
-            </h5>
-						<div class="p-5">
-							<p class="mb-3 font-normal default-text">
-								Welcome to your profile page! There are currently no major settings or options yet for your profile. 
-                We are planning to add a couple more information and better user control as we develop out the website and applications. 
-							</p>
+<KBVE title={title} description={description}>
+	<Menu guest={false}>
+		<div class="flex flex-wrap mt-24">
+			<div class="w-full px-3">
+				<div
+					class="relative flex flex-col min-w-0 break-words bg-offset shadow-soft-xl rounded-2xl bg-clip-border"
+				>
+					<div class="flex-auto p-4">
+						<div class="flex flex-wrap">
+							<div class="rounded-lg shadow">
+								<h5
+									class="p-5 mb-2 text-2xl font-bold tracking-tight default-text"
+								>
+									User Account Page
+								</h5>
+								<div class="p-5">
+									<p class="mb-3 font-normal default-text">
+										Welcome to your profile page! There are currently no major
+										settings or options yet for your profile. We are planning to
+										add a couple more information and better user control as we
+										develop out the website and applications.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
 
-<div class="flex flex-wrap mt-4">
-	<div class="w-full px-3">
-		<div
-			class="relative flex flex-col min-w-0 break-words bg-offset shadow-soft-xl rounded-2xl bg-clip-border"
-		>
-			<div class="flex-auto p-4">
-				<div class="flex flex-wrap">
-					<div class="rounded-lg shadow">
-            
-						<div class="p-5">
-              <UserProfile />
+		<div class="flex flex-wrap mt-4">
+			<div class="w-full px-3">
+				<div
+					class="relative flex flex-col min-w-0 break-words bg-offset shadow-soft-xl rounded-2xl bg-clip-border"
+				>
+					<div class="flex-auto p-4">
+						<div class="flex flex-wrap">
+							<div class="rounded-lg shadow">
+								<div class="p-5">
+									<UserProfile />
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-
-</N>
+	</Menu>
+</KBVE>
