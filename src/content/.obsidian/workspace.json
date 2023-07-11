@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/07-10.md",
+                "file": "journal/07-11.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-10.md",
+                "file": "journal/07-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-10.md",
+                "file": "journal/07-11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-10.md"
+                "file": "journal/07-11.md"
               }
             }
           }
@@ -157,8 +157,14 @@
   },
   "active": "a52b5814d499e0cf",
   "lastOpenFiles": [
-    "journal/07-09.md",
+    "tools/stream/afk.mdx",
+    "tools/stream/stream.mdx",
+    "tools/stream/index.mdx",
+    "tools/stream",
+    "tools/stream.mdx",
     "journal/07-10.md",
+    "journal/07-11.md",
+    "journal/07-09.md",
     "journal/07-08.md",
     "project/vip.mdx",
     "journal/07-06.md",
@@ -186,12 +192,6 @@
     "manga/fintech/abc/cloud-machine.mdx",
     "manga/fintech/abc/c copy.mdx",
     "journal/06-21.md",
-    "npc/holy.mdx",
-    "npc/protag/biometrics.mdx",
-    "npc/protag/bio.mdx",
-    "npc/protag",
-    "journal/06-20.md",
-    "journal/06-18.md",
-    "journal/06-16.md"
+    "journal/06-20.md"
   ]
 }

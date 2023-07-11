@@ -22,8 +22,4 @@ const { entry } = Astro.props;
 const { Content, headings, injectedFrontmatter } = await entry.render();
 ---
 
-<KBVE title={entry.data.title} description={entry.data.description}>
-  <Menu>
   <Content />
-  </Menu>
-</KBVE>

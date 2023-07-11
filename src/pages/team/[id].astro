@@ -21,10 +21,4 @@ const { id } = Astro.params;
 const { entry } = Astro.props;
 const { Content, headings, injectedFrontmatter } = await entry.render();
 ---
-
-<KBVE ns="theme" title={entry.data.title} description={entry.data.description}>
-  <Menu>
-  <Content />
-  <N ns="ads" template="banner" id="ezoic" />
-  </Menu>
-</KBVE>
+<Content />

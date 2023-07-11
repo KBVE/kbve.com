@@ -1,9 +1,14 @@
 ---
 const { content } = Astro.props; ///	[Astro Props]
+import KBVE from "@l/KBVE.astro";
+import Menu from "@l/Menu.astro";
 import Ads from '@w/Ads.astro'; //? AAds
 import VideoComponent from '@c/Element/Video/Video.astro';
 ---
-
+<KBVE title={content.title} description={content.description}>
+<Menu>
+<div class="p-8 space-y-12">
+</div>
 <div
 	class="flex flex-wrap mb-12 justify-center items-center bg-fixed bg-center bg-cover overflow-hidden"
 	style={{ backgroundImage: `url(${content.img})` }}
@@ -88,3 +93,5 @@ import VideoComponent from '@c/Element/Video/Video.astro';
 		renderDiagrams(graphs);
 	}
 </script>
+</Menu>
+</KBVE>

@@ -1,0 +1,18 @@
+---
+const { content } = Astro.props; ///	[Astro Props]
+import KBVE from "@l/KBVE.astro";
+---
+<KBVE>
+<main class="" id="">
+	<article
+		class="overflow-hidden overscroll-y-none no-scrollbar grow relative flex flex-col h-screen m-0"
+	>
+		<div
+			class={`${content.effect}`}
+			style={{ backgroundImage: `url(${content.img})` }}
+		>
+            <slot />
+        </div>
+    </article>
+</main>
+</KBVE>
