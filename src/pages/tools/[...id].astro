@@ -1,0 +1,24 @@
+---
+//?     [Tools] : Render Collection of {tools}
+///     [IMPORTS]
+import N from '@n/N.astro'; ///     [Astro]:{namespace}
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const tools = await getCollection('tools');
+	return tools.map((entry) => ({
+		params: {
+			id: entry.slug,
+		},
+		props: {
+			entry,
+		},
+	}));
+}
+const { id } = Astro.params;
+const { entry } = Astro.props;
+const { Content, headings, injectedFrontmatter } = await entry.render();
+---
+<Content />

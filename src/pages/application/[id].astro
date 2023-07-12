@@ -1,25 +1,24 @@
 ---
 //<!--*     [IMPORTS]
-import N from "@n/N.astro"; 
-import { getCollection } from "astro:content";
+import N from '@n/N.astro';
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+import { getCollection } from 'astro:content';
 //<!--*     [FUN]
 export async function getStaticPaths() {
-  const blog = await getCollection("application");
-  return blog.map((entry) => ({
-    params: {
-      id: entry.slug,
-    },
-    props: {
-      entry,
-    },
-  }));
+	const application = await getCollection('application');
+	return application.map((entry) => ({
+		params: {
+			id: entry.slug,
+		},
+		props: {
+			entry,
+		},
+	}));
 }
 //<!--*     [DATA]
 const { id } = Astro.params;
 const { entry } = Astro.props;
 const { Content, headings, injectedFrontmatter } = await entry.render();
 ---
-
-<N ns="theme" title={entry.data.title} description={entry.data.description}>
-  <Content />
-</N>
+<Content />

@@ -1,11 +1,16 @@
 ---
 //<!--*             [IMPORT]
-import N from "@n/N.astro"; //      [NameSpace]
+import KBVE from "@l/KBVE.astro";
+import Menu from "@l/Menu.astro";
 let title = "KBVE Account";
 let description =
   "Manage your KBVE Profile and Account through our online portal";
 ---
 
-<N ns="theme" title={title} description={description}>
-
-</N>
+<KBVE title={title} description={description}>
+  <Menu guest={false}>
+        <br />
+        <br />
+        Proof of Concept
+  </Menu>
+</KBVE>

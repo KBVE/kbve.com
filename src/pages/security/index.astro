@@ -1,14 +1,19 @@
 ---
 /// [WIP] Security Page - Breakdown of the Security
 //? [NAMESPACE]
+import KBVE from "@l/KBVE.astro";
+import Menu from "@l/Menu.astro";
 import N from "@n/N.astro";
 import Oracle from "@w/Oracle.astro";
 /// {DATA}
 let title = "KBVE Security";
 let description = "Reference points for security within KBVE and general user/client/business safety. Documentation will be updated as we build out";
 ---
-<N ns="theme" title={title} description={description}>
+<KBVE title={title} description={description}>
+    <Menu>
     <!-- [SECURITY] -> {Terminal} -> [START] -->
+    <br />
+    <br />
     <section class="bg-offset">
         <div class="w-1/2 mx-auto">
             <div class="w-full shadow-2xl subpixel-antialiased rounded h-64 bg-black border-black mx-auto">
@@ -26,7 +31,7 @@ let description = "Reference points for security within KBVE and general user/cl
             </div>
             <div class="pl-1 pt-1 h-auto  text-green-200 font-mono text-xs bg-black" id="console">
                 <p class="pb-1">Last login: Wed Sep 25 09:11:04 on ttys002</p>
-                <p class="pb-1">Laraben:Devprojects laraben$</p>
+                <p class="pb-1">VM100:Devprojects kbve$</p>
             </div>
             </div> 
         </div>
@@ -165,5 +170,6 @@ let description = "Reference points for security within KBVE and general user/cl
     </section>
 
     <!-- [SECURITY] -> [MAIN]   -> [END] -->
+</Menu>
 
-</N>
+</KB>

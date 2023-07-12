@@ -12,7 +12,7 @@ A clear and concise description of what the update will be. Keep it simple!
 * * *
 
 **References for update**
-Include any links / data for the update that must be done.
+Include any links/data for the update that must be done.
 
 * * *
 

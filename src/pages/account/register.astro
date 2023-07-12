@@ -29,12 +29,15 @@ SOFTWARE.
 
 //<!--*             [IMPORT]
 import N from "@n/N.astro"; //      [NameSpace]
+import KBVE from "@l/KBVE.astro";
+import Menu from "@l/Menu.astro";
 let title = "KBVE Account Registration";
 let description =
   "Register onto the KBVE Portal! Remember it is free to join and we will try to add a ton of cool new features xD";
 ---
 
-<N ns="theme" title={title} description={description}>
+<KBVE title={title} description={description}>
+  <Menu>
   <script>
     //<!--*      [IMPORT]     -->
     import type { AppwriteException } from "appwrite";
@@ -337,4 +340,5 @@ let description =
       </div>
     </div>
   </section>
-</N>
+</Menu>
+</KBVE>

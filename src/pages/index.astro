@@ -1,39 +1,43 @@
 ---
 //<!-- ?       [index]
 //<!-- *       [IMPORT]
-import N from "@n/N.astro"; //<!-- ?  [Namespace]:[N]
-import SHash from "@c/Tools/SHash";
-import Splash from "@w/Splash.astro"; //<!--? [SPLASH]    ->  Splash page was resolved. Typescript errors were fixed.
-import WaitList from "@w/WaitList.astro"; //<!--! [WL]        ->  WaitList Component from Mamba
-import Features from "@w/Features.astro"; //<!--! [F]     -> Features still need their javascript libraries added.
-import SubMenu from "@w/SubMenu.astro"; //<!--! [S]     -> SubMenu.astro 
-import How from "@w/How.astro";
-import Review from "@w/Reviews.astro";
-import SearchBar from "@w/SearchBar.astro";
-import MockCard from "@w/MockCard.astro";
-import IntroductionCard from "@c/Card/IntroductionCard.astro";
-import NewsCard from "@c/Card/NewsCard.astro";
-import NullCard from "@c/Card/NullCard.astro";
+//import N from "@n/N.astro"; //<!-- ?  [Namespace]:[N]
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+//import SHash from "@c/Tools/SHash";
+import Features from '@w/Features.astro'; //<!--! [F]     -> Features still need their javascript libraries added.
+import How from '@w/How.astro';
+import Review from '@w/Reviews.astro';
+import MockCard from '@w/MockCard.astro';
+import IntroductionCard from '@c/Card/IntroductionCard.astro';
+import NewsCard from '@c/Card/NewsCard.astro';
+import NullCard from '@c/Card/NullCard.astro';
 //<!-- *       [Data]
-let title = "KBVE.com - Gaming, Media, FinTech, Coding and Applications";
+let title = 'KBVE.com - Gaming, Media, FinTech, Coding and Applications';
 let description =
-  "KBVE - KiloByte Virtual Enterprise is a consultancy firm that designs applications and modifications within the realm of machine learning, blockchain, autonomous operations and fintech. KBVE is also an art collective group that engages in artful intelligence projects.";
+	'KBVE - KiloByte Virtual Enterprise is a consultancy firm that designs applications and modifications within the realm of machine learning, blockchain, autonomous operations and fintech. KBVE is also an art collective group that engages in artful intelligence projects.';
 ---
 
-<N ns="theme" title={title} description={description} template={"data"}>
-  <SHash client:only="react" />
-  <!-- <Splash /><N ns="ads" template="banner" id="ezoic" /> -->
-  <div class="space-y-4 p-4">
-    <IntroductionCard />
-   
-    <MockCard />
-    <!-- <WaitList />
+<KBVE title={title} description={description}>
+	<Menu>
+		<!-- <SHash client:only="react" /> -->
+		<!-- <Splash /><N ns="ads" template="banner" id="ezoic" /> -->
+		<div class="space-y-4 p-4">
+			<IntroductionCard />
+
+			<MockCard />
+			<!-- <WaitList />
     <How />
     <Review />
     -->
-    <NewsCard />
-    <NullCard><How /></NullCard>
-    <NullCard bg="https://images.unsplash.com/photo-1545423269-690becec20d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1247&q=80"><Review /></NullCard>
-    <NullCard><Features /></NullCard>
-  </div>
-</N>
+			<NewsCard />
+			<NullCard><How /></NullCard>
+			<NullCard
+				bg="https://images.unsplash.com/photo-1545423269-690becec20d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1247&q=80"
+			>
+				<Review />
+			</NullCard>
+			<NullCard><Features /></NullCard>
+		</div>
+	</Menu>
+</KBVE>

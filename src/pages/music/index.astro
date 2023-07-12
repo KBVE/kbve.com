@@ -3,24 +3,29 @@
 //<!--TODO      [Music API]
 //<!--!         [BROKEN]
 //<!--*         [IMPORT]
-import N from "@n/N.astro";
-import Oracle from "@w/Oracle.astro";
+import N from '@n/N.astro';
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+import Oracle from '@w/Oracle.astro';
 //<!--*         [DATA]
-let title = "KBVE Media - Podcasts, Shows, Movies, Music and More!";
-let description = "All the Media content that KBVE has compiled for your entertainment and pleasure!";
+let title = 'KBVE Media - Podcasts, Shows, Movies, Music and More!';
+let description =
+	'All the Media content that KBVE has compiled for your entertainment and pleasure!';
 ---
 
-<N ns="theme" title={title} description={description}>
-  <section class="py-6 sm:py-12">
-    <div class="container p-6 mx-auto space-y-8">
-      <div class="rounded-full space-y-2 text-center bg-offset p-4">
-        <h2 class="text-3xl font-bold">KBVE Music</h2>
-        <p class="font-serif text-sm dark:text-gray-400">
-          Latest Music and hidden gems!.
-        </p>
-      </div>
-      <Oracle element="music" data="music" />
-    </div>
-  </section>
-  <N ns="ads" template="midbanner" id="ezoic" />
-</N>
+<KBVE title={title} description={description}>
+	<Menu>
+		<section class="py-6 sm:py-12">
+			<div class="container p-6 mx-auto space-y-8">
+				<div class="rounded-full space-y-2 text-center bg-offset p-4">
+					<h2 class="text-3xl font-bold">KBVE Music</h2>
+					<p class="font-serif text-sm dark:text-gray-400">
+						Latest Music and hidden gems!.
+					</p>
+				</div>
+				<Oracle element="music" data="music" />
+			</div>
+		</section>
+		<N ns="ads" template="midbanner" id="ezoic" />
+	</Menu>
+</KBVE>
