@@ -1142,6 +1142,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: any
 } & { render(): Render[".md"] };
+"07-12.md": {
+	id: "07-12.md";
+  slug: "07-12";
+  body: string;
+  collection: "journal";
+  data: any
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1693,6 +1700,13 @@ declare module 'astro:content' {
 "stream/afk.mdx": {
 	id: "stream/afk.mdx";
   slug: "stream/afk";
+  body: string;
+  collection: "tools";
+  data: any
+} & { render(): Render[".mdx"] };
+"stream/bathroom.mdx": {
+	id: "stream/bathroom.mdx";
+  slug: "stream/bathroom";
   body: string;
   collection: "tools";
   data: any

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/07-11.md",
+                "file": "journal/07-12.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-11.md",
+                "file": "journal/07-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-11.md",
+                "file": "journal/07-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-11.md"
+                "file": "journal/07-12.md"
               }
             }
           }
@@ -157,13 +157,16 @@
   },
   "active": "a52b5814d499e0cf",
   "lastOpenFiles": [
+    "tools/stream/bathroom.mdx",
+    "tools/stream/piss.mdx",
+    "journal/07-11.md",
+    "journal/07-12.md",
     "tools/stream/afk.mdx",
     "tools/stream/stream.mdx",
     "tools/stream/index.mdx",
     "tools/stream",
     "tools/stream.mdx",
     "journal/07-10.md",
-    "journal/07-11.md",
     "journal/07-09.md",
     "journal/07-08.md",
     "project/vip.mdx",
@@ -189,9 +192,6 @@
     "journal/06-24.md",
     "manga/fintech/abc/cloud-function.mdx",
     "manga/fintech/abc/cloud-machine copy.mdx",
-    "manga/fintech/abc/cloud-machine.mdx",
-    "manga/fintech/abc/c copy.mdx",
-    "journal/06-21.md",
-    "journal/06-20.md"
+    "journal/06-21.md"
   ]
 }
