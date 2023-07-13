@@ -2,27 +2,30 @@
 //<!--?         [Blog]
 //<!--*         [IMPORT]
 //<!--?         [NAMESPACE]
-import N from "@c/Namespace/N.astro";
-import Oracle from "@w/Oracle.astro";
+import N from '@c/Namespace/N.astro';
+import Oracle from '@w/Oracle.astro';
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
 //<!--*         [DATA]
-let title = "KBVE Blog";
-let description = "Latest News, Articles and Blog Posts from KBVE.com";
+let title = 'KBVE Blog';
+let description = 'Latest News, Articles and Blog Posts from KBVE.com';
 //? Codex, Divinity, Enticement, Grimoire, Hex, Tome, Vacuole
 ---
 
-<N ns="theme" title={title} description={description}>
-    <section class="py-6 sm:py-12">
-      <div class="container p-6 mx-auto space-y-8">
-        <div class="rounded-full space-y-2 text-center bg-offset p-4">
-          <h2 class="text-3xl font-bold">KBVE Blog</h2>
-          <p class="font-serif text-sm dark:text-gray-400">
-            Blog Posts from KBVE
-          </p>
-        </div>
-  
-        <Oracle element="blog" data="blog" />
-      </div>
-    </section>
-    <N ns="ads" template="midbanner" id="ezoic" />
-  </N>
-  
+<KBVE title={title} description={description}>
+	<Menu>
+		<section class="py-6 sm:py-12">
+			<div class="container p-6 mx-auto space-y-8">
+				<div class="rounded-full space-y-2 text-center bg-offset p-4">
+					<h2 class="text-3xl font-bold">KBVE Blog</h2>
+					<p class="font-serif text-sm dark:text-gray-400">
+						Blog Posts from KBVE
+					</p>
+				</div>
+
+				<Oracle element="blog" data="blog" />
+			</div>
+		</section>
+		<N ns="ads" template="midbanner" id="ezoic" />
+	</Menu>
+</KBVE>

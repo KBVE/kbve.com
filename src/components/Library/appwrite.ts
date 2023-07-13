@@ -72,12 +72,21 @@ isLoggedIn.subscribe(async (session) => {
 });
 
 
-export const OAuth2 = async (provider: string) => {
+export const JWT = async () => {
+	try {
+		return appwriteAccount.createJWT()
+	} catch (error) {
+		return error;
+	}
+
+}	
+
+export const OAuth2 = async ({provider, valid = 'https://kbve.com/account/', failure = 'https://kbve.com/account/login/?failure'} : {provider: string, valid?: string, failure?: string}) => {
 	try {
 		return appwriteAccount.createOAuth2Session(
 			provider,
-			"https://kbve.com/account/",
-			"https://kbve.com/account/login/?failure",
+			valid,
+			failure,
 		)
 	} catch (error) {
 		return error;

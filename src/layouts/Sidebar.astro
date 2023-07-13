@@ -1,0 +1,370 @@
+---
+//  <!-- ? [SideBar] -->
+import Socials from '@w/Socials.astro';
+import SVG from '@c/Library/SVG/SVG.astro';
+---
+
+<aside
+	class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-default md:translate-x-0"
+	aria-label="Sidenav"
+	id="drawer-navigation"
+>
+	<!-- 
+      * Sidebar - [START]
+     -->
+	<div class="bg-offset overflow-y-hidden py-5 px-3 h-full">
+		<img
+			src={'/assets/img/bot/kbve.png'}
+			alt="KBVE_BOT_LOGO"
+			class="w-32 h-32 mx-auto rounded-full shadow-2xl shadow-[#1c033c] hover:shadow-overdrive hover:shadow-[#1c033c] transition-shadow hover:animate-pulse"
+		/>
+
+		<div class="divide-y divide-gray-700">
+			<ul class="pt-2 pb-4 space-y-1 text-sm">
+				<li>
+					<a
+						rel="noopener noreferrer"
+						href="/"
+						class="flex items-center p-2 space-x-3 rounded-md"
+					>
+						<SVG name="mdiCubeOutline" />
+						<span>Dashboard</span>
+						<!-- <Disable /> -->
+					</a>
+				</li>
+				<li>
+					<button
+						type="button"
+						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
+						aria-controls="dropdown-pages"
+						data-collapse-toggle="dropdown-pages"
+					>
+						<SVG name="mdiAccountCircleOutline" />
+						<span class="flex-1 ml-3 text-left whitespace-nowrap">Account</span>
+						<svg
+							aria-hidden="true"
+							class="w-6 h-6"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<ul id="dropdown-pages" class="hidden py-2 space-y-2">
+						<li>
+							
+							<a
+								href="/account/settings/"
+								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiSecurity" />
+								&nbsp;
+								Settings
+								</a
+							>
+						</li>
+						<li>
+							<a
+								href="/account/profile/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiFactory" />
+								&nbsp;
+								Profile</a
+							>
+						</li>
+						<li>
+							<a
+								href="/account/calendar/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiCalendarImportOutline" />
+								&nbsp;
+								Calendar</a
+							>
+						</li>
+						
+					</ul>
+				</li>
+				<li>
+					<a
+						rel="noopener noreferrer"
+						href="/application/"
+						class="flex items-center p-2 space-x-3 rounded-md"
+					>
+						<SVG name="mdiDesktopClassic" />
+						<span>Applications</span>
+					</a>
+				</li>
+				
+				<li>
+					<button
+						type="button"
+						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
+						aria-controls="dropdown-assets"
+						data-collapse-toggle="dropdown-assets"
+					>
+						<SVG name="mdiChartLine" />
+						<span class="flex-1 ml-3 text-left whitespace-nowrap">Assets</span>
+						<svg
+							aria-hidden="true"
+							class="w-6 h-6"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<ul id="dropdown-assets" class="hidden py-2 space-y-2">
+						<li>
+							
+							<a
+								href="/asset/"
+								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiSecurity" />
+								&nbsp;
+								Assets
+								</a
+							>
+						</li>
+						<li>
+							<a
+								href="/stock/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiFactory" />
+								&nbsp;
+								Stocks</a
+							>
+						</li>
+						<li>
+							<a
+								href="/crypto/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiCalendarImportOutline" />
+								&nbsp;
+								Crypto</a
+							>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a
+						rel="noopener noreferrer"
+						href="/project/"
+						class="flex items-center p-2 space-x-3 rounded-md"
+					>
+						<SVG name="mdiCompassRose" />
+						<span>Projects</span>
+					</a>
+				</li>
+				<li>
+					<button
+						type="button"
+						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
+						aria-controls="dropdown-content"
+						data-collapse-toggle="dropdown-content"
+					>
+						<SVG name="mdiNewspaperVariantOutline" />
+						<span class="flex-1 ml-3 text-left whitespace-nowrap">Content</span>
+						<svg
+							aria-hidden="true"
+							class="w-6 h-6"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<ul id="dropdown-content" class="hidden py-2 space-y-2">
+						<li>
+							
+							<a
+								href="/theory/"
+								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiHumanFemaleBoy" />
+								&nbsp;
+								Theory
+								</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipe/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiCookieOutline" />
+								&nbsp;
+								Recipe</a
+							>
+						</li>
+						<li>
+							<a
+								href="/journal/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiNoteOutline" />
+								&nbsp;
+								Journal</a
+							>
+						</li>
+						<li>
+							<a
+								href="/security/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiCashLock" />
+								&nbsp;
+								Security</a
+							>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button
+						type="button"
+						class="flex items-center p-2 w-full rounded-lg transition duration-75 group hover:bg-default "
+						aria-controls="dropdown-media"
+						data-collapse-toggle="dropdown-media"
+					>
+						<SVG name="mdiMultimedia" />
+						<span class="flex-1 ml-3 text-left whitespace-nowrap">Media</span>
+						<svg
+							aria-hidden="true"
+							class="w-6 h-6"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<ul id="dropdown-media" class="hidden py-2 space-y-2">
+						<li>
+							
+							<a
+								href="/manga/"
+								class="flex items-center p-2 pl-11 w-full  rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiSwordCross" />
+								&nbsp;
+								Manga
+								</a
+							>
+						</li>
+						<li>
+							<a
+								href="/gaming/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiNintendoGameBoy" />
+								&nbsp;
+								Gaming</a
+							>
+						</li>
+						<li>
+							<a
+								href="/music/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiMusicCircleOutline" />
+								&nbsp;
+								Music</a
+							>
+						</li>
+						<li>
+							<a
+								href="/video/"
+								class="flex items-center p-2 pl-11 w-full rounded-lg transition duration-75 group hover:bg-default"
+								>
+								<SVG name="mdiVideoOutline" />
+								&nbsp;
+								Video</a
+							>
+						</li>
+
+
+						
+					</ul>
+				</li>
+			</ul>
+			<ul class="pt-4 p-2 space-y-1 text-sm">
+				<li>
+					<a
+						rel="noopener noreferrer prefetch"
+						href="/support/"
+						class="flex items-center space-x-3 rounded-md"
+					>
+						<SVG name="mdiAccountCircleOutline" />
+						<span>Support</span>
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+
+		<!-- <div class="p-2">
+			<LaunchApp />
+		</div> -->
+
+		<div class="p-2 pt-0 flex flex-row grow justify-between">
+			<div class="flex flex-col justify-between">
+				<div class="flex flex-row self-center">
+					<Socials />
+				</div>
+				<div class="flex flex-col">
+					<span class="flex items-center space-x-1">
+						<a
+							rel="noopener noreferrer"
+							href="/support/"
+							class="text-xs hover:underline text-gray-400">Contact Us</a
+						>
+					</span>
+					<span class="flex items-center space-x-1">
+						<a
+							rel="noopener noreferrer"
+							href="/legal/"
+							class="text-xs hover:underline text-gray-400">Legal</a
+						>
+						&nbsp;
+						<a
+						rel="noopener noreferrer"
+						href="/legal/tos/"
+						class="text-xs hover:underline text-gray-400">Terms</a
+						>
+						&nbsp;
+						<a
+						rel="noopener noreferrer"
+						href="/legal/eula/"
+						class="text-xs hover:underline text-gray-400">EULA</a
+						>
+						&nbsp;
+						<a
+						rel="noopener noreferrer"
+						href="/legal/privacy/"
+						class="text-xs hover:underline text-gray-400">Privacy</a
+						>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</aside>

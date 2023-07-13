@@ -1,27 +1,30 @@
 ---
 //<!--?         [Journal]
 //<!--*         [IMPORT]
-//<!--?         [NAMESPACE]
-import N from "@n/N.astro";
-import Oracle from "@w/Oracle.astro";
+import N from '@n/N.astro';
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+import Oracle from '@w/Oracle.astro';
 //<!--*         [DATA]
-let title = "KBVE Journal & Dev Logs";
+let title = 'KBVE Journal & Dev Logs';
 let description =
-  "Follow all our daily adventures through development! We will try to publish as much information as we can, as a reference.";
+	'Follow all our daily adventures through development! We will try to publish as much information as we can, as a reference.';
 ---
 
-<N ns="theme" title={title} description={description}>
-  <section class="py-6 sm:py-12">
-    <div class="container p-6 mx-auto space-y-8">
-      <div class="rounded-full space-y-2 text-center bg-offset p-4">
-        <h2 class="text-3xl font-bold">KBVE Journal</h2>
-        <p class="font-serif text-sm dark:text-gray-400">
-          Additional <b>Journal</b> entries from KBVE.
-        </p>
-      </div>
+<KBVE title={title} description={description}>
+	<Menu>
+		<section class="py-6 sm:py-12">
+			<div class="container p-6 mx-auto space-y-8">
+				<div class="rounded-full space-y-2 text-center bg-offset p-4">
+					<h2 class="text-3xl font-bold">KBVE Journal</h2>
+					<p class="font-serif text-sm dark:text-gray-400">
+						Additional <b>Journal</b> entries from KBVE.
+					</p>
+				</div>
 
-      <Oracle element="journal" data="journal" />
-    </div>
-  </section>
-  <N ns="ads" template="midbanner" id="ezoic" />
-</N>
+				<Oracle element="journal" data="journal" />
+			</div>
+		</section>
+		<N ns="ads" template="midbanner" id="ezoic" />
+	</Menu>
+</KBVE>

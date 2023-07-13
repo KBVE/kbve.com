@@ -1,0 +1,28 @@
+---
+layout: ../../../layouts/Canvas.astro
+title: Bathroom Break
+category: Tools
+client: Self
+frontpage: false
+effect: relative bg-cover bg-center bg-no-repeat overflow-hidden order-1 h-full
+draft: true
+publishDate: 2023-06-18 00:00:00
+img: https://images.unsplash.com/photo-1560762484-813fc97650a0?&w=1400&h=700&q=75
+description: Bathroom Break! Currently using the restroom, will be back soon :D
+tags:
+  - stream
+  - tools
+---
+
+import TypeWriter from "@lib/Manga/TypeWriter.astro";
+import MangaCharacter from "@lib/Manga/MangaCharacter.astro";
+import UserName from "@lib/Profile/User.jsx";
+
+<MangaCharacter
+  npc="protag"
+	className="absolute bottom-0 right-0  animate-pulse scale-[2]"
+/>
+
+<TypeWriter characterName="Protag">
+{frontmatter.description}
+</TypeWriter>

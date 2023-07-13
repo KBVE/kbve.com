@@ -2,12 +2,15 @@
 //<!--?         [Theory]
 //<!--*         [IMPORT]
     import N from "@n/N.astro";
+    import KBVE from "@l/KBVE.astro";
+    import Menu from "@l/Menu.astro";
     import Oracle from "@w/Oracle.astro";
 //<!--*         [DATA]
 let title = "KBVE Theory";
 let description = "KBVE Theorycrafting - Collection of all our abstract viewpoiunts and hot takes! Great reads and reference points for all shapes and sizes.";
 ---
-<N ns="theme" title={title} description={description}>
+<KBVE title={title} description={description}>
+  <Menu>
     <!-- [Theory] -->
     <section class="py-6 sm:py-12">
         <div class="container p-6 mx-auto space-y-8">
@@ -25,4 +28,5 @@ let description = "KBVE Theorycrafting - Collection of all our abstract viewpoiu
         </div>
       </section>
       <N ns="ads" template="midbanner" id="ezoic" />
-</N>
+    </Menu>
+</KBVE>

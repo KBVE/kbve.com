@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/theme/mdx.astro
-title: AAPL
+title: Apple
 category: Stock
 client: Self
 frontpage: true
@@ -17,9 +17,7 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
-import TradingView from "@w/TradingView.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
+
 
 ## Information
 
@@ -28,20 +26,6 @@ Apple has been around for a long time now, and for good reason because their pro
 They have always been a company that has been on the cutting edge of technology, and they are always coming up with new and innovative ways to improve the lives of their customers.
 
 ---
-
-<TabMenu first="chart" data={["intro", "options", "exchange", "reports", "notes"]}>
-  <TabData tail="block" data="chart">
-    <TradingView data="NASDAQ:AAPL" />
-  </TabData>
-  <TabData data="intro">
-
-## Intro
-
-</TabData>
-  <TabData data="options">Options</TabData>
-  <TabData data="exchange">Exchanges</TabData>
-  <TabData data="reports">Reports</TabData>
-  <TabData data="notes">
 
 ## Notes
 
@@ -57,5 +41,3 @@ These are the collection of notes for the AAPL MDX Document.
 <Details data="2023-04-14">
 Testing the charts for AAPL
 </Details>
-</TabData>
-</TabMenu>

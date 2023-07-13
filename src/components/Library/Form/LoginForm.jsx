@@ -12,6 +12,7 @@ const LoginForm = ({ data }) => {
 	} = useForm();
 
 	const [loginError, setLoginError] = React.useState();
+	const [dataObject, setDataObject] = React.useState(data);
 
 	const Auth = (provider) => {
 		try {
@@ -21,9 +22,12 @@ const LoginForm = ({ data }) => {
 		}
 	}
 
+
+
 	const onSubmit = async (data) => {
 		try {
 			await login(data.email, data.password);
+			
 		} catch (error) {
 			setLoginError(error);
 		}
