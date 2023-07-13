@@ -17,20 +17,10 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
-import TradingView from "@w/TradingView.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
-
 
 ## Information
 $O is the stock symbol for *Realty Income Corporation*, a real estate investment trust (REIT) that owns and operates over 6,500 commercial properties in the United States and Europe. 
 The company motto is "The Monthly Dividend Company" because it is known for paying monthly dividends to its shareholders and has increased its dividend for 109 consecutive quarters since its public listing in 1994.
-
-<TabMenu first="chart" data={["intro", "options", "exchange", "reports", "notes"]}>
-  <TabData tail="block" data="chart">
-    <TradingView data="NYSE:O" />
-  </TabData>
-  <TabData data="intro">
 
 ## Intro
 
@@ -41,11 +31,6 @@ Realty Income's stock performance has been impressive over the years. It has del
 If you are interested in investing in Realty Income, you can buy its shares through any online brokerage platform that offers access to the NYSE. You can also learn more about the company by visiting its website at www.realtyincome.com.
 Realty Income is a great example of a REIT that provides consistent and growing income to its investors. By owning high-quality properties with long-term leases, it has built a solid reputation as one of the best dividend stocks in the market.
 
-</TabData>
-  <TabData data="options">Options</TabData>
-  <TabData data="exchange">Exchanges</TabData>
-  <TabData data="reports">Reports</TabData>
-  <TabData data="notes">
 
 ## Notes
 
@@ -62,6 +47,3 @@ These are the collection of notes for the Reality Income MDX Document.
 <Details data="2023-04-14">
 Testing the charts for O
 </Details>
-
-</TabData>
-</TabMenu>

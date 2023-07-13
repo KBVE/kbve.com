@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/mdx.astro
+layout: ../../layouts/Stock.astro
 title: SPY
 category: Stock
 client: Self
@@ -7,7 +7,6 @@ publishDate: 2022-10-24 00:00:00
 img: https://images.unsplash.com/photo-1648275913341-7973ae7bc9b3?fit=crop&w=1400&h=700&q=75
 description: SPDR S&P 500 ETF Trust that tracks the 500 largest U.S companies through S&P Dow Jones Index.
 isin: US78462F1030
-cusip: 78462F103
 ticker: spy
 dividend: true
 exchange: AMEX
@@ -18,9 +17,7 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
-import TradingView from "@w/TradingView.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
+
 
 ## Information
 
@@ -28,20 +25,7 @@ The S&P 500 index is a stock market index that tracks ~500 of the largest U.S. c
 
 ---
 
-<TabMenu first="chart" data={["intro", "options", "exchange", "reports", "notes"]}>
-  <TabData tail="block" data="chart">
-    <TradingView data="AMEX:spy" />
-  </TabData>
-  <TabData data="intro">
 
-## Intro
-
-
-</TabData>
-  <TabData data="options">Options</TabData>
-  <TabData data="exchange">Exchanges</TabData>
-  <TabData data="reports">Reports</TabData>
-  <TabData data="notes">
 
 ## Notes
 
@@ -52,9 +36,13 @@ These are the collection of notes for the SPY 500 MDX Document.
 - [x] Add Charts for $SPY
 - [ ] Add tabs with charts!
 
-#### Journal
+### Journal
 
-<Details data="2023-04-14">Testing the charts for $SPY</Details>
 
-</TabData>
-</TabMenu>
+<Details data="J1">
+
+#### J1
+##### 2023-04-14
+Testing the charts for $SPY
+
+</Details>
