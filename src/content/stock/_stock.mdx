@@ -1,11 +1,11 @@
 ---
-layout: ../../layouts/theme/mdx.astro
+layout: ../../layouts/Stock.astro
 title: $STOCK_TITLE
 category: Stock
 client: Self
 frontpage: false
 draft: true
-publishDate: 2023-4-01 00:00:00
+publishDate: 2023-07-12 00:00:00
 img: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fit=crop&w=1400&h=700&q=75
 description: $STOCK_DESCRIPTION
 ticker: $STOCK_TICKER
@@ -14,13 +14,10 @@ isin: $STOCK_ISIN
 cusip: $CUSIP
 exchange: $EXCHANGE
 tags:
-- media
-- multinational
-- conglomerate
+- stock
 ---
 
 import Details from "@w/Details.astro";
-import TradingView from "@w/TradingView.astro";
 
 ---
 
@@ -30,7 +27,6 @@ import TradingView from "@w/TradingView.astro";
 
 ## Charts
 
-<TradingView data="NYSE:DIS" />
 
 ---
 
@@ -38,5 +34,17 @@ import TradingView from "@w/TradingView.astro";
 
 ### Log
 
+- [ ] Need more information and data
+
+
 ### Journal
+
+<Details data="J1">
+
+#### J1
+##### 2023-04-14
+
+Testing the charts for O
+
+</Details>
 
