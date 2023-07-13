@@ -1,0 +1,26 @@
+---
+layout: ../../../layouts/Canvas.astro
+title: Food Break
+category: Tools
+client: Self
+frontpage: false
+effect: relative bg-cover bg-center bg-no-repeat overflow-hidden order-1 h-full
+draft: true
+publishDate: 2023-06-18 00:00:00
+img: https://images.unsplash.com/photo-1511690656952-34342bb7c2f2
+description: Having a quick meal before returning back to the stream.
+tags:
+  - stream
+  - tools
+---
+
+import TypeWriter from "@lib/Manga/TypeWriter.astro";
+import MangaCharacter from "@lib/Manga/MangaCharacter.astro";
+import UserName from "@lib/Profile/User.jsx";
+
+<MangaCharacter
+  npc="protag"
+	className="absolute bottom-0 right-0 -translate-x-36 animate-pulse-short scale-[1.7]" />
+<TypeWriter characterName="Protag">
+{frontmatter.description}
+</TypeWriter>

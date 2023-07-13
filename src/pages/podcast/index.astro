@@ -3,24 +3,29 @@
 //<!--TODO      [Podcast API]
 //<!--!         [BROKEN]
 //<!--*         [IMPORT]
-import N from "@n/N.astro";
-import Oracle from "@w/Oracle.astro";
+import N from '@n/N.astro';
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+import Oracle from '@w/Oracle.astro';
 //<!--*         [DATA]
-let title = "KBVE Podcasts! Our podcast about other podcasts?";
-let description = "We love to listen to podcasts whenever we are at the gym, working out or doing something else!";
+let title = 'KBVE Podcasts! Our podcast about other podcasts?';
+let description =
+	'We love to listen to podcasts whenever we are at the gym, working out or doing something else!';
 ---
 
-<N ns="theme" title={title} description={description}>
-  <section class="py-6 sm:py-12">
-    <div class="container p-6 mx-auto space-y-8">
-      <div class="rounded-full space-y-2 text-center bg-offset p-4">
-        <h2 class="text-3xl font-bold">KBVE Podcast</h2>
-        <p class="font-serif text-sm dark:text-gray-400">
-          Great podcasts for you to listen to!.
-        </p>
-      </div>
-      <Oracle element="podcast" data="podcast" />
-    </div>
-  </section>
-  <N ns="ads" template="midbanner" id="ezoic" />
-</N>
+<KBVE title={title} description={description}>
+	<Menu>
+		<section class="py-6 sm:py-12">
+			<div class="container p-6 mx-auto space-y-8">
+				<div class="rounded-full space-y-2 text-center bg-offset p-4">
+					<h2 class="text-3xl font-bold">KBVE Podcast</h2>
+					<p class="font-serif text-sm dark:text-gray-400">
+						Great podcasts for you to listen to!.
+					</p>
+				</div>
+				<Oracle element="podcast" data="podcast" />
+			</div>
+		</section>
+		<N ns="ads" template="midbanner" id="ezoic" />
+	</Menu>
+</KBVE>

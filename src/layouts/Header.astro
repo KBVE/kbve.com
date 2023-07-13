@@ -1,0 +1,76 @@
+---
+const { url, title, description, image } = Astro.props;
+---
+
+<!--? Light/Dark [START] -->
+<script is:inline>
+	const themeSaved = localStorage.getItem('theme');
+
+	if (themeSaved) {
+		document.documentElement.dataset.theme = themeSaved;
+		//      document.documentElement.classList.add(themeSaved);
+	} else {
+		document.documentElement.dataset.theme = 'dark';
+		//      document.documentElement.classList.add("dark");
+	}
+
+	window
+		.matchMedia('(prefers-color-scheme: dark)')
+		.addEventListener('change', (event) => {
+			if (!localStorage.getItem('theme')) {
+				document.documentElement.dataset.theme = event.matches
+					? 'dark'
+					: 'light';
+			}
+		});
+</script>
+<!--? Light/Dark [END]  && Google Adsense [START] -->
+<script
+	async
+	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019"
+	crossorigin="anonymous"
+></script>
+<!--? Google Adsense [END] && FlowBite [START]  -->
+<script
+	is:inline
+	src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"
+></script>
+<!--? FlowBite [END] -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href={url} />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+
+<!--* Fonts -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	rel="preload"
+	as="style"
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+/>
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+	media="print"
+	onload="this.media='all'"
+/>
+<noscript>
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+	/>
+</noscript>
+
+<!--* Meta Property Tags [START] -->
+<meta property="og:title" content={title} />
+<meta property="og:type" content="website" />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:url" content={url} />
+<meta name="twitter:card" content="summary_large_image" />
+<!--* Meta Property Tags [END] -->
