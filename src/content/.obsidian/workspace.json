@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/07-12.md",
+                "file": "journal/07-13.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-12.md",
+                "file": "journal/07-13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-12.md",
+                "file": "journal/07-13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-12.md"
+                "file": "journal/07-13.md"
               }
             }
           }
@@ -157,6 +157,8 @@
   },
   "active": "a52b5814d499e0cf",
   "lastOpenFiles": [
+    "journal/07-12.md",
+    "journal/07-13.md",
     "stock/f.mdx",
     "stock/_stock.mdx",
     "stock/stock.mdx",
@@ -167,9 +169,7 @@
     "tools/stream/bathroom.mdx",
     "tools/stream/piss.mdx",
     "journal/07-11.md",
-    "journal/07-12.md",
     "tools/stream/afk.mdx",
-    "tools/stream/stream.mdx",
     "journal/07-10.md",
     "journal/07-09.md",
     "journal/07-08.md",
