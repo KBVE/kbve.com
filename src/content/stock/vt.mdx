@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/theme/mdx.astro
+layout: ../../layouts/Stock.astro
 title: VG Total ETF
 sub_title: Vanguard Total World ETF
 category: Stock
@@ -8,8 +8,7 @@ publishDate: 2022-10-24 00:00:00
 img: https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&w=1400&h=700&q=75
 description: Vanguard Total Stock Market ETF that tracks the FTSE Global All Cap Index, investing in foreign and U.S stocks.
 isin: US9220427424
-cusip: US922042742
-ticker: vt
+ticker: VT
 dividend: true
 exchange: AMEX
 tags:
@@ -19,28 +18,14 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
-import TradingView from "@w/TradingView.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
 
 ## Information
 
 ---
 
-<TabMenu first="chart" data={["intro", "options", "exchange", "reports", "notes"]}>
-  <TabData tail="block" data="chart">
-    
-<TradingView data="AMEX:VT" />
-  </TabData>
-  <TabData data="intro">
 
 ## Intro
 
-</TabData>
-  <TabData data="options">Options</TabData>
-  <TabData data="exchange">Exchanges</TabData>
-  <TabData data="reports">Reports</TabData>
-  <TabData data="notes">
 
 ## Notes
 
@@ -49,12 +34,24 @@ These are the collection of notes for the $VT MDX Document.
 ### Log
 
 - [X] Add Charts for $VT
-- [ ] Add tabs with charts!
+- [X] Add tabs with charts!
 
-#### Journal
+### Journal
 
-<Details data="2023-04-14">
-Testing the charts for $VT
+<Details data="J2">
+
+#### J2
+##### 2023-07-12
+
+Going to remove the tabs for now.
+
 </Details>
-</TabData>
-</TabMenu>
+
+<Details data="J1">
+
+#### J1
+##### 2023-04-14
+
+Testing the charts for $VT
+
+</Details>

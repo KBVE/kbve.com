@@ -10,7 +10,7 @@ const DirtySpoon = ({ message, className }) => {
 		<span>
 			<Typewriter
 				options={{
-					wrapperClassName: {className},
+					wrapperClassName: className,
 				}}
 				onInit={(typewriter) => {
 					typewriter.changeDelay(69).typeString(message).start();
