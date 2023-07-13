@@ -1502,6 +1502,13 @@ declare module 'astro:content' {
   collection: "stock";
   data: any
 } & { render(): Render[".mdx"] };
+"f.mdx": {
+	id: "f.mdx";
+  slug: "f";
+  body: string;
+  collection: "stock";
+  data: any
+} & { render(): Render[".mdx"] };
 "o.mdx": {
 	id: "o.mdx";
   slug: "o";
