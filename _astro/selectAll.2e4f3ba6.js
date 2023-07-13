@@ -1,1 +1,0 @@
-import{ao as t,ap as n,aq as o}from"./mermaid.core.fc10fbca.js";function r(e){return"string"==typeof e?new t([document.querySelectorAll(e)],[document.documentElement]):new t([o(e)],n)}export{r as s};

@@ -1,1 +1,0 @@
-import{p as e}from"./purify.es.7c11e50a.js";const t=({_search:t})=>{const s=new URL(window.location.href).hash;let a=e.sanitize(s,{USE_PROFILES:{html:!1,mathMl:!1,svg:!1}});a&&(a=a.slice(1),window.location=`/search/?q=${a}`)};export{t as default};
