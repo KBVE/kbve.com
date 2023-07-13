@@ -1,25 +1,17 @@
 ---
-//?                 [Twitch]
-//!                 Twitch Widget Embed - Previous under /Action/ or /Element/
-//@                 We will migrate /Action/ and /Element/ into /Widget/ , with the goal of creating a one stop location for all the widgets
-//?                 NameSpace extension will then be via the "Widget" aspect, placing almost all entities into the "Widget".
-//!                 Pass through the channel variable? We could preset the height , width
-const { tail = "w-full aspect-w-16 aspect-h-9" } = Astro.props;
+
+const { tail = "w-full  aspect-w-16 aspect-h-9" } = Astro.props;
 
 ---
-<!-- Add a placeholder for the Twitch embed -->
 <div id="twitch-embed" class={tail}></div>
-<!-- Load the Twitch embed JavaScript file -->
 <script is:inline src="https://embed.twitch.tv/embed/v1.js"></script>
-
-<!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
 <script type="text/javascript">
   new Twitch.Embed("twitch-embed", {
         width: '100%',
+        height: '100%',
         channel: "kbve",
         layout: "video",
         autoplay: false,
-        // Only needed if this page is going to be embedded on other websites
         parent: ["kbve.com", "www.kbve.com"]
   });
 </script>

@@ -1,0 +1,7 @@
+---
+//<!--*     [IMPORT]
+import ReactMangaText from '@lib/Manga/MangaTextHandler/ReactMangaText.jsx';
+//<!--*     [DATA]
+const { message, data, className } = Astro.props;
+---
+<ReactMangaText client:only="react" message={message} data={data} className={className} />
