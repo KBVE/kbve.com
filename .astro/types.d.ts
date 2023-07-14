@@ -1516,6 +1516,13 @@ declare module 'astro:content' {
   collection: "stock";
   data: any
 } & { render(): Render[".mdx"] };
+"gain.mdx": {
+	id: "gain.mdx";
+  slug: "gain";
+  body: string;
+  collection: "stock";
+  data: any
+} & { render(): Render[".mdx"] };
 "o.mdx": {
 	id: "o.mdx";
   slug: "o";
@@ -1841,9 +1848,9 @@ declare module 'astro:content' {
 	type DataEntryMap = {
 		"_bin": {
 };
-"config": {
+"compose": {
 };
-"location": {
+"vip": {
 };
 
 	};
