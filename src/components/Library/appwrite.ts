@@ -121,7 +121,7 @@ export const logout = async () => {
 	}
 };
 
-export const register = async (
+export const create = async (
 	email: string,
 	password: string,
 	name: string,
@@ -130,7 +130,7 @@ export const register = async (
 		await appwriteAccount.create(ID.unique(), email, password, name);
 		const session = await appwriteAccount.createEmailSession(email, password);
 		isLoggedIn.set(session);
-		window.location.href = "/account";
+		window.location.href = "/account/profile";
 	} catch (error) {
 		const appwriteError = error as AppwriteException;
 		throw appwriteError.message;
