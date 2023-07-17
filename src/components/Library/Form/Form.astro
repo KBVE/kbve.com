@@ -1,7 +1,9 @@
 ---
 //          [IMPORT]
 import LoginForm from "@c/Library/Form/LoginForm.jsx";
+import RegisterForm from '@c/Library/Form/RegisterForm.jsx';
 //          [DATA]
 const { data, className } = Astro.props;
 ---
 {(className == 'login') && <LoginForm client:only="react" data={data} ><slot /></LoginForm>}
+{(className == 'register') && <RegisterForm client:only="react" data={data}><slot /></RegisterForm>}
