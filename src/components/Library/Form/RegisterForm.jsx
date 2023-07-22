@@ -1,9 +1,13 @@
+//?			[Register]
+//*			[IMPORT]
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { create, OAuth2} from '@lib/appwrite.ts';
 import * as Icons from '@mdi/js';
 import { elementErrorMessage } from '@lib/tools';
 
+
+//!			[RegisterForm *Needs JS Docs]
 const RegisterForm = ({ data }) => {
 	const {
 		register,
