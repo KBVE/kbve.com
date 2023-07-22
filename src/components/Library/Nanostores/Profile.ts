@@ -6,7 +6,7 @@ import { atom, WritableAtom } from "nanostores";
 export const _client = new Client()
   .setEndpoint("https://ap.kbve.com/v1")
   .setProject("6436a6dc9a6b48db802f");
-export var _c = _client;
+export const _c = _client;
 
 export const _aw = new Account(_c);
 
