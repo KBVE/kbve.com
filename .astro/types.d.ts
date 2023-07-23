@@ -1607,6 +1607,13 @@ declare module 'astro:content' {
   collection: "stock";
   data: any
 } & { render(): Render[".mdx"] };
+"pey.mdx": {
+	id: "pey.mdx";
+  slug: "pey";
+  body: string;
+  collection: "stock";
+  data: any
+} & { render(): Render[".mdx"] };
 "sphd.mdx": {
 	id: "sphd.mdx";
   slug: "sphd";
@@ -1634,6 +1641,14 @@ declare module 'astro:content' {
   body: string;
   collection: "stock";
   data: any
+} & { render(): Render[".mdx"] };
+"vnq.mdx": {
+	id: "vnq.mdx";
+  slug: "vnq";
+  body: string;
+  collection: "stock";
+  data: any
+
 } & { render(): Render[".mdx"] };
 "vt.mdx": {
 	id: "vt.mdx";
