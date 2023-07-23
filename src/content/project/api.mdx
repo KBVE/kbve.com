@@ -17,15 +17,28 @@ repo: kbve/api.kbve.com
 import Github from '@w/Github.astro';
 export const components = { github: Github };
 
-## Docs
+## Information
 
 - Official documentation will be provided for the API, we are currently going to base the API off of Strapi / Appwrite.
+
+This documentation will hold all the general reference points for the multi-tenet API, however we would need to expand upon the reference material and try to make it easier to onboard new developers.
 
 ---
 
 
-
 ## Install
+
+The current API installation process needs to be migrated but it currently sits as this:
+
+- Proxmox -> qEMU -> Docker Swarm
+- Portainer -> Deploy Image
+
+With all front-end instances being either applications or static pages. 
+There might be a couple edge cases where we have SSR or hybrids applications.
+
+### OLD
+
+The following information below is for installing the older API, which was just a MariaDB cluster with Strapi.
 
 - To help scale the API backend, we are also currently developing the backend cluster of both the API and the database that stores the information (MariaDB).
   - Current Docker Compose for ve2
@@ -40,6 +53,7 @@ export const components = { github: Github };
 ## Uptime
 
 - ![API Uptime Badge](https://api.checklyhq.com/v1/badges/checks/206925a6-0f7b-4669-a4fd-b61b3f5b70fc?style=for-the-badge&theme=default&responseTime=true)
+
 
 ---
 
@@ -76,3 +90,6 @@ The API is an unique construct that extends outside of the norm.
 - [10] - [CityVote](https://kbve.com/project/cityvote/)
 - [11] - [Stream](https://kbve.com/project/stream/)
 - [12] - [VIP](https://kbve.com/project/vip)
+
+We are currently manually referencing the project's via an ID system.
+I am not looking to spend too much time automating the ID system for the projects, as I want to keep some level of control on how we handle them.
