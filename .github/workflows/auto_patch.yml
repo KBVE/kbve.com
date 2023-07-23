@@ -1,0 +1,31 @@
+name: Patch to Dev
+
+on:
+  push:
+    branches:
+    - "patch*"
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull-request
+        uses: actions/checkout@v3
+      
+      - name: auto-deploy
+        uses: diillson/auto-pull-request@v1.0.1
+        with:
+          destination_branch: "dev"                      
+          pr_title: "Pulling ${{ github.ref }} into Dev"  
+          pr_body: |                                        
+            :crown: *An automated PR*
+            Pulling Patch branches into Dev
+             - - -
+              For Support, please visit [KBVE Support](https://kbve.com/support/)
+             - - -
+              For Git References, please visit [KBVE Git Application Reference](https://kbve.com/application/git/)
+             - - -
+              For Project Information, please visit [KBVE Projects Information](https://kbve.com/project/)
+             - - -
+              Thank you for your contribution!
+          pr_label: "auto-pr"
