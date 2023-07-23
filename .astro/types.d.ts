@@ -1487,6 +1487,13 @@ declare module 'astro:content' {
   collection: "project";
   data: any
 } & { render(): Render[".mdx"] };
+"herbmail.mdx": {
+	id: "herbmail.mdx";
+  slug: "herbmail";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
 "rareicon.mdx": {
 	id: "rareicon.mdx";
   slug: "rareicon";
@@ -1593,27 +1600,6 @@ declare module 'astro:content' {
   collection: "stock";
   data: any
 } & { render(): Render[".mdx"] };
-"icln.mdx": {
-	id: "icln.mdx";
-  slug: "icln";
-  body: string;
-  collection: "stock";
-  data: any
-} & { render(): Render[".mdx"] };
-"iyr.mdx": {
-	id: "iyr.mdx";
-  slug: "iyr";
-  body: string;
-  collection: "stock";
-  data: any
-} & { render(): Render[".mdx"] };
-"main.mdx": {
-	id: "main.mdx";
-  slug: "main";
-  body: string;
-  collection: "stock";
-  data: any
-} & { render(): Render[".mdx"] };
 "o.mdx": {
 	id: "o.mdx";
   slug: "o";
@@ -1662,6 +1648,7 @@ declare module 'astro:content' {
   body: string;
   collection: "stock";
   data: any
+
 } & { render(): Render[".mdx"] };
 "vt.mdx": {
 	id: "vt.mdx";
