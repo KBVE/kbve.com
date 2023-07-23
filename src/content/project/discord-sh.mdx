@@ -18,6 +18,42 @@ tags:
 
 Discord.sh is our first KBVE service that aims to help build automated discord bots for private communities. 
 I am currently testing various bots to see which would be the best as the base for us to use. 
+We are running application ID `1116505109061443614` on our current main server aka Melody the Music Bot.
+The goal is to automate a decent chunk of the DX, which includes the management, deployment, panel, ect..
+
+### Scope
+
+The general scope of the Discord.sh project will be to provide a private dashboard that lets the user launch and maintain their own discord bot.
+
+The initial stages would be the generic, User register/login/profile.
+
+Afterwards would we would provide a simple panel that could handle a simple task of deploying a bot, adding the bot, ect...
+
+They have to create the initial information for the Discord bot via the developerment panel, this could be handled by us but I think it be best to let them do that part.
+
+After they get the application id, public key, token, and other variables. 
+They save those to our panel and then our panel would deploy them via a cloud function.
+
+We should focus initially on just this limited scope for now, at least in the bot development cycle.
+
+Now switching over to the other side, which would be the toplist / voting. I believe we could keep that simple.
+
+We could start with a general object / interface for the Discord Server, itself. 
+
+Title -> String , limited to 64 characters aZ09 regex
+Description -> String, limited to 300 characters aZ09 regex
+Server Code -> Number, limited to 16? characters, 09 regex, I have to double check this.
+Server Invite Code -> String, limited to 16? charaters, az09 regex, I have to double check this.
+Votes -> Number -> 0 , Read-only permission for the users.
+
+Then add a simple vote button, that would log the IP address and the time they voted, then increase the vote count for the server by 1.
+
+We could then run a cron to reset the votes for each of the server every 30 days. 
+
+I am thinking we could also migrate the "votes" out of the initial discord server object and move it over its own table, where it is:
+
+Server_Object_Id -> Hash -> Represents the general object / interface for the Discord Server.
+Vote -> Number -> 0 , Read-only permission for the users.
 
 --- 
 
