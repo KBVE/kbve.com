@@ -13,13 +13,7 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
-import TabMenu from "@w/TabMenu.astro";
-import TabData from "@w/TabData.astro";
 import N from "@n/N.astro";
-
-<TabMenu first="general" data={["guides", "media", "notes"]}>
-
-<TabData tail="block" data="general">
 
 ## Git
 
@@ -28,6 +22,11 @@ Everything you will need to prepare for git!
 ---
 
 ## Github
+
+### Sweep
+
+Sweep is an mL-powered dev bot that helps transform bug reports and feature requests into codebase changes.
+To get started, we recommend looking through their [starter docs](https://github.com/sweepai/sweep#-getting-started).
 
 ### Github Notes
 
@@ -211,22 +210,6 @@ ln -s ../../submodules/UnitySubModules/Vuplex
 
 ---
 
-</TabData>
-
-<TabData data="guides">
-
-## Guides
-
-</TabData>
-
-<TabData data="media">
-
-## Media
-
-</TabData>
-
-<TabData data="notes">
-
 ## Notes
 
 ### Log
@@ -235,5 +218,4 @@ ln -s ../../submodules/UnitySubModules/Vuplex
 
 <Details data="2023-04-16"> Added tabs to the GIT MDX. </Details>
 
-</TabData>
-</TabMenu>
+---
