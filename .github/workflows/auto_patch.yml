@@ -5,6 +5,8 @@ on:
     branches:
     - "patch*"
 
+permissions: write-all
+
 jobs:
   pull-request:
     runs-on: ubuntu-latest
@@ -29,3 +31,13 @@ jobs:
              - - -
               Thank you for your contribution!
           pr_label: "auto-pr"
+  codesee:
+    needs: [pull-request]
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    name: Analyze the repo with CodeSee
+    steps:
+      - uses: Codesee-io/codesee-action@v2
+        with:
+          codesee-token: ${{ secrets.CODESEE_ARCH_DIAG_API_TOKEN }}
+          codesee-url: https://app.codesee.io
