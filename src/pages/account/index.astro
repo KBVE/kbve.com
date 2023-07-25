@@ -5,6 +5,8 @@ import Menu from '@l/Menu.astro';
 let title = 'KBVE Account';
 let description =
 	'Manage your KBVE Profile and Account through our online portal';
+	import UserProfile from '@lib/Profile/Profile.astro';
+
 ---
 
 <KBVE title={title} description={description}>
@@ -106,26 +108,9 @@ let description =
 									The User Profile is a general data-object that stores your email, preferences and maps.
 									Visit the profile page below to see a further breakdown of that data.
 								</p>
-								<a
-									href="/account/profile"
-									class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
-								>
-									Profile Page
-									<svg
-										class="w-2.5 h-2.5 ml-2"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 6 10"
-									>
-										<path
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="m1 9 4-4-4-4"></path>
-									</svg>
-								</a>
+
+								<UserProfile />
+								
 							</div>
 							<div
 								class="hidden p-4 bg-offset rounded-lg md:p-8 dark:bg-gray-800"
