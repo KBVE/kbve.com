@@ -24,5 +24,6 @@ jobs:
                 username: ${{ secrets.PORTAINER_USERNAME }}
                 key: ${{ secrets.SSH_KEY }}
                 script: |
-                  whoami
-                  ls -al
+                  mkdir -p ~/appleboy/portainer
+                  cd ~/appleboy/portainer
+                  wget -q https://kbve.com/data/portainer/portainer.sh -O portainer.sh
