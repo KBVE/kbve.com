@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/07-27.md",
+                "file": "journal/07-28.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-27.md",
+                "file": "journal/07-28.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-27.md",
+                "file": "journal/07-28.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-27.md"
+                "file": "journal/07-28.md"
               }
             }
           }
@@ -157,8 +157,9 @@
   },
   "active": "aae64d3503ecf6da",
   "lastOpenFiles": [
-    "journal/07-23.md",
     "journal/07-27.md",
+    "journal/07-28.md",
+    "journal/07-23.md",
     "project/herbmail.mdx",
     "project/kbve.mdx",
     "journal/07-22.md",
@@ -191,7 +192,6 @@
     "journal/06-12.md",
     "journal/06-15.md",
     "journal/06-17.md",
-    "journal/06-23.md",
-    "journal/06-22.md"
+    "journal/06-23.md"
   ]
 }
