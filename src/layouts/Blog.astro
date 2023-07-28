@@ -1,0 +1,25 @@
+---
+//*     [IMPORTS]
+import KBVE from '@l/KBVE.astro';
+import Menu from '@l/Menu.astro';
+//*     [DATA]
+const { content } = Astro.props;
+---
+<KBVE title={content.title} description={content.description}>
+	<Menu>
+        <div class="p-8 space-y-12"></div>
+		<div
+			class="flex flex-wrap mb-12 justify-center items-center bg-fixed bg-center bg-cover overflow-hidden"
+			style={{ backgroundImage: `url(${content.img})` }}
+		>
+        <!-- Blog Theme [START] -->
+        <div class="w-96 relative md:w-full m-4">
+            <div class="shadow-2xl p-4 bg-offset rounded-3xl">
+                <slot />
+            </div>
+        </div>
+        <!-- Blog Theme [END] -->
+        </div>
+
+    </Menu>
+</KBVE>
