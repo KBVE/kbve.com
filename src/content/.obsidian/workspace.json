@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/07-23.md",
+                "file": "journal/07-27.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-23.md",
+                "file": "journal/07-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-23.md",
+                "file": "journal/07-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-23.md"
+                "file": "journal/07-27.md"
               }
             }
           }
@@ -157,10 +157,11 @@
   },
   "active": "aae64d3503ecf6da",
   "lastOpenFiles": [
+    "journal/07-23.md",
+    "journal/07-27.md",
     "project/herbmail.mdx",
     "project/kbve.mdx",
     "journal/07-22.md",
-    "journal/07-23.md",
     "journal/07-21.md",
     "journal/07-06.md",
     "journal/07-20.md",
@@ -182,7 +183,6 @@
     "stock/dis.mdx",
     "tools/stream/food.mdx",
     "tools/stream/water.mdx",
-    "tools/stream/bathroom.mdx",
     "journal/07-09.md",
     "journal/07-08.md",
     "journal/07-07.md",
