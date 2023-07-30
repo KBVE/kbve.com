@@ -3,135 +3,130 @@
 //!       [ERROR]: There might be null errors with the current configuration of <Modal> components.
 //!       [TO:DO]: Structure in the <N> : Namespace.
 ///       [IMPORTS]
-import SVG from "@c/Library/SVG/SVG.astro";
-import ThemeSwitcher from "@n/Theme/ThemeSwitch.astro"; // Migrating this into the Nav Bar
-import KBVEL from "@c/Branding/KBVEL";
-import KBVELogo from "@c/Branding/KBVELogo";
+import SVG from '@c/Library/SVG/SVG.astro';
+import ThemeSwitcher from '@n/Theme/ThemeSwitch.astro'; // Migrating this into the Nav Bar
+import KBVEL from '@c/Branding/KBVEL';
+import KBVELogo from '@c/Branding/KBVELogo';
 ///       [DATA]
 const navItems = [
-  { title: "Applications", url: "/application/" },
-  { title: "Assets", url: "/asset/" },
-  { title: "Projects", url: "/project/" },
-  { title: "Contact Us", url: "/support/" },
-  { title: "Legal", url: "/legal/" },
+	{ title: 'Applications', url: '/application/' },
+	{ title: 'Assets', url: '/asset/' },
+	{ title: 'Projects', url: '/project/' },
+	{ title: 'Contact Us', url: '/support/' },
+	{ title: 'Legal', url: '/legal/' },
 ];
 ---
 
 <header
-  id="page-header"
-  class="fixed-header absolute top-0 z-50 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent h-16"
->
-  <a class="flex items-center gap-3 hover:!text-default" href="/">
-    <div class="sr-only">KBVE</div>
-    <KBVEL />
-  </a>
-  <div>
-    <div class="flex items-center gap-6">
-      <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
-          {
-            navItems.map(({ title, url }) => (
-              <li>
-                <a class="text-sm" rel="prefetch" href={url}>
-                  {title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-      <button
-        id="open-nav-button"
-        type="button"
-        class="btn sm:hidden"
-        aria-label="Navigation"
-      >
-        <SVG name="mdiMenu" className="h-8"/>
-      </button>
-      <ThemeSwitcher />
-    </div>
-    <!-- Menu Modal -->
-    <div id="menu-modal" class="hidden modal" aria-hidden="true">
-      <div class="fixed inset-0 px-8 py-4 bg-default text-default">
-        <div class="space-y-4" role="dialog" aria-modal="true">
-          <header class="text-right">
-            <button
-              id="close-nav-button"
-              type="button"
-              class="btn"
-              aria-label="Close navigation"
-            >
-            <SVG name="mdiClose" className="h-8"/>
-            </button>
-          </header>
-          <div class="flex justify-center">
-            <KBVELogo />
-          </div>
-          <nav>
-            <ul class="flex flex-col">
-              {
-                navItems.map(({ title, url }) => (
-                  <li>
-                    <a
-                      class="block py-4 text-xl text-center"
-                      rel="prefetch"
-                      href={url}
-                    >
-                      {title}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <!-- Menu Modal -->
-  </div>
+	id="page-header"
+	class="fixed-header absolute top-0 z-50 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent h-16">
+	<a class="flex items-center gap-3 hover:!text-default" href="/">
+		<div class="sr-only">KBVE</div>
+		<KBVEL />
+	</a>
+	<div>
+		<div class="flex items-center gap-6">
+			<nav class="hidden sm:block">
+				<ul class="flex items-center gap-6">
+					{
+						navItems.map(({ title, url }) => (
+							<li>
+								<a class="text-sm" rel="prefetch" href={url}>
+									{title}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+			<button
+				id="open-nav-button"
+				type="button"
+				class="btn sm:hidden"
+				aria-label="Navigation">
+				<SVG name="mdiMenu" className="h-8" />
+			</button>
+			<ThemeSwitcher />
+		</div>
+		<!-- Menu Modal -->
+		<div id="menu-modal" class="hidden modal" aria-hidden="true">
+			<div class="fixed inset-0 px-8 py-4 bg-default text-default">
+				<div class="space-y-4" role="dialog" aria-modal="true">
+					<header class="text-right">
+						<button
+							id="close-nav-button"
+							type="button"
+							class="btn"
+							aria-label="Close navigation">
+							<SVG name="mdiClose" className="h-8" />
+						</button>
+					</header>
+					<div class="flex justify-center">
+						<KBVELogo />
+					</div>
+					<nav>
+						<ul class="flex flex-col">
+							{
+								navItems.map(({ title, url }) => (
+									<li>
+										<a
+											class="block py-4 text-xl text-center"
+											rel="prefetch"
+											href={url}>
+											{title}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- Menu Modal -->
+	</div>
 </header>
 
 <script>
-  import MicroModal from "micromodal";
+	import MicroModal from 'micromodal';
 
-  const menuModalId = "menu-modal";
-  const menu = document.querySelector(`#${menuModalId} ul`);
-  const openNavButton = document.querySelector("#open-nav-button");
-  const closeNavButton = document.querySelector("#close-nav-button");
+	const menuModalId = 'menu-modal';
+	const menu = document.querySelector(`#${menuModalId} ul`);
+	const openNavButton = document.querySelector('#open-nav-button');
+	const closeNavButton = document.querySelector('#close-nav-button');
 
-  const openMenu = () => {
-    MicroModal.show(menuModalId, { disableScroll: true });
-  };
+	const openMenu = () => {
+		MicroModal.show(menuModalId, { disableScroll: true });
+	};
 
-  const closeMenu = () => {
-    MicroModal.close(menuModalId);
-  };
+	const closeMenu = () => {
+		MicroModal.close(menuModalId);
+	};
 
-  openNavButton?.addEventListener("click", openMenu);
-  closeNavButton?.addEventListener("click", closeMenu);
+	openNavButton?.addEventListener('click', openMenu);
+	closeNavButton?.addEventListener('click', closeMenu);
 
-  menu?.addEventListener("click", (event) => {
-    if ((event.target as HTMLElement).tagName === "A") {
-      closeMenu();
-    }
-  });
+	menu?.addEventListener('click', (event) => {
+		if ((event.target as HTMLElement).tagName === 'A') {
+			closeMenu();
+		}
+	});
 </script>
 
 <noscript>
-  <style>
-    #open-nav-button {
-      display: none;
-    }
-  </style>
+	<style>
+		#open-nav-button {
+			display: none;
+		}
+	</style>
 </noscript>
 
 <style>
-  .fixed-header {
-    @apply fixed top-0 bottom-auto;
-    @apply text-default bg-default border-default;
-  }
-  .modal.is-open {
-    @apply block;
-  }
+	.fixed-header {
+		@apply fixed top-0 bottom-auto;
+		@apply text-default bg-default border-default;
+	}
+	.modal.is-open {
+		@apply block;
+	}
 </style>
-

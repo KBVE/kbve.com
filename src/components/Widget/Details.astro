@@ -1,20 +1,19 @@
 ---
-//<!--*         Details Widget --!>
-//<!--!         No Errors!
-//<!--TODO      Nothing for now!
-//<!--*         [IMPORT]
-//<!--?         Nothing to import for now
-//<!--*         [DATA]
-const {data, tail = "flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700 p-1", title } = Astro.props;
+const {
+	data,
+	tail = 'flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700 p-1',
+	title,
+} = Astro.props;
 ---
+
 <div class={tail}>
-    <details class="border-2 p-2">
-        <summary class="py-2 outline-none cursor-pointer focus:underline text-primary">
-            {data || title}
-        </summary>
-        <div class="px-4 pb-4">
-           
-            <p><slot /></p>
-        </div>
-    </details>
+	<details class="border-2 p-2">
+		<summary
+			class="py-2 outline-none cursor-pointer focus:underline text-primary">
+			{data || title}
+		</summary>
+		<div class="px-4 pb-4">
+			<p><slot /></p>
+		</div>
+	</details>
 </div>
