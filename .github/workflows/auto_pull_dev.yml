@@ -17,10 +17,10 @@ jobs:
         with:
           source_branch: "dev"
           destination_branch: "main"                      
-          pr_title: "Pulling ${{ github.ref }} into Main"  
+          pr_title: "Staging ${{ github.ref }} into Main"  
           pr_body: |                                        
             :crown: *An automated PR*
-            Pulling Dev branches into Main
+            Pulling Dev branches into Main for release.
              - - -
               For Support, please visit [KBVE Support](https://kbve.com/support/)
              - - -
@@ -28,5 +28,5 @@ jobs:
              - - -
               For Project Information, please visit [KBVE Projects Information](https://kbve.com/project/)
              - - -
-              Thank you for your contribution!
+              Preparing the stage.
           pr_label: "auto-pr"

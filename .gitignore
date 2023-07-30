@@ -106,3 +106,4 @@ dist
 .obsidian/workspace.json
 src/content/.obsidian/workspace.json
 .astro/types.d.ts
+.astro/types.d.ts

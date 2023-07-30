@@ -8,9 +8,12 @@ module.exports = {
 	tabWidth: 2,
 	trailingComma: 'all',
 
+	// Place Bracket in the same line
+	bracketSameLine:true,
+
 	// See: https://github.com/prettier/prettier/issues/7475
 	useTabs: true,
-
+	
 	plugins: ['./node_modules/prettier-plugin-astro'],
 	overrides: [
 		{
