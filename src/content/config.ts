@@ -160,6 +160,21 @@ const blog = defineCollection({
   }),
 });
 
+
+//?       {blog}
+const account = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    img: z.string().default(''),
+    tags: z.array(z.string()), 
+    footnote: z.string().optional(),
+    author: z.string().default('KBVE Team'),
+    date: z.string().optional(),
+    url: z.string().optional(),
+  }),
+});
+
 //!       [PROFILE]
 //*       {team} => Staff, Artists, DEVs, VIPs, GFX
 //TODO    Organize the typescript - strict for {team}
@@ -379,6 +394,7 @@ export const collections = {
     crypto: crypto,
     //?       [PROFILE]:[COLLECTION]
     team: team,
+    account: account,
     //    npc: npc,
     //?       [CONTENT]:[COLLECTIONS]
     news: news,
