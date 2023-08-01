@@ -11,8 +11,12 @@
             "id": "aae64d3503ecf6da",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "journal/07-31.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "journal/07-31.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "journal/07-31.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "journal/07-31.md"
+              }
             }
           }
         ]
@@ -149,6 +157,15 @@
   },
   "active": "aae64d3503ecf6da",
   "lastOpenFiles": [
+    "journal/07-30.md",
+    "journal/07-31.md",
+    "account/profile.mdx",
+    "account/logout.mdx",
+    "account/index.mdx",
+    "account/register.mdx",
+    "account/login.mdx",
+    "account/account.mdx",
+    "account",
     "journal/05-10.md",
     "journal/07-29.md",
     "journal/07-23.md",
@@ -171,19 +188,10 @@
     "journal/07-12.md",
     "journal/07-10.md",
     "journal/07-11.md",
-    "stock/f.mdx",
-    "stock/_stock.mdx",
-    "stock/stock.mdx",
-    "stock/stag.mdx",
-    "stock/dis.mdx",
-    "tools/stream/food.mdx",
-    "tools/stream/water.mdx",
     "journal/07-09.md",
     "journal/07-08.md",
     "journal/07-07.md",
     "journal/07-04.md",
-    "journal/07-05.md",
-    "journal/06-12.md",
-    "journal/06-15.md"
+    "journal/07-05.md"
   ]
 }

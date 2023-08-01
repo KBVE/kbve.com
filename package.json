@@ -71,7 +71,7 @@
     "lodash": "^4.17.21",
     "mermaid": "^10.3.0",
     "micromodal": "^0.4.10",
-    "million": "^2.5.2-beta.2",
+    "million": "^2.5.2",
     "nanostores": "^0.9.3",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",

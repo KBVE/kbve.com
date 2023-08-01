@@ -113,7 +113,6 @@ export const logout = async () => {
 		if (session?.$id) {
 			await appwriteAccount.deleteSession(session?.$id);
 			isLoggedIn.set(undefined);
-			window.location.href = "/account/login";
 		}
 	} catch (error) {
 		const appwriteError = error as AppwriteException;

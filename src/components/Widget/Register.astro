@@ -1,0 +1,8 @@
+---
+import ReactRegister from '@lib/User/Register';
+const { data } = Astro.props;
+---
+
+<ReactRegister client:only="react" data={data}>
+	<slot />
+</ReactRegister>
