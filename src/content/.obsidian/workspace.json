@@ -157,15 +157,15 @@
   },
   "active": "aae64d3503ecf6da",
   "lastOpenFiles": [
-    "journal/07-30.md",
     "journal/07-31.md",
+    "journal/07-30.md",
     "account/profile.mdx",
-    "account/logout.mdx",
-    "account/index.mdx",
     "account/register.mdx",
+    "account/logout.mdx",
     "account/login.mdx",
-    "account/account.mdx",
     "account",
+    "account/index.mdx",
+    "account/account.mdx",
     "journal/05-10.md",
     "journal/07-29.md",
     "journal/07-23.md",
@@ -191,7 +191,6 @@
     "journal/07-09.md",
     "journal/07-08.md",
     "journal/07-07.md",
-    "journal/07-04.md",
-    "journal/07-05.md"
+    "journal/07-04.md"
   ]
 }
