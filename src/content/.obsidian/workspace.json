@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "34b25edd6986cfaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "journal/08-02.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/07-31.md",
+                "file": "journal/08-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/07-31.md",
+                "file": "journal/08-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/07-31.md"
+                "file": "journal/08-02.md"
               }
             }
           }
@@ -155,10 +168,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aae64d3503ecf6da",
+  "active": "34b25edd6986cfaf",
   "lastOpenFiles": [
-    "journal/07-31.md",
+    "journal/07-29.md",
+    "journal/07-28.md",
     "journal/07-30.md",
+    "journal/07-31.md",
+    "journal/08-01.md",
+    "journal/08-02.md",
     "account/profile.mdx",
     "account/register.mdx",
     "account/logout.mdx",
@@ -167,9 +184,7 @@
     "account/index.mdx",
     "account/account.mdx",
     "journal/05-10.md",
-    "journal/07-29.md",
     "journal/07-23.md",
-    "journal/07-28.md",
     "journal/07-27.md",
     "project/herbmail.mdx",
     "project/kbve.mdx",
@@ -190,7 +205,6 @@
     "journal/07-11.md",
     "journal/07-09.md",
     "journal/07-08.md",
-    "journal/07-07.md",
-    "journal/07-04.md"
+    "journal/07-07.md"
   ]
 }
