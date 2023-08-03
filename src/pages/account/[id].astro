@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const account = await getCollection('account');
+	return account.map((entry) => ({
+		params: {
+			id: entry.slug,
+		},
+		props: {
+			entry,
+		},
+	}));
+}
+const { id } = Astro.params;
+const { entry } = Astro.props;
+const { Content, headings, injectedFrontmatter } = await entry.render();
+---
+
+<Content />

@@ -198,7 +198,37 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"application": {
+		"account": {
+"login.mdx": {
+	id: "login.mdx";
+  slug: "login";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+"logout.mdx": {
+	id: "logout.mdx";
+  slug: "logout";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+"profile.mdx": {
+	id: "profile.mdx";
+  slug: "profile";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+"register.mdx": {
+	id: "register.mdx";
+  slug: "register";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+};
+"application": {
 "android.mdx": {
 	id: "android.mdx";
   slug: "android";
@@ -1271,6 +1301,34 @@ declare module 'astro:content' {
 "07-29.md": {
 	id: "07-29.md";
   slug: "07-29";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"07-30.md": {
+	id: "07-30.md";
+  slug: "07-30";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"07-31.md": {
+	id: "07-31.md";
+  slug: "07-31";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-01.md": {
+	id: "08-01.md";
+  slug: "08-01";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-02.md": {
+	id: "08-02.md";
+  slug: "08-02";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
