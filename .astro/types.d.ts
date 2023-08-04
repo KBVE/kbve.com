@@ -1799,6 +1799,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
 };
+"tags": {
+"auth/auth.mdx": {
+	id: "auth/auth.mdx";
+  slug: "auth";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+};
 "team": {
 "example.mdx": {
 	id: "example.mdx";
@@ -2082,8 +2091,6 @@ declare module 'astro:content' {
 		"_bin": {
 };
 "compose": {
-};
-"tags": {
 };
 "vip": {
 };

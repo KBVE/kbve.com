@@ -10,6 +10,7 @@ const tags = defineCollection({
   schema: z.object({
     title: z.string(),
     version: z.number(),
+    draft: z.boolean(),
   }),
 })
 
@@ -401,6 +402,8 @@ export const collections = {
     //?       [ASSET]:[COLLECTION]
     stock: stock,
     crypto: crypto,
+    //?       [TAGS]
+    tags: tags,
     //?       [PROFILE]:[COLLECTION]
     team: team,
     account: account,
