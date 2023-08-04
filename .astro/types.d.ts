@@ -1333,6 +1333,20 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-03.md": {
+	id: "08-03.md";
+  slug: "08-03";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-04.md": {
+	id: "08-04.md";
+  slug: "08-04";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -2068,6 +2082,8 @@ declare module 'astro:content' {
 		"_bin": {
 };
 "compose": {
+};
+"tags": {
 };
 "vip": {
 };
