@@ -11,6 +11,7 @@ const tags = defineCollection({
     title: z.string(),
     version: z.number(),
     draft: z.boolean(),
+    notes: z.boolean(),
   }),
 })
 
