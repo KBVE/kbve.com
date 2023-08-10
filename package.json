@@ -51,6 +51,7 @@
     "@mdi/js": "^7.2.96",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.4",
+    "@nanostores/persistent": "^0.9.1",
     "@nanostores/react": "^0.7.1",
     "@react-three/fiber": "^8.13.6",
     "@supabase/supabase-js": "^2.32.0",
