@@ -1,0 +1,8 @@
+---
+import SvelteLogin from '@c/Supabase/Login.svelte';
+const { data } = Astro.props;
+---
+
+<SvelteLogin client:only="svelte" >
+	<slot />
+</SvelteLogin>

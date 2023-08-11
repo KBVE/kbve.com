@@ -20,7 +20,9 @@ declare module 'astro:content' {
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';
-	export type CollectionEntry<C extends keyof AnyEntryMap> = AnyEntryMap[C][keyof AnyEntryMap[C]];
+
+	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
+	export type CollectionEntry<C extends keyof AnyEntryMap> = Flatten<AnyEntryMap[C]>;
 
 	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
 	/**
@@ -348,6 +350,13 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
+"n8n/n8n.mdx": {
+	id: "n8n/n8n.mdx";
+  slug: "n8n";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
 "nftables.mdx": {
 	id: "nftables.mdx";
   slug: "nftables";
@@ -456,6 +465,13 @@ declare module 'astro:content' {
 "strapi.mdx": {
 	id: "strapi.mdx";
   slug: "strapi";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
+"supabase/supabase.mdx": {
+	id: "supabase/supabase.mdx";
+  slug: "supabase";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
@@ -1371,6 +1387,20 @@ declare module 'astro:content' {
 "08-08.md": {
 	id: "08-08.md";
   slug: "08-08";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-09.md": {
+	id: "08-09.md";
+  slug: "08-09";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-10.md": {
+	id: "08-10.md";
+  slug: "08-10";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
