@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-07.md",
+                "file": "journal/08-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-07.md",
+                "file": "journal/08-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-07.md",
+                "file": "journal/08-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-07.md"
+                "file": "journal/08-08.md"
               }
             }
           }
@@ -157,8 +157,10 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
-    "application/obs/_notes/glob.astro",
+    "legal/disclaimer",
     "journal/08-07.md",
+    "journal/08-08.md",
+    "application/obs/_notes/glob.astro",
     "application/obs/_notes/voicemeter.md",
     "application/obs/_notes",
     "application/obs/notes/voicemeter.md",
@@ -176,7 +178,6 @@
     "journal/08-03.md",
     "tags/auth/auth.mdx",
     "tags/automation",
-    "tags/auth",
     "journal/07-31.md",
     "journal/08-02.md",
     "journal/07-29.md",
@@ -191,7 +192,6 @@
     "journal/07-06.md",
     "journal/07-20.md",
     "journal/07-18.md",
-    "journal/07-19.md",
-    "journal/07-17.md"
+    "journal/07-19.md"
   ]
 }
