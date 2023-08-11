@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-08.md",
+                "file": "journal/08-09.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-08.md",
+                "file": "journal/08-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-08.md",
+                "file": "journal/08-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-08.md"
+                "file": "journal/08-09.md"
               }
             }
           }
@@ -157,27 +157,30 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
+    "application/n8n/_notes/n8n-supabase.md",
+    "application/n8n/_notes/supabase-cache.md",
+    "application/n8n/_examples/supabase",
+    "application/n8n/_examples/supabase-cache.md",
+    "application/n8n/_examples",
+    "application/n8n/n8n.mdx",
+    "application/n8n/obs.mdx",
+    "application/n8n/_notes/obs.mdx",
+    "application/n8n/_notes",
+    "application/n8n",
+    "journal/08-08.md",
+    "journal/08-09.md",
     "legal/disclaimer",
     "journal/08-07.md",
-    "journal/08-08.md",
     "application/obs/_notes/glob.astro",
     "application/obs/_notes/voicemeter.md",
     "application/obs/_notes",
     "application/obs/notes/voicemeter.md",
-    "application/obs/notes",
-    "application/obs/obs.mdx",
-    "application/obs/obss.mdx",
-    "application/obs",
-    "application/obss.mdx",
     "journal/08-06.md",
-    "theory/fintech.mdx",
     "journal/08-05.md",
     "journal/08-04.md",
     "tags/auth/auth-notes.md",
     "tags/auth/auth_notes.md",
     "journal/08-03.md",
-    "tags/auth/auth.mdx",
-    "tags/automation",
     "journal/07-31.md",
     "journal/08-02.md",
     "journal/07-29.md",
@@ -189,9 +192,6 @@
     "journal/07-27.md",
     "journal/07-22.md",
     "journal/07-21.md",
-    "journal/07-06.md",
-    "journal/07-20.md",
-    "journal/07-18.md",
-    "journal/07-19.md"
+    "journal/07-06.md"
   ]
 }
