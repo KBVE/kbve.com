@@ -55,6 +55,7 @@
     "@nanostores/react": "^0.7.1",
     "@react-three/fiber": "^8.13.6",
     "@supabase/supabase-js": "^2.32.0",
+    "@sveltejs/kit": "^1.22.5",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.4",
     "@tailwindcss/line-clamp": "^0.4.4",
