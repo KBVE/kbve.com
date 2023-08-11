@@ -44,6 +44,7 @@
         "@namespace/*": ["src/components/Namespace/*"],
         "@widget/*": ["src/components/Widget/*"],
         "@assets/*": ["src/assets/*"],
+        "@content/*": ["src/content/*"],
     }
   }
 }

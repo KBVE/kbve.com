@@ -1,0 +1,17 @@
+---
+
+//      [DATA]
+const { data } = Astro.props;
+
+const globber = data.toString()
+const posts = await Astro.glob(globber);
+---
+<div>
+    {posts.slice(0, 3).map((post) => (
+      <article>
+        <h2>{post.frontmatter.title}</h2>
+        <p>{post.frontmatter.description}</p>
+        <a href={post.url}>Read more</a>
+      </article>
+    ))}
+    </div>

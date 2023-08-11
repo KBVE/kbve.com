@@ -4,6 +4,17 @@
 import { z, defineCollection } from 'astro:content';
 
 
+//?       {tags} - Tag collection
+//!       [WIP]
+const tags = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    version: z.number(),
+    draft: z.boolean(),
+    notes: z.boolean(),
+  }),
+})
+
 //?       {release} - Official release documentation for the website
 //!       [MIGRATION] - This is slated to be migrated out of the collection but kept inside until v2
 const releases = defineCollection({
@@ -161,7 +172,7 @@ const blog = defineCollection({
 });
 
 
-//?       {blog}
+//?       {account}
 const account = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -392,6 +403,8 @@ export const collections = {
     //?       [ASSET]:[COLLECTION]
     stock: stock,
     crypto: crypto,
+    //?       [TAGS]
+    tags: tags,
     //?       [PROFILE]:[COLLECTION]
     team: team,
     account: account,

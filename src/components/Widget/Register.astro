@@ -1,8 +1,9 @@
 ---
-import ReactRegister from '@lib/User/Register';
+//import ReactRegister from '@lib/User/Register';
+import SvelteRegister from "@c/Supabase/Register.svelte"
 const { data } = Astro.props;
 ---
 
-<ReactRegister client:only="react" data={data}>
+<SvelteRegister client:only="svelte">
 	<slot />
-</ReactRegister>
+</SvelteRegister>
