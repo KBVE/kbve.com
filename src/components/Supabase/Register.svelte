@@ -1,16 +1,125 @@
-<svelte:head>
-<script src="https://js.hcaptcha.com/1/api.js?render=explicit" async defer></script>
-</svelte:head>
+<script lang="ts" context="module">
+	declare global {
+		interface Window {
+			sitekey: string;
+			hcaptchaOnLoad: Function;
+			onSuccess: Function;
+			onError: Function;
+			onClose: Function;
+			onExpired: Function;
+			hcaptcha: any;
+		}
+	}
+
+	declare var hcaptcha: any;
+
+	export enum CaptchaTheme {
+		DARK = 'dark',
+		LIGHT = 'light',
+	}
+	//
+</script>
+
 <script lang="ts">
 	import { supabase } from '@c/API/supabase';
-    import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 
 	import { log, notification$, notification } from '@c/API/storage';
+	const browser =
+		import.meta.env.SSR === undefined ? true : !import.meta.env.SSR;
 
-    let hcaptchaSitekey = '';
+	const dispatch = createEventDispatcher();
+
+	export let sitekey: string = 'e77af3f6-a0e3-44b7-82f8-b7c098d38022';
+	export let apihost: string = 'https://js.hcaptcha.com/1/api.js';
+	export let hl: string = '';
+	export let reCaptchaCompat: boolean = false;
+	export let theme: CaptchaTheme = CaptchaTheme.LIGHT;
+	export let size: 'normal' | 'compact' | 'invisible' = 'normal';
+
+	export const reset = () => {
+		if (mounted && loaded && widgetID) hcaptcha.reset(widgetID);
+	};
+
+	export const execute = (options: any) => {
+		if (mounted && loaded && widgetID)
+			return hcaptcha.execute(widgetID, options);
+	};
+
+	const id = Math.floor(Math.random() * 100);
+
+	let mounted = false;
+	let loaded = false;
+	let widgetID: any;
+
+    const query = new URLSearchParams({
+      recaptchacompat: reCaptchaCompat ? 'on' : 'off',
+      onload: 'hcaptchaOnLoad',
+      render: 'explicit',
+    });
+    const scriptSrc = `${apihost}?${query.toString()}`;
+  
+    onMount(() => {
+      if (browser && !sitekey) sitekey = window.sitekey;
+  
+      if (browser) {
+        window.hcaptchaOnLoad = () => {
+          // consumers can attach custom on:load handlers
+          dispatch('load');
+          loaded = true;
+        };
+  
+        window.onSuccess = (token:any) => {
+          dispatch('success', {
+            token: token,
+          });
+        };
+  
+        window.onError = () => {
+          dispatch('error');
+        };
+  
+        window.onClose = () => {
+          dispatch('close');
+        };
+        
+        window.onExpired = () => {
+          dispatch('expired');
+        };
+      }
+  
+      dispatch('mount');
+      mounted = true;
+    });
+  
+    onDestroy(() => {
+      if (browser) {
+        //@ts-ignore
+        window.hcaptchaOnLoad = null;
+        //@ts-ignore
+        window.onSuccess = null;
+      }
+      // guard against script loading race conditions
+      // i.e. if component is destroyed before hcaptcha reference is loaded
+      if (loaded) hcaptcha = null;
+    });
+  
+    $: if (mounted && loaded) {
+      widgetID = hcaptcha.render(`h-captcha-${id}`, {
+        sitekey,
+        hl, // force a specific localisation
+        theme,
+        callback: 'onSuccess',
+        'error-callback': 'onError',
+        'close-callback': 'onClose',
+        'expired-callback': 'onExpired',
+        size,
+      });
+    }
+
 	let loading = false;
 	let email = '';
-    let confirm = '';
+	let confirm = '';
 	let password = '';
 
 	const dismiss = async () => {
@@ -24,9 +133,11 @@
 				email,
 				password,
 			});
-			if (error) { throw error } else { 
+			if (error) {
+				throw error;
+			} else {
 				location.assign('/account/profile');
-			};
+			}
 		} catch (error) {
 			if (error instanceof Error) {
 				log(error.message);
@@ -34,12 +145,14 @@
 			}
 		} finally {
 			loading = false;
-			
 		}
 	};
-
-   
 </script>
+<svelte:head>
+    {#if mounted && !window?.hcaptcha}
+      <script src={scriptSrc} async defer></script>
+    {/if}
+</svelte:head>
 
 <div class="flex flex-wrap">
 	<div class="w-full px-3">
@@ -53,7 +166,7 @@
 								class="border-black/12.5 shadow-soft-xl relative flex h-full min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-offset bg-clip-border p-2">
 								<div
 									class="relative h-full overflow-hidden bg-cover rounded-xl"
-									style="background-image: url('https://images.unsplash.com/photo-1600476061596-a0815671e5c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80')">
+									style="background-image: url('https://images.unsplash.com/photo-1597851065532-055f97d12e47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
 									<span
 										class="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-80" />
 									<div class="relative z-10 flex flex-col flex-auto h-full p-4">
@@ -156,7 +269,7 @@
 																	required
 																	bind:value={password} />
 															</div>
-                                                            <div>
+															<div>
 																<label
 																	for="password"
 																	class="block mb-2 text-sm font-medium"
@@ -170,6 +283,7 @@
 																	required
 																	bind:value={confirm} />
 															</div>
+                                                            <div id="h-captcha-{id}" />
 															<div class="flex items-center justify-between">
 																<div class="flex items-start" />
 																<a

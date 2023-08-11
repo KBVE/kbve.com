@@ -1,11 +1,126 @@
+<script lang="ts" context="module">
+	declare global {
+		interface Window {
+			sitekey: string;
+			hcaptchaOnLoad: Function;
+			onSuccess: Function;
+			onError: Function;
+			onClose: Function;
+			onExpired: Function;
+			hcaptcha: any;
+		}
+	}
+
+	declare var hcaptcha: any;
+
+	export enum CaptchaTheme {
+		DARK = 'dark',
+		LIGHT = 'light',
+	}
+	//
+</script>
 <script lang="ts">
 	import { supabase } from '@c/API/supabase';
-	
+	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { log, notification$, notification } from '@c/API/storage';
+
+	const browser =
+		import.meta.env.SSR === undefined ? true : !import.meta.env.SSR;
+
+	const dispatch = createEventDispatcher();
+
+	export let sitekey: string = 'e77af3f6-a0e3-44b7-82f8-b7c098d38022';
+	export let apihost: string = 'https://js.hcaptcha.com/1/api.js';
+	export let hl: string = '';
+	export let reCaptchaCompat: boolean = false;
+	export let theme: CaptchaTheme = CaptchaTheme.LIGHT;
+	export let size: 'normal' | 'compact' | 'invisible' = 'normal';
+
+	export const reset = () => {
+		if (mounted && loaded && widgetID) hcaptcha.reset(widgetID);
+	};
+
+	export const execute = (options: any) => {
+		if (mounted && loaded && widgetID)
+			return hcaptcha.execute(widgetID, options);
+	};
+
+	const id = Math.floor(Math.random() * 100);
+
+	let mounted = false;
+	let loaded = false;
+	let widgetID: any;
+
+    const query = new URLSearchParams({
+      recaptchacompat: reCaptchaCompat ? 'on' : 'off',
+      onload: 'hcaptchaOnLoad',
+      render: 'explicit',
+    });
+    const scriptSrc = `${apihost}?${query.toString()}`;
+  
+    onMount(() => {
+      if (browser && !sitekey) sitekey = window.sitekey;
+  
+      if (browser) {
+        window.hcaptchaOnLoad = () => {
+          // consumers can attach custom on:load handlers
+          dispatch('load');
+          loaded = true;
+        };
+  
+        window.onSuccess = (token:any) => {
+          dispatch('success', {
+            token: token,
+			captchaToken: token,
+          });
+        };
+  
+        window.onError = () => {
+          dispatch('error');
+        };
+  
+        window.onClose = () => {
+          dispatch('close');
+        };
+        
+        window.onExpired = () => {
+          dispatch('expired');
+        };
+      }
+  
+      dispatch('mount');
+      mounted = true;
+    });
+  
+    onDestroy(() => {
+      if (browser) {
+        //@ts-ignore
+        window.hcaptchaOnLoad = null;
+        //@ts-ignore
+        window.onSuccess = null;
+      }
+      // guard against script loading race conditions
+      // i.e. if component is destroyed before hcaptcha reference is loaded
+      if (loaded) hcaptcha = null;
+    });
+  
+    $: if (mounted && loaded) {
+      widgetID = hcaptcha.render(`h-captcha-${id}`, {
+        sitekey,
+        hl, // force a specific localisation
+        theme,
+        callback: 'onSuccess',
+        'error-callback': 'onError',
+        'close-callback': 'onClose',
+        'expired-callback': 'onExpired',
+        size,
+      });
+    }
 
 	let loading = false;
 	let email = '';
 	let password = '';
+	let captchaToken = '';
 
 	const dismiss = async () => {
 		notification('');
@@ -17,6 +132,7 @@
 			const { data, error } = await supabase.auth.signInWithPassword({
 				email,
 				password,
+				options: { captchaToken },
 			});
 			if (error) { throw error } else { 
 				location.assign('/account/profile');
@@ -32,7 +148,11 @@
 		}
 	};
 </script>
-
+<svelte:head>
+    {#if mounted && !window?.hcaptcha}
+      <script src={scriptSrc} async defer></script>
+    {/if}
+</svelte:head>
 <div class="flex flex-wrap">
 	<div class="w-full px-3">
 		<div
@@ -155,6 +275,7 @@
 																	class="text-sm font-medium text-secondary hover:underline dark:text-primary-500"
 																	>Forgot password?</a>
 															</div>
+															<div id="h-captcha-{id}" />
 															<button
 																type="submit"
 																class="w-full bg-secondary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
