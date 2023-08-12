@@ -157,6 +157,10 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
+    "website/github/github.mdx",
+    "website/github",
+    "website/github.mdx",
+    "legal/disclaimer.mdx",
     "journal/08-11.md",
     "journal/08-12.md",
     "journal/08-10.md",
@@ -172,11 +176,8 @@
     "application/n8n/_notes",
     "application/n8n",
     "journal/08-08.md",
-    "legal/disclaimer",
     "journal/08-07.md",
-    "application/obs/_notes/glob.astro",
     "application/obs/_notes/voicemeter.md",
-    "application/obs/_notes",
     "application/obs/notes/voicemeter.md",
     "journal/08-06.md",
     "journal/08-05.md",
@@ -191,7 +192,6 @@
     "journal/07-30.md",
     "journal/08-01.md",
     "journal/05-10.md",
-    "journal/07-23.md",
-    "journal/07-27.md"
+    "journal/07-23.md"
   ]
 }
