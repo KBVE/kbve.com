@@ -33,8 +33,8 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let sitekey: string = kbve.hcaptcha ;
-	export let apihost: string = 'https://js.hcaptcha.com/1/api.js';
+	export let sitekey: string = kbve.hcaptcha_site_key ;
+	export let apihost: string = kbve.hcaptcha_api;
 	export let hl: string = '';
 	export let reCaptchaCompat: boolean = false;
 	export let theme: CaptchaTheme = CaptchaTheme.DARK;

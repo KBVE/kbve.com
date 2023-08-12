@@ -1,6 +1,9 @@
 ---
-import ReactLogout from '@lib/User/Logout';
+//import ReactLogout from '@lib/User/Logout';
+//<ReactLogout client:only="react" />
+import SvelteLogout from "@c/Supabase/Logout.svelte";
 const { data } = Astro.props;
 ---
 
-<ReactLogout client:only="react" />
+<SvelteLogout client:only="svelte" />
+

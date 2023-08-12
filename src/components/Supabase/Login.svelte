@@ -17,11 +17,10 @@
 		DARK = 'dark',
 		LIGHT = 'light',
 	}
-	//
 </script>
 
 <script lang="ts">
-	import { supabase } from '@c/API/supabase';
+	import { supabase, getProfile, getUser } from '@c/API/supabase';
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { log, notification$, notification } from '@c/API/storage';
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
@@ -32,8 +31,8 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let sitekey: string = kbve.hcaptcha;
-	export let apihost: string = 'https://js.hcaptcha.com/1/api.js';
+	export let sitekey: string = kbve.hcaptcha_site_key;
+	export let apihost: string = kbve.hcaptcha_api;
 	export let hl: string = '';
 	export let reCaptchaCompat: boolean = false;
 	export let theme: CaptchaTheme = CaptchaTheme.DARK;
@@ -67,7 +66,6 @@
 
 		if (browser) {
 			window.hcaptchaOnLoad = () => {
-				// consumers can attach custom on:load handlers
 				dispatch('load');
 				loaded = true;
 			};
@@ -105,15 +103,14 @@
 			//@ts-ignore
 			window.onSuccess = null;
 		}
-		// guard against script loading race conditions
-		// i.e. if component is destroyed before hcaptcha reference is loaded
+
 		if (loaded) hcaptcha = null;
 	});
 
 	$: if (mounted && loaded) {
 		widgetID = hcaptcha.render(`h-captcha-${id}`, {
 			sitekey,
-			hl, // force a specific localisation
+			hl, 
 			theme,
 			callback: 'onSuccess',
 			'error-callback': 'onError',
@@ -134,6 +131,12 @@
 		notification('');
 	};
 
+	const handleProfile = async () => {
+		await getUser();
+        await getProfile(false);
+		location.assign('/account/profile');
+	}
+
 	const handleLogin = async () => {
 		try {
 			loading = true;
@@ -145,7 +148,7 @@
 			if (error) {
 				throw error;
 			} else {
-				location.assign('/account/profile');
+				handleProfile();
 			}
 		} catch (error) {
 			if (error instanceof Error) {
@@ -172,6 +175,19 @@
 <section class="min-h-[200px]">
 	<div
 		class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+		
+
+		{#if loading}
+
+		<selection class="flex flex-col justify-center items-center">
+			<div
+				class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-orange-400" />
+			<p class="py-5 text-lg gradient-text">Loading...</p>
+		</selection>
+
+		{/if}
+
+
 		<a href="/#" class="flex items-center mb-6">
 			<img
 				class="w-32 mr-2"

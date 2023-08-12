@@ -9,8 +9,13 @@
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
 	//  Supabase
-	import { supabase, supabase_user$, getProfile } from '@c/API/supabase';
-	import { username$, email$, uuid$, avatar$ } from '@c/API/storage';
+	import {
+		supabase,
+		supabase_user$,
+		getProfile,
+		getUser,
+	} from '@c/API/supabase';
+	import { kbve$ } from '@c/API/storage';
 
 	let mounted = false;
 	let profileLoad = false;
@@ -19,7 +24,6 @@
 	const dispatch = createEventDispatcher();
 
 	const userData = async () => {
-		getProfile({ __cache: false });
 		profileLoad = true;
 	};
 
@@ -42,24 +46,30 @@
 		<div class="p-6 sm:p-12">
 			<div
 				class="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
-				<img
-					src={$avatar$}
-					alt="User Avatar"
-					class="self-center flex-shrink-0 w-48 h-48 border rounded-full md:justify-self-start bg-gray-500 border-gray-700" />
-
+				{#if $kbve$.avatar}
+					<img
+						src={$kbve$.avatar}
+						alt="User Avatar"
+						class="self-center flex-shrink-0 w-48 h-48 border rounded-full md:justify-self-start bg-gray-500 border-gray-700" />
+				{:else}
+					<img
+						src="https://source.unsplash.com/192x192/?portrait"
+						alt="No Avatar"
+						class="self-center flex-shrink-0 w-48 h-48 border rounded-full md:justify-self-start bg-gray-500 border-gray-700" />
+				{/if}
 				<div class="flex flex-col">
 					<h4 class="text-lg font-semibold text-center md:text-left">
-						{$username$}
+						{$kbve$.username}
 					</h4>
 					<div
 						class="flex row gap-2 items-center bg-gray-500 p-1 px-2 rounded-lg border border-[#1c033c] m-2">
 						<p class="text-sm">
-							{$uuid$}
+							{$kbve$.uuid}
 						</p>
 					</div>
 
-					<div class="flex flex-col items-start gap-2 ">
-						{$email$}
+					<div class="flex flex-col items-start gap-2">
+						{$kbve$.email}
 					</div>
 				</div>
 			</div>
