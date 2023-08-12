@@ -40,22 +40,38 @@ isUser.subscribe(async (session) => {
 
 export const supabase_account = async () => {
 	try {
-		return (await supabase.auth.getSession()).data.session?.user
+		return (await supabase.auth.getSession()).data.session?.user;
 	} catch (error) {
 		return undefined;
 	}
 };
 
-export const getProfile = async ({ cache = true }: { cache: boolean }) => {
-	cache ? Storage.__getProfile() : _getProfile();
+export const getProfile = async ({ __cache = true }: { __cache?: boolean }) => {
+	
+	__cache ? Storage.__getProfile() : _getProfile();
 };
 
 export const _getProfile = async () => {
 	task(async () => {
 		Storage.log(" Starting Supabase -> Profile Table");
 		const userData = await supabase_account();
-		Storage.tasker(Storage.email$, userData?.email);
-		Storage.tasker(Storage.uuid$, userData?.id);
+		if (userData?.id) {
+			Storage.tasker(Storage.email$, userData?.email);
+			Storage.tasker(Storage.uuid$, userData?.id);
+			_pullProfile(userData?.id);
+		}
+	});
+};
 
+export const _pullProfile = async (uuid: string) => {
+	task(async () => {
+		const { data: profile } = await supabase
+			.from("profiles")
+			.select("id, username, avatar_url, website")
+			.eq("id", uuid)
+			.single();
+		if (profile?.username) Storage.tasker(Storage.username$, profile?.username);
+
+		console.log(profile);
 	});
 };
