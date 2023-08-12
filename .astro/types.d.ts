@@ -201,6 +201,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"account": {
+"calendar.mdx": {
+	id: "calendar.mdx";
+  slug: "calendar";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
 "login.mdx": {
 	id: "login.mdx";
   slug: "login";
@@ -225,6 +232,13 @@ declare module 'astro:content' {
 "register.mdx": {
 	id: "register.mdx";
   slug: "register";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+"settings.mdx": {
+	id: "settings.mdx";
+  slug: "settings";
   body: string;
   collection: "account";
   data: InferEntrySchema<"account">

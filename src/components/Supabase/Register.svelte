@@ -24,6 +24,8 @@
 	import { supabase } from '@c/API/supabase';
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { log, notification$, notification } from '@c/API/storage';
+	import * as kbve from '@c/kbve';
+
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
 
 	const browser =
@@ -31,12 +33,12 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let sitekey: string = 'e77af3f6-a0e3-44b7-82f8-b7c098d38022';
+	export let sitekey: string = kbve.hcaptcha ;
 	export let apihost: string = 'https://js.hcaptcha.com/1/api.js';
 	export let hl: string = '';
 	export let reCaptchaCompat: boolean = false;
-	export let theme: CaptchaTheme = CaptchaTheme.LIGHT;
-	export let size: 'normal' | 'compact' | 'invisible' = 'normal';
+	export let theme: CaptchaTheme = CaptchaTheme.DARK;
+	export let size: 'normal' | 'compact' | 'invisible' = 'compact';
 
 	export const reset = () => {
 		if (mounted && loaded && widgetID) hcaptcha.reset(widgetID);
@@ -52,6 +54,7 @@
 	let mounted = false;
 	let loaded = false;
 	let widgetID: any;
+	let skeleton: any;
 
 	const query = new URLSearchParams({
 		recaptchacompat: reCaptchaCompat ? 'on' : 'off',
@@ -118,6 +121,8 @@
 			'expired-callback': 'onExpired',
 			size,
 		});
+		skeleton = window.document.getElementById('skeleton') as HTMLElement;
+		if(skeleton) skeleton.remove();
 	}
 
 	let usernameRegex = new RegExp(/^[a-z0-9]+$/i);
@@ -317,7 +322,7 @@
 								required
 								bind:value={confirm} />
 						</div>
-						<div id="h-captcha-{id}" />
+						<div id="h-captcha-{id}" class="flex justify-center" />
 						<div class="flex items-center justify-between">
 							<div class="flex items-start" />
 							<a

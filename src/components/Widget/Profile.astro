@@ -1,8 +1,7 @@
 ---
-import ReactProfile from '@lib/User/Profile';
+//import ReactProfile from '@lib/User/Profile';
+import SvelteProfile from "@c/Supabase/Profile.svelte";
 const { data } = Astro.props;
 ---
 
-<ReactProfile client:only="react">
-	<slot />
-</ReactProfile>
+<SvelteProfile client:only="svelte" />

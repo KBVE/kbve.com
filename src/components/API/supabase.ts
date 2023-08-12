@@ -2,6 +2,8 @@ import { Session, User, createClient } from "@supabase/supabase-js";
 import { atom, WritableAtom, task } from "nanostores";
 import { persistentAtom } from "@nanostores/persistent";
 
+import * as kbve from "@c/kbve";
+
 import * as Storage from "./storage";
 
 //TODO      [ENV-MIGRATION]
@@ -18,8 +20,8 @@ export const supabase_user$: WritableAtom<undefined | User> = atom(undefined);
 
 //!         [MAIN]
 export const supabase = createClient(
-	"https://haiukcmcljjfaflqdmjc.supabase.co",
-	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhhaXVrY21jbGpqZmFmbHFkbWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTE1NTM0MjMsImV4cCI6MjAwNzEyOTQyM30.0taw1sQp2fHLY3byK2cnGtLttXPFRs9GfkxFBNQL6E8",
+	kbve.supabase_api,
+	kbve.supabase_projectId,
 );
 
 supabase.auth.getSession().then(({ data: { session } }) => {
@@ -51,5 +53,9 @@ export const getProfile = async ({ cache = true }: { cache: boolean }) => {
 export const _getProfile = async () => {
 	task(async () => {
 		Storage.log(" Starting Supabase -> Profile Table");
+		const userData = await supabase_account();
+		Storage.tasker(Storage.email$, userData?.email);
+		Storage.tasker(Storage.uuid$, userData?.id);
+
 	});
 };
