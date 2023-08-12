@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-10.md",
+                "file": "journal/08-12.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-10.md",
+                "file": "journal/08-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-10.md",
+                "file": "journal/08-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-10.md"
+                "file": "journal/08-12.md"
               }
             }
           }
@@ -157,8 +157,10 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
-    "journal/08-09.md",
+    "journal/08-11.md",
+    "journal/08-12.md",
     "journal/08-10.md",
+    "journal/08-09.md",
     "application/n8n/_notes/n8n-supabase.md",
     "application/n8n/_notes/supabase-cache.md",
     "application/n8n/_examples/supabase",
@@ -190,8 +192,6 @@
     "journal/08-01.md",
     "journal/05-10.md",
     "journal/07-23.md",
-    "journal/07-27.md",
-    "journal/07-22.md",
-    "journal/07-21.md"
+    "journal/07-27.md"
   ]
 }

@@ -3,7 +3,7 @@ layout: ../../layouts/Account.astro
 title: Register
 description: KBVE Account Register
 author: KBVE
-bg_img: https://images.unsplash.com/photo-1605373401635-7efc1d10d1e3?fit=crop&w=1400&h=700&q=75
+bg_img: https://images.unsplash.com/photo-1520121843168-25f75bb5c99a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=711&q=80
 img: https://images.unsplash.com/photo-1689852484069-3e0fe82cc7c1?fit=crop&w=1400&h=700&q=75
 tags:
   - account
@@ -17,13 +17,18 @@ error:
 import Details from '@w/Details.astro';
 import MDXJS from '@w/MDXJS.astro';
 import Register from '@w/Register.astro';
+import Widget from "@w/Widget.astro";
 
+
+<Widget img={frontmatter.bg_img}>
 
 <Register />
 
----
 
 <MDXJS>
+
+---
+
 
 ## Notes
 
@@ -57,3 +62,5 @@ Here we go! Doing another round of the login page!
 </MDXJS>
 
 ---
+
+</Widget>
