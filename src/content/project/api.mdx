@@ -73,6 +73,30 @@ I will make an issue ticket when I feel like it would be time to set this up.
 
 ---
 
+## Locker
+
+The locker will serve as a client-side storage for variables and data points that we do not need to `hit` the main server for!
+
+The current locker that we are using as of August 12th, 2023 is below, but if we need to extend it out further, we shall.
+
+```typescript
+
+export type kbveLocker = {
+	username: string,
+  phone: string,
+  last: string,
+	uuid: string;
+	avatar: string;
+	github: string;
+	instagram: string;
+	email: string;
+	theme: "dark" | "light" | "auto";
+};
+
+```
+
+---
+
 ### Goal
 
 The API is an unique construct that extends outside of the norm.
@@ -94,6 +118,7 @@ The API is an unique construct that extends outside of the norm.
 - [11] - [Stream](https://kbve.com/project/stream/)
 - [12] - [VIP](https://kbve.com/project/vip)
 - [13] - [HerbMail](https://kbve.com/project/herbmail/)
+- [14] - [RentEarth](https://kbve.com/project/)
 
 We are currently manually referencing the project's via an ID system.
 I am not looking to spend too much time automating the ID system for the projects, as I want to keep some level of control on how we handle them.

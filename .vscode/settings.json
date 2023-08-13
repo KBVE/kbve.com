@@ -115,6 +115,7 @@
       "swup",
       "syncthing",
       "tailwindcss",
+      "tasker",
       "Threlte",
       "TLDR",
       "tlsv",
@@ -150,6 +151,7 @@
     },
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
+    "svelte.enable-ts-plugin": true,
     "[astro]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       

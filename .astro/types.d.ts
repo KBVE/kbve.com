@@ -201,6 +201,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"account": {
+"calendar.mdx": {
+	id: "calendar.mdx";
+  slug: "calendar";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
 "login.mdx": {
 	id: "login.mdx";
   slug: "login";
@@ -225,6 +232,13 @@ declare module 'astro:content' {
 "register.mdx": {
 	id: "register.mdx";
   slug: "register";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+"settings.mdx": {
+	id: "settings.mdx";
+  slug: "settings";
   body: string;
   collection: "account";
   data: InferEntrySchema<"account">
@@ -1405,6 +1419,20 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-11.md": {
+	id: "08-11.md";
+  slug: "08-11";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-12.md": {
+	id: "08-12.md";
+  slug: "08-12";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1421,6 +1449,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "legal": {
+"disclaimer.mdx": {
+	id: "disclaimer.mdx";
+  slug: "disclaimer";
+  body: string;
+  collection: "legal";
+  data: InferEntrySchema<"legal">
+} & { render(): Render[".mdx"] };
 "eula.mdx": {
 	id: "eula.mdx";
   slug: "eula";
@@ -2127,6 +2162,13 @@ declare module 'astro:content' {
   collection: "website";
   data: InferEntrySchema<"website">
 } & { render(): Render[".mdx"] };
+"github/github.mdx": {
+	id: "github/github.mdx";
+  slug: "github";
+  body: string;
+  collection: "website";
+  data: InferEntrySchema<"website">
+} & { render(): Render[".mdx"] };
 "twitch.mdx": {
 	id: "twitch.mdx";
   slug: "twitch";
@@ -2156,8 +2198,6 @@ declare module 'astro:content' {
 		"_bin": {
 };
 "compose": {
-};
-"vip": {
 };
 
 	};

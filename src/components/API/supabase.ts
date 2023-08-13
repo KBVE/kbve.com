@@ -2,6 +2,8 @@ import { Session, User, createClient } from "@supabase/supabase-js";
 import { atom, WritableAtom, task } from "nanostores";
 import { persistentAtom } from "@nanostores/persistent";
 
+import * as kbve from "@c/kbve";
+
 import * as Storage from "./storage";
 
 //TODO      [ENV-MIGRATION]
@@ -18,8 +20,8 @@ export const supabase_user$: WritableAtom<undefined | User> = atom(undefined);
 
 //!         [MAIN]
 export const supabase = createClient(
-	"https://haiukcmcljjfaflqdmjc.supabase.co",
-	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhhaXVrY21jbGpqZmFmbHFkbWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTE1NTM0MjMsImV4cCI6MjAwNzEyOTQyM30.0taw1sQp2fHLY3byK2cnGtLttXPFRs9GfkxFBNQL6E8",
+	kbve.supabase_api,
+	kbve.supabase_projectId,
 );
 
 supabase.auth.getSession().then(({ data: { session } }) => {
@@ -38,18 +40,51 @@ isUser.subscribe(async (session) => {
 
 export const supabase_account = async () => {
 	try {
-		return (await supabase.auth.getSession()).data.session?.user
+		return (await supabase.auth.getSession()).data.session?.user;
 	} catch (error) {
 		return undefined;
 	}
 };
 
-export const getProfile = async ({ cache = true }: { cache: boolean }) => {
-	cache ? Storage.__getProfile() : _getProfile();
+export const getUser = async () => {
+	task(async () => {
+		Storage.log(" Starting Supabase -> Session -> UserData");
+		const userData = await supabase_account();
+		if (userData?.id) {
+			Storage.locker('email', String(userData?.email));
+			Storage.locker('uuid', String(userData?.id));
+			Storage.locker('last', String(userData?.last_sign_in_at));
+			
+		}
+	});
+}
+
+
+//!			[TODO] -> FUNCTIONS
+
+
+export const getProfile = async ( cache?: boolean) => {
+	task(async () => {
+		if(cache === false)
+		{
+		Storage.log(" Starting Supabase -> Profile Table");
+		const userData = await supabase_account();
+		if (userData?.id) {
+			_pullProfile(userData?.id);
+		}
+	}
+	});
 };
 
-export const _getProfile = async () => {
+export const _pullProfile = async (uuid: string) => {
 	task(async () => {
-		Storage.log(" Starting Supabase -> Profile Table");
+		const { data: profile } = await supabase
+			.from("profiles")
+			.select("id, username, avatar_url, website")
+			.eq("id", uuid)
+			.single();
+		if (profile?.username) Storage.locker('username', String(profile?.username));
+
+		console.log(profile);
 	});
 };
