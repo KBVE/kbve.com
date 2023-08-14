@@ -1,23 +1,34 @@
 ---
-layout: ../../layouts/theme/mdx.astro
+layout: ../../../layouts/MDX.astro
 title: DeadCode
 client: Self
 publishDate: 2022-10-02 00:00:00
 img: https://images.unsplash.com/photo-1476370648495-3533f64427a2?fit=crop&w=1400&h=700&q=75
 description: DeadCode is a theory that focuses on learning from archived code.
+slug: deadcode
 tags:
   - deadcode
   - theory
 ---
 
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
 import VideoComponent from "@c/Element/Video/Video.astro";
 
+<Widget img={frontmatter.img} skeleton={false}>
+
+
+<VideoComponent iframe src="yt" id="8Ab3ArE8W3s" description="Jack Rusher breaks down different fundamental flaws that newer programming languages are carrying over from older languages." />
+
+
+<MDXJS transparent={true}>
 
 ## Videos
 
     - ## Stop Writing Dead Programs by Jack Rusher
         - A brilliant presentation from Jack Rusher at the Strange Loop 2022 on an area of `deadcode`.
-        - <VideoComponent iframe src="yt" id="8Ab3ArE8W3s" description="Jack Rusher breaks down different fundamental flaws that newer programming languages are carrying over from older languages." />
+        - 
+
 
 ## Information
 
@@ -26,3 +37,7 @@ Deadcode is a theory-craft that disintegrates, analyzes and abstracts informatio
 ## History
 
 We want to keep an archive of old / deprecated software scripts/libraries as a reference material for future programmers, hackers and researchers. As more and more codebases are fading out or being replaced, it might be wise to keep records of important functions and modules as an educational source of information.
+
+</MDXJS>
+
+</Widget>

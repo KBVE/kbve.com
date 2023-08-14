@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-12.md",
+                "file": "journal/08-13.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-12.md",
+                "file": "journal/08-13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-12.md",
+                "file": "journal/08-13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-12.md"
+                "file": "journal/08-13.md"
               }
             }
           }
@@ -157,24 +157,33 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
-    "website/github/github.mdx",
-    "website/github",
-    "website/github.mdx",
-    "legal/disclaimer.mdx",
-    "journal/08-11.md",
+    "theory/deadcode/deadcode.mdx",
+    "theory/deadcode",
+    "theory/bizops/_graph/market-research-model.mdx",
+    "theory/bizops/model.mdx",
+    "theory/bizops/_graph/business-model.mdx",
+    "theory/bizops/_graph/llc-formation-model.mdx",
+    "theory/bizops/_graph/region-model.mdx",
+    "theory/bizops/_graph/business-model.md",
+    "theory/bizops/_graph/member-model.mdx",
+    "theory/bizops/_notes/notes.md",
+    "theory/bizops/_graph/glob.astro",
+    "theory/bizops/_graph",
+    "theory/bizops/_notes/glob.astro",
+    "application/pocketbase/_journal/j1.md",
+    "application/pocketbase/_notes/pocketbase_docker.md",
+    "application/pocketbase/_notes/pocketbase_notes.md",
+    "application/pocketbase/_data/_backups/pocketbase_backups.md",
+    "application/pocketbase/_data/_notes/pocketbase_notes.md",
+    "application/pocketbase/_data/pocketbase_notes.md",
     "journal/08-12.md",
+    "journal/08-13.md",
+    "journal/08-11.md",
     "journal/08-10.md",
     "journal/08-09.md",
     "application/n8n/_notes/n8n-supabase.md",
     "application/n8n/_notes/supabase-cache.md",
-    "application/n8n/_examples/supabase",
     "application/n8n/_examples/supabase-cache.md",
-    "application/n8n/_examples",
-    "application/n8n/n8n.mdx",
-    "application/n8n/obs.mdx",
-    "application/n8n/_notes/obs.mdx",
-    "application/n8n/_notes",
-    "application/n8n",
     "journal/08-08.md",
     "journal/08-07.md",
     "application/obs/_notes/voicemeter.md",
@@ -183,15 +192,6 @@
     "journal/08-05.md",
     "journal/08-04.md",
     "tags/auth/auth-notes.md",
-    "tags/auth/auth_notes.md",
-    "journal/08-03.md",
-    "journal/07-31.md",
-    "journal/08-02.md",
-    "journal/07-29.md",
-    "journal/07-28.md",
-    "journal/07-30.md",
-    "journal/08-01.md",
-    "journal/05-10.md",
-    "journal/07-23.md"
+    "tags/auth/auth_notes.md"
   ]
 }

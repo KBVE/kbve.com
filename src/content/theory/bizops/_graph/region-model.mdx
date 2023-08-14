@@ -1,0 +1,21 @@
+---
+title: Region Model
+description: The core reigion model for the project
+---
+
+```mermaid
+graph
+
+region1{{"Region Model"}}
+
+rid0{{"Country"}}
+rid1{{"State"}}
+rid3{{" REF: User -> id3"}}
+
+region1 --> rid0
+region1 --> rid1
+region1 --> rid3
+
+rid3 --> id3
+
+```

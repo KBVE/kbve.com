@@ -6,7 +6,6 @@ const { src, id, description, iframe } = Astro.props;
 <div class={!description ? "pb2" : "pb1"}>
     <VideoComponent iframe={iframe} src={src} id={id} />
     <div class="tar">
-      <span class="f-d3 text-blue">{description}</span>
     </div>
   </div>
   

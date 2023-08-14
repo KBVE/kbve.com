@@ -12,10 +12,24 @@ tags:
 ---
 
 import Discord from "@w/Discord";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
 import Lottie from "@c/Element/Lottie/Lottie.astro";
 import Ads from "@w/Ads.astro"; 
 
 
+
+<Widget img="/assets/img/curved-images/wave.jpg" skeleton={false} >
+
+<MDXJS>
+
+## {frontmatter.title}
+  
+- {frontmatter.description}
+
+</MDXJS>
+
+<br />
 
 <Lottie
         json="https://assets1.lottiefiles.com/private_files/lf30_mAfXxk.json"
@@ -26,7 +40,11 @@ import Ads from "@w/Ads.astro";
 
 <Discord client:only="react" width="100%" height="550" />
 
+
 <Lottie
         json="https://assets9.lottiefiles.com/packages/lf20_nivsnvgo.json"
         width="350px"
 />
+
+</Widget>
+

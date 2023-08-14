@@ -45,6 +45,7 @@ const VideoComponent = ({
             }
             frameBorder="0"
             className={iframeClass}
+            title="YT Video"
           />
         </div>
       </>
