@@ -1,6 +1,6 @@
 ---
 id: 11
-layout: ../../layouts/theme/mdx.astro
+layout: ../../../layouts/MDX.astro
 title: Bizops
 client: Self
 category: API
@@ -11,6 +11,7 @@ date: 6/15/2022
 author: Ziggy9263
 img: https://images.unsplash.com/photo-1522071820081-009f0129c71c?fit=crop&w=1400&h=700&q=75
 description: Business Operations notes created by h0lybyte and Ziggy9263.
+slug: bizops
 tags:
 - business
 - design
@@ -20,6 +21,16 @@ tags:
 - organization
 - opsec
 ---
+
+
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+import NotesGlob from "./_notes/glob.astro";
+import GraphGlob from "./_graph/glob.astro";
+
+<Widget img={frontmatter.img} skeleton={false}>
+
+<MDXJS>
 
 ## Business Operations
 
@@ -125,35 +136,25 @@ Here are a couple popular references to reach out once your MVP and strucutre is
 - [AirTable of Seed VCs](https://airtable.com/shrkohpeE2AO2ldeq/tbl5Q8N7NuW22z5Bt?backgroundColor=cyan&viewControls=on)
 - [VCSheet](https://www.vcsheet.com/)
 
+</MDXJS>
+
+</Widget>
+
+<br />
+
 ---
 
-### Automation Hackathon
+<br />
 
-```mermaid
-graph
+<Widget img="https://images.unsplash.com/photo-1634176866089-b633f4aec882?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"  skeleton={false}>
 
-core1{{"Business Model"}}
+<MDXJS>
 
-id2{{"LLC Formation Model"}}
-id3{{"Market Research Model"}}
-id4{{"Operational Efficiency"}}
-id5{{"Investment"}}
-id6{{"Continuous Learning and Adaptation"}}
+## Automation Hackathon
+
+</MDXJS>
+
+<GraphGlob />
 
 
-fe1{{"Marketing and Branding"}}
-fe2{{"Scalability and Growth"}}
-fe3{{"Sustainability and Social Responsibility"}}
-
-core1 --> id2
-core1 --> id3
-core1 --> id4
-core1 --> id5
-core1 --> id6
-
-id3 --> fe1
-id4 --> fe2
-id5 --> fe3
-
-```
-
+</Widget>

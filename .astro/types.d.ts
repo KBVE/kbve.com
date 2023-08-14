@@ -1981,15 +1981,15 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "theory": {
-"bizops.mdx": {
-	id: "bizops.mdx";
+"bizops/bizops.mdx": {
+	id: "bizops/bizops.mdx";
   slug: "bizops";
   body: string;
   collection: "theory";
   data: InferEntrySchema<"theory">
 } & { render(): Render[".mdx"] };
-"deadcode.mdx": {
-	id: "deadcode.mdx";
+"deadcode/deadcode.mdx": {
+	id: "deadcode/deadcode.mdx";
   slug: "deadcode";
   body: string;
   collection: "theory";
