@@ -1,0 +1,13 @@
+---
+// Journal Factory
+const journals = await Astro.glob('./**/*.md*');
+---
+<div>
+    {journals.map((journal) => (
+      <article>
+        <h2>{journal.frontmatter.title}</h2>
+        <p>{journal.frontmatter.description}</p>
+        <journal.Content />
+      </article>
+    ))}
+</div>

@@ -420,6 +420,13 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
+"pocketbase/pocketbase.mdx": {
+	id: "pocketbase/pocketbase.mdx";
+  slug: "pocketbase";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
 "portainer.mdx": {
 	id: "portainer.mdx";
   slug: "portainer";
@@ -1433,6 +1440,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-13.md": {
+	id: "08-13.md";
+  slug: "08-13";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1967,15 +1981,15 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "theory": {
-"bizops.mdx": {
-	id: "bizops.mdx";
+"bizops/bizops.mdx": {
+	id: "bizops/bizops.mdx";
   slug: "bizops";
   body: string;
   collection: "theory";
   data: InferEntrySchema<"theory">
 } & { render(): Render[".mdx"] };
-"deadcode.mdx": {
-	id: "deadcode.mdx";
+"deadcode/deadcode.mdx": {
+	id: "deadcode/deadcode.mdx";
   slug: "deadcode";
   body: string;
   collection: "theory";
@@ -2134,29 +2148,29 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "website": {
-"about.mdx": {
-	id: "about.mdx";
+"about/about.mdx": {
+	id: "about/about.mdx";
   slug: "about";
   body: string;
   collection: "website";
   data: InferEntrySchema<"website">
 } & { render(): Render[".mdx"] };
-"c.mdx": {
-	id: "c.mdx";
+"c/c.mdx": {
+	id: "c/c.mdx";
   slug: "c";
   body: string;
   collection: "website";
   data: InferEntrySchema<"website">
 } & { render(): Render[".mdx"] };
-"discord.mdx": {
-	id: "discord.mdx";
+"discord/discord.mdx": {
+	id: "discord/discord.mdx";
   slug: "discord";
   body: string;
   collection: "website";
   data: InferEntrySchema<"website">
 } & { render(): Render[".mdx"] };
-"events.mdx": {
-	id: "events.mdx";
+"events/events.mdx": {
+	id: "events/events.mdx";
   slug: "events";
   body: string;
   collection: "website";

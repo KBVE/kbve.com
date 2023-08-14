@@ -1,0 +1,52 @@
+---
+const graphs = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+
+{
+	graphs.map((graph) => (
+		<MDXJS transparent={true}>
+			<div>
+				<article class="">
+						<h2>{graph.frontmatter.title}</h2>
+						<p>{graph.frontmatter.description}</p>
+					
+					<graph.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}
+
+<script>
+	/**
+	 * Originally from https://github.com/JuanM04
+	 * Taken from https://github.com/withastro/astro/issues/4433#issuecomment-1584019991
+	 * @params {HTMLCollectionOf<HTMLElement>} graphs
+	 */
+	async function renderDiagrams(graphs) {
+		const { default: mermaid } = await import('mermaid');
+		mermaid.initialize({
+			startOnLoad: false,
+			fontFamily: 'var(--sans-font)',
+			// @ts-ignore This works, but TS expects a enum for some reason
+			theme: 'dark',
+		});
+
+		for (const graph of graphs) {
+			const content = graph.getAttribute('data-content');
+			if (!content) continue;
+			let svg = document.createElement('svg');
+			const id = (svg.id = 'mermaid-' + Math.round(Math.random() * 100000));
+			graph.appendChild(svg);
+			mermaid.render(id, content).then((result) => {
+				graph.innerHTML = result.svg;
+			});
+		}
+	}
+
+	const graphs = document.getElementsByClassName('mermaid');
+	if (document.getElementsByClassName('mermaid').length > 0) {
+		renderDiagrams(graphs);
+	}
+</script>

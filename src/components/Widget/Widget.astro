@@ -1,5 +1,5 @@
 ---
-const {img, minHeight = '200' } = Astro.props;
+const {img, minHeight = '200', skeleton = true } = Astro.props;
 ---
 <div class="flex flex-wrap">
     <div class="w-full px-1">
@@ -18,6 +18,7 @@ const {img, minHeight = '200' } = Astro.props;
                               
                                     <span class="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-80" />
                                    
+                                    {skeleton && (
                                     <div class="grid h-full justify-center py-10" id="skeleton" >
                                         <div class="flex flex-col m-8 rounded shadow-md w-60 sm:w-80 animate-pulse h-96 min-h-fit">
                                             <div class="h-48 rounded-t bg-gray-700"></div>
@@ -28,6 +29,7 @@ const {img, minHeight = '200' } = Astro.props;
                                             </div>
                                         </div>                   
                                     </div>
+                                    )}
                                   
 
                                     <div class={`relative z-10 flex flex-col flex-auto h-full p-4 min-h-[${minHeight}px]`}>

@@ -1,0 +1,13 @@
+---
+// Notes Factory
+const notes = await Astro.glob('./*.md*');
+---
+<div>
+    {notes.map((note) => (
+      <article>
+        <h2>{note.frontmatter.title}</h2>
+        <p>{note.frontmatter.description}</p>
+        <note.Content />
+      </article>
+    ))}
+</div>

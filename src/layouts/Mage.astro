@@ -1,6 +1,4 @@
 ---
-//<!--?       [CORE]:Template
-//<!--*       [IMPORTS]
 import '@styles/index.css'; //  Import Style.css
 import Header from '@l/Header.astro'; // Header
 //?       [DATA]
@@ -9,8 +7,6 @@ const {
 	title,
 	description,
 	image = '/assets/img/social.png',
-	bg,
-	render = true,
 } = Astro.props; //  Import Astro.props
 const url = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -23,8 +19,9 @@ const url = new URL(Astro.url.pathname, Astro.site);
 	</head>
 
 	<body
-		class="text-base bg-[#0b0f0b] text-default selection:bg-secondary selection:text-white"
-	>
-		<slot />
+		class="text-base bg-[#0b0f0b] text-default selection:bg-secondary selection:text-white">
+		<main class="p-8" id="">
+			<slot />
+		</main>
 	</body>
 </html>
