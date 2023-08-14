@@ -19,6 +19,9 @@ export const mermaid: RemarkPlugin<[]> = () => tree => {
     // @ts-ignore
     node.type = "html"
     node.value = dedent`
+      <style>
+      #flowchart-link { stroke:#fff !important; fill:#f00 !important; stroke-width:3px !important; }
+      </style>
       <div class="mermaid" data-content="${escapeHtml(node.value)}">
         <p>Loading graph...</p>
       </div>
