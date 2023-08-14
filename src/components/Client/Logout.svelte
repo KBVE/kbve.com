@@ -1,20 +1,26 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
-	import { supabase } from '@c/API/supabase';
+	//import { supabase } from '@c/API/supabase';
+	import { logout } from '@c/API/appwrite/appwrite';
 	import { log, notification } from '@c/API/storage';
+	import * as ClientStorage from '@c/API/storage';
+	import { cleanStores } from "nanostores";
 
 	let mounted = false;
 
 	const handleLogout = async () => {
 		try {
-			const { error } = await supabase.auth.signOut();
-			if (error) {
-				throw error;
-			} else {
-				location.assign('/account/login');
-			}
-		} catch (error) {
+			await logout();
+			ClientStorage.locker('email', String(undefined));
+			ClientStorage.locker('uuid', String(undefined));
+			ClientStorage.locker('last', String(undefined));
+            ClientStorage.locker('emailVerification',  String(undefined));
+            ClientStorage.locker('phoneVerification',  String(undefined));
+            ClientStorage.locker('phone', String(undefined));
+			ClientStorage.locker('username', String(undefined));
+			location.assign('/account/login');
+			} catch (error) {
 			if (error instanceof Error) {
 				log(error.message);
 				notification(error.message);

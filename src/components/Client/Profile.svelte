@@ -8,13 +8,7 @@
 	//  Svelte
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
-	//  Supabase
-	import {
-		supabase,
-		supabase_user$,
-		getProfile,
-		getUser,
-	} from '@c/API/supabase';
+	//	Client Storage
 	import { kbve$ } from '@c/API/storage';
 
 	let mounted = false;
@@ -62,17 +56,30 @@
 						{$kbve$.username}
 					</h4>
 					<div
-						class="flex row gap-2 items-center bg-gray-500 p-1 px-2 rounded-lg border border-[#1c033c] m-2">
+						class="flex flex-col gap-2 items-center bg-gray-500/[.50] p-1 px-2 rounded-lg border border-[#1c033c] m-2">
 						<p class="text-sm">
 							{$kbve$.uuid}
 						</p>
 					</div>
 
-					<div class="flex flex-col items-start gap-2">
-						{$kbve$.email}
+					<div
+						class="flex flex-col gap-2 items-center bg-gray-500/[.50] p-1 px-2 rounded-lg border border-[#1c033c] m-2">
+						<p class="text-sm">
+							{$kbve$.email}
+						</p>
+						
+							{#if ($kbve$.emailVerification == true)}
+							<p class="text-xs">Email Verification </p>
+							{:else}
+							<p class="text-xs">No Email Verified</p>
+							{/if}
+							{#if ($kbve$.phoneVerification == false)}
+							<p class="text-xs">No Phone Verification</p>
+							{/if}
 					</div>
 				</div>
 			</div>
+			{#if $kbve$.github}
 			<div class="flex justify-center pt-4 space-x-4 align-center">
 				<a
 					rel="noopener noreferrer"
@@ -89,6 +96,7 @@
 					</svg>
 				</a>
 			</div>
+			{/if}
 		</div>
 	</selection>
 </WidgetWrapper>

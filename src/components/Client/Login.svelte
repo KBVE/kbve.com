@@ -20,7 +20,8 @@
 </script>
 
 <script lang="ts">
-	import { supabase, getProfile, getUser } from '@c/API/supabase';
+	//import { supabase, getProfile, getUser } from '@c/API/supabase';
+	import { appwriteAccount, login, OAuth2, getUser } from '@c/API/appwrite/appwrite';
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { log, notification$, notification } from '@c/API/storage';
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
@@ -133,23 +134,16 @@
 
 	const handleProfile = async () => {
 		await getUser();
-        await getProfile(false);
+        //await getProfile(false);
 		location.assign('/account/profile');
 	}
 
 	const handleLogin = async () => {
 		try {
 			loading = true;
-			const { data, error } = await supabase.auth.signInWithPassword({
-				email,
-				password,
-				options: { captchaToken },
-			});
-			if (error) {
-				throw error;
-			} else {
-				handleProfile();
-			}
+			await login(email, password);
+			await handleProfile();
+			
 		} catch (error) {
 			if (error instanceof Error) {
 				log(error.message);
