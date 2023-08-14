@@ -2134,22 +2134,22 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "website": {
-"about.mdx": {
-	id: "about.mdx";
+"about/about.mdx": {
+	id: "about/about.mdx";
   slug: "about";
   body: string;
   collection: "website";
   data: InferEntrySchema<"website">
 } & { render(): Render[".mdx"] };
-"c.mdx": {
-	id: "c.mdx";
+"c/c.mdx": {
+	id: "c/c.mdx";
   slug: "c";
   body: string;
   collection: "website";
   data: InferEntrySchema<"website">
 } & { render(): Render[".mdx"] };
-"discord.mdx": {
-	id: "discord.mdx";
+"discord/discord.mdx": {
+	id: "discord/discord.mdx";
   slug: "discord";
   body: string;
   collection: "website";

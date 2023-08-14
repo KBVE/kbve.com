@@ -1,0 +1,29 @@
+---
+import '@styles/index.css'; //  Import Style.css
+import Header from '@l/Header.astro'; // Header
+//?       [DATA]
+const {
+	content,
+	title,
+	description,
+	image = '/assets/img/social.png',
+} = Astro.props; //  Import Astro.props
+const url = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth" data-theme="dark">
+	<head>
+		<Header title={title} description={description} url={url} image={image} />
+		<slot name="header" />
+	</head>
+
+	<body
+		class="text-base bg-[#0b0f0b] text-default selection:bg-secondary selection:text-white">
+		<main class="p-8" id="">
+			
+													<slot />
+											
+		</main>
+	</body>
+</html>
