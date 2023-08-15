@@ -68,14 +68,7 @@
 							{$kbve$.email}
 						</p>
 						
-							{#if ($kbve$.emailVerification == true)}
-							<p class="text-xs">Email Verification </p>
-							{:else}
-							<p class="text-xs">No Email Verified</p>
-							{/if}
-							{#if ($kbve$.phoneVerification == false)}
-							<p class="text-xs">No Phone Verification</p>
-							{/if}
+							
 					</div>
 				</div>
 			</div>

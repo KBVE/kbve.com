@@ -259,8 +259,8 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"appwrite.mdx": {
-	id: "appwrite.mdx";
+"appwrite/appwrite.mdx": {
+	id: "appwrite/appwrite.mdx";
   slug: "appwrite";
   body: string;
   collection: "application";
@@ -1443,6 +1443,13 @@ declare module 'astro:content' {
 "08-13.md": {
 	id: "08-13.md";
   slug: "08-13";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-14.md": {
+	id: "08-14.md";
+  slug: "08-14";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
