@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/Shell.astro
 title: Supabase
 category: Application
 client: Self
@@ -14,6 +13,13 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ## Information
 
@@ -43,3 +49,8 @@ These are the collection of notes for Supabase
 - General Documentation for Supabase
 
 </Details>
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

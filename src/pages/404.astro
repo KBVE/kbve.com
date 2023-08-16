@@ -5,9 +5,6 @@ import Menu from '@l/Menu.astro';
 ///				[DATA]
 let title = "Not Found";
 let description = "Not Found";
-const { content } = Astro.props; ///	[Astro]		->	[Props]
-Astro.response.status = 404; /// [Astro]		->	[Response]	-> 404
-Astro.response.statusText = title; ///	[Astro]		->	[Response]	-> 'Not found'
 ///				[MIGRATE]
 ---
 
@@ -19,5 +16,3 @@ Astro.response.statusText = title; ///	[Astro]		->	[Response]	-> 'Not found'
   <p>Not found</p>
   </Menu>
 </KBVE>
-
-

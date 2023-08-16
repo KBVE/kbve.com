@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/MDX.astro
 title: Pocketbase
 category: Application
 client: Self
@@ -13,12 +12,15 @@ tags:
   - database
 ---
 
+import MDXLayer from "@l/MDXLayer.astro";
 import Details from '@w/Details.astro';
 import Widget from '@w/Widget.astro';
 import MDXJS from '@w/MDXJS.astro';
 import Login from '@w/Login.astro';
 import NotesGlob from './_notes/glob.astro';
 import JournalGlob from './_journal/glob.astro';
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
 
 <Widget img={frontmatter.img} skeleton={false} >
 
@@ -107,3 +109,4 @@ Installing Pocketbase through Coolify is extremely easy!
 </MDXJS>
 
 </Widget>
+</MDXLayer>
