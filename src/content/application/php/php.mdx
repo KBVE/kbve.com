@@ -1,0 +1,114 @@
+---
+title: PHP
+description: PHP
+slug: php
+category: Application
+client: Self
+publishDate: 2022-11-01 00:00:00
+img: https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?fit=crop&w=1400&h=700&q=75
+repo: 
+tags:
+- software
+---
+
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import N from "@n/N.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
+<TabMenu first="general" data={["guides","functions", "media", "notes"]}>
+
+<TabData tail="block" data="general">
+
+## PHP
+
+! This needs to be rewritten. Its too memey.
+
+PHP is a popular and powerful scripting language that can create dynamic and interactive web pages.
+HP has many advantages and features that make it a widely-used, free, and efficient tool for web development. 
+PHP is a server-side scripting language, which means that it runs on the web server and not on the browser. 
+This allows PHP to interact with databases, files, sessions, cookies, and other web services.
+PHP is also open-source, which means that it is free to download and use, and that anyone can contribute to its development and improvement. 
+PHP is very simple to learn and use, as it can be embedded within HTML code and has a syntax that is similar to C and Java.
+PHP supports multiple platforms, web servers, and databases, as well as object-oriented, procedural, and functional programming paradigms.
+PHP also has many extensions and libraries for various purposes, such as graphics, encryption, XML parsing, email sending, and more.
+In conclusion, PHP is a versatile and convenient scripting language that can create dynamic and interactive web pages with ease and efficiency.
+
+
+</TabData>
+
+<TabData data="guides">
+
+## Guides
+
+</TabData>
+
+
+<TabData data="functions">
+
+## Functions
+
+#### SS_BETWEEN
+
+```php
+
+<?php
+// Credit: AADude
+ function ss_between($string,$start,$end) {
+   $string=" ".$string; //The string.
+   $startpos=strpos($string,$start); //Find the position of the start string.
+   //Check if $startpos equals zero.
+   if ($startpos == 0) {
+      //If $startpos does equal zero, do this:
+      return false; //Return false.
+   }
+   else {
+      //If $startpos doesn't equal zero, do this:
+      $startpos+=strlen($start); //Add the string length of $start to $startpos.
+      $endpos=strpos($string,$end,$startpos)-$startpos; //Find the string position of $end.
+      return substr($string,$startpos,$endpos); //Return the new value.
+   }
+}
+
+// Proof of Of Concept
+$source = "U:holybyteE:acid@meme.com";
+$u = ss_between($source, "U:", "E:");
+// $source = line 1 of text file
+echo $u;
+// return username
+ 
+?>
+
+```
+</TabData>
+
+<TabData data="media">
+
+## Media
+
+</TabData>
+
+<TabData data="notes">
+
+## Notes
+
+### Log
+
+#### Journal
+
+<Details data="2023-04-16">Updated PHP with tabs. </Details>
+
+</TabData>
+</TabMenu>
+
+</MDXJS>
+</Widget>
+</MDXLayer>

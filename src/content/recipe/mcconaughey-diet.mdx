@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: McConaughey's Mediterranean Diet
 category: diet
 client: Self
@@ -17,6 +16,15 @@ tags:
 repo: kbve/api.kbve.com
 ---
 
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
 ## McConaughey's Mediterranean Diet
 
 [Check out this Insider Post on the Matthew McConaughey's Diet for the Dallas Buyer's Club](https://www.insider.com/matthew-mcconaughey-lost-50lbs-for-dallas-buyers-club-on-diet-2020-10). Matthew McConaughey lost 50 pounds on the Mediterranean diet. Guess he wanted to be 'McCona-slim' instead of 'McCona-hey'! I guess he proved that 'abs'olutely anything is possible! McConaughey's diet also allowed him to eat cheese and yogurt in moderation. Talk about 'dairying' his way to a healthier lifestyle!
@@ -31,3 +39,7 @@ Red wine in moderation is recommended on the Mediterranean diet. It's like the d
 
 The Mediterranean diet typically allows red wine in moderation. Red wine is high in antioxidants and has been linked to a wide range of health benefits. However, keep in mind that drinking too much alcohol can have harmful effects.
 According to my buddy, [Malbec Wine](https://winefolly.com/deep-dive/what-is-malbec-wine/) pairs best with this diet. Looks like McConaughey found the 'red' path to weight loss! However, pairing a red wine with a meal is a very personal choice. If you're not a fan of Malbec, don't worry. You can still 'wine' and dine with a Cabernet Sauvignon or a Merlot. Choices, choices!
+
+</MDXJS>
+</Widget>
+</MDXLayer>

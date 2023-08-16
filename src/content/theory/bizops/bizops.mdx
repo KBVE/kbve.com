@@ -21,13 +21,13 @@ tags:
 - opsec
 ---
 
-import MDX from "@l/MDX.astro";
+import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
 import NotesGlob from "./_notes/glob.astro";
 import GraphGlob from "./_graph/glob.astro";
 
-<MDX title={frontmatter.title} description={frontmatter.description}>
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
 
 <Widget img={frontmatter.img} skeleton={false}>
 
@@ -160,4 +160,4 @@ Here are a couple popular references to reach out once your MVP and strucutre is
 
 </Widget>
 
-</MDX>
+</MDXLayer>

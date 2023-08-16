@@ -1,0 +1,113 @@
+---
+title: Authelia
+category: Application
+client: Self
+publishDate: 2022-10-25 00:00:00
+img: https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?fit=crop&w=1400&h=700&q=75
+slug: authelia
+description: Open-source auth software as a middleware. Authelia handles the authentication and authorization of the user/entity, allowing to secure access outside the scope of the application and provides a unique firewall-like access terminal.
+tags:
+  - security
+  - host
+  - firewall
+---
+
+import GitHub from "@w/Github.astro";
+import Details from "@w/Details.astro";
+import TabMenu from "@w/TabMenu.astro";
+import TabData from "@w/TabData.astro";
+import YT from "@w/YT.astro";
+import N from "@n/N.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
+## Information
+
+> Tldr; Authelia is an authentication and authorization application that provides a backend server and frontend portal through various core features and plugins.
+
+Have you ever wondered how to secure your web applications with a simple, secure and elegant solution?
+Do you want to offer your users a seamless and convenient login experience across multiple domains and services?
+If so, you might be interested in Autheila, an open-source authentication and authorization server that provides two-factor authentication and single sign-on (SSO) for your applications via a web portal.
+In this document, KBVE will introduce you and your dev team to the features and benefits of Autheila, and show you how to set it up with some common reverse proxies like [Nginx](https://kbve.com/application/nginx), [Traefik](https://kbve.com/application/traefik), or HAProxy.
+By the end of this reference document, you will be able to protect your web applications with Autheila and enjoy a secure and hassle-free authentication process.
+
+<Details data="Metaphor for Autheila">
+
+### Metaphor
+
+Autheila is a gatekeeper!
+Autheila acts as a gatekeeper for your web applications, allowing or denying access based on your authentication and authorization policies.
+It also provides a single key for your users to unlock multiple gates, saving them time and hassle.
+Autheila is like a smart and reliable gatekeeper that keeps your web applications safe and user-friendly.
+
+</Details>
+
+<Details data="Autheila for a 5yr old!">
+### 5
+
+Imagine you have a lot of toys that you like to play with on different websites.
+Some of them are your own toys, and some of them are shared with your friends.
+You do not want anyone else to take or break your toys, so you need a way to keep them safe.
+Autheila is like a special friend who helps you do that.
+Autheila asks you for your name and a secret code every time you want to play with your toys.
+Sometimes, Autheila also asks you for another secret code that only you know or have.
+This way, Autheila makes sure that it is really you and not someone else who wants to play with your toys.
+Autheila also remembers your name and secret codes for all the websites, so you don’t have to type them again and again.
+You just have to tell Autheila once, and then you can play with any toy you want.
+Autheila is like a smart and helpful friend who protects your toys and makes it easy for you to play with them.
+
+</Details>
+
+## Install
+
+There are different methods to install Authelia, depending on your preferences and environment.
+
+
+## Cheatsheet
+
+Autheila
+
+## System
+
+System resources, information and general help.
+
+
+## Errors
+
+Common errors within Authelia that our team has ran across.
+
+
+## Videos
+
+Authelia videos that will help you with installing, updating and other things.
+
+
+
+## Notes
+
+Notes on Authelia
+
+### Log
+
+#### Journal
+
+<Details data="2023-04-15">Added a test case for the tab system. Looking to see if there might be any other issues when building out the system.</Details>
+<Details data="2023-04-11">Added a quick details component to make the page a bit less clustered</Details>
+<Details data="2023-04-10">General Authelia information and concepts.</Details>
+
+### License
+
+- Authelia is an open source application.
+- Authelia operates under the Apache 2.0 license.
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+</MDXJS>
+</Widget>
+</MDXLayer>

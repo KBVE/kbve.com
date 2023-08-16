@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Rigor Release
 category: News
 client: Self
@@ -13,6 +12,13 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ## Release v1
 
@@ -45,3 +51,8 @@ Testing the news aspect of the website.
 ### License
 
 The license and general information is found on our [legal page](https://kbve.com/legal/)
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

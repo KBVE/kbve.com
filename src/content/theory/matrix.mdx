@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Matrix
 client: Self
 publishDate: 2020-03-02 00:00:00
@@ -10,6 +9,15 @@ tags:
 - management
 - task
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 # Matrix Theory
 
@@ -91,3 +99,7 @@ This review was taken on 11/25/2022 for v1 for the AE Matrix.
 >Jab5: the other thing id more or less think about is potentially setting specific times/lengths on different tasks, as that helps to make sure that things more or less do get done in the first place. This largely subjective because it depends a lot on how your group works on it for example if its just every once in a while then that probably wont be very helpful. But having an understanding of the time frame on the individual tasks is something that will always potentially be useful
 >Jab5: And just remember the tool is only as good as your team uses it. So if its just one person interacting with it then honestly going into a large large amount of detail may potentially be more trouble than its worth
 >Jab5: but thats just what i got from looking at how its all arranged from the outside. Its all honestly completely subjective to how it works best for the team itself
+
+</MDXJS>
+</Widget>
+</MDXLayer>

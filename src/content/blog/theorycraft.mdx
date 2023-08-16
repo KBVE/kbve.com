@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Blog.astro
 title: Theorycraft
 description: The Theorycraft is a mental adventure that journeys through the moral, spiritual, and metaphysical realms of the mind.
 author: KBVE
@@ -11,7 +10,12 @@ tags:
 ---
 
 import Details from '@w/Details.astro';
-import MDXJS from '@w/MDXJS.astro';
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
 
 <MDXJS>
 ## Introduction
@@ -62,3 +66,5 @@ Updating the theorycraft blog post.
 ## REF
 
 </MDXJS>
+</Widget>
+</MDXLayer>

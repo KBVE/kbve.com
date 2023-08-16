@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Radio
 category: Media
 client: Self
@@ -15,7 +14,19 @@ tags:
   - waves
 ---
 
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 # Radio
 
 # Reference
 - Generic Radio https://www.genericradio.com/library
+
+</MDXJS>
+</Widget>
+</MDXLayer>

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Stock.astro
 title: Invesco High Yield Equity Dividend Achievers ETF
 category: Stock
 client: Self
@@ -19,6 +18,13 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ---
 
@@ -47,3 +53,7 @@ Added Asset.
 
 </Details>
 
+
+</MDXJS>
+</Widget>
+</MDXLayer>

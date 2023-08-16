@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: O-Life Japan Collection
 category: Music
 client: Self
@@ -19,7 +18,20 @@ media:
 feature: Storyline
 ---
 
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 ## Information
 
 The first moment my ears heard the mixture of Japanese and Irish folk, my brainwaves went into a cultural mess. 
 These are some of the best songs that I have found and had to make it easier to share.
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

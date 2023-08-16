@@ -1,0 +1,45 @@
+---
+title: Simba
+description: An automation software design that scopes it target via color / BMP and extendable via image post-process spacial allocation.
+slug: automation/simba
+category: Application
+client: Self
+publishDate: 2023-03-04 00:00:00
+img: https://images.unsplash.com/photo-1620023593001-3394d6297aeb?fit=fill&fill=solid&fill-color=360036&w=1400&h=700&q=75
+repo: https://github.com/orgs/SRL/repositories
+tags:
+  - automation
+  - software
+---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
+# Simba
+
+---
+
+## Information
+
+Simba software is an open source automation software designed for repeatable mouse/keyboard tasks that follow a generic linear timeline.
+The software's primary functionality is locating colours / pixels within the screen of choice, then moving the mouse to click the x and y coordinates of the colour / pixel.
+
+---
+
+# Install
+
+---
+
+# SRL
+
+The active repo for SRL is currently under [Villavu/SRL-Development](https://github.com/Villavu/SRL-Development)
+
+</MDXJS>
+</Widget>
+</MDXLayer>

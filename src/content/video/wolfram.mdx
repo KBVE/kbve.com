@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Wolfram
 category: Media
 client: Self
@@ -16,6 +15,14 @@ tags:
 ---
 import VideoComponent from "@c/Element/Video/Video.astro";
 export const components = { video: VideoComponent };
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 # World of Wolfram
 - Playlist URL https://www.youtube.com/playlist?list=PLHVNlTZrw1M5yJOmAKqx6OZkZ0sqHYf1j
@@ -81,3 +88,7 @@ export const components = { video: VideoComponent };
     - <VideoComponent iframe src="yt" id="kAii7VpTyg8" description="World of Wolfram | Folge 10: GAME OVER" />
 
 * * *
+
+</MDXJS>
+</Widget>
+</MDXLayer>

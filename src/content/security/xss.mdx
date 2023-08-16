@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: XSS
 category: Security
 client: Self
@@ -11,6 +10,15 @@ tags:
   - security
   - def
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -81,3 +89,7 @@ DOM Replacement - Swapping (Persistent/Non-Presistent) Document Object Model (HT
 Browser Secrets [Breakdown](https://browsersecrets.restograde.com/)
 
 XSS - The LocalStorage Robbery [Medium](https://shahjerry33.medium.com/xss-the-localstorage-robbery-d5fbf353c6b0)
+
+</MDXJS>
+</Widget>
+</MDXLayer>

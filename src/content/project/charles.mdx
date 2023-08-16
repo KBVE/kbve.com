@@ -1,6 +1,5 @@
 ---
 id: 8
-layout: ../../layouts/theme/mdx.astro
 title: Charles
 client: Self
 category: API
@@ -18,6 +17,14 @@ tags:
 ---
 
 import Details from "@w/Details.astro"
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Story
 
@@ -85,3 +92,7 @@ Notes on the birth of Charles
 @h0lybyte
 We could go with a workstation? server rack? Hmm we have a couple options to pick from.
 </Details> 
+
+</MDXJS>
+</Widget>
+</MDXLayer>

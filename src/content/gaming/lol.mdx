@@ -1,6 +1,5 @@
 ---
 status: true
-layout: ../../layouts/theme/mdx.astro
 title: League
 description: Digital heroin for the modern day incel.
 category: Gaming
@@ -17,6 +16,14 @@ tags:
 ---
 import VideoComponent from "@c/Element/Video/Video.astro";
 export const components = { video: VideoComponent };
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## League of Legends
 
@@ -50,3 +57,8 @@ Additional notes for League of Legends will be placed here!
 - 2023-06-16
 
 Added a link to the linux build guide!
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>
