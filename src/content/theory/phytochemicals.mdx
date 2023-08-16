@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Phytochemicals
 client: Self
 publishDate: 2020-03-02 00:00:00
@@ -9,6 +8,14 @@ tags:
   - food
   - health
 ---
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -51,3 +58,7 @@ This documentation is looking to expand upon the nature of `Phytochemicals` and 
 - 2023-05-07 : Research Papers on Phytochemicals and Eggs
   - [2021 - Enriching laying hens eggs by feeding diets with different fatty acid composition and antioxidants](https://www.nature.com/articles/s41598-021-00343-1#Abs1)
   - [2022 - Impacts of polyphenols on laying hens' productivity and egg quality: A review](https://onlinelibrary.wiley.com/doi/full/10.1111/jpn.13758)
+
+</MDXJS>
+</Widget>
+</MDXLayer>

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-14.md",
+                "file": "journal/08-15.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-14.md",
+                "file": "journal/08-15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-14.md",
+                "file": "journal/08-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-14.md"
+                "file": "journal/08-15.md"
               }
             }
           }
@@ -157,19 +157,20 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
-    "theory/bizops/_graph/data-structure.mdx",
-    "theory/bizops/_graph/support.mdx",
-    "theory/bizops/_graph/integration-tools.mdx",
-    "application/appwrite/appwrite.mdx",
-    "application/appwrite",
-    "journal/08-13.md",
+    "tags/host/host.mdx",
+    "tags/host",
+    "tags/mobile/mobile.mdx",
+    "tags/mobile",
+    "tags/tags.mdx",
+    "tags/data/data.mdx",
+    "tags/data",
+    "tags/sql/sql.mdx",
+    "tags/sql",
+    "tags/technology/technology.mdx",
+    "tags/technology",
+    "journal/08-15.md",
     "journal/08-14.md",
-    "theory/deadcode/deadcode.mdx",
-    "theory/deadcode",
-    "theory/bizops/_graph/market-research-model.mdx",
-    "theory/bizops/model.mdx",
-    "theory/bizops/_graph/business-model.mdx",
-    "theory/bizops/_graph/llc-formation-model.mdx",
+    "journal/08-13.md",
     "theory/bizops/_graph/business-model.md",
     "theory/bizops/_notes/notes.md",
     "application/pocketbase/_journal/j1.md",
@@ -191,7 +192,6 @@
     "application/obs/notes/voicemeter.md",
     "journal/08-06.md",
     "journal/08-05.md",
-    "journal/08-04.md",
-    "tags/auth/auth-notes.md"
+    "journal/08-04.md"
   ]
 }

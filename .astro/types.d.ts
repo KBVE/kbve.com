@@ -1454,6 +1454,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-15.md": {
+	id: "08-15.md";
+  slug: "08-15";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1914,16 +1921,51 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "tags": {
-"auth/auth-notes.md": {
-	id: "auth/auth-notes.md";
-  slug: "auth/auth-notes";
+"data/data.mdx": {
+	id: "data/data.mdx";
+  slug: "data/data";
   body: string;
   collection: "tags";
   data: InferEntrySchema<"tags">
-} & { render(): Render[".md"] };
-"auth/auth.mdx": {
-	id: "auth/auth.mdx";
-  slug: "auth";
+} & { render(): Render[".mdx"] };
+"host/host.mdx": {
+	id: "host/host.mdx";
+  slug: "host/host";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"mobile/mobile.mdx": {
+	id: "mobile/mobile.mdx";
+  slug: "mobile/mobile";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"os/os.mdx": {
+	id: "os/os.mdx";
+  slug: "os/os";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"sql/sql.mdx": {
+	id: "sql/sql.mdx";
+  slug: "sql/sql";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"technology/technology.mdx": {
+	id: "technology/technology.mdx";
+  slug: "technology/technology";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"vm/vm.mdx": {
+	id: "vm/vm.mdx";
+  slug: "vm/vm";
   body: string;
   collection: "tags";
   data: InferEntrySchema<"tags">
@@ -2217,8 +2259,6 @@ declare module 'astro:content' {
 
 	type DataEntryMap = {
 		"_bin": {
-};
-"compose": {
 };
 
 	};

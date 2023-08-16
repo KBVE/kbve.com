@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/MDX.astro
 title: DeadCode
 client: Self
 publishDate: 2022-10-02 00:00:00
@@ -11,9 +10,14 @@ tags:
   - theory
 ---
 
+import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
 import VideoComponent from "@c/Element/Video/Video.astro";
+
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+
 
 <Widget img={frontmatter.img} skeleton={false}>
 
@@ -41,3 +45,5 @@ We want to keep an archive of old / deprecated software scripts/libraries as a r
 </MDXJS>
 
 </Widget>
+
+</MDXLayer>

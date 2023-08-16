@@ -1,6 +1,5 @@
 ---
 id: 4
-layout: ../../layouts/theme/mdx.astro
 title: RareIcon
 client: Self
 category: API
@@ -16,6 +15,15 @@ tags:
 - design
 - service
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -67,3 +75,7 @@ These were active websites that were for sale on Flippa and can be seen as a way
 > It counts 99% organic traffic, has an established social media presence and comes complete with a loyal customer base. 
 
 ---
+
+</MDXJS>
+</Widget>
+</MDXLayer>

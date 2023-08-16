@@ -1,10 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-//<!--*     [FUN]
-    export async function getStaticPaths() {
-	const tags = await getCollection('tags', ({ data }) => {
-		return data.draft !== true || data.notes !== false
-	});
+
+export async function getStaticPaths() {
+	const tags = await getCollection('tags');
 	return tags.map((entry) => ({
 		params: {
 			id: entry.slug,
@@ -14,9 +12,9 @@ import { getCollection } from 'astro:content';
 		},
 	}));
 }
-//<!--*     [DATA]
 const { id } = Astro.params;
 const { entry } = Astro.props;
 const { Content, headings, injectedFrontmatter } = await entry.render();
 ---
 <Content />
+

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Ravi and the Beatles
 category: Music
 client: Self
@@ -13,6 +12,16 @@ tags:
   - music
   - history
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
 
 ## Information
 
@@ -32,3 +41,9 @@ Popular Beatles covers that you might enjoy!
 
 - The [Within You Without You: Cover in The Beatles' original style ビートルズ原曲スタイルでのカバー](https://www.youtube.com/watch?v=KOD5oRMf7GQ)
 - One of the best covers, it is the power of multi-cultural influence and soft power.
+
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

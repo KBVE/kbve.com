@@ -49,10 +49,10 @@ export default defineConfig({
 		//  React
 		react(),
 		//  Post-Build -> Compress
-		compress(),
+		//compress(),
 		//  Prefetch
 		prefetch({
-			throttle: 20,
+			throttle: 3,
 		}),
 		tailwind(),
 		alpinejs(),

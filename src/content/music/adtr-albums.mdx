@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: A Day To Remember 
 category: Music
 client: Self
@@ -20,6 +19,14 @@ media:
 
 import VideoComponent from "@c/Element/Video/Video.astro";
 export const components = { video: VideoComponent };
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## A Day To Remember - Homesick Deluxe Album
 
@@ -33,3 +40,7 @@ export const components = { video: VideoComponent };
   -
 
 ---
+
+</MDXJS>
+</Widget>
+</MDXLayer>

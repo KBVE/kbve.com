@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Unity
 category: Application
 client: Self
@@ -8,9 +7,18 @@ img: https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?fit=crop&w=140
 repo: https://github.com/traefik/traefik
 description: A 3D Game and App Engine to build cross platform software.
 tags:
-  - gaming
-  - engine
+  - technology
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
 
 ## Unity
 
@@ -528,3 +536,7 @@ This was another open source 2D repo that sparked my interest because it was bui
 
 [SpaceWalk Official Repo](https://github.com/Angel1841/Space-Walk)
 [FinalProject UnityW2022](https://github.com/DuncanBH/FinalPlatformerProject)
+
+</MDXJS>
+</Widget>
+</MDXLayer>

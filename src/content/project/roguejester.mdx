@@ -1,6 +1,5 @@
 ---
 id: 6
-layout: ../../layouts/theme/mdx.astro
 title: Rogue Jester
 client: Self
 publishDate: 2020-03-04 00:00:00
@@ -16,6 +15,14 @@ tags:
 ---
 
 import Details from '@w/Details.astro';
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -398,3 +405,7 @@ List of Assets and Plugins that we are using inside of the RJ Project.
 - Quick [Search](https://assetstore.unity.com/?category=3d%2Fcharacters%2Frobots&free=true&orderBy=1) on the Unity Assets page for FREE\* 3D Characters -> Robots
 
 ---
+
+</MDXJS>
+</Widget>
+</MDXLayer>

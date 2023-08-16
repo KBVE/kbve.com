@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Traefik
 category: Application
 client: Self
@@ -8,12 +7,20 @@ img: https://images.unsplash.com/photo-1524419986249-348e8fa6ad4a?fit=crop&w=140
 repo: https://github.com/traefik/traefik
 description: A cloud native application proxy that utilizes a modern HTTP reverse-proxy and load balancer.
 tags:
-- networking
-- lb
+- vm
+- host
+- technology
 ---
 
 import Github from "@w/Github.astro";
 export const components = { github: Github };
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 
 ## Traefik
@@ -179,3 +186,8 @@ Common environmental variable names and their purpose:
 - `CF_API_KEY` - The Cloudflare API key.
 - `CF_DNS_API_TOKEN` - The API token with `DNS:Edit` permission.
 - `CF_ZONE_API_TOKEN` - The API token with `Zone:Read` permission.
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

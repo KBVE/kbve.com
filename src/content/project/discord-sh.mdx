@@ -14,6 +14,15 @@ tags:
   - branding
 ---
 
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
 ## Information
 
 Discord.sh is our first KBVE service that aims to help build automated discord bots for private communities. 
@@ -76,3 +85,8 @@ Execution of the bot can be done in a python-only docker image or we could wrap 
 These will be the notes on the user interface and experience. 
 
 ---
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

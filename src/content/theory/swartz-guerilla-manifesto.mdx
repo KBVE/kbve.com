@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Guerilla Open Access Manifesto
 draft: true
 client: Self
@@ -11,6 +10,14 @@ tags:
 - research
 - theory
 ---
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Guerilla Open Access Manifesto
 
@@ -67,3 +74,7 @@ Will you join us?
 Aaron Swartz
 
 July 2008, Eremo, Italy
+
+</MDXJS>
+</Widget>
+</MDXLayer>

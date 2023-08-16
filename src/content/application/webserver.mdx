@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: WebServer
 category: Application
 client: Self
@@ -11,6 +10,16 @@ tags:
 - software
 - protocol
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
 ## WebServer
 
 ### Nginx
@@ -38,3 +47,8 @@ Finding the latest collection of certs for a domain.
 ## Robots.txt
 
 - The purpose of this file to help the webmaster(s) provide pathways for bots to navigate the domain and internal sub-domains.
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

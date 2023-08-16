@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: FinTech
 client: Self
 publishDate: 2020-03-02 00:00:00
@@ -10,6 +9,13 @@ tags:
   - tech
   - data
 ---
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ## Information
 
@@ -213,3 +219,7 @@ https://thedocs.worldbank.org/en/doc/11ea23266a1f65d9a08cbe0e9b072c89-0430012022
 # Art
 
 The artwork for the AZ will be made using a combination of Stable Diffusion with Artful Intelligence v1. We can start with breaking down the outline of all 26 letters, then expand their term to at least 3-5 sentences, which we will then feed into the machine to output a visual art piece for the respected letter. The style would be a mixture of classic 90s cartoons mixed with old school anime but we will test case out a couple and see where it goes from there.
+
+</MDXJS>
+</Widget>
+</MDXLayer>

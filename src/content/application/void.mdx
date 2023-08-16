@@ -16,6 +16,13 @@ import Details from "@w/Details.astro";
 import TabMenu from "@w/TabMenu.astro";
 import TabData from "@w/TabData.astro";
 import N from "@n/N.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 
 <TabMenu first="general" data={["cheatsheet", "system", "notes"]}>
@@ -108,3 +115,6 @@ No License information yet on the v0id system at the current time.
 
 </TabData>
 </TabMenu>
+</MDXJS>
+</Widget>
+</MDXLayer>

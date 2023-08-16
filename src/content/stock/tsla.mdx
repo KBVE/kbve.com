@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Stock.astro
 title: Tesla
 ticker: tsla
 dividend: false
@@ -17,6 +16,13 @@ tags:
 ---
 
 import Details from "@w/Details.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ## Information
 
@@ -46,3 +52,6 @@ These are the collection of notes for the TSLA MDX Document.
 Preparing the fintech information for $TSLA.
 
 </Details>
+</MDXJS>
+</Widget>
+</MDXLayer>

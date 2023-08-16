@@ -1,6 +1,5 @@
 ---
 id: 1
-layout: ../../layouts/theme/mdx.astro
 title: API
 client: Self
 frontpage: true
@@ -16,6 +15,14 @@ repo: kbve/api.kbve.com
 
 import Github from '@w/Github.astro';
 export const components = { github: Github };
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -122,3 +129,8 @@ The API is an unique construct that extends outside of the norm.
 
 We are currently manually referencing the project's via an ID system.
 I am not looking to spend too much time automating the ID system for the projects, as I want to keep some level of control on how we handle them.
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

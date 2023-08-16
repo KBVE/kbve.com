@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Android
 category: Application
 client: Self
@@ -10,10 +9,17 @@ description: Android is an open source operating system based off of Linux that 
 slug: "android"
 tags:
   - technology
-  - android
-  - debug
+  - os
   - mobile
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 import N from "@n/N.astro";
 import Details from "@w/Details.astro";
@@ -163,3 +169,7 @@ Just added the details mdx to the notes!
 <Details data="2023-04-15">
 Testing the tabs for Android MDX
 </Details>
+
+</MDXJS>
+</Widget>
+</MDXLayer>

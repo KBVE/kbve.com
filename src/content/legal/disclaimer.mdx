@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 url: https://kbve.com/legal/disclaimer/
 title: Disclaimer
 version: 1
@@ -12,6 +11,13 @@ tags:
   - legal
   - disclaimer
 ---
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 We are doing our best to prepare the content of this site. However, KBVE (and its associations and subsidiaries) cannot warranty the expressions
 and suggestions of the contents, as well as its accuracy. In addition, to
@@ -34,3 +40,7 @@ approved by KBVE. For these external sites, KBVE cannot be held liable for
 the availability of, or the content located on or through it. Plus, any
 losses or damages occurred from using these contents or the internet
 generally.
+
+</MDXJS>
+</Widget>
+</MDXLayer>
