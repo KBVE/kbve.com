@@ -5,12 +5,12 @@ import MDXJS from '@w/MDXJS.astro';
 
 {
 	graphs.map((graph) => (
-		<MDXJS transparent={true}>
+		<MDXJS transparent={false}>
 			<div>
 				<article class="">
-						<h2>{graph.frontmatter.title}</h2>
-						<p>{graph.frontmatter.description}</p>
-					
+					<h2>{graph.frontmatter.title}</h2>
+					<p>{graph.frontmatter.description}</p>
+
 					<graph.Content />
 				</article>
 			</div>
