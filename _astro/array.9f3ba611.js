@@ -1,1 +1,1 @@
-function t(t){return"object"==typeof t&&"length"in t?t:Array.from(t)}export{t as a};
+function t(r){return typeof r=="object"&&"length"in r?r:Array.from(r)}export{t as a};
