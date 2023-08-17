@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Account.astro
 title: Calendar
 description: KBVE Account Profile Page
 author: KBVE
@@ -12,12 +11,16 @@ tags:
 ---
 
 import Details from '@w/Details.astro';
-import Widget from "@w/Widget.astro";
+import Widget from '@w/Widget.astro';
 import MDXJS from '@w/MDXJS.astro';
 import Profile from '@w/Profile.astro';
+import MDXLayer from '@l/MDXLayer.astro';
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
 
 <Widget img={"https://images.unsplash.com/photo-1446071103084-c257b5f70672"}>
 
 <Profile />
 
 </Widget>
+</MDXLayer>

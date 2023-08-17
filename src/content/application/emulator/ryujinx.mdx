@@ -1,7 +1,7 @@
 ---
 title: RyuJinx
 description: This educational purpose only document is about the experimental software that was written in C#!
-slug: emulator/ryujinx
+slug: "emulator/ryujinx"
 category: Application
 client: Self
 publishDate: 2023-03-04 00:00:00
@@ -12,6 +12,15 @@ tags:
 - software
 - gaming
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -67,3 +76,7 @@ We do not have any notes yet on the Mac install for this time. I will have to sp
 ## Setup
 
 After installing the software, you will have to look into setting up the `RyuJinx` and for that we recommend using `RyuSAK`, which can be found [here at the RyuSAK repo](https://github.com/Ecks1337/RyuSAK/release).
+
+</MDXJS>
+</Widget>
+</MDXLayer>
