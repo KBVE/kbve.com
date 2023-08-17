@@ -17,6 +17,7 @@ import N from '@n/N.astro';
 import Widget from '@w/Widget.astro';
 import MDXJS from '@w/MDXJS.astro';
 import MDXLayer from '@l/MDXLayer.astro';
+import SDKGlob from "./_sdk/SDKGlob.astro";
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 
@@ -109,6 +110,9 @@ const errorHandler = (__errorMessage, statusCode = 418) => {
 ```
 
 </MDXJS>
+
+<SDKGlob />
+
 
 <MDXJS>
 
