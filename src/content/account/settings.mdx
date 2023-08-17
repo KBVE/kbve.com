@@ -10,15 +10,15 @@ tags:
   - user
 ---
 
-import Account from "@l/Account.astro";
-
+import MDXLayer from "@l/MDXLayer.astro";
 import Details from '@w/Details.astro';
 import Widget from "@w/Widget.astro";
 import MDXJS from '@w/MDXJS.astro';
 import Profile from '@w/Profile.astro';
 
 
-<Account>
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+
 
 <Widget img={"https://images.unsplash.com/photo-1446071103084-c257b5f70672"}>
 
@@ -26,4 +26,4 @@ import Profile from '@w/Profile.astro';
 
 </Widget>
 
-</Account>
+</MDXLayer>
