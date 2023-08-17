@@ -1,0 +1,19 @@
+---
+const services = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+
+{
+	services.map((service) => (
+		<MDXJS transparent={false}>
+			<div>
+				<article class="">
+					<h2>{service.frontmatter.title}</h2>
+					<p>{service.frontmatter.description}</p>
+
+					<service.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}
