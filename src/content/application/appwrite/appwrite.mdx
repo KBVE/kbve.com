@@ -1,0 +1,143 @@
+---
+title: AppWrite
+category: Application
+client: Self
+publishDate: 2023-04-12 00:00:00
+img: https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?fit=crop&w=1400&h=700&q=75
+repo:
+slug: appwrite
+description: Appwrite is an open-source backend server that provides developers with core APIs to build applications. It is self-hosted and can run on any operating system. Appwrite aims to simplify backend development for developers.
+tags:
+  - auth
+  - api
+  - backend
+---
+
+import N from '@n/N.astro';
+import Widget from '@w/Widget.astro';
+import MDXJS from '@w/MDXJS.astro';
+import MDXLayer from '@l/MDXLayer.astro';
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+
+<Widget img={frontmatter.img} skeleton={false}>
+
+<MDXJS>
+
+## Information
+
+Appwrite is a cutting-edge backend server that streamlines the development of modern apps.
+With its powerful APIs, intuitive tools, and sleek management console UI, Appwrite empowers developers to build their apps with speed and security.
+Say goodbye to the headaches of common, complex, and repetitive tasks - Appwrite has got you covered.
+Get ready to revolutionize your app development process with Appwrite!
+
+---
+
+<N ns="ads" template="mdx2" id="ezoic" />
+
+</MDXJS>
+
+<MDXJS>
+
+## Functions
+
+General documentation and information in reference to the cloud functions / open runtime for Appwrite.
+
+### Default Variables
+
+List of the common and default variables when deploying the cloud function, I am thinking of making them all inside of a `kbve.js` file, that we could then reference within our scripts.
+
+#### SDK
+
+```javascript
+const sdk = require('node-appwrite'); // Import outside of the module function.
+```
+
+Then to call it from inside the `module.exports`
+
+```javascript
+const client = new sdk.Client();
+
+let account = new sdk.Account(client);
+let avatars = new sdk.Avatars(client);
+let database = new sdk.Database(client);
+let functions = new sdk.Functions(client);
+let health = new sdk.Health(client);
+let locale = new sdk.Locale(client);
+let storage = new sdk.Storage(client);
+let teams = new sdk.Teams(client);
+let users = new sdk.Users(client);
+```
+
+The main `module.exports` is usually written like this
+
+```javascript
+module.exports = async function (req, res) {}; // Passing req and res
+```
+
+The `req` contains these three main objects:
+
+`req.headers` - An object with the request headers for the function.
+`req.payload` - An object with the payload, which is the main body data.
+`req.env` - An object with the environment data.
+
+The `res` can return two main objects:
+
+`res.send` - returns a `text` and `statusCode`.
+`res.json` - returns an `object` and `statusCode`.
+
+Example of parsing the `req.payload` check and `res.json` return.
+
+```javascript
+if (req.payload) {
+	try {
+		payload = JSON.parse(req.payload);
+	} catch (error) {
+		errorHandler('Corrupt payload for the function.');
+	}
+} else {
+	errorHandler('Missing payload for the function.');
+}
+```
+
+In this case our `errorHandler` function would be:
+
+```javascript
+const errorHandler = (__errorMessage, statusCode = 418) => {
+	res.json({ data: 'error', message: __errorMessage }, statusCode);
+};
+```
+
+</MDXJS>
+
+<MDXJS>
+
+## Notes
+
+These will be all the notes for AppWrite, as we migrate over to it.
+
+### Log
+
+- [ ] Add Guides for AppWrite
+- [ ] Add Videos for AppWrite
+
+#### Journal
+
+##### 2023-04-14
+
+Added email configuration to the appwrite server variables.
+
+##### 2023-04-12
+
+Starting the mdx sheet for AppWrite. I will try to include all the reference material here.
+
+### License
+
+#### Appwrite License
+
+Appwrite / appwrite is licensed under the BSD 3-Clause "New" or "Revised" License located here [license.md](https://github.com/appwrite/appwrite/blob/master/LICENSE)
+
+</MDXJS>
+
+</Widget>
+</MDXLayer>

@@ -1,6 +1,5 @@
 ---
 status: true
-layout: ../../layouts/theme/mdx.astro
 title: Dwarf Fortress
 description: Dwarfishington
 category: Gaming
@@ -13,6 +12,13 @@ tags:
 - simulation
 - legend
 ---
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ## DF
 
@@ -21,3 +27,8 @@ tags:
 ### Epic Shaco Backdrop for Twitch
 
 Author: [DefenselessBaby](https://www.reddit.com/r/shacomains/comments/zhntii/shaco_live_wallpaper_by_defencelessbaby_enjoy/)
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 url: https://kbve.com/legal/tos/
 title: Terms of Service
 version: 1
@@ -12,6 +11,15 @@ tags:
 - legal
 - tos
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## TOS
 
@@ -180,3 +188,7 @@ Contact Us
 If you have any questions about these Terms of Service, You can contact us:
 
 By visiting this page on our website, [Support at KBVE](https://kbve.com/support/)
+
+</MDXJS>
+</Widget>
+</MDXLayer>

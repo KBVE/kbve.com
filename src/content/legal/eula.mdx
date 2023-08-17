@@ -1,6 +1,5 @@
 ---
 url: https://kbve.com/legal/eula/
-layout: ../../layouts/theme/mdx.astro
 title: KBVE EULA
 version: 1
 status: true
@@ -12,6 +11,15 @@ tags:
 - legal
 - eula
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## EULA
 
@@ -182,3 +190,8 @@ You may be subject to additional terms and conditions that apply when You use or
 If you have any questions about this Agreement, You can contact Us:
 
 By visiting this page on our website: [Support & Contact Us](https://kbve.com/support/)
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

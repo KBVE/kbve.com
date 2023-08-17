@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: SolarPunk
 client: Self
 frontpage: true
@@ -14,8 +13,14 @@ tags:
   - gpt
 ---
 
-* * *
-* * *
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 # DRAFT / OUTLINE.
 
@@ -169,3 +174,6 @@ Solarpunk recognizes that natural resources like water, air, and soil are finite
 
 Solarpunk encourages people to spend time outdoors and connect with nature. This can include initiatives like creating urban green spaces, promoting outdoor recreation, and encouraging people to spend time in natural environments.
 
+</MDXJS>
+</Widget>
+</MDXLayer>

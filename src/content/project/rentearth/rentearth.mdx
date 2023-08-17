@@ -1,0 +1,61 @@
+---
+id: 14
+title: RentEarth.com - Atlas
+slug: rentearth
+client: Self
+category: API
+frontpage: true
+status: true
+publishDate: 2023-07-21 00:00:00
+author: KBVE
+bg_img: https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80
+img: https://images.unsplash.com/photo-1602089266537-57cb22e5235b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=689&q=80
+description: |
+  The Autonomous Business AI, designed by CRTV Digital, is a groundbreaking solution tailored to assist startups and entrepreneurs in navigating the complex landscape of business formation and growth.
+  Leveraging cutting-edge artificial intelligence technology, this system offers a comprehensive suite of services that include:
+repo: https://github.com/KBVE/cityvote-scrapper
+tags:
+  - design
+  - search
+  - concept
+---
+
+import MDXLayer from '@l/MDXLayer.astro';
+import Widget from '@w/Widget.astro';
+import MDXJS from '@w/MDXJS.astro';
+import GraphGlob from './_graph/glob.astro';
+import NotesGlob from './_notes/NotesGlob.astro';
+import MDXHero from '@w/MDXHero.astro';
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.bg_img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+
+## Information
+
+`[A]` - Autonomous
+
+`[T]` - Training
+
+`[L]` - Layered
+
+`[A]` - Agent
+
+`[S]` - System
+
+</MDXJS>
+
+
+<MDXJS> 
+
+<GraphGlob />
+
+</MDXJS>
+
+<NotesGlob />
+
+</Widget>
+</MDXLayer>

@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/theme/mdx.astro
-id: rua
-img: https://images.unsplash.com/photo-1534823983341-d4e6e4aa046c?fit=crop&w=1400&h=700&q=75
 title: Robot Unicorn Attack
 description: Original Robot Unicorn Attack
+id: rua
+img: https://images.unsplash.com/photo-1534823983341-d4e6e4aa046c?fit=crop&w=1400&h=700&q=75
 tags:
   - arcade
   - gaming
@@ -15,5 +14,16 @@ media:
 ---
 
 import AstroRuffle from '@w/AstroRuffle.astro';
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 <AstroRuffle swf={frontmatter.media.ruffle.swf} />
+
+</MDXJS>
+</Widget>
+</MDXLayer>

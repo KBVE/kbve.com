@@ -5,11 +5,7 @@ import Menu from '@l/Menu.astro';
 ///				[DATA]
 let title = "Not Found";
 let description = "Not Found";
-const { content } = Astro.props; ///	[Astro]		->	[Props]
-Astro.response.status = 404; /// [Astro]		->	[Response]	-> 404
-Astro.response.statusText = title; ///	[Astro]		->	[Response]	-> 'Not found'
 ///				[MIGRATE]
-import Robo404 from "@c/Element/Lottie/404/404.astro"; ///	[Lottie]	->	404 Animation
 ---
 
 <KBVE title={title} description={description}>
@@ -18,8 +14,5 @@ import Robo404 from "@c/Element/Lottie/404/404.astro"; ///	[Lottie]	->	404 Anima
   <br />
   <h1>Page Not Found</h1>
   <p>Not found</p>
-  <Robo404 />
   </Menu>
 </KBVE>
-
-

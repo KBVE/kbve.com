@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Social Media Toxicity
 client: Self
 publishDate: 2023-05-07 00:00:00
@@ -11,6 +10,15 @@ tags:
 - mental
 - health
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -53,4 +61,6 @@ Creation of politically-infused deepfake content that pushes the civil limits of
     It also creates a sense of pressure and competition to gain the most likes or more followers.
     That creates distorted realities and fakeness as people want to gain as many followers as possible.
 
-    
+</MDXJS>
+</Widget>
+</MDXLayer>

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Account.astro
 title: Register
 description: KBVE Account Register
 author: KBVE
@@ -18,7 +17,10 @@ import Details from '@w/Details.astro';
 import MDXJS from '@w/MDXJS.astro';
 import Register from '@w/Register.astro';
 import Widget from "@w/Widget.astro";
+import MDXLayer from "@l/MDXLayer.astro";
 
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
 
 <Widget img={frontmatter.bg_img}>
 
@@ -64,3 +66,4 @@ Here we go! Doing another round of the login page!
 ---
 
 </Widget>
+</MDXLayer>

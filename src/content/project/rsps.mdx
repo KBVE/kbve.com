@@ -1,6 +1,5 @@
 ---
 id: 7
-layout: ../../layouts/theme/mdx.astro
 title: RSPS
 client: Self
 frontpage: true
@@ -15,6 +14,14 @@ tags:
 
 import Details from "@w/Details.astro";
 import N from "@n/N.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 #### Disclaimer
 
@@ -214,3 +221,7 @@ Updating the RSPS MDX to include a bit more information.
 </Details>
 
 ### License
+
+</MDXJS>
+</Widget>
+</MDXLayer>

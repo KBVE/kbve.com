@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/theme/mdx.astro
 title: Healthcare
 client: Self
 draft: true
@@ -11,6 +10,14 @@ tags:
 - social
 - data
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ## Introduction
 
@@ -37,3 +44,7 @@ The Health Care Debate written by will be a slow series of battles rather than j
 [5] If it's going to cause cancer, heart complications, and obesity, then there better be a tax on that shit! With all that tax money going back strictly toward medical / health ideals. Tax on Soda, Tax on Fast Food, etc. Furthermore, there should be heavy fines/taxes on entities that release harmful chemicals into the environment, like coal plants && pollution fines up the ass. We should not have Exxon get away from dumping hazardous materials and then allowing shareholders to profit off of it.
 
 [6] Pharma reps should, at most, be allowed to give free samples for their drugs, but other than that, they should NOT be allowed to use any other monetary actions to gain/alter/manipulate/influence. No more free lunches! FDA needs a massive cleanse, it is filled with corruption and backdoor policies. 
+
+</MDXJS>
+</Widget>
+</MDXLayer>

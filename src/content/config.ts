@@ -3,24 +3,22 @@
 //*       [Zod]:{z} , {defineCollection} - scope and abstract typescript definitions.
 import { z, defineCollection } from 'astro:content';
 
-
-//?       {tags} - Tag collection
-//!       [WIP]
-const tags = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    version: z.number(),
-    draft: z.boolean(),
-    notes: z.boolean(),
-  }),
-})
-
 //?       {release} - Official release documentation for the website
 //!       [MIGRATION] - This is slated to be migrated out of the collection but kept inside until v2
 const releases = defineCollection({
   schema: z.object({
     title: z.string(),
     version: z.number(),
+  }),
+});
+
+
+//?       {t} - Collection of Tags, Topics and Tasks
+const tags = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    version: z.number().optional(),
   }),
 });
 
@@ -224,7 +222,6 @@ const theory = defineCollection({
 const recipe = defineCollection({
   schema: z.object({
     title: z.string(),
-    layout: z.string(),
     description: z.string(),
     tags: z.array(z.string()), 
     footnote: z.string().optional(),
@@ -393,6 +390,7 @@ export const collections = {
     //?       [KBVE]:[COLLECTION]
     releases: releases,
     legal: legal,
+    tags: tags,
     //?       [DOC]:[COLLECTION]
     application: application,
     gaming: gaming,
@@ -403,8 +401,6 @@ export const collections = {
     //?       [ASSET]:[COLLECTION]
     stock: stock,
     crypto: crypto,
-    //?       [TAGS]
-    tags: tags,
     //?       [PROFILE]:[COLLECTION]
     team: team,
     account: account,

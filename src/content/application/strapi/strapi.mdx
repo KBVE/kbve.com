@@ -1,0 +1,147 @@
+---
+title: Strapi
+description: 🚀 Strapi is the leading open-source headless CMS. It is 100% JavaScript, fully customizable and developer-first. This document will provide you with everything you need to install and maintain your Strapi instance.
+slug: strapi
+category: Application
+client: Self
+publishDate: 2023-04-10 03:35:00
+img: https://images.unsplash.com/photo-1622279488885-d831e8e76cef?fit=crop&w=1400&h=700&q=75
+repo: https://github.com/strapi/strapi
+tags:
+- api
+- cms
+- nodejs
+---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
+
+
+## Information
+
+Strapi, an open-source headless CMS written in NodeJS, is the ultimate solution for creating and managing your content in a modern and flexible way through an user-friendly admin panel.
+You can customize every aspect of your content model and logic, and choose from a variety of databases to store your data. 
+Furthermore, Strapi also supports both RESTful and GraphQL APIs, so you can easily connect your content to any front-end framework or platform you prefer.
+Whether you want to build a blog, a portfolio, an e-commerce platform, or anything else, Strapi can help you achieve your goals with ease and elegance while delivering your content faster and easier.
+This document is design to help provide an all-inclusive breakdown of Strapi from handling the database, installation, upgrades to scaling and custom plugins. We recommend going over the different setup(s), starting with running it locally and then see how you would like to run the application.
+
+* * *
+
+## Install
+
+> Before the installation process, we recommend setting up the [database](#database).
+
+We are currently running Node v18.x for Strapi 4.10.x but if you wish to run Strapi under Node v16.x then use Strapi version 4.0.x to 4.3.8. According to their documents, if you are planning to run the SQLite database, then you will also need to have python installed and configured. 
+
+The KBVE way of installing and operating Strapi would be with Docker via a Strapi image. However if you want to run it without any extra virtualization, then do it via locally. 
+
+### Local Install
+
+This is a simple way to run Strapi as a local installation! The command to get started is: 
+```shell
+yarn create strapi-app my-project --quickstart
+```
+After the creation process is done then head over to: `http://localhost:1337/admin` and create your first admin account. Afterwards you can mess around with the collections and get a better feel! Skip down to the `Collections` part of this documentation for more information.
+
+### Docker Install
+
+The KBVE way of getting Strapi up and running would be to run a docker-compose, which would pull our Strapi image, MariaDB/MySQL for the database and configure the networking / storage within your docker swarm. If you need help setting up docker and the docker swarm, then we suggest you head over to our [Docker application notes section](https://kbve.com/application/docker) for more information.
+
+## Update
+
+There are a couple ways of updating your Strapi instance, including using docker, yarn or manually. 
+
+* * *
+
+## Database
+
+Strapi supports various databases.
+
+### MySQL
+
+> Find additional information on [MySQL](https://kbve.com/application/mysql/)
+
+Below are the generic commands for setting up a `strapi` database. 
+
+- `CREATE DATABASE strapi;`
+- `CREATE USER 'strapi'@'localhost';`
+- `GRANT ALL PRIVILEGES ON strapi.* TO 'strapi'@'localhost';`
+- `ALTER USER 'strapi'@'localhost' IDENTIFIED WITH mysql_native_password BY 'strapi';`
+- `FLUSH PRIVILEGES;`
+- `EXIT;`
+
+#### What to do if you run into the `Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client` error?
+
+> In this scenario, you probably did what I did and altered the password with `ALTER USER 'strapi'@'localhost' IDENTIFIED BY 'strapi';` which is incorrect, insert `WITH mysql_native_password` in there and you should be good afterwards.
+
+* * *
+
+## Security
+
+### Captcha
+
+#### hCaptcha
+
+- In the .env include the secret_key , which you can obtain from hCaptcha via their settings for the account.
+- Note: HCAPTCHA=secret_key
+
+* * *
+
+## i18n
+
+- Ref [1](https://docs.strapi.io/developer-docs/latest/plugins/i18n.html)
+- Ref [2](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
+- 10/11/2022 - R&D within the i18n and utilizing it on the front-end.
+- Issue [#73](https://github.com/KBVE/kbve.com/issues/73)
+
+* * *
+
+## Functions
+
+### Login
+
+- The login for Strapi can be either a combination of `username + password` or `email + password`. Both `username` and `email` are passed through as an entity defined as `indentifier`. After the login action is sucessful, the API returns two variables:
+  - User:
+    - This is the `user` data that contains the following information:
+      - `username`
+      - `userid`
+      - `email`
+      - There are other fields of information that are customizable and the schema can be referenced in our `API`.
+  - JWT:
+    - The JWT (`jwt` or `token`) is an extremely important piece of data that contains the authentication for the user. We are currently reviewing how we should go about storing this token and utilizing it later down the line.
+
+### Register
+
+- For registration, we ask the user to submit a generic form that contains the following variables:
+  - Username
+    - If the `username` is taken, Strapi does return an error back as a response stating that the `username` was taken.
+  - Email
+    - If the `email` is taken and we disable `multi-account` on the Strapi backend, then it will return an error back as a response stating that the `email` was taken.
+  - Password
+    - Password is encrypted and stored as a hashed variable within the database.
+  - Security (as a Captcha via hCaptcha)
+    - After the user solves the captcha, an one-time code is generated, which is passed along as a `token`. If the captcha is wrong or missing, the Strapi returns an error.
+- We still need to take the errors that `Strapi` sends back , parse and then render them client side.
+
+## Notes
+
+### Log
+
+#### Journal
+
+##### 2023-04-10
+Updating the notes with a bit more information and organizing.
+
+##### 2023-03-20 
+Updating to 4.5v and then re-organizing the notes!
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

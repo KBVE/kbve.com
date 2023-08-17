@@ -1,6 +1,5 @@
 ---
 id: 12
-layout: ../../layouts/theme/mdx.astro
 title: VIP
 client: Self
 frontpage: true
@@ -13,6 +12,14 @@ tags:
   - branding
 repo: kbve/kbve.com
 ---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
 
 ## Information
 
@@ -28,3 +35,8 @@ Part of the VIP will include a monthly/yearly membership that they can buy via P
 ## Notes
 
 ### Logs
+
+
+</MDXJS>
+</Widget>
+</MDXLayer>

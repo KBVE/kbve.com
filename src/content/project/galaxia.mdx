@@ -18,6 +18,14 @@ tags:
 ---
 import Github from "@w/Github.astro";
 export const components = { github: Github };
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+<MDXJS>
+
 
 ## Information
 
@@ -67,3 +75,7 @@ export const components = { github: Github };
 ## Notes
 
 We migrated out of Galaxia and into Appwrite for the current time being, this was to save us time developing out our own personal API. While making our own API was an interesting adventure, the concept was not worth the amount of time to invest.
+
+</MDXJS>
+</Widget>
+</MDXLayer>

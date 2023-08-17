@@ -1,0 +1,20 @@
+---
+import MDXLayer from '@l/MDXLayer.astro';
+import Widget from '@w/Widget.astro';
+import MDXJS from '@w/MDXJS.astro';
+let title = 'KBVE Tags, Topics and Tasks';
+let description =
+	"The official KBVE Twitter Page! You can see each teammate's twitter timeline but KBVE does not have an official twitter account, so best to use h0lybyte as a reference.";
+let img =
+	'https://images.unsplash.com/photo-1613062975324-f95b97f29233?fit=crop&w=1400&h=700&q=75';
+---
+
+<MDXLayer title={title} description={description}>
+	<Widget img={img} skeleton={false}>
+		<MDXJS>
+			KBVE does not have an official twitter but check out our team's Twitter
+			feed below! We suggest to follow them all ;D
+
+		</MDXJS>
+	</Widget>
+</MDXLayer>

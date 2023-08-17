@@ -245,155 +245,155 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "application": {
-"android.mdx": {
-	id: "android.mdx";
+"android/android.mdx": {
+	id: "android/android.mdx";
   slug: "android";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"ansible.mdx": {
-	id: "ansible.mdx";
+"ansible/ansible.mdx": {
+	id: "ansible/ansible.mdx";
   slug: "ansible";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"appwrite.mdx": {
-	id: "appwrite.mdx";
+"appwrite/appwrite.mdx": {
+	id: "appwrite/appwrite.mdx";
   slug: "appwrite";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"authelia.mdx": {
-	id: "authelia.mdx";
+"authelia/authelia.mdx": {
+	id: "authelia/authelia.mdx";
   slug: "authelia";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"cubejs.mdx": {
-	id: "cubejs.mdx";
+"automation/automation.mdx": {
+	id: "automation/automation.mdx";
+  slug: "automation";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
+"automation/n8n.mdx": {
+	id: "automation/n8n.mdx";
+  slug: "automation/n8n";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
+"cubejs/cubejs.mdx": {
+	id: "cubejs/cubejs.mdx";
   slug: "cubejs";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"docker.mdx": {
-	id: "docker.mdx";
+"docker/docker.mdx": {
+	id: "docker/docker.mdx";
   slug: "docker";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"flipperzero.mdx": {
-	id: "flipperzero.mdx";
+"emulator/ryujinx.mdx": {
+	id: "emulator/ryujinx.mdx";
+  slug: "emulator/ryujinx";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
+"flipperzero/flipperzero.mdx": {
+	id: "flipperzero/flipperzero.mdx";
   slug: "flipperzero";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"flutter.mdx": {
-	id: "flutter.mdx";
+"flutter/flutter.mdx": {
+	id: "flutter/flutter.mdx";
   slug: "flutter";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"gcloud.mdx": {
-	id: "gcloud.mdx";
+"gcloud/gcloud.mdx": {
+	id: "gcloud/gcloud.mdx";
   slug: "gcloud";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"git.mdx": {
-	id: "git.mdx";
+"git/git.mdx": {
+	id: "git/git.mdx";
   slug: "git";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"godot.mdx": {
-	id: "godot.mdx";
+"godot/godot.mdx": {
+	id: "godot/godot.mdx";
   slug: "godot";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"javascript.mdx": {
-	id: "javascript.mdx";
+"javascript/javascript.mdx": {
+	id: "javascript/javascript.mdx";
   slug: "javascript";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"kubernetes.mdx": {
-	id: "kubernetes.mdx";
+"kubernetes/kubernetes.mdx": {
+	id: "kubernetes/kubernetes.mdx";
   slug: "kubernetes";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"longhorn.mdx": {
-	id: "longhorn.mdx";
+"longhorn/longhorn.mdx": {
+	id: "longhorn/longhorn.mdx";
   slug: "longhorn";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"lvm.mdx": {
-	id: "lvm.mdx";
+"lvm/lvm.mdx": {
+	id: "lvm/lvm.mdx";
   slug: "lvm";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"ml.mdx": {
-	id: "ml.mdx";
+"ml/ml.mdx": {
+	id: "ml/ml.mdx";
   slug: "ml";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"mysql.mdx": {
-	id: "mysql.mdx";
-  slug: "mysql";
-  body: string;
-  collection: "application";
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] };
-"n8n/n8n.mdx": {
-	id: "n8n/n8n.mdx";
-  slug: "n8n";
-  body: string;
-  collection: "application";
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] };
-"nftables.mdx": {
-	id: "nftables.mdx";
-  slug: "nftables";
-  body: string;
-  collection: "application";
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] };
-"nginx.mdx": {
-	id: "nginx.mdx";
+"nginx/nginx.mdx": {
+	id: "nginx/nginx.mdx";
   slug: "nginx";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"nmap.mdx": {
-	id: "nmap.mdx";
+"nmap/nmap.mdx": {
+	id: "nmap/nmap.mdx";
   slug: "nmap";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"nomad.mdx": {
-	id: "nomad.mdx";
+"nomad/nomad.mdx": {
+	id: "nomad/nomad.mdx";
   slug: "nomad";
   body: string;
   collection: "application";
@@ -406,15 +406,15 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"obsidian.mdx": {
-	id: "obsidian.mdx";
+"obsidian/obsidian.mdx": {
+	id: "obsidian/obsidian.mdx";
   slug: "obsidian";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"php.mdx": {
-	id: "php.mdx";
+"php/php.mdx": {
+	id: "php/php.mdx";
   slug: "php";
   body: string;
   collection: "application";
@@ -427,64 +427,64 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"portainer.mdx": {
-	id: "portainer.mdx";
+"portainer/portainer.mdx": {
+	id: "portainer/portainer.mdx";
   slug: "portainer";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"proxmox.mdx": {
-	id: "proxmox.mdx";
+"proxmox/proxmox.mdx": {
+	id: "proxmox/proxmox.mdx";
   slug: "proxmox";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"pterodactyl.mdx": {
-	id: "pterodactyl.mdx";
+"pterodactyl/pterodactyl.mdx": {
+	id: "pterodactyl/pterodactyl.mdx";
   slug: "pterodactyl";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"python.mdx": {
-	id: "python.mdx";
+"python/python.mdx": {
+	id: "python/python.mdx";
   slug: "python";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"rust.mdx": {
-	id: "rust.mdx";
+"rust/rust.mdx": {
+	id: "rust/rust.mdx";
   slug: "rust";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"rustdesk.mdx": {
-	id: "rustdesk.mdx";
+"rustdesk/rustdesk.mdx": {
+	id: "rustdesk/rustdesk.mdx";
   slug: "rustdesk";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"ryujinx.mdx": {
-	id: "ryujinx.mdx";
-  slug: "ryujinx";
+"sql/sql.mdx": {
+	id: "sql/sql.mdx";
+  slug: "sql";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"simba.mdx": {
-	id: "simba.mdx";
-  slug: "simba";
+"ssh/zsh.mdx": {
+	id: "ssh/zsh.mdx";
+  slug: "ssh/zsh";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"strapi.mdx": {
-	id: "strapi.mdx";
+"strapi/strapi.mdx": {
+	id: "strapi/strapi.mdx";
   slug: "strapi";
   body: string;
   collection: "application";
@@ -497,58 +497,44 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"terraform.mdx": {
-	id: "terraform.mdx";
+"terraform/terraform.mdx": {
+	id: "terraform/terraform.mdx";
   slug: "terraform";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"traefik.mdx": {
-	id: "traefik.mdx";
+"traefik/traefik.mdx": {
+	id: "traefik/traefik.mdx";
   slug: "traefik";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"unity.mdx": {
-	id: "unity.mdx";
+"unity/unity.mdx": {
+	id: "unity/unity.mdx";
   slug: "unity";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"void.mdx": {
-	id: "void.mdx";
+"void/void.mdx": {
+	id: "void/void.mdx";
   slug: "void";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"watchtower.mdx": {
-	id: "watchtower.mdx";
+"watchtower/watchtower.mdx": {
+	id: "watchtower/watchtower.mdx";
   slug: "watchtower";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"webserver.mdx": {
-	id: "webserver.mdx";
-  slug: "webserver";
-  body: string;
-  collection: "application";
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] };
-"wireguard.mdx": {
-	id: "wireguard.mdx";
+"wireguard/wireguard.mdx": {
+	id: "wireguard/wireguard.mdx";
   slug: "wireguard";
-  body: string;
-  collection: "application";
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] };
-"zsh.mdx": {
-	id: "zsh.mdx";
-  slug: "zsh";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
@@ -1447,6 +1433,27 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-14.md": {
+	id: "08-14.md";
+  slug: "08-14";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-15.md": {
+	id: "08-15.md";
+  slug: "08-15";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-16.md": {
+	id: "08-16.md";
+  slug: "08-16";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1559,6 +1566,13 @@ declare module 'astro:content' {
 "fintech/abc/index.mdx": {
 	id: "fintech/abc/index.mdx";
   slug: "fintech/abc";
+  body: string;
+  collection: "manga";
+  data: InferEntrySchema<"manga">
+} & { render(): Render[".mdx"] };
+"grown/index.mdx": {
+	id: "grown/index.mdx";
+  slug: "grown";
   body: string;
   collection: "manga";
   data: InferEntrySchema<"manga">
@@ -1729,6 +1743,13 @@ declare module 'astro:content' {
   collection: "project";
   data: any
 } & { render(): Render[".mdx"] };
+"rentearth/rentearth.mdx": {
+	id: "rentearth/rentearth.mdx";
+  slug: "rentearth";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
 "roguejester.mdx": {
 	id: "roguejester.mdx";
   slug: "roguejester";
@@ -1791,6 +1812,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "security": {
+"firewall/firewall.mdx": {
+	id: "firewall/firewall.mdx";
+  slug: "firewall";
+  body: string;
+  collection: "security";
+  data: InferEntrySchema<"security">
+} & { render(): Render[".mdx"] };
 "xss.mdx": {
 	id: "xss.mdx";
   slug: "xss";
@@ -1907,16 +1935,100 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "tags": {
-"auth/auth-notes.md": {
-	id: "auth/auth-notes.md";
-  slug: "auth/auth-notes";
+"blockchain/blockchain.mdx": {
+	id: "blockchain/blockchain.mdx";
+  slug: "blockchain/blockchain";
   body: string;
   collection: "tags";
   data: InferEntrySchema<"tags">
-} & { render(): Render[".md"] };
-"auth/auth.mdx": {
-	id: "auth/auth.mdx";
-  slug: "auth";
+} & { render(): Render[".mdx"] };
+"branding/branding.mdx": {
+	id: "branding/branding.mdx";
+  slug: "branding/branding";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"data/data.mdx": {
+	id: "data/data.mdx";
+  slug: "data/data";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"etf/etf.mdx": {
+	id: "etf/etf.mdx";
+  slug: "etf/etf";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"global/global.mdx": {
+	id: "global/global.mdx";
+  slug: "global/global";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"host/host.mdx": {
+	id: "host/host.mdx";
+  slug: "host/host";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"mobile/mobile.mdx": {
+	id: "mobile/mobile.mdx";
+  slug: "mobile/mobile";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"os/os.mdx": {
+	id: "os/os.mdx";
+  slug: "os/os";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"reit/reit.mdx": {
+	id: "reit/reit.mdx";
+  slug: "reit/reit";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"robotics/robotics.mdx": {
+	id: "robotics/robotics.mdx";
+  slug: "robotics/robotics";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"software/software.mdx": {
+	id: "software/software.mdx";
+  slug: "software/software";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"sql/sql.mdx": {
+	id: "sql/sql.mdx";
+  slug: "sql/sql";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"technology/technology.mdx": {
+	id: "technology/technology.mdx";
+  slug: "technology/technology";
+  body: string;
+  collection: "tags";
+  data: InferEntrySchema<"tags">
+} & { render(): Render[".mdx"] };
+"vm/vm.mdx": {
+	id: "vm/vm.mdx";
+  slug: "vm/vm";
   body: string;
   collection: "tags";
   data: InferEntrySchema<"tags">
@@ -2162,13 +2274,6 @@ declare module 'astro:content' {
   collection: "website";
   data: InferEntrySchema<"website">
 } & { render(): Render[".mdx"] };
-"discord/discord.mdx": {
-	id: "discord/discord.mdx";
-  slug: "discord";
-  body: string;
-  collection: "website";
-  data: InferEntrySchema<"website">
-} & { render(): Render[".mdx"] };
 "events/events.mdx": {
 	id: "events/events.mdx";
   slug: "events";
@@ -2210,8 +2315,6 @@ declare module 'astro:content' {
 
 	type DataEntryMap = {
 		"_bin": {
-};
-"compose": {
 };
 
 	};

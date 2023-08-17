@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Account.astro
 title: Login
 description: KBVE Account Login Page
 author: KBVE
@@ -16,6 +15,10 @@ import Details from '@w/Details.astro';
 import Widget from "@w/Widget.astro";
 import MDXJS from '@w/MDXJS.astro';
 import Login from "@w/Login.astro";
+import MDXLayer from "@l/MDXLayer.astro";
+
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
 
 
 <Widget img="https://images.unsplash.com/photo-1682687220208-22d7a2543e88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80" >
@@ -57,3 +60,5 @@ Here we go! Doing another round of the login page!
 </MDXJS>
 
 ---
+
+</MDXLayer>
