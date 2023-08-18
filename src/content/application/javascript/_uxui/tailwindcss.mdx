@@ -1,0 +1,48 @@
+---
+title: TailWindCSS
+description: TailWindCSS or Tailwind is a custom open source CSS framework written in Javascript that enables utility css classes.
+---
+
+### Tailwind
+
+
+##### TailWindCSS Install
+
+Since the core of TailWind is written in NodeJS, you can install it via `npm` || `yarn` || or any node package management software.
+
+##### TailWindCSS Config
+
+The default name for the configuration file is `tailwind.config.js` or `tailwind.config.cjs` and the default location is within the root of the project.
+
+##### TailWindCSS Animation
+
+Animation Utility provides animating elements, which can be extended and abstractly layered through Rive/Lottie.
+
+The default animations are:
+
+`animate-spin` : Which uses a keyFrames spin to transform / rotate the object, primary use case is for loading indictions.
+`animate-ping` : Uses transform to slowly scale out the element and create a radar / ripple effect upon the element, primary use case is for notifications.
+`animate-pulse` : Alter the opacity of the element, to create a fading in and out effect, primary use case is for skeleton loaders.
+`animate-bounce` : Transform the Y access of the element. primary use case is for aesthetics.
+`hover:$animation` : Conditional statement, where if the mouse is over the element, perform the animation.
+
+###### Spin-Slow
+
+This is a custom animation that you can add to TailWindCSS by extending the animations field within the configuration file.
+
+Scoped: `animation: { 'spin-slow': 'spin 5s linear infinite',  }`
+
+Proof of Concept:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	theme: {
+		extend: {
+			animation: {
+				'spin-slow': 'spin 5s linear infinite',
+			},
+		},
+	},
+};
+```

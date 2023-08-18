@@ -1,0 +1,18 @@
+---
+const reacts = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+{
+	reacts.map((note) => (
+		<MDXJS transparent={false}>
+			<div>
+				<article class="">
+					<h2>{note.frontmatter.title}</h2>
+					<p>{note.frontmatter.description}</p>
+
+					<note.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}
