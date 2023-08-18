@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-16.md",
+                "file": "journal/08-17.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-16.md",
+                "file": "journal/08-17.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-16.md",
+                "file": "journal/08-17.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-16.md"
+                "file": "journal/08-17.md"
               }
             }
           }
@@ -157,6 +157,8 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
+    "journal/08-16.md",
+    "journal/08-17.md",
     "project/rentearth/_graph/data-structure.mdx",
     "project/rentearth/_notes/llc-formation.mdx",
     "project/rentearth/_graph/legal-document-model.mdx",
@@ -167,11 +169,9 @@
     "project/rentearth/_notes/NotesGlob.astro",
     "project/rentearth/_notes/glob.astro",
     "project/rentearth/_notes",
-    "project/rentearth/_graph/support.mdx",
     "application/automation/_notes-n8n/n8n-supabase.md",
     "application/automation/_notes/n8n-supabase.md",
     "journal/08-15.md",
-    "journal/08-16.md",
     "journal/08-14.md",
     "journal/08-13.md",
     "theory/bizops/_graph/business-model.md",
