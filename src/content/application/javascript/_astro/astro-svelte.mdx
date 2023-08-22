@@ -1,0 +1,23 @@
+---
+title: Astro Svelte
+description: |
+    AstroJS is a modern front-end framework that allows you to build faster websites by delivering the least amount of JavaScript necessary, focusing on partial hydration. 
+    With Svelte integration, AstroJS enables developers to write components using the Svelte syntax, benefiting from Svelte's compile-time optimization. 
+    The combination allows for the creation of highly efficient, SEO-friendly websites while harnessing the simplicity and reactivity of Svelte components.
+---
+
+### Astro Svelte Render
+
+An example of calling or rendering Svelte objects inside of Astro with a slot:
+
+```html
+<object client:only="svelte">
+	<!-- Slot -->
+</object>
+```
+
+Without a slot:
+
+```js
+<object client:only="svelte" />
+```

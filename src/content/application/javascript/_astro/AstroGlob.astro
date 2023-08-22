@@ -1,0 +1,27 @@
+---
+const astros = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+<MDXJS>
+	<div id="astrojs" class="gradient-text text-lg">
+		AstroJS
+	</div>
+	<p>Astro is an island architecture style static website generator that enables fast, powerful and multi-framework site.</p>
+
+</MDXJS>
+
+
+{
+	astros.map((note) => (
+		<MDXJS transparent={false}>
+			<div>
+				<article class="">
+					<h2>{note.frontmatter.title}</h2>
+					<p>{note.frontmatter.description}</p>
+
+					<note.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}

@@ -280,13 +280,6 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"automation/n8n.mdx": {
-	id: "automation/n8n.mdx";
-  slug: "automation/n8n";
-  body: string;
-  collection: "application";
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] };
 "cubejs/cubejs.mdx": {
 	id: "cubejs/cubejs.mdx";
   slug: "cubejs";
@@ -374,6 +367,13 @@ declare module 'astro:content' {
 "ml/ml.mdx": {
 	id: "ml/ml.mdx";
   slug: "ml";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
+"n8n/n8n.mdx": {
+	id: "n8n/n8n.mdx";
+  slug: "n8n";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
@@ -1450,6 +1450,13 @@ declare module 'astro:content' {
 "08-16.md": {
 	id: "08-16.md";
   slug: "08-16";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-17.md": {
+	id: "08-17.md";
+  slug: "08-17";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
