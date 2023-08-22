@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-17.md",
+                "file": "journal/08-22.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-17.md",
+                "file": "journal/08-22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-17.md",
+                "file": "journal/08-22.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-17.md"
+                "file": "journal/08-22.md"
               }
             }
           }
@@ -157,8 +157,13 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
-    "journal/08-16.md",
+    "journal/08-21.md",
+    "journal/08-20.md",
+    "journal/08-22.md",
+    "journal/08-18.md",
     "journal/08-17.md",
+    "journal/08-19.md",
+    "journal/08-16.md",
     "project/rentearth/_graph/data-structure.mdx",
     "project/rentearth/_notes/llc-formation.mdx",
     "project/rentearth/_graph/legal-document-model.mdx",
@@ -187,11 +192,6 @@
     "journal/08-10.md",
     "journal/08-09.md",
     "application/n8n/_notes/n8n-supabase.md",
-    "application/n8n/_notes/supabase-cache.md",
-    "application/n8n/_examples/supabase-cache.md",
-    "journal/08-08.md",
-    "journal/08-07.md",
-    "application/obs/_notes/voicemeter.md",
-    "application/obs/notes/voicemeter.md"
+    "application/n8n/_notes/supabase-cache.md"
   ]
 }
