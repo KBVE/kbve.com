@@ -11,8 +11,12 @@
             "id": "1e65db65e2721f35",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "journal/08-23.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "journal/08-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "journal/08-23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "journal/08-23.md"
+              }
             }
           }
         ]
@@ -147,8 +155,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3afb4e43388f73a5",
+  "active": "1e65db65e2721f35",
   "lastOpenFiles": [
+    "journal/08-22.md",
+    "journal/08-23.md",
+    "stock/aapl/_charts",
     "application/appwrite/_sdk/appwrite-python.mdx",
     "stock/aapl/aapl.mdx",
     "application/docker/_core/CoreGlob.astro",
@@ -158,9 +169,6 @@
     "application/docker/_notes/NotesGlob.astro",
     "application/docker/_notes",
     "application/docker/_gui",
-    "stock/aapl",
-    "project/rentearth/_graph/market-research-model-agent.txt",
-    "journal/08-22.md",
     "journal/08-21.md",
     "journal/08-20.md",
     "journal/08-19.md",
