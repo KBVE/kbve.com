@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-22.md",
+                "file": "journal/08-23.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-22.md",
+                "file": "journal/08-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-22.md",
+                "file": "journal/08-23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-22.md"
+                "file": "journal/08-23.md"
               }
             }
           }
@@ -157,24 +157,30 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
+    "journal/08-22.md",
+    "journal/08-23.md",
+    "stock/aapl/_charts",
+    "application/appwrite/_sdk/appwrite-python.mdx",
+    "stock/aapl/aapl.mdx",
+    "application/docker/_core/CoreGlob.astro",
+    "application/docker/_core/NotesGlob.astro",
+    "application/docker/_core/dockerfile.mdx",
+    "application/docker/_core",
+    "application/docker/_notes/NotesGlob.astro",
+    "application/docker/_notes",
+    "application/docker/_gui",
     "journal/08-21.md",
     "journal/08-20.md",
-    "journal/08-22.md",
+    "journal/08-19.md",
     "journal/08-18.md",
     "journal/08-17.md",
-    "journal/08-19.md",
-    "journal/08-16.md",
-    "project/rentearth/_graph/data-structure.mdx",
-    "project/rentearth/_notes/llc-formation.mdx",
-    "project/rentearth/_graph/legal-document-model.mdx",
-    "project/rentearth/_graph/data-structure-model.mdx",
-    "project/rentearth/_graph/GraphGlob.astro",
-    "project/rentearth/_notes/atlas.mdx",
-    "project/rentearth/_notes/brainstorm.mdx",
-    "project/rentearth/_notes/NotesGlob.astro",
-    "project/rentearth/_notes/glob.astro",
-    "project/rentearth/_notes",
+    "application/n8n/_notes-n8n/trigger.md",
+    "application/n8n/_notes-n8n/plugins.md",
+    "application/n8n/_notes-n8n/n8n-supabase.md",
+    "application/n8n/_journal/j1.md",
+    "application/appwrite/_notes/appwrite_notes.md",
     "application/automation/_notes-n8n/n8n-supabase.md",
+    "journal/08-16.md",
     "application/automation/_notes/n8n-supabase.md",
     "journal/08-15.md",
     "journal/08-14.md",
@@ -186,12 +192,6 @@
     "application/pocketbase/_notes/pocketbase_notes.md",
     "application/pocketbase/_data/_backups/pocketbase_backups.md",
     "application/pocketbase/_data/_notes/pocketbase_notes.md",
-    "application/pocketbase/_data/pocketbase_notes.md",
-    "journal/08-12.md",
-    "journal/08-11.md",
-    "journal/08-10.md",
-    "journal/08-09.md",
-    "application/n8n/_notes/n8n-supabase.md",
-    "application/n8n/_notes/supabase-cache.md"
+    "application/pocketbase/_data/pocketbase_notes.md"
   ]
 }

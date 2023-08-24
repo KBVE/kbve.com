@@ -1461,6 +1461,48 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-18.md": {
+	id: "08-18.md";
+  slug: "08-18";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-19.md": {
+	id: "08-19.md";
+  slug: "08-19";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-20.md": {
+	id: "08-20.md";
+  slug: "08-20";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-21.md": {
+	id: "08-21.md";
+  slug: "08-21";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-22.md": {
+	id: "08-22.md";
+  slug: "08-22";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-23.md": {
+	id: "08-23.md";
+  slug: "08-23";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1835,8 +1877,8 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "stock": {
-"aapl.mdx": {
-	id: "aapl.mdx";
+"aapl/aapl.mdx": {
+	id: "aapl/aapl.mdx";
   slug: "aapl";
   body: string;
   collection: "stock";
