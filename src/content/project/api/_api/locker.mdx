@@ -1,0 +1,34 @@
+---
+title: Locker
+description: |
+    Client-side storage allows web applications to store data directly in a user's browser, offering speed and offline accessibility.
+    However, to ensure data integrity and security, locking mechanisms can be implemented, restricting unwanted or concurrent modifications.
+    Think of it as a personal vault in your browser, where the combination is known only to trusted sources
+---
+
+### Locker Information
+
+The locker will serve as a client-side storage for variables and data points that we do not need to `hit` the main server for!
+
+The current locker that we are using as of August 12th, 2023 is below, but if we need to extend it out further, we shall.
+
+
+### Locker Modal
+
+```typescript
+
+export type kbveLocker = {
+	username: string,
+  phone: string,
+  last: string,
+	uuid: string;
+	avatar: string;
+	github: string;
+	instagram: string;
+	email: string;
+	theme: "dark" | "light" | "auto";
+};
+
+```
+
+---
