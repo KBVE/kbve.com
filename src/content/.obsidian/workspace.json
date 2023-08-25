@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-23.md",
+                "file": "journal/08-24.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-23.md",
+                "file": "journal/08-24.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-23.md",
+                "file": "journal/08-24.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-23.md"
+                "file": "journal/08-24.md"
               }
             }
           }
@@ -157,18 +157,20 @@
   },
   "active": "1e65db65e2721f35",
   "lastOpenFiles": [
-    "journal/08-22.md",
+    "theory/bizops/_investment/funding.mdx",
+    "theory/bizops/_investment/InvestmentGlob.astro",
+    "theory/bizops/_investment/funding-mdx",
+    "theory/bizops/_investment",
+    "theory/bizops/_graph/initial-setup.mdx",
+    "theory/bizops/_graph/beta-setup.mdx",
+    "theory/bizops/_graph/beta-setup,mdx",
+    "theory/bizops/_graph/sigma-setup.mdx",
     "journal/08-23.md",
+    "journal/08-24.md",
+    "application/git/_github/GithubGlob.astro",
+    "application/git/_github",
+    "journal/08-22.md",
     "stock/aapl/_charts",
-    "application/appwrite/_sdk/appwrite-python.mdx",
-    "stock/aapl/aapl.mdx",
-    "application/docker/_core/CoreGlob.astro",
-    "application/docker/_core/NotesGlob.astro",
-    "application/docker/_core/dockerfile.mdx",
-    "application/docker/_core",
-    "application/docker/_notes/NotesGlob.astro",
-    "application/docker/_notes",
-    "application/docker/_gui",
     "journal/08-21.md",
     "journal/08-20.md",
     "journal/08-19.md",
@@ -190,8 +192,6 @@
     "application/pocketbase/_journal/j1.md",
     "application/pocketbase/_notes/pocketbase_docker.md",
     "application/pocketbase/_notes/pocketbase_notes.md",
-    "application/pocketbase/_data/_backups/pocketbase_backups.md",
-    "application/pocketbase/_data/_notes/pocketbase_notes.md",
-    "application/pocketbase/_data/pocketbase_notes.md"
+    "application/pocketbase/_data/_backups/pocketbase_backups.md"
   ]
 }

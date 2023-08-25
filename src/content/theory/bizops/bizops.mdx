@@ -12,23 +12,28 @@ img: https://images.unsplash.com/photo-1522071820081-009f0129c71c?fit=crop&w=140
 description: Business Operations notes created by h0lybyte and Ziggy9263.
 slug: bizops
 tags:
-- business
-- design
-- money
-- profit
-- real-estate
-- organization
-- opsec
+  - business
+  - design
+  - money
+  - profit
+  - real-estate
+  - organization
+  - opsec
 ---
 
-import MDXLayer from "@l/MDXLayer.astro";
-import Widget from "@w/Widget.astro";
-import MDXJS from "@w/MDXJS.astro";
-import NotesGlob from "./_notes/glob.astro";
+import MDXLayer from '@l/MDXLayer.astro';
+import Widget from '@w/Widget.astro';
+import MDXHero from '@w/MDXHero.astro';
+import MDXJS from '@w/MDXJS.astro';
+import NotesGlob from './_notes/glob.astro';
+import GraphGlob from './_graph/GraphGlob.astro';
+import InvestmentGlob from './_investment/InvestmentGlob.astro';
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
 
 <MDXJS>
 
@@ -42,119 +47,21 @@ This document will go over the basics on business operations, following this bas
 - The more nested the holding companies are, the better
 - The purpose for this is to remove liability and add extra steps just in case
 
-### Initital Setup
 
-```mermaid
-graph TD
+</MDXJS>
 
-A["Holding Company (LLC)"] --> B["Z90 Studios (LLC)"]
-B --> C["Arteematic.com (LLC)"]
-B --> D["Other Projects (Etc.)"]
-
-linkStyle default stroke:white
-```
-- Setup the holding company with the Wyoming Law Firm
-	- Search the terms Real Estate
-	- ("Digital Real Estate")
-
-### Timeline
-
-
----
+<MDXJS>
 
 ## Structure
 
 The way that you setup the company makes a difference when it comes to taxes, liability, ethics and several other factors.
 These are the two current structures that we alluded to during one of our meetings, but we can expand upon them and add more later down.
 
-### Beta Setup
-```mermaid
-graph 
-
-A["Holding Company (LLC)"] --> B["Investment Company (LLC)"]
-A --> C["Finance Co. (LLC)"]
-A --> D["Parent Co. (LLC)"]
-B --> E["VC Co. (LLC)"]
-E --> I["Z90 Studios (LLC)"]
-I --> J["Arteematic.com (LLC)"]
-I --> K["Other Projects (Etc.)"]
-```
-Name | Description
----- | ----
-Holding Company | To remove liability from me, anonymous based in Wyoming. Only owns shares in other companies.
-Investment Company | To shelter any risks the VC company could face by sponsoring, or etc.
-VC Co. | Actually owns shares in the companies that make the money.
-Finance Co. | Accountant & Law Firm for the Holding Company
-Parent Co. | Operating Company. These are the ones that handle operations within this structure.
-
-
----
-
-### Sigma Setup
-
-```mermaid
-graph 
-
-A["0. Holding Company"] --> B["1. Investment Company"]
-A --> C["1. Finance Co."]
-A --> D["1. Parent Co."]
-B --> E["2. Operating Co."]
-D --> EM["2. Holding Co. (2)"]
-EM --> RE["3. Real Estate (2)"]
-RE --> LE["4. Leasing Co. (2)"]
-E --> F["3. VC Co."]
-E --> G["3. Real Estate Co."]
-G --> H["4. Leasing Co."]
-F --> I["4. Z90 Studios"]
-I --> J["5. Arteematic.com"]
-I --> K["5. Other Projects"]
-```
-
-Name | Description
----- | ----
-Holding Company | To remove liability from me, anonymous based in Wyoming. Only owns shares in other companies.
-Investment Company | To shelter any risks the VC company could face by sponsoring, or etc.
-VC Co. | Actually owns shares in the companies that make the money.
-Finance Co. | Accountant & Law Firm for the Holding Company
-Parent Co. | Operating Company. These are the ones that handle operations within thin this structure.
-
-When you buy the property, the leasing co you have has no direct connection to the actual property owner.
-
----
-
-## Funding
-
-It takes money to make money! 
-Capital and access to credit/debt markets are two fundamental areas when it comes to company health, formation and its future.
-
-### VC
-
-Venture Capital is a common source for funding when dealing with startups.
-
-Here are a couple popular references to reach out once your MVP and strucutre is ready.
-
-- [AirTable of Seed VCs](https://airtable.com/shrkohpeE2AO2ldeq/tbl5Q8N7NuW22z5Bt?backgroundColor=cyan&viewControls=on)
-- [VCSheet](https://www.vcsheet.com/)
-
 </MDXJS>
 
-</Widget>
+<GraphGlob />
 
-<br />
-
----
-
-<br />
-
-<Widget img="https://images.unsplash.com/photo-1634176866089-b633f4aec882?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"  skeleton={false}>
-
-<MDXJS>
-
-## Automation Hackathon
-
-</MDXJS>
-
-
+<InvestmentGlob />
 
 </Widget>
 

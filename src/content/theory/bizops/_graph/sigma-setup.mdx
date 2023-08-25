@@ -1,0 +1,36 @@
+---
+title: Sigma Setup
+description: |
+    Sigma business operations setup
+---
+
+
+### Sigma Setup
+
+```mermaid
+graph 
+
+A["0. Holding Company"] --> B["1. Investment Company"]
+A --> C["1. Finance Co."]
+A --> D["1. Parent Co."]
+B --> E["2. Operating Co."]
+D --> EM["2. Holding Co. (2)"]
+EM --> RE["3. Real Estate (2)"]
+RE --> LE["4. Leasing Co. (2)"]
+E --> F["3. VC Co."]
+E --> G["3. Real Estate Co."]
+G --> H["4. Leasing Co."]
+F --> I["4. Z90 Studios"]
+I --> J["5. Arteematic.com"]
+I --> K["5. Other Projects"]
+```
+
+Name | Description
+---- | ----
+Holding Company | To remove liability from me, anonymous based in Wyoming. Only owns shares in other companies.
+Investment Company | To shelter any risks the VC company could face by sponsoring, or etc.
+VC Co. | Actually owns shares in the companies that make the money.
+Finance Co. | Accountant & Law Firm for the Holding Company
+Parent Co. | Operating Company. These are the ones that handle operations within thin this structure.
+
+When you buy the property, the leasing co you have has no direct connection to the actual property owner.
