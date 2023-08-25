@@ -1,0 +1,66 @@
+---
+title: Appwrite Python
+description: |
+    The Appwrite Python SDK allows Python developers to interact with Appwrite's API, facilitating tasks like user authentication, database operations, storage, and more. 
+    By using this SDK, Python developers can seamlessly integrate and manage Appwrite services in their applications, without delving into the complexities of direct API calls.
+---
+
+### Appwrite Python SDK
+
+Step aside traditional backends, the Appwrite Python SDK is in town, rolling out the red carpet for Pythonistas eager to elevate their web and mobile projects!
+This snazzy toolkit doesn't just connect Python applications to the Appwrite server; it's a golden ticket to a carnival of backend delights.
+From the tantalizing whirlwind of user authentication to the magic show of database operations and the high-flying trapeze of storage management, the SDK transforms mundane backend tasks into a spectacle.
+No more wrestling with manual API requests – just harness the SDK's sleek methods and watch as Appwrite's vast services dance harmoniously with your Python code.
+Whether you're orchestrating a symphony of user data or choreographing a ballet of notifications, the Appwrite Python SDK ensures every act is a showstopper or a stormtrooper muhahaha.
+
+#### Appwrite Python SDK Install
+
+Python wizards, gather 'round! Elevate your coding cauldron with a sprinkle of Appwrite magic by simply chanting `pip install appwrite`. 
+And just like that, your Python broomstick is turbocharged and ready to soar through the backend skies! 
+
+Calling the `appwrite` in python is really easy! Just add this below:
+
+```python
+
+from appwrite.client import Client
+
+client = Client()
+
+client = (client
+    .set_endpoint('https://ap.kbve.com/v1') # Your API Endpoint
+    .set_project('[PROJECT_ID]')                # Your project ID
+    .set_key('919c2db5d4...a2a3346ad2')          # Your secret API key
+)
+
+```
+
+And you will be good to go!
+
+##### Appwrite Python SDK Demo
+
+Here is a quick and easy demo for Appwrite python below!
+
+```python
+
+from appwrite.client import Client
+from appwrite.id import ID
+from appwrite.services.users import Users
+
+client = Client()
+
+client = (client
+    .set_endpoint('https://cloud.appwrite.io/v1') # Your API Endpoint
+    .set_project('[PROJECT_ID]')                # Your project ID
+    .set_key('919c2db5d4...a2a3346ad2')          # Your secret API key
+)
+
+users = Users(client)
+
+user = users.create(
+    user_id=ID.unique(),
+    email='email@example.com',
+    phone=None,
+    password='password'
+)
+
+```

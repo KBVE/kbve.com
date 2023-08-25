@@ -1,0 +1,48 @@
+---
+id: 1
+title: API
+client: Self
+frontpage: true
+publishDate: 2020-03-02 00:00:00
+img: https://images.unsplash.com/photo-1658874919865-35bb32505edc?fit=crop&w=1400&h=700&q=75
+description: KBVE API - Central API for KBVE Projects.
+slug: api
+tags:
+  - design
+  - dev
+  - branding
+repo: kbve/api.kbve.com
+---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import MDXHero from "@w/MDXHero.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+import APIGlob from "./_api/API.astro";
+import NotesGlob from "./_notes/Notes.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+
+
+## Information
+
+- Official documentation will be provided for the API, we are currently going to base the API off of Strapi / Appwrite.
+
+- This documentation will hold all the general reference points for the multi-tenet API, however we would need to expand upon the reference material and try to make it easier to onboard new developers.
+
+
+
+
+</MDXJS>
+
+<APIGlob />
+
+<NotesGlob />
+
+</Widget>
+</MDXLayer>

@@ -18,9 +18,18 @@ import BlockQuote from '@mdx/BlockQuote.astro';
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import MDXHero from "@w/MDXHero.astro";
+import AstroGlob from "./_astro/AstroGlob.astro";
+import UXUIGlob from "./_uxui/UXUIGlob.astro";
+import ReactGlob from "./_react/ReactGlob.astro";
+import MDXGlob from "./_mdx/MDXGlob.astro";
+
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
 <MDXJS>
 
 
@@ -103,58 +112,17 @@ They help to ensure that changes in one part of the system do not affect other p
 Behavioral Design Patterns, BDP, define the communication between objects and how they interact with each other.
 They help to ensure that objects work together in a coordinated manner.
 
-### UXUI
+</MDXJS>
 
-Collection of design libraries and frameworks for your javascript applications.
+<AstroGlob />
 
-#### MUI
+<UXUIGlob />
 
-Material UI, which is a library of UI components for Javascript applications that follows Googles design guidelines.
+<ReactGlob />
 
-#### TailWindCSS
+<MDXGlob />
 
-TailWindCSS or Tailwind is a custom open source CSS framework written in Javascript that enables utility css classes.
-
-##### TailWindCSS Install
-
-Since the core of TailWind is written in NodeJS, you can install it via `npm` || `yarn` || or any node package management software.
-
-##### TailWindCSS Config
-
-The default name for the configuration file is `tailwind.config.js` or `tailwind.config.cjs` and the default location is within the root of the project.
-
-##### TailWindCSS Animation
-
-Animation Utility provides animating elements, which can be extended and abstractly layered through Rive/Lottie.
-
-The default animations are:
-
-`animate-spin` : Which uses a keyFrames spin to transform / rotate the object, primary use case is for loading indictions.
-`animate-ping` : Uses transform to slowly scale out the element and create a radar / ripple effect upon the element, primary use case is for notifications.
-`animate-pulse` : Alter the opacity of the element, to create a fading in and out effect, primary use case is for skeleton loaders.
-`animate-bounce` : Transform the Y access of the element. primary use case is for aesthetics.
-`hover:$animation` : Conditional statement, where if the mouse is over the element, perform the animation.
-
-###### Spin-Slow
-
-This is a custom animation that you can add to TailWindCSS by extending the animations field within the configuration file.
-
-Scoped: `animation: { 'spin-slow': 'spin 5s linear infinite',  }`
-
-Proof of Concept:
-
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-	theme: {
-		extend: {
-			animation: {
-				'spin-slow': 'spin 5s linear infinite',
-			},
-		},
-	},
-};
-```
+<MDXJS>
 
 ---
 
@@ -273,87 +241,6 @@ This chart is from the official documentation.
 | --no-git     | Don’t initialize a git repository      |
 | --open       | Start & open in-browser after finish   |
 
----
-
-## AstroJS
-
-### Astro
-
-- Astro is an island architecture style static website generator that enables fast, powerful and multi-framework site.
-
-### Astro Svelte
-
-Svelte is an amazing way to create brilliant UX/UI that is extremely fast within the framework of Astro.
-
-More information on [Svelte](https://kbve.com/application/javascript/#svelte)
-
-#### Astro Svelte Render
-
-An example of calling or rendering Svelte objects inside of Astro with a slot:
-
-```html
-<object client:only="svelte">
-	<!-- Slot -->
-</object>
-```
-
-Without a slot:
-
-```html
-<object client:only="svelte" />
-```
-
-### Astro Libraries
-
-#### Astro MDX ToC
-
-There are a couple ways to build a Table of Contents, here is a solid reference to one from [KLD.dev](https://kld.dev/building-table-of-contents/).
-We were using a combination of remarkToc and rehypeToc but decided to use the built in one that AstroJs provides.
-
-#### Astro Icons
-
-> [!Deprecated]
->
-> This library is not an official Astro Plugin. It is a third party library that is not maintained by the Astro team.
-
-This library makes referencing sprites/SVGs very easy and simple within Astro.
-Example:
-
-```html
-<Icon name="mdi:account" />
-```
-
-`mdi` is a reference to Material Design Icons, can be swapped with any major pack, like `fa` for font awesome.
-`account` is a reference to the actual file within the pack.
-
-Official [Repo](https://github.com/natemoo-re/#readme)
-
-Install
-
-To Install Astro Icons library, reference below:
-
-Yarn:
-
-```shell
-yarn add astro-icon
-```
-
-NPM:
-
-```shell
-npm i astro-cion
-```
-
----
-
-<BlockQuote className="yugi"> Hello </BlockQuote>
-
-Find Icons through :
-
-[RareIcon.com](https://rareicon.com)
-[Iconify](https://iconify.design/)
-
----
 
 ## Tools
 
@@ -393,110 +280,6 @@ So we were looking for a cool animation library that would be smooth as butter
 
 - NodeJS is an open source javascript software built with the v8 runtime engine that allows the developer to build scalable back-end environments for their application.
 
-## React
-
-### React Three Fiber
-
-R3F aka React Three Fiber is a library that makes it easier to use Three.js with React and React Native. 
-
-### React Unity
-
-- The main library is located at [React Unity WebGL](https://github.com/jeffreylanters/react-unity-webgl)
-
-#### React Unity Install
-
-- Install via Package Manager
-
-  - ```shell
-        yarn add react-unity-webgl
-    ```
-
-  - For NPM:
-
-    ```shell
-        npm add react-unity-webgl
-    ```
-
-#### React Unity Component
-
-- The simple way to render the entity will be from below:
-
-  - ```javascript
-    import React from 'react';
-    import { Unity, useUnityContext } from 'react-unity-webgl';
-
-    function App() {
-    	const { unityProvider } = useUnityContext({
-    		loaderUrl: 'build/kbveapp.loader.js',
-    		dataUrl: 'build/kbveapp.data',
-    		frameworkUrl: 'build/kbveapp.framework.js',
-    		codeUrl: 'build/kbveapp.wasm',
-    	});
-
-    	return <Unity unityProvider={unityProvider} />;
-    }
-    ```
-
-- You can replace the variable of kbveapp with the app name of your finished webgl build.
-
-## Shiki
-
-Shiki is the default syntax highlighter that we are using at KBVE.com for our code snippets.
-
-### Shiki Install
-
-You can install shiki through common package managers.
-
-NPM || Node Package Manager:
-
-```shell
-
-npm i shiki
-```
-
-Yarn:
-
-```shell
-
-yarn add shiki
-```
-
-### Shiki Configurations
-
-Template themes for `Shiki`:
-
-```ts
-export type Theme =
-	| 'css-variables'
-	| 'dark-plus'
-	| 'dracula-soft'
-	| 'dracula'
-	| 'github-dark-dimmed'
-	| 'github-dark'
-	| 'github-light'
-	| 'hc_light'
-	| 'light-plus'
-	| 'material-darker'
-	| 'material-default'
-	| 'material-lighter'
-	| 'material-ocean'
-	| 'material-palenight'
-	| 'min-dark'
-	| 'min-light'
-	| 'monokai'
-	| 'nord'
-	| 'one-dark-pro'
-	| 'poimandres'
-	| 'rose-pine-dawn'
-	| 'rose-pine-moon'
-	| 'rose-pine'
-	| 'slack-dark'
-	| 'slack-ochin'
-	| 'solarized-dark'
-	| 'solarized-light'
-	| 'vitesse-dark'
-	| 'vitesse-light';
-```
 
 ## Svelte
 

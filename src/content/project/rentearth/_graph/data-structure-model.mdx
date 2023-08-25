@@ -1,0 +1,32 @@
+---
+title: Data Structure Model
+description: |
+    Data Structure Description Here
+---
+
+```mermaid
+erDiagram
+    REGION ||--o{ USER : references
+    USER {
+        uuid id
+        string email
+        string username
+        json personalAddress  
+        json businessAddress
+    }
+    REGION ||--|{ LINE-ITEM : contains
+    REGION {
+        string country
+        string state
+        ref user
+    }
+    MARKET-RESEARCH {
+        ref businessModel
+        ref user
+        ref region
+        string companyName
+        string companyDescription
+    }
+```
+
+### 

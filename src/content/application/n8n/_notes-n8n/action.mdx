@@ -1,0 +1,54 @@
+---
+title: Action
+description: Action Nodes, Triggers and Functions
+---
+
+### Action
+
+For the sake of clarity, let's consider any node that performs an action on a given service or platform as an "action plugin." The exact categorization might vary based on the way n8n continues to evolve.
+
+These nodes perform an operation like sending an email, adding a database record, or making an HTTP request.
+
+-  `CRUD Operations` : Most service-based nodes in n8n have Create, Read, Update, and Delete operations. For instance:
+   -  `Airtable` : Actions like "Append", "List", "Read", and "Update".
+   -  `MongoDB` : Operations like "Insert", "Find", "Update", and "Delete".
+
+- `Messaging Actions` : For nodes that allow sending messages or notifications.
+   - `Slack` : Send message, Invite user, etc.
+   - `Telegram` : Send message, Send photo, etc.
+
+- `File Manipulation Actions` : Nodes that allow file uploads, downloads, and manipulation.
+   - `FTP` : Upload, Download, Rename, etc.
+   - `Google Drive` : Create, Download, List, etc.
+
+- `Utility Actions` : Various utilities or actions that might not fit into typical CRUD operations.
+   - `HTTP Request` : Make a custom HTTP request.
+   - `Execute Command` : Run a custom shell command.
+   - `Spreadsheet File` : Read, Write operations on spreadsheets.
+
+- `Data Transformation & Manipulation` : Although not directly "actions" on other services, these nodes perform actions on the data within the workflow.
+   - `Set` : Set or overwrite values.
+   - `Move Binary Data` : Move binary data between properties.
+   - `Rename` : Rename keys.
+
+- `Flow Control Actions`:
+   - `SplitInBatches` : Splits items in batches for parallel processing.
+   - `Merge` : Merge multiple streams of data.
+   - `NoOp` : Do nothing (used for controlling flow or debugging).
+
+- `External Integrations`: Almost every integration with an external service will have specific actions unique to that service.
+   - `GitHub` : Create issue, Get repository, etc.
+   - `Twilio` : Send SMS, Make Call, etc.
+   - `Shopify` : Create product, List orders, etc.
+
+#### Action Examples
+
+-  `Slack - Send Message:`
+   - This action allows you to send a message to a specific Slack channel or user.
+   - Inputs might include the channel ID, message content, attachments, etc.
+
+- `HTTP Request:`
+   - Lets you make a custom HTTP request to any API. Inputs include the request method (GET, POST, PUT, etc.), URL, headers, query parameters, and body.
+
+- `Google Drive - Create:`
+   - Create or upload a new file to Google Drive. Inputs can be the file data, folder ID (if you're placing it in a specific folder), and other metadata.

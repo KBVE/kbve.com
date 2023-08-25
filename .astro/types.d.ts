@@ -280,13 +280,6 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
-"automation/n8n.mdx": {
-	id: "automation/n8n.mdx";
-  slug: "automation/n8n";
-  body: string;
-  collection: "application";
-  data: InferEntrySchema<"application">
-} & { render(): Render[".mdx"] };
 "cubejs/cubejs.mdx": {
 	id: "cubejs/cubejs.mdx";
   slug: "cubejs";
@@ -374,6 +367,13 @@ declare module 'astro:content' {
 "ml/ml.mdx": {
 	id: "ml/ml.mdx";
   slug: "ml";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
+"n8n/n8n.mdx": {
+	id: "n8n/n8n.mdx";
+  slug: "n8n";
   body: string;
   collection: "application";
   data: InferEntrySchema<"application">
@@ -1454,6 +1454,62 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-17.md": {
+	id: "08-17.md";
+  slug: "08-17";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-18.md": {
+	id: "08-18.md";
+  slug: "08-18";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-19.md": {
+	id: "08-19.md";
+  slug: "08-19";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-20.md": {
+	id: "08-20.md";
+  slug: "08-20";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-21.md": {
+	id: "08-21.md";
+  slug: "08-21";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-22.md": {
+	id: "08-22.md";
+  slug: "08-22";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-23.md": {
+	id: "08-23.md";
+  slug: "08-23";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-24.md": {
+	id: "08-24.md";
+  slug: "08-24";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1828,8 +1884,8 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "stock": {
-"aapl.mdx": {
-	id: "aapl.mdx";
+"aapl/aapl.mdx": {
+	id: "aapl/aapl.mdx";
   slug: "aapl";
   body: string;
   collection: "stock";

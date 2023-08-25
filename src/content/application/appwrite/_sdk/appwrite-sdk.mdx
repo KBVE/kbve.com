@@ -1,0 +1,30 @@
+---
+title: Appwrite SDK
+description: |
+    Dive into the future of backend development with the Appwrite SDK! 
+    This nifty toolkit is like a Swiss Army knife for developers, packing authentication, database ops, and real-time magic all under one sleek hood. 
+    So, Pythonistas and JavaScript jedis, forget those clunky server woes; let Appwrite's symphony of services turn your code into a backend ballet!
+---
+
+## SDK
+
+
+```javascript
+const sdk = require('node-appwrite'); 
+```
+
+Then to call it from inside the `module.exports` if you want to use it as a function.
+
+```javascript
+const client = new sdk.Client();
+
+let account = new sdk.Account(client);
+let avatars = new sdk.Avatars(client);
+let database = new sdk.Database(client);
+let functions = new sdk.Functions(client);
+let health = new sdk.Health(client);
+let locale = new sdk.Locale(client);
+let storage = new sdk.Storage(client);
+let teams = new sdk.Teams(client);
+let users = new sdk.Users(client);
+```
