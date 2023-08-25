@@ -1,0 +1,19 @@
+---
+const notes = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+
+{
+	notes.map((graph) => (
+		<MDXJS transparent={false}>
+			<div>
+				<article class="">
+					<h2>{graph.frontmatter.title}</h2>
+					<p>{graph.frontmatter.description}</p>
+
+					<graph.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}

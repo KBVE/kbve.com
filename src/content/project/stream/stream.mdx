@@ -6,6 +6,7 @@ frontpage: true
 publishDate: 2023-07-07 00:00:00
 img: https://images.unsplash.com/photo-1590840960672-db24958eef9a?fit=crop&w=1400&h=700&q=75
 description: KBVE Stream - Docs & Notes
+slug: stream
 tags:
   - twitch
   - stream
@@ -16,9 +17,15 @@ repo: kbve/kbve.com
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import MDXHero from "@w/MDXHero.astro";
+import NotesGlob from "./_notes/NotesGlob.astro";
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
+
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
 <MDXJS>
 
 ## Information
@@ -47,5 +54,8 @@ These are the general notes for the KBVE Strea.
 ---
 
 </MDXJS>
+
+<NotesGlob />
+
 </Widget>
 </MDXLayer>

@@ -1,0 +1,41 @@
+---
+title: API Install
+description: |
+    APIs are the connectors of the digital realm, enabling diverse applications to converse seamlessly.
+    Though pivotal, their installation can often seem daunting to many, thus in this guide we'll demystify the process, ensuring you can integrate an API with confidence.
+---
+
+import Github from '@w/Github.astro';
+
+### API Install Introduction
+
+In the dynamic world of software, where even a moment's downtime can make or break user trust, managing the API installation process is paramount. P
+resently, our journey starts at Proxmox, winds through qEMU, and culminates in Docker Swarm.
+From there, Portainer takes the baton to deploy the image.
+While most of our front-end instances proudly wear the labels of applications or static pages, there are those intriguing outliers - the edge cases where we might stumble upon SSR or hybrid applications.
+Let's dive deeper into this fascinating setup.
+
+
+The current API installation process needs to be migrated but it currently sits as this:
+
+- Proxmox -> qEMU -> Docker Swarm
+- Portainer -> Deploy Image
+
+With all front-end instances being either applications or static pages. 
+There might be a couple edge cases where we have SSR or hybrids applications.
+
+### v1
+
+For v1, we would like you to look into the [Appwrite documentation](/application/appwrite/)
+
+### v0
+
+The following information below is for installing the older API, which was just a MariaDB cluster with Strapi.
+
+- To help scale the API backend, we are also currently developing the backend cluster of both the API and the database that stores the information (MariaDB).
+  - Current Docker Compose for ve2
+    {' '}
+    <Github
+    	src="data/api/ve2/docker-compose.yml"
+    	description="This is the current docker compose for a ve2 that runs our API."
+    />
