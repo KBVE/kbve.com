@@ -487,36 +487,71 @@
                                     <div class="relative z-10 flex flex-col flex-auto h-full p-4 min-h-[200px]">
                                       
                                         
-                                        <div class="w-96 relative md:w-full p-4">
+                                        <div class="bg-[#1c033c]/[.54] flex">
+    <div class="container grid grid-cols-12 mx-auto">
+        <div class="bg-no-repeat bg-cover col-span-full lg:col-span-4" style="background-image:url(https://images.unsplash.com/photo-1658874919865-35bb32505edc?fit=crop&#38;w=1400&#38;h=700&#38;q=75)">
+        </div>
+        <div class="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
+            <div class="flex justify-start">
+                <div class="px-2 py-1 text-xs rounded-full ">
+                    <a rel="noopener noreferrer" href="/t/design" class="inline-block text-2xl font-semibold sm:text-3xl">
+                                <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+                                    #design
+                                </span>
+                            </a><a rel="noopener noreferrer" href="/t/dev" class="inline-block text-2xl font-semibold sm:text-3xl">
+                                <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+                                    #dev
+                                </span>
+                            </a><a rel="noopener noreferrer" href="/t/branding" class="inline-block text-2xl font-semibold sm:text-3xl">
+                                <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+                                    #branding
+                                </span>
+                            </a>
+                </div>
+            </div>
+            <h1 class="text-3xl font-semibold">API</h1>
+            <p class="flex-1 pt-2">
+                KBVE API - Central API for KBVE Projects.
+            </p>
+
+            <div class="flex items-center justify-between pt-2">
+                <div class="flex space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 ">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="self-center text-sm">by  Anon</span>
+                </div>
+                <span class="text-xs"> 3 min read</span>
+            </div>
+        </div>
+    </div>
+</div><div class="w-96 relative md:w-full p-4">
 	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
 		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
 			<h2 id="information">Information</h2><ul>
-<li>Official documentation will be provided for the API, we are currently going to base the API off of Strapi / Appwrite.</li>
-</ul><p>This documentation will hold all the general reference points for the multi-tenet API, however we would need to expand upon the reference material and try to make it easier to onboard new developers.</p><hr/><h2 id="install">Install</h2><p>The current API installation process needs to be migrated but it currently sits as this:</p><ul>
-<li>Proxmox -&gt; qEMU -&gt; Docker Swarm</li>
-<li>Portainer -&gt; Deploy Image</li>
-</ul><p>With all front-end instances being either applications or static pages.
-There might be a couple edge cases where we have SSR or hybrids applications.</p><h3 id="old">OLD</h3><p>The following information below is for installing the older API, which was just a MariaDB cluster with Strapi.</p><ul>
-<li>To help scale the API backend, we are also currently developing the backend cluster of both the API and the database that stores the information (MariaDB).
-<ul>
-<li>Current Docker Compose for ve2
- 
-<div class="pb1">
-  <div class="grow">
-    <script src="/embed/github/embed.js?target=https://github.com/kbve/kbve.com/blob/main/public/data/api/ve2/docker-compose.yml&#38;style=shades-of-purple&#38;showBorder=on&#38;showLineNumbers=on&#38;showFileMeta=on&#38;showCopy=on"></script>
-  </div>
-  <div class="tar">
-    <span class="f-d3 gradient-text">This is the current docker compose for a ve2 that runs our API.</span>
-  </div>
-</div>
+<li>
+<p>Official documentation will be provided for the API, we are currently going to base the API off of Strapi / Appwrite.</p>
+</li>
+<li>
+<p>This documentation will hold all the general reference points for the multi-tenet API, however we would need to expand upon the reference material and try to make it easier to onboard new developers.</p>
 </li>
 </ul>
-</li>
-</ul><hr/><h2 id="uptime">Uptime</h2><ul>
-<li><img src="https://api.checklyhq.com/v1/badges/checks/206925a6-0f7b-4669-a4fd-b61b3f5b70fc?style=for-the-badge&#38;theme=default&#38;responseTime=true" alt="API Uptime Badge"/></li>
-</ul><p>The current uptime badge is handled by ChecklyHQ, however we could build out our own uptime management software down the line.
-This would be an interesting test case for the NodePy, having it automatically do test cases every hour.
-I will make an issue ticket when I feel like it would be time to set this up.</p><hr/><h2 id="auth">Auth</h2><ul>
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>Authentication</h2>
+					<p>Imagine an exclusive movie premiere where only the A-listers get the golden ticket.
+In our digital eco-system, APIs host such premieres, and authentication is that golden ticket, a secret handshake ensuring only the worthy gain access.
+By presenting the right credentials, software parts whisper to each other in trusted tones, creating a blockbuster performance behind the scenes.
+</p>
+
+					<h3 id="auth">Auth</h3>
+<ul>
 <li>Auth Journal
 <ul>
 <li>For the core of the API, we will use JWT as the <code>key</code> in between the $User and $API.</li>
@@ -537,7 +572,79 @@ I will make an issue ticket when I feel like it would be time to set this up.</p
 </li>
 </ul>
 </li>
-</ul><hr/><h2 id="locker">Locker</h2><p>The locker will serve as a client-side storage for variables and data points that we do not need to <code>hit</code> the main server for!</p><p>The current locker that we are using as of August 12th, 2023 is below, but if we need to extend it out further, we shall.</p><pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+</ul>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>API Install</h2>
+					<p>APIs are the connectors of the digital realm, enabling diverse applications to converse seamlessly.
+Though pivotal, their installation can often seem daunting to many, thus in this guide we&#39;ll demystify the process, ensuring you can integrate an API with confidence.
+</p>
+
+					<h3 id="api-install-introduction">API Install Introduction</h3>
+<p>In the dynamic world of software, where even a moment’s downtime can make or break user trust, managing the API installation process is paramount. P
+resently, our journey starts at Proxmox, winds through qEMU, and culminates in Docker Swarm.
+From there, Portainer takes the baton to deploy the image.
+While most of our front-end instances proudly wear the labels of applications or static pages, there are those intriguing outliers - the edge cases where we might stumble upon SSR or hybrid applications.
+Let’s dive deeper into this fascinating setup.</p>
+<p>The current API installation process needs to be migrated but it currently sits as this:</p>
+<ul>
+<li>Proxmox -&gt; qEMU -&gt; Docker Swarm</li>
+<li>Portainer -&gt; Deploy Image</li>
+</ul>
+<p>With all front-end instances being either applications or static pages.
+There might be a couple edge cases where we have SSR or hybrids applications.</p>
+<h3 id="v1">v1</h3>
+<p>For v1, we would like you to look into the <a href="/application/appwrite/">Appwrite documentation</a></p>
+<h3 id="v0">v0</h3>
+<p>The following information below is for installing the older API, which was just a MariaDB cluster with Strapi.</p>
+<ul>
+<li>To help scale the API backend, we are also currently developing the backend cluster of both the API and the database that stores the information (MariaDB).
+<ul>
+<li>Current Docker Compose for ve2
+ 
+<div class="pb1">
+  <div class="grow">
+    <script src="/embed/github/embed.js?target=https://github.com/kbve/kbve.com/blob/main/public/data/api/ve2/docker-compose.yml&#38;style=shades-of-purple&#38;showBorder=on&#38;showLineNumbers=on&#38;showFileMeta=on&#38;showCopy=on"></script>
+  </div>
+  <div class="tar">
+    <span class="f-d3 gradient-text">This is the current docker compose for a ve2 that runs our API.</span>
+  </div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>Locker</h2>
+					<p>Client-side storage allows web applications to store data directly in a user&#39;s browser, offering speed and offline accessibility.
+However, to ensure data integrity and security, locking mechanisms can be implemented, restricting unwanted or concurrent modifications.
+Think of it as a personal vault in your browser, where the combination is known only to trusted sources
+</p>
+
+					<h3 id="locker-information">Locker Information</h3>
+<p>The locker will serve as a client-side storage for variables and data points that we do not need to <code>hit</code> the main server for!</p>
+<p>The current locker that we are using as of August 12th, 2023 is below, but if we need to extend it out further, we shall.</p>
+<h3 id="locker-modal">Locker Modal</h3>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
 <span class="line"><span style="color:#FF79C6">export</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">type</span><span style="color:#F8F8F2"> </span><span style="color:#8BE9FD;font-style:italic">kbveLocker</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">	username</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> </span><span style="color:#8BE9FD;font-style:italic">string</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  phone</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> </span><span style="color:#8BE9FD;font-style:italic">string</span><span style="color:#F8F8F2">,</span></span>
@@ -549,7 +656,70 @@ I will make an issue ticket when I feel like it would be time to set this up.</p
 <span class="line"><span style="color:#F8F8F2">	email</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> </span><span style="color:#8BE9FD;font-style:italic">string</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">	theme</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> </span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">dark</span><span style="color:#E9F284">&quot;</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">|</span><span style="color:#F8F8F2"> </span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">light</span><span style="color:#E9F284">&quot;</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">|</span><span style="color:#F8F8F2"> </span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">auto</span><span style="color:#E9F284">&quot;</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
-<span class="line"></span></code></pre><hr/><h3 id="goal">Goal</h3><p>The API is an unique construct that extends outside of the norm.</p><hr/><h3 id="ref">REF</h3><ul>
+<span class="line"></span></code></pre>
+<hr/>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>Uptime</h2>
+					<p>Uptime is the heartbeat of any API, indicating its reliability and performance in real-time. 
+Ensuring consistent availability is crucial, as even minor downtimes can impact user experience and trust.
+Diving deep into the world of API uptime, this documentation equips you with the tools to vigilantly monitor and enhance your service&#39;s responsiveness.
+</p>
+
+					<h3 id="uptime-notes">Uptime Notes</h3>
+<ul>
+<li><img src="https://api.checklyhq.com/v1/badges/checks/206925a6-0f7b-4669-a4fd-b61b3f5b70fc?style=for-the-badge&#38;theme=default&#38;responseTime=true" alt="API Uptime Badge"/></li>
+</ul>
+<p>The current uptime badge is handled by ChecklyHQ, however we could build out our own uptime management software down the line.
+This would be an interesting test case for the NodePy, having it automatically do test cases every hour.
+I will make an issue ticket when I feel like it would be time to set this up.</p>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>Goal</h2>
+					<p>In the vast cosmos of software, APIs are the Jedi Masters, bridging the divide between different software galaxies.
+Like the Force in Star Wars, they bind and intertwine disparate systems, ensuring harmony in the digital universe.
+By sculpting robust and intuitive APIs, we&#39;re not just coding; we&#39;re forging lightsabers for the next generation of developers, ensuring the saga continues seamlessly.
+</p>
+
+					<p>The API is an unique construct that extends outside of the normal universe, the net that holds the sky.</p>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>REF</h2>
+					<p>API documentation stands as a beacon, guiding lost sailors through the vast digital sea.
+References and footnotes are the unsung heroes of this narrative, adding depth, clarity, and precision to the story. 
+They not only ensure the accuracy of information but weave a tapestry of interconnected knowledge, allowing readers to delve deeper with a mere click. 
+Dive in, and let these footnotes light your path through the labyrinthine world of APIs.
+</p>
+
+					<h3 id="references">References</h3>
+<ul>
 <li>[1] - <a href="https://kbve.com/project/api/" target="_blank" rel="nofollow noopener noreferrer">API</a></li>
 <li>[2] - <a href="https://kbve.com/project/ar/" target="_blank" rel="nofollow noopener noreferrer">AR</a></li>
 <li>[3] - <a href="https://kbve.com/project/galaxia/" target="_blank" rel="nofollow noopener noreferrer">Galaxia</a></li>
@@ -564,8 +734,12 @@ I will make an issue ticket when I feel like it would be time to set this up.</p
 <li>[12] - <a href="https://kbve.com/project/vip" target="_blank" rel="nofollow noopener noreferrer">VIP</a></li>
 <li>[13] - <a href="https://kbve.com/project/herbmail/" target="_blank" rel="nofollow noopener noreferrer">HerbMail</a></li>
 <li>[14] - <a href="https://kbve.com/project/" target="_blank" rel="nofollow noopener noreferrer">RentEarth</a></li>
-</ul><p>We are currently manually referencing the project’s via an ID system.
+</ul>
+<p>We are currently manually referencing the project’s via an ID system.
 I am not looking to spend too much time automating the ID system for the projects, as I want to keep some level of control on how we handle them.</p>
+				</article>
+			</div>
+		
 		</div>
 	</div>
 </div>

@@ -487,13 +487,51 @@
                                     <div class="relative z-10 flex flex-col flex-auto h-full p-4 min-h-[200px]">
                                       
                                         
-                                        <div class="w-96 relative md:w-full p-4">
+                                        <div class="bg-[#1c033c]/[.54] flex">
+    <div class="container grid grid-cols-12 mx-auto">
+        <div class="bg-no-repeat bg-cover col-span-full lg:col-span-4" style="background-image:url(https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?fit=crop&#38;w=1400&#38;h=700&#38;q=75)">
+        </div>
+        <div class="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
+            <div class="flex justify-start">
+                <div class="px-2 py-1 text-xs rounded-full ">
+                    <a rel="noopener noreferrer" href="/t/auth" class="inline-block text-2xl font-semibold sm:text-3xl">
+                                <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+                                    #auth
+                                </span>
+                            </a><a rel="noopener noreferrer" href="/t/api" class="inline-block text-2xl font-semibold sm:text-3xl">
+                                <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+                                    #api
+                                </span>
+                            </a><a rel="noopener noreferrer" href="/t/backend" class="inline-block text-2xl font-semibold sm:text-3xl">
+                                <span class="p-2 m-1 text-xs rounded-full bg-orange-500">
+                                    #backend
+                                </span>
+                            </a>
+                </div>
+            </div>
+            <h1 class="text-3xl font-semibold">AppWrite</h1>
+            <p class="flex-1 pt-2">
+                Appwrite is an open-source backend server that provides developers with core APIs to build applications. It is self-hosted and can run on any operating system. Appwrite aims to simplify backend development for developers.
+            </p>
+
+            <div class="flex items-center justify-between pt-2">
+                <div class="flex space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 ">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="self-center text-sm">by  Anon</span>
+                </div>
+                <span class="text-xs"> 3 min read</span>
+            </div>
+        </div>
+    </div>
+</div><div class="w-96 relative md:w-full p-4">
 	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
 		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
 			<h2 id="information">Information</h2><p>Appwrite is a cutting-edge backend server that streamlines the development of modern apps.
 With its powerful APIs, intuitive tools, and sleek management console UI, Appwrite empowers developers to build their apps with speed and security.
 Say goodbye to the headaches of common, complex, and repetitive tasks - Appwrite has got you covered.
-Get ready to revolutionize your app development process with Appwrite!</p><hr/>
+Get ready to revolutionize your app development process with Appwrite!</p>
 
 
 
@@ -523,7 +561,210 @@ Get ready to revolutionize your app development process with Appwrite!</p><hr/>
 </div><div class="w-96 relative md:w-full p-4">
 	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
 		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
-			<h2 id="functions">Functions</h2><p>General documentation and information in reference to the cloud functions / open runtime for Appwrite.</p><h3 id="default-variables">Default Variables</h3><p>List of the common and default variables when deploying the cloud function, I am thinking of making them all inside of a <code>kbve.js</code> file, that we could then reference within our scripts.</p><h4 id="sdk">SDK</h4><pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> sdk </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#50FA7B">require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">node-appwrite</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">); </span><span style="color:#6272A4">// Import outside of the module function.</span></span></code></pre><p>Then to call it from inside the <code>module.exports</code></p><pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> client </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Client</span><span style="color:#F8F8F2">();</span></span>
+			
+			<div>
+				<article class="">
+					<h2>Appwrite Functions</h2>
+					<p>Appwrite Function Documentation</p>
+
+					<h2 id="functions">Functions</h2>
+<p>We split the functions into three different areas:</p>
+<ol>
+<li><code>Init</code> - Which initializes the serverless function, handling the installs if using different libaries, ect…</li>
+<li><code>Core</code> - These are the notes for the core serverless function.</li>
+<li><code>Extra</code> - Additional notes and information regarding the expansion of a serverless function.</li>
+</ol>
+<h3 id="init">Init</h3>
+<p>Hello there, fellow developers! 🚀</p>
+<p>Today, we’re diving deep into the world of cloud functions with a special focus on Appwrite - a wonderful platform that allows you to build secure web and mobile applications faster.</p>
+<h4 id="what-is-a-cloud-function">What is a Cloud Function?</h4>
+<p>At its core, a cloud function is a piece of code that runs in response to an event.
+You don’t need to manage the infrastructure; the cloud provider does that for you.
+Think of it as “Function as a Service” (FaaS).
+Cloud functions are a key part of the serverless architecture, allowing developers to focus on writing code without worrying about the underlying infrastructure.</p>
+<h4 id="initializing-your-appwrite-cloud-function">Initializing Your Appwrite Cloud Function</h4>
+<ol>
+<li>
+<p><code>Function Creation</code> :</p>
+<ul>
+<li>Head over to your Appwrite Console, navigate to the Functions section, and click on <code>Add Function</code>.</li>
+<li>Give your function a name and choose a runtime (e.g., Node.js, Python, Deno, etc.).</li>
+</ul>
+</li>
+<li>
+<p><code>Code Your Function</code> :</p>
+<ul>
+<li>Reference Core for the basics.</li>
+<li>Here is a basic / starter.</li>
+</ul>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#8BE9FD;font-style:italic">module</span><span style="color:#F8F8F2">.</span><span style="color:#8BE9FD;font-style:italic">exports</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">async</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">req</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">res</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=&gt;</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> payload </span><span style="color:#FF79C6">=</span></span>
+<span class="line"><span style="color:#F8F8F2">    req.payload </span><span style="color:#FF79C6">||</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">No payload provided. Add custom data when executing function.</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> secretKey </span><span style="color:#FF79C6">=</span></span>
+<span class="line"><span style="color:#F8F8F2">    req.variables.</span><span style="color:#BD93F9">SECRET_KEY</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">||</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">SECRET_KEY variable not found. You can set it in Function settings.</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> randomNumber </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> trigger </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> req.variables.</span><span style="color:#BD93F9">APPWRITE_FUNCTION_TRIGGER</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">res.</span><span style="color:#50FA7B">json</span><span style="color:#F8F8F2">({</span></span>
+<span class="line"><span style="color:#F8F8F2">    message</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">Hello from Appwrite!</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">    payload,</span></span>
+<span class="line"><span style="color:#F8F8F2">    secretKey,</span></span>
+<span class="line"><span style="color:#F8F8F2">    randomNumber,</span></span>
+<span class="line"><span style="color:#F8F8F2">    trigger,</span></span>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
+</li>
+<li>
+<p><code>Packaging</code> :</p>
+<ul>
+<li>Cloud functions in Appwrite run inside Docker containers, so your function and any dependencies need to be packed into a tarball. For Node.js:
+<code>tar -czf code.tar.gz --exclude code.tar.gz .</code></li>
+</ul>
+</li>
+<li>
+<p><code>Deployment</code> :</p>
+<ul>
+<li>Upload Your Code: Back in the Appwrite Console, under your function, click on the Deploy Tag button.</li>
+<li>Upload the code.tar.gz file.</li>
+<li>Set Your Triggers! Functions can respond to various events, like user registration or document creation. Select the triggers relevant to your use case.</li>
+<li>Execute! With everything set, hit the Execute button. Your function will run, and you can see the logs in real-time.</li>
+</ul>
+</li>
+</ol>
+<p>Yay! Congratulations, you’ve just deployed your first Appwrite Cloud Function! 🎉
+The power of serverless lies in its simplicity and scalability.
+As your application grows, you can continue adding more functions without the hassle of managing servers or infrastructure.</p>
+<p>I hope this introduction helps kickstart your journey with Appwrite Cloud Functions.
+Stay tuned for more in-depth tutorials, and happy coding! 🚀</p>
+<h3 id="core">Core</h3>
+<p>General documentation and information in reference to the cloud functions / open runtime for Appwrite.</p>
+<p>Remember to import the SDK outside of the module function.</p>
+<p>The main <code>module.exports</code> is usually written like this</p>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#8BE9FD;font-style:italic">module</span><span style="color:#F8F8F2">.</span><span style="color:#8BE9FD;font-style:italic">exports</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">async</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">function</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">req</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">res</span><span style="color:#F8F8F2">) {}; </span><span style="color:#6272A4">// Passing req and res</span></span></code></pre>
+<p>The <code>req</code> contains these three main objects:</p>
+<p><code>req.headers</code> - An object with the request headers for the function.
+<code>req.payload</code> - An object with the payload, which is the main body data.
+<code>req.env</code> - An object with the environment data.</p>
+<p>The <code>res</code> can return two main objects:</p>
+<p><code>res.send</code> - returns a <code>text</code> and <code>statusCode</code>.
+<code>res.json</code> - returns an <code>object</code> and <code>statusCode</code>.</p>
+<p>Example of parsing the <code>req.payload</code> check and <code>res.json</code> return.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">if</span><span style="color:#F8F8F2"> (req.payload) {</span></span>
+<span class="line"><span style="color:#F8F8F2">	</span><span style="color:#FF79C6">try</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">		payload </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#BD93F9">JSON</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">parse</span><span style="color:#F8F8F2">(req.payload);</span></span>
+<span class="line"><span style="color:#F8F8F2">	} </span><span style="color:#FF79C6">catch</span><span style="color:#F8F8F2"> (error) {</span></span>
+<span class="line"><span style="color:#F8F8F2">		</span><span style="color:#50FA7B">errorHandler</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">Corrupt payload for the function.</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F8F8F2">	}</span></span>
+<span class="line"><span style="color:#F8F8F2">} </span><span style="color:#FF79C6">else</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">	</span><span style="color:#50FA7B">errorHandler</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">Missing payload for the function.</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<p>In this case our <code>errorHandler</code> function would be:</p>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> </span><span style="color:#50FA7B">errorHandler</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">__errorMessage</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">statusCode</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#BD93F9">418</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=&gt;</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">	res.</span><span style="color:#50FA7B">json</span><span style="color:#F8F8F2">({ data</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">error</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">, message</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> __errorMessage }, statusCode);</span></span>
+<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<h3 id="extra">Extra</h3>
+<p>In the context of Appwrite Cloud Functions, “extra libraries” refer to external dependencies or packages that your function might need to execute correctly.
+Due to the isolated nature of cloud functions, they don’t inherently have access to all the libraries or tools available in a full-fledged server environment.
+To overcome this, Appwrite allows you to bundle these additional libraries with your function code.
+When you’re developing your function, you specify and package these libraries—be it npm packages for a Node.js function, pip packages for a Python function, or any other dependencies for other runtimes.
+Once bundled, Appwrite ensures that these libraries are available to your function at runtime, providing a seamless execution environment tailored to your specific needs.</p>
+<h4 id="poc">PoC</h4>
+<ul>
+<li>For data fetching, we recommend that you add an external module known as <code>axios</code>.
+<ul>
+<li><code>const axios = require(&quot;axios&quot;).default;</code></li>
+</ul>
+</li>
+</ul>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>Appwrite Python</h2>
+					<p>The Appwrite Python SDK allows Python developers to interact with Appwrite&#39;s API, facilitating tasks like user authentication, database operations, storage, and more. 
+By using this SDK, Python developers can seamlessly integrate and manage Appwrite services in their applications, without delving into the complexities of direct API calls.
+</p>
+
+					<h3 id="appwrite-python-sdk">Appwrite Python SDK</h3>
+<p>Step aside traditional backends, the Appwrite Python SDK is in town, rolling out the red carpet for Pythonistas eager to elevate their web and mobile projects!
+This snazzy toolkit doesn’t just connect Python applications to the Appwrite server; it’s a golden ticket to a carnival of backend delights.
+From the tantalizing whirlwind of user authentication to the magic show of database operations and the high-flying trapeze of storage management, the SDK transforms mundane backend tasks into a spectacle.
+No more wrestling with manual API requests – just harness the SDK’s sleek methods and watch as Appwrite’s vast services dance harmoniously with your Python code.
+Whether you’re orchestrating a symphony of user data or choreographing a ballet of notifications, the Appwrite Python SDK ensures every act is a showstopper or a stormtrooper muhahaha.</p>
+<h4 id="appwrite-python-sdk-install">Appwrite Python SDK Install</h4>
+<p>Python wizards, gather ‘round! Elevate your coding cauldron with a sprinkle of Appwrite magic by simply chanting <code>pip install appwrite</code>.
+And just like that, your Python broomstick is turbocharged and ready to soar through the backend skies!</p>
+<p>Calling the <code>appwrite</code> in python is really easy! Just add this below:</p>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> appwrite.client </span><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> Client</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">client </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Client()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">client </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> (client</span></span>
+<span class="line"><span style="color:#F8F8F2">    .set_endpoint(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">https://ap.kbve.com/v1</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">) </span><span style="color:#6272A4"># Your API Endpoint</span></span>
+<span class="line"><span style="color:#F8F8F2">    .set_project(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">[PROJECT_ID]</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">)                </span><span style="color:#6272A4"># Your project ID</span></span>
+<span class="line"><span style="color:#F8F8F2">    .set_key(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">919c2db5d4...a2a3346ad2</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">)          </span><span style="color:#6272A4"># Your secret API key</span></span>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
+<p>And you will be good to go!</p>
+<h5 id="appwrite-python-sdk-demo">Appwrite Python SDK Demo</h5>
+<p>Here is a quick and easy demo for Appwrite python below!</p>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<span class="line"><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> appwrite.client </span><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> Client</span></span>
+<span class="line"><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> appwrite.id </span><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> </span><span style="color:#BD93F9">ID</span></span>
+<span class="line"><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> appwrite.services.users </span><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> Users</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">client </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Client()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">client </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> (client</span></span>
+<span class="line"><span style="color:#F8F8F2">    .set_endpoint(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">https://cloud.appwrite.io/v1</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">) </span><span style="color:#6272A4"># Your API Endpoint</span></span>
+<span class="line"><span style="color:#F8F8F2">    .set_project(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">[PROJECT_ID]</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">)                </span><span style="color:#6272A4"># Your project ID</span></span>
+<span class="line"><span style="color:#F8F8F2">    .set_key(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">919c2db5d4...a2a3346ad2</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">)          </span><span style="color:#6272A4"># Your secret API key</span></span>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">users </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Users(client)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">user </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> users.create(</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span><span style="color:#FFB86C;font-style:italic">user_id</span><span style="color:#FF79C6">=</span><span style="color:#BD93F9">ID</span><span style="color:#F8F8F2">.unique(),</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span><span style="color:#FFB86C;font-style:italic">email</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">email@example.com</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span><span style="color:#FFB86C;font-style:italic">phone</span><span style="color:#FF79C6">=</span><span style="color:#BD93F9">None</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span><span style="color:#FFB86C;font-style:italic">password</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">password</span><span style="color:#E9F284">&#39;</span></span>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>Appwrite SDK</h2>
+					<p>Dive into the future of backend development with the Appwrite SDK! 
+This nifty toolkit is like a Swiss Army knife for developers, packing authentication, database ops, and real-time magic all under one sleek hood. 
+So, Pythonistas and JavaScript jedis, forget those clunky server woes; let Appwrite&#39;s symphony of services turn your code into a backend ballet!
+</p>
+
+					<h2 id="sdk">SDK</h2>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> sdk </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#50FA7B">require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">node-appwrite</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">); </span></span></code></pre>
+<p>Then to call it from inside the <code>module.exports</code> if you want to use it as a function.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> client </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Client</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> account </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Account</span><span style="color:#F8F8F2">(client);</span></span>
 <span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> avatars </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Avatars</span><span style="color:#F8F8F2">(client);</span></span>
@@ -533,29 +774,133 @@ Get ready to revolutionize your app development process with Appwrite!</p><hr/>
 <span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> locale </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Locale</span><span style="color:#F8F8F2">(client);</span></span>
 <span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> storage </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Storage</span><span style="color:#F8F8F2">(client);</span></span>
 <span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> teams </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Teams</span><span style="color:#F8F8F2">(client);</span></span>
-<span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> users </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Users</span><span style="color:#F8F8F2">(client);</span></span></code></pre><p>The main <code>module.exports</code> is usually written like this</p><pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#8BE9FD;font-style:italic">module</span><span style="color:#F8F8F2">.</span><span style="color:#8BE9FD;font-style:italic">exports</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">async</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">function</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">req</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">res</span><span style="color:#F8F8F2">) {}; </span><span style="color:#6272A4">// Passing req and res</span></span></code></pre><p>The <code>req</code> contains these three main objects:</p><p><code>req.headers</code> - An object with the request headers for the function.
-<code>req.payload</code> - An object with the payload, which is the main body data.
-<code>req.env</code> - An object with the environment data.</p><p>The <code>res</code> can return two main objects:</p><p><code>res.send</code> - returns a <code>text</code> and <code>statusCode</code>.
-<code>res.json</code> - returns an <code>object</code> and <code>statusCode</code>.</p><p>Example of parsing the <code>req.payload</code> check and <code>res.json</code> return.</p><pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">if</span><span style="color:#F8F8F2"> (req.payload) {</span></span>
-<span class="line"><span style="color:#F8F8F2">	</span><span style="color:#FF79C6">try</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#F8F8F2">		payload </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#BD93F9">JSON</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">parse</span><span style="color:#F8F8F2">(req.payload);</span></span>
-<span class="line"><span style="color:#F8F8F2">	} </span><span style="color:#FF79C6">catch</span><span style="color:#F8F8F2"> (error) {</span></span>
-<span class="line"><span style="color:#F8F8F2">		</span><span style="color:#50FA7B">errorHandler</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">Corrupt payload for the function.</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">	}</span></span>
-<span class="line"><span style="color:#F8F8F2">} </span><span style="color:#FF79C6">else</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#F8F8F2">	</span><span style="color:#50FA7B">errorHandler</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">Missing payload for the function.</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre><p>In this case our <code>errorHandler</code> function would be:</p><pre class="astro-code dracula" style="background-color:#282A36;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> </span><span style="color:#50FA7B">errorHandler</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">__errorMessage</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">statusCode</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#BD93F9">418</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=&gt;</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#F8F8F2">	res.</span><span style="color:#50FA7B">json</span><span style="color:#F8F8F2">({ data</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">error</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">, message</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> __errorMessage }, statusCode);</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> users </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> sdk.</span><span style="color:#50FA7B">Users</span><span style="color:#F8F8F2">(client);</span></span></code></pre>
+				</article>
+			</div>
+		
 		</div>
 	</div>
 </div><div class="w-96 relative md:w-full p-4">
 	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
 		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
-			<h2 id="notes">Notes</h2><p>These will be all the notes for AppWrite, as we migrate over to it.</p><h3 id="log">Log</h3><ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> Add Guides for AppWrite</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Add Videos for AppWrite</li>
-</ul><h4 id="journal">Journal</h4><h5 id="2023-04-14">2023-04-14</h5><p>Added email configuration to the appwrite server variables.</p><h5 id="2023-04-12">2023-04-12</h5><p>Starting the mdx sheet for AppWrite. I will try to include all the reference material here.</p><h3 id="license">License</h3><h4 id="appwrite-license">Appwrite License</h4><p>Appwrite / appwrite is licensed under the BSD 3-Clause “New” or “Revised” License located here <a href="https://github.com/appwrite/appwrite/blob/master/LICENSE" target="_blank" rel="nofollow noopener noreferrer">license.md</a></p>
+			
+			<div>
+				<article class="">
+					<h2>Appwrite User</h2>
+					<p>Appwrite User SDK is a core feature within its user management system. The User object in Appwrite represents an individual user of an application.</p>
+
+					<h3 id="appwrite-user">Appwrite User</h3>
+<ul>
+<li>
+<p><code>$id</code> :</p>
+<ul>
+<li>A unique identifier for the user.</li>
+<li>This is automatically generated by Appwrite when the user is created.</li>
+</ul>
+</li>
+<li>
+<p><code>name</code> :</p>
+<ul>
+<li>The name of the user.</li>
+<li>It’s not unique, meaning two or more users can have the same name.</li>
+</ul>
+</li>
+<li>
+<p><code>registration</code> :</p>
+<ul>
+<li>A Unix timestamp indicating when the user registered.</li>
+<li>This can help in understanding when a user joined your application.</li>
+</ul>
+</li>
+<li>
+<p><code>status</code> :</p>
+<ul>
+<li>A number that indicates the user’s account status.</li>
+<li>Typical values are:
+<ul>
+<li>0: User is unverified (usually means the user hasn’t confirmed their email address).</li>
+<li>1: User is active.</li>
+<li>2: User has been blocked.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>email</code> :</p>
+<ul>
+<li>The email address of the user.</li>
+<li>It’s unique for every user and is often used for authentication.</li>
+</ul>
+</li>
+<li>
+<p><code>emailVerification</code> :</p>
+<ul>
+<li>A boolean that indicates whether the user’s email address has been verified.</li>
+</ul>
+</li>
+<li>
+<p><code>phone</code> :</p>
+<ul>
+<li>The phone number of the user.</li>
+</ul>
+</li>
+<li>
+<p><code>phoneVerification</code> :</p>
+<ul>
+<li>A boolean that indicates whether the user’s phone number has been verified.</li>
+</ul>
+</li>
+<li>
+<p><code>passwordUpdate</code> :
+= A Unix timestamp that indicates the last time the user updated their password.</p>
+</li>
+<li>
+<p><code>preferences</code> :</p>
+<ul>
+<li>An object that can be used to store user preferences.</li>
+<li>This can include any custom data or settings you want to save for the user.</li>
+</ul>
+</li>
+<li>
+<p><code>roles</code> :</p>
+<ul>
+<li>An array of user roles.</li>
+<li>Roles can be used for access control, and to determine what actions a user can and cannot perform in an application.</li>
+</ul>
+</li>
+</ul>
+				</article>
+			</div>
+		
+		</div>
+	</div>
+</div><div class="w-96 relative md:w-full p-4">
+	<div class="shadow-2xl p-4 bg-offset rounded-3xl">
+		<div class="prose max-w-none prose-li:text-secondary prose-td:text-secondary prose-tr:text-primary prose-tr:border-b-indigo-500/10 prose-p:text-secondary prose-a:text-primary prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-headings:text-primary prose-ul:text-secondary">
+			
+			<div>
+				<article class="">
+					<h2>Notes</h2>
+					<p>General Appwrite Notes</p>
+
+					<h2 id="notes">Notes</h2>
+<p>These will be all the notes for AppWrite, as we migrate over to it.</p>
+<h3 id="log">Log</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Add Guides for AppWrite</li>
+<li class="task-list-item"><input type="checkbox" disabled> Add Videos for AppWrite</li>
+</ul>
+<h4 id="journal">Journal</h4>
+<h5 id="2023-04-14">2023-04-14</h5>
+<p>Added email configuration to the appwrite server variables.</p>
+<h5 id="2023-04-12">2023-04-12</h5>
+<p>Starting the mdx sheet for AppWrite. I will try to include all the reference material here.</p>
+<h3 id="license">License</h3>
+<h4 id="appwrite-license">Appwrite License</h4>
+<p>Appwrite / appwrite is licensed under the BSD 3-Clause “New” or “Revised” License located here <a href="https://github.com/appwrite/appwrite/blob/master/LICENSE" target="_blank" rel="nofollow noopener noreferrer">license.md</a></p>
+				</article>
+			</div>
+		
 		</div>
 	</div>
 </div>
