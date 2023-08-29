@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-28.md",
+                "file": "journal/08-29.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-28.md",
+                "file": "journal/08-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-28.md",
+                "file": "journal/08-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-28.md"
+                "file": "journal/08-29.md"
               }
             }
           }
@@ -157,6 +157,7 @@
   },
   "active": "2e352c93516d3134",
   "lastOpenFiles": [
+    "journal/08-29.md",
     "journal/08-28.md",
     "journal/08-27.md",
     "journal/08-26.md",
@@ -191,7 +192,6 @@
     "journal/08-14.md",
     "journal/08-13.md",
     "theory/bizops/_graph/business-model.md",
-    "theory/bizops/_notes/notes.md",
-    "application/pocketbase/_journal/j1.md"
+    "theory/bizops/_notes/notes.md"
   ]
 }
