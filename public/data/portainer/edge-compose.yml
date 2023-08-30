@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.8'
 services:
     agent:
         volumes:
@@ -15,4 +15,6 @@ services:
             # EDGE_KEY is set manually and data is obtained from portainer.
             - EDGE_INSECURE_POLL=1
         container_name: portainer_edge_agent
-        image: 'portainer/agent:2.15.0'
+        #image: 'portainer/agent:2.15.0'
+        #image: 'portainer/agent:latest'
+        image: 'portainer/agent:2.18.4'

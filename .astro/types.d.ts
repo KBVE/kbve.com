@@ -63,12 +63,9 @@ declare module 'astro:content' {
 
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
-		| import('astro/zod').ZodUnion<import('astro/zod').AnyZodObject[]>
+		| import('astro/zod').ZodUnion<[BaseSchemaWithoutEffects, ...BaseSchemaWithoutEffects[]]>
 		| import('astro/zod').ZodDiscriminatedUnion<string, import('astro/zod').AnyZodObject[]>
-		| import('astro/zod').ZodIntersection<
-				import('astro/zod').AnyZodObject,
-				import('astro/zod').AnyZodObject
-		  >;
+		| import('astro/zod').ZodIntersection<BaseSchemaWithoutEffects, BaseSchemaWithoutEffects>;
 
 	type BaseSchema =
 		| BaseSchemaWithoutEffects
@@ -1510,6 +1507,34 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-25.md": {
+	id: "08-25.md";
+  slug: "08-25";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-26.md": {
+	id: "08-26.md";
+  slug: "08-26";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-27.md": {
+	id: "08-27.md";
+  slug: "08-27";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"08-28.md": {
+	id: "08-28.md";
+  slug: "08-28";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1743,8 +1768,8 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "project": {
-"api.mdx": {
-	id: "api.mdx";
+"api/api.mdx": {
+	id: "api/api.mdx";
   slug: "api";
   body: string;
   collection: "project";
@@ -1757,8 +1782,8 @@ declare module 'astro:content' {
   collection: "project";
   data: any
 } & { render(): Render[".mdx"] };
-"charles.mdx": {
-	id: "charles.mdx";
+"charles/charles.mdx": {
+	id: "charles/charles.mdx";
   slug: "charles";
   body: string;
   collection: "project";
@@ -1827,8 +1852,8 @@ declare module 'astro:content' {
   collection: "project";
   data: any
 } & { render(): Render[".mdx"] };
-"stream.mdx": {
-	id: "stream.mdx";
+"stream/stream.mdx": {
+	id: "stream/stream.mdx";
   slug: "stream";
   body: string;
   collection: "project";

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "077e9b376ada5d4a",
+        "id": "0af5a14b15e8cf9d",
         "type": "tabs",
         "children": [
           {
-            "id": "1e65db65e2721f35",
+            "id": "2e352c93516d3134",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/08-24.md",
+                "file": "journal/08-29.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/08-24.md",
+                "file": "journal/08-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/08-24.md",
+                "file": "journal/08-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/08-24.md"
+                "file": "journal/08-29.md"
               }
             }
           }
@@ -155,8 +155,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1e65db65e2721f35",
+  "active": "2e352c93516d3134",
   "lastOpenFiles": [
+    "journal/08-29.md",
+    "journal/08-28.md",
+    "journal/08-27.md",
+    "journal/08-26.md",
+    "journal/08-25.md",
+    "application/ml/_services/clarifai.mdx",
+    "journal/08-24.md",
     "project/charles/_machine/Machine.astro",
     "project/charles/_machine/ram.mdx",
     "project/charles/_machine/gpu.mdx",
@@ -166,10 +173,7 @@
     "project/charles/_notes/short-story.mdx",
     "project/charles/_notes",
     "project/charles/charles.mdx",
-    "project/charles",
-    "project/api/_api/auth.mdx",
     "journal/08-23.md",
-    "journal/08-24.md",
     "journal/08-22.md",
     "journal/08-21.md",
     "journal/08-20.md",
@@ -188,10 +192,6 @@
     "journal/08-14.md",
     "journal/08-13.md",
     "theory/bizops/_graph/business-model.md",
-    "theory/bizops/_notes/notes.md",
-    "application/pocketbase/_journal/j1.md",
-    "application/pocketbase/_notes/pocketbase_docker.md",
-    "application/pocketbase/_notes/pocketbase_notes.md",
-    "application/pocketbase/_data/_backups/pocketbase_backups.md"
+    "theory/bizops/_notes/notes.md"
   ]
 }
