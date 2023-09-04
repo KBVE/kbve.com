@@ -31,7 +31,7 @@ import partytown from '@astrojs/partytown';
 import svelte from '@astrojs/svelte';
 
 //!   [Million.js]
-import million from 'million/compiler';
+//import million from 'million/compiler';
 
 // https://astro.build/config
 export default defineConfig({
@@ -68,7 +68,8 @@ export default defineConfig({
 	],
 	//  Vite
 	vite: {
-		plugins: [million.vite({ mode: 'react', optimize: false, server: true })],
+		//plugins: [million.vite({ mode: 'react', optimize: false, server: true })],
+		plugins: [],
 		ssr: {
 			//external: ["@11ty/eleventy-img", "svgo"],
 			//external: ["@11ty/eleventy-img"]
