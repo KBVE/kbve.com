@@ -1530,6 +1530,27 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"08-31.md": {
+	id: "08-31.md";
+  slug: "08-31";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-01.md": {
+	id: "09-01.md";
+  slug: "09-01";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-02.md": {
+	id: "09-02.md";
+  slug: "09-02";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1808,6 +1829,13 @@ declare module 'astro:content' {
 "herbmail.mdx": {
 	id: "herbmail.mdx";
   slug: "herbmail";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
+"lofifocus.mdx": {
+	id: "lofifocus.mdx";
+  slug: "lofifocus";
   body: string;
   collection: "project";
   data: any
