@@ -26,7 +26,7 @@ import alpinejs from '@astrojs/alpinejs';
 import partytown from '@astrojs/partytown';
 
 //* Define Config of AstroJS
-import image from '@astrojs/image';
+
 
 //*   [Svelte]:[AstroJS]
 import svelte from '@astrojs/svelte';
@@ -63,9 +63,7 @@ export default defineConfig({
 			},
 		}),
 		// Image Experimental from Astro.
-		image({
-			serviceEntryPoint: '@astrojs/image/sharp',
-		}),
+		
 		// Svelte
 		svelte(),
 	],
