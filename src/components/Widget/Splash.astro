@@ -1,6 +1,6 @@
 ---
 //*       [IMPORT]
-import { Picture } from "@astrojs/image/components";                          /// Astro Picture
+import { Image } from "astro:assets";                          /// Astro Picture
 //*       [IMPORT]->[Customs]
 import Starfield from "@w/Disabled/Starfield.astro";      /// Starfield Affect
 import KBVELogo from "@c/Branding/KBVELogo";                                  /// KBVE Logo
@@ -67,13 +67,11 @@ import spellbook from "@a/img/spellbook.png";                                 //
         </form>
       </div>
     </h2>
-    <Picture
+    <Image
       class="flex self-start w-full sm:self-center sm:justify-self-start animate-pulse"
       src={spellbook}
-      widths={[200, 400, 800]}
-      aspectRatio="1:1"
+      width={800}
       sizes="(max-width: 800px) 100vw, 800px"
-      formats={["avif", "png", "webp"]}
       alt="The KBVE Spellbook logo"
     />
     

@@ -45,6 +45,7 @@ declare module '$env/static/private' {
 	export const DriverData: string;
 	export const FPS_BROWSER_APP_PROFILE_STRING: string;
 	export const FPS_BROWSER_USER_PROFILE_STRING: string;
+	export const GIT_ASKPASS: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
 	export const INIT_CWD: string;
@@ -120,13 +121,13 @@ declare module '$env/static/private' {
 	export const npm_package_dependencies_tailwindcss: string;
 	export const npm_package_dependencies_tailwindcss_fluid_type: string;
 	export const npm_package_dependencies_three: string;
+	export const npm_package_dependencies_tiny_glob: string;
 	export const npm_package_dependencies_ts_dedent: string;
 	export const npm_package_dependencies_typewriter_effect: string;
 	export const npm_package_dependencies_undici: string;
 	export const npm_package_dependencies_unist_util_visit: string;
 	export const npm_package_dependencies_use_sound: string;
 	export const npm_package_dependencies__astrojs_alpinejs: string;
-	export const npm_package_dependencies__astrojs_image: string;
 	export const npm_package_dependencies__astrojs_markdown_remark: string;
 	export const npm_package_dependencies__astrojs_mdx: string;
 	export const npm_package_dependencies__astrojs_partytown: string;
@@ -275,6 +276,10 @@ declare module '$env/static/private' {
 	export const USERNAME: string;
 	export const USERPROFILE: string;
 	export const VS140COMNTOOLS: string;
+	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+	export const VSCODE_GIT_ASKPASS_MAIN: string;
+	export const VSCODE_GIT_ASKPASS_NODE: string;
+	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const VSCODE_INJECTION: string;
 	export const windir: string;
 	export const YARN_WRAP_OUTPUT: string;
@@ -327,6 +332,7 @@ declare module '$env/dynamic/private' {
 		DriverData: string;
 		FPS_BROWSER_APP_PROFILE_STRING: string;
 		FPS_BROWSER_USER_PROFILE_STRING: string;
+		GIT_ASKPASS: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
 		INIT_CWD: string;
@@ -402,13 +408,13 @@ declare module '$env/dynamic/private' {
 		npm_package_dependencies_tailwindcss: string;
 		npm_package_dependencies_tailwindcss_fluid_type: string;
 		npm_package_dependencies_three: string;
+		npm_package_dependencies_tiny_glob: string;
 		npm_package_dependencies_ts_dedent: string;
 		npm_package_dependencies_typewriter_effect: string;
 		npm_package_dependencies_undici: string;
 		npm_package_dependencies_unist_util_visit: string;
 		npm_package_dependencies_use_sound: string;
 		npm_package_dependencies__astrojs_alpinejs: string;
-		npm_package_dependencies__astrojs_image: string;
 		npm_package_dependencies__astrojs_markdown_remark: string;
 		npm_package_dependencies__astrojs_mdx: string;
 		npm_package_dependencies__astrojs_partytown: string;
@@ -557,6 +563,10 @@ declare module '$env/dynamic/private' {
 		USERNAME: string;
 		USERPROFILE: string;
 		VS140COMNTOOLS: string;
+		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+		VSCODE_GIT_ASKPASS_MAIN: string;
+		VSCODE_GIT_ASKPASS_NODE: string;
+		VSCODE_GIT_IPC_HANDLE: string;
 		VSCODE_INJECTION: string;
 		windir: string;
 		YARN_WRAP_OUTPUT: string;
