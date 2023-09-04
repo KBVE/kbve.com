@@ -3,8 +3,8 @@ name: Release
 on:
   workflow_dispatch:
   # Branches
-  push:
-    branches: ["dev*"]
+  #push:
+  #  branches: ["dev*"]
 
 jobs:
   pull-request:
