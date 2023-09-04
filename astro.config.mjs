@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 //TODO  <import vue>
 
 import react from '@astrojs/react';
-import compress from 'astro-compress';
 
 //*   Prefetch for AstroJS
 import prefetch from '@astrojs/prefetch';
