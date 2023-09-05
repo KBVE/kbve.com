@@ -1,0 +1,27 @@
+---
+const nodes = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+<MDXJS>
+	<div id="node" class="gradient-text text-lg">
+		Node
+	</div>
+	<p>Everything you would need to know about Node!</p>
+
+</MDXJS>
+
+
+{
+	nodes.map((note) => (
+		<MDXJS transparent={false}>
+			<div>
+				<article class="">
+					<h2>{note.frontmatter.title}</h2>
+					<p>{note.frontmatter.description}</p>
+
+					<note.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}

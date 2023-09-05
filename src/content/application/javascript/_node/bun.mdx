@@ -1,0 +1,118 @@
+---
+title: Bun
+description: |
+    Bun is a batteries-included runtime engine that bundles, transpiles, installs and runs Javascript / typescript with a task runner.
+---
+
+
+### Bun Install
+
+- CLI for MacOS, Linux and Windows (through WSL)
+
+  - ```shell
+        curl https://bun.sh/install | bash
+    ```
+
+- Homebrew for MacOS / Linux
+
+  - ```shell
+        brew tap oven-sh/bun
+        brew install bun
+    ```
+
+- Docker
+
+  - Bun recommends using the `jarredsumner/bun:edge` build as the Docker base.
+
+    - ```shell
+        docker pull jarredsumner/bun:edge
+        docker run --rm --init --ulimit memlock=-1:-1 jarredsumner/bun:edge
+      ```
+
+  - Example of Docker build:
+
+    - ```shell
+        FROM jarredsumner/bun:edge
+        WORKDIR /app
+        COPY package.json package.json
+        COPY bun.lockb bun.lockb
+        RUN bun install
+        COPY . .
+        EXPOSE 3000
+        ENTRYPOINT ["bun", "index.js"]
+      ```
+
+      - Remember to double check the working directory variable : `WORKDIR /app`
+      - Make sure the port `3000` is the one being used by your application.
+      - Ensure that `index.js` is the start of your application.
+
+### Bun Upgrade
+
+- CLI
+
+  - Latest Version
+
+    - ```shell
+        bun upgrade
+      ```
+
+  - Canary Version
+
+    - ```shell
+        bun upgrade --canary
+      ```
+
+### Bun Commands
+
+Quick cheatsheet on the general commands for `bun`.
+
+#### Bun Run
+
+This will execute the script (Javascript / Typescript) within the runtime engine.
+
+```shell
+bun run
+```
+
+This should replace `npm run` with `bun run`.
+
+#### Bun Clean
+
+To remove the cache:
+
+```shell
+bun run clean
+```
+
+#### Bun Hot
+
+Hot Reload : Bun will live reload the application, similar to file watchers like nodemon.
+
+```shell
+bun run --hot index.ts
+```
+
+#### Bun Dependencies Install
+
+This will install the dependencies for the application using an extremely fast npm-compatible package manager.
+
+```shell
+bun install
+```
+
+This should replace `yarn install` or `npm install` with `bun install`
+
+#### Bun Flags
+
+This chart is from the official documentation.
+
+| Flag         | Description                            |
+| ------------ | -------------------------------------- |
+| --npm        | Use `npm` for tasks & install          |
+| --yarn       | Use `yarn` for tasks & install         |
+| --pnpm       | Use `pnpm` for tasks & install         |
+| --force      | Overwrite existing files               |
+| --no-install | Skip installing `node_modules` & tasks |
+| --no-git     | Don’t initialize a git repository      |
+| --open       | Start & open in-browser after finish   |
+
