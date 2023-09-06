@@ -9,7 +9,7 @@ module.exports = {
 	trailingComma: 'all',
 
 	// Place Bracket in the same line
-	bracketSameLine:true,
+	bracketSameLine: true,
 
 	// See: https://github.com/prettier/prettier/issues/7475
 	useTabs: true,

@@ -1,10 +1,12 @@
 ---
-//<!--?       [CORE]:Template
-//<!--*       [IMPORTS]
+//<!--?			[CORE]:Template
+//<!--*			[IMPORTS]
 import '@styles/index.css'; //  Import Style.css
-//?       [DATA]
+//<!--?			[DATA]
 const { title, description, image = '/assets/img/social.png' } = Astro.props; //  Import Astro.props
 const url = new URL(Astro.url.pathname, Astro.site);
+//<!--!			[View Transitions]
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
@@ -33,6 +35,7 @@ const url = new URL(Astro.url.pathname, Astro.site);
 					}
 				});
 		</script>
+		
 		<!--? Light/Dark [END]  && Google Adsense [START] -->
 		<script
 			async
@@ -41,10 +44,9 @@ const url = new URL(Astro.url.pathname, Astro.site);
 		></script>
 		<!--? Google Adsense [END] && FlowBite [START]  -->
 		<script
-			is:inline
-			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"
-		></script>
-		<!--? FlowBite [END] -->
+		is:inline
+		src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+	
 
 		<title>{title}</title>
 		<meta name="description" content={description} />
@@ -85,6 +87,7 @@ const url = new URL(Astro.url.pathname, Astro.site);
 
 	<body
 		class="text-base bg-[#0b0f0b] text-default selection:bg-secondary selection:text-white">
+		
 		<slot />
 	</body>
 </html>
