@@ -1,0 +1,33 @@
+---
+const dev = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+<MDXJS>
+	<div id="node" class="gradient-text text-lg">
+		Dev Tools for Javascript & Node!
+	</div>
+	<p>
+		JavaScript and Node.js provide developers with a rich ecosystem of tools designed to streamline the coding, testing, and deployment process. 
+		On the frontend, tools like Webpack and Babel allow for the modular bundling of code and the transpilation of modern JavaScript syntax to ensure compatibility across various browsers. 
+		Within the Node.js environment, the npm (Node Package Manager) acts as the cornerstone for managing dependencies and scripts, offering a vast library of community-contributed packages.
+		Debugging tools like Chrome DevTools and Visual Studio Code's Node debugger enhance the developer's ability to inspect and troubleshoot code in real-time. 
+		Together, these tools empower developers to craft scalable and maintainable applications in the dynamic world of JavaScript development.
+	</p>
+
+</MDXJS>
+
+
+{
+	dev.map((note) => (
+		<MDXJS transparent={false}>
+			<div>
+				<article class="">
+					<h2>{note.frontmatter.title}</h2>
+					<p>{note.frontmatter.description}</p>
+
+					<note.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}

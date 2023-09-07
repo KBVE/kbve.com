@@ -1,0 +1,33 @@
+---
+const svelte = await Astro.glob('./*.md*');
+import MDXJS from '@w/MDXJS.astro';
+---
+<MDXJS>
+	<div id="node" class="gradient-text text-lg">
+		Svelte's Elegant Revolution in Web Development
+	</div>
+	<p>
+		Svelte is a groundbreaking front-end framework that diverges from the conventional "virtual DOM" approach.
+		Instead of doing the heavy lifting in the browser, Svelte shifts that responsibility to compile time, turning components into highly efficient vanilla JavaScript at build time. 
+		This results in faster runtime performance, a smaller bundle size, and a simpler development experience. 
+		With an intuitive syntax, Svelte offers developers a seamless way to craft interactive user interfaces without the overhead typically associated with other frameworks.
+		Its unique design philosophy positions it as a compelling choice for those looking to build web applications with both speed and elegance.
+	</p>
+
+</MDXJS>
+
+
+{
+	svelte.map((note) => (
+		<MDXJS transparent={false}>
+			<div>
+				<article class="">
+					<h2>{note.frontmatter.title}</h2>
+					<p>{note.frontmatter.description}</p>
+
+					<note.Content />
+				</article>
+			</div>
+		</MDXJS>
+	))
+}
