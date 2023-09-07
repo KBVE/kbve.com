@@ -51,6 +51,7 @@ declare module '$env/static/private' {
 	export const INIT_CWD: string;
 	export const LANG: string;
 	export const LOCALAPPDATA: string;
+	export const LOCAL_GIT_DIRECTORY: string;
 	export const LOGONSERVER: string;
 	export const NDI_RUNTIME_DIR_V2: string;
 	export const NDI_RUNTIME_DIR_V3: string;
@@ -81,7 +82,6 @@ declare module '$env/static/private' {
 	export const npm_package_dependencies_alpinejs: string;
 	export const npm_package_dependencies_appwrite: string;
 	export const npm_package_dependencies_astro: string;
-	export const npm_package_dependencies_astro_compress: string;
 	export const npm_package_dependencies_cookie: string;
 	export const npm_package_dependencies_crypto_js: string;
 	export const npm_package_dependencies_devalue: string;
@@ -96,7 +96,6 @@ declare module '$env/static/private' {
 	export const npm_package_dependencies_magic_string: string;
 	export const npm_package_dependencies_mermaid: string;
 	export const npm_package_dependencies_micromodal: string;
-	export const npm_package_dependencies_million: string;
 	export const npm_package_dependencies_mime: string;
 	export const npm_package_dependencies_nanostores: string;
 	export const npm_package_dependencies_openpgp: string;
@@ -338,6 +337,7 @@ declare module '$env/dynamic/private' {
 		INIT_CWD: string;
 		LANG: string;
 		LOCALAPPDATA: string;
+		LOCAL_GIT_DIRECTORY: string;
 		LOGONSERVER: string;
 		NDI_RUNTIME_DIR_V2: string;
 		NDI_RUNTIME_DIR_V3: string;
@@ -368,7 +368,6 @@ declare module '$env/dynamic/private' {
 		npm_package_dependencies_alpinejs: string;
 		npm_package_dependencies_appwrite: string;
 		npm_package_dependencies_astro: string;
-		npm_package_dependencies_astro_compress: string;
 		npm_package_dependencies_cookie: string;
 		npm_package_dependencies_crypto_js: string;
 		npm_package_dependencies_devalue: string;
@@ -383,7 +382,6 @@ declare module '$env/dynamic/private' {
 		npm_package_dependencies_magic_string: string;
 		npm_package_dependencies_mermaid: string;
 		npm_package_dependencies_micromodal: string;
-		npm_package_dependencies_million: string;
 		npm_package_dependencies_mime: string;
 		npm_package_dependencies_nanostores: string;
 		npm_package_dependencies_openpgp: string;
