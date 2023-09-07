@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/09-05.md",
+                "file": "journal/09-06.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/09-05.md",
+                "file": "journal/09-06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/09-05.md",
+                "file": "journal/09-06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/09-05.md"
+                "file": "journal/09-06.md"
               }
             }
           }
@@ -157,19 +157,19 @@
   },
   "active": "c0b4f604c30c4919",
   "lastOpenFiles": [
+    "journal/09-05.md",
+    "journal/09-06.md",
     "application/javascript/_svelte/carbon-svelte.mdx",
     "application/javascript/_svelte/carbon=svelte.mdx",
     "application/javascript/_svelte/carbonsvelte.mdx",
     "application/javascript/_svelte/threlte.mdx",
     "journal/09-04.md",
-    "journal/09-05.md",
     "application/javascript/_uxui/swup.mdx",
     "application/javascript/_uxui/lottie.mdx",
     "application/javascript/_svelte/SvelteGlob.astro",
     "application/javascript/_svelte",
     "application/javascript/_node/NodeGlob.astro",
     "application/javascript/_node/node-info.mdx",
-    "application/javascript/_node/bun.mdx",
     "journal/09-03.md",
     "journal/08-31.md",
     "journal/09-01.md",

@@ -36,6 +36,7 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 5s linear infinite',
         'pulse-short': 'pulse 5s ease-in-out',
+        float: 'float linear 3s infinite',
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
@@ -53,6 +54,10 @@ module.exports = {
         flip: '-1',
       },
       keyframes: {
+        float: {
+          '0% 100%': { transform: 'translate3d(0, 0, 0)' },
+          '50%': { transform: 'translate3d(0, 30px, 0)' },
+        }
        
       },
     },
