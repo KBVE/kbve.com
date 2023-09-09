@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/09-06.md",
+                "file": "journal/09-09.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/09-06.md",
+                "file": "journal/09-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/09-06.md",
+                "file": "journal/09-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/09-06.md"
+                "file": "journal/09-09.md"
               }
             }
           }
@@ -157,19 +157,22 @@
   },
   "active": "c0b4f604c30c4919",
   "lastOpenFiles": [
-    "journal/09-05.md",
+    "journal/09-08.md",
+    "journal/09-09.md",
+    "application/redis/_dev/Dev.astro",
+    "application/redis/_dev/redis-compose.mdx",
+    "application/redis/_dev",
+    "application/redis/_install/redis-compose.mdx",
+    "application/redis/_install/redis-compose.yml",
+    "application/redis/_install",
+    "application/redis/_concept/redis-meta-engine.mdx",
+    "application/redis/_concept/Concept.astro",
+    "application/redis/_concept",
+    "application/redis/_compose/Concept.astro",
+    "journal/09-07.md",
     "journal/09-06.md",
-    "application/javascript/_svelte/carbon-svelte.mdx",
-    "application/javascript/_svelte/carbon=svelte.mdx",
-    "application/javascript/_svelte/carbonsvelte.mdx",
-    "application/javascript/_svelte/threlte.mdx",
+    "journal/09-05.md",
     "journal/09-04.md",
-    "application/javascript/_uxui/swup.mdx",
-    "application/javascript/_uxui/lottie.mdx",
-    "application/javascript/_svelte/SvelteGlob.astro",
-    "application/javascript/_svelte",
-    "application/javascript/_node/NodeGlob.astro",
-    "application/javascript/_node/node-info.mdx",
     "journal/09-03.md",
     "journal/08-31.md",
     "journal/09-01.md",
@@ -189,9 +192,6 @@
     "journal/08-19.md",
     "journal/08-18.md",
     "journal/08-17.md",
-    "application/n8n/_notes-n8n/trigger.md",
-    "application/n8n/_notes-n8n/plugins.md",
-    "application/n8n/_notes-n8n/n8n-supabase.md",
-    "application/n8n/_journal/j1.md"
+    "application/n8n/_notes-n8n/trigger.md"
   ]
 }

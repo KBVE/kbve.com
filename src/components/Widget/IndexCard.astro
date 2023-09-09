@@ -1,0 +1,35 @@
+---
+import AboutUsWidget from "@w/AboutUsWidget.astro";
+import Features from "@w/Features.astro";
+
+---
+
+<div class="w-full bg-purple-400/20 border border-purple-500 rounded-lg shadow ">
+    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-purple-500 rounded-t-lg bg-default bg-repeat bg-blend-overlay animate-ltr-linear-infinite"   style="background-image: url('./assets/img/seamless/cyber-gate.jpg')" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
+        <li class="mr-2">
+            <button id="blog-tab" data-tabs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="true" class="inline-block p-4 text-blue-600 rounded-tl-lg hover:bg-gray-100 ">Blog</button>
+        </li>
+        <li class="mr-2">
+            <button id="services-tab" data-tabs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Services</button>
+        </li>
+        <li class="mr-2">
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">About</button>
+        </li>
+    </ul>
+    <div id="defaultTabContent">
+        <div class="hidden p-4 bg-purple-400/20  md:p-8 " id="blog" role="tabpanel" aria-labelledby="blog-tab">
+          
+            <!-- Blog Element -->
+
+        </div>
+        <div class="hidden p-4 bg-purple-400/20 md:p-8 " id="services" role="tabpanel" aria-labelledby="services-tab">
+            
+            <Features />
+
+            <Features />
+        </div>
+        <div class="hidden p-4 bg-purple-400/20  md:p-8 " id="about" role="tabpanel" aria-labelledby="about-tab">
+            <AboutUsWidget />
+        </div>
+    </div>
+</div>

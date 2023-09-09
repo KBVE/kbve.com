@@ -16,3 +16,16 @@ description: |
       - Cookie - `token` - will store the client $User JWT.
       - Cookie - `user` - will store the client $User data.
       - Library: `react-cookie` will be used to help maintain the cookies.
+
+- For the Appwrite JWT, we will be holding it inside of a session store from Nanostores, at least as of right now.
+
+### API Keys
+
+API keys serve as unique identifiers, allowing our application to communicate seamlessly with our servers.
+Rather than asking for a user's password— which can pose security risks— these keys authenticate requests by proving that the application making the request is authorized.
+Think of them as special passwords generated specifically for the software, ensuring secure data exchange while keeping user credentials confidential.
+By utilizing API keys, we prioritize both the user's privacy and the integrity of our platform.
+
+#### v0
+
+The current method of storage has a couple risks that we need to migrate, including the way the data is being encrypted within the storage of the database.

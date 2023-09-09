@@ -89,6 +89,7 @@ declare module '$env/static/private' {
 	export const npm_package_dependencies_esm_env: string;
 	export const npm_package_dependencies_flowbite: string;
 	export const npm_package_dependencies_flowbite_react: string;
+	export const npm_package_dependencies_flowbite_svelte: string;
 	export const npm_package_dependencies_interweave: string;
 	export const npm_package_dependencies_jquery: string;
 	export const npm_package_dependencies_kleur: string;
@@ -375,6 +376,7 @@ declare module '$env/dynamic/private' {
 		npm_package_dependencies_esm_env: string;
 		npm_package_dependencies_flowbite: string;
 		npm_package_dependencies_flowbite_react: string;
+		npm_package_dependencies_flowbite_svelte: string;
 		npm_package_dependencies_interweave: string;
 		npm_package_dependencies_jquery: string;
 		npm_package_dependencies_kleur: string;

@@ -433,6 +433,13 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
+"redis/redis.mdx": {
+	id: "redis/redis.mdx";
+  slug: "redis";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
 "rust/rust.mdx": {
 	id: "rust/rust.mdx";
   slug: "rust";
@@ -1575,6 +1582,20 @@ declare module 'astro:content' {
 "09-06.md": {
 	id: "09-06.md";
   slug: "09-06";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-07.md": {
+	id: "09-07.md";
+  slug: "09-07";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-08.md": {
+	id: "09-08.md";
+  slug: "09-08";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">

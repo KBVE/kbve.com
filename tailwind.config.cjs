@@ -37,6 +37,7 @@ module.exports = {
         'spin-slow': 'spin 5s linear infinite',
         'pulse-short': 'pulse 5s ease-in-out',
         float: 'float linear 3s infinite',
+        'ltr-linear-infinite': 'ltr-linear-infinite 100s linear infinite',
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
@@ -55,9 +56,13 @@ module.exports = {
       },
       keyframes: {
         float: {
-          '0% 100%': { transform: 'translate3d(0, 0, 0)' },
+          '0%, 100%': { transform: 'translate3d(0, 0, 0)' },
           '50%': { transform: 'translate3d(0, 30px, 0)' },
-        }
+        },
+        'ltr-linear-infinite': {
+          '0%, 100%': { 'background-position': '0 0' },
+          '50%': { 'background-position': '400% 0%' },
+        },
        
       },
     },
