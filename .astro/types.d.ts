@@ -433,6 +433,13 @@ declare module 'astro:content' {
   collection: "application";
   data: InferEntrySchema<"application">
 } & { render(): Render[".mdx"] };
+"redis/redis.mdx": {
+	id: "redis/redis.mdx";
+  slug: "redis";
+  body: string;
+  collection: "application";
+  data: InferEntrySchema<"application">
+} & { render(): Render[".mdx"] };
 "rust/rust.mdx": {
 	id: "rust/rust.mdx";
   slug: "rust";

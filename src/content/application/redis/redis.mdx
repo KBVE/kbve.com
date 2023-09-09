@@ -1,0 +1,38 @@
+---
+title: Redis
+category: Application
+description: A language empowering everyone to build reliable and efficient software.
+slug: redis
+client: Self
+publishDate: 2022-08-27 00:00:00
+img: https://images.unsplash.com/photo-1553413077-190dd305871c?fit=crop&w=1400&h=700&q=75
+tags:
+- database
+- storage
+---
+
+import MDXLayer from "@l/MDXLayer.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+import MDXHero from "@w/MDXHero.astro";
+import Concept from "./_concept/Concept.astro";
+import Dev from "./_dev/Dev.astro";
+
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+
+</MDXJS>
+
+<Dev />
+
+<Concept />
+
+
+</Widget>
+
+</MDXLayer>
