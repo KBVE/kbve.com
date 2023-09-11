@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/09-09.md",
+                "file": "journal/09-10.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "91b2bd98f18da4cd",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/09-09.md",
+                "file": "journal/09-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/09-09.md",
+                "file": "journal/09-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/09-09.md"
+                "file": "journal/09-10.md"
               }
             }
           }
@@ -155,10 +156,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c0b4f604c30c4919",
+  "active": "3afb4e43388f73a5",
   "lastOpenFiles": [
-    "journal/09-08.md",
     "journal/09-09.md",
+    "journal/09-10.md",
+    "journal/09-08.md",
     "application/redis/_dev/Dev.astro",
     "application/redis/_dev/redis-compose.mdx",
     "application/redis/_dev",
@@ -191,7 +193,6 @@
     "journal/08-20.md",
     "journal/08-19.md",
     "journal/08-18.md",
-    "journal/08-17.md",
-    "application/n8n/_notes-n8n/trigger.md"
+    "journal/08-17.md"
   ]
 }
