@@ -22,7 +22,12 @@ declare module 'astro:content' {
 	export { z } from 'astro/zod';
 
 	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
-	export type CollectionEntry<C extends keyof AnyEntryMap> = Flatten<AnyEntryMap[C]>;
+
+	export type CollectionKey = keyof AnyEntryMap;
+	export type CollectionEntry<C extends CollectionKey> = Flatten<AnyEntryMap[C]>;
+
+	export type ContentCollectionKey = keyof ContentEntryMap;
+	export type DataCollectionKey = keyof DataEntryMap;
 
 	// This needs to be in sync with ImageMetadata
 	export type ImageFunction = () => import('astro/zod').ZodObject<{
@@ -1614,6 +1619,34 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"09-11.md": {
+	id: "09-11.md";
+  slug: "09-11";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-12.md": {
+	id: "09-12.md";
+  slug: "09-12";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-13.md": {
+	id: "09-13.md";
+  slug: "09-13";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-14.md": {
+	id: "09-14.md";
+  slug: "09-14";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -1857,6 +1890,13 @@ declare module 'astro:content' {
 "ar.mdx": {
 	id: "ar.mdx";
   slug: "ar";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
+"auto-gpt/auto-gpt.mdx": {
+	id: "auto-gpt/auto-gpt.mdx";
+  slug: "auto-gpt";
   body: string;
   collection: "project";
   data: any

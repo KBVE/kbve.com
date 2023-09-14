@@ -1,0 +1,45 @@
+---
+id: 8
+title: Charles
+client: Self
+category: API
+frontpage: true
+status: true
+publishDate: 2023-04-10 00:00:00
+author: KBVE
+img: https://images.unsplash.com/photo-1484868858743-accb876e0754?fit=crop&w=1400&h=700&q=75
+description: Charles The Cyber Monkey that holds the wire within the fabric of the matrix.
+slug: auto-gpt
+tags:
+- design
+- dev
+- ml
+- ai
+---
+
+import Details from "@w/Details.astro"
+import MDXLayer from "@l/MDXLayer.astro";
+import MDXHero from "@w/MDXHero.astro";
+import Widget from "@w/Widget.astro";
+import MDXJS from "@w/MDXJS.astro";
+import NotesGlob from "./_notes/Notes.astro";
+
+<MDXLayer title={frontmatter.title} description={frontmatter.description}>
+<Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+
+## Information
+
+
+</MDXJS>
+
+
+
+<NotesGlob />
+
+
+</Widget>
+</MDXLayer>
