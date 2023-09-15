@@ -1,14 +1,15 @@
 ---
-title: Binance Coin
-ticker: bnb
-exchange: BINANCE
+title: Ethereum
+ticker: eth
+exchange: COINBASE
 category: Crypto
 client: Self
 frontpage: true
-publishDate: 2023-04-14 00:00:00
-img: https://images.unsplash.com/photo-1624438253998-7bb8eca8a3f0?fit=crop&w=1400&h=700&q=75
-description: BNB token is the native coin of Binance Chain, which is the blockchain platform of Binance, the largest cryptocurrency exchange in the world. The BNB token can be used for various purposes such as paying for fees, participating in token sales, staking, lending, spending and sending crypto.
+publishDate: 2022-08-24 00:00:00
+img: https://images.unsplash.com/photo-1622790698141-94e30457ef12?fit=crop&w=1400&h=700&q=75
+description: Ethereum is a decentralized smart contract blockchain system.
 isin: None
+slug: eth
 tags:
   - technology
   - global
@@ -23,21 +24,24 @@ import TabData from "@w/TabData.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import MDXHero from "@w/MDXHero.astro";
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+
 <MDXJS>
 
 
 ## Information
 
-BNB Token
-
----
+Ethereum is a PoS blockchain eco-system that provides smart contract functionality.
 
 <TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
   <TabData tail="block" data="chart">
-    <TradingView data="BINANCE:BNBUSD" />
+    <TradingView data="bitstamp:ETHUSD" />
   </TabData>
   <TabData data="settings">Settings</TabData>
   <TabData data="options">Options</TabData>
@@ -47,20 +51,20 @@ BNB Token
 
 ## Notes
 
-These are the collection of notes for the BNB MDX Document.
+These are the collection of notes for the Ether MDX Document.
 
 ### Log
 
-- [x] Add Charts for BNB Token
+- [x] Add Charts for ETHUSD
 - [ ] Add tabs with charts!
 - [ ] Multi Currency support for Charts?
 
 #### Journal
 
-<Details data="2023-04-14">Adding the BNB Token</Details>
+<Details data="2023-04-14">Testing the charts for Eth</Details>
+
 </TabData>
 </TabMenu>
-
 </MDXJS>
 </Widget>
 </MDXLayer>

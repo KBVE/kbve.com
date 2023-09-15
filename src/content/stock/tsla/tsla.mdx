@@ -9,6 +9,7 @@ frontpage: true
 publishDate: 2022-08-31 00:00:00
 img: https://images.unsplash.com/photo-1601158935942-52255782d322?fit=crop&w=1400&h=700&q=75
 description: Tesla is a multinational automotive / technology company.
+slug: tsla
 tags:
 - technology
 - automotive
@@ -19,9 +20,20 @@ import Details from "@w/Details.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import TradingView from "@w/TradingView.astro";
+import MDXHero from "@w/MDXHero.astro";
+
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+<TradingView data={`${frontmatter.exchange}:${frontmatter.ticker}`} />
+</MDXJS>
+
+
 <MDXJS>
 
 ## Information

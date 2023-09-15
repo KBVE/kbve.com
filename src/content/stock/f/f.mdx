@@ -12,6 +12,7 @@ dividend: true
 isin: US3453708600
 cusip: "345370860"
 exchange: NYSE
+slug: f
 tags:
 - stock
 - manufacturer
@@ -22,11 +23,20 @@ import Details from "@w/Details.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import TradingView from "@w/TradingView.astro";
+import MDXHero from "@w/MDXHero.astro";
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
-<Widget img={frontmatter.img} skeleton={false}>
-<MDXJS>
 
+<Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+<TradingView data={`${frontmatter.exchange}:${frontmatter.ticker}`} />
+</MDXJS>
+
+<MDXJS>
 ---
 
 ## Information

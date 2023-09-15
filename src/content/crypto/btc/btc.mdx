@@ -9,6 +9,7 @@ publishDate: 2022-08-24 00:00:00
 img: https://images.unsplash.com/photo-1621416894569-0f39ed31d247?fit=crop&w=1400&h=700&q=75
 description: Bitcoin is the first decentralized blockchain cryptocurrency.
 isin: XC000A2YY636
+slug: btc
 tags:
   - technology
   - global
@@ -20,9 +21,21 @@ import TradingView from "@w/TradingView.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import MDXHero from "@w/MDXHero.astro";
+
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+
+<TradingView data="bitstamp:BTCUSD" />
+  
+</MDXJS>
+
 <MDXJS>
 
 
@@ -34,10 +47,6 @@ The concept was created in 2008 by Satoshi Nakamoto's white paper, which was a d
 The blockchain-based currency was launched in 2009 through a gensis block with a public and open source codebase.
 Further blocks within the chain are created through mining, which is a process of hashing data under the term of `proof-of-work`.
 
-## Charts
-
-<TradingView data="bitstamp:BTCUSD" />
-  
 ## Settings
   
 ## Options
