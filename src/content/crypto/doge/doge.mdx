@@ -1,20 +1,24 @@
 ---
-title: Ethereum
-ticker: eth
+title: Doge
+ticker: doge
 exchange: COINBASE
 category: Crypto
 client: Self
-frontpage: true
 publishDate: 2022-08-24 00:00:00
-img: https://images.unsplash.com/photo-1622790698141-94e30457ef12?fit=crop&w=1400&h=700&q=75
-description: Ethereum is a decentralized smart contract blockchain system.
+img: https://images.unsplash.com/photo-1621932953986-15fcf084da0f?fit=crop&w=1400&h=700&q=75
+description: Dogecoin is the Meme Coin King.
 isin: None
+slug: doge
 tags:
-  - technology
-  - global
-  - blockchain
-  - eth
+- dogecoin
+- memecoin
+- meme
+- technology
+- global
+- blockchain
+- doge
 ---
+
 
 import Details from "@w/Details.astro";
 import TradingView from "@w/TradingView.astro";
@@ -23,19 +27,27 @@ import TabData from "@w/TabData.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import MDXHero from "@w/MDXHero.astro";
+
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+
+<MDXHero content={frontmatter} />
+
+
 <MDXJS>
+
 
 
 ## Information
 
-Ethereum is a PoS blockchain eco-system that provides smart contract functionality.
+Dogecoin has been an interesting and historical concept within the history of the crypto eco-system and meme coinage.
 
 <TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
   <TabData tail="block" data="chart">
-    <TradingView data="bitstamp:ETHUSD" />
+    <TradingView data="bitstamp:DOGEUSD" />
   </TabData>
   <TabData data="settings">Settings</TabData>
   <TabData data="options">Options</TabData>
@@ -45,17 +57,20 @@ Ethereum is a PoS blockchain eco-system that provides smart contract functionali
 
 ## Notes
 
-These are the collection of notes for the Ether MDX Document.
+These are the collection of notes for the DOGE MDX Document.
 
 ### Log
 
-- [x] Add Charts for ETHUSD
+- [X] Add Charts for DOGEUSD
 - [ ] Add tabs with charts!
 - [ ] Multi Currency support for Charts?
 
 #### Journal
 
-<Details data="2023-04-14">Testing the charts for Eth</Details>
+<Details data="2023-04-14">
+Testing the charts for DOGE
+</Details>
+
 
 </TabData>
 </TabMenu>
