@@ -1,37 +1,44 @@
 ---
-title: MAIN
+title: GAIN
 category: Stock
 client: Self
 frontpage: false
 draft: true
-publishDate: 2023-07-23 00:00:00
+publishDate: 2023-07-12 00:00:00
 img: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fit=crop&w=1400&h=700&q=75
-description: Main Street Capital Corpration is a BDC
-ticker: MAIN
+description: $STOCK_DESCRIPTION
+ticker: GAIN
 dividend: true
-isin: "US56035L1044"
-cusip: "56035L104"
-exchange: NYSE
+isin: $STOCK_ISIN
+cusip: $CUSIP
+exchange: NASDAQ
+slug: gain
 tags:
 - stock
-- bdc
 ---
 
 import Details from "@w/Details.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import TradingView from "@w/TradingView.astro";
+import MDXHero from "@w/MDXHero.astro";
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
 <MDXJS>
 
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+
+<TradingView data={`${frontmatter.exchange}:${frontmatter.ticker}`} />
+
+</MDXJS>
+
 ---
 
 ## Information
-
-Main Street Capital Corporation (MAIN) is a business development company that provides equity and debt capital to lower-middle market companies in various industries.
-The company also offers financing solutions for private equity sponsors.
 
 ---
 
@@ -47,7 +54,7 @@ The company also offers financing solutions for private equity sponsors.
 <Details data="J1">
 
 #### J1
-##### 2023-07-23
+##### 2023-07-13
 
 Added Asset.
 

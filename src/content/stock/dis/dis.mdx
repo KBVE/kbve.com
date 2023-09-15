@@ -1,35 +1,47 @@
 ---
-title: S&P 500 High Dividend ETF
+title: Disney
 category: Stock
 client: Self
-frontpage: false
-draft: true
-publishDate: 2023-07-12 00:00:00
+frontpage: true
+publishDate: 2023-4-01 00:00:00
 img: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fit=crop&w=1400&h=700&q=75
-description: Invesco S&P 500 High Dividend Low Volatility ETF
-ticker: SPHD
+description: The Walt Disney Company, known as Disney, is a multinational media conglomerate.
+ticker: DIS
 dividend: true
-isin: US46138E3624
-cusip: "46138E362"
-exchange: AMEX
+isin: US2546871060
+exchange: NYSE
+slug: dis
 tags:
-- etf
-- monthly
-- stock
+- media
+- multinational
+- conglomerate
 ---
 
 import Details from "@w/Details.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import TradingView from "@w/TradingView.astro";
+import MDXHero from "@w/MDXHero.astro";
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
+<MDXJS>
+
+<TradingView data={`${frontmatter.exchange}:${frontmatter.ticker}`} />
+
+</MDXJS>
+
+
 <MDXJS>
 
 ---
 
 ## Information
+
 
 ---
 
@@ -37,17 +49,14 @@ import MDXJS from "@w/MDXJS.astro";
 
 ### Log
 
-- [ ] Need more information and data.
-
-
 ### Journal
+
 
 <Details data="J1">
 
 #### J1
-##### 2023-07-13
-
-SPHD added into the tracker
+##### 2023-04-14
+Testing the charts for $SPY
 
 </Details>
 

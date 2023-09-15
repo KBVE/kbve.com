@@ -1,23 +1,20 @@
 ---
-title: Doge
-ticker: doge
-exchange: COINBASE
+title: XRP Ripple Coin
+ticker: xrp
+exchange: BINANCE
 category: Crypto
 client: Self
-publishDate: 2022-08-24 00:00:00
-img: https://images.unsplash.com/photo-1621932953986-15fcf084da0f?fit=crop&w=1400&h=700&q=75
-description: Dogecoin is the Meme Coin King.
+frontpage: true
+publishDate: 2023-04-14 00:00:00
+img: https://images.unsplash.com/photo-1624438253998-7bb8eca8a3f0?fit=crop&w=1400&h=700&q=75
+description: This is XRP
 isin: None
+slug: xrp
 tags:
-- dogecoin
-- memecoin
-- meme
 - technology
 - global
 - blockchain
-- doge
 ---
-
 
 import Details from "@w/Details.astro";
 import TradingView from "@w/TradingView.astro";
@@ -26,20 +23,26 @@ import TabData from "@w/TabData.astro";
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import MDXHero from "@w/MDXHero.astro";
+
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
+
 <MDXJS>
 
 
 
 ## Information
 
-Dogecoin has been an interesting and historical concept within the history of the crypto eco-system and meme coinage.
+Ripple 
 
+---
 <TabMenu first="chart" data={["settings", "options", "exchange", "reports", "notes"]}>
   <TabData tail="block" data="chart">
-    <TradingView data="bitstamp:DOGEUSD" />
+    <TradingView data="BINANCE:BNBUSD" />
   </TabData>
   <TabData data="settings">Settings</TabData>
   <TabData data="options">Options</TabData>
@@ -49,20 +52,19 @@ Dogecoin has been an interesting and historical concept within the history of th
 
 ## Notes
 
-These are the collection of notes for the DOGE MDX Document.
+These are the collection of notes for the XRP / Ripple MDX Document.
 
 ### Log
 
-- [X] Add Charts for DOGEUSD
+- [X] Add Charts for BNB Token
 - [ ] Add tabs with charts!
 - [ ] Multi Currency support for Charts?
 
 #### Journal
 
 <Details data="2023-04-14">
-Testing the charts for DOGE
+    Adding the BNB Token
 </Details>
-
 
 </TabData>
 </TabMenu>

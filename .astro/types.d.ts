@@ -570,36 +570,36 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 };
 "crypto": {
-"bnb.mdx": {
-	id: "bnb.mdx";
+"bnb/bnb.mdx": {
+	id: "bnb/bnb.mdx";
   slug: "bnb";
   body: string;
   collection: "crypto";
   data: InferEntrySchema<"crypto">
 } & { render(): Render[".mdx"] };
-"btc.mdx": {
-	id: "btc.mdx";
+"btc/btc.mdx": {
+	id: "btc/btc.mdx";
   slug: "btc";
   body: string;
   collection: "crypto";
   data: InferEntrySchema<"crypto">
 } & { render(): Render[".mdx"] };
-"doge.mdx": {
-	id: "doge.mdx";
+"doge/doge.mdx": {
+	id: "doge/doge.mdx";
   slug: "doge";
   body: string;
   collection: "crypto";
   data: InferEntrySchema<"crypto">
 } & { render(): Render[".mdx"] };
-"eth.mdx": {
-	id: "eth.mdx";
+"eth/eth.mdx": {
+	id: "eth/eth.mdx";
   slug: "eth";
   body: string;
   collection: "crypto";
   data: InferEntrySchema<"crypto">
 } & { render(): Render[".mdx"] };
-"xrp.mdx": {
-	id: "xrp.mdx";
+"xrp/xrp.mdx": {
+	id: "xrp/xrp.mdx";
   slug: "xrp";
   body: string;
   collection: "crypto";
@@ -1647,6 +1647,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"09-15.md": {
+	id: "09-15.md";
+  slug: "09-15";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -2042,99 +2049,99 @@ declare module 'astro:content' {
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"dis.mdx": {
-	id: "dis.mdx";
+"dis/dis.mdx": {
+	id: "dis/dis.mdx";
   slug: "dis";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"f.mdx": {
-	id: "f.mdx";
+"f/f.mdx": {
+	id: "f/f.mdx";
   slug: "f";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"gain.mdx": {
-	id: "gain.mdx";
+"gain/gain.mdx": {
+	id: "gain/gain.mdx";
   slug: "gain";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"icln.mdx": {
-	id: "icln.mdx";
+"icln/icln.mdx": {
+	id: "icln/icln.mdx";
   slug: "icln";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"iyr.mdx": {
-	id: "iyr.mdx";
+"iyr/iyr.mdx": {
+	id: "iyr/iyr.mdx";
   slug: "iyr";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"main.mdx": {
-	id: "main.mdx";
+"main/main.mdx": {
+	id: "main/main.mdx";
   slug: "main";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"o.mdx": {
-	id: "o.mdx";
+"o/o.mdx": {
+	id: "o/o.mdx";
   slug: "o";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"pey.mdx": {
-	id: "pey.mdx";
+"pey/pey.mdx": {
+	id: "pey/pey.mdx";
   slug: "pey";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"sphd.mdx": {
-	id: "sphd.mdx";
+"sphd/sphd.mdx": {
+	id: "sphd/sphd.mdx";
   slug: "sphd";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"spy.mdx": {
-	id: "spy.mdx";
+"spy/spy.mdx": {
+	id: "spy/spy.mdx";
   slug: "spy";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"stag.mdx": {
-	id: "stag.mdx";
+"stag/stag.mdx": {
+	id: "stag/stag.mdx";
   slug: "stag";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"tsla.mdx": {
-	id: "tsla.mdx";
+"tsla/tsla.mdx": {
+	id: "tsla/tsla.mdx";
   slug: "tsla";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"vnq.mdx": {
-	id: "vnq.mdx";
+"vnq/vnq.mdx": {
+	id: "vnq/vnq.mdx";
   slug: "vnq";
   body: string;
   collection: "stock";
   data: InferEntrySchema<"stock">
 } & { render(): Render[".mdx"] };
-"vt.mdx": {
-	id: "vt.mdx";
+"vt/vt.mdx": {
+	id: "vt/vt.mdx";
   slug: "vt";
   body: string;
   collection: "stock";
