@@ -1,27 +1,27 @@
 version: '3.8'
 
 services:
-  traefik:
-    image: traefik:2.9
-    command:
-      - --providers.file.directory=/storage/config
-      - --providers.file.watch=true
-      - --providers.docker=true
-      - --providers.docker.exposedByDefault=false
-      - --providers.docker.constraints=Label(`traefik.constraint-label-stack`,`appwrite`)
-      - --entrypoints.appwrite_web.address=:80
-      - --entrypoints.appwrite_websecure.address=:443
-    restart: unless-stopped
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - appwrite-config:/storage/config:ro
-      - appwrite-certificates:/storage/certificates:ro
-    networks:
-      - gateway
-      - appwrite
+#  traefik:
+#    image: traefik:2.9
+#    command:
+#      - --providers.file.directory=/storage/config
+#      - --providers.file.watch=true
+#      - --providers.docker=true
+#      - --providers.docker.exposedByDefault=false
+#      - --providers.docker.constraints=Label(`traefik.constraint-label-stack`,`appwrite`)
+#      - --entrypoints.appwrite_web.address=:80
+#      - --entrypoints.appwrite_websecure.address=:443
+#    restart: unless-stopped
+#    ports:
+#      - 80:80
+#      - 443:443
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#      - /nfs/app/appwrite/config:/storage/config:ro
+#      - /nfs/app/appwrite/certificates:/storage/certificates:ro
+#    networks:
+#      - gateway
+#      - appwrite
 
   appwrite:
     image: appwrite/appwrite:1.4.3
@@ -43,11 +43,11 @@ services:
       - traefik.http.routers.appwrite_api_https.service=appwrite_api
       - traefik.http.routers.appwrite_api_https.tls=true
     volumes:
-      - appwrite-uploads:/storage/uploads:rw
-      - appwrite-cache:/storage/cache:rw
-      - appwrite-config:/storage/config:rw
-      - appwrite-certificates:/storage/certificates:rw
-      - appwrite-functions:/storage/functions:rw
+      - /nfs/app/appwrite/uploads:/storage/uploads:rw
+      - /nfs/app/appwrite/cache:/storage/cache:rw
+      - /nfs/app/appwrite/config:/storage/config:rw
+      - /nfs/app/appwrite/certificates:/storage/certificates:rw
+      - /nfs/app/appwrite/functions:/storage/functions:rw
     environment:
       - _APP_ENV
       - _APP_WORKER_PER_CORE
@@ -228,11 +228,11 @@ services:
     networks:
       - appwrite
     volumes: 
-      - appwrite-uploads:/storage/uploads:rw
-      - appwrite-cache:/storage/cache:rw
-      - appwrite-functions:/storage/functions:rw
-      - appwrite-builds:/storage/builds:rw
-      - appwrite-certificates:/storage/certificates:rw
+      - /nfs/app/appwrite/uploads:/storage/uploads:rw
+      - /nfs/app/appwrite/cache:/storage/cache:rw
+      - /nfs/app/appwrite/functions:/storage/functions:rw
+      - /nfs/app/appwrite/builds:/storage/builds:rw
+      - /nfs/app/appwrite/certificates:/storage/certificates:rw
     environment:
       - _APP_ENV
       - _APP_WORKER_PER_CORE
@@ -301,8 +301,8 @@ services:
     networks:
       - appwrite
     volumes:
-      - appwrite-functions:/storage/functions:rw
-      - appwrite-builds:/storage/builds:rw
+      - /nfs/app/appwrite/functions:/storage/functions:rw
+      - /nfs/app/appwrite/builds:/storage/builds:rw
     environment:
       - _APP_ENV
       - _APP_WORKER_PER_CORE
@@ -358,8 +358,8 @@ services:
     networks:
       - appwrite
     volumes: 
-      - appwrite-config:/storage/config:rw
-      - appwrite-certificates:/storage/certificates:rw
+      - /nfs/app/appwrite/config:/storage/config:rw
+      - /nfs/app/appwrite/certificates:/storage/certificates:rw
     environment:
       - _APP_ENV
       - _APP_WORKER_PER_CORE
@@ -573,8 +573,8 @@ services:
       - runtimes
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - appwrite-builds:/storage/builds:rw
-      - appwrite-functions:/storage/functions:rw
+      - /nfs/app/appwrite/builds:/storage/builds:rw
+      - /nfs/app/appwrite/functions:/storage/functions:rw
       # Host mount nessessary to share files between executor and runtimes.
       # It's not possible to share mount file between 2 containers without host mount (copying is too slow)
       - /tmp:/tmp:rw
@@ -617,7 +617,7 @@ services:
     networks:
       - appwrite
     volumes:
-      - appwrite-mariadb:/var/lib/mysql:rw
+      - /nfs/app/appwrite/mariadb:/var/lib/mysql:rw
     environment:
       - MYSQL_ROOT_PASSWORD=${_APP_DB_ROOT_PASS}
       - MYSQL_DATABASE=${_APP_DB_SCHEMA}
@@ -636,7 +636,7 @@ services:
     networks:
       - appwrite
     volumes:
-      - appwrite-redis:/data:rw
+      - /nfs/app/appwrite/redis:/data:rw
 
 
   influxdb:
@@ -645,7 +645,7 @@ services:
     networks:
       - appwrite
     volumes:
-      - appwrite-influxdb:/var/lib/influxdb:rw
+      - /nfs/app/appwrite/influxdb:/var/lib/influxdb:rw
 
   telegraf:
     image: appwrite/telegraf:1.4.0
@@ -657,20 +657,10 @@ services:
       - _APP_INFLUXDB_PORT
 
 networks:
-  gateway:
-    name: gateway
+#  gateway:
+#    name: gateway
   appwrite:
-    name: appwrite
+    name: public
+    external: true
   runtimes:
     name: runtimes
-
-volumes:
-  appwrite-mariadb:
-  appwrite-redis:
-  appwrite-cache:
-  appwrite-uploads:
-  appwrite-certificates:
-  appwrite-functions:
-  appwrite-builds:
-  appwrite-influxdb:
-  appwrite-config:
