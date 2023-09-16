@@ -28,20 +28,26 @@ services:
     restart: unless-stopped
     networks:
       - appwrite
-    labels:
-      - traefik.enable=true
-      - traefik.constraint-label-stack=appwrite
-      - traefik.docker.network=appwrite
-      - traefik.http.services.appwrite_api.loadbalancer.server.port=80
-      #http
-      - traefik.http.routers.appwrite_api_http.entrypoints=appwrite_web
-      - traefik.http.routers.appwrite_api_http.rule=PathPrefix(`/`)
-      - traefik.http.routers.appwrite_api_http.service=appwrite_api
-      # https
-      - traefik.http.routers.appwrite_api_https.entrypoints=appwrite_websecure
-      - traefik.http.routers.appwrite_api_https.rule=PathPrefix(`/`)
-      - traefik.http.routers.appwrite_api_https.service=appwrite_api
-      - traefik.http.routers.appwrite_api_https.tls=true
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      labels:
+        - traefik.enable=true
+        - traefik.constraint-label-stack=appwrite
+        - traefik.docker.network=appwrite
+        - traefik.http.services.appwrite_api.loadbalancer.server.port=80
+        - traefik.http.routers.appwrite_api.rule=Host(`panel.kbve.com`)
+        #http
+        - traefik.http.routers.appwrite_api_http.entrypoints=web
+        - traefik.http.routers.appwrite_api_http.rule=PathPrefix(`/`)
+        - traefik.http.routers.appwrite_api_http.service=appwrite_api
+        # https
+        - traefik.http.routers.appwrite_api_https.entrypoints=websecure
+        - traefik.http.routers.appwrite_api_https.rule=PathPrefix(`/`)
+        - traefik.http.routers.appwrite_api_https.service=appwrite_api
+        - traefik.http.routers.appwrite_api_https.tls=true
     volumes:
       - /nfs/app/appwrite/uploads:/storage/uploads:rw
       - /nfs/app/appwrite/cache:/storage/cache:rw
@@ -146,21 +152,26 @@ services:
     image: appwrite/appwrite:1.4.3
     entrypoint: realtime
     restart: unless-stopped
-    labels:
-      - "traefik.enable=true"
-      - "traefik.constraint-label-stack=appwrite"
-      - "traefik.docker.network=appwrite"
-      - "traefik.http.services.appwrite_realtime.loadbalancer.server.port=80"
-      #ws
-      - traefik.http.routers.appwrite_realtime_ws.entrypoints=appwrite_web
-      - traefik.http.routers.appwrite_realtime_ws.rule=PathPrefix(`/v1/realtime`)
-      - traefik.http.routers.appwrite_realtime_ws.service=appwrite_realtime
-      # wss
-      - traefik.http.routers.appwrite_realtime_wss.entrypoints=appwrite_websecure
-      - traefik.http.routers.appwrite_realtime_wss.rule=PathPrefix(`/v1/realtime`)
-      - traefik.http.routers.appwrite_realtime_wss.service=appwrite_realtime
-      - traefik.http.routers.appwrite_realtime_wss.tls=true
-      - traefik.http.routers.appwrite_realtime_wss.tls.certresolver=dns
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      labels:
+        - "traefik.enable=true"
+        - "traefik.constraint-label-stack=appwrite"
+        - "traefik.docker.network=appwrite"
+        - "traefik.http.services.appwrite_realtime.loadbalancer.server.port=80"
+        #ws
+        - traefik.http.routers.appwrite_realtime_ws.entrypoints=web
+        - traefik.http.routers.appwrite_realtime_ws.rule=PathPrefix(`/v1/realtime`)
+        - traefik.http.routers.appwrite_realtime_ws.service=appwrite_realtime
+        # wss
+        - traefik.http.routers.appwrite_realtime_wss.entrypoints=websecure
+        - traefik.http.routers.appwrite_realtime_wss.rule=PathPrefix(`/v1/realtime`)
+        - traefik.http.routers.appwrite_realtime_wss.service=appwrite_realtime
+        - traefik.http.routers.appwrite_realtime_wss.tls=true
+        - traefik.http.routers.appwrite_realtime_wss.tls.certresolver=dns
     networks:
       - appwrite
     environment:
@@ -657,8 +668,8 @@ services:
       - _APP_INFLUXDB_PORT
 
 networks:
-#  gateway:
-#    name: gateway
+  gateway:
+    name: gateway
   appwrite:
     name: public
     external: true
