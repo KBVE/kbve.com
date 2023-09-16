@@ -1,33 +1,13 @@
 version: '3.8'
 
 services:
-#  traefik:
-#    image: traefik:2.9
-#    command:
-#      - --providers.file.directory=/storage/config
-#      - --providers.file.watch=true
-#      - --providers.docker=true
-#      - --providers.docker.exposedByDefault=false
-#      - --providers.docker.constraints=Label(`traefik.constraint-label-stack`,`appwrite`)
-#      - --entrypoints.appwrite_web.address=:80
-#      - --entrypoints.appwrite_websecure.address=:443
-#    restart: unless-stopped
-#    ports:
-#      - 80:80
-#      - 443:443
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock
-#      - /nfs/app/appwrite/config:/storage/config:ro
-#      - /nfs/app/appwrite/certificates:/storage/certificates:ro
-#    networks:
-#      - gateway
-#      - appwrite
-
   appwrite:
     image: appwrite/appwrite:1.4.3
     restart: unless-stopped
     networks:
+      - public
       - appwrite
+      - gateway
     deploy:
       mode: replicated
       replicas: 1
@@ -36,9 +16,10 @@ services:
       labels:
         - traefik.enable=true
         - traefik.constraint-label-stack=appwrite
-        - traefik.docker.network=appwrite
+        - traefik.docker.network=public
         - traefik.http.services.appwrite_api.loadbalancer.server.port=80
         - traefik.http.routers.appwrite_api.rule=Host(`panel.kbve.com`)
+        - traefik.http.routers.appwrite_api.rule=Host(`*.kbve.com`)
         #http
         - traefik.http.routers.appwrite_api_http.entrypoints=web
         - traefik.http.routers.appwrite_api_http.rule=PathPrefix(`/`)
@@ -194,7 +175,7 @@ services:
 
   appwrite-worker-audits:
     image: appwrite/appwrite:1.4.3
-    container_name: appwrite-worker-audits
+    entrypoint: worker-audits
     restart: unless-stopped
     networks:
       - appwrite
@@ -285,7 +266,7 @@ services:
 
   appwrite-worker-databases:
     image: appwrite/appwrite:1.4.3
-    container_name: appwrite-worker-databases
+    entrypoint: worker-databases
     restart: unless-stopped
     networks:
       - appwrite
@@ -307,7 +288,7 @@ services:
 
   appwrite-worker-builds:
     image: appwrite/appwrite:1.4.3
-    container_name: appwrite-worker-builds
+    entrypoint: worker-builds
     restart: unless-stopped
     networks:
       - appwrite
@@ -576,12 +557,16 @@ services:
       - _APP_ASSISTANT_OPENAI_API_KEY
 
   openruntimes-executor:
-    container_name: openruntimes-executor
+    hostname: appwrite-executor
     stop_signal: SIGINT
     image: openruntimes/executor:0.4.1
     networks:
-      - appwrite
-      - runtimes
+      appwrite:
+        aliases:
+          - appwrite-executor
+      runtimes:
+        aliases:
+          - appwrite-executor
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /nfs/app/appwrite/builds:/storage/builds:rw
@@ -670,8 +655,14 @@ services:
 networks:
   gateway:
     name: gateway
+    driver: overlay
   appwrite:
-    name: public
-    external: true
+    name: appwrite
+    driver: overlay
+    attachable: true
   runtimes:
     name: runtimes
+    driver: overlay
+    attachable: true
+  public:
+    external: true
