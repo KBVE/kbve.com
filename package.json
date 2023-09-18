@@ -48,8 +48,6 @@
     "@lottiefiles/lottie-player": "^2.0.2",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@mdi/js": "^7.2.96",
-    "@mui/icons-material": "^5.14.9",
-    "@mui/material": "^5.14.10",
     "@nanostores/persistent": "^0.9.1",
     "@nanostores/react": "^0.7.1",
     "@react-three/fiber": "^8.14.2",
