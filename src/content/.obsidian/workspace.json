@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/09-18.md",
+                "file": "journal/09-19.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/09-18.md",
+                "file": "journal/09-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/09-18.md",
+                "file": "journal/09-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/09-18.md"
+                "file": "journal/09-19.md"
               }
             }
           },
@@ -167,8 +167,9 @@
   },
   "active": "bb7b77777a129327",
   "lastOpenFiles": [
-    "journal/09-17.md",
     "journal/09-18.md",
+    "journal/09-19.md",
+    "journal/09-17.md",
     "journal/09-16.md",
     "journal/09-15.md",
     "crypto/xrp/xrp.mdx",
@@ -201,7 +202,6 @@
     "journal/08-26.md",
     "journal/08-25.md",
     "journal/08-30.md",
-    "journal/08-29.md",
-    "journal/08-24.md"
+    "journal/08-29.md"
   ]
 }
