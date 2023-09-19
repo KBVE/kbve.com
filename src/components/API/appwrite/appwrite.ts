@@ -11,8 +11,7 @@ import {
 } from "appwrite";
 import { atom, WritableAtom, task } from "nanostores";
 
-import * as ClientStorage from '../storage';
-
+import * as ClientStorage from "../storage";
 
 /** Setup */
 export const appwriteClient = new Client()
@@ -22,27 +21,8 @@ export const appwriteClient = new Client()
 export const appwriteDatabases = new Databases(appwriteClient);
 export const appwriteStorage = new Storage(appwriteClient);
 export const appwriteFunctions = new Functions(appwriteClient);
-
-/** Database */
-/** We are currently not using these but will keep them here for testing */
-export interface BlogPost extends Models.Document {
-	title: string;
-	date: string;
-	description: string;
-	content: string;
-	slug: string;
-	imageurl: string;
-}
-export type BlogPostList = Models.DocumentList<BlogPost>;
-
-export interface BlogComment extends Models.Document {
-	postId: string;
-	comment: string;
-}
-export type BlogCommentList = Models.DocumentList<BlogComment>;
-
-/** Account */
 export const appwriteAccount = new Account(appwriteClient);
+
 export const isLoggedIn: WritableAtom<undefined | Models.Session> =
 	atom(undefined);
 
@@ -73,35 +53,40 @@ isLoggedIn.subscribe(async (session) => {
 	}
 });
 
+// export const exe = async () => {
+// 	task(async () => {
+// 		try {
+// 			return appwriteFunctions.createExecution("register");
+// 		} catch (error) {
+// 			return error;
+// 		}
+// 	});
+// };
 
 export const JWT = async () => {
 	try {
-		return appwriteAccount.createJWT()
+		return appwriteAccount.createJWT();
 	} catch (error) {
 		return error;
 	}
+};
 
-}	
-
-export const OAuth2 = async ({provider, valid = 'https://kbve.com/account/', failure = 'https://kbve.com/account/login/?failure'} : {provider: string, valid?: string, failure?: string}) => {
+export const OAuth2 = async ({
+	provider,
+	valid = "https://kbve.com/account/",
+	failure = "https://kbve.com/account/login/?failure",
+}: { provider: string; valid?: string; failure?: string }) => {
 	try {
-		return appwriteAccount.createOAuth2Session(
-			provider,
-			valid,
-			failure,
-		)
+		return appwriteAccount.createOAuth2Session(provider, valid, failure);
 	} catch (error) {
 		return error;
 	}
-}
-
-
+};
 
 export const login = async (email: string, password: string) => {
 	try {
 		const session = await appwriteAccount.createEmailSession(email, password);
 		isLoggedIn.set(session);
-
 	} catch (error) {
 		const appwriteError = error as AppwriteException;
 		throw appwriteError;
@@ -122,11 +107,7 @@ export const logout = async () => {
 	}
 };
 
-export const create = async (
-	email: string,
-	password: string,
-	name: string,
-) => {
+export const create = async (email: string, password: string, name: string) => {
 	try {
 		await appwriteAccount.create(ID.unique(), email, password, name);
 		const session = await appwriteAccount.createEmailSession(email, password);
@@ -152,13 +133,18 @@ export const getUser = async () => {
 		ClientStorage.log(" Starting AppWrite -> Session -> UserData");
 		const userData = await account();
 		if (userData?.$id) {
-			ClientStorage.locker('email', String(userData?.email));
-			ClientStorage.locker('uuid', String(userData?.$id));
-			ClientStorage.locker('last', String(userData?.$updatedAt));
-            ClientStorage.locker('emailVerification', String(userData?.emailVerification));
-            ClientStorage.locker('phoneVerification', String(userData?.phoneVerification));
-            ClientStorage.locker('phone', String(userData?.phone));
-			
+			ClientStorage.locker("email", String(userData?.email));
+			ClientStorage.locker("uuid", String(userData?.$id));
+			ClientStorage.locker("last", String(userData?.$updatedAt));
+			ClientStorage.locker(
+				"emailVerification",
+				String(userData?.emailVerification),
+			);
+			ClientStorage.locker(
+				"phoneVerification",
+				String(userData?.phoneVerification),
+			);
+			ClientStorage.locker("phone", String(userData?.phone));
 		}
 	});
-}
+};
