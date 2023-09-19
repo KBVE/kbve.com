@@ -23,7 +23,7 @@ export const supabase_projectId: string = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
 export const appwrite_api: string = 'https://panel.kbve.com/v1';
 export const appwrite_projectId: string = 'kbve';
 /* hCaptcha */
-export const hcaptcha_site_key: string = 'e77af3f6-a0e3-44b7-82f8-b7c098d38022';
+export const hcaptcha_site_key: string = '5ba581fa-b6fc-4bb0-8222-02fcd6a59e35';
 export const hcaptcha_api: string = 'https://js.hcaptcha.com/1/api.js';
 /* Rust */
 export const rust_cache_api: string = '';
