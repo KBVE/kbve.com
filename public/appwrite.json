@@ -6,7 +6,9 @@
             "$id": "register",
             "name": "register",
             "runtime": "node-18.0",
-            "execute": ["guests"],
+            "execute": [
+                "guests"
+            ],
             "events": [],
             "schedule": "",
             "timeout": 90,
@@ -24,7 +26,9 @@
             "$id": "login",
             "name": "login",
             "runtime": "node-18.0",
-            "execute": ["guests"],
+            "execute": [
+                "guests"
+            ],
             "events": [],
             "schedule": "",
             "timeout": 15,
@@ -37,6 +41,23 @@
                 ".npm"
             ],
             "path": "functions/login"
+        },
+        {
+            "$id": "instagraph",
+            "name": "instagraph",
+            "runtime": "python-3.10",
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15,
+            "enabled": true,
+            "logging": true,
+            "entrypoint": "src/main.py",
+            "commands": "pip install -r requirements.txt",
+            "ignore": [
+                "__pypackages__"
+            ],
+            "path": "functions/instagraph"
         }
     ]
 }
