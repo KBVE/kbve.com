@@ -16,9 +16,13 @@ tags:
 import MDXLayer from "@l/MDXLayer.astro";
 import Widget from "@w/Widget.astro";
 import MDXJS from "@w/MDXJS.astro";
+import MDXHero from '@w/MDXHero.astro';
+
 
 <MDXLayer title={frontmatter.title} description={frontmatter.description}>
 <Widget img={frontmatter.img} skeleton={false}>
+
+<MDXHero content={frontmatter} />
 <MDXJS>
 
 
@@ -87,5 +91,18 @@ These will be the notes on the user interface and experience.
 
 
 </MDXJS>
+
+<MDXJS>
+
+## PitchDeck
+
+Introducing Discord.sh - your one-stop solution for all things Discord! We specialize in providing top-notch Discord bots tailored to your needs, ensuring seamless integration with your servers.
+But that's not all; our expertise extends to bespoke Discord programming, allowing for custom functionalities that elevate your server experience.
+With our dedicated bot hosting service, you can bid farewell to the hassles of maintenance and uptime.
+Whether you're looking for a bot to manage server roles, engage your community, or integrate with external applications, Discord.sh has got you covered.
+Dive into a world of endless possibilities and let us transform your Discord presence!
+
+</MDXJS>
+
 </Widget>
 </MDXLayer>

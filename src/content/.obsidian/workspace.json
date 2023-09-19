@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b49f81d32103c752",
+        "id": "d39885944fc17ee4",
         "type": "tabs",
         "children": [
           {
-            "id": "0caf4e79d0fab377",
+            "id": "bb7b77777a129327",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/09-15.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "586f10db17bf742d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "journal/09-16.md",
+                "file": "journal/09-19.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/09-16.md",
+                "file": "journal/09-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/09-16.md",
+                "file": "journal/09-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/09-16.md"
+                "file": "journal/09-19.md"
               }
             }
           },
@@ -178,9 +165,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "586f10db17bf742d",
+  "active": "bb7b77777a129327",
   "lastOpenFiles": [
+    "journal/09-18.md",
+    "journal/09-19.md",
+    "journal/09-17.md",
     "journal/09-16.md",
+    "journal/09-15.md",
     "crypto/xrp/xrp.mdx",
     "crypto/xrp",
     "crypto/eth/eth.mdx",
@@ -192,7 +183,6 @@
     "crypto/btc/btc.mdx",
     "crypto/bnb.mdx",
     "journal/09-14.md",
-    "journal/09-15.md",
     "project/auto-gpt/_notes/ref.md",
     "journal/09-10.md",
     "journal/09-13.md",
@@ -212,9 +202,6 @@
     "journal/08-26.md",
     "journal/08-25.md",
     "journal/08-30.md",
-    "journal/08-29.md",
-    "journal/08-24.md",
-    "journal/09-02 copy.md",
-    "journal/08-27.md"
+    "journal/08-29.md"
   ]
 }
