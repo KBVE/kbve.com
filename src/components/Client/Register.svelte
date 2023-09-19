@@ -22,7 +22,9 @@
 
 <script lang="ts">
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
+	import { appwriteFunctions } from '@c/API/appwrite/appwrite';
 	import { log, notification$, notification } from '@c/API/storage';
+	import { task } from "nanostores";
 	import * as kbve from '@c/kbve';
 
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
@@ -36,7 +38,7 @@
 	export let apihost: string = kbve.hcaptcha_api;
 	export let hl: string = '';
 	export let reCaptchaCompat: boolean = false;
-	export let theme: CaptchaTheme = CaptchaTheme.DARK;
+	export let theme: CaptchaTheme = CaptchaTheme.LIGHT;
 	export let size: 'normal' | 'compact' | 'invisible' = 'compact';
 
 	export const reset = () => {
@@ -166,23 +168,18 @@
 	const _handleRegister = async () => {
 		try {
 			loading = true;
-			// const { ok, message } = await supabase.auth.signUp({
-			// 	email,
-			// 	password,
-			// 	options: {
-			// 		captchaToken,
-			// 		data: {
-			// 			username,
-			// 		},
-			// 	},
-			// });
+
 			const _FData = { username: username, email: email, password: password, 'h-captcha-response': captchaToken}
+
+			// const _F = await appwriteFunctions.createExecution('register', JSON.stringify(_FData), false, '/', 'POST');
+
 			const response = await self.fetch('https://register.kbve.com/', {
 				method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify((_FData))
+				headers: {
+					'Content-Type': 'application/json',
+					'X-Appwrite-Project': 'kbve',
+				},
+				body: JSON.stringify((_FData))
 			})
 			if (response.ok) {
 				location.assign('/account/profile');
@@ -193,6 +190,7 @@
 			if (error instanceof Error) {
 				log(error.message);
 				notification(error.message);
+				reset();
 			}
 		} finally {
 			loading = false;
@@ -329,7 +327,7 @@
 								required
 								bind:value={confirm} />
 						</div>
-						<div id="h-captcha-{id}" class="flex justify-center" />
+						<div id="h-captcha-{id}" class="flex justify-center " />
 						<div class="flex items-center justify-between">
 							<div class="flex items-start" />
 							<a

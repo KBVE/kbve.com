@@ -18,12 +18,11 @@ export default async ({ req, res, log, error }) => {
 
     const data = req.body;
 
-    const email = data['email'];
+    const email = data.email;
     const token = data['h-captcha-response'];
-    const username = data['username'];
-    const password = data['password'];
+    const username = data.username;
+    const password = data.password;
 
-    let valid = false;
     let user_id = "";
 
     const secret = process.env.HCAPTCHA_SECRET;
