@@ -93,7 +93,7 @@ export default async ({ req, res, log, error }) => {
       const { $id } = await users.create(
         ID.unique(),
         email,
-        '',
+        null,
         password,
         username
       );
