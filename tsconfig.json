@@ -18,6 +18,8 @@
     "allowJs": true,
     // Alias for Components
     "baseUrl": ".",
+    // Syn Imports
+    "allowSyntheticDefaultImports": true,
     // Astro Images
     //"types": ["@astrojs/image/client"],
     // Paths
