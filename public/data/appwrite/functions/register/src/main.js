@@ -90,9 +90,10 @@ export default async ({ req, res, log, error }) => {
     //?   Create Account
 
     try {
-      const { $id } = await users.createArgon2User(
+      const { $id } = await users.create(
         ID.unique(),
         email,
+        '',
         password,
         username
       );
@@ -126,7 +127,7 @@ export default async ({ req, res, log, error }) => {
       } else {
         return res.json(
           { ok: true, message: `Account Created! Welcome ${username}!` },
-          401
+          200
         );
       }
     } catch (e) {

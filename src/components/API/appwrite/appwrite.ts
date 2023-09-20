@@ -53,15 +53,17 @@ isLoggedIn.subscribe(async (session) => {
 	}
 });
 
-// export const exe = async () => {
-// 	task(async () => {
-// 		try {
-// 			return appwriteFunctions.createExecution("register");
-// 		} catch (error) {
-// 			return error;
-// 		}
-// 	});
-// };
+
+export const exe = async (functionId: string, body?: string, async?: boolean, xpath?: string, method?: string, headers?: object) => {
+		try {
+			return appwriteFunctions.createExecution(functionId, body, async, xpath, method, headers);
+		} catch (error) { 
+			const appwriteError = error as AppwriteException;
+			ClientStorage.notification(appwriteError.message);
+			return error;
+		}
+		
+ };
 
 export const JWT = async () => {
 	try {
