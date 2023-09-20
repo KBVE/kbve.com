@@ -114,7 +114,7 @@
 	$: if (mounted && loaded) {
 		widgetID = hcaptcha.render(`h-captcha-${id}`, {
 			sitekey,
-			hl, // force a specific localisation
+			hl, 
 			theme,
 			callback: 'onSuccess',
 			'error-callback': 'onError',
@@ -181,19 +181,6 @@
 				}
 			)
 
-			// const response = await self.fetch('https://register.kbve.com/', {
-			// 	method: 'POST',
-			// 	headers: {
-			// 		'Content-Type': 'application/json',
-			// 		'X-Appwrite-Project': 'kbve',
-			// 	},
-			// 	body: JSON.stringify((_FData))
-			// })
-			// if (response.ok) {
-			// 	location.assign('/account/profile');
-			// } else {
-			// 	throw new Error(response.statusText)
-			// }
 		} catch (error) {
 			if (error instanceof Error) {
 				log(error.message);
