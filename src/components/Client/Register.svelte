@@ -24,7 +24,6 @@
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { appwriteFunctions } from '@c/API/appwrite/appwrite';
 	import { log, notification$, notification } from '@c/API/storage';
-	import { task } from "nanostores";
 	import * as kbve from '@c/kbve';
 
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
@@ -114,7 +113,7 @@
 	$: if (mounted && loaded) {
 		widgetID = hcaptcha.render(`h-captcha-${id}`, {
 			sitekey,
-			hl, // force a specific localisation
+			hl, 
 			theme,
 			callback: 'onSuccess',
 			'error-callback': 'onError',
@@ -171,38 +170,39 @@
 
 			const _FData = { username: username, email: email, password: password, 'h-captcha-response': captchaToken}
 
-			const _F = appwriteFunctions.createExecution('register', JSON.stringify(_FData), false, '/', 'POST');
-			
-			_F.then(
-				function (response) {
-					console.log(response); // Success
-				}, function (error) {
-					throw new Error(error)
-				}
-			)
+			const _F = await appwriteFunctions.createExecution('register', JSON.stringify(_FData), false, '/', 'POST');
 
-			// const response = await self.fetch('https://register.kbve.com/', {
-			// 	method: 'POST',
-			// 	headers: {
-			// 		'Content-Type': 'application/json',
-			// 		'X-Appwrite-Project': 'kbve',
-			// 	},
-			// 	body: JSON.stringify((_FData))
-			// })
-			// if (response.ok) {
-			// 	location.assign('/account/profile');
-			// } else {
-			// 	throw new Error(response.statusText)
-			// }
+			const { status, responseBody } = _F;
+
+		
+			if(status === "completed")
+			{
+				notification(`Yes! ${responseBody}`)
+				location.assign('/account/login/')
+			}
+			else
+			{
+				throw new Error(responseBody)
+			}
+			
+			// _F.then(
+			// 	function (response) {
+			// 		console.log(response); // Success
+			// 	}, function (error) {
+			// 		throw new Error(error)
+			// 	}
+			// )
+
+
+
 		} catch (error) {
 			if (error instanceof Error) {
 				log(error.message);
 				notification(error.message);
 				reset();
 			}
-		} finally {
 			loading = false;
-		}
+		} 
 	};
 </script>
 

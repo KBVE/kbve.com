@@ -2,24 +2,17 @@
 
 ## Stack
 
-Core: AstroJS
-Library:
+This repository has most of our public notes and stack information!
 
-## Current version: v0.99.1
+### Backend
 
-## Release v1 eta 12/31/2022
+- Proxmox -> qEMU -> Docker Swarm with Coolify/Portainer/Swarmkit*
+- Appwrite
 
-version 1 will be called `Isolated Demands For Rigor`.
+### FrontEnd
 
----
+- AstroJS / Svelte / React / TailwindCSS
 
-[Test](https://kbve.com/)
-> [Test](https://kbve.com/)
+## Current version: pre-v1.0
 
-```html
-<center>Hi</center>
-```
-
-```javascript
-alert('Hi');
-```
+Codename: `Isolated Demands For Rigor`
