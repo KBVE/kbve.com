@@ -171,21 +171,29 @@
 
 			const _FData = { username: username, email: email, password: password, 'h-captcha-response': captchaToken}
 
-			// const _F = await appwriteFunctions.createExecution('register', JSON.stringify(_FData), false, '/', 'POST');
+			const _F = appwriteFunctions.createExecution('register', JSON.stringify(_FData), false, '/', 'POST');
+			
+			_F.then(
+				function (response) {
+					console.log(response); // Success
+				}, function (error) {
+					throw new Error(error)
+				}
+			)
 
-			const response = await self.fetch('https://register.kbve.com/', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					'X-Appwrite-Project': 'kbve',
-				},
-				body: JSON.stringify((_FData))
-			})
-			if (response.ok) {
-				location.assign('/account/profile');
-			} else {
-				throw new Error(response.statusText)
-			}
+			// const response = await self.fetch('https://register.kbve.com/', {
+			// 	method: 'POST',
+			// 	headers: {
+			// 		'Content-Type': 'application/json',
+			// 		'X-Appwrite-Project': 'kbve',
+			// 	},
+			// 	body: JSON.stringify((_FData))
+			// })
+			// if (response.ok) {
+			// 	location.assign('/account/profile');
+			// } else {
+			// 	throw new Error(response.statusText)
+			// }
 		} catch (error) {
 			if (error instanceof Error) {
 				log(error.message);
