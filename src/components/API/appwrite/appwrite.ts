@@ -15,8 +15,8 @@ import * as ClientStorage from "../storage";
 
 /** Setup */
 export const appwriteClient = new Client()
-	.setEndpoint("https://ap.kbve.com/v1")
-	.setProject("6436a6dc9a6b48db802f");
+	.setEndpoint("https://panel.kbve.com/v1")
+	.setProject("kbve");
 
 export const appwriteDatabases = new Databases(appwriteClient);
 export const appwriteStorage = new Storage(appwriteClient);
