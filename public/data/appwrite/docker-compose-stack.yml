@@ -666,3 +666,18 @@ networks:
     attachable: true
   public:
     external: true
+
+### Volume Migration -> JuiceFS <TODO>
+volumes:
+  jfsvolume:
+    driver: juicedata/juicefs
+    driver_opts:
+      name: /run/secrets/
+
+secrets:
+  mysql_root_password:
+    external: true
+  juicefs_access_key:
+    external: true
+  juicefs_secret_key:
+    external: true  

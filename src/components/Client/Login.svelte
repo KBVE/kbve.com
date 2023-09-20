@@ -21,9 +21,10 @@
 
 <script lang="ts">
 	//import { supabase, getProfile, getUser } from '@c/API/supabase';
-	import { appwriteAccount, login, OAuth2, getUser } from '@c/API/appwrite/appwrite';
+	import { appwriteAccount, login, OAuth2, getUser, fetchProfile } from '@c/API/appwrite/appwrite';
+	
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
-	import { log, notification$, notification } from '@c/API/storage';
+	import { log, notification$, notification, kbve$ } from '@c/API/storage';
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
 	import * as kbve from '@c/kbve';
 
@@ -133,9 +134,22 @@
 	};
 
 	const handleProfile = async () => {
-		await getUser();
-        //await getProfile(false);
-		location.assign('/account/profile');
+
+		//notification('Logging in... please wait!');
+		// {task} -> _engine1 , {task} -> _engine2 removed because its too nested.
+	 	let _engine1 = await getUser();
+		let _engine2 = false;
+		if(_engine1)
+		{
+		_engine2 = await fetchProfile();
+		}
+
+		if(_engine2)
+		{
+		 location.assign('/account/profile')
+		}
+		
+        //await getProfile(false);;
 	}
 
 	const handleLogin = async () => {

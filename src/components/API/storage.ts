@@ -3,7 +3,9 @@ import { persistentMap } from "@nanostores/persistent";
 import * as kbve from "@c/kbve";
 
 
+//?			[DATA]->@core
 export const khash$: WritableAtom<number> = atom(0);
+export const uuid$: WritableAtom<string> = atom(undefined);
 
 //?         [DATA]->[UI]
 export const avatar$: WritableAtom<string> = atom(
@@ -20,15 +22,12 @@ export const toast$: WritableAtom<string> = atom("");
 export const log$: WritableAtom<string> = atom("");
 
 //?         [CACHE]
-
 export const kbve$ = persistentMap<kbve.kbveLocker>("kbve:");
 
 //*         [FUNCTIONS]
 
 toast$.subscribe( toast => {
 	console.log(`[TOAST] -> ${toast}`)
-	
-	
 })
 
 export const log = async (log: string) => {

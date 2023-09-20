@@ -6,6 +6,7 @@ import {
 	Functions,
 	Databases,
 	Storage,
+	Query,
 	ID,
 	Models,
 } from "appwrite";
@@ -46,6 +47,7 @@ export const api$: WritableAtom<Boolean> = atom(false);
 export const error$: WritableAtom<undefined> = atom(undefined);
 
 export const data$: WritableAtom<undefined> = atom(undefined);
+
 
 isLoggedIn.subscribe(async (session) => {
 	if (session?.userId) {
@@ -131,8 +133,7 @@ export const account = async () => {
 };
 
 export const getUser = async () => {
-	task(async () => {
-		ClientStorage.log(" Starting AppWrite -> Session -> UserData");
+	try {
 		const userData = await account();
 		if (userData?.$id) {
 			ClientStorage.locker("email", String(userData?.email));
@@ -148,5 +149,39 @@ export const getUser = async () => {
 			);
 			ClientStorage.locker("phone", String(userData?.phone));
 		}
-	});
+		return true;
+	} catch (error) {
+		return false;
+	}
 };
+
+export const fetchProfile = async () => {
+	try{
+		ClientStorage.log("[FETCH] -> Profile");
+		ClientStorage.log(ClientStorage.kbve$.get().uuid);
+		const _profile = await appwriteDatabases.listDocuments('user', 'profile', [
+			Query.equal('uuid', ClientStorage.kbve$.get().uuid),
+		])
+
+		const { documents, total } = _profile;
+			if(total < 1) {
+				// Username not found
+				return false;
+			}
+			else {
+				//ClientStorage.log(`Found Username @ ${documents[0]?.username}`)
+				ClientStorage.locker("username", documents[0]?.username)
+				ClientStorage.locker("bio", documents[0]?.bio)
+				ClientStorage.locker("pgp", documents[0]?.pgp)
+				return true;
+			}
+	
+		//* MIGRATE PROFILE HERE
+	} catch (error) {
+		return false;
+	}
+}
+
+//TODO: Rotate the profile data out of GQL and to 1.4.x Appwrite SDK
+export const getProfile = async () => {}
+
