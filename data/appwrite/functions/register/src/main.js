@@ -16,14 +16,24 @@ export default async ({ req, res, log, error }) => {
       .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
       .setKey(process.env.APPWRITE_API_KEY);
 
-    const data = req.body;
+    const data = JSON.parse(req.body);
+
+    let token = '';
 
     const email = data.email;
-    const token = data['h-captcha-response'];
+    if (data['h-captcha-response']) {
+      token = data['h-captcha-response'];
+    }
+    else if (data.token) {
+      token = data.token;
+    }
+    else {
+      return res.json({ ok: false, message: 'Captcha Token Missing' }, 401);
+    }
     const username = data.username;
     const password = data.password;
 
-    let user_id = "";
+    let user_id = '';
 
     const secret = process.env.HCAPTCHA_SECRET;
 
@@ -80,17 +90,24 @@ export default async ({ req, res, log, error }) => {
     //?   Create Account
 
     try {
-    const { $id } = await users.createArgon2User(ID.unique(), email, password, username);
-      if(!$id) {
+      const { $id } = await users.create(
+        ID.unique(),
+        email,
+        '',
+        password,
+        username
+      );
+      if (!$id) {
         return res.json({ ok: false, message: 'Account Failed' }, 401);
-      }
-      else {
+      } else {
         user_id = $id;
       }
-    }
-    catch (e) {
+    } catch (e) {
       error(e);
-      return res.json({ ok: false, message: 'Account Error! Maybe you have an account?' }, 401);
+      return res.json(
+        { ok: false, message: 'Account Error! Maybe you have an account?' },
+        401
+      );
     }
 
     //?   Create Profile
@@ -98,24 +115,28 @@ export default async ({ req, res, log, error }) => {
     try {
       const { $id } = await db.createDocument('user', 'profile', ID.unique(), {
         username: username,
-        updatedAt: (new Date(Date.now())).toISOString(),
-        uuid: user_id
-    });
-    
-      if(!$id) {
-        return res.json({ ok: false, message: 'Profile $ID was not found?!' }, 401);
-      }
-      else {
-        return res.json({ ok: true, message: `Account Created! Welcome ${username}!` }, 401);
-      }
-    
-    }
-    catch (e) {
-      error(e);
-      return res.json({ ok: false, message: 'Profile Document Creation Error!' }, 401);
-    }
-    
+        updatedAt: new Date(Date.now()).toISOString(),
+        uuid: user_id,
+      });
 
+      if (!$id) {
+        return res.json(
+          { ok: false, message: 'Profile $ID was not found?!' },
+          401
+        );
+      } else {
+        return res.json(
+          { ok: true, message: `Account Created! Welcome ${username}!` },
+          200
+        );
+      }
+    } catch (e) {
+      error(e);
+      return res.json(
+        { ok: false, message: 'Profile Document Creation Error!' },
+        401
+      );
+    }
   }
 
   return res.json({
