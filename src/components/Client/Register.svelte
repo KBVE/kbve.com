@@ -30,8 +30,8 @@
 
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
 
-	const browser =
-		import.meta.env.SSR === undefined ? true : !import.meta.env.SSR;
+	//@ts-ignore
+	const browser = import.meta.env.SSR === undefined ? true : !import.meta.env.SSR;
 
 	const dispatch = createEventDispatcher();
 
