@@ -14,7 +14,7 @@
 	import { Textarea, Label, Input } from 'flowbite-svelte';
 
     import { onMount, onDestroy, createEventDispatcher } from 'svelte';
-    import {appwriteFunctions} from "@c/API/appwrite/appwrite"; // Appwrite
+    import { appwriteFunctions } from "@c/API/appwrite/appwrite"; // Appwrite
 	import { log, notification$, toast$, notification, tasker, kbve$ } from '@c/API/storage';
 
     import WidgetWrapper  from './UX/WidgetWrapper.svelte';
@@ -25,12 +25,12 @@
     const dispatch = createEventDispatcher();
     
     // [EXPORT]
-    export const toast = () => {
+    export const toast = ( message? : string, duration?: number) => {
 		if(mounted)
 		{
 			new Toastify({
-				text: $toast$,
-				duration: 3000,
+				text: message ?? $toast$,
+				duration: duration ?? 3000,
 				destination: "#",
 				newWindow: false,
 				close: true,
@@ -60,6 +60,7 @@
 	let uuid = '';
 	let email = '';
 	let phone = '';
+	let op = 1;
 
 	//	[UI]
 
@@ -72,7 +73,6 @@
 	};
 
     // []
-
 	
 	const handleSettings = async () => {
 
@@ -80,11 +80,43 @@
 		
 	};
 
+	const handlePGP = async () => {
+		loading = true;
+		op = 0.4
+		toast("Verifying PGP", 5000);
+		try { 
+			 	const publicKey = await openpgp.readKey({ armoredKey: pgp})
+				toast("Adding Public Key to API", 5000)
+				const _FData = {pgp: pgp}
+			 	const _F = await appwriteFunctions.createExecution('settings', JSON.stringify(_FData), false, '/pgp', 'POST');
 
+				const { status, errors } = _F;
+
+				if(errors) {
+					toast(`Error: ${errors}`, 5000)
+				}
+
+				if(status === "completed") 
+				{
+					toast(`Updated! Reloading!`, 5000);
+				}
+
+		}
+		catch (e) {
+			toast(`Error: ${e.message}`, 5000);
+		}
+		op = 1
+		loading = false;
+
+	}
 
     // [CORE]
 
     onMount( () => {
+		if(browser)
+		{
+			console.log('browser')
+		}
         dispatch('mount');
         mounted = true;
     })
@@ -100,7 +132,7 @@
 		phone = $kbve$.phone;
         skeleton = window.document.getElementById('skeleton') as HTMLElement;
         if(skeleton) skeleton.remove();
-		tasker(toast$, "Welcome to the Account Settings").then(toast);
+		toast("Welcome to the Account Settings");
         }
 
 
@@ -108,7 +140,7 @@
 
 <svelte:head>
 	{#if mounted && !window?.openpgp}
-		<script src={`https://github.com/openpgpjs/openpgpjs`} async defer></script>
+		<script src={`https://unpkg.com/openpgp@5.10.2/dist/openpgp.min.js`} async defer></script>
 	{/if}
 </svelte:head>
 
@@ -179,7 +211,7 @@
 						{/if}
                     </div>
     </section>
-	<section class="p-6 text-gray-50">
+	<section class="p-6 text-gray-50" style="opacity: {op};">
 		<form  action="" class="container flex flex-col mx-auto space-y-12" on:submit|preventDefault={handleSettings}>
 			<fieldset class="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-900/60">
 				<div class="space-y-2 col-span-full lg:col-span-1">
@@ -222,25 +254,26 @@
 					</div>
 					<div class="col-span-full">
 						<label for="bio" class="text-sm">Bio</label>
-						<textarea id="bio" class="w-full rounded-md focus:ring  border-gray-700 text-gray-900" bind:value={bio}></textarea>
+						<textarea id="bio" class="w-full rounded-md focus:ring  bg-gray-500 border-gray-700 text-gray-900 cursor-not-allowed" bind:value={bio} disabled></textarea>
 					</div>
 					<div class="col-span-full">
 						<Label class="pb-2 text-sm text-white-50">PGP</Label>
 						<Textarea {...textAreaProps} bind:value={pgp} />
+						<div class="flex items-center gap-1">
+							<button on:click={handlePGP} type="button" class="relative px-5 py-3 text-sm overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group" disabled={loading}>
+								<span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
+								<span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
+								<span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+								<span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+								<span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
+								<span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Update PGP</span>
+							</button>
+						</div>
 					</div>
 					
 				</div>
 			</fieldset>
-			<div class="grid gap-1 md:grid-cols-3">
-				<button type="submit" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group" disabled={loading}>
-					<span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
-					<span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
-					<span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
-					<span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
-					<span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
-					<span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Update</span>
-				</button>
-			</div>
+			
 		</form>
 	</section>
 </WidgetWrapper>
