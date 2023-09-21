@@ -1,0 +1,8 @@
+---
+import SvelteSettings from "@c/Client/Settings.svelte"
+const { data } = Astro.props;
+---
+
+<SvelteSettings client:only="svelte">
+	<slot />
+</SvelteSettings>

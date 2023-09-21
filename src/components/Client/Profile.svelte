@@ -1,7 +1,12 @@
 <script lang="ts" context="module">
 	declare global {
-		interface Window {}
+		interface Window {
+			Toastify: any;
+		}
+
+		
 	}
+	declare var Toastify: any;
 </script>
 
 <script lang="ts">
@@ -9,7 +14,27 @@
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
 	//	Client Storage
-	import { kbve$ } from '@c/API/storage';
+	import { kbve$, toast$, tasker } from '@c/API/storage';
+
+	export const toast = () => {
+		if(mounted && profileLoad)
+		{
+			new Toastify({
+				text: $toast$,
+				duration: 3000,
+				destination: "#",
+				newWindow: false,
+				close: true,
+				gravity: "top", // `top` or `bottom`
+				position: "right", // `left`, `center` or `right`
+				stopOnFocus: true, // Prevents dismissing of toast on hover
+				style: {
+					background: "linear-gradient(to right, #FF8A4C, #8DA2FB)",
+				},
+				onClick: function(){} // Callback after click
+				}).showToast();
+		}
+	}
 
 	let mounted = false;
 	let profileLoad = false;
@@ -17,9 +42,11 @@
 
 	const dispatch = createEventDispatcher();
 
+	
 	const userData = async () => {
 		profileLoad = true;
 	};
+	
 
 	onMount(() => {
 		mounted = true;
@@ -31,6 +58,8 @@
 		userData();
 		skeleton = window.document.getElementById('skeleton') as HTMLElement;
 		if (skeleton) skeleton.remove();
+		tasker(toast$, "Welcome to your Profile!").then(toast);
+
 	}
 </script>
 
