@@ -1,5 +1,6 @@
 {
   //"extends": "astro/tsconfigs/base",
+  
   "compilerOptions": {
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
@@ -32,9 +33,7 @@
         "@w/*": ["src/components/Widget/*"],
         "@a/*": ["src/assets/*"],
         "@r/*": ["src/components/Library/React/*"],
-        //"@h/*": ["src/components/Library/React/Hooks/*"],
-        //? Full Path
-        //"@hooks": ["src/components/Library/React/Hooks/*"],
+        "@ve/*": ["src/components/VE/*"],
         "@tools/*": ["src/components/Tools/*"],
         "@theme/*": ["src/layout/theme/*"],
         "@card/*": ["src/components/Card/*"],

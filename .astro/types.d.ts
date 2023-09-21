@@ -219,8 +219,15 @@ declare module 'astro:content' {
   collection: "account";
   data: InferEntrySchema<"account">
 } & { render(): Render[".mdx"] };
-"settings.mdx": {
-	id: "settings.mdx";
+"settings/pgp.mdx": {
+	id: "settings/pgp.mdx";
+  slug: "settings/pgp";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+"settings/settings.mdx": {
+	id: "settings/settings.mdx";
   slug: "settings";
   body: string;
   collection: "account";
@@ -2564,6 +2571,10 @@ declare module 'astro:content' {
 
 	type DataEntryMap = {
 		"_bin": {
+};
+"config": {
+};
+"location": {
 };
 
 	};
