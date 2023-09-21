@@ -51,7 +51,7 @@ export default defineConfig({
 		//compress(),
 		//  Prefetch
 		prefetch({
-			throttle: 3,
+			throttle: 5,
 		}),
 		tailwind(),
 		alpinejs(),
