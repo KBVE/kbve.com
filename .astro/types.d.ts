@@ -1696,6 +1696,13 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".md"] };
+"09-21.md": {
+	id: "09-21.md";
+  slug: "09-21";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
 "asset.mdx": {
 	id: "asset.mdx";
   slug: "asset";
@@ -2571,10 +2578,6 @@ declare module 'astro:content' {
 
 	type DataEntryMap = {
 		"_bin": {
-};
-"config": {
-};
-"location": {
 };
 
 	};
