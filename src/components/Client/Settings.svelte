@@ -14,7 +14,7 @@
 	import { Textarea, Label, Input } from 'flowbite-svelte';
 
     import { onMount, onDestroy, createEventDispatcher } from 'svelte';
-    import { appwriteFunctions } from "@c/API/appwrite/appwrite"; // Appwrite
+    import { appwriteFunctions, fetchProfile } from "@c/API/appwrite/appwrite"; // Appwrite
 	import { log, notification$, toast$, notification, tasker, kbve$ } from '@c/API/storage';
 
     import WidgetWrapper  from './UX/WidgetWrapper.svelte';
@@ -99,6 +99,7 @@
 				if(status === "completed") 
 				{
 					toast(`Updated! Reloading!`, 5000);
+					fetchProfile();
 				}
 
 		}
@@ -129,7 +130,9 @@
 		username = $kbve$.username;
 		uuid = $kbve$.uuid;
 		email = $kbve$.email;
-		phone = $kbve$.phone;
+		phone = $kbve$.phone ?? 'No Phone!';
+		pgp = $kbve$.pgp;
+		bio = $kbve$.bio ?? 'Updated Your Bio!';
         skeleton = window.document.getElementById('skeleton') as HTMLElement;
         if(skeleton) skeleton.remove();
 		toast("Welcome to the Account Settings");
