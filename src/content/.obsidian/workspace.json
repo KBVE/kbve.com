@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/09-19.md",
+                "file": "journal/09-21.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/09-19.md",
+                "file": "journal/09-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/09-19.md",
+                "file": "journal/09-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/09-19.md"
+                "file": "journal/09-21.md"
               }
             }
           },
@@ -167,8 +167,13 @@
   },
   "active": "bb7b77777a129327",
   "lastOpenFiles": [
-    "journal/09-18.md",
+    "account/settings/settings.mdx",
+    "account/settings/pgp.mdx",
+    "account/settings",
+    "journal/09-20.md",
+    "journal/09-21.md",
     "journal/09-19.md",
+    "journal/09-18.md",
     "journal/09-17.md",
     "journal/09-16.md",
     "journal/09-15.md",
@@ -180,8 +185,6 @@
     "crypto/doge",
     "crypto/bnb/bnb.mdx",
     "crypto/bnb",
-    "crypto/btc/btc.mdx",
-    "crypto/bnb.mdx",
     "journal/09-14.md",
     "project/auto-gpt/_notes/ref.md",
     "journal/09-10.md",
@@ -199,9 +202,6 @@
     "journal/09-01.md",
     "journal/09-02.md",
     "journal/08-28.md",
-    "journal/08-26.md",
-    "journal/08-25.md",
-    "journal/08-30.md",
-    "journal/08-29.md"
+    "journal/08-26.md"
   ]
 }

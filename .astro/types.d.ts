@@ -219,8 +219,15 @@ declare module 'astro:content' {
   collection: "account";
   data: InferEntrySchema<"account">
 } & { render(): Render[".mdx"] };
-"settings.mdx": {
-	id: "settings.mdx";
+"settings/pgp.mdx": {
+	id: "settings/pgp.mdx";
+  slug: "settings/pgp";
+  body: string;
+  collection: "account";
+  data: InferEntrySchema<"account">
+} & { render(): Render[".mdx"] };
+"settings/settings.mdx": {
+	id: "settings/settings.mdx";
   slug: "settings";
   body: string;
   collection: "account";
@@ -1678,6 +1685,20 @@ declare module 'astro:content' {
 "09-19.md": {
 	id: "09-19.md";
   slug: "09-19";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-20.md": {
+	id: "09-20.md";
+  slug: "09-20";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-21.md": {
+	id: "09-21.md";
+  slug: "09-21";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">

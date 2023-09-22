@@ -8,10 +8,12 @@
 			onClose: Function;
 			onExpired: Function;
 			hcaptcha: any;
+			Toastify: any;
 		}
 	}
 
 	declare var hcaptcha: any;
+	declare var Toastify: any;
 
 	export enum CaptchaTheme {
 		DARK = 'dark',
@@ -23,13 +25,13 @@
 <script lang="ts">
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { appwriteFunctions } from '@c/API/appwrite/appwrite';
-	import { log, notification$, notification } from '@c/API/storage';
+	import { log, notification$, toast$, notification, tasker } from '@c/API/storage';
 	import * as kbve from '@c/kbve';
 
 	import WidgetWrapper from './UX/WidgetWrapper.svelte';
 
-	const browser =
-		import.meta.env.SSR === undefined ? true : !import.meta.env.SSR;
+	//@ts-ignore
+	const browser = import.meta.env.SSR === undefined ? true : !import.meta.env.SSR;
 
 	const dispatch = createEventDispatcher();
 
@@ -48,6 +50,26 @@
 		if (mounted && loaded && widgetID)
 			return hcaptcha.execute(widgetID, options);
 	};
+
+	export const toast = () => {
+		if(mounted && loaded)
+		{
+			new Toastify({
+				text: $toast$,
+				duration: 3000,
+				destination: "#",
+				newWindow: false,
+				close: true,
+				gravity: "top", // `top` or `bottom`
+				position: "right", // `left`, `center` or `right`
+				stopOnFocus: true, // Prevents dismissing of toast on hover
+				style: {
+					background: "linear-gradient(to right, #FF8A4C, #8DA2FB)",
+				},
+				onClick: function(){} // Callback after click
+				}).showToast();
+		}
+	}
 
 	const id = Math.floor(Math.random() * 100);
 
@@ -123,6 +145,7 @@
 		});
 		skeleton = window.document.getElementById('skeleton') as HTMLElement;
 		if(skeleton) skeleton.remove();
+		tasker(toast$, "Register Your KBVE Global").then(toast);
 	}
 
 	let usernameRegex = new RegExp(/^[a-z0-9]+$/i);
@@ -141,18 +164,22 @@
 	const ValidInput = () => {
 		if (username.length < 8) {
 			notification('username has to be 8 or more characters');
+			toast();
 			reset();
 			return false;
 		} else if (!usernameRegex.test(username)) {
 			notification('username has to be alpha-numeric a-Z and 0-9 only ');
+			toast();
 			reset();
 			return false;
 		} else if (confirm != password) {
 			notification('passwords do not match');
+			toast();
 			reset();
 			return false;
 		} else if (password.length < 8) {
 			notification('password has to be at least 8 characters or stronger ');
+			toast();
 			reset();
 			return false;
 		} else {
@@ -178,20 +205,18 @@
 			if(status === "completed")
 			{
 				notification(`Yes! ${responseBody}`)
-				location.assign('/account/login/')
+				toast()
+				tasker(toast$, 'Account Ready!').then(toast)
+				setTimeout(() => {
+					location.assign('/account/login/')
+				},2000)
+				
 			}
 			else
 			{
 				throw new Error(responseBody)
 			}
-			
-			// _F.then(
-			// 	function (response) {
-			// 		console.log(response); // Success
-			// 	}, function (error) {
-			// 		throw new Error(error)
-			// 	}
-			// )
+	
 
 
 
@@ -199,6 +224,7 @@
 			if (error instanceof Error) {
 				log(error.message);
 				notification(error.message);
+				toast();
 				reset();
 			}
 			loading = false;
@@ -347,7 +373,7 @@
 							type="submit"
 							class="w-full bg-secondary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
 							disabled={loading}
-							><span>{loading ? 'Loading' : 'Login'}</span></button>
+							><span>{loading ? 'Loading' : 'Register'}</span></button>
 						<p class="text-sm font-light text-primary">
 							Have an account yet? <a
 								href="/account/login"
