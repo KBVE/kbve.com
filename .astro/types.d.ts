@@ -43,6 +43,7 @@ declare module 'astro:content' {
 				import('astro/zod').ZodLiteral<'webp'>,
 				import('astro/zod').ZodLiteral<'gif'>,
 				import('astro/zod').ZodLiteral<'svg'>,
+				import('astro/zod').ZodLiteral<'avif'>,
 			]
 		>;
 	}>;
@@ -1699,6 +1700,69 @@ declare module 'astro:content' {
 "09-21.md": {
 	id: "09-21.md";
   slug: "09-21";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-22.md": {
+	id: "09-22.md";
+  slug: "09-22";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-23.md": {
+	id: "09-23.md";
+  slug: "09-23";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-24.md": {
+	id: "09-24.md";
+  slug: "09-24";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-25.md": {
+	id: "09-25.md";
+  slug: "09-25";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-26.md": {
+	id: "09-26.md";
+  slug: "09-26";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-27.md": {
+	id: "09-27.md";
+  slug: "09-27";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-28.md": {
+	id: "09-28.md";
+  slug: "09-28";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-29.md": {
+	id: "09-29.md";
+  slug: "09-29";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".md"] };
+"09-30.md": {
+	id: "09-30.md";
+  slug: "09-30";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
