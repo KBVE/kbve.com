@@ -8,6 +8,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "isomorphic-dompurify": "^1.8.0",
     "node-appwrite": "^9.0.0",
     "openpgp": "^5.10.2"
   },
