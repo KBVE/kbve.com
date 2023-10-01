@@ -53,6 +53,7 @@ declare module '$env/static/private' {
 	export const npm_package_scripts_generate_version: string;
 	export const npm_package_dependencies__types_cookie: string;
 	export const npm_config_wrap_output: string;
+	export const GIT_ASKPASS: string;
 	export const npm_node_execpath: string;
 	export const npm_package_dependencies__types_lodash: string;
 	export const npm_config_init_version: string;
@@ -65,14 +66,16 @@ declare module '$env/static/private' {
 	export const npm_package_scripts_ham: string;
 	export const npm_package_exports___node_types: string;
 	export const npm_package_files_0: string;
+	export const MOTD_SHOWN: string;
 	export const HOME: string;
-	export const OLDPWD: string;
 	export const npm_package_devDependencies_sass: string;
 	export const npm_package_devDependencies_eslint_plugin_tsdoc: string;
 	export const npm_package_devDependencies__typescript_eslint_parser: string;
 	export const npm_package_files_1: string;
 	export const npm_package_repository_directory: string;
+	export const TERM_PROGRAM_VERSION: string;
 	export const NVM_BIN: string;
+	export const VSCODE_IPC_HOOK_CLI: string;
 	export const npm_package_devDependencies_eslint_config_prettier: string;
 	export const npm_package_files_2: string;
 	export const NVM_INC: string;
@@ -83,11 +86,13 @@ declare module '$env/static/private' {
 	export const npm_package_exports___vite_import: string;
 	export const npm_package_files_3: string;
 	export const npm_package_devDependencies_svelte_preprocess: string;
+	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const YARN_WRAP_OUTPUT: string;
 	export const npm_package_dependencies__astrojs_tailwind: string;
 	export const npm_package_dependencies__astrojs_partytown: string;
 	export const npm_config_version_tag_prefix: string;
 	export const npm_package_files_4: string;
+	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const npm_package_dependencies_react_icons: string;
 	export const npm_package_scripts_check: string;
 	export const npm_package_files_5: string;
@@ -97,6 +102,7 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies_svgo: string;
 	export const npm_package_scripts_postinstall: string;
 	export const npm_package_files_6: string;
+	export const COLORTERM: string;
 	export const WSL_DISTRO_NAME: string;
 	export const npm_package_description: string;
 	export const npm_package_dependencies_react_router_dom: string;
@@ -172,6 +178,8 @@ declare module '$env/static/private' {
 	export const npm_package_dependencies__astrojs_mdx: string;
 	export const npm_package_devDependencies_eslint: string;
 	export const LS_COLORS: string;
+	export const VSCODE_GIT_IPC_HANDLE: string;
+	export const TERM_PROGRAM: string;
 	export const npm_lifecycle_script: string;
 	export const npm_package_dependencies_astro: string;
 	export const npm_package_scripts_test_cross_platform_dev: string;
@@ -209,6 +217,7 @@ declare module '$env/static/private' {
 	export const npm_package_dependencies_undici: string;
 	export const npm_config_strict_ssl: string;
 	export const npm_package_license: string;
+	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const npm_package_dependencies_rehype_autolink_headings: string;
 	export const npm_package_dependencies_crypto_js: string;
 	export const npm_package_dependencies__lottiefiles_lottie_player: string;
@@ -239,7 +248,6 @@ declare module '$env/static/private' {
 	export const npm_config_shamefully_hoist: string;
 	export const npm_package_exports___node_polyfills_types: string;
 	export const INIT_CWD: string;
-	export const NVM_RC_VERSION: string;
 	export const WSLENV: string;
 	export const npm_package_dependencies_react: string;
 	export const npm_package_devDependencies__types_eslint: string;
@@ -300,6 +308,7 @@ declare module '$env/dynamic/private' {
 		npm_package_scripts_generate_version: string;
 		npm_package_dependencies__types_cookie: string;
 		npm_config_wrap_output: string;
+		GIT_ASKPASS: string;
 		npm_node_execpath: string;
 		npm_package_dependencies__types_lodash: string;
 		npm_config_init_version: string;
@@ -312,14 +321,16 @@ declare module '$env/dynamic/private' {
 		npm_package_scripts_ham: string;
 		npm_package_exports___node_types: string;
 		npm_package_files_0: string;
+		MOTD_SHOWN: string;
 		HOME: string;
-		OLDPWD: string;
 		npm_package_devDependencies_sass: string;
 		npm_package_devDependencies_eslint_plugin_tsdoc: string;
 		npm_package_devDependencies__typescript_eslint_parser: string;
 		npm_package_files_1: string;
 		npm_package_repository_directory: string;
+		TERM_PROGRAM_VERSION: string;
 		NVM_BIN: string;
+		VSCODE_IPC_HOOK_CLI: string;
 		npm_package_devDependencies_eslint_config_prettier: string;
 		npm_package_files_2: string;
 		NVM_INC: string;
@@ -330,11 +341,13 @@ declare module '$env/dynamic/private' {
 		npm_package_exports___vite_import: string;
 		npm_package_files_3: string;
 		npm_package_devDependencies_svelte_preprocess: string;
+		VSCODE_GIT_ASKPASS_MAIN: string;
 		YARN_WRAP_OUTPUT: string;
 		npm_package_dependencies__astrojs_tailwind: string;
 		npm_package_dependencies__astrojs_partytown: string;
 		npm_config_version_tag_prefix: string;
 		npm_package_files_4: string;
+		VSCODE_GIT_ASKPASS_NODE: string;
 		npm_package_dependencies_react_icons: string;
 		npm_package_scripts_check: string;
 		npm_package_files_5: string;
@@ -344,6 +357,7 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies_svgo: string;
 		npm_package_scripts_postinstall: string;
 		npm_package_files_6: string;
+		COLORTERM: string;
 		WSL_DISTRO_NAME: string;
 		npm_package_description: string;
 		npm_package_dependencies_react_router_dom: string;
@@ -419,6 +433,8 @@ declare module '$env/dynamic/private' {
 		npm_package_dependencies__astrojs_mdx: string;
 		npm_package_devDependencies_eslint: string;
 		LS_COLORS: string;
+		VSCODE_GIT_IPC_HANDLE: string;
+		TERM_PROGRAM: string;
 		npm_lifecycle_script: string;
 		npm_package_dependencies_astro: string;
 		npm_package_scripts_test_cross_platform_dev: string;
@@ -456,6 +472,7 @@ declare module '$env/dynamic/private' {
 		npm_package_dependencies_undici: string;
 		npm_config_strict_ssl: string;
 		npm_package_license: string;
+		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		npm_package_dependencies_rehype_autolink_headings: string;
 		npm_package_dependencies_crypto_js: string;
 		npm_package_dependencies__lottiefiles_lottie_player: string;
@@ -486,7 +503,6 @@ declare module '$env/dynamic/private' {
 		npm_config_shamefully_hoist: string;
 		npm_package_exports___node_polyfills_types: string;
 		INIT_CWD: string;
-		NVM_RC_VERSION: string;
 		WSLENV: string;
 		npm_package_dependencies_react: string;
 		npm_package_devDependencies__types_eslint: string;
