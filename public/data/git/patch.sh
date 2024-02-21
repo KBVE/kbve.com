@@ -4,8 +4,10 @@ set -e
 # Checkout Origin Dev Branch
 git checkout origin/dev
 
-git_date=$(date +'%m-%d-%Y')
+git_date=$(date +'%m-%d-%Y-%s')
 
-git switch -c "patch-ubuntu-${git_date}"
+git branch "patch-ubuntu-${git_date}"
+
+git checkout "patch-ubuntu-${git_date}"
 #
 
