@@ -1,9 +1,0 @@
-{
-    "name": "Sign Up",
-    "fetch": "https://kbve.com/assets/graphql/v1/signup.txt",
-    "var": {
-        "email": "email",
-        "password": "password",
-        "name": "name"
-    }
-}
