@@ -150,8 +150,8 @@
       "public/archive": false,
     },
     "editor.codeActionsOnSave": {
-        "source.fixAll": false,
-        "source.organizeImports": false        
+      "source.fixAll": "never",
+      "source.organizeImports": "never"
     },
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
