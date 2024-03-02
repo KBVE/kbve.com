@@ -1,10 +1,10 @@
 name: Release
 
 on:
-  workflow_dispatch:
+  #workflow_dispatch:
   # Branches
-  #push:
-  #  branches: ["dev*"]
+  push:
+    branches: ["dev*"]
 
 jobs:
   pull-request:
