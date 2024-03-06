@@ -41,7 +41,7 @@
 	animation-duration: 180ms;
 	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 	animation-fill-mode: both;
-	animation-name: astroFadeIn; }</style></head> <div class="h-screen w-full bg-zinc-950 relative flex overflow-hidden"> <div class="w-full h-full flex flex-col justify-between"> <main class="max-w-full h-full flex relative overflow-y-hidden" data-astro-transition-scope="astro-rxefxzo4-1"> <div class="h-full w-full justify-start rounded-tl flex flex-wrap gap-4 overflow-y-scroll content-start p-3 ">  <section class="flex-auto w-full md:w-6/12 p-5 bg-[#c0987d] border border-cyan-200 rounded-lg shadow bg-default bg-cover bg-blend-overlay" style="background-image: url('https://utfs.io/f/ae961975-ad95-4247-91cc-2c573d6fbe3e-1t0m0l.webp')"> <script type="module" src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/+esm"></script> <script type="module" src="https://cdn.jsdelivr.net/npm/grid-engine@2.44.2/+esm"></script> <!-- 
+	animation-name: astroFadeIn; }</style></head> <div class="h-screen w-full bg-zinc-950 relative flex overflow-hidden"> <div class="w-full h-full flex flex-col justify-between"> <main class="max-w-full h-full flex relative overflow-y-hidden" data-astro-transition-scope="astro-rxefxzo4-1"> <div class="h-full w-full justify-start rounded-tl flex flex-wrap gap-4 overflow-y-scroll content-start p-3 ">  <section class="flex-auto w-full md:w-6/12 p-5 bg-[#c0987d] border border-cyan-200 rounded-lg shadow bg-default bg-cover bg-blend-overlay" style="background-image: url('https://utfs.io/f/ae961975-ad95-4247-91cc-2c573d6fbe3e-1t0m0l.webp')"> <script type="module" src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/+esm"></script> <script type="module" src="https://cdn.jsdelivr.net/npm/grid-engine@2.44.2/+esm"></script> <!--
     *! We can remove this
     <script is:inline src="
 https://cdn.jsdelivr.net/npm/grid-engine@2.44.2/dist/GridEngine.min.js
@@ -82,7 +82,7 @@ https://cdn.jsdelivr.net/npm/grid-engine@2.44.2/dist/GridEngine.min.js
                     }, // Anti Alias
                     type: Phaser.AUTO,
                     parent: _phaserContainer,
-                
+
                     scale: {
 
                         mode: Phaser.Scale.FIT,
@@ -119,19 +119,23 @@ https://cdn.jsdelivr.net/npm/grid-engine@2.44.2/dist/GridEngine.min.js
                             this.load.image('mainBg', 'https://utfs.io/f/2c17f660-7f39-4edf-b83e-122a71014d99-6gflls.webp'); // Ensure you have a correct path to your logo image
                             this.load.sceneFile('TownScene', `${scene}`);
                             this.load.image('scroll', '/assets/img/fishchip/scroll.webp');
+                            this.load.audio('music', '/assets/img/fishchip/bg.ogg');
                         },
                         create: function() {
+                            if (!this.sound.get('music')?.isPlaying) {
+                              this.sound.add('music', { loop: true, volume: 0.1 }).play();
+                            }
                             this.add.image(480, 480, 'mainBg').setScale(0.1);
-                            
+
                             this.mainMenuButtonImage = this.add.image(480, 480, 'scroll').setAlpha(0.9).setScale(0.7, 0.2).setInteractive({ useHandCursor: true });
-                            
+
                             this.mainMenuButtonText = this.add.text(480, 480, 'Start Game', {
                                 fontFamily: 'Arial Black', fontSize: 50, color: '#ffffff', stroke: '#000000', strokeThickness: 6,
                             }).setOrigin(0.5).setInteractive({ useHandCursor: true });
                             this.mainMenuButtonText.on('pointerdown', () => {
                                 this.scene.start('TownScene');
                             }, this);
-                            
+
 
                         }
                     },
@@ -144,7 +148,7 @@ https://cdn.jsdelivr.net/npm/grid-engine@2.44.2/dist/GridEngine.min.js
                             capture: false
                         }
                     }
-                
+
                 };
 
                     const game =  new Phaser.Game(config);
@@ -155,5 +159,5 @@ https://cdn.jsdelivr.net/npm/grid-engine@2.44.2/dist/GridEngine.min.js
     }
 
     customElements.define('astro-phaser', AstroPhaser);
-    
+
 </script> </section>  </div> </main> </div> </div>  </html>
