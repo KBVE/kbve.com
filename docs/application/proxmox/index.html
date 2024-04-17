@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -118,7 +119,7 @@ The objective of this software is provide a base-line to build your own paradigm
 <p>Initial IPv4 Configuration during Install</p>
 </li>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">Subnet</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> XXX.XXX.XXX.XXX/32</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#8BE9FD">Subnet</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> XXX.XXX.XXX.XXX/32</span></span>
 <span class="line"><span style="color:#8BE9FD">Address</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> XXX.XXX.XXX.XXX</span></span>
 <span class="line"><span style="color:#8BE9FD">Gateway</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> DDD.DDD.DDD.DDD</span></span>
 <span class="line"><span style="color:#8BE9FD">Name Servers</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> 208.67.222.222, 208.67.220.220</span></span>
@@ -134,7 +135,7 @@ The objective of this software is provide a base-line to build your own paradigm
 <p>Ubuntu 22.04 LTS netplan config for container</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">    network</span><span style="color:#FF79C6">:</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#8BE9FD">    network</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">        version</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span></span>
 <span class="line"><span style="color:#8BE9FD">        ethernets</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">            ens18</span><span style="color:#FF79C6">:</span></span>
@@ -158,23 +159,23 @@ The objective of this software is provide a base-line to build your own paradigm
 <p>After updating the yaml, go ahead and run:</p>
 </li>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">  sudo</span><span style="color:#F1FA8C"> netplan</span><span style="color:#F1FA8C"> apply</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">  sudo</span><span style="color:#F1FA8C"> netplan</span><span style="color:#F1FA8C"> apply</span></span>
 <span class="line"></span></code></pre>
 </li>
 <li>
 <p>Test the command by pinging a domain (google.com) and an IPv4 (8.8.8.8), making sure that it works!</p>
 </li>
-</ul><h3 id="windows">Windows</h3><p>This is a generic guide to installing and setting up windows.</p><h4 id="windows-audio">Windows Audio</h4><p>When booting up the Windows KVM, there has to be an audio configuration that has to be setup for the qemu server.</p><p>Grab the qEMU server id from the proxmox list, then go to <code>/etc/pve/qemu-server/$VMID.conf</code>, replacing the <code>$VMID</code> with the ID.</p><p>Then add this to the <code>args</code>:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span></span></span>
+</ul><h3 id="windows">Windows</h3><p>This is a generic guide to installing and setting up windows.</p><h4 id="windows-audio">Windows Audio</h4><p>When booting up the Windows KVM, there has to be an audio configuration that has to be setup for the qemu server.</p><p>Grab the qEMU server id from the proxmox list, then go to <code>/etc/pve/qemu-server/$VMID.conf</code>, replacing the <code>$VMID</code> with the ID.</p><p>Then add this to the <code>args</code>:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="plaintext"><code><span class="line"><span></span></span>
 <span class="line"><span>args: -device intel-hda,id=sound5,bus=pci.0,addr=0x18 -device hda-micro,id=sound5-codec0,bus=sound5.0,cad=0 -device hda-duplex,id=sound5-codec1,bus=sound5.0,cad=1 </span></span>
 <span class="line"><span></span></span>
 <span class="line"><span></span></span></code></pre><p>If this is a fresh install, then you can add the args configuration at the bottom of the file.</p><h4 id="windows-error">Windows Error</h4><p>Quick and short solutions to common window errors that we faced when deploying.</p><h5 id="virtio-drivers">VirtIO Drivers</h5><p>There are two drivers that you can use, the <code>stable</code> and <code>latest</code> iso.
-To add them into your Proxmox instance, go to the iso folder, located below and then download the right driver ISO.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">cd</span><span style="color:#F1FA8C"> /var/lib/vz/template/iso</span></span>
+To add them into your Proxmox instance, go to the iso folder, located below and then download the right driver ISO.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#8BE9FD">cd</span><span style="color:#F1FA8C"> /var/lib/vz/template/iso</span></span>
 <span class="line"></span></code></pre><ul>
 <li>Stable</li>
-</ul><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">wget</span><span style="color:#F1FA8C"> https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso</span></span>
+</ul><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">wget</span><span style="color:#F1FA8C"> https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso</span></span>
 <span class="line"></span></code></pre><ul>
 <li>Latest (in the case if Stable does not work.)</li>
-</ul><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">wget</span><span style="color:#F1FA8C"> https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso</span></span>
+</ul><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">wget</span><span style="color:#F1FA8C"> https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso</span></span>
 <span class="line"></span></code></pre><p>After downloading the right ISO, attach it to your KVM/QEMU instance and then reboot the machine. After the reboot, go to <code>My Computer</code> and run the iso to install the proper drivers.</p> </div></div></section>
 <hr/>
 <section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="notes">Notes</h2><ul>
@@ -194,7 +195,7 @@ To add them into your Proxmox instance, go to the iso folder, located below and 
 </ul><h2 id="podcast">Podcast</h2><p>General jokes/memes about the proxmox and general weird methods.
 We were trying to find a cute and creative way to introduce the vast realm of virtual machines.</p> </div></div></section>
 <hr/>
-<section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h3 id="jokes">Jokes</h3><p>Dock Swarm</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#6272A4"># Setting up Docker Swarm on multiple Proxmox VE containers</span></span>
+<section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h3 id="jokes">Jokes</h3><p>Dock Swarm</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#6272A4"># Setting up Docker Swarm on multiple Proxmox VE containers</span></span>
 <span class="line"><span style="color:#6272A4">#&gt; Ziggy9263 (@jzanecook), h0lybyte (@KBVE)</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">## 1. Introduction</span></span>
