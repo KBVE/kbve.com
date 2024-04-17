@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -79,7 +80,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 <p>Drop Database (Be extremely careful when running this)</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> DATABASE</span><span style="color:#F8F8F2"> {$db_name};</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> DATABASE</span><span style="color:#F8F8F2"> {$db_name};</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li>Replace <code>{$db_Name}</code> with the database that you wish to DROP.</li>
@@ -92,7 +93,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 <p>List All Users</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> user, host </span><span style="color:#FF79C6">FROM</span><span style="color:#BD93F9"> mysql</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">user</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> user, host </span><span style="color:#FF79C6">FROM</span><span style="color:#BD93F9"> mysql</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">user</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li>This will display all the users within the database instance.</li>
@@ -104,7 +105,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 <p>Create User</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> USER {$user[@&#39;host&#39;]} IDENTIFIED </span><span style="color:#FF79C6">BY</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">plain-text-password</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> USER {$user[@&#39;host&#39;]} IDENTIFIED </span><span style="color:#FF79C6">BY</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">plain-text-password</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li><code>{$user[@&#39;host&#39;]}</code> can be replaced by an example like this <code>&#39;root&#39;@&#39;localhost&#39;</code> or <code>&#39;root&#39;@&#39;10.%.%.%&#39;</code>
@@ -120,7 +121,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 <p>Drop User</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> USER</span><span style="color:#F8F8F2"> {$user[@&#39;host&#39;]}</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> USER</span><span style="color:#F8F8F2"> {$user[@&#39;host&#39;]}</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li>This will only remove the user from the mysql instance.</li>
@@ -132,7 +133,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 <p>Create Database</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> DATABASE</span><span style="color:#F8F8F2"> {$</span><span style="color:#FF79C6">database_name</span><span style="color:#F8F8F2">}</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> DATABASE</span><span style="color:#F8F8F2"> {$</span><span style="color:#FF79C6">database_name</span><span style="color:#F8F8F2">}</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li><code>{$database_name}</code> can be replaced as <code>database_name_example</code> , thus creating a statement like <code>CREATE DATABASE database_name_example</code>.</li>
@@ -144,7 +145,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 <p>Grant permissions / privilegages.</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> ALL </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> ${</span><span style="color:#FF79C6">database_name</span><span style="color:#F8F8F2">}.</span><span style="color:#FF79C6">*</span><span style="color:#FF79C6"> TO</span><span style="color:#F8F8F2"> {$user[@&#39;host&#39;]}</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> ALL </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> ${</span><span style="color:#FF79C6">database_name</span><span style="color:#F8F8F2">}.</span><span style="color:#FF79C6">*</span><span style="color:#FF79C6"> TO</span><span style="color:#F8F8F2"> {$user[@&#39;host&#39;]}</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li>There are a couple situations that this statement creates, first it gives <code>ALL</code> permissions to the database, <code>${database_name}</code> with the <code>.*</code> being a wildcard for all the tables inside of the database. Finally the <code>{$user[@&#39;host&#39;]}</code> represents the user connecting via the IP Address.</li>
@@ -156,7 +157,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 </li>
 </ul> </div></div></section>
 <hr/>
-<section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="backup">Backup</h2><p>If you need a quick way to backup the <code>mysql</code> database, then use this command below:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> docker</span><span style="color:#F1FA8C"> exec</span><span style="color:#F8F8F2"> [$mysql_container_name] /usr/bin/mysqldump -u [</span><span style="color:#BD93F9">$mysql_username</span><span style="color:#F8F8F2">] --password=[</span><span style="color:#BD93F9">$mysql_password</span><span style="color:#F8F8F2">] [</span><span style="color:#BD93F9">$database_name</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">&gt;</span><span style="color:#F8F8F2"> [</span><span style="color:#BD93F9">$destination_path</span><span style="color:#F8F8F2">]</span></span>
+<section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="backup">Backup</h2><p>If you need a quick way to backup the <code>mysql</code> database, then use this command below:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> docker</span><span style="color:#F1FA8C"> exec</span><span style="color:#F8F8F2"> [$mysql_container_name] /usr/bin/mysqldump -u [</span><span style="color:#BD93F9">$mysql_username</span><span style="color:#F8F8F2">] --password=[</span><span style="color:#BD93F9">$mysql_password</span><span style="color:#F8F8F2">] [</span><span style="color:#BD93F9">$database_name</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">&gt;</span><span style="color:#F8F8F2"> [</span><span style="color:#BD93F9">$destination_path</span><span style="color:#F8F8F2">]</span></span>
 <span class="line"></span></code></pre><p>You could save the execution command as a shell file and/or reference it inside of your AWX stack.</p><p>More information on <a href="https://kbve.com/application/ansible/#awx" rel="nofollow noopener noreferrer" target="_blank">AWX</a> and <a href="https://kbve.com/application/docker/" rel="nofollow noopener noreferrer" target="_blank">Docker</a></p> </div></div></section>
 <hr/>
 <section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="references">References</h2><h3 id="qa">Q&amp;A</h3><ul>
