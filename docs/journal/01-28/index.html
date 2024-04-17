@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -90,7 +91,7 @@ I want to do this slowly but I will skip the integration testing and stack traci
 <p>This was a pain to figure out because I could not tell if I was having errors from the HCaptcha service, itself, or if there was just something wrong with the docker network.
 In the end, I was able to register my test account, which is enough to move forward with the rest of the refactor.</p>
 <p>The current struct for HCaptcha looks like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="rust"><code><span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">    #[derive(</span><span style="color:#8BE9FD;font-style:italic">Deserialize</span><span style="color:#F8F8F2">)]</span></span>
 <span class="line"><span style="color:#FF79C6">    struct</span><span style="color:#8BE9FD;font-style:italic"> HCaptchaResponse</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">        success</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> bool</span><span style="color:#F8F8F2">,</span></span>
@@ -107,7 +108,7 @@ In the end, I was able to register my test account, which is enough to move forw
 <p>The <code>health_check</code> and <code>speed_test</code> utility functions will be migrated into one route that we will call system diagnostics.
 This route will contain all the information we would need to debug, examine and test the live instance.</p>
 <p>In the integration test case, I am calling them like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">                </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="rust"><code><span class="line"><span style="color:#F8F8F2">                </span></span>
 <span class="line"><span style="color:#FF79C6">    .</span><span style="color:#50FA7B">route</span><span style="color:#F8F8F2">(</span><span style="color:#F1FA8C">&quot;/health&quot;</span><span style="color:#F8F8F2">, </span><span style="color:#50FA7B">get</span><span style="color:#F8F8F2">(kbve</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">routes</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">system_health_check))</span></span>
 <span class="line"><span style="color:#FF79C6">    .</span><span style="color:#50FA7B">route</span><span style="color:#F8F8F2">(</span><span style="color:#F1FA8C">&quot;/speed&quot;</span><span style="color:#F8F8F2">, </span><span style="color:#50FA7B">get</span><span style="color:#F8F8F2">(kbve</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">routes</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">system_database_speed_test))</span></span>
 <span class="line"></span>

@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -104,7 +105,7 @@ Starting with the regex, which I will place under the <code>sanitization_regex.r
 <p>I ended up renaming the module to <code>regex_extractor.rs</code> and now I am going to expand around it for the time being.
 One interesting test case was that I could migrate the ULID check into a regex, which should help with speed of verifying if its valid.
 Before we were using a function like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="rust"><code><span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    pub</span><span style="color:#FF79C6"> fn</span><span style="color:#50FA7B"> validate_input_ulid</span><span style="color:#F8F8F2">(ulid_str</span><span style="color:#FF79C6">:</span><span style="color:#FF79C6"> &amp;</span><span style="color:#8BE9FD;font-style:italic">str</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">-&gt;</span><span style="color:#8BE9FD;font-style:italic"> Result</span><span style="color:#F8F8F2">&lt;</span><span style="color:#FF79C6">&amp;</span><span style="color:#8BE9FD;font-style:italic">str</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">&amp;</span><span style="color:#F8F8F2">&#39;</span><span style="color:#8BE9FD;font-style:italic">static</span><span style="color:#8BE9FD;font-style:italic"> str</span><span style="color:#F8F8F2">&gt; {</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">        // ULID is usually 26 chars.</span></span>
@@ -130,7 +131,7 @@ Before we were using a function like this:</p>
 <p>The sanitization module is now just two core files, the <code>regex_extractor.rs</code> which will isolate the regex and provide helper extraction functions.
 Then there is the <code>validator.rs</code>, which holds the new ValidationBuilder.</p>
 <p>The way we would use this is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="rust"><code><span class="line"></span>
 <span class="line"><span style="color:#FF79C6">        let</span><span style="color:#FF79C6"> mut</span><span style="color:#F8F8F2"> validator </span><span style="color:#FF79C6">=</span><span style="color:#8BE9FD;font-style:italic"> ValidatorBuilder</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">&lt;</span><span style="color:#FF79C6">&amp;</span><span style="color:#8BE9FD;font-style:italic">str</span><span style="color:#F8F8F2">&gt;</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">new</span><span style="color:#F8F8F2">()</span></span>
 <span class="line"><span style="color:#FF79C6">            .</span><span style="color:#50FA7B">password</span><span style="color:#F8F8F2">(); </span><span style="color:#6272A4">// Add password validation rule</span></span>
 <span class="line"></span>

@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -121,12 +122,12 @@ By integrating the two, developers can leverage React’s state management and c
 <p>Install via Package Manager</p>
 </li>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">      yarn</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> react-unity-webgl</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">      yarn</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> react-unity-webgl</span></span>
 <span class="line"></span></code></pre>
 </li>
 <li>
 <p>For NPM:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    npm</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> react-unity-webgl</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    npm</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> react-unity-webgl</span></span>
 <span class="line"></span></code></pre>
 </li>
 </ul><h4 id="react-unity-component">React Unity Component</h4><ul>
@@ -134,7 +135,7 @@ By integrating the two, developers can leverage React’s state management and c
 <p>The simple way to render the entity will be from below:</p>
 </li>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">  import</span><span style="color:#F8F8F2"> React </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">react</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">  import</span><span style="color:#F8F8F2"> React </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">react</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">  import</span><span style="color:#F8F8F2"> { Unity, useUnityContext } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">react-unity-webgl</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">  function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
@@ -162,10 +163,10 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <li><code>@threlte/rapier</code> - Rapier physics engine integration through components and hooks within Threlte.</li>
 </ol> </div></div></section>
 <hr/>
-<section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="astro">Astro</h2><h3 id="astro-svelte">Astro Svelte</h3><p>An example of calling or rendering Svelte objects inside of Astro with a slot:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&lt;</span><span style="color:#FF79C6">object</span><span style="color:#50FA7B;font-style:italic"> client:only</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">svelte</span><span style="color:#E9F284">&quot;</span><span style="color:#F8F8F2">&gt;</span></span>
+<section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="astro">Astro</h2><h3 id="astro-svelte">Astro Svelte</h3><p>An example of calling or rendering Svelte objects inside of Astro with a slot:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="html"><code><span class="line"><span style="color:#F8F8F2">&lt;</span><span style="color:#FF79C6">object</span><span style="color:#50FA7B;font-style:italic"> client:only</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">svelte</span><span style="color:#E9F284">&quot;</span><span style="color:#F8F8F2">&gt;</span></span>
 <span class="line"><span style="color:#6272A4">    &lt;!-- Slot --&gt;</span></span>
 <span class="line"><span style="color:#F8F8F2">&lt;/</span><span style="color:#FF79C6">object</span><span style="color:#F8F8F2">&gt;</span></span>
-<span class="line"></span></code></pre><p>Without a slot:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&lt;</span><span style="color:#FF79C6">object</span><span style="color:#50FA7B;font-style:italic"> client</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B;font-style:italic">only</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">svelte</span><span style="color:#E9F284">&quot;</span><span style="color:#F8F8F2"> /&gt;</span></span>
+<span class="line"></span></code></pre><p>Without a slot:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F8F8F2">&lt;</span><span style="color:#FF79C6">object</span><span style="color:#50FA7B;font-style:italic"> client</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B;font-style:italic">only</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">svelte</span><span style="color:#E9F284">&quot;</span><span style="color:#F8F8F2"> /&gt;</span></span>
 <span class="line"></span></code></pre> </div></div></section>
 <hr/>
 <section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="bun">Bun</h2><p>Bun is a batteries-included runtime engine that bundles, transpiles, installs and runs Javascript / typescript with a task runner.</p><h3 id="bun-install">Bun Install</h3><ul>
@@ -173,7 +174,7 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <p>CLI for MacOS, Linux and Windows (through WSL)</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    curl</span><span style="color:#F1FA8C"> https://bun.sh/install</span><span style="color:#FF79C6"> |</span><span style="color:#50FA7B"> bash</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    curl</span><span style="color:#F1FA8C"> https://bun.sh/install</span><span style="color:#FF79C6"> |</span><span style="color:#50FA7B"> bash</span></span>
 <span class="line"></span></code></pre>
 </li>
 </ul>
@@ -182,7 +183,7 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <p>Homebrew for MacOS / Linux</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    brew</span><span style="color:#F1FA8C"> tap</span><span style="color:#F1FA8C"> oven-sh/bun</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    brew</span><span style="color:#F1FA8C"> tap</span><span style="color:#F1FA8C"> oven-sh/bun</span></span>
 <span class="line"><span style="color:#50FA7B">    brew</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> bun</span></span>
 <span class="line"></span></code></pre>
 </li>
@@ -195,8 +196,8 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <p>Bun recommends using the <code>jarredsumner/bun:edge</code> build as the Docker base.</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> pull</span><span style="color:#F1FA8C"> jarredsumner/bun:edge</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --rm</span><span style="color:#BD93F9"> --init</span><span style="color:#BD93F9"> --ulimit</span><span style="color:#F1FA8C"> memlock=</span><span style="color:#BD93F9">-1</span><span style="color:#F1FA8C">:-1</span><span style="color:#F1FA8C"> jarredsumner/bun:edge</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> pull</span><span style="color:#F1FA8C"> jarredsumner/bun:edge</span></span>
+<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --rm</span><span style="color:#BD93F9"> --init</span><span style="color:#BD93F9"> --ulimit</span><span style="color:#F1FA8C"> memlock=-1:-1</span><span style="color:#F1FA8C"> jarredsumner/bun:edge</span></span>
 <span class="line"></span></code></pre>
 </li>
 </ul>
@@ -205,7 +206,7 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <p>Example of Docker build:</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">FROM</span><span style="color:#F1FA8C"> jarredsumner/bun:edge</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">FROM</span><span style="color:#F1FA8C"> jarredsumner/bun:edge</span></span>
 <span class="line"><span style="color:#50FA7B">WORKDIR</span><span style="color:#F1FA8C"> /app</span></span>
 <span class="line"><span style="color:#50FA7B">COPY</span><span style="color:#F1FA8C"> package.json</span><span style="color:#F1FA8C"> package.json</span></span>
 <span class="line"><span style="color:#50FA7B">COPY</span><span style="color:#F1FA8C"> bun.lockb</span><span style="color:#F1FA8C"> bun.lockb</span></span>
@@ -232,7 +233,7 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <p>Latest Version</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> upgrade</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> upgrade</span></span>
 <span class="line"></span></code></pre>
 </li>
 </ul>
@@ -241,17 +242,17 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <p>Canary Version</p>
 <ul>
 <li>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> upgrade</span><span style="color:#BD93F9"> --canary</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> upgrade</span><span style="color:#BD93F9"> --canary</span></span>
 <span class="line"></span></code></pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-</ul><h3 id="bun-commands">Bun Commands</h3><p>Quick cheatsheet on the general commands for <code>bun</code>.</p><h4 id="bun-run">Bun Run</h4><p>This will execute the script (Javascript / Typescript) within the runtime engine.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> run</span></span>
-<span class="line"></span></code></pre><p>This should replace <code>npm run</code> with <code>bun run</code>.</p><h4 id="bun-clean">Bun Clean</h4><p>To remove the cache:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> clean</span></span>
-<span class="line"></span></code></pre><h4 id="bun-hot">Bun Hot</h4><p>Hot Reload : Bun will live reload the application, similar to file watchers like nodemon.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --hot</span><span style="color:#F1FA8C"> index.ts</span></span>
-<span class="line"></span></code></pre><h4 id="bun-dependencies-install">Bun Dependencies Install</h4><p>This will install the dependencies for the application using an extremely fast npm-compatible package manager.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> install</span></span>
+</ul><h3 id="bun-commands">Bun Commands</h3><p>Quick cheatsheet on the general commands for <code>bun</code>.</p><h4 id="bun-run">Bun Run</h4><p>This will execute the script (Javascript / Typescript) within the runtime engine.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> run</span></span>
+<span class="line"></span></code></pre><p>This should replace <code>npm run</code> with <code>bun run</code>.</p><h4 id="bun-clean">Bun Clean</h4><p>To remove the cache:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> clean</span></span>
+<span class="line"></span></code></pre><h4 id="bun-hot">Bun Hot</h4><p>Hot Reload : Bun will live reload the application, similar to file watchers like nodemon.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --hot</span><span style="color:#F1FA8C"> index.ts</span></span>
+<span class="line"></span></code></pre><h4 id="bun-dependencies-install">Bun Dependencies Install</h4><p>This will install the dependencies for the application using an extremely fast npm-compatible package manager.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">bun</span><span style="color:#F1FA8C"> install</span></span>
 <span class="line"></span></code></pre><blockquote>
 <p>This should replace <code>yarn install</code> or <code>npm install</code> with <code>bun install</code></p>
 </blockquote><h4 id="bun-flags">Bun Flags</h4><p>This chart is from the official documentation.</p>
@@ -334,7 +335,7 @@ Official <a href="https://github.com/threlte/threlte" rel="nofollow noopener nor
 <p>This is a custom animation that you can add to TailWindCSS by extending the animations field within the configuration file.</p>
 <p>Scoped: <code>animation: { &#39;spin-slow&#39;: &#39;spin 5s linear infinite&#39;,  }</code></p>
 <p>Proof of Concept:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#6272A4">/** </span><span style="color:#FF79C6">@type</span><span style="color:#8BE9FD;font-style:italic"> {import(&#39;tailwindcss&#39;).Config}</span><span style="color:#6272A4"> */</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6272A4">/** </span><span style="color:#FF79C6">@type</span><span style="color:#8BE9FD;font-style:italic"> {import(&#39;tailwindcss&#39;).Config}</span><span style="color:#6272A4"> */</span></span>
 <span class="line"><span style="color:#8BE9FD;font-style:italic">module</span><span style="color:#F8F8F2">.</span><span style="color:#8BE9FD;font-style:italic">exports</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">    theme</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">        extend</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
@@ -371,13 +372,13 @@ By providing a more interactive and visually engaging user experience, Lottie ha
 <section class="flex-auto  p-5 border border-gray-200 rounded-lg shadow"><div widget="mdx:render:mdxjs"><div class="text-gray-200 prose max-w-none prose-li:text-yellow-500 prose-td:text-yellow-500 prose-tr:text-cyan-200 prose-tr:border-b-indigo-500/10 prose-p:text-yellow-500 prose-a:text-cyan-200 prose-code:text-cyan-200 prose-code:before:content-none prose-code:after:content-none prose-headings:text-cyan-200 prose-ul:text-yellow-500"> <h2 id="swup">SWUP</h2><h3 id="swup-install">SWUP Install</h3><ul>
 <li>
 <p>Adding <code>swup</code> page into your nodejs application via yarn.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> swup</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> swup</span></span>
 <span class="line"></span></code></pre>
 <p>or yarn</p>
 </li>
 <li>
 <p>Plugins to install for <code>swup</code> via yarn.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    yarn</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> @swup/scripts-plugin</span><span style="color:#F1FA8C"> @swup/a11y-plugin</span><span style="color:#F1FA8C"> @swup/head-plugin</span><span style="color:#F1FA8C"> @swup/slide-theme</span><span style="color:#F1FA8C"> @swup/scroll-plugin</span><span style="color:#F1FA8C"> @swup/preload-plugin</span><span style="color:#F1FA8C"> @swup/body-class-plugin</span><span style="color:#F1FA8C"> @swup/debug-plugin</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    yarn</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> @swup/scripts-plugin</span><span style="color:#F1FA8C"> @swup/a11y-plugin</span><span style="color:#F1FA8C"> @swup/head-plugin</span><span style="color:#F1FA8C"> @swup/slide-theme</span><span style="color:#F1FA8C"> @swup/scroll-plugin</span><span style="color:#F1FA8C"> @swup/preload-plugin</span><span style="color:#F1FA8C"> @swup/body-class-plugin</span><span style="color:#F1FA8C"> @swup/debug-plugin</span></span>
 <span class="line"></span></code></pre>
 </li>
 </ul> </div></div></section>
@@ -401,11 +402,11 @@ running time:
 total time:</p><p>We can utilize this via Github Actions, through the Size-limit Report.
 Github Action <a href="https://github.com/andresz1/size-limit-action" rel="nofollow noopener noreferrer" target="_blank">Reference</a></p><hr/><h2 id="shiki">Shiki</h2><p>Shiki is a syntax highlighter based on the same syntax definitions as Visual Studio Code, ensuring accurate and visually consistent code highlighting.
 When integrated with MDX, a format that combines Markdown and JSX, Shiki can provide syntax highlighting for code blocks within MDX content.
-The combination ensures that developers get a high-quality, themeable code highlighting experience in their MDX-based documents or blogs.</p><h3 id="shiki-install">Shiki Install</h3><p>You can install shiki through common package managers.</p><p>NPM || Node Package Manager:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+The combination ensures that developers get a high-quality, themeable code highlighting experience in their MDX-based documents or blogs.</p><h3 id="shiki-install">Shiki Install</h3><p>You can install shiki through common package managers.</p><p>NPM || Node Package Manager:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"></span>
 <span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> i</span><span style="color:#F1FA8C"> shiki</span></span>
-<span class="line"></span></code></pre><p>Yarn:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<span class="line"></span></code></pre><p>Yarn:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"></span>
 <span class="line"><span style="color:#50FA7B">yarn</span><span style="color:#F1FA8C"> add</span><span style="color:#F1FA8C"> shiki</span></span>
-<span class="line"></span></code></pre><h3 id="shiki-configurations">Shiki Configurations</h3><p>Template themes for <code>Shiki</code>:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> type</span><span style="color:#8BE9FD;font-style:italic"> Theme</span><span style="color:#FF79C6"> =</span></span>
+<span class="line"></span></code></pre><h3 id="shiki-configurations">Shiki Configurations</h3><p>Template themes for <code>Shiki</code>:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> type</span><span style="color:#8BE9FD;font-style:italic"> Theme</span><span style="color:#FF79C6"> =</span></span>
 <span class="line"><span style="color:#FF79C6">    |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">css-variables</span><span style="color:#E9F284">&#39;</span></span>
 <span class="line"><span style="color:#FF79C6">    |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">dark-plus</span><span style="color:#E9F284">&#39;</span></span>
 <span class="line"><span style="color:#FF79C6">    |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">dracula-soft</span><span style="color:#E9F284">&#39;</span></span>
