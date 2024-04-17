@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -75,16 +76,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
 <p>12:32pm - Building the js-embeds for the Monorepo!
 The first step would be to plan the bundling software for the embedable widgets, which might be done through React or Svelte.
 I am going to double check if the vite plugin is up-to-date, by running:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> install</span><span style="color:#BD93F9"> -D</span><span style="color:#F1FA8C"> @nx/vite</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> install</span><span style="color:#BD93F9"> -D</span><span style="color:#F1FA8C"> @nx/vite</span></span>
 <span class="line"></span></code></pre>
 <p>then double check the plugin with:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> @nx/vite:init</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> @nx/vite:init</span></span>
 <span class="line"></span></code></pre>
 <p>There might be isssues that you run into, if so, run:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> reset</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> reset</span></span>
 <span class="line"></span></code></pre>
 <p>Okay! As I am writing this, I decided to add reset into the kbve shell file, so that it would run the commands in a managed tmux session.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    ./kbve.sh</span><span style="color:#BD93F9"> -reset</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    ./kbve.sh</span><span style="color:#BD93F9"> -reset</span></span>
 <span class="line"></span></code></pre>
 <p>This would be the reset command that we can run everytime we update the NX monorepo.</p>
 </li>
@@ -100,20 +101,20 @@ However that might end up being way too much abstraction for the given moment.`<
 <li>
 <p>5:44pm - Let me start the <code>js-embed-passport</code>, since we have installed the base requirements for it!
 To start the project, I am going to run an initializer within NX.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> @nx/react:app</span><span style="color:#F1FA8C"> js-embed-passport</span><span style="color:#BD93F9"> --bundler=vite</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> @nx/react:app</span><span style="color:#F1FA8C"> js-embed-passport</span><span style="color:#BD93F9"> --bundler=vite</span></span>
 <span class="line"></span></code></pre>
 <p>The scope of this embedable passport would be to help handle some of the communication between our WASMs and javascript.
 Ah the command has been updated to include a flag for version Nx18, which we do not have but that means this commnand will become out dated later this year!
 So fair warning.</p>
 <p>To get the service of the development build, I had to run this command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> js-embed-passport:serve:development</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> js-embed-passport:serve:development</span></span>
 <span class="line"></span></code></pre>
 <p>For the production build, the command will be like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pnpm</span><span style="color:#F1FA8C"> exec</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> js-embed-passport:build</span><span style="color:#BD93F9"> --configuration=production</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">pnpm</span><span style="color:#F1FA8C"> exec</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> js-embed-passport:build</span><span style="color:#BD93F9"> --configuration=production</span></span>
 <span class="line"></span></code></pre>
 <p>I decided to update the build configuration, by adding a quick rollupOptions to the build configuration.</p>
 <p>Inside of the <code>vite.config.ts</code>, I added these <code>rollupOptions</code> to the <code>build</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="ts"><code><span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">    build: {</span></span>
 <span class="line"><span style="color:#F8F8F2">        outDir: </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">../../dist/apps/js-embed-passport</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">        reportCompressedSize: </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">,</span></span>
@@ -144,7 +145,7 @@ Starting small and working from there would make the most sense.</p>
 <p>6:18pm - To avoid having major responsive issues, we could keep with the passport style and limit the size of the window that it generates but scale it up for larger screens.
 The core of the widget / library should still remain being tailwindcss, so that should help us with blending it amoungst other themes.
 I had to update the final production command with an additional flag, thus the new command will look like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> exec</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> js-embed-passport:build</span><span style="color:#BD93F9"> --configuration=production</span><span style="color:#BD93F9"> --emptyOutDir</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> exec</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> js-embed-passport:build</span><span style="color:#BD93F9"> --configuration=production</span><span style="color:#BD93F9"> --emptyOutDir</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre>
 <p>The additional command to empty out directory will make sure to clean up the /dist/ folder.</p>

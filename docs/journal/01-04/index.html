@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -82,18 +83,18 @@ We can call the library, <code>KhashVault</code> and have it serve as the cache 
 <li>
 <p>12:18pm - Now I am looking into the bundler for the custom library that I am going to be using.
 For the vite bundler, we could use the nx generator via this command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> @nx/js:lib</span><span style="color:#F1FA8C"> khashvault</span><span style="color:#BD93F9">  --directory</span><span style="color:#F1FA8C"> packages/khashvault</span><span style="color:#BD93F9"> --bundler=vite</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> @nx/js:lib</span><span style="color:#F1FA8C"> khashvault</span><span style="color:#BD93F9">  --directory</span><span style="color:#F1FA8C"> packages/khashvault</span><span style="color:#BD93F9"> --bundler=vite</span></span>
 <span class="line"></span></code></pre>
 <p>Including the Nx 18 command for deriving the name / root.</p>
 <p>For the vite test casing, it seems that we would have to configure the <code>vite-plugin-dts</code>, this is a vite plugin that generates declaration files <code>*.d.ts</code>.</p>
 <p>To make sure that we have the plugin installed, we would run this command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> i</span><span style="color:#F1FA8C"> vite-plugin-dts</span><span style="color:#BD93F9"> -D</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> i</span><span style="color:#F1FA8C"> vite-plugin-dts</span><span style="color:#BD93F9"> -D</span></span>
 <span class="line"></span></code></pre>
 <p>After the plugin has been installed, it would be wise to reset the monorepo, with this command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    ./kbve.sh</span><span style="color:#BD93F9"> -reset</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    ./kbve.sh</span><span style="color:#BD93F9"> -reset</span></span>
 <span class="line"></span></code></pre>
 <p>Okay to run the test casing for the library, we will use this command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> exec</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> khashvault:test</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    pnpm</span><span style="color:#F1FA8C"> exec</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> khashvault:test</span></span>
 <span class="line"></span></code></pre>
 <p>The <code>khashvault</code> is the name of the library that we just created.</p>
 <p>Going to migrate the <code>storage.ts</code> from the <code>Astro-ve</code> to the new <code>KhashVault</code> library that we are building.</p>
@@ -103,7 +104,7 @@ For the vite bundler, we could use the nx generator via this command:</p>
 For the WSL/Ubuntu:
 <code>shell       sudo apt-get install protobuf-compiler   </code>
 After the compiler is added and installed, we will check the version, with this command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">        protoc</span><span style="color:#BD93F9"> --version</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">        protoc</span><span style="color:#BD93F9"> --version</span></span>
 <span class="line"></span></code></pre>
 <p>This should return something along this line:
 <code>libprotoc 3.12.4</code></p>
@@ -120,11 +121,11 @@ An example of it would be: - <code>TODO: unknown type Binary</code></p>
 <p>10:44pm - The current solution might be to just run sed after the generation to fix some of the generated files.
 It seems that I forgot to remove the <code>Identifiable</code> from the <code>derive</code> but need to account for the commas.
 So here the is the shell command that I will add into the kbve shell.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    sed</span><span style="color:#BD93F9"> -i</span><span style="color:#BD93F9"> -e</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">s/#[derive(.*,\s*)Identifiable,\s*(.*)]/#[derive(\1\2)]/g</span><span style="color:#E9F284">&#39;</span><span style="color:#BD93F9"> -e</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">s/#[derive(.*),\s*Identifiable\s*]/#[derive(\1)]/g</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C"> your_file.rs</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    sed</span><span style="color:#BD93F9"> -i</span><span style="color:#BD93F9"> -e</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">s/#[derive(.*,\s*)Identifiable,\s*(.*)]/#[derive(\1\2)]/g</span><span style="color:#E9F284">&#39;</span><span style="color:#BD93F9"> -e</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">s/#[derive(.*),\s*Identifiable\s*]/#[derive(\1)]/g</span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C"> your_file.rs</span></span>
 <span class="line"></span></code></pre>
 <p>This was giving some issues with the regex of the comma, so I decided to just remove the instance with <code>, Identifiable</code>.
 I will come back to this issue later on.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="rust"><code><span class="line"></span>
 <span class="line"><span style="color:#FF79C6">use</span><span style="color:#FF79C6"> crate::</span><span style="color:#F8F8F2">apikey</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">dsl</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">apikey;</span></span>
 <span class="line"><span style="color:#FF79C6">use</span><span style="color:#FF79C6"> crate::</span><span style="color:#F8F8F2">appwrite</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">dsl</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">appwrite;</span></span>
 <span class="line"><span style="color:#FF79C6">use</span><span style="color:#FF79C6"> crate::</span><span style="color:#F8F8F2">auth</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">dsl</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">auth;</span></span>
@@ -138,7 +139,7 @@ I will come back to this issue later on.</p>
 <p>We will skip this part of the code block as well for now.</p>
 <p>The next two phases of the protobuf generation would be the <code>into_proto</code> and the <code>from_proto</code>.
 Both of these can be generated using <code>-f</code> and <code>-i</code> flags, like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#50FA7B">    diesel_ext</span><span style="color:#BD93F9"> -i</span><span style="color:#BD93F9"> -c</span><span style="color:#F1FA8C"> class_name</span><span style="color:#FF79C6"> &gt;</span><span style="color:#F1FA8C"> src/into_proto.rs</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">    diesel_ext</span><span style="color:#BD93F9"> -i</span><span style="color:#BD93F9"> -c</span><span style="color:#F1FA8C"> class_name</span><span style="color:#FF79C6"> &gt;</span><span style="color:#F1FA8C"> src/into_proto.rs</span></span>
 <span class="line"><span style="color:#50FA7B">    diesel_ext</span><span style="color:#BD93F9"> -f</span><span style="color:#BD93F9"> -c</span><span style="color:#F1FA8C"> class_name</span><span style="color:#FF79C6"> &gt;</span><span style="color:#F1FA8C"> src/from_proto.rs</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre>

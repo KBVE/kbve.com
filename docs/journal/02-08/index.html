@@ -54,9 +54,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     document.addEventListener('astro:page-load', () => {
         reloadNanoStores()
     });
-</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BHDY3266.css" />
+</script><script type="module" async src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script><!-- <ViewTransitions /> --><link rel="stylesheet" href="/_astro/_id_.BrvxKoim.css" />
 <style>:root{--color-kbve-menu-bg-dyn: #fff333;--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
 .link-card[data-astro-cid-khjwmru5]{list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card[data-astro-cid-khjwmru5]>a[data-astro-cid-khjwmru5]{width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2[data-astro-cid-khjwmru5]{margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p[data-astro-cid-khjwmru5]{margin-top:.5rem;margin-bottom:0}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card[data-astro-cid-khjwmru5]:is(:hover,:focus-within) h2[data-astro-cid-khjwmru5]{color:rgb(var(--accent-light))}
+@keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out[data-astro-cid-k6z2r6li]{animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in[data-astro-cid-k6z2r6li]{animation:fadeIn 1s ease-in forwards}
 </style><script type="module" src="/_astro/hoisted.ruVjkqGq.js"></script>
 <script type="module" src="/_astro/page.BSacDWVn.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -75,14 +76,14 @@ Since we are going with an extremely modular approach, with atomic changes, I wi
 The last update to the UserDataService, the constructor was only keeping track of email, jwt, level and experience, which we are going to change up a bit.
 We are going to drop the level as a field and replace it with reputation, hmm, I am going to also switch the experience from float to int.</p>
 <p>Under the <code>Scripts/Services/UserDataService.cs</code> , the public interface of IUserDataService can be extended to include these three functions:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="c"><code><span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    void</span><span style="color:#50FA7B"> SetCharacterName</span><span style="color:#F8F8F2">(string </span><span style="color:#FFB86C;font-style:italic">characterName</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#FF79C6">    void</span><span style="color:#50FA7B"> SetReputation</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> level</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#FF79C6">    void</span><span style="color:#50FA7B"> SetExperience</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> experience</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    </span></span>
 <span class="line"></span></code></pre>
 <p>And then we will go ahead and create these functions, to help set them with these functions:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="c"><code><span class="line"><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">public </span><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> SetCharacterName</span><span style="color:#F8F8F2">(string </span><span style="color:#FFB86C;font-style:italic">characterName</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#F8F8F2">    {</span></span>
 <span class="line"><span style="color:#FF79C6">      if</span><span style="color:#F8F8F2"> (_userData </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> null)</span></span>
@@ -115,7 +116,7 @@ I will push this out as a patch and then go back and create a new <code>APIReque
 <p>The next shift will be to integrate the character list into the game, so that the player can pick the character that they would want to play on! Part of this game dynamic would be that the main account remains on the spaceship / guild ship as the captain and these characters would be part of the crew that they send down for the different missions. I am still working out the gameplay, but I figured that I would pivot and evolve it throughout my journey as a meme developer.</p>
 <p>Let me start with creating the base of the APIRequestService! We already did the login system earlier and we can rewrite that as its own / new system. I was thinking it would make sense to keep them split because later on, I could implement a couple different shifts to the actual login system to include captchas or additional security measures.</p>
 <p>The base of the script would look like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="c"><code><span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">using System;</span></span>
 <span class="line"><span style="color:#F8F8F2">using System.Collections;</span></span>
 <span class="line"><span style="color:#F8F8F2">using UnityEngine;</span></span>
@@ -130,7 +131,7 @@ I will push this out as a patch and then go back and create a new <code>APIReque
 <span class="line"></span></code></pre>
 <p>I am keeping this in the notes as a base of reference for future services, the template is pretty straightforward but just incase I forget. It is a pain switching from different languages here and there.</p>
 <p>To maintain a single source of truth, the JWT will come from the UserData service, so we will add this function:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">    private string </span><span style="color:#50FA7B">GetJwtToken</span><span style="color:#F8F8F2">()</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="c"><code><span class="line"><span style="color:#F8F8F2">    private string </span><span style="color:#50FA7B">GetJwtToken</span><span style="color:#F8F8F2">()</span></span>
 <span class="line"><span style="color:#F8F8F2">    {</span></span>
 <span class="line"><span style="color:#F8F8F2">      var userDataService </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Services.Instance.GetService</span><span style="color:#FF79C6">&lt;</span><span style="color:#F8F8F2">IUserDataService</span><span style="color:#FF79C6">&gt;</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"><span style="color:#FF79C6">      return</span><span style="color:#F8F8F2"> userDataService</span><span style="color:#FF79C6">?</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">GetToken</span><span style="color:#F8F8F2">();</span></span>
