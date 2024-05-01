@@ -1,0 +1,1 @@
+import{p as i,a as o}from"./index.B59itue1.js";let e=0,n=[];function c(){return e+=1,()=>{if(e-=1,e===0){let t=n;n=[];for(let s of t)s()}}}function l(t){let s=c();return t().finally(s)}const r=o(""),a=o(""),k=i("kbve:");a.subscribe(t=>{console.log(`[TOAST] -> ${t}`)});const p=async t=>{l(async()=>{r.set(t),a.set(t)})};export{k,p as n,a as t};
