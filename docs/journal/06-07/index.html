@@ -344,6 +344,15 @@ Table of Contents:
 <p>The idea would be that the person makes an issue ticket with the youtube link , title and genre.
 Afterwards we have the github actions parse that information, change the files within the repo and then make a pull request with the changes.</p>
 <p>The actual core of this is to then later expand it into a system of self improving code but we will take small steps towards it.</p>
+<p><strong>Groq</strong></p>
+<p>When calling groq we have three main areas to focus on, the first is easy because it is just the model, which will probably be either the llama70b or mis7x8.
+However the other two will be interesting, one is the system, which is basically the prompt engineer and the other is the prompt.</p>
+<p>Now I am trying to work out the best way to use these, including how we should handle the prompts.</p>
+<p>The next problem that we were facing was the double JSON encoding, which was causing the json to have escapes within it.
+Thankfully, this is a common issue and the patch was easy to fix!</p>
+<p>The next step would be to go back into the github actions for the music process and update it to use <code>jq</code> to process the returned output.</p>
+<p>A quick reminder to myself, we still have to add in the middleware for the groq endpoint!
+We already have a generic endpoint setup, we can just extend it out to cover all the endpoints, I am thinking of migrating them over to <code>/ai/</code>.</p>
 <h2 id="2023">2023</h2>
 <ul>
 <li>8:00am - The blueberries are slowly coming out! I currently have a couple plants but I am excited to see them survive through the winter and can not wait to have even more in the future. My plan might be to turn all the edges into blueberry and blackberry bushes but getting the right plant genetics is still a bit out of my scope. Maybe I could ask GPT?</li>
