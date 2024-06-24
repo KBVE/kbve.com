@@ -343,6 +343,22 @@ Table of Contents:
 <p>The next step would be to update the github actions library with more wrapper options.
 These will be basic ones, like open and close, as well as lock and unlock issue tickets and maybe also reactions.
 I believe we want to also automate the assignee management for issues, which will make things easier to understand down the line.</p>
+<p>Went ahead and updated the action to remove the debug message, since we will not need that for now.</p>
+<p><strong>Music</strong></p>
+<p>Okay we did a couple live test cases with the issue tickets and almost all of them went through except one of them.
+It seems that songs with quotes will cause an escape to occur, which we will need to resolve and fix around that issue.
+However the amount of time that I have spent trying to move this aspect of the project forward is getting a bit too long and it might be time for a break.</p>
+<p>To be exact, when a song title has a <code>&#39;</code> or just a general quote, it needs to be escaped.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="bash"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=edm --title=&#39;Fred again.. - Billie (Loving Arms)&#39; --ytid=XqUZcHBsU5I</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>The escape has to be during the args section of the command.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="bash"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=lofihiphop --title=&#39;Post Malone - Motley Crew (Lofi Remix)&#39; --ytid=uBYFYhHFoW8</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Next update will be in the jukebox play via URL.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" crossorigin="anonymous" data-astro-rerun></script> <!-- Responsive Ad --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3698214103602019" data-ad-slot="7193218754" data-ad-format="auto" data-full-width-responsive="true"></ins> <script data-astro-rerun>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
