@@ -24,7 +24,7 @@ We set the language of the page to English and add classes for scrollbar and scr
       }
 
       requestAnimationFrame(raf);
-    </script><link rel="stylesheet" href="/_astro/about.BDywpE3K.css">
+    </script><link rel="stylesheet" href="/_astro/about.BKoosIkJ.css">
 <style>:root{--transition-cubic: cubic-bezier(.165, .84, .44, 1)}html{scroll-behavior:smooth}article h2,article h3,article h4,article h5,article h6{font-weight:700;margin-top:2.5rem;scroll-margin-top:3rem}h2{font-size:1.5rem;line-height:2rem}h3{font-size:1.25rem;line-height:1.75rem}h4{font-size:1.125rem;line-height:1.75rem}p{margin-top:1.5rem}#toc li{display:flex;align-items:center;opacity:.8;transition:all .3s var(--transition-cubic)}#toc li.selected{opacity:1}#toc li svg{width:0;height:0;transition:height .4s var(--transition-cubic),width .4s var(--transition-cubic)}#toc li.selected svg{width:1.25rem;height:1.25rem;margin-right:.3rem}
 .scrollbar-hide:where(.astro-ouamjn2i)::-webkit-scrollbar{display:none}.scrollbar-hide:where(.astro-ouamjn2i){-ms-overflow-style:none;scrollbar-width:none}html.lenis,html.lenis body{height:auto}.lenis:where(.astro-ouamjn2i).lenis-smooth{scroll-behavior:auto!important}.lenis:where(.astro-ouamjn2i).lenis-smooth :where(.astro-ouamjn2i)[data-lenis-prevent]{overscroll-behavior:contain}.lenis:where(.astro-ouamjn2i).lenis-stopped{overflow:hidden}.lenis:where(.astro-ouamjn2i).lenis-scrolling iframe:where(.astro-ouamjn2i){pointer-events:none}
 .link-card:where(.astro-khjwmru5){list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card:where(.astro-khjwmru5)>a:where(.astro-khjwmru5){width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2:where(.astro-khjwmru5){margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p:where(.astro-khjwmru5){margin-top:.5rem;margin-bottom:0}.link-card:where(.astro-khjwmru5):is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card:where(.astro-khjwmru5):is(:hover,:focus-within) h2:where(.astro-khjwmru5){color:rgb(var(--accent-light))}
@@ -359,6 +359,40 @@ However the amount of time that I have spent trying to move this aspect of the p
 <span class="line"></span>
 <span class="line"></span></code></pre>
 <p>Next update will be in the jukebox play via URL.</p>
+<p>Noo! We had some errors in the jukebox and it seems that copyrighted songs seem to crash the player.
+I am thinking that we should have a report function for removing or replacing a video? Hmm.
+Also fixed direct linking to a song via the idea, so <a href="https://kbve.com/music/?yt=uBYFYhHFoW8" rel="nofollow noopener noreferrer" target="_blank">Post Malone - Motley Crew</a> should load the song dynamically.
+But given that certain songs are getting removed or banned, maybe we should also include a ULID style system for each of the songs?
+This could be done later on, as we expand the collection, but it might end up making them too large, hmm.</p>
+<p>Here is the bash -&gt;</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="bash"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;Rise Against - Like the Angel&#39; --ytid=1B2N0rxp25I</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;CKY - Plastic Plan&#39; --ytid=AlDCT_1u7hU</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;CKY - Escape from Hellview&#39; --ytid=ZYk7vwdwtm8</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;CKY - 96 Quite Bitter Beings&#39; --ytid=aVdR6JeEyT8</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;CKY - Disengage the Simulator&#39; --ytid=yXrFH9agq14</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>The part that fails is within the way we are handling the single quote.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="bash"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;Dirty Heads - Life\&#39;s Been Good &#39; --ytid=R70b1XYuSvQ</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"><span style="color:#50FA7B">pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=--file=rock</span><span style="color:#BD93F9"> --title=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">Dirty Heads - Life&#39;s Been Good</span><span style="color:#E9F284">&quot;</span><span style="color:#BD93F9"> --ytid=R70b1XYuSvQ</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>So there are a couple ways we could handle this, let me sleep on it and maybe tomorrow I will have a better solution.
+We could just escape it with another character and then adjust it later on.
+Let me try it like this:</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="bash"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;Dirty Heads - Life◈s Been Good &#39; --ytid=R70b1XYuSvQ</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>That seems to pass without any issues for now, okay we can work with that for now.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="bash"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kbve.com:music</span><span style="color:#BD93F9"> --args=</span><span style="color:#E9F284">&quot;</span><span style="color:#F1FA8C">--file=rock --title=&#39;Rise Against - Paper Wings&#39; --ytid=ZJwy9jTiyu4</span><span style="color:#E9F284">&quot;</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Let me run another quick command against the rock.mdx and see if that would run into any errors, it seems we do not.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" crossorigin="anonymous" data-astro-rerun></script> <!-- Responsive Ad --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3698214103602019" data-ad-slot="7193218754" data-ad-format="auto" data-full-width-responsive="true"></ins> <script data-astro-rerun>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
