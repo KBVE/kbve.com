@@ -362,7 +362,20 @@ Here is what I am thinking we would do for the interface:</p>
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre>
-<p>We can work with that for now and then extend it out later on.</p>
+<p>We can work with that for now and then extend it out later on.
+Next we will add an action for the IObject.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> interface</span><span style="color:#8BE9FD;font-style:italic"> IObjectAction</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">  itemId</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  itemObject</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> IObject</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  actionEvent</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">consume</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">equip</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">unequip</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">discard</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">view</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  actionPerformedAt</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  performedBy</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  actionDetails</span><span style="color:#FF79C6">?:</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>The equipment test casing seems to be throwing some errors, that might have to do with the fact that we did not yet add items to be equipped.
+I am going to take a break on this area and maybe come back around when we have more items to test case.</p>
 <p><strong>UI</strong></p>
 <p>For the game’s UI/UX, we will have to maintain a submenu system that can be extended and utilized across this game and maybe even future games?
 Right now, we have this seperated from the laser library, I think it would be best to keep it isolated because different games will have different UI elements.
