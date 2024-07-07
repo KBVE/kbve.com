@@ -344,6 +344,30 @@ Table of Contents:
 <p><strong>Items</strong></p>
 <p>For now, we should focus on getting the items to pull from the json and then save them on into the localdb.
 We can do this quickly, as I push the static api route up into the production.</p>
+<p><strong>Equipment</strong></p>
+<p>The equipment aspect of the game will be a bit tricky to render right this second, but we could still handle it within the text mode?
+Here is what I am thinking we would do for the interface:</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="ts"><code><span class="line"></span>
+<span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> interface</span><span style="color:#8BE9FD;font-style:italic"> IEquipment</span><span style="color:#FF79C6"> extends</span><span style="color:#8BE9FD;font-style:italic"> IObject</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">  type</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">head</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">body</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">legs</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">feet</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">hands</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">weapon</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">shield</span><span style="color:#E9F284">&#39;</span><span style="color:#FF79C6"> |</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">accessory</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  bonuses</span><span style="color:#FF79C6">?:</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">    armor</span><span style="color:#FF79C6">?:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">    intelligence</span><span style="color:#FF79C6">?:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">    health</span><span style="color:#FF79C6">?:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">    mana</span><span style="color:#FF79C6">?:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">    [</span><span style="color:#FFB86C;font-style:italic">key</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#F8F8F2">]</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#FF79C6"> |</span><span style="color:#8BE9FD;font-style:italic"> undefined</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  };</span></span>
+<span class="line"><span style="color:#F8F8F2">  durability</span><span style="color:#FF79C6">?:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  weight</span><span style="color:#FF79C6">?:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>We can work with that for now and then extend it out later on.</p>
+<p><strong>UI</strong></p>
+<p>For the game’s UI/UX, we will have to maintain a submenu system that can be extended and utilized across this game and maybe even future games?
+Right now, we have this seperated from the laser library, I think it would be best to keep it isolated because different games will have different UI elements.
+There was a bug where the tooltip did not display exactly where the user had clicked, which seems a bit weird of a bug, but I was able to adjust the client’s x and y to help with that.
+In the future, we could add some extra options to help with this customization, maybe different settings for offsets and things of that nature.</p>
 <h2 id="2023">2023</h2>
 <ul>
 <li>9:30am - Quick coffee trip before sitting down for a meeting and programming session. My general go to breakfast is some egg-form sandwich, coffee and sugar free red bulls!</li>
