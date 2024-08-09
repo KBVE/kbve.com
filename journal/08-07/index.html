@@ -230,6 +230,22 @@ The shell command that we are going to use to run this application is this:</p>
 <p>After the build, we can go ahead and run the docker image locally and make sure that it works without any issues.
 Then move the changes up to the <code>dev</code> branch.</p>
 <p>The curl command that we will be using to hit the <code>rust_api_profile</code> docker image: <code>for i in {1..100000}; do curl -s -o /dev/null http://localhost:3000/api/v1/speed &amp; done wait</code>.</p>
+<p>Next test case will be a quick 1000 on the main API, here is the code that we will run for this:
+<code>for i in {1..100}; do curl -s -o /dev/null https://rust.kbve.com/api/v1/speed &amp; done</code>.</p>
+<p>Actually, now that I am thinking about this, we could probably add this into the KBVE shell file or maybe a custom script to help us handle these requests / test cases.</p>
+<p><strong>Chisel</strong>
+The next update will be to the docker container that would be in charge of chisel.
+I am debating if it would be worth increasing the size of the binary but that performance gain might be offset by an extremely large binary, which may impact the spin up time.</p>
+<p><strong>RAM</strong>
+I did a couple test cases with the ram profile on the new heap allocation and we are sitting at around 6MB start and then hitting 25MB at base usage, then leveling off to around 15MB average and finally, near idle of 11MB.</p>
+<p><strong>Cargo</strong>
+There was a cargo mismatch with the dependencies, so we will have to quickly update that with this patch.
+After cleaning up some of the rust code and updating <code>time-rs</code> crate to the <code>0.3.36</code> version, ugh this should fix the build failure.
+Let us go ahead and test this with:</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> rust_api_profile:build</span></span>
+<span class="line"><span style="color:#50FA7B">./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> rust_api_profile:dev</span></span>
+<span class="line"></span></code></pre>
+<p>A quick build and dev command, let me push this all up and maybe it will trigger the build of the image.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" crossorigin="anonymous" data-astro-rerun></script> <!-- Responsive Ad --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3698214103602019" data-ad-slot="7193218754" data-ad-format="auto" data-full-width-responsive="true"></ins> <script data-astro-rerun>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
