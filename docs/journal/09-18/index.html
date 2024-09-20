@@ -283,7 +283,24 @@ Hmm, however we do want the 1.7.x, so maybe this is just part of the upstream an
 <p><strong>GitOps</strong></p>
 <p>Now that we got the base templates installed, we can go ahead and begin the first failed deployment.
 The goal of the first deployment is to make sure it fails at setting up the cluster from the branch, the sole objective is to see if it can pull the charts that we added.
-After we can confirm the charts are loaded, we can go back and begin updating the charts.</p>
+After we can confirm the charts are loaded, we can go back and begin updating the charts.
+Under the current situation, as of 6pm, I am thinking the best move would be utilize the rancher fleet and if we run into any issues with the fleet, we can step back towards the argocd.
+So of the two mainstream options, Fleet and ArgoCD, we will use fleet first because its already included in our instance and then if we run into issues with fleet then we can switch back to the classic ArgoCD.
+Okay, stashed the changes, switched branches and now preparing for the fleet!</p>
+<p>The breakdown so far looks like this:</p>
+<ul>
+<li>Name: supabase</li>
+<li>Repo: KBVE/kbve</li>
+<li>Target: Advance</li>
+<li>Clusters: 0/0</li>
+</ul>
+<p>We also added the path of <code>/migrations/kube/charts/supabase</code>.
+Since there is no path within the main branch right now, we are getting this error.</p>
+<p><code>Job Failed. failed: 3/1time=&quot;2024-09-18T22:34:10Z&quot; level=fatal msg=&quot;no resource found at the following paths to deploy: [/migrations/kube/charts/supabase]&quot;</code></p>
+<p>Now I am thinking it might make more sense to deploy via the <code>dev</code> branch, instead of the main branch, this would help us avoid some of the issues that we might face down the line?.
+But let me just try it via the main branch and then if it works, we can go back and updated the fleet to deploy from the <code>dev</code> branch.</p>
+<p>Okay the folder structure needs to be to be nested by one more level, so it would be <code>/migrations/kube/charts/kilobase/supabase</code>, then within the <code>kilobase</code> folder, we would add the <code>fleet.yaml</code>.
+This should help us with the</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" crossorigin="anonymous" data-astro-rerun></script> <!-- Responsive Ad --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3698214103602019" data-ad-slot="7193218754" data-ad-format="auto" data-full-width-responsive="true"></ins> <script data-astro-rerun>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
