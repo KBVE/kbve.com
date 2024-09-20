@@ -24,13 +24,13 @@ We set the language of the page to English and add classes for scrollbar and scr
       }
 
       requestAnimationFrame(raf);
-    </script><link rel="stylesheet" href="/_astro/about.Bc0VFfB0.css">
+    </script><link rel="stylesheet" href="/_astro/about.Dv5NFjIu.css">
 <style>:root{--transition-cubic: cubic-bezier(.165, .84, .44, 1)}html{scroll-behavior:smooth}article h2,article h3,article h4,article h5,article h6{font-weight:700;margin-top:2.5rem;scroll-margin-top:3rem}h2{font-size:1.5rem;line-height:2rem}h3{font-size:1.25rem;line-height:1.75rem}h4{font-size:1.125rem;line-height:1.75rem}p{margin-top:1.5rem}#toc li{display:flex;align-items:center;opacity:.8;transition:all .3s var(--transition-cubic)}#toc li.selected{opacity:1}#toc li svg{width:0;height:0;transition:height .4s var(--transition-cubic),width .4s var(--transition-cubic)}#toc li.selected svg{width:1.25rem;height:1.25rem;margin-right:.3rem}
 .scrollbar-hide:where(.astro-ouamjn2i)::-webkit-scrollbar{display:none}.scrollbar-hide:where(.astro-ouamjn2i){-ms-overflow-style:none;scrollbar-width:none}html.lenis,html.lenis body{height:auto}.lenis:where(.astro-ouamjn2i).lenis-smooth{scroll-behavior:auto!important}.lenis:where(.astro-ouamjn2i).lenis-smooth :where(.astro-ouamjn2i)[data-lenis-prevent]{overscroll-behavior:contain}.lenis:where(.astro-ouamjn2i).lenis-stopped{overflow:hidden}.lenis:where(.astro-ouamjn2i).lenis-scrolling iframe:where(.astro-ouamjn2i){pointer-events:none}
 .link-card:where(.astro-khjwmru5){list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card:where(.astro-khjwmru5)>a:where(.astro-khjwmru5){width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2:where(.astro-khjwmru5){margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p:where(.astro-khjwmru5){margin-top:.5rem;margin-bottom:0}.link-card:where(.astro-khjwmru5):is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card:where(.astro-khjwmru5):is(:hover,:focus-within) h2:where(.astro-khjwmru5){color:rgb(var(--accent-light))}
 @keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out:where(.astro-k6z2r6li){animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in:where(.astro-k6z2r6li){animation:fadeIn 1s ease-in forwards}.LanderHero:where(.astro-k6z2r6li) .HeroTransition-enter:where(.astro-k6z2r6li),.LanderHero:where(.astro-k6z2r6li) .HeroTransition-exit:where(.astro-k6z2r6li){transition:transform 1.2s cubic-bezier(.68,-.55,.265,1.55),opacity 1.2s ease-out}
-.conch-shell.svelte-19kd8e1{transition:opacity .5s ease}.rotate.svelte-19kd8e1{animation:svelte-19kd8e1-rotate 1s infinite alternate}@keyframes svelte-19kd8e1-rotate{0%{transform:rotate(0)}to{transform:rotate(10deg)}}
 .image-container.svelte-sw5q2w{position:relative;display:inline-block}.waypoint.svelte-sw5q2w{position:absolute;width:20px;height:20px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;border-radius:50%;margin-left:-10px;margin-top:-10px}
+.conch-shell.svelte-19kd8e1{transition:opacity .5s ease}.rotate.svelte-19kd8e1{animation:svelte-19kd8e1-rotate 1s infinite alternate}@keyframes svelte-19kd8e1-rotate{0%{transform:rotate(0)}to{transform:rotate(10deg)}}
 </style><script type="module" src="/_astro/hoisted.D-CfjfAB.js"></script>
 <script type="module" src="/_astro/page.CY7HCSJH.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -214,12 +214,51 @@ I been using the bot matches to get a better understanding of the map and the mo
 <p><strong>dotNet8</strong></p>
 <p>The saber build looks like it failed on the main branch and I am thinking it might be because we are using dotnet7?
 It might be time to officially switch the package and the saber build over to dotnet8 and that also means converting the whole saber project to unity6.
-The circle ci build for the unity6 has been released and with the canceled runtime fee, its a perfect combo for me to move forward on that department.</p>
+The circle ci build for the unity6 has been released and with the canceled runtime fee, its a perfect combo for me to move forward on that department.
+Furthermore, we had to update the artifact github actions from version 2 to version 4 because its been a while since we had them execute.
+This means that we have not worked officially on the open source version of saber in a while, but that is because we had a ton of backlog to shift through and fix up.
+With the recent release of the unity6 circle ci action, we can get back to making sure that the unity part of this monorepo is functional for that version, dropping the older versions of unity.
+Since the public source of saber is already outdated, I believe there should a decent amount of the files that can be deleted or replaced, hmm.</p>
+<p>My idea now might be to just delete a large portion of the folder, then create a new unity6 build from scratch and then reimport all the files and code that would be required.</p>
+<p>Side note: if you have a version of dotnet7 and need to upgrade it to dotnet8 on WSL, I had to run this</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt</span><span style="color:#F1FA8C"> remove</span><span style="color:#E9F284"> &#39;</span><span style="color:#F1FA8C">dotnet*</span><span style="color:#E9F284">&#39;</span></span>
+<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> dotnet-sdk-8.0</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
 <p><strong>Longhorn</strong></p>
 <p>Updated longhorn from 1.5.5 to 1.6.x to finally 1.7.1!
 There was a situation where the longhorn did fail to upgrade but I am thinking that might be because we do not have enough room in all the nodes, which means I will have to warp back around and update the specs on them.
 The storage was updated on the master2 to about 50gb, I will have to do that again on all the other 4 nodes and then do a quick apt-get install &amp; restart.
 In the future, we should look into the Element setup for the k3s, I been hearing great things about it.</p>
+<p><strong>GitOps</strong></p>
+<p>Okay, now the next plan for the kube deployment would be to configure the gitops and making sure that they run without any issues.
+The location for the deployments should be under <code>migration/kube/</code>, let me add a quick gitkeep to make sure the folder stays in sync.
+In this situation, the plan will be to create the <code>Chart.yaml</code> inside of the <code>migration/kube/kilobase</code> and start with the base information for the kubernetes deployment.
+This is the example <code>Chart.yaml</code> that we will be using:</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="yaml"><code><span class="line"></span>
+<span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> v2</span></span>
+<span class="line"><span style="color:#8BE9FD">name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> kilobase</span></span>
+<span class="line"><span style="color:#8BE9FD">description</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> The open source stack built ontop of Supabase.</span></span>
+<span class="line"><span style="color:#8BE9FD">type</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> application</span></span>
+<span class="line"><span style="color:#8BE9FD">version</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0.0.1</span></span>
+<span class="line"><span style="color:#8BE9FD">icon</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> https://avatars.githubusercontent.com/u/5571997?s=280&amp;v=4</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Granted we are doing all of this before we deploy and release the application onto the dockerhub, but this is a good way to practice the parallel ops, aka ParaOps.</p>
+<p>Next up, there should be a <code>.helmignore</code> that will make sure that some of the files are skipped when setting up the helm chart for this directory.
+I also moved the all the charts further into a subfolder, so they are now located here: <code>migrations/kube/charts/</code> and the first chart that we will be releasing is: <code>migrations/kube/charts/kilobase</code>.
+Added a quick readme and now I am going to start to upload each of the template pieces.</p>
+<p>Now that I am thinking it through, it would make more sense to keep the application name as supabase because its all built around it and make sure that the custom iamge is just the kilobase.
+This would resolve some of the issues that I might face down the line with updating and besides the <code>kilobase.so</code> extension, everything else is from supabase.</p>
+<p>Each subfolder within the templates would represent a different service for the full stack!
+The first one is the analytics, which should be easy for this type of situation.</p>
+<p>Next is the big one, its the <code>deployment.yaml</code> for the db aka database, in this situation we will have to come back around and adjust it so that it uses the cnpg operator directly for the deployment.
+The other option would be to just to set it to be an external database and then have it connect to that but I believe in our first instance, we want to atleast make sure all the other services can run without any major issues.</p>
+<p>Okay now to add the function charts to the stack.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" crossorigin="anonymous" data-astro-rerun></script> <!-- Responsive Ad --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3698214103602019" data-ad-slot="7193218754" data-ad-format="auto" data-full-width-responsive="true"></ins> <script data-astro-rerun>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h2 id="2023">2023</h2>
 <ul>
 <li>10:32am - Lunch with the family, I know it will make me feel old because I am watching all my younger niece and nephews grow up to almost become adults, which is wild to me.</li>
