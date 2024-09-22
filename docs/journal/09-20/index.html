@@ -29,8 +29,8 @@ We set the language of the page to English and add classes for scrollbar and scr
 .scrollbar-hide:where(.astro-ouamjn2i)::-webkit-scrollbar{display:none}.scrollbar-hide:where(.astro-ouamjn2i){-ms-overflow-style:none;scrollbar-width:none}html.lenis,html.lenis body{height:auto}.lenis:where(.astro-ouamjn2i).lenis-smooth{scroll-behavior:auto!important}.lenis:where(.astro-ouamjn2i).lenis-smooth :where(.astro-ouamjn2i)[data-lenis-prevent]{overscroll-behavior:contain}.lenis:where(.astro-ouamjn2i).lenis-stopped{overflow:hidden}.lenis:where(.astro-ouamjn2i).lenis-scrolling iframe:where(.astro-ouamjn2i){pointer-events:none}
 .link-card:where(.astro-khjwmru5){list-style:none;display:flex;padding:1px;background-color:#23262d;background-image:none;background-size:400%;border-radius:7px;background-position:100%;transition:background-position .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 0 0 1px #ffffff1a}.link-card:where(.astro-khjwmru5)>a:where(.astro-khjwmru5){width:100%;text-decoration:none;line-height:1.4;padding:calc(1.5rem - 1px);border-radius:8px;color:#fff;background-color:#23262d;opacity:.8}h2:where(.astro-khjwmru5){margin:0;font-size:1.25rem;transition:color .6s cubic-bezier(.22,1,.36,1)}p:where(.astro-khjwmru5){margin-top:.5rem;margin-bottom:0}.link-card:where(.astro-khjwmru5):is(:hover,:focus-within){background-position:0;background-image:var(--accent-gradient)}.link-card:where(.astro-khjwmru5):is(:hover,:focus-within) h2:where(.astro-khjwmru5){color:rgb(var(--accent-light))}
 @keyframes rain{0%{transform:translateY(-10vh)}to{transform:translateY(120vh)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}.fade-out:where(.astro-k6z2r6li){animation:fadeOut 1s ease-out forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fade-in:where(.astro-k6z2r6li){animation:fadeIn 1s ease-in forwards}.LanderHero:where(.astro-k6z2r6li) .HeroTransition-enter:where(.astro-k6z2r6li),.LanderHero:where(.astro-k6z2r6li) .HeroTransition-exit:where(.astro-k6z2r6li){transition:transform 1.2s cubic-bezier(.68,-.55,.265,1.55),opacity 1.2s ease-out}
-.conch-shell.svelte-19kd8e1{transition:opacity .5s ease}.rotate.svelte-19kd8e1{animation:svelte-19kd8e1-rotate 1s infinite alternate}@keyframes svelte-19kd8e1-rotate{0%{transform:rotate(0)}to{transform:rotate(10deg)}}
 .image-container.svelte-sw5q2w{position:relative;display:inline-block}.waypoint.svelte-sw5q2w{position:absolute;width:20px;height:20px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;border-radius:50%;margin-left:-10px;margin-top:-10px}
+.conch-shell.svelte-19kd8e1{transition:opacity .5s ease}.rotate.svelte-19kd8e1{animation:svelte-19kd8e1-rotate 1s infinite alternate}@keyframes svelte-19kd8e1-rotate{0%{transform:rotate(0)}to{transform:rotate(10deg)}}
 </style><script type="module" src="/_astro/hoisted.D-CfjfAB.js"></script>
 <script type="module" src="/_astro/page.CY7HCSJH.js"></script>
 <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.8.2 - MIT builder.io */
@@ -254,6 +254,20 @@ The shell script would be two parts, hmm, we are checking the <code>apps/kilobas
 <p>A quick break from the coding in about 20mins and doing some quick workouts, my brain might need some more bloodflow xD.
 I spent almost the whole night trying to debug these weird and nearly pointless build problems that should have been super easy.
 Setting up k3s was easier than this pepperhole.</p>
+<p><strong>Armada</strong></p>
+<p>We can begin setting up the armada next!
+The central parts of the armada will be located here <code>migrations/kube/charts/armada</code>, with the core being under a subfolder that we will call <code>shipyard</code>.
+Under the shipyard, we will deploy the operators and management tools, with the goal of having it all within one easy to deploy cluster.
+Part of the Armada will be the <code>Elemental</code> deployment but that will take some time to move into, we will most likely do that after the supabase deployment.</p>
+<p>Upon further research, we can have the shipyard access the helm charts directly, allowing us to build ontop of the bitnami charts.
+There is still some of the concepts that I am not fully grasping but that might have to do with just me not being fully based.
+Thus we will be deploying the armada this weekend, which should provide us with a couple additional operators that we can use to help us debug some of the supabase issues.</p>
+<p>During deployment, we got this error:</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="plaintext"><code><span class="line"><span>level=fatal msg=&quot;open migrations/kube/charts/armada/shipyard/values.yaml: no such file or directory&quot;</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>I am thinking that it might be because we have a file called values.yaml that is empty, so lets go ahead and remove that?</p>
+<p>Getting no where with this fleet deployment, its even worse than the supabase one because we are going backwards! xD
+To rule out if its a sealed secerts issue or a general fleet issue, I will try to deploy redis as well.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3698214103602019" crossorigin="anonymous" data-astro-rerun></script> <!-- Responsive Ad --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3698214103602019" data-ad-slot="7193218754" data-ad-format="auto" data-full-width-responsive="true"></ins> <script data-astro-rerun>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
