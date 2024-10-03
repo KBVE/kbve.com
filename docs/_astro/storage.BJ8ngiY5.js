@@ -1,0 +1,1 @@
+import{a,b as t}from"./index.Y0MI8VVX.js";import{t as n}from"./index.BH1EYZ08.js";const c=t(""),o=t(""),b=a("kbve:");o.subscribe(s=>{console.log(`[TOAST] -> ${s}`)});const m=async s=>{n(async()=>{c.set(s),o.set(s)})};export{b as k,m as n,o as t};
