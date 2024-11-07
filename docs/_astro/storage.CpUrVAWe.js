@@ -1,0 +1,1 @@
+import{p as a}from"./@nanostores.BerOGW42.js";import{a as t,t as n}from"./nanostores.Bo9-_MAV.js";const c=t(""),o=t(""),p=a("kbve:");o.subscribe(s=>{console.log(`[TOAST] -> ${s}`)});const m=async s=>{n(async()=>{c.set(s),o.set(s)})};export{p as k,m as n,o as t};
