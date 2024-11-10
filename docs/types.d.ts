@@ -947,6 +947,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"shop/index.mdx": {
+	id: "shop/index.mdx";
+  slug: "shop";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "shop/services/ai-tools.mdx": {
 	id: "shop/services/ai-tools.mdx";
   slug: "shop/services/ai-tools";
@@ -3401,6 +3408,20 @@ declare module 'astro:content' {
 "11-07.mdx": {
 	id: "11-07.mdx";
   slug: "11-07";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
+"11-08.mdx": {
+	id: "11-08.mdx";
+  slug: "11-08";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
+"11-09.mdx": {
+	id: "11-09.mdx";
+  slug: "11-09";
   body: string;
   collection: "journal";
   data: InferEntrySchema<"journal">
