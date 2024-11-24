@@ -1,1 +1,0 @@
-import"./react.XJQ4OnvF.js";import"./react-dom.3umP1jIU.js";import{c as a}from"./Tabs.astro_astro_type_script_index_0_lang.DXuUnoum.js";import"./@react-three.DzcfnNYH.js";import"./scheduler.CzFDRTuY.js";export{a as default};

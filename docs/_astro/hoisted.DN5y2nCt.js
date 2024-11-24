@@ -1,1 +1,0 @@
-import"./Tabs.astro_astro_type_script_index_0_lang.DXuUnoum.js";import"./astro-vtbot.BSe3LGnU.js";import"./astro.Cw0mRBrO.js";import"./react.XJQ4OnvF.js";import"./@react-three.DzcfnNYH.js";import"./react-dom.3umP1jIU.js";import"./scheduler.CzFDRTuY.js";
