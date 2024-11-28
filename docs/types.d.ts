@@ -3538,6 +3538,20 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".mdx"] };
+"11-26.mdx": {
+	id: "11-26.mdx";
+  slug: "11-26";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
+"11-27.mdx": {
+	id: "11-27.mdx";
+  slug: "11-27";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
 };
 "legal": {
 "disclaimer.mdx": {
