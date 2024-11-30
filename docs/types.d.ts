@@ -737,6 +737,41 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"legal/disclaimer.mdx": {
+	id: "legal/disclaimer.mdx";
+  slug: "legal/disclaimer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"legal/eula.mdx": {
+	id: "legal/eula.mdx";
+  slug: "legal/eula";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"legal/index.mdx": {
+	id: "legal/index.mdx";
+  slug: "legal";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"legal/privacy.mdx": {
+	id: "legal/privacy.mdx";
+  slug: "legal/privacy";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"legal/tos.mdx": {
+	id: "legal/tos.mdx";
+  slug: "legal/tos";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "maps/ccc.mdx": {
 	id: "maps/ccc.mdx";
   slug: "maps/ccc";
@@ -3552,35 +3587,26 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".mdx"] };
-};
-"legal": {
-"disclaimer.mdx": {
-	id: "disclaimer.mdx";
-  slug: "disclaimer";
+"11-28.mdx": {
+	id: "11-28.mdx";
+  slug: "11-28";
   body: string;
-  collection: "legal";
-  data: any
+  collection: "journal";
+  data: InferEntrySchema<"journal">
 } & { render(): Render[".mdx"] };
-"eula.mdx": {
-	id: "eula.mdx";
-  slug: "eula";
+"11-29.mdx": {
+	id: "11-29.mdx";
+  slug: "11-29";
   body: string;
-  collection: "legal";
-  data: any
+  collection: "journal";
+  data: InferEntrySchema<"journal">
 } & { render(): Render[".mdx"] };
-"privacy.mdx": {
-	id: "privacy.mdx";
-  slug: "privacy";
+"11-30.mdx": {
+	id: "11-30.mdx";
+  slug: "11-30";
   body: string;
-  collection: "legal";
-  data: any
-} & { render(): Render[".mdx"] };
-"tos.mdx": {
-	id: "tos.mdx";
-  slug: "tos";
-  body: string;
-  collection: "legal";
-  data: any
+  collection: "journal";
+  data: InferEntrySchema<"journal">
 } & { render(): Render[".mdx"] };
 };
 "products": {
