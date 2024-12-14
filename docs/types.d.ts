@@ -157,13 +157,6 @@ declare module 'astro:content' {
   collection: "arcade";
   data: InferEntrySchema<"arcade">
 } & { render(): Render[".mdx"] };
-"typing.mdx": {
-	id: "typing.mdx";
-  slug: "typing";
-  body: string;
-  collection: "arcade";
-  data: InferEntrySchema<"arcade">
-} & { render(): Render[".mdx"] };
 };
 "blog": {
 "post-1.md": {
