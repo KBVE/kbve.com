@@ -3734,6 +3734,41 @@ declare module 'astro:content' {
   collection: "journal";
   data: InferEntrySchema<"journal">
 } & { render(): Render[".mdx"] };
+"12-20.mdx": {
+	id: "12-20.mdx";
+  slug: "12-20";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
+"12-21.mdx": {
+	id: "12-21.mdx";
+  slug: "12-21";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
+"12-22.mdx": {
+	id: "12-22.mdx";
+  slug: "12-22";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
+"12-23.mdx": {
+	id: "12-23.mdx";
+  slug: "12-23";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
+"12-24.mdx": {
+	id: "12-24.mdx";
+  slug: "12-24";
+  body: string;
+  collection: "journal";
+  data: InferEntrySchema<"journal">
+} & { render(): Render[".mdx"] };
 };
 "products": {
 "a765.md": {
