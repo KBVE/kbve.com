@@ -200,6 +200,25 @@ The command would be:</p>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">        pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> pydiscordsh:add</span><span style="color:#BD93F9"> --name</span><span style="color:#F1FA8C"> fastapi</span></span>
 <span class="line"></span></code></pre>
+<ul>
+<li>
+<p>05:21PM</p>
+<p><strong>Python</strong></p>
+<p>After adding the fastapi, we will need to also add the supabase and then figure out the best way to add the service key.
+I am not too sure if we just need the basic service key or if we need a whole new key, hmm but regardless, I was thinking that we could also integrate turso aka sqlite.
+Majority of the voting records, bumps and server information should be stored in the turso db, but the user information should be through the supabase.</p>
+</li>
+</ul>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">        pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> pydiscordsh:add</span><span style="color:#BD93F9"> --name</span><span style="color:#F1FA8C"> supabase</span></span>
+<span class="line"></span></code></pre>
+<ul>
+<li>
+<p>05:58PM</p>
+<p><strong>Atlas</strong></p>
+<p>Looks like the atlas build seem to fail, but it might be because the version was not bumped?
+We can loop back around and see why there were issues on that end.</p>
+</li>
+</ul>
 <h2 id="2024">2024</h2>
 <ul>
 <li>

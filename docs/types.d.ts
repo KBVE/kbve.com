@@ -632,6 +632,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"gaming/wow.mdx": {
+	id: "gaming/wow.mdx";
+  slug: "gaming/wow";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "guides/first-project-checklist.mdx": {
 	id: "guides/first-project-checklist.mdx";
   slug: "guides/first-project-checklist";
@@ -915,6 +922,13 @@ declare module 'astro:content' {
 "project/cryptothrone.mdx": {
 	id: "project/cryptothrone.mdx";
   slug: "project/cryptothrone";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"project/discordsh.mdx": {
+	id: "project/discordsh.mdx";
+  slug: "project/discordsh";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
