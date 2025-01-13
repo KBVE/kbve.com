@@ -183,7 +183,39 @@ Log In
 </script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1703511606233-9c7537658701?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
 Table of Contents:
 </p> <div id="toc" class=""> <ul class="space-y-2 text-pretty text-base text-neutral-700 transition duration-300 dark:text-neutral-400"></ul> </div> </div> </div> <div class="md:pt-8"> <h1 class="mb-4 text-balance text-center text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl md:mb-6 md:text-left"> January: 08 </h1> <article class="text-pretty text-lg text-neutral-700 dark:text-neutral-300"> <h2 id="notes">Notes</h2>
-<h3 id="2024">2024</h3>
+<h2 id="2025">2025</h2>
+<ul>
+<li>
+<p>05:56PM</p>
+<p><strong>Rancher</strong></p>
+<p>Something went wrong with the rancher certs and I was able to figure it out by going through the issue tickets.
+I believe the issue was that when we updated rancher, it might have reset the certs but we were able to make sure that ACME / LetsEncrypt does its job.
+After going through some casual walk through with ChatGPT, we were able to solve the issue.</p>
+</li>
+<li>
+<p>06:58PM</p>
+<p><strong>Secrets</strong></p>
+<p>We need to update the Sealed secrets once more and then enable the <code>discord</code> namespace to have access to the <code>service_role</code>.</p>
+</li>
+</ul>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"></span>
+<span class="line"><span style="color:#50FA7B">        ./kbve.sh</span><span style="color:#BD93F9"> -nx</span><span style="color:#F1FA8C"> kilobase:seal</span><span style="color:#BD93F9"> --namespace=supabase</span><span style="color:#BD93F9"> --keyName=supabase-secret-jwt</span><span style="color:#BD93F9"> --secrets=</span><span style="color:#E9F284">&quot;&quot;</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Going to recreate the secrets here and then move forward, making sure that the <code>service_role</code> has the right key.
+After using the jwt decrypt, I think we put the wrong service key in the seal!
+Once we update the sealed secret, I will add another seal inside of the new <code>discordsh</code> namespace, which will then grab that information and use it.
+Our goal would then be to migrate some of the user-defined functions directly to the supabase, including the JWT/Auth.</p>
+<ul>
+<li>
+<p>07:32PM</p>
+<p><strong>DockerHub</strong></p>
+<p>Next on the agenda will be to add in the dockerhub image for DiscordSH!
+After it gets added, we can move forward with building out the helm chart and we should be good to go!
+That was a quick fix to the docker build, next we want to prepare the discord shell build.</p>
+</li>
+</ul>
+<h2 id="2024">2024</h2>
 <ul>
 <li>
 <p>2:31pm - erust</p>
