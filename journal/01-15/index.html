@@ -183,6 +183,50 @@ Log In
 </script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1704189125621-55e8c6cfd166?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
 Table of Contents:
 </p> <div id="toc" class=""> <ul class="space-y-2 text-pretty text-base text-neutral-700 transition duration-300 dark:text-neutral-400"></ul> </div> </div> </div> <div class="md:pt-8"> <h1 class="mb-4 text-balance text-center text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl md:mb-6 md:text-left"> January: 15 </h1> <article class="text-pretty text-lg text-neutral-700 dark:text-neutral-300"> <h2 id="notes">Notes</h2>
+<h2 id="2025">2025</h2>
+<ul>
+<li>
+<p><strong>Supabase</strong></p>
+<p>01:00AM</p>
+<p>The next major update should be ready by tomorrow, we want to keep the turso integration but also slowly build out the migration to the postgres.
+While that is going on, I want to start the front end of the discordsh server.
+The question remains if we want to use NextJS or Astro, hmm, both are already included in the monorepo but I am thinking that astro with shadcn would be a better move than material design and nextjs.</p>
+<p>01:34AM</p>
+<p>We want to include the <code>Constraints</code> for the <code>discord_servers</code> table, even though we already have them in the python code.
+This is just a double check for the sake of data integrity!
+Starting with the <code>invite</code> column, this is what I am thinking we will include.</p>
+</li>
+</ul>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#FF79C6">CONSTRAINT</span><span style="color:#F8F8F2"> ck_valid_invite_code </span><span style="color:#FF79C6">CHECK</span><span style="color:#F8F8F2"> (invite ~ </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">^[A-Za-z0-9-]{2,100}$</span><span style="color:#E9F284">&#39;</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
+<p>Next column that we want to limit is the <code>name</code>.
+Actually, while looking at the <code>name</code> field, I believe it would make more sense to just drop the <code>TEXT</code> field and use a <code>varchar</code> field instead!
+We should limit it to about 100 characters, to be safe, we will do 101 characters.
+The <code>name</code> field will then be 101.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"></span>
+<span class="line"><span style="color:#FF79C6">name</span><span style="color:#FF79C6"> VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">101</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">CONSTRAINT</span><span style="color:#F8F8F2"> ck_name_combined </span><span style="color:#FF79C6">CHECK</span><span style="color:#F8F8F2"> (</span></span>
+<span class="line"><span style="color:#FF79C6">        name</span><span style="color:#F8F8F2"> ~ </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">^[\p{L}\p{N} _-]{2,100}$</span><span style="color:#E9F284">&#39;</span></span>
+<span class="line"><span style="color:#F8F8F2">    ),</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>Okay the name was replaced from TEXT field to the varchar field and we added a basic check against common attack vectors.
+Granted we will not be letting the server owner directly edit the table through the RPC or supabase’s api client.
+The plan is still to use the python server as a medium of handling the <code>discord_server</code> data.</p>
+<p>Okay, that field is out of the way, the next field will be <code>summary</code> and we will follow the same logic.
+Dropping the <code>TEXT</code> and using a <code>VARCHAR</code> instead.</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="sql"><code><span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">summary </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">200</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF79C6">CONSTRAINT</span><span style="color:#F8F8F2"> ck_summary_combined </span><span style="color:#FF79C6">CHECK</span><span style="color:#F8F8F2"> (</span></span>
+<span class="line"><span style="color:#F8F8F2">    summary ~ </span><span style="color:#E9F284">&#39;</span><span style="color:#F1FA8C">^[\p{L}\p{N} _\-,.!?]{2,200}$</span><span style="color:#E9F284">&#39;</span></span>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>That will handle the summary issue for our use case!
+Okay quickly added description and website as well.
+Both need an additional sanitization before they get added into the table but we will handle that from the python side.</p>
 <h3 id="2024">2024</h3>
 <ul>
 <li>
