@@ -961,6 +961,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"project/pirate16.mdx": {
+	id: "project/pirate16.mdx";
+  slug: "project/pirate16";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "project/rareicon.mdx": {
 	id: "project/rareicon.mdx";
   slug: "project/rareicon";
