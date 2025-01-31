@@ -180,10 +180,39 @@ Log In
       });
     });
   });
-</script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
+</script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1735022734031-ae0565a2554b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
 Table of Contents:
 </p> <div id="toc" class=""> <ul class="space-y-2 text-pretty text-base text-neutral-700 transition duration-300 dark:text-neutral-400"></ul> </div> </div> </div> <div class="md:pt-8"> <h1 class="mb-4 text-balance text-center text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl md:mb-6 md:text-left"> January: 23 </h1> <article class="text-pretty text-lg text-neutral-700 dark:text-neutral-300"> <h2 id="notes">Notes</h2>
-<h3 id="2024">2024</h3>
+<h2 id="2025">2025</h2>
+<ul>
+<li>
+<p><strong>DLL</strong></p>
+<p>12:26AM</p>
+<p>I believe that we are getting close to making sure that our future games within godot can run on mac, windows and the browser.
+The only other operating system that I would target would be linux but I am not too worried about that for now.</p>
+</li>
+<li>
+<p><strong>HexGrid</strong></p>
+<p>12:27AM</p>
+<p>After finishing up the music manager, we would want to figure out the best way to render the hexgrid aka the map itself.</p>
+</li>
+<li>
+<p><strong>RustConfig</strong></p>
+<p>02:45AM</p>
+<p>Going back around, I am going to include the older flags for now!
+Granted that it would still create a bit of a larger wasm but I also want to make sure that the wasm will work on itch.
+We can test the configuration here below when I get a bit more time.</p>
+</li>
+</ul>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="toml"><code><span class="line"></span>
+<span class="line"><span>    </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&quot;-C&quot;, &quot;link-args=-sSIDE_MODULE=2&quot;,</span></span>
+<span class="line"><span>    </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&quot;-C&quot;, &quot;link-args=-pthread&quot;, </span><span style="color:#6272A4"># was -sUSE_PTHREADS=1 in earlier emscripten versions</span></span>
+<span class="line"><span>    </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&quot;-C&quot;, &quot;target-feature=+atomics,+bulk-memory,+mutable-globals&quot;,</span></span>
+<span class="line"><span>    </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&quot;-Zlink-native-libraries=no&quot;,</span></span>
+<span class="line"><span>    </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&quot;-Cllvm-args=-enable-emscripten-cxx-exceptions=0&quot;</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<h2 id="2024">2024</h2>
 <ul>
 <li>
 <p>7:30am  - <code>PreWork</code></p>
