@@ -905,6 +905,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"project/brackeys.mdx": {
+	id: "project/brackeys.mdx";
+  slug: "project/brackeys";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "project/charles.mdx": {
 	id: "project/charles.mdx";
   slug: "project/charles";
@@ -961,9 +968,9 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"project/pirate16.mdx": {
-	id: "project/pirate16.mdx";
-  slug: "project/pirate16";
+"project/pirate.mdx": {
+	id: "project/pirate.mdx";
+  slug: "project/pirate";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
