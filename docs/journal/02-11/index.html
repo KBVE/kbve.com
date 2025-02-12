@@ -183,7 +183,30 @@ Log In
 </script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1561478908-1ceb3bcc74b6?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
 Table of Contents:
 </p> <div id="toc" class=""> <ul class="space-y-2 text-pretty text-base text-neutral-700 transition duration-300 dark:text-neutral-400"></ul> </div> </div> </div> <div class="md:pt-8"> <h1 class="mb-4 text-balance text-center text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl md:mb-6 md:text-left"> February: 11 </h1> <article class="text-pretty text-lg text-neutral-700 dark:text-neutral-300"> <h2 id="notes">Notes</h2>
-<h3 id="2024">2024</h3>
+<h2 id="2025">2025</h2>
+<h3 id="migrations">Migrations</h3>
+<ul>
+<li>
+<p>12:37AM</p>
+<p>The shell command to start moving the discord software into the subfolder.</p>
+</li>
+</ul>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> move</span><span style="color:#BD93F9"> --project</span><span style="color:#F1FA8C"> pydiscordsh</span><span style="color:#BD93F9"> --destination</span><span style="color:#F1FA8C"> apps/discord/pydiscordsh</span><span style="color:#BD93F9"> --skipFormat=true</span></span>
+<span class="line"></span></code></pre>
+<p>For Atlas and Fudster, I am thinking that we need to rework those as well?
+We could place them into their own category for now too, hmm.</p>
+<ul>
+<li>
+<p>02:14AM</p>
+<p>Next up will be the herbmail subfolder, which will just hold the astro files for now.</p>
+</li>
+</ul>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#50FA7B">pnpm</span><span style="color:#F1FA8C"> nx</span><span style="color:#F1FA8C"> g</span><span style="color:#F1FA8C"> move</span><span style="color:#BD93F9"> --project</span><span style="color:#F1FA8C"> herbmail.com</span><span style="color:#BD93F9"> --destination</span><span style="color:#F1FA8C"> apps/herbmail/herbmail.com</span><span style="color:#BD93F9"> --skipFormat=true</span></span>
+<span class="line"></span></code></pre>
+<p>Okay needed to adjust the tailwindcss because its pulling from the shadcn package that we had.</p>
+<p>That leaves the atlas and the fudster project, both we can keep in the apps for now and come back around with those later on.
+Okay! Migrations are complete , let me close that ticket out for now.</p>
+<h2 id="2024">2024</h2>
 <p>The characters might have issues with multi-worlds and cause issues if they are being played oln multiple worlds/game sessions, so we need a way to lock them out to prevent this from occuring.</p>
 <h4 id="startzone">StartZone</h4>
 <p>Going to clone over the Scene1 and call it StartZone, here I want to test case a couple different concepts that I had in my mind, including a Game Manger and the combat engine.
