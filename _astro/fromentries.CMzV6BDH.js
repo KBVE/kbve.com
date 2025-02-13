@@ -1,0 +1,1 @@
+import{a as s}from"./@react-three.BOv1JqT7.js";/*! fromentries. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */var r,t;function f(){return t||(t=1,r=function(n){return[...n].reduce((e,[o,i])=>(e[o]=i,e),{})}),r}var u=f();const c=s(u);export{c as f};
