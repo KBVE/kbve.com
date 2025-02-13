@@ -204,13 +204,8 @@ The game could be named that <code dir="auto">Davids Goliath</code>, granted we 
 <p>To finish up the shell integration for the nextjs project, we want it to clean the files and move the build files to the embed location.
 The same way that we handled the previous WASM build, so we know where we have to go.</p>
 <p>These are the results from the <code dir="auto">./kbve.sh -build react-phaser-fish-chip</code> :</p>
-<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="plaintext" dir="ltr"><code><span class="line"><span></span></span>
-<span class="line"><span>(!) outDir /home/h0lybyte/kbve/kbve/dist/apps/react-phaser-fish-chip is not inside project root and will not be emptied.</span></span>
-<span class="line"><span>Use --emptyOutDir to override.</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>../../dist/apps/react-phaser-fish-chip/index.html        0.37 kB │ gzip:   0.25 kB</span></span>
-<span class="line"><span>../../dist/apps/react-phaser-fish-chip/fish-chip.js  1,969.38 kB │ gzip: 484.77 kB</span></span>
-<span class="line"><span></span></span></code></pre>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.tm3va.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">(!) outDir /home/h0lybyte/kbve/kbve/dist/apps/react-phaser-fish-chip is not inside project root and will not be emptied.</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Use --emptyOutDir to override.</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">../../dist/apps/react-phaser-fish-chip/index.html        0.37 kB │ gzip:   0.25 kB</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">../../dist/apps/react-phaser-fish-chip/fish-chip.js  1,969.38 kB │ gzip: 484.77 kB</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="(!) outDir /home/h0lybyte/kbve/kbve/dist/apps/react-phaser-fish-chip is not inside project root and will not be emptied.Use --emptyOutDir to override.../../dist/apps/react-phaser-fish-chip/index.html        0.37 kB │ gzip:   0.25 kB../../dist/apps/react-phaser-fish-chip/fish-chip.js  1,969.38 kB │ gzip: 484.77 kB"><div></div></button></div></figure></div>
 <p>We can actually just avoid using the shell and pass through that empty outdir command! Yay!
 That ended up being easier to manage than I would have thought.</p>
 <h4 id="david-goliath">David Goliath</h4>

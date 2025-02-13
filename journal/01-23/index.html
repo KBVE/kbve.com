@@ -208,13 +208,7 @@ Granted that it would still create a bit of a larger wasm but I also want to mak
 We can test the configuration here below when I get a bit more time.</p>
 </li>
 </ul>
-<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="toml" dir="ltr"><code><span class="line"></span>
-<span class="line"><span style="color:var(--astro-code-foreground)">    "-C", "link-args=-sSIDE_MODULE=2",</span></span>
-<span class="line"><span style="color:var(--astro-code-foreground)">    "-C", "link-args=-pthread", </span><span style="color:var(--astro-code-token-comment)"># was -sUSE_PTHREADS=1 in earlier emscripten versions</span></span>
-<span class="line"><span style="color:var(--astro-code-foreground)">    "-C", "target-feature=+atomics,+bulk-memory,+mutable-globals",</span></span>
-<span class="line"><span style="color:var(--astro-code-foreground)">    "-Zlink-native-libraries=no",</span></span>
-<span class="line"><span style="color:var(--astro-code-foreground)">    "-Cllvm-args=-enable-emscripten-cxx-exceptions=0"</span></span>
-<span class="line"></span></code></pre>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.tm3va.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="toml"><code><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#FFFFFF;--1:#984E4D">"-C", "link-args=-sSIDE_MODULE=2",</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#FFFFFF;--1:#984E4D">"-C", "link-args=-pthread", </span><span style="--0:#919F9F;--1:#5F636F"># was -sUSE_PTHREADS=1 in earlier emscripten versions</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#FFFFFF;--1:#984E4D">"-C", "target-feature=+atomics,+bulk-memory,+mutable-globals",</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#FFFFFF;--1:#984E4D">"-Zlink-native-libraries=no",</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#FFFFFF;--1:#984E4D">"-Cllvm-args=-enable-emscripten-cxx-exceptions=0"</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="    &#x22;-C&#x22;, &#x22;link-args=-sSIDE_MODULE=2&#x22;,    &#x22;-C&#x22;, &#x22;link-args=-pthread&#x22;, # was -sUSE_PTHREADS=1 in earlier emscripten versions    &#x22;-C&#x22;, &#x22;target-feature=+atomics,+bulk-memory,+mutable-globals&#x22;,    &#x22;-Zlink-native-libraries=no&#x22;,    &#x22;-Cllvm-args=-enable-emscripten-cxx-exceptions=0&#x22;"><div></div></button></div></figure></div>
 <h2 id="2024">2024</h2>
 <ul>
 <li>

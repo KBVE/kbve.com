@@ -663,6 +663,7 @@
     ],
     "links": [],
     "backlinks": [
+      "project/brackeys/",
       "project/api/",
       "project/"
     ],
@@ -949,7 +950,9 @@
       "#software"
     ],
     "links": [],
-    "backlinks": [],
+    "backlinks": [
+      "project/brackeys/"
+    ],
     "nodeStyle": {}
   },
   "application/git/": {
@@ -1128,7 +1131,10 @@
     "tags": [
       "#gaming"
     ],
-    "links": [],
+    "links": [
+      "application/godot/",
+      "application/rust/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
