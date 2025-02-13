@@ -1,1 +1,0 @@
-import{a as n}from"./@react-three.DzcfnNYH.js";/*! fromentries. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */var f=function(t){return[...t].reduce((r,[e,o])=>(r[e]=o,r),{})};const a=n(f);export{a as f};

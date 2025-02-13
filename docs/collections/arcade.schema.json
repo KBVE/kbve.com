@@ -1,0 +1,81 @@
+{
+  "$ref": "#/definitions/arcade",
+  "definitions": {
+    "arcade": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "footnote": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string",
+          "default": "KBVE Team"
+        },
+        "img": {
+          "type": "string",
+          "default": ""
+        },
+        "date": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string",
+          "default": "https://kbve.com/favicon.svg"
+        },
+        "unsplash": {
+          "type": "string"
+        },
+        "swf": {
+          "type": "string"
+        },
+        "featured": {
+          "type": "boolean",
+          "default": false
+        },
+        "draft": {
+          "type": "boolean",
+          "default": false
+        },
+        "house": {
+          "type": "boolean",
+          "default": false
+        },
+        "promoted": {
+          "type": "boolean",
+          "default": false
+        },
+        "ipfs": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "tags"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
