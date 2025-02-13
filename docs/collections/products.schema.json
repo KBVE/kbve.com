@@ -1,0 +1,203 @@
+{
+  "$ref": "#/definitions/products",
+  "definitions": {
+    "products": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "main": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "content": {
+              "type": "string"
+            },
+            "imgCard": {
+              "type": "string"
+            },
+            "imgMain": {
+              "type": "string"
+            },
+            "imgAlt": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "content",
+            "imgCard",
+            "imgMain",
+            "imgAlt"
+          ],
+          "additionalProperties": false
+        },
+        "tabs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "dataTab": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "dataTab",
+              "title"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "longDescription": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "subTitle": {
+              "type": "string"
+            },
+            "btnTitle": {
+              "type": "string"
+            },
+            "btnURL": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "subTitle",
+            "btnTitle",
+            "btnURL"
+          ],
+          "additionalProperties": false
+        },
+        "descriptionList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "subTitle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "subTitle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "specificationsLeft": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "subTitle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "subTitle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "specificationsRight": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "subTitle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "subTitle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "tableData": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "feature": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "required": [
+              "feature",
+              "description"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "blueprints": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string"
+            },
+            "second": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "main",
+        "tabs",
+        "longDescription",
+        "descriptionList",
+        "specificationsLeft",
+        "blueprints"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
