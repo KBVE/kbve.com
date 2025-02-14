@@ -179,7 +179,7 @@ Log In
       });
     });
   });
-</script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1561478908-1ceb3bcc74b6?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
+</script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1739382445475-1cc4fcedff2c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
 Table of Contents:
 </p> <div id="toc" class=""> <ul class="space-y-2 text-pretty text-base text-neutral-700 transition duration-300 dark:text-neutral-400"></ul> </div> </div> </div> <div class="md:pt-8"> <h1 class="mb-4 text-balance text-center text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl md:mb-6 md:text-left"> February: 13 </h1> <article class="text-pretty text-lg text-neutral-700 dark:text-neutral-300"> <h2 id="notes">Notes</h2>
 <h2 id="2025">2025</h2>
@@ -199,7 +199,39 @@ I can get that understanding of being so far behind, that it makes more sense to
 Upgraded the Monorepo to Nx v20.4.3 and finally upgraded to the latest Astro v5.x!
 The biggest issue was getting the vite v6 support out there and operational, which the latest nx/vite supports.</p>
 </li>
+<li>
+<p>03:08PM</p>
+<p>The migration works fine on the mac but now its time to test it on the WSL instance.
+Besides updating the pnpm, I need to remember to delete the <code dir="auto">node_modules</code> folder and run a fresh install.</p>
+</li>
 </ul>
+<h3 id="pnpm-v10">pnpm v10</h3>
+<ul>
+<li>
+<p>03:08PM</p>
+<p>Updating the pnpm to v10.30.</p>
+</li>
+</ul>
+<h3 id="ci---astro-v5">CI - Astro v5</h3>
+<ul>
+<li>
+<p>03:10PM</p>
+<p>The migration to Astro v5 has just one small issue, its the playwrite that needs to be installed before deployment / build.
+Need to make sure that will not be a problem on my WSL instance.
+I believe the playwrite is used to generate the mermaid graphs.</p>
+</li>
+</ul>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.tm3va.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="shell"><code><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">exec</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">playwright</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="pnpm exec playwright install"><div></div></button></div></figure></div>
+<p>If the error comes up, it does warn us in the terminal.
+I went ahead and updated the <code dir="auto">package.json</code> to include the post install of it.</p>
+<h3 id="godot-user-data-v0">Godot User Data v0</h3>
+<ul>
+<li>
+<p>05:19PM</p>
+<p>Testing the loading of the user data, it seems to crash the whole application, so I will have to figure out why.</p>
+</li>
+</ul>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="shell"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">./kbve.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-nx</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">rust_godot_towerdefense:build-windows</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="./kbve.sh -nx rust_godot_towerdefense:build-windows"><div></div></button></div></figure></div>
 <h2 id="2024">2024</h2>
 <h4 id="windows">Windows</h4>
 <p>It might be time to switch the build process towards focusing on the Steam and Windows build for the unity game!
