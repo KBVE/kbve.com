@@ -944,7 +944,7 @@
   "application/godot/": {
     "external": false,
     "exists": true,
-    "title": "GoDot",
+    "title": "Godot",
     "tags": [
       "#game-engine",
       "#software"
