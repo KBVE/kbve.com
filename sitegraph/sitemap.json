@@ -661,7 +661,9 @@
     "tags": [
       "#technology"
     ],
-    "links": [],
+    "links": [
+      "application/git/"
+    ],
     "backlinks": [
       "project/brackeys/",
       "project/api/",
@@ -965,6 +967,7 @@
     "links": [],
     "backlinks": [
       "application/javascript/",
+      "application/rust/",
       "application/unity/"
     ],
     "nodeStyle": {}
