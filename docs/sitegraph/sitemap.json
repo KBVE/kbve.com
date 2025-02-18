@@ -498,6 +498,7 @@
       "application/appwrite/",
       "application/unity/",
       "application/cubejs/",
+      "application/git/",
       "project/api/",
       "project/",
       "theory/programming/",
@@ -964,7 +965,9 @@
     "tags": [
       "#cloud"
     ],
-    "links": [],
+    "links": [
+      "application/javascript/"
+    ],
     "backlinks": [
       "application/javascript/",
       "application/rust/",
