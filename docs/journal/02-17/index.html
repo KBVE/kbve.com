@@ -211,6 +211,36 @@ First would be to have github actions build the rust dll using the msvc target, 
 <p>Github action runner for the rust dll had some outdated actions, going to update them.
 In addition to the version change, the notes in the <code dir="auto">rust</code> section should be updated to reflect it.</p>
 </li>
+<li>
+<p>08:39PM</p>
+<p>Updating the MSVC github action again, the most recent issue was that we forgot to include the nightly as a rust-src.
+This next update will include and I will adjust the path for upload to be exactly where the DLL is exported.</p>
+</li>
+<li>
+<p>10:07PM</p>
+<p>The rust dll build went as planned, it was definitely smaller too compared to the gnu build.
+That means we can continue the production of the extension, yet I should create a cycle where it automatically updates the extensions on our behalf.
+Point of climax here will be once we get more git automation running within our repo, I am going to be super excited to see that level of looping.</p>
+</li>
+</ul>
+<h3 id="jedi---user-agents">Jedi - User Agents</h3>
+<ul>
+<li>
+<p>05:14PM</p>
+<p>New issue ticket for the jedi crate, the goal being that it would provide a custom user agent upon requested.
+Example of a user agent string:
+<code dir="auto">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36</code>.
+The goal would be to generate a couple of these that would be cross platform and easy for us to use in the future.
+I suppose we could also make this a typescript library too, for client side generation.</p>
+</li>
+</ul>
+<h3 id="brackeys13">Brackeys13</h3>
+<ul>
+<li>
+<p>09:23PM</p>
+<p>Preparing the HTML export for the gamejam, we should not be too far from getting the rest of the pipeline going.
+Next we need to figure out how to handle the UIUX for the game, this time keeping it all within gdscript.</p>
+</li>
 </ul>
 <h2 id="2024">2024</h2>
 <h3 id="snow">Snow</h3>
