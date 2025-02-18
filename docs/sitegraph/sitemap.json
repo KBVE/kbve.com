@@ -498,6 +498,7 @@
       "application/appwrite/",
       "application/unity/",
       "application/cubejs/",
+      "application/git/",
       "project/api/",
       "project/",
       "theory/programming/",
@@ -661,7 +662,9 @@
     "tags": [
       "#technology"
     ],
-    "links": [],
+    "links": [
+      "application/git/"
+    ],
     "backlinks": [
       "project/brackeys/",
       "project/api/",
@@ -962,9 +965,12 @@
     "tags": [
       "#cloud"
     ],
-    "links": [],
+    "links": [
+      "application/javascript/"
+    ],
     "backlinks": [
       "application/javascript/",
+      "application/rust/",
       "application/unity/"
     ],
     "nodeStyle": {}
