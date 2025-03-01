@@ -736,7 +736,9 @@
       "#js"
     ],
     "links": [
-      "application/git/"
+      "application/git/",
+      "application/xcode/",
+      "application/android/"
     ],
     "backlinks": [
       "webmaster/",
@@ -815,7 +817,9 @@
       "#os"
     ],
     "links": [],
-    "backlinks": [],
+    "backlinks": [
+      "application/javascript/"
+    ],
     "nodeStyle": {}
   },
   "application/docker/": {
@@ -1701,6 +1705,17 @@
     "links": [],
     "backlinks": [
       "theory/emulation/"
+    ],
+    "nodeStyle": {}
+  },
+  "application/xcode/": {
+    "external": false,
+    "exists": false,
+    "title": "xcode",
+    "tags": [],
+    "links": [],
+    "backlinks": [
+      "application/javascript/"
     ],
     "nodeStyle": {}
   },
