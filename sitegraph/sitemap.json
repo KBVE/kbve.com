@@ -832,6 +832,7 @@
     ],
     "backlinks": [
       "theory/emulation/",
+      "application/rust/",
       "application/portainer/",
       "application/sql/"
     ],
@@ -874,6 +875,7 @@
       "#technology"
     ],
     "links": [
+      "application/docker/",
       "application/git/"
     ],
     "backlinks": [
