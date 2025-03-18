@@ -182,12 +182,36 @@ Log In
 </script> <!--Import the necessary Collapse and Overlay plugins--> <!--https://preline.co/plugins/html/collapse.html--> <!--https://preline.co/plugins/html/overlay.html--> <script src="/scripts/vendor/preline/collapse/index.js"></script> <script src="/scripts/vendor/preline/overlay/index.js"></script> <main class="astro-ouamjn2i">  <section class="py-6 sm:py-8 lg:py-12"> <div class="mx-auto max-w-screen-xl px-4 md:px-8"> <div class="grid gap-8 md:grid-cols-2 lg:gap-12"> <div> <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto"> <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1615563821068-a15bbe32b305?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzNjM5Nzd8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE3NDg2ODY&ixlib=rb-4.0.3&q=85" alt="Daily Post Image from Upsplash" draggable="false"> </div> <div id="progress-mobile" class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"></div> <div id="pin" class="mt-10 hidden space-y-4 md:block"> <div class="h-px w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700"> <div id="progress" class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"></div> </div> <p class="text-pretty text-sm font-light text-neutral-500">
 Table of Contents:
 </p> <div id="toc" class=""> <ul class="space-y-2 text-pretty text-base text-neutral-700 transition duration-300 dark:text-neutral-400"></ul> </div> </div> </div> <div class="md:pt-8"> <h1 class="mb-4 text-balance text-center text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl md:mb-6 md:text-left"> March: 18 </h1> <article class="text-pretty text-lg text-neutral-700 dark:text-neutral-300"> <h2 id="notes">Notes</h2>
-<h3 id="2024">2024</h3>
-<h4 id="multiplayer">Multiplayer</h4>
+<h2 id="2025">2025</h2>
+<h3 id="github-crate-matrix">Github Crate Matrix</h3>
+<ul>
+<li>
+<p>01:20PM</p>
+<p>Damn matrix seems to fail when building a json query, the issue seems that if all the crates are false for publishing, it produces an invalid json object.
+However, the first solution would be to include a simple patch to include a placeholder object, thus I will try that first.</p>
+</li>
+</ul>
+<h3 id="kbve-fork-v1">KBVE Fork v1</h3>
+<ul>
+<li>
+<p>01:53PM</p>
+<p>Forking the whole monorepo and working on it under <code dir="auto">h0lybyte</code> is the goal for this Q2.
+If everything goes as planned, then we can look at the azure and gitlab pipelines afterwards, ideally making it so the monorepo can stay replicated in multiple locations.
+The repo structure will be like this:</p>
+<ol>
+<li>Github for Public.</li>
+<li>Gitlab for Private Teams + Outside Developers - focus on backend applications.</li>
+<li>Azure for Private Internal + Code for non-monorepo behaviors, like Unity.</li>
+</ol>
+<p>Provides us with the flexibility of an open source nature with the perks of private source integrations.</p>
+</li>
+</ul>
+<h2 id="2024">2024</h2>
+<h3 id="multiplayer">Multiplayer</h3>
 <p>I decided to take a short break from the pathing issue and look at how I would want to implement a multiplayer.
 We know that the discord embed sdk comes out today!</p>
 <hr>
-<h4 id="colyseus">Colyseus</h4>
+<h3 id="colyseus">Colyseus</h3>
 <p>I am going to start the test casing for the Colyseus example and get a general test case out there for production.</p>
 <p>The start of these notes will be within this <a href="https://github.com/discord/embedded-app-sdk/tree/main/examples/react-colyseus">repo</a> for start of the project.</p>
 <p>So the outline of the App stack would be like this:</p>
@@ -202,7 +226,7 @@ We know that the discord embed sdk comes out today!</p>
 <li>Grid Engine, this being optional.</li>
 </ul>
 <hr>
-<h4 id="embed">Embed</h4>
+<h3 id="embed">Embed</h3>
 <p>The Discord Embed App Pitch 2024 starts within a month, but they are doing a small <code dir="auto">buildathon</code> this week!
 I am thinking that it would make sense to first go through the <code dir="auto">buildathon</code> and make a moch application, this will help us debug any issues that might come up during the pitch.</p>
 <p>I am going to write out the notes and think about how I should prepare and deploy the <code dir="auto">Wumpus Wumbo party</code> an the first test case for the jam and using that as the test case. This includes loading any and all of the “abstractions”.
