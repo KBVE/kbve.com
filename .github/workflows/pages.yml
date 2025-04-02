@@ -29,23 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'yarn'
-
-      - name: Install
-        shell: "bash"
-        run: yarn install
-
-      - name: Build
-        shell: "bash"
-        run: yarn build
-
-      # Lets try docs Push!
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
