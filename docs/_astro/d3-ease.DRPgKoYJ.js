@@ -1,1 +1,1 @@
-function n(c){return((c*=2)<=1?c*c*c:(c-=2)*c*c+2)/2}export{n as c};
+function n(n){return((n*=2)<=1?n*n*n:(n-=2)*n*n+2)/2}export{n as c};
