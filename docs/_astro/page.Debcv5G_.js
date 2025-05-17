@@ -1,1 +1,0 @@
-import{i}from"./ClientRouter.astro_astro_type_script_index_0_lang.Bu8-07W5.js";{const t=sessionStorage,e=new Set(JSON.parse(t.getItem("starlight-site-graph--visited-pages")??"[]"));e.add(new URL(window.location.href).pathname.slice(1)),t.setItem("starlight-site-graph--visited-pages",JSON.stringify([...e]))}i();
