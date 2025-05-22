@@ -1,1 +1,0 @@
-import{g as n}from"./@react-three.BOv1JqT7.js";var r=function(e){return typeof e=="function"?e:typeof e=="string"?function(t){return t[e]}:function(t){return e}};const o=Object.freeze(Object.defineProperty({__proto__:null,default:r},Symbol.toStringTag,{value:"Module"})),c=n(o);export{r as i,c as r};
