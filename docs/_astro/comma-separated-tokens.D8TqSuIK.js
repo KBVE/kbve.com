@@ -1,1 +1,1 @@
-function p(t,n){const p=n||{};return(""===t[t.length-1]?[...t,""]:t).join((p.padRight?" ":"")+","+(!1===p.padLeft?"":" ")).trim()}export{p as s};
+function p(t,i){const n=i||{};return(t[t.length-1]===""?[...t,""]:t).join((n.padRight?" ":"")+","+(n.padLeft===!1?"":" ")).trim()}export{p as s};
