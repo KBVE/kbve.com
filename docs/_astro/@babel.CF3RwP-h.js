@@ -1,1 +1,1 @@
-function e(){return e=Object.assign?Object.assign.bind():function(n){for(var r=1;r<arguments.length;r++){var e=arguments[r];for(var a in e)({}).hasOwnProperty.call(e,a)&&(n[a]=e[a])}return n},e.apply(null,arguments)}export{e as _};
+function e(){return e=Object.assign?Object.assign.bind():function(t){for(var n=1;n<arguments.length;n++){var r=arguments[n];for(var a in r)({}).hasOwnProperty.call(r,a)&&(t[a]=r[a])}return t},e.apply(null,arguments)}export{e as _};

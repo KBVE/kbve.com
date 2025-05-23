@@ -1,1 +1,1 @@
-function r(r,e){const t=String(r);if("string"!=typeof e)throw new TypeError("Expected character");let n=0,o=t.indexOf(e);for(;-1!==o;)n++,o=t.indexOf(e,o+e.length);return n}export{r as c};
+function r(i,e){const t=String(i);if(typeof e!="string")throw new TypeError("Expected character");let o=0,n=t.indexOf(e);for(;n!==-1;)o++,n=t.indexOf(e,n+e.length);return o}export{r as c};
