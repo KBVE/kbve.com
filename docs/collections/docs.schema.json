@@ -1453,6 +1453,113 @@
                 }
               },
               "additionalProperties": false
+            },
+            "itemdb": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "key": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "ref": {
+                    "type": "string",
+                    "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$",
+                    "errorMessage": {
+                      "pattern": "Invalid ULID"
+                    }
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1074003967
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "img": {
+                    "type": "string"
+                  },
+                  "bonuses": {
+                    "type": "object",
+                    "properties": {
+                      "armor": {
+                        "type": "number"
+                      },
+                      "intelligence": {
+                        "type": "number"
+                      },
+                      "health": {
+                        "type": "number"
+                      },
+                      "mana": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "durability": {
+                    "type": "number"
+                  },
+                  "weight": {
+                    "type": "number"
+                  },
+                  "equipped": {
+                    "type": "boolean"
+                  },
+                  "consumable": {
+                    "type": "boolean"
+                  },
+                  "effects": {
+                    "type": "string"
+                  },
+                  "stackable": {
+                    "type": "boolean"
+                  },
+                  "rarity": {
+                    "type": "string"
+                  },
+                  "levelRequirement": {
+                    "type": "number"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "cooldown": {
+                    "type": "number"
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "craftingMaterials": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "credits": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "key",
+                  "ref",
+                  "name",
+                  "type"
+                ],
+                "additionalProperties": false
+              }
             }
           }
         }

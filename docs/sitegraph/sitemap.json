@@ -573,6 +573,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/salmon/": {
+    "external": false,
+    "exists": true,
+    "title": "Salmon",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "application/nmap/": {
     "external": false,
     "exists": true,
