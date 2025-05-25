@@ -582,6 +582,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/blue-shark/": {
+    "external": false,
+    "exists": true,
+    "title": "Blue Shark",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "application/nmap/": {
     "external": false,
     "exists": true,
