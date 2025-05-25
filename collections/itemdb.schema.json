@@ -35,6 +35,11 @@
         "img": {
           "type": "string"
         },
+        "pixelDensity": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 512
+        },
         "bonuses": {
           "type": "object",
           "properties": {
@@ -102,7 +107,7 @@
             "properties": {
               "guid": {
                 "type": "string",
-                "format": "uuid"
+                "pattern": "^[a-f0-9]{32}$"
               },
               "vars": {
                 "type": "object",
@@ -130,7 +135,8 @@
         "key",
         "ref",
         "name",
-        "type"
+        "type",
+        "pixelDensity"
       ],
       "additionalProperties": false
     }
