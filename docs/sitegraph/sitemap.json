@@ -1229,6 +1229,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "journal/": {
+    "external": false,
+    "exists": true,
+    "title": "KBVE Journal",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "journal/04-19/": {
     "external": false,
     "exists": true,
