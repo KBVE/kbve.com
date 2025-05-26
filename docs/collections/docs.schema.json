@@ -1520,6 +1520,9 @@
                       },
                       "energy": {
                         "type": "number"
+                      },
+                      "strength": {
+                        "type": "number"
                       }
                     },
                     "additionalProperties": false
