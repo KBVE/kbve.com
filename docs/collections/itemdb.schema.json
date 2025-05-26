@@ -62,6 +62,9 @@
             },
             "mana": {
               "type": "number"
+            },
+            "energy": {
+              "type": "number"
             }
           },
           "additionalProperties": false
@@ -133,6 +136,12 @@
             ],
             "additionalProperties": false
           }
+        },
+        "steamMarketUrl": {
+          "type": "string"
+        },
+        "exchangeUrl": {
+          "type": "string"
         },
         "$schema": {
           "type": "string"
