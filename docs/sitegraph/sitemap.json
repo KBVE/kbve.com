@@ -620,6 +620,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/quick-toolbelt/": {
+    "external": false,
+    "exists": true,
+    "title": "Quick Toolbelt",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/z90-murderbot/": {
     "external": false,
     "exists": true,
@@ -644,6 +653,24 @@
     "external": false,
     "exists": true,
     "title": "Blue Shark",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/undead-humanoid-skull/": {
+    "external": false,
+    "exists": true,
+    "title": "Undead Humanoid Skull",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/alchemist-stardust/": {
+    "external": false,
+    "exists": true,
+    "title": "Alchemist Stardust",
     "tags": [],
     "links": [],
     "backlinks": [],
