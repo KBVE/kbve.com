@@ -600,6 +600,37 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/propagandist-laptop/": {
+    "external": false,
+    "exists": true,
+    "title": "Propagandist Laptop",
+    "tags": [],
+    "links": [
+      "application/linux/"
+    ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/pocket-prophet-of-profit/": {
+    "external": false,
+    "exists": true,
+    "title": "Pocket Prophet of Profit",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/z90-murderbot/": {
+    "external": false,
+    "exists": true,
+    "title": "Z90 MurderBot",
+    "tags": [],
+    "links": [
+      "application/android/"
+    ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/ecto-cooler-drank-type-95/": {
     "external": false,
     "exists": true,
@@ -661,6 +692,7 @@
     ],
     "links": [],
     "backlinks": [
+      "itemdb/z90-murderbot/",
       "application/javascript/"
     ],
     "nodeStyle": {}
@@ -843,6 +875,7 @@
       "dec-2020/"
     ],
     "backlinks": [
+      "itemdb/propagandist-laptop/",
       "application/php/",
       "application/kubernetes/",
       "guides/getting-started/"
