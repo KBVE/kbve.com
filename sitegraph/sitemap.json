@@ -591,6 +591,7 @@
       "itemdb/spooky-skull-candle/"
     ],
     "backlinks": [
+      "itemdb/herbal-medi-wrap/",
       "itemdb/steel-beehive/"
     ],
     "nodeStyle": {}
@@ -601,6 +602,17 @@
     "title": "Salmon",
     "tags": [],
     "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/frozen-pizza-rolls/": {
+    "external": false,
+    "exists": true,
+    "title": "Frozen Pizza Rolls",
+    "tags": [],
+    "links": [
+      "itemdb/krispee-air-fryer/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -642,6 +654,28 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/jareds-teddy-bear/": {
+    "external": false,
+    "exists": true,
+    "title": "Jared's Teddy Bear",
+    "tags": [],
+    "links": [],
+    "backlinks": [
+      "itemdb/pied-piper-jacket/"
+    ],
+    "nodeStyle": {}
+  },
+  "itemdb/herbal-medi-wrap/": {
+    "external": false,
+    "exists": true,
+    "title": "Herbal Medi-Wrap",
+    "tags": [],
+    "links": [
+      "itemdb/natural-beeswax/"
+    ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/z90-murderbot/": {
     "external": false,
     "exists": true,
@@ -671,13 +705,24 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/microchip-motherboard/": {
+    "external": false,
+    "exists": true,
+    "title": "Microchip Motherboard",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/krispee-air-fryer/": {
     "external": false,
     "exists": true,
     "title": "Krispee Air Fryer",
     "tags": [],
     "links": [],
-    "backlinks": [],
+    "backlinks": [
+      "itemdb/frozen-pizza-rolls/"
+    ],
     "nodeStyle": {}
   },
   "itemdb/undead-humanoid-skull/": {
@@ -734,6 +779,17 @@
     "backlinks": [
       "itemdb/steel-beehive/"
     ],
+    "nodeStyle": {}
+  },
+  "itemdb/pied-piper-jacket/": {
+    "external": false,
+    "exists": true,
+    "title": "Pied Piper Jacket",
+    "tags": [],
+    "links": [
+      "itemdb/jareds-teddy-bear/"
+    ],
+    "backlinks": [],
     "nodeStyle": {}
   },
   "itemdb/spooky-skull-candle/": {
