@@ -582,6 +582,19 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/natural-beeswax/": {
+    "external": false,
+    "exists": true,
+    "title": "Natural Beeswax",
+    "tags": [],
+    "links": [
+      "itemdb/spooky-skull-candle/"
+    ],
+    "backlinks": [
+      "itemdb/steel-beehive/"
+    ],
+    "nodeStyle": {}
+  },
   "itemdb/salmon/": {
     "external": false,
     "exists": true,
@@ -687,6 +700,20 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/steel-beehive/": {
+    "external": false,
+    "exists": true,
+    "title": "Steel Beehive",
+    "tags": [],
+    "links": [
+      "itemdb/natural-beeswax/",
+      "itemdb/jar-of-honey/"
+    ],
+    "backlinks": [
+      "itemdb/jar-of-honey/"
+    ],
+    "nodeStyle": {}
+  },
   "itemdb/alchemist-stardust/": {
     "external": false,
     "exists": true,
@@ -694,6 +721,19 @@
     "tags": [],
     "links": [],
     "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/jar-of-honey/": {
+    "external": false,
+    "exists": true,
+    "title": "Jar of Honey",
+    "tags": [],
+    "links": [
+      "itemdb/steel-beehive/"
+    ],
+    "backlinks": [
+      "itemdb/steel-beehive/"
+    ],
     "nodeStyle": {}
   },
   "itemdb/spooky-skull-candle/": {
@@ -704,7 +744,9 @@
     "links": [
       "itemdb/undead-humanoid-skull/"
     ],
-    "backlinks": [],
+    "backlinks": [
+      "itemdb/natural-beeswax/"
+    ],
     "nodeStyle": {}
   },
   "application/nmap/": {
