@@ -714,6 +714,18 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/kiwi-jigsaw/": {
+    "external": false,
+    "exists": true,
+    "title": "Kiwi Jigsaw",
+    "tags": [],
+    "links": [
+      "application/rust/",
+      "application/unity/"
+    ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/krispee-air-fryer/": {
     "external": false,
     "exists": true,
@@ -977,7 +989,8 @@
     "backlinks": [
       "project/",
       "project/brackeys/",
-      "project/api/"
+      "project/api/",
+      "itemdb/kiwi-jigsaw/"
     ],
     "nodeStyle": {}
   },
@@ -1205,7 +1218,8 @@
       "application/javascript/"
     ],
     "backlinks": [
-      "project/pirate/"
+      "project/pirate/",
+      "itemdb/kiwi-jigsaw/"
     ],
     "nodeStyle": {}
   },
