@@ -625,6 +625,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/data-cd/": {
+    "external": false,
+    "exists": true,
+    "title": "Data CD",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/propagandist-laptop/": {
     "external": false,
     "exists": true,
@@ -663,6 +672,15 @@
     "backlinks": [
       "itemdb/pied-piper-jacket/"
     ],
+    "nodeStyle": {}
+  },
+  "itemdb/kryptonite-book/": {
+    "external": false,
+    "exists": true,
+    "title": "Kryptonite Book",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
     "nodeStyle": {}
   },
   "itemdb/herbal-medi-wrap/": {
@@ -709,6 +727,33 @@
     "external": false,
     "exists": true,
     "title": "Microchip Motherboard",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/rubber-tire/": {
+    "external": false,
+    "exists": true,
+    "title": "Rubber Tire",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/rebel-radio/": {
+    "external": false,
+    "exists": true,
+    "title": "Rebel Radio",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/portable-powerbank/": {
+    "external": false,
+    "exists": true,
+    "title": "Portable Powerbank",
     "tags": [],
     "links": [],
     "backlinks": [],
@@ -815,6 +860,15 @@
     "backlinks": [
       "itemdb/natural-beeswax/"
     ],
+    "nodeStyle": {}
+  },
+  "itemdb/vhs-tape/": {
+    "external": false,
+    "exists": true,
+    "title": "VHS Tape",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
     "nodeStyle": {}
   },
   "application/nmap/": {
