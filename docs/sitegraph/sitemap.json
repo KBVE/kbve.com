@@ -780,6 +780,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/tex-mex-pizza/": {
+    "external": false,
+    "exists": true,
+    "title": "Tex-Mex Pizza",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/krispee-air-fryer/": {
     "external": false,
     "exists": true,
@@ -825,6 +834,15 @@
     ],
     "nodeStyle": {}
   },
+  "itemdb/fried-fish-taco/": {
+    "external": false,
+    "exists": true,
+    "title": "Fried Fish Taco",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/alchemist-stardust/": {
     "external": false,
     "exists": true,
@@ -855,6 +873,15 @@
     "links": [
       "itemdb/jareds-teddy-bear/"
     ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/grilled-fish-burrito/": {
+    "external": false,
+    "exists": true,
+    "title": "Grilled Fish Burrito",
+    "tags": [],
+    "links": [],
     "backlinks": [],
     "nodeStyle": {}
   },
