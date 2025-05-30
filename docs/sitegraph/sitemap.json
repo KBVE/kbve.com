@@ -639,6 +639,17 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/lobster-soup/": {
+    "external": false,
+    "exists": true,
+    "title": "Lobster Soup",
+    "tags": [],
+    "links": [
+      "itemdb/lobster/"
+    ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/frozen-pizza-rolls/": {
     "external": false,
     "exists": true,
@@ -810,6 +821,17 @@
     "links": [],
     "backlinks": [
       "itemdb/vodka-sauce/"
+    ],
+    "nodeStyle": {}
+  },
+  "itemdb/lobster/": {
+    "external": false,
+    "exists": true,
+    "title": "Lobster",
+    "tags": [],
+    "links": [],
+    "backlinks": [
+      "itemdb/lobster-soup/"
     ],
     "nodeStyle": {}
   },
