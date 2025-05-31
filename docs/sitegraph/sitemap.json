@@ -639,6 +639,24 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/beer/": {
+    "external": false,
+    "exists": true,
+    "title": "Beer",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/vampire-blood-champagne/": {
+    "external": false,
+    "exists": true,
+    "title": "Vampire Blood Champagne",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/lobster-soup/": {
     "external": false,
     "exists": true,
@@ -647,7 +665,9 @@
     "links": [
       "itemdb/lobster/"
     ],
-    "backlinks": [],
+    "backlinks": [
+      "itemdb/butter/"
+    ],
     "nodeStyle": {}
   },
   "itemdb/frozen-pizza-rolls/": {
@@ -772,6 +792,18 @@
     "title": "Ink Pasta Sauce",
     "tags": [],
     "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/butter/": {
+    "external": false,
+    "exists": true,
+    "title": "Butter",
+    "tags": [],
+    "links": [
+      "itemdb/fresh-milk/",
+      "itemdb/lobster-soup/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -955,6 +987,15 @@
     ],
     "nodeStyle": {}
   },
+  "itemdb/vampire-blood-gelato/": {
+    "external": false,
+    "exists": true,
+    "title": "Vampire Blood Gelato",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/fresh-milk/": {
     "external": false,
     "exists": true,
@@ -963,6 +1004,7 @@
     "links": [],
     "backlinks": [
       "itemdb/cheddar-cheese/",
+      "itemdb/butter/",
       "itemdb/swiss-cheese/"
     ],
     "nodeStyle": {}
