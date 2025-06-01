@@ -695,7 +695,9 @@
     "exists": true,
     "title": "Retro CRT Monitor",
     "tags": [],
-    "links": [],
+    "links": [
+      "itemdb/microchip-motherboard/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -723,7 +725,9 @@
     "title": "Data CD",
     "tags": [],
     "links": [],
-    "backlinks": [],
+    "backlinks": [
+      "itemdb/auto-cooker-9000/"
+    ],
     "nodeStyle": {}
   },
   "itemdb/brown-curry-sauce/": {
@@ -882,7 +886,10 @@
     "title": "Microchip Motherboard",
     "tags": [],
     "links": [],
-    "backlinks": [],
+    "backlinks": [
+      "itemdb/retro-crt-monitor/",
+      "itemdb/auto-cooker-9000/"
+    ],
     "nodeStyle": {}
   },
   "itemdb/rubber-tire/": {
@@ -891,6 +898,19 @@
     "title": "Rubber Tire",
     "tags": [],
     "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/auto-cooker-9000/": {
+    "external": false,
+    "exists": true,
+    "title": "Auto Cooker 9000",
+    "tags": [],
+    "links": [
+      "itemdb/vhs-tape/",
+      "itemdb/data-cd/",
+      "itemdb/microchip-motherboard/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -1117,7 +1137,9 @@
     "title": "VHS Tape",
     "tags": [],
     "links": [],
-    "backlinks": [],
+    "backlinks": [
+      "itemdb/auto-cooker-9000/"
+    ],
     "nodeStyle": {}
   },
   "application/nmap/": {
