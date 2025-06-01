@@ -608,6 +608,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/surfer-longboard/": {
+    "external": false,
+    "exists": true,
+    "title": "Surfer Longboard",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/salmon/": {
     "external": false,
     "exists": true,
@@ -880,6 +889,15 @@
     "external": false,
     "exists": true,
     "title": "Rubber Tire",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/punk-skateboard/": {
+    "external": false,
+    "exists": true,
+    "title": "Punk Skateboard",
     "tags": [],
     "links": [],
     "backlinks": [],
