@@ -1544,7 +1544,8 @@
     ],
     "backlinks": [
       "project/pirate/",
-      "itemdb/kiwi-jigsaw/"
+      "itemdb/kiwi-jigsaw/",
+      "rareicon/"
     ],
     "nodeStyle": {}
   },
@@ -5705,6 +5706,23 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "rareicon/": {
+    "external": false,
+    "exists": true,
+    "title": "RareIcon",
+    "tags": [
+      "#games",
+      "#action RPG",
+      "#base building",
+      "#bullet hell"
+    ],
+    "links": [
+      "application/unity/",
+      "itemdb/"
+    ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "guides/first-project-checklist/": {
     "external": false,
     "exists": true,
@@ -5821,6 +5839,17 @@
     "links": [],
     "backlinks": [
       "application/kubernetes/"
+    ],
+    "nodeStyle": {}
+  },
+  "itemdb/": {
+    "external": false,
+    "exists": false,
+    "title": "itemdb",
+    "tags": [],
+    "links": [],
+    "backlinks": [
+      "rareicon/"
     ],
     "nodeStyle": {}
   }
