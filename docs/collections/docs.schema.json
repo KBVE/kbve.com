@@ -1578,11 +1578,15 @@
                                 },
                                 "ref": {
                                   "type": "string",
-                                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$",
+                                  "errorMessage": {
+                                    "pattern": "Invalid ULID"
+                                  }
                                 },
                                 "amount": {
                                   "type": "integer",
-                                  "exclusiveMinimum": 0
+                                  "exclusiveMinimum": 0,
+                                  "default": 1
                                 }
                               },
                               "required": [
@@ -1607,8 +1611,7 @@
                                   "type": "string"
                                 },
                                 "ref": {
-                                  "type": "string",
-                                  "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+                                  "$ref": "#/definitions/docs/allOf/1/properties/itemdb/items/properties/craftingMaterials/properties/ingredients/items/anyOf/1/properties/ref"
                                 }
                               },
                               "required": [
