@@ -461,6 +461,20 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "arcade/rareicon/": {
+    "external": false,
+    "exists": true,
+    "title": "RareIcon",
+    "tags": [
+      "#games",
+      "#action RPG",
+      "#base building",
+      "#bullet hell"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "theory/emulation/": {
     "external": false,
     "exists": true,
@@ -5686,6 +5700,20 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "questdb/": {
+    "external": false,
+    "exists": true,
+    "title": "QuestDB",
+    "tags": [
+      "#database",
+      "#time-series",
+      "#SQL",
+      "#ingestion"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "docs/": {
     "external": false,
     "exists": true,
@@ -5720,6 +5748,20 @@
       "application/unity/",
       "itemdb/"
     ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "rareicon/about/": {
+    "external": false,
+    "exists": true,
+    "title": "RareIcon About",
+    "tags": [
+      "#games",
+      "#action RPG",
+      "#base building",
+      "#bullet hell"
+    ],
+    "links": [],
     "backlinks": [],
     "nodeStyle": {}
   },
