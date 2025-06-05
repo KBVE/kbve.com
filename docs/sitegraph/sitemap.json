@@ -610,6 +610,19 @@
     ],
     "nodeStyle": {}
   },
+  "itemdb/": {
+    "external": false,
+    "exists": true,
+    "title": "ItemDB Game Index",
+    "tags": [
+      "#games"
+    ],
+    "links": [],
+    "backlinks": [
+      "rareicon/"
+    ],
+    "nodeStyle": {}
+  },
   "itemdb/vodka-sauce/": {
     "external": false,
     "exists": true,
@@ -619,7 +632,9 @@
       "itemdb/tomato-pasta-sauce/",
       "itemdb/vodka/"
     ],
-    "backlinks": [],
+    "backlinks": [
+      "itemdb/spicy-nacho-supreme/"
+    ],
     "nodeStyle": {}
   },
   "itemdb/surfer-longboard/": {
@@ -628,6 +643,17 @@
     "title": "Surfer Longboard",
     "tags": [],
     "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/spicy-nacho-supreme/": {
+    "external": false,
+    "exists": true,
+    "title": "Spicy Nacho Supreme",
+    "tags": [],
+    "links": [
+      "itemdb/vodka-sauce/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -659,6 +685,15 @@
     "links": [
       "itemdb/fresh-milk/"
     ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/garlic-bread/": {
+    "external": false,
+    "exists": true,
+    "title": "Garlic Bread",
+    "tags": [],
+    "links": [],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -851,6 +886,24 @@
     "links": [
       "application/android/"
     ],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/magic-nemo/": {
+    "external": false,
+    "exists": true,
+    "title": "Magic Nemo",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/quantum-coffee/": {
+    "external": false,
+    "exists": true,
+    "title": "Quantum Coffee",
+    "tags": [],
+    "links": [],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -5881,17 +5934,6 @@
     "links": [],
     "backlinks": [
       "application/kubernetes/"
-    ],
-    "nodeStyle": {}
-  },
-  "itemdb/": {
-    "external": false,
-    "exists": false,
-    "title": "itemdb",
-    "tags": [],
-    "links": [],
-    "backlinks": [
-      "rareicon/"
     ],
     "nodeStyle": {}
   }
