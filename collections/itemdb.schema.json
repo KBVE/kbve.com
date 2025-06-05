@@ -230,6 +230,32 @@
             "gridSnap": {
               "type": "boolean",
               "default": true
+            },
+            "scriptBindings": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "guid": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{32}$"
+                  },
+                  "vars": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "guid"
+                ],
+                "additionalProperties": false
+              }
             }
           },
           "additionalProperties": false
@@ -240,27 +266,7 @@
         "scripts": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "guid": {
-                "type": "string",
-                "pattern": "^[a-f0-9]{32}$"
-              },
-              "vars": {
-                "type": "object",
-                "additionalProperties": {
-                  "type": [
-                    "string",
-                    "number",
-                    "boolean"
-                  ]
-                }
-              }
-            },
-            "required": [
-              "guid"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/itemdb/properties/deployable/properties/scriptBindings/items"
           }
         },
         "steamMarketUrl": {
