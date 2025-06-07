@@ -715,6 +715,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/brainrot-laptop/": {
+    "external": false,
+    "exists": true,
+    "title": "Brainrot Laptop",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/lobster-soup/": {
     "external": false,
     "exists": true,
@@ -873,6 +882,15 @@
     "external": false,
     "exists": true,
     "title": "Green Pasta Sauce",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/quantum-energy-drink/": {
+    "external": false,
+    "exists": true,
+    "title": "Quantum Energy Drink",
     "tags": [],
     "links": [],
     "backlinks": [],
@@ -5763,6 +5781,15 @@
       "#SQL",
       "#ingestion"
     ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "questdb/auto-cooker-9000/": {
+    "external": false,
+    "exists": true,
+    "title": "Assemble the Auto Cooker 9000",
+    "tags": [],
     "links": [],
     "backlinks": [],
     "nodeStyle": {}

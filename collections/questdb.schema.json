@@ -1,0 +1,208 @@
+{
+  "$ref": "#/definitions/questdb",
+  "definitions": {
+    "questdb": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$",
+          "errorMessage": {
+            "pattern": "Invalid ULID"
+          }
+        },
+        "guid": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{32}$",
+          "errorMessage": {
+            "pattern": "Invalid GUID"
+          }
+        },
+        "drafted": {
+          "type": "boolean",
+          "default": false
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "main",
+            "side",
+            "daily",
+            "event",
+            "challenge"
+          ],
+          "default": "main"
+        },
+        "hidden": {
+          "type": "boolean",
+          "default": false
+        },
+        "repeatable": {
+          "type": "boolean",
+          "default": false
+        },
+        "levelRequirement": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "collect",
+                  "kill",
+                  "visit",
+                  "interact",
+                  "custom"
+                ],
+                "default": "custom"
+              },
+              "targetRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/questdb/properties/id"
+                },
+                "minItems": 1
+              },
+              "requiredAmount": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "default": 1
+              }
+            },
+            "required": [
+              "description",
+              "targetRefs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "rewards": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "ref": {
+                    "$ref": "#/definitions/questdb/properties/id"
+                  },
+                  "amount": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "default": 1
+                  }
+                },
+                "required": [
+                  "ref"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "bonuses": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "steamAchievement": {
+              "type": "object",
+              "properties": {
+                "apiName": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "iconAchieved": {
+                  "type": "string"
+                },
+                "iconUnachieved": {
+                  "type": "string"
+                },
+                "globalPercent": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "hidden": {
+                  "type": "boolean",
+                  "default": false
+                },
+                "minValue": {
+                  "type": "number"
+                },
+                "maxValue": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "apiName"
+              ],
+              "additionalProperties": false
+            },
+            "currency": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nextQuestId": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "$ref": "#/definitions/questdb/properties/id"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "guid",
+        "title",
+        "objectives"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
