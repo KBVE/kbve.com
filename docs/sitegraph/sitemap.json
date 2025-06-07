@@ -610,6 +610,15 @@
     ],
     "nodeStyle": {}
   },
+  "itemdb/holographic-arcade-token/": {
+    "external": false,
+    "exists": true,
+    "title": "Holographic Arcade Token",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/": {
     "external": false,
     "exists": true,
@@ -633,7 +642,8 @@
       "itemdb/vodka/"
     ],
     "backlinks": [
-      "itemdb/spicy-nacho-supreme/"
+      "itemdb/spicy-nacho-supreme/",
+      "itemdb/spicy-ramen/"
     ],
     "nodeStyle": {}
   },
@@ -1065,6 +1075,15 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "itemdb/synthwave-popcorn/": {
+    "external": false,
+    "exists": true,
+    "title": "Synthwave Popcorn",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/krispee-air-fryer/": {
     "external": false,
     "exists": true,
@@ -1087,12 +1106,32 @@
     ],
     "nodeStyle": {}
   },
+  "itemdb/gravity-boots/": {
+    "external": false,
+    "exists": true,
+    "title": "Gravity Boots",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/bone/": {
     "external": false,
     "exists": true,
     "title": "Bone",
     "tags": [],
     "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "itemdb/spicy-ramen/": {
+    "external": false,
+    "exists": true,
+    "title": "Spicy Ramen",
+    "tags": [],
+    "links": [
+      "itemdb/vodka-sauce/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
