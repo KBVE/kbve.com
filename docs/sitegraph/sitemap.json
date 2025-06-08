@@ -632,6 +632,15 @@
     ],
     "nodeStyle": {}
   },
+  "itemdb/lunar-lantern/": {
+    "external": false,
+    "exists": true,
+    "title": "Lunar Lantern",
+    "tags": [],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/vodka-sauce/": {
     "external": false,
     "exists": true,
