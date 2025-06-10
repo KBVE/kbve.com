@@ -1,1 +1,0 @@
-import{R as _,a as N}from"./ReplacementSwap.astro_astro_type_script_index_0_lang.v_-EwQ76.js";import"./ClientRouter.astro_astro_type_script_index_0_lang.kk6-sEUM.js";export{_ as REPLACE_SIDEBAR_CONTENT,N as RETAIN_CURRENT_PAGE_MARKER};
