@@ -1,0 +1,1 @@
+import{s as e}from"./supabaseClient.DTT8oXd_.js";import{a as s}from"./nanostores.Bo9-_MAV.js";const t=s(null),u=s(null),n=s(!0),m=s("");async function c(){const{data:a}=await e.auth.getUser();a?.user?t.set(a.user):t.set(null)}export{u as a,n as b,m as c,c as s,t as u};
