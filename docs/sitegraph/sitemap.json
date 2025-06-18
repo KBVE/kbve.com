@@ -4891,6 +4891,30 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/": {
+    "external": false,
+    "exists": true,
+    "title": "Stock Analysis",
+    "tags": [
+      "#stock",
+      "#finance",
+      "#investing"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/tsla/": {
+    "external": false,
+    "exists": true,
+    "title": "Tesla TSLA",
+    "tags": [
+      "#stock"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/noodles-girthy-pharma-potion/": {
     "external": false,
     "exists": true,
@@ -5773,7 +5797,9 @@
     "tags": [
       "#juice"
     ],
-    "links": [],
+    "links": [
+      "theory/polyphenols/"
+    ],
     "backlinks": [],
     "nodeStyle": {}
   },
@@ -5998,6 +6024,17 @@
     "links": [],
     "backlinks": [
       "music/"
+    ],
+    "nodeStyle": {}
+  },
+  "theory/polyphenols/": {
+    "external": false,
+    "exists": false,
+    "title": "polyphenols",
+    "tags": [],
+    "links": [],
+    "backlinks": [
+      "recipe/mango-juice/"
     ],
     "nodeStyle": {}
   },
