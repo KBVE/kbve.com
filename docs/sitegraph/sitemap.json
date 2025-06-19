@@ -4891,6 +4891,34 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/mmm/": {
+    "external": false,
+    "exists": true,
+    "title": "3M Company MMM",
+    "tags": [
+      "#stock",
+      "#industrials",
+      "#mmm",
+      "#conglomerate"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/spy/": {
+    "external": false,
+    "exists": true,
+    "title": "SPDR S&P 500 ETF SPY",
+    "tags": [
+      "#stock",
+      "#etf",
+      "#spy",
+      "#sp500"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/": {
     "external": false,
     "exists": true,
@@ -4910,6 +4938,35 @@
     "title": "Tesla TSLA",
     "tags": [
       "#stock"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/voo/": {
+    "external": false,
+    "exists": true,
+    "title": "Vanguard S&P 500 ETF VOO",
+    "tags": [
+      "#stock",
+      "#etf",
+      "#voo",
+      "#sp500",
+      "#vanguard"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aapl/": {
+    "external": false,
+    "exists": true,
+    "title": "Apple AAPL",
+    "tags": [
+      "#stock",
+      "#tech",
+      "#aapl",
+      "#technology"
     ],
     "links": [],
     "backlinks": [],
