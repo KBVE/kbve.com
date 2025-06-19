@@ -4891,6 +4891,49 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/mmm/": {
+    "external": false,
+    "exists": true,
+    "title": "3M Company MMM",
+    "tags": [
+      "#stock",
+      "#industrials",
+      "#mmm",
+      "#conglomerate"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/spy/": {
+    "external": false,
+    "exists": true,
+    "title": "SPDR S&P 500 ETF SPY",
+    "tags": [
+      "#stock",
+      "#etf",
+      "#spy",
+      "#sp500"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/abbv/": {
+    "external": false,
+    "exists": true,
+    "title": "AbbVie Inc. ABBV",
+    "tags": [
+      "#stock",
+      "#healthcare",
+      "#pharmaceuticals",
+      "#abbv",
+      "#biopharmaceutical"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/": {
     "external": false,
     "exists": true,
@@ -4910,6 +4953,125 @@
     "title": "Tesla TSLA",
     "tags": [
       "#stock"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/voo/": {
+    "external": false,
+    "exists": true,
+    "title": "Vanguard S&P 500 ETF VOO",
+    "tags": [
+      "#stock",
+      "#etf",
+      "#voo",
+      "#sp500",
+      "#vanguard"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/abt/": {
+    "external": false,
+    "exists": true,
+    "title": "Abbott Laboratories ABT",
+    "tags": [
+      "#stock",
+      "#healthcare",
+      "#medical-devices",
+      "#abt",
+      "#pharmaceuticals"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/stag/": {
+    "external": false,
+    "exists": true,
+    "title": "STAG Industrial Inc. STAG",
+    "tags": [
+      "#stock",
+      "#reit",
+      "#industrial",
+      "#logistics",
+      "#stag"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/o/": {
+    "external": false,
+    "exists": true,
+    "title": "Realty Income Corporation O",
+    "tags": [
+      "#stock",
+      "#reit",
+      "#realty",
+      "#dividend",
+      "#o"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/acn/": {
+    "external": false,
+    "exists": true,
+    "title": "Accenture plc ACN",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#consulting",
+      "#acn",
+      "#digital-transformation"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/adbe/": {
+    "external": false,
+    "exists": true,
+    "title": "Adobe Inc. ADBE",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#software",
+      "#adbe",
+      "#creative-software"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aapl/": {
+    "external": false,
+    "exists": true,
+    "title": "Apple AAPL",
+    "tags": [
+      "#stock",
+      "#tech",
+      "#aapl",
+      "#technology"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aos/": {
+    "external": false,
+    "exists": true,
+    "title": "A.O. Smith Corporation AOS",
+    "tags": [
+      "#stock",
+      "#industrials",
+      "#manufacturing",
+      "#aos",
+      "#water-heating"
     ],
     "links": [],
     "backlinks": [],
