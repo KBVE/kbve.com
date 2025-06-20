@@ -4921,6 +4921,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/hd/": {
+    "external": false,
+    "exists": true,
+    "title": "The Home Depot Inc. HD",
+    "tags": [
+      "#stock",
+      "#retail",
+      "#home-improvement",
+      "#hd",
+      "#construction"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/axp/": {
     "external": false,
     "exists": true,
@@ -4996,6 +5011,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/tmus/": {
+    "external": false,
+    "exists": true,
+    "title": "T-Mobile US Inc. TMUS",
+    "tags": [
+      "#stock",
+      "#telecommunications",
+      "#wireless",
+      "#tmus",
+      "#5g"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/are/": {
     "external": false,
     "exists": true,
@@ -5006,6 +5036,21 @@
       "#reit",
       "#are",
       "#life-sciences"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/wfc/": {
+    "external": false,
+    "exists": true,
+    "title": "Wells Fargo & Company WFC",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#banking",
+      "#wfc",
+      "#consumer-banking"
     ],
     "links": [],
     "backlinks": [],
@@ -5070,6 +5115,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/cvx/": {
+    "external": false,
+    "exists": true,
+    "title": "Chevron Corporation CVX",
+    "tags": [
+      "#stock",
+      "#energy",
+      "#oil-gas",
+      "#cvx",
+      "#integrated-oil"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/awk/": {
     "external": false,
     "exists": true,
@@ -5080,6 +5140,21 @@
       "#water",
       "#awk",
       "#infrastructure"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/intu/": {
+    "external": false,
+    "exists": true,
+    "title": "Intuit Inc. INTU",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#fintech",
+      "#intu",
+      "#tax-software"
     ],
     "links": [],
     "backlinks": [],
@@ -5187,6 +5262,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/ms/": {
+    "external": false,
+    "exists": true,
+    "title": "Morgan Stanley MS",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#investment-banking",
+      "#ms",
+      "#wealth-management"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/aon/": {
     "external": false,
     "exists": true,
@@ -5272,6 +5362,21 @@
       "#industrial-gases",
       "#apd",
       "#hydrogen"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/lin/": {
+    "external": false,
+    "exists": true,
+    "title": "Linde plc LIN",
+    "tags": [
+      "#stock",
+      "#industrial-gases",
+      "#chemicals",
+      "#lin",
+      "#engineering"
     ],
     "links": [],
     "backlinks": [],
@@ -5560,6 +5665,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/pltr/": {
+    "external": false,
+    "exists": true,
+    "title": "Palantir Technologies Inc. PLTR",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#data-analytics",
+      "#pltr",
+      "#artificial-intelligence"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/a/": {
     "external": false,
     "exists": true,
@@ -5620,6 +5740,36 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/jnj/": {
+    "external": false,
+    "exists": true,
+    "title": "Johnson & Johnson JNJ",
+    "tags": [
+      "#stock",
+      "#healthcare",
+      "#pharmaceuticals",
+      "#jnj",
+      "#medical-devices"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/crm/": {
+    "external": false,
+    "exists": true,
+    "title": "Salesforce Inc. CRM",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#cloud-software",
+      "#crm",
+      "#salesforce"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/avy/": {
     "external": false,
     "exists": true,
@@ -5665,6 +5815,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/unh/": {
+    "external": false,
+    "exists": true,
+    "title": "UnitedHealth Group Incorporated UNH",
+    "tags": [
+      "#stock",
+      "#healthcare",
+      "#insurance",
+      "#unh",
+      "#managed-care"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/aig/": {
     "external": false,
     "exists": true,
@@ -5675,6 +5840,36 @@
       "#financial-services",
       "#aig",
       "#property-casualty"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/dis/": {
+    "external": false,
+    "exists": true,
+    "title": "The Walt Disney Company DIS",
+    "tags": [
+      "#stock",
+      "#entertainment",
+      "#media",
+      "#dis",
+      "#streaming"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/bac/": {
+    "external": false,
+    "exists": true,
+    "title": "Bank of America Corporation BAC",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#banking",
+      "#bac",
+      "#investment-banking"
     ],
     "links": [],
     "backlinks": [],
@@ -5815,6 +6010,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/ibm/": {
+    "external": false,
+    "exists": true,
+    "title": "International Business Machines Corporation IBM",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#cloud-computing",
+      "#ibm",
+      "#artificial-intelligence"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/o/": {
     "external": false,
     "exists": true,
@@ -5825,6 +6035,21 @@
       "#realty",
       "#dividend",
       "#o"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/pm/": {
+    "external": false,
+    "exists": true,
+    "title": "Philip Morris International Inc. PM",
+    "tags": [
+      "#stock",
+      "#consumer-goods",
+      "#tobacco",
+      "#pm",
+      "#smoke-free"
     ],
     "links": [],
     "backlinks": [],
@@ -5855,6 +6080,21 @@
       "#instruments",
       "#ame",
       "#precision"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/ko/": {
+    "external": false,
+    "exists": true,
+    "title": "The Coca-Cola Company KO",
+    "tags": [
+      "#stock",
+      "#consumer-goods",
+      "#beverages",
+      "#ko",
+      "#coca-cola"
     ],
     "links": [],
     "backlinks": [],
@@ -5920,6 +6160,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/ge/": {
+    "external": false,
+    "exists": true,
+    "title": "GE Aerospace GE",
+    "tags": [
+      "#stock",
+      "#aerospace",
+      "#aviation",
+      "#ge",
+      "#jet-engines"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/all/": {
     "external": false,
     "exists": true,
@@ -5974,6 +6229,21 @@
       "#tech",
       "#aapl",
       "#technology"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/csco/": {
+    "external": false,
+    "exists": true,
+    "title": "Cisco Systems Inc. CSCO",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#networking",
+      "#csco",
+      "#cybersecurity"
     ],
     "links": [],
     "backlinks": [],
