@@ -4966,6 +4966,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/wmt/": {
+    "external": false,
+    "exists": true,
+    "title": "Walmart Inc. WMT",
+    "tags": [
+      "#stock",
+      "#retail",
+      "#consumer-staples",
+      "#wmt",
+      "#e-commerce"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/ato/": {
     "external": false,
     "exists": true,
@@ -5005,6 +5020,21 @@
       "#industrials",
       "#mmm",
       "#conglomerate"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/v/": {
+    "external": false,
+    "exists": true,
+    "title": "Visa Inc. V",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#payments",
+      "#v",
+      "#fintech"
     ],
     "links": [],
     "backlinks": [],
@@ -5142,6 +5172,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/orcl/": {
+    "external": false,
+    "exists": true,
+    "title": "Oracle Corporation ORCL",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#database",
+      "#orcl",
+      "#cloud-computing"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/aon/": {
     "external": false,
     "exists": true,
@@ -5172,6 +5217,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/cost/": {
+    "external": false,
+    "exists": true,
+    "title": "Costco Wholesale Corporation COST",
+    "tags": [
+      "#stock",
+      "#retail",
+      "#consumer-staples",
+      "#cost",
+      "#warehouse-club"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/avb/": {
     "external": false,
     "exists": true,
@@ -5182,6 +5242,21 @@
       "#real-estate",
       "#avb",
       "#apartments"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/lly/": {
+    "external": false,
+    "exists": true,
+    "title": "Eli Lilly and Company LLY",
+    "tags": [
+      "#stock",
+      "#pharmaceuticals",
+      "#healthcare",
+      "#lly",
+      "#biotechnology"
     ],
     "links": [],
     "backlinks": [],
@@ -5207,7 +5282,9 @@
     "exists": true,
     "title": "Tesla TSLA",
     "tags": [
-      "#stock"
+      "#stock",
+      "#automotive",
+      "#technology"
     ],
     "links": [],
     "backlinks": [],
@@ -5273,6 +5350,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/ma/": {
+    "external": false,
+    "exists": true,
+    "title": "Mastercard Incorporated MA",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#payments",
+      "#ma",
+      "#fintech"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/aciw/": {
     "external": false,
     "exists": true,
@@ -5298,6 +5390,36 @@
       "#financial-services",
       "#aiz",
       "#protection"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/msft/": {
+    "external": false,
+    "exists": true,
+    "title": "Microsoft Corporation MSFT",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#software",
+      "#msft",
+      "#cloud-computing"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/nvda/": {
+    "external": false,
+    "exists": true,
+    "title": "NVIDIA Corporation NVDA",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#semiconductors",
+      "#nvda",
+      "#artificial-intelligence"
     ],
     "links": [],
     "backlinks": [],
@@ -5358,6 +5480,21 @@
       "#renewable-energy",
       "#aes",
       "#power-generation"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/xom/": {
+    "external": false,
+    "exists": true,
+    "title": "Exxon Mobil Corporation XOM",
+    "tags": [
+      "#stock",
+      "#energy",
+      "#oil-gas",
+      "#xom",
+      "#chemicals"
     ],
     "links": [],
     "backlinks": [],
@@ -5498,6 +5635,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/meta/": {
+    "external": false,
+    "exists": true,
+    "title": "Meta Platforms Inc. META",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#social-media",
+      "#meta",
+      "#metaverse"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/alle/": {
     "external": false,
     "exists": true,
@@ -5553,6 +5705,21 @@
       "#medical-devices",
       "#abt",
       "#pharmaceuticals"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/avgo/": {
+    "external": false,
+    "exists": true,
+    "title": "Broadcom Inc. AVGO",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#semiconductors",
+      "#avgo",
+      "#enterprise-software"
     ],
     "links": [],
     "backlinks": [],
@@ -5663,6 +5830,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/jpm/": {
+    "external": false,
+    "exists": true,
+    "title": "JPMorgan Chase & Co. JPM",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#banking",
+      "#jpm",
+      "#investment-banking"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/ame/": {
     "external": false,
     "exists": true,
@@ -5723,6 +5905,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/pg/": {
+    "external": false,
+    "exists": true,
+    "title": "The Procter & Gamble Company PG",
+    "tags": [
+      "#stock",
+      "#consumer-goods",
+      "#household-products",
+      "#pg",
+      "#personal-care"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/all/": {
     "external": false,
     "exists": true,
@@ -5733,6 +5930,21 @@
       "#insurance",
       "#all",
       "#property-casualty"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/brkb/": {
+    "external": false,
+    "exists": true,
+    "title": "Berkshire Hathaway Inc. Class B BRK.B",
+    "tags": [
+      "#stock",
+      "#conglomerate",
+      "#insurance",
+      "#brkb",
+      "#value-investing"
     ],
     "links": [],
     "backlinks": [],
@@ -5762,6 +5974,21 @@
       "#tech",
       "#aapl",
       "#technology"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/nflx/": {
+    "external": false,
+    "exists": true,
+    "title": "Netflix Inc. NFLX",
+    "tags": [
+      "#stock",
+      "#entertainment",
+      "#streaming",
+      "#nflx",
+      "#media"
     ],
     "links": [],
     "backlinks": [],
