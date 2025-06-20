@@ -287,6 +287,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "application/supabase/": {
+    "external": false,
+    "exists": true,
+    "title": "Supabase",
+    "tags": [
+      "#supabase",
+      "#postgres",
+      "#database",
+      "#deno",
+      "#backend"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "application/git/": {
     "external": false,
     "exists": true,
@@ -4891,6 +4906,96 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/amt/": {
+    "external": false,
+    "exists": true,
+    "title": "American Tower Corporation AMT",
+    "tags": [
+      "#stock",
+      "#reit",
+      "#telecommunications",
+      "#amt",
+      "#infrastructure"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/axp/": {
+    "external": false,
+    "exists": true,
+    "title": "American Express Company AXP",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#credit-cards",
+      "#axp",
+      "#payments"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/mo/": {
+    "external": false,
+    "exists": true,
+    "title": "Altria Group Inc. MO",
+    "tags": [
+      "#stock",
+      "#consumer-staples",
+      "#tobacco",
+      "#mo",
+      "#nicotine-products"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/afl/": {
+    "external": false,
+    "exists": true,
+    "title": "Aflac Incorporated AFL",
+    "tags": [
+      "#stock",
+      "#financials",
+      "#insurance",
+      "#afl",
+      "#supplemental-insurance"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/ato/": {
+    "external": false,
+    "exists": true,
+    "title": "Atmos Energy Corporation ATO",
+    "tags": [
+      "#stock",
+      "#utilities",
+      "#natural-gas",
+      "#ato",
+      "#energy"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/are/": {
+    "external": false,
+    "exists": true,
+    "title": "Alexandria Real Estate Equities ARE",
+    "tags": [
+      "#stock",
+      "#real-estate",
+      "#reit",
+      "#are",
+      "#life-sciences"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/mmm/": {
     "external": false,
     "exists": true,
@@ -4905,6 +5010,51 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/amzn/": {
+    "external": false,
+    "exists": true,
+    "title": "Amazon.com Inc. AMZN",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#ecommerce",
+      "#amzn",
+      "#cloud-computing"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/abnb/": {
+    "external": false,
+    "exists": true,
+    "title": "Airbnb Inc ABNB",
+    "tags": [
+      "#stock",
+      "#consumer-discretionary",
+      "#travel",
+      "#abnb",
+      "#home-sharing"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/awk/": {
+    "external": false,
+    "exists": true,
+    "title": "American Water Works Company Inc. AWK",
+    "tags": [
+      "#stock",
+      "#utilities",
+      "#water",
+      "#awk",
+      "#infrastructure"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/spy/": {
     "external": false,
     "exists": true,
@@ -4914,6 +5064,36 @@
       "#etf",
       "#spy",
       "#sp500"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/axon/": {
+    "external": false,
+    "exists": true,
+    "title": "Axon Enterprise Inc. AXON",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#public-safety",
+      "#axon",
+      "#law-enforcement"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/amcr/": {
+    "external": false,
+    "exists": true,
+    "title": "Amcor plc AMCR",
+    "tags": [
+      "#stock",
+      "#packaging",
+      "#consumer-cyclical",
+      "#amcr",
+      "#sustainability"
     ],
     "links": [],
     "backlinks": [],
@@ -4934,6 +5114,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/anet/": {
+    "external": false,
+    "exists": true,
+    "title": "Arista Networks Inc. ANET",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#networking",
+      "#anet",
+      "#cloud"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/": {
     "external": false,
     "exists": true,
@@ -4947,12 +5142,267 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/aon/": {
+    "external": false,
+    "exists": true,
+    "title": "Aon plc AON",
+    "tags": [
+      "#stock",
+      "#insurance",
+      "#professional-services",
+      "#aon",
+      "#risk-management"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/amp/": {
+    "external": false,
+    "exists": true,
+    "title": "Ameriprise Financial Inc. AMP",
+    "tags": [
+      "#stock",
+      "#financial-services",
+      "#wealth-management",
+      "#amp",
+      "#ameriprise"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/avb/": {
+    "external": false,
+    "exists": true,
+    "title": "AvalonBay Communities Inc. AVB",
+    "tags": [
+      "#stock",
+      "#reit",
+      "#real-estate",
+      "#avb",
+      "#apartments"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/apd/": {
+    "external": false,
+    "exists": true,
+    "title": "Air Products and Chemicals APD",
+    "tags": [
+      "#stock",
+      "#materials",
+      "#industrial-gases",
+      "#apd",
+      "#hydrogen"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/tsla/": {
     "external": false,
     "exists": true,
     "title": "Tesla TSLA",
     "tags": [
       "#stock"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/ba/": {
+    "external": false,
+    "exists": true,
+    "title": "The Boeing Company BA",
+    "tags": [
+      "#stock",
+      "#aerospace",
+      "#defense",
+      "#ba",
+      "#aviation"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/ajg/": {
+    "external": false,
+    "exists": true,
+    "title": "Arthur J. Gallagher & Co. AJG",
+    "tags": [
+      "#stock",
+      "#insurance",
+      "#brokerage",
+      "#ajg",
+      "#risk-management"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/azo/": {
+    "external": false,
+    "exists": true,
+    "title": "AutoZone Inc. AZO",
+    "tags": [
+      "#stock",
+      "#retail",
+      "#automotive",
+      "#azo",
+      "#parts"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/adsk/": {
+    "external": false,
+    "exists": true,
+    "title": "Autodesk Inc. ADSK",
+    "tags": [
+      "#stock",
+      "#software",
+      "#design",
+      "#adsk",
+      "#cad"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aciw/": {
+    "external": false,
+    "exists": true,
+    "title": "ACI Worldwide Inc. ACIW",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#fintech",
+      "#aciw",
+      "#payments"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aiz/": {
+    "external": false,
+    "exists": true,
+    "title": "Assurant Inc. AIZ",
+    "tags": [
+      "#stock",
+      "#insurance",
+      "#financial-services",
+      "#aiz",
+      "#protection"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/ago/": {
+    "external": false,
+    "exists": true,
+    "title": "Assured Guaranty Ltd. AGO",
+    "tags": [
+      "#stock",
+      "#insurance",
+      "#financial-services",
+      "#ago",
+      "#municipal-bonds"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aptv/": {
+    "external": false,
+    "exists": true,
+    "title": "Aptiv PLC APTV",
+    "tags": [
+      "#stock",
+      "#automotive",
+      "#technology",
+      "#aptv",
+      "#autonomous-driving"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/lnt/": {
+    "external": false,
+    "exists": true,
+    "title": "Alliant Energy Corporation LNT",
+    "tags": [
+      "#stock",
+      "#utilities",
+      "#electric",
+      "#lnt",
+      "#renewable-energy"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aes/": {
+    "external": false,
+    "exists": true,
+    "title": "AES Corporation AES",
+    "tags": [
+      "#stock",
+      "#utilities",
+      "#renewable-energy",
+      "#aes",
+      "#power-generation"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/amgn/": {
+    "external": false,
+    "exists": true,
+    "title": "Amgen Inc. AMGN",
+    "tags": [
+      "#stock",
+      "#biotechnology",
+      "#pharmaceuticals",
+      "#amgn",
+      "#healthcare"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/adp/": {
+    "external": false,
+    "exists": true,
+    "title": "Automatic Data Processing Inc. ADP",
+    "tags": [
+      "#stock",
+      "#software",
+      "#human-resources",
+      "#adp",
+      "#payroll"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/adm/": {
+    "external": false,
+    "exists": true,
+    "title": "Archer Daniels Midland Company ADM",
+    "tags": [
+      "#stock",
+      "#agriculture",
+      "#food-processing",
+      "#adm",
+      "#commodities"
     ],
     "links": [],
     "backlinks": [],
@@ -4973,6 +5423,126 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/a/": {
+    "external": false,
+    "exists": true,
+    "title": "Agilent Technologies A",
+    "tags": [
+      "#stock",
+      "#healthcare",
+      "#life-sciences",
+      "#agilent",
+      "#analytical-instruments"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/bsx/": {
+    "external": false,
+    "exists": true,
+    "title": "Boston Scientific Corporation BSX",
+    "tags": [
+      "#stock",
+      "#healthcare",
+      "#medical-devices",
+      "#bsx",
+      "#biotechnology"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/t/": {
+    "external": false,
+    "exists": true,
+    "title": "AT&T Inc. T",
+    "tags": [
+      "#stock",
+      "#telecommunications",
+      "#wireless",
+      "#t",
+      "#broadband"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/akam/": {
+    "external": false,
+    "exists": true,
+    "title": "Akamai Technologies AKAM",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#cybersecurity",
+      "#akam",
+      "#content-delivery"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/avy/": {
+    "external": false,
+    "exists": true,
+    "title": "Avery Dennison Corporation AVY",
+    "tags": [
+      "#stock",
+      "#materials",
+      "#labeling",
+      "#avy",
+      "#rfid"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/alle/": {
+    "external": false,
+    "exists": true,
+    "title": "Allegion plc ALLE",
+    "tags": [
+      "#stock",
+      "#industrials",
+      "#security",
+      "#alle",
+      "#access-control"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aig/": {
+    "external": false,
+    "exists": true,
+    "title": "American International Group Inc. AIG",
+    "tags": [
+      "#stock",
+      "#insurance",
+      "#financial-services",
+      "#aig",
+      "#property-casualty"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/goog/": {
+    "external": false,
+    "exists": true,
+    "title": "Alphabet Inc. Class C GOOG",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#internet",
+      "#goog",
+      "#search-engine"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/abt/": {
     "external": false,
     "exists": true,
@@ -4983,6 +5553,51 @@
       "#medical-devices",
       "#abt",
       "#pharmaceuticals"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/alb/": {
+    "external": false,
+    "exists": true,
+    "title": "Albemarle Corporation ALB",
+    "tags": [
+      "#stock",
+      "#materials",
+      "#specialty-chemicals",
+      "#alb",
+      "#lithium"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/algn/": {
+    "external": false,
+    "exists": true,
+    "title": "Align Technology ALGN",
+    "tags": [
+      "#stock",
+      "#healthcare",
+      "#medical-devices",
+      "#algn",
+      "#orthodontics"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aph/": {
+    "external": false,
+    "exists": true,
+    "title": "Amphenol Corporation APH",
+    "tags": [
+      "#stock",
+      "#electronics",
+      "#components",
+      "#aph",
+      "#connectors"
     ],
     "links": [],
     "backlinks": [],
@@ -5003,6 +5618,36 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/aee/": {
+    "external": false,
+    "exists": true,
+    "title": "Ameren Corporation AEE",
+    "tags": [
+      "#stock",
+      "#utilities",
+      "#electric",
+      "#aee",
+      "#renewable-energy"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/apa/": {
+    "external": false,
+    "exists": true,
+    "title": "APA Corporation APA",
+    "tags": [
+      "#stock",
+      "#energy",
+      "#oil-gas",
+      "#apa",
+      "#exploration"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/o/": {
     "external": false,
     "exists": true,
@@ -5013,6 +5658,21 @@
       "#realty",
       "#dividend",
       "#o"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/ame/": {
+    "external": false,
+    "exists": true,
+    "title": "AMETEK Inc. AME",
+    "tags": [
+      "#stock",
+      "#industrial",
+      "#instruments",
+      "#ame",
+      "#precision"
     ],
     "links": [],
     "backlinks": [],
@@ -5033,6 +5693,21 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/anss/": {
+    "external": false,
+    "exists": true,
+    "title": "ANSYS Inc. ANSS",
+    "tags": [
+      "#stock",
+      "#software",
+      "#engineering",
+      "#anss",
+      "#simulation"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/adbe/": {
     "external": false,
     "exists": true,
@@ -5043,6 +5718,36 @@
       "#software",
       "#adbe",
       "#creative-software"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/all/": {
+    "external": false,
+    "exists": true,
+    "title": "The Allstate Corporation ALL",
+    "tags": [
+      "#stock",
+      "#financials",
+      "#insurance",
+      "#all",
+      "#property-casualty"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/amd/": {
+    "external": false,
+    "exists": true,
+    "title": "Advanced Micro Devices AMD",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#semiconductors",
+      "#amd",
+      "#artificial-intelligence"
     ],
     "links": [],
     "backlinks": [],
@@ -5062,6 +5767,51 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "stock/amat/": {
+    "external": false,
+    "exists": true,
+    "title": "Applied Materials Inc. AMAT",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#semiconductors",
+      "#amat",
+      "#equipment"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/adi/": {
+    "external": false,
+    "exists": true,
+    "title": "Analog Devices Inc. ADI",
+    "tags": [
+      "#stock",
+      "#semiconductors",
+      "#technology",
+      "#adi",
+      "#analog-devices"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/aep/": {
+    "external": false,
+    "exists": true,
+    "title": "American Electric Power Company Inc. AEP",
+    "tags": [
+      "#stock",
+      "#utilities",
+      "#electric-power",
+      "#aep",
+      "#transmission"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "stock/aos/": {
     "external": false,
     "exists": true,
@@ -5072,6 +5822,21 @@
       "#manufacturing",
       "#aos",
       "#water-heating"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
+  "stock/googl/": {
+    "external": false,
+    "exists": true,
+    "title": "Alphabet Inc. Class A GOOGL",
+    "tags": [
+      "#stock",
+      "#technology",
+      "#internet",
+      "#googl",
+      "#search-engine"
     ],
     "links": [],
     "backlinks": [],
