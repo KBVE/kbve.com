@@ -6653,6 +6653,19 @@
     "backlinks": [],
     "nodeStyle": {}
   },
+  "crypto/": {
+    "external": false,
+    "exists": true,
+    "title": "Crypto Analysis",
+    "tags": [
+      "#crypto",
+      "#blockchain",
+      "#finance"
+    ],
+    "links": [],
+    "backlinks": [],
+    "nodeStyle": {}
+  },
   "itemdb/synthwave-popcorn/": {
     "external": false,
     "exists": true,
